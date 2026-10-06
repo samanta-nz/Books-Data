@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <title>جنگل آرام</title>
-<!-- key: Bucket/Html-files/app/calm/journey/01-calm-forest.html | app id: cj-01 | audience: all | parts: 6 | audio: pending injection (see 01-calm-forest.md) -->
+<!-- key: Bucket/Html-files/app/calm/journey/01-calm-forest.html | app id: cj-01 | audience: all | parts: 6 | architecture: two-layer real async loader -->
 <style>
 :root{color-scheme:light dark;
  --bg1:hsl(148 42% 95%);--bg2:hsl(178 48% 86%);--fg:hsl(148 38% 17%);--mut:hsl(148 20% 38%);
@@ -34,9 +34,9 @@ h1{font-size:clamp(20px,5vw,26px);font-weight:800;letter-spacing:-.2px}
 @keyframes breathe{0%,100%{transform:scale(.88)}50%{transform:scale(1.08)}}
 @keyframes ring{0%{transform:scale(.9);opacity:.7}100%{transform:scale(1.55);opacity:0}}
 .panel{width:min(100%,430px);background:var(--card);border:1px solid var(--bd);border-radius:26px;padding:16px 18px 18px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-.bar{height:6px;border-radius:9px;background:var(--bd);cursor:pointer;position:relative;margin:4px 0 8px;direction:rtl}
-.fill{position:absolute;right:0;top:0;bottom:0;width:0;border-radius:9px;background:linear-gradient(90deg,var(--ac2),var(--ac))}
-.fill::after{content:"";position:absolute;left:-6px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--ac);box-shadow:0 0 0 4px hsl(var(--fx1)/.25)}
+.bar{height:6px;border-radius:9px;background:var(--bd);cursor:pointer;position:relative;margin:4px 0 8px;direction:ltr}
+.fill{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:9px;background:linear-gradient(90deg,var(--ac),var(--ac2))}
+.fill::after{content:"";position:absolute;right:-6px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--ac2);box-shadow:0 0 0 4px hsl(var(--fx2)/.25)}
 .tm{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);direction:ltr;font-variant-numeric:tabular-nums}
 .ctl{display:flex;align-items:center;justify-content:center;gap:26px;margin-top:10px}
 button{border:0;background:none;color:var(--fg);cursor:pointer;font:inherit}
@@ -47,54 +47,367 @@ button{border:0;background:none;color:var(--fg);cursor:pointer;font:inherit}
 .note{font-size:12px;color:var(--mut);margin-top:10px;min-height:1em}
 button:disabled{opacity:.4;cursor:default}
 @media (prefers-reduced-motion:reduce){.playing .orb,.playing .orb::before,.playing .orb::after{animation:none}}
+
+/* ---------- Layer 1: Real Circular Loader Overlay ---------- */
+.loader-overlay{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at center,var(--bg2) 0%,var(--bg1) 100%);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1),visibility .7s;padding:24px}
+.loader-overlay.loaded{opacity:0;visibility:hidden;transform:scale(1.05);pointer-events:none}
+.loader-card{display:flex;flex-direction:column;align-items:center;text-align:center;background:var(--card);border:1px solid var(--bd);border-radius:32px;padding:36px 28px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 20px 50px -15px hsl(var(--fx1)/.25);width:min(100%,340px)}
+.spinner-wrap{position:relative;width:130px;height:130px;display:flex;align-items:center;justify-content:center}
+.spinner-svg{width:100%;height:100%;transform:rotate(-90deg)}
+.track-circle{fill:none;stroke:var(--bd);stroke-width:6}
+.prog-circle{fill:none;stroke:url(#spinGrad);stroke-width:6;stroke-linecap:round;stroke-dasharray:314.159;stroke-dashoffset:314.159;transition:stroke-dashoffset .2s ease-out}
+.ring-particles{position:absolute;inset:-6px;border-radius:50%;border:1.5px dashed hsl(var(--fx1)/.35);animation:spinRing 14s linear infinite;pointer-events:none}
+@keyframes spinRing{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.spinner-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.pct-num{font-size:24px;font-weight:800;color:var(--fg);font-variant-numeric:tabular-nums;letter-spacing:-.5px}
+.loader-title{font-size:18px;font-weight:800;margin-top:16px;color:var(--fg)}
+.loader-status{font-size:12.5px;color:var(--mut);margin-top:6px;min-height:1.4em;transition:color .3s}
+.bytes-info{font-size:11px;color:var(--mut);opacity:.8;margin-top:5px;font-variant-numeric:tabular-nums;direction:ltr}
 </style>
 </head>
 <body>
 <canvas id="fx"></canvas>
+
+<!-- Layer 1: Elegant Circular Real Loader -->
+<div id="loader-layer" class="loader-overlay">
+ <div class="loader-card">
+  <div class="spinner-wrap">
+   <svg class="spinner-svg" viewBox="0 0 120 120">
+    <defs>
+     <linearGradient id="spinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="var(--ac)" />
+      <stop offset="50%" stop-color="var(--ac2)" />
+      <stop offset="100%" stop-color="var(--ac)" />
+     </linearGradient>
+    </defs>
+    <circle class="track-circle" cx="60" cy="60" r="50"></circle>
+    <circle class="prog-circle" id="prog-circle" cx="60" cy="60" r="50"></circle>
+   </svg>
+   <div class="ring-particles"></div>
+   <div class="spinner-center">
+    <span class="pct-num" id="pct-num">۰٪</span>
+   </div>
+  </div>
+  <div class="loader-title">جنگل آرام</div>
+  <div class="loader-status" id="loader-status">در حال اتصال و آماده‌سازی صوت...</div>
+  <div class="bytes-info" id="bytes-info">۰ / ۶٫۵ مگابایت</div>
+ </div>
+</div>
+
+<!-- Layer 2: Main Guided Journey App -->
 <main>
  <header><h1>جنگل آرام</h1><div class="sub">حدود ۲۳ دقیقه</div></header>
  <div class="stage"><div class="orb"></div></div>
  <section class="panel">
   <div class="bar" id="bar"><div class="fill" id="fill"></div></div>
-  <div class="tm"><span id="tt">۰:۰۰</span><span id="el">۰:۰۰</span></div>
+  <div class="tm"><span id="el">۰:۰۰</span><span id="tt">۰:۰۰</span></div>
   <div class="ctl"><button class="sk" id="bk" aria-label="۱۵ ثانیه عقب">−۱۵</button><button class="pp" id="pp" aria-label="پخش / مکث"></button><button class="sk" id="fw" aria-label="۱۵ ثانیه جلو">+۱۵</button></div>
   <div class="note" id="note"></div>
  </section>
 </main>
+
 <script>
-const NAME="01-calm-forest",SCENE="mist+fireflies".split("+"),AUDIO=["", "", "", "", "", ""];
+const NAME="01-calm-forest",SCENE="mist+fireflies".split("+");
+const AUDIO_SOURCES=[
+ "01-calm-forest-01.mp3",
+ "01-calm-forest-02.mp3",
+ "01-calm-forest-03.mp3",
+ "01-calm-forest-04.mp3",
+ "01-calm-forest-05.mp3",
+ "01-calm-forest-06.mp3"
+];
+const FILE_SIZES=[1228704, 1311648, 1019136, 893664, 1003968, 1048032];
+const TOTAL_EXPECTED_BYTES=FILE_SIZES.reduce((a,b)=>a+b,0);
+const PART_TITLES=[
+ "آماده‌سازی: جا گرفتن و تن‌آرامی (بخش ۱ از ۶)...",
+ "ورود به جنگل و قدم‌های آرام (بخش ۲ از ۶)...",
+ "صداهای جنگل، پرندگان و آب روان (بخش ۳ از ۶)...",
+ "لمس طبیعت و رها کردن تنش (بخش ۴ از ۶)...",
+ "تمرکز و آرامش ذهن در جنگل (بخش ۵ از ۶)...",
+ "بازگشت و فرود آرام (بخش ۶ از ۶)..."
+];
+
 const FA="۰۱۲۳۴۵۶۷۸۹",fa=s=>String(s).replace(/[0-9]/g,d=>FA[d]);
 const tf=s=>{s=Math.max(0,Math.floor(s||0));const m=Math.floor(s/60);return fa(m)+":"+fa(String(s%60).padStart(2,"0"))};
 const $=id=>document.getElementById(id),KEY="lp_"+NAME;
 const st={g(k,d){try{const v=localStorage.getItem(KEY+"_"+k);return v===null?d:v}catch(e){return d}},s(k,v){try{localStorage.setItem(KEY+"_"+k,v)}catch(e){}}};
 window.setTheme=t=>{if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;else delete document.documentElement.dataset.theme;colors()};
-const ready=AUDIO.length>0&&AUDIO.every(Boolean);
-const P=AUDIO.map(src=>{const a=new Audio();a.preload="metadata";if(src)a.src=src;return a});
+
+let ready=false;
+const P=AUDIO_SOURCES.map(()=>new Audio());
 const D=P.map(()=>0);let cur=0,lastSave=0;
 const PLAY='<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>',PAUSE='<svg viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>';
 const total=()=>D.reduce((a,b)=>a+b,0);
 const pos=()=>D.slice(0,cur).reduce((a,b)=>a+b,0)+(P[cur]?P[cur].currentTime:0);
-function ui(){const t=total(),p=pos(),pl=P[cur]&&!P[cur].paused;
+
+function ui(){
+ const t=total(),p=pos(),pl=P[cur]&&!P[cur].paused;
  document.body.classList.toggle("playing",pl);$("pp").innerHTML=pl?PAUSE:PLAY;
- $("fill").style.width=(t>0?p/t*100:0)+"%";$("el").textContent=tf(p);$("tt").textContent=tf(t)}
-function go(i,t,play){if(P[cur]&&cur!==i)P[cur].pause();cur=i;const a=P[i];const f=()=>{try{a.currentTime=t||0}catch(e){}};
- if(a.readyState>0)f();else a.addEventListener("loadedmetadata",f,{once:true});if(play)a.play().catch(()=>{});ui()}
+ $("fill").style.width=(t>0?p/t*100:0)+"%";$("el").textContent=tf(p);$("tt").textContent=tf(t);
+ updateAmbience(p,pl);
+}
+function go(i,t,play){
+ if(P[cur]&&cur!==i)P[cur].pause();cur=i;const a=P[i];
+ const f=()=>{try{a.currentTime=t||0}catch(e){}};
+ if(a.readyState>0)f();else a.addEventListener("loadedmetadata",f,{once:true});
+ if(play)a.play().catch(()=>{});ui();
+}
 function seekAbs(x){let r=Math.max(0,Math.min(x,total()-.1)),i=0;while(i<P.length-1&&r>=D[i]){r-=D[i];i++}const w=!P[cur].paused;go(i,r,w)}
+
 P.forEach((a,i)=>{
  a.addEventListener("loadedmetadata",()=>{D[i]=a.duration||0;ui()});
  a.addEventListener("timeupdate",()=>{if(i!==cur)return;ui();const n=Date.now();if(n-lastSave>4000){lastSave=n;st.s("pos",pos().toFixed(1))}});
  a.addEventListener("play",()=>{P.forEach((o,j)=>{if(j!==i&&!o.paused)o.pause()});cur=i;ui();if("mediaSession"in navigator)navigator.mediaSession.playbackState="playing"});
  a.addEventListener("pause",()=>{st.s("pos",pos().toFixed(1));ui();if("mediaSession"in navigator)navigator.mediaSession.playbackState="paused"});
- a.addEventListener("ended",()=>{if(i<P.length-1){go(i+1,0,true)}else{st.s("pos","0");go(0,0,false)}})});
+ a.addEventListener("ended",()=>{if(i<P.length-1){go(i+1,0,true)}else{st.s("pos","0");go(0,0,false)}});
+});
+
 function toggle(){if(!ready)return;const a=P[cur];a.paused?a.play().catch(()=>{}):a.pause()}
 function skip(d){if(ready)seekAbs(pos()+d)}
 $("pp").onclick=toggle;$("bk").onclick=()=>skip(-15);$("fw").onclick=()=>skip(15);
-$("bar").onclick=e=>{if(!ready)return;const r=e.currentTarget.getBoundingClientRect();seekAbs((1-(e.clientX-r.left)/r.width)*total())};
-if(ready){const saved=parseFloat(st.g("pos","0"))||0;let n=0;P.forEach(a=>a.addEventListener("loadedmetadata",()=>{if(++n===P.length&&saved>3&&saved<total()-5)seekAbs(saved)},{once:true}));
- if("mediaSession"in navigator){const m=navigator.mediaSession;m.metadata=new MediaMetadata({title:document.title,artist:"همیار من"});
-  m.setActionHandler("play",toggle);m.setActionHandler("pause",toggle);m.setActionHandler("seekbackward",()=>skip(-15));m.setActionHandler("seekforward",()=>skip(15))}}
-else{["pp","bk","fw"].forEach(i=>$(i).disabled=true);$("note").textContent="صدای این تمرین هنوز اضافه نشده است."}
+$("bar").onclick=e=>{if(!ready)return;const r=e.currentTarget.getBoundingClientRect();seekAbs(((e.clientX-r.left)/r.width)*total())};
+
+["pp","bk","fw"].forEach(i=>$(i).disabled=true);
+$("note").textContent="در حال بارگذاری فایل‌های صوتی با کیفیت بالا...";
 ui();
+
+/* ---------- Real Progress Async Audio Loader (Layer 1 -> Layer 2) ---------- */
+const loadedPerFile=new Array(AUDIO_SOURCES.length).fill(0);
+const CIRCLE_CIRCUMFERENCE=314.159;
+
+function updateLoaderUI(curFileIndex){
+ const totalLoaded=loadedPerFile.reduce((a,b)=>a+b,0);
+ const pct=Math.min(100,Math.max(0,Math.round((totalLoaded/TOTAL_EXPECTED_BYTES)*100)));
+ const offset=CIRCLE_CIRCUMFERENCE-(pct/100)*CIRCLE_CIRCUMFERENCE;
+ $("prog-circle").style.strokeDashoffset=offset;
+ $("pct-num").textContent=fa(pct)+"٪";
+ if(curFileIndex<PART_TITLES.length){
+  $("loader-status").textContent=PART_TITLES[curFileIndex];
+ }
+ const mbLoaded=(totalLoaded/(1024*1024)).toFixed(1);
+ const mbTotal=(TOTAL_EXPECTED_BYTES/(1024*1024)).toFixed(1);
+ $("bytes-info").textContent=fa(mbLoaded)+" / "+fa(mbTotal)+" مگابایت";
+}
+
+async function fetchAudioWithRealProgress(url, index){
+ try{
+  const res=await fetch(url);
+  if(!res.ok)throw new Error("HTTP "+res.status);
+  const reader=res.body?res.body.getReader():null;
+  if(!reader){
+   const blob=await res.blob();
+   loadedPerFile[index]=blob.size;
+   updateLoaderUI(index);
+   return URL.createObjectURL(blob);
+  }
+  const chunks=[];
+  let received=0;
+  while(true){
+   const {done,value}=await reader.read();
+   if(done)break;
+   chunks.push(value);
+   received+=value.length;
+   loadedPerFile[index]=received;
+   updateLoaderUI(index);
+  }
+  const blob=new Blob(chunks,{type:"audio/mpeg"});
+  return URL.createObjectURL(blob);
+ }catch(err){
+  console.warn("Direct stream fetch fallback for",url,err);
+  loadedPerFile[index]=FILE_SIZES[index];
+  updateLoaderUI(index);
+  return url;
+ }
+}
+
+async function initRealLoader(){
+ updateLoaderUI(0);
+ const urls=[];
+ for(let i=0;i<AUDIO_SOURCES.length;i++){
+  updateLoaderUI(i);
+  const blobUrl=await fetchAudioWithRealProgress(AUDIO_SOURCES[i],i);
+  urls.push(blobUrl);
+  P[i].preload="metadata";
+  P[i].src=blobUrl;
+ }
+ 
+ $("loader-status").textContent="آماده‌سازی نهایی و ورود به جنگل...";
+ updateLoaderUI(5);
+ setTimeout(()=>{
+  ready=true;
+  ["pp","bk","fw"].forEach(i=>$(i).disabled=false);
+  $("note").textContent="";
+  $("loader-layer").classList.add("loaded");
+  
+  const saved=parseFloat(st.g("pos","0"))||0;let n=0;
+  P.forEach(a=>a.addEventListener("loadedmetadata",()=>{if(++n===P.length&&saved>3&&saved<total()-5)seekAbs(saved)},{once:true}));
+  if("mediaSession"in navigator){
+   const m=navigator.mediaSession;
+   m.metadata=new MediaMetadata({title:document.title,artist:"همیار من"});
+   m.setActionHandler("play",toggle);
+   m.setActionHandler("pause",toggle);
+   m.setActionHandler("seekbackward",()=>skip(-15));
+   m.setActionHandler("seekforward",()=>skip(15));
+  }
+  ui();
+ },600);
+}
+
+if(document.readyState==="loading"){
+ document.addEventListener("DOMContentLoaded",initRealLoader);
+}else{
+ initRealLoader();
+}
+
+/* ---------- ambient forest & dynamic footsteps soundscape (Web Audio API) ---------- */
+let actx=null,ambGain=null,windGain=null,leavesGain=null,streamGain=null;
+let lastStepSec=-1,birdTimer=null;
+const STEP_TIMESTAMPS=[
+ 308, 311, 326, 336, 458, 461, 464, // Part 2: First step, step 2, step 3, walking down path
+ 598, 602, 605,                     // Part 3: Steps on dry leaves
+ 1202, 1206, 1209, 1213, 1217       // Part 6: Returning path steps
+];
+
+function initAmbience(){
+ if(actx)return;
+ const AC=window.AudioContext||window.webkitAudioContext;
+ if(!AC)return;
+ actx=new AC();
+ ambGain=actx.createGain();
+ ambGain.gain.setValueAtTime(0,actx.currentTime);
+ ambGain.connect(actx.destination);
+
+ // 1. Deep forest wind (Brown noise + Lowpass modulated by slow LFO)
+ const bBuf=actx.createBuffer(1,actx.sampleRate*4,actx.sampleRate);
+ const bData=bBuf.getChannelData(0);let lastB=0;
+ for(let i=0;i<bData.length;i++){const w=Math.random()*2-1;lastB=(lastB+0.02*w)/1.02;bData[i]=lastB*3.5}
+ const bSrc=actx.createBufferSource();bSrc.buffer=bBuf;bSrc.loop=true;
+ const bFilt=actx.createBiquadFilter();bFilt.type="lowpass";bFilt.frequency.setValueAtTime(320,actx.currentTime);
+ const lfo=actx.createOscillator(),lfoG=actx.createGain();
+ lfo.frequency.setValueAtTime(0.07,actx.currentTime);lfoG.gain.setValueAtTime(150,actx.currentTime);
+ lfo.connect(lfoG);lfoG.connect(bFilt.frequency);lfo.start();
+ windGain=actx.createGain();windGain.gain.setValueAtTime(0.35,actx.currentTime);
+ bSrc.connect(bFilt);bFilt.connect(windGain);windGain.connect(ambGain);bSrc.start();
+
+ // 2. Canopy rustling & gentle leaves breeze (Pink noise + Bandpass)
+ const pBuf=actx.createBuffer(1,actx.sampleRate*4,actx.sampleRate);
+ const pData=pBuf.getChannelData(0);let b0=0,b1=0,b2=0,b3=0,b4=0,b5=0,b6=0;
+ for(let i=0;i<pData.length;i++){
+  const w=Math.random()*2-1;
+  b0=0.99886*b0+w*0.0555;b1=0.99332*b1+w*0.075;b2=0.969*b2+w*0.153;
+  b3=0.8665*b3+w*0.31;b4=0.55*b4+w*0.533;b5=-0.7616*b5-w*0.0169;
+  pData[i]=(b0+b1+b2+b3+b4+b5+b6+w*0.536)*0.11;b6=w*0.1159;
+ }
+ const pSrc=actx.createBufferSource();pSrc.buffer=pBuf;pSrc.loop=true;
+ const pFilt=actx.createBiquadFilter();pFilt.type="bandpass";pFilt.frequency.setValueAtTime(900,actx.currentTime);pFilt.Q.setValueAtTime(1.2,actx.currentTime);
+ leavesGain=actx.createGain();leavesGain.gain.setValueAtTime(0.18,actx.currentTime);
+ pSrc.connect(pFilt);pFilt.connect(leavesGain);leavesGain.connect(ambGain);pSrc.start();
+
+ // 3. Gentle babbling forest brook (Dual bandpass + wobble)
+ const sSrc=actx.createBufferSource();sSrc.buffer=pBuf;sSrc.loop=true;
+ const sF1=actx.createBiquadFilter();sF1.type="bandpass";sF1.frequency.setValueAtTime(480,actx.currentTime);sF1.Q.setValueAtTime(2.6,actx.currentTime);
+ const sF2=actx.createBiquadFilter();sF2.type="bandpass";sF2.frequency.setValueAtTime(1150,actx.currentTime);sF2.Q.setValueAtTime(2.2,actx.currentTime);
+ streamGain=actx.createGain();streamGain.gain.setValueAtTime(0,actx.currentTime);
+ sSrc.connect(sF1);sSrc.connect(sF2);sF1.connect(streamGain);sF2.connect(streamGain);streamGain.connect(ambGain);sSrc.start();
+ scheduleBirds();
+}
+
+function scheduleBirds(){
+ if(birdTimer)clearTimeout(birdTimer);
+ birdTimer=setTimeout(()=>{
+  if(actx&&ambGain&&ambGain.gain.value>0.08)playBird();
+  scheduleBirds();
+ },12000+Math.random()*16000);
+}
+
+function playBird(){
+ if(!actx||actx.state==="suspended")return;
+ const now=actx.currentTime,osc=actx.createOscillator(),g=actx.createGain();
+ const f0=2200+Math.random()*900;
+ osc.type="sine";osc.frequency.setValueAtTime(f0,now);
+ osc.frequency.exponentialRampToValueAtTime(f0*1.38,now+0.05);
+ osc.frequency.exponentialRampToValueAtTime(f0*0.85,now+0.16);
+ g.gain.setValueAtTime(0,now);g.gain.linearRampToValueAtTime(0.038,now+0.03);g.gain.exponentialRampToValueAtTime(0.0001,now+0.22);
+ osc.connect(g);g.connect(ambGain);osc.start(now);osc.stop(now+0.24);
+ if(Math.random()>0.45){
+  setTimeout(()=>{
+   if(!actx)return;
+   const n2=actx.currentTime,osc2=actx.createOscillator(),g2=actx.createGain();
+   osc2.type="sine";osc2.frequency.setValueAtTime(f0*1.12,n2);
+   osc2.frequency.exponentialRampToValueAtTime(f0*0.9,n2+0.12);
+   g2.gain.setValueAtTime(0,n2);g2.gain.linearRampToValueAtTime(0.032,n2+0.025);g2.gain.exponentialRampToValueAtTime(0.0001,n2+0.16);
+   osc2.connect(g2);g2.connect(ambGain);osc2.start(n2);osc2.stop(n2+0.18);
+  },140+Math.random()*80);
+ }
+}
+
+function playLeafStep(intensity=1.0){
+ if(!actx)initAmbience();
+ if(!actx)return;
+ if(actx.state==="suspended")actx.resume();
+ const now=actx.currentTime,dur=0.26;
+ const buf=actx.createBuffer(1,Math.floor(actx.sampleRate*dur),actx.sampleRate);
+ const d=buf.getChannelData(0);
+ for(let i=0;i<d.length;i++){
+  const r=Math.random()*2-1;
+  const c=Math.random()>0.87?(Math.random()*2-1)*2.2:0;
+  d[i]=r*0.55+c;
+ }
+ const src=actx.createBufferSource();src.buffer=buf;
+ const f=actx.createBiquadFilter();f.type="bandpass";
+ f.frequency.setValueAtTime(2400+(Math.random()*500-250),now);f.Q.setValueAtTime(2.2,now);
+ const tf=actx.createBiquadFilter();tf.type="lowpass";tf.frequency.setValueAtTime(180,now);
+ const g=actx.createGain();const vol=0.22*intensity;
+ g.gain.setValueAtTime(0,now);g.gain.linearRampToValueAtTime(vol,now+0.02);g.gain.exponentialRampToValueAtTime(0.0001,now+dur);
+ src.connect(f);src.connect(tf);f.connect(g);tf.connect(g);g.connect(actx.destination);
+ src.start(now);src.stop(now+dur);
+}
+
+function updateAmbience(curPos,isPlaying){
+ if(!isPlaying){
+  if(actx&&ambGain)ambGain.gain.setTargetAtTime(0,actx.currentTime,0.15);
+  return;
+ }
+ initAmbience();
+ if(actx&&actx.state==="suspended")actx.resume();
+ const now=actx.currentTime;
+ 
+ let ambTarget=0;
+ if(curPos<225){
+  ambTarget=0;
+ }else if(curPos<260){
+  ambTarget=(curPos-225)/35;
+ }else if(curPos<1275){
+  ambTarget=1.0;
+ }else if(curPos<1320){
+  ambTarget=Math.max(0,1.0-(curPos-1275)/45);
+ }else{
+  ambTarget=0;
+ }
+ 
+ let streamTarget=0;
+ if(curPos>260&&curPos<554){
+  streamTarget=0.08;
+ }else if(curPos>=554&&curPos<1275){
+  streamTarget=0.26;
+ }else if(curPos>=1275&&curPos<1320){
+  streamTarget=Math.max(0,0.26*(1-(curPos-1275)/45));
+ }else{
+  streamTarget=0;
+ }
+ 
+ if(ambGain)ambGain.gain.setTargetAtTime(ambTarget*0.42,now,0.2);
+ if(streamGain)streamGain.gain.setTargetAtTime(streamTarget,now,0.2);
+ 
+ const pInt=Math.floor(curPos);
+ if(pInt!==lastStepSec){
+  lastStepSec=pInt;
+  if(STEP_TIMESTAMPS.includes(pInt)){
+   playLeafStep(1.0);
+  }
+ }
+}
+
 /* ---------- visual scenes (theme-aware, ~30fps, paused when hidden) ---------- */
 const cv=$("fx"),cx=cv.getContext("2d");let W=0,H=0,C1="120,60%,45%",C2="200,70%,50%",T=0,last=0;
 const RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
