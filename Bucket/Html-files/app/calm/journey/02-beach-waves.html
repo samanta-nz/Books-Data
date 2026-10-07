@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<title>جنگل آرام</title>
-<!-- key: Bucket/Html-files/app/calm/journey/01-calm-forest.html | app id: cj-01 | audience: all | parts: 6 | audio: pending injection (see 01-calm-forest.md) -->
+<title>ساحل و موج</title>
+<!-- key: Bucket/Html-files/app/calm/journey/02-beach-waves.html | app id: cj-02 | audience: all | parts: 6 | audio: pending injection (see 02-beach-waves.md) -->
 <style>
 :root{color-scheme:light dark;
- --bg1:hsl(148 42% 95%);--bg2:hsl(178 48% 86%);--fg:hsl(148 38% 17%);--mut:hsl(148 20% 38%);
- --ac:hsl(148 62% 36%);--ac2:hsl(178 70% 46%);--fx1:148,60%,45%;--fx2:178,70%,50%;--card:hsl(0 0% 100%/.55);--bd:hsl(148 30% 30%/.18);--ov:148 42% 95%}
+ --bg1:hsl(24 42% 95%);--bg2:hsl(196 48% 86%);--fg:hsl(24 38% 17%);--mut:hsl(24 20% 38%);
+ --ac:hsl(24 62% 36%);--ac2:hsl(196 70% 46%);--fx1:24,60%,45%;--fx2:196,70%,50%;--card:hsl(0 0% 100%/.55);--bd:hsl(24 30% 30%/.18);--ov:24 42% 95%}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){
- --bg1:hsl(148 45% 7%);--bg2:hsl(178 50% 15%);--fg:hsl(148 30% 92%);--mut:hsl(148 18% 68%);
- --ac:hsl(148 78% 66%);--ac2:hsl(178 85% 66%);--fx1:148,85%,68%;--fx2:178,90%,64%;--card:hsl(0 0% 0%/.28);--bd:hsl(0 0% 100%/.14);--ov:148 45% 7%}}
-:root[data-theme=dark]{--bg1:hsl(148 45% 7%);--bg2:hsl(178 50% 15%);--fg:hsl(148 30% 92%);--mut:hsl(148 18% 68%);
- --ac:hsl(148 78% 66%);--ac2:hsl(178 85% 66%);--fx1:148,85%,68%;--fx2:178,90%,64%;--card:hsl(0 0% 0%/.28);--bd:hsl(0 0% 100%/.14);--ov:148 45% 7%}
+ --bg1:hsl(24 45% 7%);--bg2:hsl(196 50% 15%);--fg:hsl(24 30% 92%);--mut:hsl(24 18% 68%);
+ --ac:hsl(24 78% 66%);--ac2:hsl(196 85% 66%);--fx1:24,85%,68%;--fx2:196,90%,64%;--card:hsl(0 0% 0%/.28);--bd:hsl(0 0% 100%/.14);--ov:24 45% 7%}}
+:root[data-theme=dark]{--bg1:hsl(24 45% 7%);--bg2:hsl(196 50% 15%);--fg:hsl(24 30% 92%);--mut:hsl(24 18% 68%);
+ --ac:hsl(24 78% 66%);--ac2:hsl(196 85% 66%);--fx1:24,85%,68%;--fx2:196,90%,64%;--card:hsl(0 0% 0%/.28);--bd:hsl(0 0% 100%/.14);--ov:24 45% 7%}
 *{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
 html,body{height:100%}
 body{background:linear-gradient(160deg,var(--bg1),var(--bg2));color:var(--fg);font-family:Vazirmatn,Tahoma,sans-serif;
@@ -62,17 +62,17 @@ button:disabled{opacity:.4;cursor:default}
 <div id="bg"></div>
 <canvas id="fx"></canvas>
 <main>
- <header><h1>جنگل آرام</h1><div class="sub">حدود ۲۳ دقیقه</div></header>
- <div class="stage"><div class="orb"></div></div>
+ <header><h1>ساحل و موج</h1><div class="sub">حدود ۲۲ دقیقه</div></header>
+ <div class="stage"><div class="orb sun"></div></div>
  <section class="panel">
   <div class="bar" id="bar"><div class="fill" id="fill"></div></div>
   <div class="tm"><span id="tt">۰:۰۰</span><span id="el">۰:۰۰</span></div>
-  <div class="ctl"><button class="sk" id="bk" aria-label="۱۵ ثانیه عقب">−۱۵</button><button class="pp" id="pp" aria-label="پخش / مکث"></button><button class="sk" id="fw" aria-label="۱۵ ثانیه جلو">+۱۵</button></div>
+  <div class="ctl"><button class="sk ic" id="bk" aria-label="۱۵ ثانیه عقب"><svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/><text x="12" y="16.2" text-anchor="middle">۱۵</text></svg></button><button class="pp" id="pp" aria-label="پخش / مکث"></button><button class="sk ic" id="fw" aria-label="۱۵ ثانیه جلو"><svg viewBox="0 0 24 24"><path transform="translate(24 0) scale(-1 1)" d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/><text x="12" y="16.2" text-anchor="middle">۱۵</text></svg></button></div>
   <div class="note" id="note"></div>
  </section>
 </main>
 <script>
-const NAME="01-calm-forest",SCENE="mist+fireflies".split("+"),AUDIO=["", "", "", "", "", ""];
+const NAME="02-beach-waves",SCENE="waves+mist".split("+"),AUDIO=["", "", "", "", "", ""];
 const BG={light:"",dark:""};
 const FA="۰۱۲۳۴۵۶۷۸۹",fa=s=>String(s).replace(/[0-9]/g,d=>FA[d]);
 const tf=s=>{s=Math.max(0,Math.floor(s||0));const m=Math.floor(s/60);return fa(m)+":"+fa(String(s%60).padStart(2,"0"))};
