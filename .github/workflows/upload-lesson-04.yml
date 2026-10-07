@@ -1,0 +1,63 @@
+name: Upload lesson 04 to Parspack
+
+on:
+  push:
+    branches:
+      - arena/2de51f95-books-data
+    paths:
+      - 'Bucket/Html-files/آموزشگاه/**'
+      - '.github/workflows/upload-lesson-04.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  upload-lesson-04:
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.PARSPACK_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.PARSPACK_SECRET_KEY }}
+      AWS_DEFAULT_REGION: us-east-1
+      AWS_S3_ADDRESSING_STYLE: path
+      AWS_REQUEST_CHECKSUM_CALCULATION: WHEN_REQUIRED
+      AWS_RESPONSE_CHECKSUM_VALIDATION: WHEN_REQUIRED
+      PARSPACK_ENDPOINT: https://c539776.parspack.net
+      DESTINATION: s3://c539776/Bucket/Html-files/آموزشگاه
+    steps:
+      - name: Check out this branch
+        uses: actions/checkout@v4
+
+      - name: Verify secrets are configured
+        shell: bash
+        run: |
+          if [[ -z "$AWS_ACCESS_KEY_ID" || -z "$AWS_SECRET_ACCESS_KEY" ]]; then
+            echo 'Required PARSPACK_ACCESS_KEY / PARSPACK_SECRET_KEY repository secrets are missing.' >&2
+            exit 1
+          fi
+
+      - name: Upload lesson HTML and assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          aws s3 cp \
+            'Bucket/Html-files/آموزشگاه/04-note-taking.html' \
+            "$DESTINATION/04-note-taking.html" \
+            --endpoint-url "$PARSPACK_ENDPOINT" \
+            --content-type 'text/html; charset=utf-8' \
+            --cache-control 'no-cache, max-age=0, must-revalidate' \
+            --no-progress
+
+          aws s3 sync \
+            'Bucket/Html-files/آموزشگاه/04-exam-pic/' \
+            "$DESTINATION/04-exam-pic/" \
+            --endpoint-url "$PARSPACK_ENDPOINT" \
+            --cache-control 'public, max-age=31536000, immutable' \
+            --no-progress
+
+          aws s3 sync \
+            'Bucket/Html-files/آموزشگاه/04-exam-audio/' \
+            "$DESTINATION/04-exam-audio/" \
+            --endpoint-url "$PARSPACK_ENDPOINT" \
+            --cache-control 'public, max-age=31536000, immutable' \
+            --no-progress
