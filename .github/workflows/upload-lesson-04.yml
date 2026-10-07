@@ -40,7 +40,25 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          aws s3 cp \
+          aws --version
+          upload() {
+            local label="$1"
+            shift
+            local logfile=/tmp/parspack-upload.log
+            set +e
+            "$@" >"$logfile" 2>&1
+            local status=$?
+            set -e
+            if [[ $status -ne 0 ]]; then
+              local details
+              details="$(tail -n 8 "$logfile" | tr '\n' ' ' | cut -c1-1000)"
+              echo "::error title=Parspack upload failed::${label} (exit ${status}): ${details}"
+              exit "$status"
+            fi
+            cat "$logfile"
+          }
+
+          upload 'HTML' aws s3 cp \
             'Bucket/Html-files/آموزشگاه/04-note-taking.html' \
             "$DESTINATION/04-note-taking.html" \
             --endpoint-url "$PARSPACK_ENDPOINT" \
@@ -48,14 +66,14 @@ jobs:
             --cache-control 'no-cache, max-age=0, must-revalidate' \
             --no-progress
 
-          aws s3 sync \
+          upload 'Images' aws s3 sync \
             'Bucket/Html-files/آموزشگاه/04-exam-pic/' \
             "$DESTINATION/04-exam-pic/" \
             --endpoint-url "$PARSPACK_ENDPOINT" \
             --cache-control 'public, max-age=31536000, immutable' \
             --no-progress
 
-          aws s3 sync \
+          upload 'Audio' aws s3 sync \
             'Bucket/Html-files/آموزشگاه/04-exam-audio/' \
             "$DESTINATION/04-exam-audio/" \
             --endpoint-url "$PARSPACK_ENDPOINT" \
