@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<script>try{var t=localStorage.getItem("amz-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>🗣 بحث، بیان و تفکر نقادانه - اصول بحث و مناظره‌ی سالم</title>
+<style>
+:root{
+  --hue:102;
+  --bg:#f4f5fb; --card:#ffffff; --card-b:#e7e8f2; --text:#1b1c26; --muted:#6b7080;
+  --accent: hsl(var(--hue) 78% 46%);
+  --accent2: hsl(calc(var(--hue) + 40) 85% 55%);
+  --glow: hsl(var(--hue) 90% 60%);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0d0e14; --card:#171826; --card-b:#262838; --text:#eef0f7; --muted:#9aa0b4;
+    --accent: hsl(var(--hue) 85% 62%); --accent2: hsl(calc(var(--hue) + 40) 90% 65%); }
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Vazirmatn','Tahoma',sans-serif;
+  overflow-x:hidden;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);}
+.glow{position:fixed;border-radius:50%;filter:blur(60px);opacity:.35;z-index:0;pointer-events:none}
+.g1{width:260px;height:260px;background:var(--glow);top:-80px;right:-60px}
+.g2{width:220px;height:220px;background:var(--accent2);bottom:10%;left:-70px;opacity:.25}
+header{position:sticky;top:0;z-index:5;padding:16px 18px calc(14px + env(safe-area-inset-top,0px));
+  background:linear-gradient(135deg, hsl(var(--hue) 70% 20%), hsl(calc(var(--hue)+30) 70% 14%));
+  color:#fff;box-shadow:0 6px 24px -8px hsl(var(--hue) 70% 30% / .6)}
+header .crumb{font-size:11px;opacity:.75;margin-bottom:4px}
+header h1{margin:0;font-size:18px;font-weight:800;line-height:1.5}
+main{position:relative;z-index:1;padding:14px 14px 40px;max-width:540px;margin:0 auto}
+.item{margin-bottom:12px;border-radius:18px;overflow:hidden;background:var(--card);
+  border:1px solid var(--card-b);box-shadow:0 4px 18px -10px rgba(0,0,0,.25);transition:box-shadow .25s}
+.item.open{box-shadow:0 8px 28px -8px hsl(var(--hue) 70% 40% / .35)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:15px 16px;
+  cursor:pointer;user-select:none}
+.hd .num{flex:none;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+.hd .t{flex:1;font-size:14.5px;font-weight:700}
+.hd .chev{color:var(--accent);font-size:12px;transition:transform .25s ease}
+.item.open .chev{transform:rotate(90deg)}
+.body{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.item.open .body{max-height:12000px}
+.inner{padding:0 18px 16px 18px;font-size:13.5px;line-height:2;color:var(--text)}
+.inner p{margin:0 0 8px}
+.inner ul{margin:6px 0 0;padding-inline-start:20px}
+.inner li{margin-bottom:5px;color:var(--muted)}
+footer{position:relative;z-index:1;text-align:center;color:var(--muted);font-size:11px;padding:6px 0 26px}
+
+header .meta{font-size:11px;opacity:.85;margin-top:4px}
+.inner figure{margin:12px 0;padding:10px;border:1px solid var(--card-b);border-radius:14px;background:var(--bg)}
+.inner figure img{width:100%;height:auto;border-radius:10px;display:block}
+.inner figcaption{font-size:12px;color:var(--muted);line-height:1.9;margin-top:8px;text-align:center}
+.inner .ref{color:var(--accent);font-weight:800}
+
+.inner ol{margin:6px 0 0;padding-inline-start:20px}
+.inner ol li{margin-bottom:5px;color:var(--muted)}
+.inner .tech{font-weight:800;font-size:14px;margin:14px 0 6px;padding:8px 12px;border-radius:12px;background:var(--bg);border:1px solid var(--card-b)}
+.inner .tnum{display:inline-block;font-size:11.5px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:20px;padding:2px 10px;margin-left:8px}
+
+.ap{display:flex;align-items:center;gap:8px;height:30px;padding:0 10px;margin:0 0 10px;border:1px solid var(--card-b);border-radius:999px;background:var(--bg)}
+.ap .pp,.ap .mu{flex:none;width:22px;height:22px;border:none;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.ap .pp svg,.ap .mu svg{width:12px;height:12px}
+.ap .bar{flex:1;height:4px;border-radius:4px;background:var(--card-b);cursor:pointer;overflow:hidden}
+.ap .fill{height:100%;width:0;border-radius:4px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.ap .tm{flex:none;font-size:10px;color:var(--muted);white-space:nowrap;min-width:70px;text-align:center}
+.ap .vol{flex:none;width:80px;accent-color:var(--accent);cursor:pointer;padding:0;direction:ltr}
+
+header.heading{position:static;background:none;box-shadow:none;padding:14px 14px 0;color:inherit;max-width:540px;margin:0 auto 15px;display:grid;grid-template-columns:minmax(0,1fr) auto 39px;gap:7px;align-items:center;margin:0 2px 15px}
+.heading small{color:var(--accent);font-size:10px}
+.heading h1{margin:2px 0;font-size:23px;line-height:1.5}
+.heading .en{font-size:10px;color:var(--muted);direction:ltr;text-align:right;letter-spacing:1px}
+.heading .meta{font-size:10px;color:var(--muted);margin-top:3px}
+.brand{display:flex;justify-content:center;align-items:center;gap:10px;font-size:19px;font-weight:800;letter-spacing:-.3px;color:var(--accent)}
+.tag{direction:ltr;font-size:10px;letter-spacing:.5px;background:linear-gradient(135deg,#9becbe,#36a57c);color:#092c20;padding:3px 9px;border-radius:6px;font-weight:800}
+.header-brand{flex-direction:column;gap:4px;font-size:14px;line-height:1.45;white-space:nowrap}
+.header-brand .tag{font-size:7px;padding:3px 5px}
+.theme{background:var(--card);border:1px solid var(--card-b);border-radius:50%;width:39px;height:39px;color:var(--accent);font-size:20px;cursor:pointer}
+footer{border-top:1px solid var(--card-b);padding-top:20px;margin-top:25px}
+footer p{margin:5px 0}footer .brand{font-size:17px;margin:10px 0}footer strong{font-size:11px;color:var(--text)}
+.lesson-nav{display:flex;gap:10px;justify-content:center;margin-bottom:14px}
+.lnav{font-size:12px;font-weight:800;color:var(--accent);text-decoration:none;border:1px solid var(--card-b);background:var(--card);border-radius:999px;padding:8px 18px}
+html[data-theme="light"]{--bg:#f4f5fb;--card:#ffffff;--card-b:#e7e8f2;--text:#1b1c26;--muted:#6b7080;--accent:hsl(102 78% 46%);--accent2:hsl(142 85% 55%);color-scheme:light}
+html[data-theme="dark"]{--bg:#0d0e14;--card:#171826;--card-b:#262838;--text:#eef0f7;--muted:#9aa0b4;--accent:hsl(102 85% 62%);--accent2:hsl(142 90% 65%);color-scheme:dark}
+#loader{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;align-items:center;justify-content:center}
+#loader.done{opacity:0;pointer-events:none;transition:opacity .4s}
+.ld-box{position:relative;width:170px;text-align:center}
+.ld-box svg{width:170px;height:170px;transform:rotate(-90deg)}
+.ld-bg,.ld-fg{fill:none;stroke-width:12}
+.ld-bg{stroke:var(--card-b)}.ld-fg{stroke:var(--accent);stroke-linecap:round;stroke-dasharray:377;stroke-dashoffset:377}
+.ld-num{position:absolute;top:56px;width:100%;font-size:32px;font-weight:800}
+.ld-cap{margin-top:10px;font-size:12px;color:var(--muted)}
+
+.inner figure.fr{padding:8px}
+.inner figure .frame{position:relative;width:100%;aspect-ratio:720/392;border-radius:10px;overflow:hidden;background:linear-gradient(135deg,var(--card-b),var(--bg));display:flex;align-items:center;justify-content:center}
+.inner figure .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0;z-index:1}
+.inner figure .frame img.x{display:none}
+.frame .ph{position:relative;z-index:0;text-align:center;font-size:12px;font-weight:800;color:var(--accent);padding:0 14px;line-height:1.9}
+.frame .ph i{display:block;font-style:normal;font-size:26px;opacity:.55}
+.ap.off{opacity:.45;pointer-events:none}
+.inner pre{direction:ltr;text-align:left;overflow-x:auto;background:var(--bg);border:1px solid var(--card-b);border-radius:10px;padding:10px;font-size:12px;line-height:1.7;margin:8px 0}
+.inner details{margin:6px 0;border:1px solid var(--card-b);border-radius:10px;padding:8px 12px;background:var(--bg)}
+.inner summary{cursor:pointer;font-weight:700;font-size:13px}
+.inner details p{margin:8px 0 0;color:var(--muted)}
+</style>
+</head>
+<body>
+<!--LOADER-->
+<div id="loader"><div class="ld-box"><svg viewBox="0 0 140 140"><circle class="ld-bg" cx="70" cy="70" r="60"/><circle class="ld-fg" id="ldFg" cx="70" cy="70" r="60"/></svg><div class="ld-num" id="ldNum">۰٪</div><div class="ld-cap">در حال بارگذاری…</div></div></div>
+<script>(function(){var C=376.99,p=0,done=false,fg=document.getElementById("ldFg"),nm=document.getElementById("ldNum");
+var FA="۰۱۲۳۴۵۶۷۸۹";function fa(n){return String(n).replace(/[0-9]/g,function(d){return FA[d];});}
+function set(v){p=v;fg.style.strokeDashoffset=(C-C*v/100).toFixed(1);nm.textContent=fa(Math.round(v))+"٪";}
+set(4);var t=setInterval(function(){if(p<90)set(p+Math.max(.3,(90-p)/40));},50);
+function fin(){if(done)return;done=true;clearInterval(t);set(100);var L=document.getElementById("loader");L.classList.add("done");setTimeout(function(){L.remove();},450);}
+window.addEventListener("load",function(){setTimeout(fin,150)});setTimeout(fin,12000);})();</script>
+
+<div class="glow g1"></div><div class="glow g2"></div>
+<header class="heading"><div><small>درس ۶ از ۳۴</small><h1>اصول بحث و مناظره‌ی سالم</h1><div class="en" lang="en" dir="ltr">PRINCIPLES OF HEALTHY DEBATE</div><div class="meta">درس ۶ از ۳۴ • حدود ۵۵ دقیقه مطالعه • ۹ تصویر مفهومی • ۲۸ تکنیک و مفهوم</div></div><div class="brand header-brand">همیار من <span class="tag" lang="en" dir="ltr">HAMYAR E MAN</span></div><button class="theme" id="theme" aria-label="تغییر تم روشن و تاریک">☀</button></header>
+<main id="app"></main>
+<footer><div class="lesson-nav"><a class="lnav" href="07-logical-fallacies.html">درس بعدی: مغالطه‌های رایج در بحث ‹</a></div><p>تهیه شده اختصاصی برای اپلیکیشن</p><div class="brand">همیار من <span class="tag" lang="en">HAMYAR E MAN</span></div><p>برای امیدان آینده ایران زمین</p><p><strong>اپلیکیشن همیار من (فراتر از آموزش)</strong></p></footer>
+<script>
+const SECTIONS = [{"h": "بحث برای چه؟ هدف را درست بگذارید", "b": "<p>بیشتر بحث‌ها خراب می‌شوند چون دو طرف هدف متفاوتی دارند: یکی می‌خواهد بفهمد و دیگری می‌خواهد ببرد. بحثی که هدفش «برنده شدن» باشد، معمولاً هر دو طرف را بازنده می‌کند: رابطه خراب می‌شود و هیچ‌کس چیزی یاد نمی‌گیرد. بحث سالم یعنی دو نفر (یا دو گروه) با دلیل‌هایشان کنار هم به جواب بهتری برسند.</p>\n<p class=\"tech\"><span class=\"tnum\">مفهوم ۱</span>چهار نوع گفت‌وگو</p>\n<ul><li>گفت‌وگوی دوستانه: هدف ارتباط است، نه اثبات.</li><li>بحث (Discussion): تبادل نظر برای فهم مسئله.</li><li>مناظره (Debate): هرکس از یک موضع با قواعد مشخص دفاع می‌کند و داور یا مخاطب قضاوت می‌کند.</li><li>جدل: هدف غلبه است و معمولاً به تحقیر و تکرار می‌رسد.</li></ul>\n<p>این درس برای دو نوع میانی است. <span class=\"ref\">تصویر شماره ۱</span> تفاوت هدف‌ها را نشان می‌دهد.</p>\n<figure class=\"fr\"><div class=\"frame\"><span class=\"ph\"><i>🖼</i>تصویر شماره ۱</span><img src=\"exam-pics/06-debate-principles-img01-goal.jpg\" alt=\"تصویر شماره ۱ ـ دو نفر در بحث سالم کنار هم یک مسئله را از دو طرف می‌بینند.\" loading=\"lazy\" onerror=\"this.classList.add('x')\"></div><figcaption><span class=\"ref\">تصویر شماره ۱</span> ـ دو نفر در بحث سالم کنار هم یک مسئله را از دو طرف می‌بینند.</figcaption></figure>\n<p class=\"tech\"><span class=\"tnum\">مفهوم ۲</span>قبل از شروع: روشن کنید بر سر چه بحث می‌کنید</p>\n<p>بسیاری از اختلاف‌ها از سوءتفاهم در اصطلاح می‌آید. اگر یکی از «آزادی» حرف می‌زند و دیگری از «بی‌قانونی»، هر دو در دو جهان‌اند. اول مسئله را در یک جمله بنویسید (مثلاً «آیا موبایل در مدرسه باید ممنوع باشد؟») و واژه‌های اصلی را تعریف کنید.</p>"}, {"h": "پنج اصل بحث سالم", "b": "<p class=\"tech\"><span class=\"tnum\">اصل ۱</span>روی ایده بحث کنید، نه آدم</p>\n<p>«حرفت غلط است چون تو همیشه این‌طوری بودی» استدلال نیست؛ حمله است. اگر ایرادی دیدید، به ادعا یا دلیل بگیرید. حتی اگر طرف مقابل را دوست نداشته باشید، ممکن است حرفش درست باشد.</p>\n<p class=\"tech\"><span class=\"tnum\">اصل ۲</span>فرض حسن‌نیت</p>\n<p>تا دلیل روشنی ندارید، فرض کنید طرف مقابل منطقی و خوش‌نیت است. اگر منظورش را نفهمیدید، به‌جای «این یعنی…»، بپرسید: «منظورت این است که…؟»</p>\n<p class=\"tech\"><span class=\"tnum\">اصل ۳</span>بار اثبات با کسی است که ادعا می‌کند</p>\n<p>کسی که ادعایی می‌کند باید دلیل بیاورد. گفتن «ثابت کن که اشتباه است» جای دلیل نمی‌نشیند. البته ادعاهای عادی و پذیرفته‌شده به اثبات تازه نیاز ندارند.</p>\n<p class=\"tech\"><span class=\"tnum\">اصل ۴</span>قوی‌ترین نسخه‌ی حرف مقابل را بشنوید</p>\n<p>به این کار «استیل‌من» (Steelman) می‌گویند، برعکسِ «آدم پوشالی» که ضعیف‌ترین شکل حرف مقابل را مطرح می‌کنند تا راحت بشکنندش. قبل از جواب، حرف مقابل را با شکلی که خودش قبول کند بازگو کنید.</p>\n<p class=\"tech\"><span class=\"tnum\">اصل ۵</span>تغییر نظر شکست نیست</p>\n<p>اگر دلیل بهتری شنیدید و نظرتان را عوض کردید، بحث موفق بوده. بگویید: «این را نمی‌دانستم؛ نظرم را اصلاح می‌کنم.» <span class=\"ref\">تصویر شماره ۲</span> این رفتار را نشان می‌دهد.</p>\n<figure class=\"fr\"><div class=\"frame\"><span class=\"ph\"><i>🖼</i>تصویر شماره ۲</span><img src=\"exam-pics/06-debate-principles-img02-mind.jpg\" alt=\"تصویر شماره ۲ ـ تغییر نظر با دلیل بهتر نشانه‌ی قدرت است، نه ضعف.\" loading=\"lazy\" onerror=\"this.classList.add('x')\"></div><figcaption><span class=\"ref\">تصویر شماره ۲</span> ـ تغییر نظر با دلیل بهتر نشانه‌ی قدرت است، نه ضعف.</figcaption></figure>\n<figure class=\"fr\"><div class=\"frame\"><span class=\"ph\"><i>🖼</i>تصویر شماره ۳</span><img src=\"exam-pics/06-debate-principles-img03-steelman.jpg\" alt=\"تصویر شماره ۳ ـ قوی‌ترین نسخه‌ی حرف مقابل را بشنوید.\" loading=\"lazy\" onerror=\"this.classList.add('x')\"></div><figcaption><span class=\"ref\">تصویر شماره ۳</span> ـ قوی‌ترین نسخه‌ی حرف مقابل را بشنوید.</figcaption></figure>"}, {"h": "ساختار یک استدلال", "b": "<p>استدلال خوب مثل میز چهارپایه‌ای است که اگر یکی از پایه‌ها شکسته باشد، می‌افتد.</p>\n<p class=\"tech\"><span class=\"tnum\">مفهوم ۱</span>الگوی ادعا، دلیل، شاهد</p>\n<ul><li>ادعا: چه چیزی را می‌خواهید ثابت کنید؟ («موبایل باید در کلاس ممنوع باشد.»)</li><li>دلیل: چرا؟ («چون تمرکز را کم می‌کند.»)</li><li>شاهد: چه چیزی دلیل را پشتیبانی می‌کند؟ (پژوهش، آمار، تجربه‌ی قابل‌بررسی)</li><li>ربط: چرا شاهد به دلیل و دلیل به ادعا وصل است؟</li></ul>\n<p class=\"tech\"><span class=\"tnum\">مفهوم ۲</span>مدل توّلمین (برای کسانی که بیشتر می‌خواهند)</p>\n<p>فیلسوف بریتانیایی استیون تولمین استدلال را شامل ادعا، مستندات، ضمانت (پلی که مستندات را به ادعا وصل می‌کند)، پشتوانه‌ی ضمانت، قید (چقدر قطعی؟) و پاسخ به نقد دانست. «قید» اهمیت دارد: «معمولاً»، «در بیشتر موارد» و «تحت شرایط…» ادعای شما را صادقانه‌تر و کم‌خطاتر می‌کنند.</p>\n<p class=\"tech\"><span class=\"tnum\">تکنیک ۱</span>قدرت شاهدها را بسنجید</p>\n<ul><li>ضعیف: «یک بار شنیدم که…»</li><li>متوسط: نمونه‌ی منفرد یا تجربه‌ی شخصی</li><li>قوی‌تر: داده‌ی منظم از منبع قابل‌بررسی</li><li>قوی: چند پژوهش مستقل با نتیجه‌ی همسو</li></ul>\n<p>شاهد قوی هم اگر نامربوط باشد بی‌فایده است. همیشه بپرسید: «این واقعاً همان ادعا را ثابت می‌کند؟» <span class=\"ref\">تصویر شماره ۴</span> ساختار را مثل چهارپایه نشان می‌دهد.</p>\n<figure class=\"fr\"><div class=\"frame\"><span class=\"ph\"><i>🖼</i>تصویر شماره ۴</span><img src=\"exam-pics/06-debate-principles-img04-table.jpg\" alt=\"تصویر شماره ۴ ـ استدلال مثل میزی است که با ادعا، دلیل، شاهد و ربط پابرجاست.\" loading=\"lazy\" onerror=\"this.classList.add('x')\"></div><figcaption><span class=\"ref\">تصویر شماره ۴</span> ـ استدلال مثل میزی است که با ادعا، دلیل، شاهد و ربط پابرجاست.</figcaption></figure>"}, {"h": "گوش دادن و پرسیدن", "b": "<p class=\"tech\"><span class=\"tnum\">تکنیک ۱</span>بازگویی</p>\n<p>«اگر درست فهمیده باشم، می‌گویی که… درست است؟» این جمله سه فایده دارد: سوءتفاهم را حل می‌کند، احترام نشان می‌دهد و به شما وقت می‌دهد فکر کنید.</p>\n<p class=\"tech\"><span class=\"tnum\">تکنیک ۲</span>سؤال روشن‌ساز</p>\n<ul><li>«منظورت از … دقیقاً چیست؟»</li><li>«چه شاهدی دلیل تو را پشتیبانی می‌کند؟»</li><li>«این در چه مواردی صدق نمی‌کند؟»</li><li>«اگر ثابت شود خلاف این است، چه می‌کنی؟»</li></ul>\n<p>سؤال خوب مثل چراغ‌قوه است، نه چماق. هدفش دیدن بهتر است.</p>\n<p class=\"tech\"><span class=\"tnum\">تکنیک ۳</span>نوبت و مکث</p>\n<p>قبل از جواب دادن، سه ثانیه مکث کنید. این سه ثانیه جواب احساسی را از جواب فکرشده جدا می‌کند و به طرف مقابل نشان می‌دهد که حرفش را جدی گرفته‌اید.</p>\n<figure class=\"fr\"><div class=\"frame\"><span class=\"ph\"><i>🖼</i>تصویر شماره ۵</span><img src=\"exam-pics/06-debate-principles-img05-restate.jpg\" alt=\"تصویر شماره ۵ ـ بازگویی حرف مقابل پیش از پاسخ.\" loading=\"lazy\" onerror=\"this.classList.add('x')\"></div><figcaption><span class=\"ref\">تصویر شماره ۵</span> ـ بازگویی حرف مقابل پیش از پاسخ.</figcaption></figure>"}, {"h": "نقد و پاسخ: کجا ایراد می‌گیریم", "b": "<p>نقد خوب مشخص می‌کند ایراد دقیقاً کجاست. چهار جای مختلف برای ایراد وجود دارد:</p>\n<ol><li>ایراد به ادعا: ادعا بیش از حد کلی یا مبهم است.</li><li>ایراد به دلیل: دلیل واقعاً ادعا را نتیجه نمی‌دهد.</li><li>ایراد به شاهد: شاهد نادرست، قدیمی یا ناکافی است.</li><li>ایراد به ربط: شاهد درست است ولی به ادعا ربط ندارد.</li></ol>\n<p class=\"tech\"><span class=\"tnum\">تکنیک ۱</span>جمله‌های پاسخ</p>\n<ul><li>«در این بخش با تو موافقم، ولی در بخش … فرق دارم.»</li><li>«شاهد تو را قبول دارم، اما فکر می‌کنم نتیجه‌اش این نیست، چون …»</li><li>«می‌توانم یک مثال نقض بیاورم؟»</li><li>«بیا ببینیم دقیقاً کجا اختلاف داریم.»</li></ul>\n<p class=\"tech\"><span class=\"tnum\">تکنیک ۲</span>اختلاف را کوچک کنید</p>\n<p>وسط بحث بنویسید یا بگویید: «ما در این سه نکته توافق داریم و فقط در این یکی اختلاف.» این‌کار بحث را از میدان جنگ به پروژه‌ی مشترک تبدیل می‌کند.</p>\n<figure class=\"fr\"><div class=\"frame\"><span class=\"ph\"><i>🖼</i>تصویر شماره ۶</span><img src=\"exam-pics/06-debate-principles-img06-fourplaces.jpg\" alt=\"تصویر شماره ۶ ـ چهار جای ایراد: ادعا، دلیل، شاهد و ربط.\" loading=\"lazy\" onerror=\"this.classList.add('x')\"></div><figcaption><span class=\"ref\">تصویر شماره ۶</span> ـ چهار جای ایراد: ادعا، دلیل، شاهد و ربط.</figcaption></figure>"}, {"h": "مناظره‌ی رسمی: ساختار و آماده‌سازی", "b": "<p class=\"tech\"><span class=\"tnum\">مفهوم ۱</span>قالب معمول</p>\n<ol><li>افتتاحیه‌ی طرف موافق: تعریف، ادعا، دو سه دلیل</li><li>افتتاحیه‌ی طرف مخالف: همین‌طور</li><li>پرسش و پاسخ متقابل</li><li>رد استدلال‌های طرف مقابل</li><li>جمع‌بندی: سه جمله‌ی اصلی</li></ol>\n<p class=\"tech\"><span class=\"tnum\">تکنیک ۱</span>آماده‌سازی دو‌طرفه</p>\n<p>حتی اگر یک طرف را به شما داده باشند، دلیل‌های طرف مقابل را هم بنویسید و برایشان پاسخ بنویسید. کسی که فقط حرف خودش را بلد است، با اولین ایراد تازه شکست می‌خورد.</p>\n<p class=\"tech\"><span class=\"tnum\">تکنیک ۲</span>برگه‌ی کلیدی</p>\n<p>روی یک برگه سه ستون بسازید: ادعاهای من، ادعاهای احتمالی طرف مقابل، پاسخ‌هایم. جملات کامل ننویسید؛ کلمه‌های کلیدی و شاهد.</p>\n<p class=\"tech\"><span class=\"tnum\">تکنیک ۳</span>تقسیم نقش در تیم</p>\n<p>یک نفر افتتاحیه، یک نفر نقد، یک نفر جمع‌بندی. هماهنگ باشید که استدلال‌ها تکراری نشود.</p>\n<figure class=\"fr\"><div class=\"frame\"><span class=\"ph\"><i>🖼</i>تصویر شماره ۷</span><img src=\"exam-pics/06-debate-principles-img07-stage.jpg\" alt=\"تصویر شماره ۷ ـ چیدمان مناظره‌ی رسمی: دو تیم، داور و زمان‌سنج.\" loading=\"lazy\" onerror=\"this.classList.add('x')\"></div><figcaption><span class=\"ref\">تصویر شماره ۷</span> ـ چیدمان مناظره‌ی رسمی: دو تیم، داور و زمان‌سنج.</figcaption></figure>"}, {"h": "کنترل هیجان و رفتار", "b": "<p class=\"tech\"><span class=\"tnum\">تکنیک ۱</span>وقتی عصبانی می‌شوید</p>\n<p>علامت‌ها را بشناسید: تپش قلب، تُند شدن صدا، آمدن حرف‌های تکراری. وقتی دیدید، تنفس عمیق بکشید، آرام‌تر حرف بزنید و بگویید: «می‌خواهم دقیق‌تر فکر کنم؛ یک لحظه.» ایرادی ندارد که بحث را به‌طور موقت متوقف کنید.</p>\n<p class=\"tech\"><span class=\"tnum\">تکنیک ۲</span>زبان بدن</p>\n<ul><li>رو به طرف مقابل بنشینید یا بایستید.</li><li>دست‌ها را باز نگه دارید.</li><li>تماس چشمی ملایم، نه خیره‌شدن.</li><li>لحن را ثابت نگه دارید، حتی وقتی مخالفید.</li></ul>\n<p class=\"tech\"><span class=\"tnum\">تکنیک ۳</span>وقتی طرف مقابل بی‌ادب است</p>\n<p>پاسخ ندهید. بگویید: «می‌خواهم ایده‌ات را بشنوم؛ لطفاً بدون تحقیر بگو.» اگر ادامه یافت، بحث را متوقف کنید. در مدرسه یا جمع، می‌توانید از معلم یا داور کمک بگیرید.</p>\n<figure class=\"fr\"><div class=\"frame\"><span class=\"ph\"><i>🖼</i>تصویر شماره ۸</span><img src=\"exam-pics/06-debate-principles-img08-calm.jpg\" alt=\"تصویر شماره ۸ ـ مکث و تنفس هنگام عصبانیت در بحث.\" loading=\"lazy\" onerror=\"this.classList.add('x')\"></div><figcaption><span class=\"ref\">تصویر شماره ۸</span> ـ مکث و تنفس هنگام عصبانیت در بحث.</figcaption></figure>"}, {"h": "بحث در محیط‌های دیگر", "b": "<p class=\"tech\"><span class=\"tnum\">مفهوم ۱</span>بحث در فضای مجازی</p>\n<p>در پیام‌های نوشتاری، لحن گم می‌شود و سوءتفاهم زیاد است. قاعده‌ها: قبل از ارسال یک بار بخوانید، از حروف درشت و علامت تعجب زیاد پرهیز کنید، و اگر بحث داغ شد، به تماس صوتی یا گفت‌وگوی حضوری بروید. ضمناً فکر کنید: «این جمله را به صورتش هم می‌گفتم؟»</p>\n<p class=\"tech\"><span class=\"tnum\">مفهوم ۲</span>بحث در خانواده و دوستان</p>\n<p>همه‌ی بحث‌ها لازم نیست برنده داشته باشند. گاهی هدف فقط شنیده‌شدن است. بپرسید: «دوست داری راه‌حل بدهم یا فقط گوش کنم؟»</p>\n<p class=\"tech\"><span class=\"tnum\">مفهوم ۳</span>ارزیابی منبع</p>\n<p>پیش از استفاده از شاهد، بپرسید: منبع کیست؟ چه زمانی؟ آیا دیگران هم تأییدش کرده‌اند؟ آیا نفعی در این نتیجه دارد؟ شاهد بدون منبع در مناظره وزنی ندارد.</p>\n<figure class=\"fr\"><div class=\"frame\"><span class=\"ph\"><i>🖼</i>تصویر شماره ۹</span><img src=\"exam-pics/06-debate-principles-img09-online.jpg\" alt=\"تصویر شماره ۹ ـ قبل از ارسال پیام داغ یک بار بخوانید.\" loading=\"lazy\" onerror=\"this.classList.add('x')\"></div><figcaption><span class=\"ref\">تصویر شماره ۹</span> ـ قبل از ارسال پیام داغ یک بار بخوانید.</figcaption></figure>"}, {"h": "تمرین، برگه‌ی داوری و آزمون", "b": "<p class=\"tech\"><span class=\"tnum\">تمرین ۱</span>سه موضوع مدرسه‌ای</p>\n<ul><li>آیا موبایل در مدرسه ممنوع باشد؟</li><li>آیا تکلیف شب لازم است؟</li><li>آیا مدرسه باید ساعت شروع دیرتری داشته باشد؟</li></ul>\n<p>برای هر موضوع دو ادعا و سه دلیل برای هر طرف بنویسید، حتی برای طرفی که با آن مخالفید. بعد جای دو طرف را عوض کنید.</p>\n<p class=\"tech\"><span class=\"tnum\">تمرین ۲</span>برگه‌ی داوری ده‌نمره‌ای</p>\n<ul><li>کیفیت استدلال (۳ نمره)</li><li>استفاده از شاهد (۲ نمره)</li><li>پاسخ به نقد (۲ نمره)</li><li>احترام و آرامش (۲ نمره)</li><li>ساختار و زمان‌بندی (۱ نمره)</li></ul>\n<p class=\"tech\"><span class=\"tnum\">آزمون</span>پنج سؤال تشخیصی</p>\n<details><summary>1) فرق مناظره با جدل چیست؟</summary><p>مناظره قواعد و هدف روشن دارد؛ جدل فقط برای غلبه است و اغلب به تحقیر می‌رسد.</p></details><details><summary>2) «آدم پوشالی» یعنی چه؟</summary><p>ضعیف یا تحریف‌شده کردن حرف طرف مقابل برای شکستن راحت‌تر آن.</p></details><details><summary>3) چهار جای ایراد در استدلال کدام‌اند؟</summary><p>ادعا، دلیل، شاهد، ربط.</p></details><details><summary>4) چرا بازگویی حرف مقابل مفید است؟</summary><p>چون سوءتفاهم را حل می‌کند، احترام نشان می‌دهد و به شما فرصت فکر می‌دهد.</p></details><details><summary>5) اگر دلیل بهتر شنیدید چه می‌کنید؟</summary><p>نظرتان را اصلاح می‌کنید؛ این نشانه‌ی موفقیت بحث است.</p></details>\n<p>درس بعدی «مغالطه‌های رایج در بحث» است: نمونه‌هایی از اشتباه‌هایی که استدلال را از درون می‌شکنند.</p>"}];
+const KEY = "lp_debate-principles";
+let open = null;
+try{ open = localStorage.getItem(KEY); }catch(e){}
+if(open!==null) open = parseInt(open);
+const AUDIO = ["Sound/06-debate-principles-01.mp3", "Sound/06-debate-principles-02.mp3", "Sound/06-debate-principles-03.mp3", "Sound/06-debate-principles-04.mp3", "Sound/06-debate-principles-05.mp3", "Sound/06-debate-principles-06.mp3", "Sound/06-debate-principles-07.mp3", "Sound/06-debate-principles-08.mp3", "Sound/06-debate-principles-09.mp3"];
+
+const store={get(k,d){try{const v=localStorage.getItem(KEY+'_'+k);return v===null?d:v;}catch(e){return d;}},set(k,v){try{localStorage.setItem(KEY+'_'+k,v);}catch(e){}}};
+const FA_D='۰۱۲۳۴۵۶۷۸۹';
+const faT=s=>{s=Math.max(0,Math.floor(s||0));const m=Math.floor(s/60),r=s%60;const f=n=>String(n).replace(/[0-9]/g,d=>FA_D[d]);return f(m)+':'+String(r).padStart(2,'0').replace(/[0-9]/g,d=>FA_D[d]);};
+const SVG_PLAY='<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#fff"/></svg>';
+const SVG_PAUSE='<svg viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z" fill="#fff"/></svg>';
+const SVG_VOL='<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3z" fill="#fff"/><path d="M16 8.5a5 5 0 010 7M18.5 6a8.5 8.5 0 010 12" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>';
+const SVG_MUTE='<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3z" fill="#fff"/><path d="M16 9l6 6M22 9l-6 6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>';
+const audios=AUDIO.map((src,i)=>{
+  const a=new Audio();a.preload='metadata';a.src=src;
+  a.volume=parseFloat(store.get('vol','1'));if(isNaN(a.volume))a.volume=1;
+  a.muted=store.get('mut','0')==='1';
+  const sv=(store.get('last','')||'').split('|');const saved=(+sv[0]===i&&open===i)?(parseFloat(sv[1])||0):0;let lastSave=0;
+  a.addEventListener('loadedmetadata',()=>{if(saved>1&&a.duration&&saved<a.duration-5){try{a.currentTime=saved;}catch(e){}}syncUI(i);});
+  a.addEventListener('timeupdate',()=>{syncUI(i);const n=Date.now();if(n-lastSave>4000){lastSave=n;store.set('last',i+'|'+a.currentTime.toFixed(1));}});
+  a.addEventListener('play',()=>{audios.forEach((o,j)=>{if(j!==i&&!o.paused)o.pause();});syncUI(i);});
+  a.addEventListener('pause',()=>{store.set('last',i+'|'+a.currentTime.toFixed(1));syncUI(i);});
+  a.addEventListener('ended',()=>{store.set('last',i+'|0');try{a.currentTime=0;}catch(e){}syncUI(i);});
+  return a;
+});
+function syncUI(i){const box=document.querySelector('.ap[data-i="'+i+'"]');if(!box)return;const a=audios[i];box.classList.toggle('off',!(a.duration>0));box.querySelector('.pp').innerHTML=a.paused?SVG_PLAY:SVG_PAUSE;const d=a.duration||0,c=a.currentTime||0;box.querySelector('.fill').style.width=(d>0?(c/d*100):0)+'%';box.querySelector('.tm').textContent=faT(c)+' / '+faT(d);box.querySelector('.mu').innerHTML=(a.muted||a.volume===0)?SVG_MUTE:SVG_VOL;const v=box.querySelector('.vol');if(document.activeElement!==v)v.value=a.muted?0:a.volume;}
+function apToggle(i){const a=audios[i];if(a.paused){a.play().catch(()=>{});}else{a.pause();}}
+function apSeek(i,ev){const a=audios[i];if(!a.duration)return;const bar=ev.currentTarget,r=bar.getBoundingClientRect();let p=(ev.clientX-r.left)/r.width;if(getComputedStyle(bar).direction==='rtl')p=1-p;a.currentTime=Math.min(Math.max(p,0),1)*a.duration;syncUI(i);}
+function apVol(i,v){v=parseFloat(v);audios.forEach(a=>{a.volume=v;if(v>0)a.muted=false;});store.set('vol',String(v));store.set('mut',v===0?'1':'0');audios.forEach((_,j)=>syncUI(j));}
+function apMute(){const m=!audios[0].muted;audios.forEach(a=>{a.muted=m;});store.set('mut',m?'1':'0');audios.forEach((_,j)=>syncUI(j));}
+function playerHTML(i){const vv=store.get('mut','0')==='1'?0:store.get('vol','1');return '<div class="ap off" data-i="'+i+'"><button class="pp" onclick="apToggle('+i+')" aria-label="پخش / مکث">'+SVG_PLAY+'</button><div class="bar" onclick="apSeek('+i+',event)"><div class="fill"></div></div><span class="tm">۰:۰۰ / ۰:۰۰</span><button class="mu" onclick="apMute()" aria-label="بی‌صدا">'+SVG_VOL+'</button><input class="vol" type="range" min="0" max="1" step="0.05" value="'+vv+'" oninput="apVol('+i+',this.value)" aria-label="بلندی صدا"></div>';}
+function toggle(i){ open = (open===i) ? null : i; try{ open===null?localStorage.removeItem(KEY):localStorage.setItem(KEY,open) }catch(e){} render(); }
+function render(){
+  document.getElementById("app").innerHTML = SECTIONS.map((s,i)=>{
+    const o = open===i;
+    return `<section class="item${o?' open':''}">
+      <div class="hd" onclick="toggle(${i})"><span class="num">${i+1}</span><span class="t">${s.h}</span><span class="chev">◂</span></div>
+      <div class="body"><div class="inner">${playerHTML(i)}${s.b}</div></div>
+    </section>`;
+  }).join("");
+}
+render();
+audios.forEach((_,j)=>syncUI(j));
+</script>
+<script>
+(function(){var b=document.getElementById("theme");
+function cur(){return document.documentElement.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");}
+function paint(){b.textContent=cur()==="dark"?"☀":"☾";}
+b.onclick=function(){var n=cur()==="dark"?"light":"dark";document.documentElement.dataset.theme=n;try{localStorage.setItem("amz-theme",n);}catch(e){}paint();};paint();})();
+</script>
+</body>
+</html>
