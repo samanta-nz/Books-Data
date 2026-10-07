@@ -42,40 +42,65 @@ jobs:
           set -euo pipefail
           aws --version
           upload() {
-            local label="$1"
-            shift
-            local logfile=/tmp/parspack-upload.log
-            set +e
-            "$@" >"$logfile" 2>&1
-            local status=$?
-            set -e
+            local config="$1" label="$2"
+            shift 2
+            local logfile=/tmp/parspack-upload.log status
+            if [[ "$config" == "v4" ]]; then
+              "$@" >"$logfile" 2>&1 || status=$?
+            else
+              AWS_CONFIG_FILE="$config" "$@" >"$logfile" 2>&1 || status=$?
+            fi
+            status=${status:-0}
             if [[ $status -ne 0 ]]; then
-              local details
-              details="$(tail -n 8 "$logfile" | tr '\n' ' ' | cut -c1-1000)"
-              echo "::error title=Parspack upload failed::${label} (exit ${status}): ${details}"
-              exit "$status"
+              echo "${label} upload failed (exit ${status}): $(tail -n 8 "$logfile" | tr '\n' ' ' | cut -c1-1000)" >&2
+              return "$status"
             fi
             cat "$logfile"
           }
 
-          upload 'HTML' aws s3 cp \
-            'Bucket/Html-files/آموزشگاه/04-note-taking.html' \
-            "$DESTINATION/04-note-taking.html" \
-            --endpoint-url "$PARSPACK_ENDPOINT" \
-            --content-type 'text/html; charset=utf-8' \
-            --cache-control 'no-cache, max-age=0, must-revalidate' \
-            --no-progress
+          upload_all() {
+            local config="$1"
+            upload "$config" HTML aws s3 cp \
+              'Bucket/Html-files/آموزشگاه/04-note-taking.html' \
+              "$DESTINATION/04-note-taking.html" \
+              --endpoint-url "$PARSPACK_ENDPOINT" \
+              --content-type 'text/html; charset=utf-8' \
+              --cache-control 'no-cache, max-age=0, must-revalidate' \
+              --no-progress || return $?
 
-          upload 'Images' aws s3 sync \
-            'Bucket/Html-files/آموزشگاه/04-exam-pic/' \
-            "$DESTINATION/04-exam-pic/" \
-            --endpoint-url "$PARSPACK_ENDPOINT" \
-            --cache-control 'public, max-age=31536000, immutable' \
-            --no-progress
+            upload "$config" Images aws s3 sync \
+              'Bucket/Html-files/آموزشگاه/04-exam-pic/' \
+              "$DESTINATION/04-exam-pic/" \
+              --endpoint-url "$PARSPACK_ENDPOINT" \
+              --cache-control 'public, max-age=31536000, immutable' \
+              --no-progress || return $?
 
-          upload 'Audio' aws s3 sync \
-            'Bucket/Html-files/آموزشگاه/04-exam-audio/' \
-            "$DESTINATION/04-exam-audio/" \
-            --endpoint-url "$PARSPACK_ENDPOINT" \
-            --cache-control 'public, max-age=31536000, immutable' \
-            --no-progress
+            upload "$config" Audio aws s3 sync \
+              'Bucket/Html-files/آموزشگاه/04-exam-audio/' \
+              "$DESTINATION/04-exam-audio/" \
+              --endpoint-url "$PARSPACK_ENDPOINT" \
+              --cache-control 'public, max-age=31536000, immutable' \
+              --no-progress || return $?
+          }
+
+          if ! upload_all v4; then
+            if grep -q 'SignatureDoesNotMatch' /tmp/parspack-upload.log; then
+              echo 'Endpoint rejected SigV4; retrying once with S3 Signature V2.'
+              cat >/tmp/aws-sigv2-config <<'EOF'
+          [default]
+          region = us-east-1
+          signature_version = s3
+          s3 =
+              addressing_style = path
+          EOF
+              if ! upload_all /tmp/aws-sigv2-config; then
+                details="$(tail -n 8 /tmp/parspack-upload.log | tr '\n' ' ' | cut -c1-1000)"
+                echo "::error title=Parspack upload failed::Both supported signature attempts failed: ${details}"
+                exit 1
+              fi
+            else
+              details="$(tail -n 8 /tmp/parspack-upload.log | tr '\n' ' ' | cut -c1-1000)"
+              echo "::error title=Parspack upload failed::${details}"
+              exit 1
+            fi
+          fi
