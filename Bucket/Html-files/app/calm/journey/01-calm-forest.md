@@ -266,7 +266,63 @@
 
 روز خوبی داشته باشید. **[مکث ۳ ثانیه]**
 
-## ۴) یادداشت ایمنی و منابع علمی (برای اپ؛ داخل صفحه‌ی صوتی نمایش داده نمی‌شود)
+## ۴) پرامپت بک‌گراند (دقیق و کامل)
+
+> دو تصویر لازم است: نسخه‌ی روشن و نسخه‌ی تاریک. صفحه خودش براساس تم دستگاه یکی را انتخاب می‌کند. بالای تصویر یک لایه‌ی محو رنگی خودکار اضافه می‌شود تا کنترل‌ها خوانا بمانند؛ پس لازم نیست خودت تصویر را تیره یا روشن‌تر کنی.
+
+### پالت رنگ صفحه (برای هماهنگی تصویر با رابط)
+
+- روشن: bg1 #EDF8F2, bg2 #CAECEB, ac #239558, ac2 #23C7C2
+- تاریک: bg1 #0A1A11, bg2 #133938, ac #65ECA4, ac2 #5FF2ED
+- رنگ‌های تصویر نباید از این پالت دور شوند؛ هر جا رنگ غالب لازم بود از همین هیوها استفاده کن.
+
+### ۴-۱) پرامپت نسخه‌ی روشن (انگلیسی؛ برای Midjourney / Flux / SDXL / Imagen و مشابه)
+
+```text
+A serene temperate forest path in early morning, eye-level view looking slightly down a narrow soft earth path that bends gently out of sight behind a thick tree trunk. Tall slender beech-like trunks with pale grey bark and moss on their lower parts, a soft canopy overhead with scattered gaps letting thin shafts of warm light fall as dappled patches on the path and ferns. Fresh pale green and sage foliage, light mist hanging low between the trunks, small ferns and moss beside the path. Airy, high-key, soft focus depth, photographic with gentle film softness. Color palette harmonized with: bg1 #EDF8F2, bg2 #CAECEB, ac #239558, ac2 #23C7C2. Vertical 9:16 composition, 1080x1920 px (generate at 2x if possible, then downscale). Mobile app full-screen background behind a UI, so: keep the central 40% of the frame (roughly 30% to 70% of the height) soft, low-detail and low-contrast because a glowing orb sits there; keep the bottom 35% calm, smooth and slightly darker (light version) or darker still (dark version) because a translucent control panel sits there; put the gentle visual interest in the top third and in the margins. Soft focus gradient depth, no sharp high-contrast edges, no bright hotspots, overall luminance gentle enough for hour-long viewing. No text, no letters, no logos, no watermark, no people, no faces, no hands, no animals in the foreground, no buildings, no boats, no cars, no UI elements.
+```
+
+### ۴-۲) پرامپت نسخه‌ی تاریک
+
+```text
+The same forest path at deep blue twilight, almost night. Dark green-teal canopy, a few soft pale moonbeams filtering through gaps, faint mist glowing slightly teal between the trunks, a scattering of tiny out-of-focus warm-green firefly bokeh points in the mid-distance, the path barely visible with cool reflected light, moss and ferns in deep shadow. Very low-key, quiet, soft contrast, photographic. Color palette harmonized with: bg1 #0A1A11, bg2 #133938, ac #65ECA4, ac2 #5FF2ED. Vertical 9:16 composition, 1080x1920 px (generate at 2x if possible, then downscale). Mobile app full-screen background behind a UI, so: keep the central 40% of the frame (roughly 30% to 70% of the height) soft, low-detail and low-contrast because a glowing orb sits there; keep the bottom 35% calm, smooth and slightly darker (light version) or darker still (dark version) because a translucent control panel sits there; put the gentle visual interest in the top third and in the margins. Soft focus gradient depth, no sharp high-contrast edges, no bright hotspots, overall luminance gentle enough for hour-long viewing. No text, no letters, no logos, no watermark, no people, no faces, no hands, no animals in the foreground, no buildings, no boats, no cars, no UI elements.
+```
+
+### ۴-۳) پرامپت منفی (برای هر دو نسخه)
+
+```text
+text, letters, watermark, logo, signature, people, face, hands, animals in foreground, buildings, boats, cars, harsh contrast, oversaturated colors, neon, HDR halo, lens flare, chromatic aberration, noisy grain, border, frame, vignette banding, cartoon, illustration, 3D render look, clutter
+```
+
+### ۴-۴) مشخصات فنی خروجی
+
+- دو فایل: `01-calm-forest-bg-light.webp` و `01-calm-forest-bg-dark.webp`، ابعاد ۱۰۸۰×۱۹۲۰، کیفیت ۷۰ تا ۸۰، هر کدام حداکثر حدود ۱۵۰ تا ۲۰۰ کیلوبایت (حجم HTML بالا نره).
+- سبک: عکس‌گونه و نرم، بدون سبک کارتونی؛ همان صحنه در دو حالت نور (روز روشن / شب تاریک) با ترکیب‌بندی یکسان تا تعویض تم ناگهانی به نظر نرسد.
+- اگر ابزار تصویر فقط یک نسخه می‌دهد، همان را در `light` بگذار؛ صفحه برای تم تاریک هم از همان استفاده می‌کند و لایه‌ی تیره‌ی خودکار را اضافه می‌کند.
+
+### ۴-۵) نسخه‌ی ویدیویی اختیاری (لوپ)
+
+```text
+Optional seamless loop of 8 to 10 seconds: mist drifts very slowly between the trunks, light shafts shimmer subtly as leaves move in a faint breeze, a few fireflies drift slowly (dark version only). Camera locked off, no cuts, no zoom. Same composition and palette as the still images. 9:16, 1080x1920, 24 fps, H.264 MP4 under 1.5 MB, no audio track, seamless loop.
+```
+
+> ویدیو فعلاً در صفحه پشتیبانی نمی‌شود؛ اگر خواستی، بگو تا اسلات ویدیو هم اضافه شود.
+
+### ۴-۶) تزریق تصویر پس‌زمینه به HTML
+
+1. در `01-calm-forest.html` خطی را پیدا کن که `const BG={light:"",dark:""};` است.
+2. تصویرها را به data URI تبدیل و جایگذاری کن:
+   ```python
+   import base64, re
+   def uri(p): return 'data:image/webp;base64,' + base64.b64encode(open(p,'rb').read()).decode()
+   h = open('01-calm-forest.html', encoding='utf-8').read()
+   new = 'const BG={light:"' + uri('01-calm-forest-bg-light.webp') + '",dark:"' + uri('01-calm-forest-bg-dark.webp') + '"};'
+   h = re.sub(r'const BG=\{.*?\};', lambda m: new, h, count=1, flags=re.S)
+   open('01-calm-forest.html', 'w', encoding='utf-8').write(h)
+   ```
+3. بعد از تزریق، تصویر با محو شدن نرم ظاهر می‌شود و انیمیشن ذرات روی آن اجرا می‌شود. با تغییر تم دستگاه، تصویر مناسب خودکار عوض می‌شود.
+
+## ۵) یادداشت ایمنی و منابع علمی (برای اپ؛ داخل صفحه‌ی صوتی نمایش داده نمی‌شود)
 
 - **ایمنی:** این تمرین را هنگام رانندگی یا کار با ماشین‌آلات گوش نده. اگر در میان تمرین تصویری ناخوشایند آمد، چشم‌هایت را باز کن، به اتاق واقعی نگاه کن و هر وقت خواستی ادامه بده یا متوقف کن. این تمرین جایگزین درمان نیست.
 - Kaplan, S. (1995). The restorative benefits of nature: Toward an integrative framework. Journal of Environmental Psychology, 15(3), 169–182.
