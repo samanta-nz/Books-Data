@@ -104,3 +104,5 @@ jobs:
               exit 1
             fi
           fi
+
+# Retry after repository secret rotation.
