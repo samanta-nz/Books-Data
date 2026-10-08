@@ -41,6 +41,8 @@ jobs:
         run: |
           set -euo pipefail
           aws --version
+          gzip -9 -n -c 'Bucket/Html-files/آموزشگاه/04-note-taking.html' > /tmp/04-note-taking.html.gz
+          echo "Lossless gzip response size: $(stat -c %s /tmp/04-note-taking.html.gz) bytes"
           upload() {
             local config="$1" label="$2"
             shift 2
@@ -61,10 +63,11 @@ jobs:
           upload_all() {
             local config="$1"
             upload "$config" HTML aws s3 cp \
-              'Bucket/Html-files/آموزشگاه/04-note-taking.html' \
+              /tmp/04-note-taking.html.gz \
               "$DESTINATION/04-note-taking.html" \
               --endpoint-url "$PARSPACK_ENDPOINT" \
               --content-type 'text/html; charset=utf-8' \
+              --content-encoding gzip \
               --cache-control 'no-cache, max-age=0, must-revalidate' \
               --no-progress || return $?
 
@@ -83,6 +86,7 @@ jobs:
               --no-progress || return $?
           }
 
+          used_config=v4
           if ! upload_all v4; then
             if grep -q 'SignatureDoesNotMatch' /tmp/parspack-upload.log; then
               echo 'Endpoint rejected SigV4; retrying once with S3 Signature V2.'
@@ -98,11 +102,19 @@ jobs:
                 echo "::error title=Parspack upload failed::Both supported signature attempts failed: ${details}"
                 exit 1
               fi
+              used_config=/tmp/aws-sigv2-config
             else
               details="$(tail -n 8 /tmp/parspack-upload.log | tr '\n' ' ' | cut -c1-1000)"
               echo "::error title=Parspack upload failed::${details}"
               exit 1
             fi
           fi
+
+          upload "$used_config" Verify aws s3api head-object \
+            --bucket c539776 \
+            --key 'Bucket/Html-files/آموزشگاه/04-note-taking.html' \
+            --endpoint-url "$PARSPACK_ENDPOINT" \
+            --query '{ContentLength:ContentLength,ContentEncoding:ContentEncoding,ContentType:ContentType}' \
+            --output json
 
 # Retry after repository secret rotation.
