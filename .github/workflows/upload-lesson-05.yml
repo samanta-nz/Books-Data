@@ -38,13 +38,13 @@ jobs:
             exit 1
           fi
 
-      - name: Upload lesson HTML and assets
+      - name: Upload self-contained lesson HTML only
         shell: bash
         run: |
           set -euo pipefail
           aws --version
           gzip -9 -n -c 'Bucket/Html-files/آموزشگاه/05-summarizing.html' > /tmp/05-summarizing.html.gz
-          echo "Lossless gzip response size: $(stat -c %s /tmp/05-summarizing.html.gz) bytes"
+          echo "Uploading only the self-contained HTML; lossless gzip response size: $(stat -c %s /tmp/05-summarizing.html.gz) bytes"
           upload() {
             local config="$1" label="$2"
             shift 2
@@ -71,20 +71,6 @@ jobs:
               --content-type 'text/html; charset=utf-8' \
               --content-encoding gzip \
               --cache-control 'no-cache, max-age=0, must-revalidate' \
-              --no-progress || return $?
-
-            upload "$config" Images aws s3 sync \
-              'Bucket/Html-files/آموزشگاه/05-exam-pic/' \
-              "$DESTINATION/05-exam-pic/" \
-              --endpoint-url "$PARSPACK_ENDPOINT" \
-              --cache-control 'public, max-age=31536000, immutable' \
-              --no-progress || return $?
-
-            upload "$config" Audio aws s3 sync \
-              'Bucket/Html-files/آموزشگاه/05-exam-audio/' \
-              "$DESTINATION/05-exam-audio/" \
-              --endpoint-url "$PARSPACK_ENDPOINT" \
-              --cache-control 'public, max-age=31536000, immutable' \
               --no-progress || return $?
           }
 
