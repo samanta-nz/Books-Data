@@ -3,43 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0c1420">
 <!--TEMPLATE_NOTE: قالب ثابت «سفر آرام». فقط جای‌نگهدارهای دو‌آکولاد را build-episode.py پر می‌کند؛ رنگ، پس‌زمینه، هدر، کنترل‌ها و فوتر را دستی تغییر ندهید. این یادداشت هنگام ساخت حذف می‌شود. -->
-<!-- key: {{NAME}} | app id: {{APP_ID}} | audience: all | parts: 6 | audio: embedded HQ MP3 (narration + ambience) | background: embedded JPEG (theme overlay in CSS) -->
+<!-- key: {{NAME}} | app id: {{APP_ID}} | audience: all | parts: 6 | audio: embedded HQ MP3 (narration + ambience) | background: embedded JPEG (dark overlay in CSS) -->
 <title>{{TITLE}}</title>
 <style>
 :root{
- color-scheme:light dark;
+ color-scheme:dark;
  --bg1:hsl(155 45% 7%);--bg2:hsl(165 55% 4%);--fg:hsl(135 25% 95%);--mut:hsl(140 18% 75%);
  --accent:#52c285;--accent2:#84d896;--fx1:82, 194, 133;--fx2:132, 216, 150;
  --card:rgba(12, 28, 19, 0.72);--bd:rgba(82, 194, 133, 0.28);--bg-ov:rgba(8, 20, 14, 0.52);--surface:rgba(16, 36, 25, 0.78);--line:rgba(82, 194, 133, 0.2);
  --disc-bg:radial-gradient(circle at 35% 30%, rgba(255,255,255,.14), rgba(82, 194, 133, .16) 60%, rgba(0,0,0,.35));
  --disc-bd:rgba(255,255,255,.2);--disc-glow:rgba(82, 194, 133, .25);
-}
-
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){
- --bg1:hsl(155 45% 7%);--bg2:hsl(165 55% 4%);--fg:hsl(135 25% 95%);--mut:hsl(140 18% 75%);
- --accent:#52c285;--accent2:#84d896;--fx1:82, 194, 133;--fx2:132, 216, 150;
- --card:rgba(12, 28, 19, 0.72);--bd:rgba(82, 194, 133, 0.28);--bg-ov:rgba(8, 20, 14, 0.52);--surface:rgba(16, 36, 25, 0.78);--line:rgba(82, 194, 133, 0.2);
- --disc-bg:radial-gradient(circle at 35% 30%, rgba(255,255,255,.14), rgba(82, 194, 133, .16) 60%, rgba(0,0,0,.35));
- --disc-bd:rgba(255,255,255,.2);--disc-glow:rgba(82, 194, 133, .25);
-}}
-
-:root[data-theme=dark]{
- --bg1:hsl(155 45% 7%);--bg2:hsl(165 55% 4%);--fg:hsl(135 25% 95%);--mut:hsl(140 18% 75%);
- --accent:#52c285;--accent2:#84d896;--fx1:82, 194, 133;--fx2:132, 216, 150;
- --card:rgba(12, 28, 19, 0.72);--bd:rgba(82, 194, 133, 0.28);--bg-ov:rgba(8, 20, 14, 0.52);--surface:rgba(16, 36, 25, 0.78);--line:rgba(82, 194, 133, 0.2);
- --disc-bg:radial-gradient(circle at 35% 30%, rgba(255,255,255,.14), rgba(82, 194, 133, .16) 60%, rgba(0,0,0,.35));
- --disc-bd:rgba(255,255,255,.2);--disc-glow:rgba(82, 194, 133, .25);
-}
-
-:root[data-theme=light]{
- --bg1:hsl(145 25% 92%);--bg2:hsl(160 30% 86%);--fg:hsl(155 45% 10%);--mut:hsl(150 20% 30%);
- --accent:#238c52;--accent2:#1b6f40;--fx1:35, 140, 82;--fx2:27, 111, 64;
- --card:rgba(255, 255, 255, 0.8);--bd:rgba(35, 140, 82, 0.25);--bg-ov:rgba(235, 248, 240, 0.45);--surface:rgba(255, 255, 255, 0.9);--line:rgba(35, 140, 82, 0.2);
- --disc-bg:radial-gradient(circle at 35% 30%, rgba(255,255,255,.8), rgba(35, 140, 82, .18) 60%, rgba(0,0,0,.06));
- --disc-bd:rgba(35, 140, 82, .35);--disc-glow:rgba(35, 140, 82, .2);
 }
 
 *{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
@@ -53,7 +29,7 @@ body{
  min-height:100svh;display:flex;flex-direction:column;align-items:center;
 }
 
-#bg-img{position:fixed;inset:-10px;z-index:0;background:linear-gradient(var(--bg-ov),var(--bg-ov)),url('{{BG}}');background-size:cover;background-position:center;filter:blur(0.25px);opacity:.95;pointer-events:none}
+#bg-img{position:fixed;inset:-10px;z-index:0;background:linear-gradient(var(--bg-ov),var(--bg-ov)),url('{{BG}}');background-size:cover;background-position:center;opacity:.95;pointer-events:none}
 #fx{position:fixed;inset:0;z-index:1;pointer-events:none}
 
 main{
@@ -73,8 +49,6 @@ header p{font-size:11px;font-weight:400;color:var(--mut);margin:3px 0 0}
 .header-brand{flex-direction:column;gap:3px;font-size:15px;line-height:1.35;white-space:nowrap}
 .brand .tag{font-size:8.5px;letter-spacing:.5px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#09121c;padding:2px 7px;border-radius:6px;direction:ltr;font-weight:800}
 .header-brand .tag{font-size:7.5px;padding:2px 5px;letter-spacing:.3px}
-.theme{background:var(--card);border:1px solid var(--bd);border-radius:50%;width:42px;height:42px;color:var(--accent);font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,.25);cursor:pointer;transition:transform .2s,background .2s,border-color .2s}
-.theme:hover{transform:scale(1.08);border-color:var(--accent)}
 
 /* Center Stage & Zen Ring */
 .stage{flex:1;display:flex;align-items:center;justify-content:center;width:100%;min-height:240px;padding:8px 0}
@@ -220,7 +194,6 @@ footer strong{color:var(--fg);font-size:11.5px}
    <p>{{DESC}}</p>
   </div>
   <div class="brand header-brand">همیار من <span class="tag" lang="en" dir="ltr">HAMYAR E MAN</span></div>
-  <button class="theme" id="theme" aria-label="تغییر تم روشن و تاریک">☾</button>
  </header>
 
  <div class="stage">
@@ -435,21 +408,6 @@ $("volMuteBtn").onclick=()=>{
  }
 };
 
-// Theme: follows the system (prefers-color-scheme) until the user picks one; setTheme('dark'|'light') is the webview hook
-const DARK_Q=matchMedia("(prefers-color-scheme: dark)");
-const themeBtn=$("theme");
-const sysTheme=()=>DARK_Q.matches?"dark":"light";
-const hasSavedTheme=()=>{const v=st.g("theme","");return v==="dark"||v==="light"};
-function paintTheme(t){document.documentElement.dataset.theme=t;if(themeBtn)themeBtn.textContent=t==="light"?"☀":"☾"}
-function applyTheme(t){
- if(t==="dark"||t==="light"){st.s("theme",t);paintTheme(t)}
- else{st.s("theme","");paintTheme(sysTheme())}
- colors();
-}
-window.setTheme=applyTheme;
-if(themeBtn)themeBtn.onclick=()=>applyTheme(document.documentElement.dataset.theme==="light"?"dark":"light");
-paintTheme(hasSavedTheme()?st.g("theme",""):sysTheme());
-
 // Initialize saved volume or default 85%
 const savedVol=parseInt(st.g("vol","85"),10);
 setVolume(Math.max(10,savedVol)/100);
@@ -526,7 +484,6 @@ function frame(ts){
 }
 
 addEventListener("resize",size);
-try{DARK_Q.addEventListener("change",()=>{if(!hasSavedTheme()){paintTheme(sysTheme());colors()}})}catch(e){}
 size();colors();
 if(RM){frame(100);layers.forEach(l=>l(0,0))}else{requestAnimationFrame(frame)}
 </script>

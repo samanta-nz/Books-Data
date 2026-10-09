@@ -17,16 +17,16 @@
 ## ۲) ترکیب رنگی گوی و کنترل‌ها
 
 - **عنوان ترکیب رنگی:** «سبز جنگلی» (کپی از قالب مرجع ۰۲ جنگل)
-- **نسخه‌ی روشن:** صفحه hsl(145 25% 92%) → hsl(160 30% 86%) | ac `#238c52` | ac2 `#1b6f40` | متن hsl(155 45% 10%) | کارت سفید ۸۰٪ | گوی: گرادیان ثابت hsl(145 55% 32%) → hsl(155 60% 28%)
-- **نسخه‌ی تاریک:** صفحه hsl(155 45% 7%) → hsl(165 55% 4%) | ac `#52c285` | ac2 `#84d896` | متن hsl(135 25% 95%) | کارت سیاه‌سبز ۷۲٪ | گوی: همان گرادیان ثابت
+- **نسخه‌ی روشن:** حذف شده؛ تم ثابت تیره است.
+- **تم ثابت (تاریک):** صفحه hsl(155 45% 7%) → hsl(165 55% 4%) | ac `#52c285` | ac2 `#84d896` | متن hsl(135 25% 95%) | کارت سیاه‌سبز ۷۲٪ | گوی: همان گرادیان ثابت
 - **دکمه‌ی پخش و نوار پیشرفت:** گرادیان ac2 → ac؛ آیکون پخش `#081018`.
 - **گوی:** حلقه‌ی ذن ارگانیک با دیسک شیشه‌ای وسط (نماد 🍃 و عنوان بخش فعلی) که با نفس ۹ ثانیه‌ای بزرگ و کوچک می‌شه. **ذرات صفحه:** فقط مه؛ کرم شب‌تاب (ذرات معلق) از صحنه‌ی ۰۱ حذف شده است.
 
 ## ۳) پرامپت بک‌گراند (دقیق و کامل)
 
-یک تصویر لازم است (JPEG، ۹:۱۶). نسخه‌ی روشن و تاریک از همین یک تصویر ساخته می‌شوند: لایه‌ی محو رنگی با تم عوض می‌شود تا کنترل‌ها خوانا بمونن. پرامپت نسخه‌ی تاریک دیگر لازم نیست.
+یک تصویر لازم است (JPEG، ۹:۱۶). تم ثابت تاریک است و فقط از همین یک تصویر استفاده می‌شود: لایه‌ی محو رنگی تیره روی آن قرار می‌گیرد تا کنترل‌ها خوانا بمونن. پرامپت نسخه‌ی تاریک دیگر لازم نیست.
 
-### پرامپت نسخه‌ی روشن (انگلیسی؛ برای Midjourney / Flux / SDXL / Imagen)
+### پرامپت تصویر پس‌زمینه (انگلیسی؛ برای Midjourney / Flux / SDXL / Imagen)
 
 ```text
 A serene temperate forest path in early morning, eye-level view looking slightly down a narrow soft earth path that bends gently out of sight behind a thick tree trunk. Tall slender beech-like trunks with pale grey bark and moss on their lower parts, a soft canopy overhead with scattered gaps letting thin shafts of warm light fall as dappled patches on the path and ferns. Fresh pale green and sage foliage, light mist hanging low between the trunks, small ferns and moss beside the path. Airy, high-key, soft focus depth, photographic with gentle film softness. Palette: pale misty sage-green tones with deep forest-green accents (#238c52, #1b6f40). Vertical 9:16, 1080x1920 px. Phone background behind a UI: keep the central 40% (30 to 70% of the height) soft, low-detail and low-contrast for a glowing orb; keep the bottom 35% calm and slightly darker for a control panel; put the gentle interest in the top third and margins. Gentle contrast, no bright hotspots, comfortable for hour-long viewing. No text, logos, watermark, people, faces, hands, foreground animals, buildings, boats, cars or UI elements.
@@ -61,7 +61,7 @@ python3 Bucket/Html-files/app/calm/template/build-episode.py --name 01-calm-fore
 
 پوشه‌ی `assets` باید `01-calm-forest-01.mp3` تا `01-calm-forest-06.mp3` (به ترتیب بخش‌ها) و `01-calm-forest-bg.jpg` داشته باشد. فایل `parts-01-calm-forest.json` فهرست شش عنوان بخش (همان عنوان‌های `### بخش` در بخش ۵ همین راهنما) است.
 
-تعداد MP3 باید ۶ باشد و ترتیب فایل‌ها با ترتیب بخش‌ها یکی. تم صفحه خودکار تاریک/روشن می‌شه؛ اگه وب‌ویو تم رو نمی‌رسونه: `setTheme('dark')` یا `setTheme('light')`.
+تعداد MP3 باید ۶ باشد و ترتیب فایل‌ها با ترتیب بخش‌ها یکی. تم صفحه ثابت تاریک است و با تم سیستم، وب‌ویو یا آدرس عوض نمی‌شه؛ هیچ `setTheme` یا تم ذخیره‌شده‌ای وجود ندارد.
 
 ## ۵) متن بخش‌ها برای تولید صدا
 
