@@ -9,14 +9,16 @@ Modes:
   --no-audio       nothing is embedded: the play and skip controls stay disabled and the page
                    shows "صدای این تمرین هنوز اضافه نشده است." until the MP3 parts are added.
   --batch FILE     builds every record of a JSON list in no-audio mode
-                   (episodes-no-audio.json). A record may carry its own dark palette.
+                   (episodes-no-audio.json). Each record names its theme (light or dark)
+                   and carries that version's palette.
 
 Assets folder (--assets) must contain:
   NAME-bg.jpg                  one vertical 9:16 background photo (the dark overlay is in the page)
   NAME-01.mp3 .. NAME-06.mp3   audio mode only (mono, 64 kbps, 24 kHz)
 Parts file (--parts): JSON list of section titles, in order.
 --palette FILE (optional): JSON object with bg1, bg2, fg, accent, accent2 (hex colours, from the
-  episode guide's dark palette). Without it the template's forest-green palette is kept.
+  episode guide's palette for the chosen theme) and optional glass (0-1). Without it the template's
+  forest-green palette is kept. --theme light|dark (default dark) picks the version of the page.
 
 Example (01-calm-forest, with audio):
   python3 build-episode.py --name 01-calm-forest --title "جنگل آرام" \
@@ -41,6 +43,7 @@ UNSAFE = re.compile(r'["\'<>&\\{}]')
 AUDIO_NOTE = 'audio: embedded HQ MP3 (narration + ambience)'
 NO_AUDIO_NOTE = 'audio: none yet (built without audio)'
 BG_NOTE = 'background: embedded JPEG (dark overlay in CSS)'
+BG_NOTE_LIGHT = 'background: embedded JPEG (light overlay in CSS)'
 PLACEHOLDER_NOTE = 'background: TEMPORARY gradient placeholder, replace with the guide image'
 
 
@@ -112,8 +115,55 @@ def apply_palette(html, palette):
     return pattern.sub(lambda m: values[m.group(0)], html)
 
 
+def rel_lum(c):
+    """WCAG relative luminance of an RGB colour."""
+    def channel(v):
+        v = v / 255
+        return v / 12.92 if v <= 0.03928 else ((v + 0.055) / 1.055) ** 2.4
+    r, g, b = c
+    return 0.2126 * channel(r) + 0.7152 * channel(g) + 0.0722 * channel(b)
+
+
+def contrast(a, b):
+    hi, lo = sorted((rel_lum(a), rel_lum(b)), reverse=True)
+    return (hi + 0.05) / (lo + 0.05)
+
+
+def to_light(h, palette):
+    """Turn a palette-mapped template page into the light version of the same page.
+
+    Light and dark are two whole versions of one page. The light version swaps only the
+    theme tokens (colour scheme, panel glass, text and shadow tokens); the layout is the same.
+    The guides give the panel glass as a transparency (dark: black glass 28 %, which is the
+    approved 72 % opacity), so the light glass opacity is 1 - glass (white glass 55 % -> 45 %).
+    """
+    root = re.search(r':root\{.*?\}', h, re.S)
+    assert root, 'root block not found in template'
+    block = root.group(0)
+    opacity = 1 - float(palette.get('glass', 0.55))
+    new, n_card = re.subn(r'--card:[^;]*;', f'--card:rgba(255, 255, 255, {opacity:.2f});', block, count=1)
+    assert n_card == 1, '--card not found in :root'
+    new = new.replace('color-scheme:dark;', 'color-scheme:light;')
+    new = new.replace('--ts:0,0,0;', '--ts:255,255,255;').replace('--sh:0,0,0;', '--sh:110,128,150;')
+    assert 'color-scheme:light;' in new and '--ts:255,255,255;' in new and '--sh:110,128,150;' in new
+    h = h.replace(block, new, 1)
+    meta = '<meta name="color-scheme" content="dark">'
+    assert h.count(meta) == 1, 'colour-scheme meta not found'
+    h = h.replace(meta, '<meta name="color-scheme" content="light">')
+    # tag text: white or near-black, whichever reads better on the accent gradient
+    a1, a2 = hex_rgb(palette['accent']), hex_rgb(palette['accent2'])
+    white, ink = (255, 255, 255), hex_rgb('#09121c')
+
+    def score(t):
+        return min(contrast(t, a1), contrast(t, a2))
+    tag = white if score(white) > score(ink) else ink
+    assert h.count('color:#09121c') == 1, 'tag colour not found in template'
+    h = h.replace('color:#09121c', 'color:' + to_hex(tag))
+    return h
+
+
 def build_page(*, name, title, eyebrow, english, desc, disc_label, enso_label, app_id, scene,
-               parts, assets, out, no_audio, palette=None, placeholder=False):
+               parts, assets, out, no_audio, palette=None, placeholder=False, theme='dark'):
     if no_audio:
         mp3s = []
     else:
@@ -135,8 +185,16 @@ def build_page(*, name, title, eyebrow, english, desc, disc_label, enso_label, a
         h = f.read()
     h, n_note = re.subn(r'<!--TEMPLATE_NOTE.*?-->\n?', '', h, count=1, flags=re.S)
     assert n_note == 1, 'template note not found'
+    if theme not in ('dark', 'light'):
+        raise SystemExit(f'{name}: theme must be dark or light')
+    if theme == 'light' and not palette:
+        raise SystemExit(f'{name}: a light page needs the light palette of its guide')
     if palette:
         h = apply_palette(h, palette)
+    if theme == 'light':
+        h = to_light(h, palette)
+        if h.count(BG_NOTE) == 1:
+            h = h.replace(BG_NOTE, BG_NOTE_LIGHT)
     if no_audio:
         assert h.count(AUDIO_NOTE) == 1, 'audio note not found in template'
         h = h.replace(AUDIO_NOTE, NO_AUDIO_NOTE)
@@ -171,7 +229,7 @@ def build_page(*, name, title, eyebrow, english, desc, disc_label, enso_label, a
     with open(out, 'w', encoding='utf-8') as f:
         f.write(h)
     mode = 'no audio' if no_audio else f'{len(mp3s)} audio parts'
-    print(f'wrote {out} ({len(h.encode("utf-8"))} bytes, {mode}, 1 background)')
+    print(f'wrote {out} ({len(h.encode("utf-8"))} bytes, {mode}, {theme} theme, 1 background)')
 
 
 def main():
@@ -191,6 +249,8 @@ def main():
     ap.add_argument('--out', help='output HTML path (single episode)')
     ap.add_argument('--no-audio', action='store_true', help='build without embedded audio')
     ap.add_argument('--palette', help='JSON file: bg1, bg2, fg, accent, accent2 (hex colours)')
+    ap.add_argument('--theme', choices=['dark', 'light'], default='dark',
+                    help='version of the page: light or dark (one per episode)')
     ap.add_argument('--batch', help='JSON list of episode records, built without audio')
     ap.add_argument('--out-dir', help='output folder for --batch')
     a = ap.parse_args()
@@ -209,7 +269,7 @@ def main():
                        desc=r['desc'], disc_label=r['disc_label'], enso_label=r['enso_label'],
                        app_id=r['app_id'], scene=r['scene'], parts=r['parts'], assets=a.assets,
                        out=os.path.join(a.out_dir, r['name'] + '.html'), no_audio=True,
-                       palette=r.get('palette'), placeholder=r.get('background') == 'placeholder')
+                       palette=r.get('palette'), placeholder=r.get('background') == 'placeholder', theme=r.get('theme', 'dark'))
         return
 
     single = {'name': a.name, 'title': a.title, 'eyebrow': a.eyebrow, 'english': a.english,
@@ -226,7 +286,8 @@ def main():
             palette = json.load(f)
     build_page(name=a.name, title=a.title, eyebrow=a.eyebrow, english=a.english, desc=a.desc,
                disc_label=a.disc_label, enso_label=a.enso_label, app_id=a.app_id, scene=a.scene,
-               parts=parts, assets=a.assets, out=a.out, no_audio=a.no_audio, palette=palette)
+               parts=parts, assets=a.assets, out=a.out, no_audio=a.no_audio, palette=palette,
+               theme=a.theme)
 
 
 if __name__ == '__main__':

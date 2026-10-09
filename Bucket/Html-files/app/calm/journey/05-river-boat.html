@@ -3,18 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0a181a">
-<!-- key: 05-river-boat | app id: cj-05 | audience: all | parts: 6 | audio: none yet (built without audio) | background: embedded JPEG (dark overlay in CSS) -->
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#edf6f8">
+<!-- key: 05-river-boat | app id: cj-05 | audience: all | parts: 6 | audio: none yet (built without audio) | background: embedded JPEG (light overlay in CSS) -->
 <title>قایق روی رودخانه</title>
 <style>
 :root{
- color-scheme:dark;
- --bg1:#0a181a;--bg2:#392b13;--fg:#e4eff1;--mut:#a7b3b5;
- --accent:#f2bc5f;--accent2:#65daec;--fx1:242, 188, 95;--fx2:101, 218, 236;
- --card:rgba(10, 24, 26, 0.72);--bd:rgba(242, 188, 95, 0.28);--bg-ov:rgba(10, 24, 26, 0.52);--surface:rgba(34, 34, 22, 0.78);--line:rgba(242, 188, 95, 0.2);
- --disc-bg:radial-gradient(circle at 35% 30%, rgba(255,255,255,.14), rgba(242, 188, 95, .16) 60%, rgba(0,0,0,.35));
- --disc-bd:rgba(255,255,255,.2);--disc-glow:rgba(242, 188, 95, .25);
+ color-scheme:light;
+ --hi:255,255,255;--ts:255,255,255;--sh:110,128,150;
+ --bg1:#edf6f8;--bg2:#ece0ca;--fg:#1b373c;--mut:#566c71;
+ --accent:#c78b23;--accent2:#238695;--fx1:199, 139, 35;--fx2:35, 134, 149;
+ --card:rgba(255, 255, 255, 0.45);--bd:rgba(199, 139, 35, 0.28);--bg-ov:rgba(237, 246, 248, 0.52);--surface:rgba(236, 235, 225, 0.78);--line:rgba(199, 139, 35, 0.2);
+ --disc-bg:radial-gradient(circle at 35% 30%, rgba(var(--hi),.14), rgba(199, 139, 35, .16) 60%, rgba(var(--sh),.35));
+ --disc-bd:rgba(var(--hi),.2);--disc-glow:rgba(199, 139, 35, .25);
 }
 
 *{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
@@ -41,7 +42,7 @@ header{display:grid;grid-template-columns:minmax(0,1fr) auto 42px;align-items:ce
 .heading{min-width:0;flex:1}
 .eyebrow{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--accent);font-weight:700;margin-bottom:4px;letter-spacing:.4px}
 .eyebrow i{display:block;width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
-.heading h1{font-size:clamp(22px,5.4vw,27px);line-height:1.45;font-weight:800;letter-spacing:-.5px;margin:0;color:var(--fg);text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.heading h1{font-size:clamp(22px,5.4vw,27px);line-height:1.45;font-weight:800;letter-spacing:-.5px;margin:0;color:var(--fg);text-shadow:0 2px 14px rgba(var(--ts),.5)}
 .english{direction:ltr;text-align:right;font-family:Vazirmatn,Arial,sans-serif;font-size:11px;line-height:1.5;letter-spacing:.35px;font-weight:500;color:var(--mut);margin:2px 0 0}
 header p{font-size:11px;font-weight:400;color:var(--mut);margin:3px 0 0}
 .brand{display:flex;justify-content:center;align-items:center;gap:8px;color:var(--accent);font-size:18px;font-weight:800;letter-spacing:-.3px}
@@ -52,7 +53,7 @@ header p{font-size:11px;font-weight:400;color:var(--mut);margin:3px 0 0}
 /* Center Stage & Zen Ring */
 .stage{flex:1;display:flex;align-items:center;justify-content:center;width:100%;min-height:240px;padding:8px 0}
 .zen-ring{position:relative;width:min(62vw,240px);aspect-ratio:1;display:flex;align-items:center;justify-content:center;transition:transform 1.2s ease,opacity .8s;opacity:.95}
-.enso-svg{width:100%;height:100%;filter:drop-shadow(0 0 20px rgba(242, 188, 95, .4));transition:transform 1.2s ease}
+.enso-svg{width:100%;height:100%;filter:drop-shadow(0 0 20px rgba(199, 139, 35, .4));transition:transform 1.2s ease}
 .zen-ring::before,.zen-ring::after{content:"";position:absolute;inset:-8%;border-radius:50%;border:1px dashed var(--bd);opacity:0;pointer-events:none}
 .playing .zen-ring{animation:breathe 9s ease-in-out infinite;opacity:1}
 .playing .zen-ring::before{animation:ring 9s ease-out infinite}
@@ -66,32 +67,32 @@ header p{font-size:11px;font-weight:400;color:var(--mut);margin:3px 0 0}
  background:var(--disc-bg);
  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
  border:1.5px solid var(--disc-bd);
- box-shadow:0 12px 36px -4px rgba(0,0,0,.55),inset 0 1px 3px rgba(255,255,255,.4),inset 0 -6px 14px var(--disc-glow),0 0 28px var(--disc-glow);
+ box-shadow:0 12px 36px -4px rgba(var(--sh),.55),inset 0 1px 3px rgba(var(--hi),.4),inset 0 -6px 14px var(--disc-glow),0 0 28px var(--disc-glow);
  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
  pointer-events:none;z-index:3;
  transition:transform .5s cubic-bezier(.34,1.56,.64,1),box-shadow .5s ease;
 }
 .playing .zen-disc{
  animation:discPulse 9s ease-in-out infinite;
- box-shadow:0 14px 44px -4px rgba(0,0,0,.65),inset 0 1px 4px rgba(255,255,255,.5),inset 0 -8px 20px var(--disc-glow),0 0 38px var(--disc-glow);
+ box-shadow:0 14px 44px -4px rgba(var(--sh),.65),inset 0 1px 4px rgba(var(--hi),.5),inset 0 -8px 20px var(--disc-glow),0 0 38px var(--disc-glow);
 }
 @keyframes discPulse{0%,100%{transform:scale(0.96)}50%{transform:scale(1.05)}}
 .disc-core{display:flex;flex-direction:column;align-items:center;gap:2px;color:var(--fg);padding:0 8px}
-.disc-icon{font-size:26px;filter:drop-shadow(0 2px 10px rgba(0,0,0,.5));transition:transform .4s ease}
+.disc-icon{font-size:26px;filter:drop-shadow(0 2px 10px rgba(var(--ts),.5));transition:transform .4s ease}
 .playing .disc-icon{animation:iconFloat 4s ease-in-out infinite alternate}
 @keyframes iconFloat{0%{transform:translateY(0px) rotate(-3deg)}100%{transform:translateY(-4px) rotate(3deg)}}
-.disc-status{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:.3px;text-shadow:0 1px 8px rgba(0,0,0,.7);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:120px}
+.disc-status{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:.3px;text-shadow:0 1px 8px rgba(var(--ts),.7);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:120px}
 
 /* Controller Panel */
 .panel{
  width:100%;background:var(--card);border:1px solid var(--bd);border-radius:24px;
  padding:15px 18px 16px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
- box-shadow:0 18px 45px -12px rgba(0,0,0,.6),inset 0 1px 2px rgba(255,255,255,.08);
+ box-shadow:0 18px 45px -12px rgba(var(--sh),.6),inset 0 1px 2px rgba(var(--hi),.08);
 }
 
 .bar{height:6px;border-radius:9px;background:var(--bd);cursor:pointer;position:relative;margin:4px 0 8px;direction:ltr}
 .fill{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:9px;background:linear-gradient(90deg,var(--accent2),var(--accent))}
-.fill::after{content:"";position:absolute;right:-6px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(242, 188, 95, .4)}
+.fill::after{content:"";position:absolute;right:-6px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(199, 139, 35, .4)}
 
 .tm{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);direction:ltr;font-variant-numeric:tabular-nums;font-weight:600}
 
@@ -100,11 +101,11 @@ header p{font-size:11px;font-weight:400;color:var(--mut);margin:3px 0 0}
 button{border:0;background:none;color:var(--fg);cursor:pointer;font:inherit}
 
 .sk{
- width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.05);
+ width:52px;height:52px;border-radius:50%;background:rgba(var(--hi),.05);
  border:1.5px solid var(--bd);display:flex;align-items:center;justify-content:center;
  transition:transform .18s,background .18s,border-color .18s,box-shadow .18s;color:var(--fg);
 }
-.sk:hover{background:rgba(242, 188, 95, .22);border-color:var(--accent);transform:scale(1.08);box-shadow:0 4px 16px rgba(242, 188, 95, .3)}
+.sk:hover{background:rgba(199, 139, 35, .22);border-color:var(--accent);transform:scale(1.08);box-shadow:0 4px 16px rgba(199, 139, 35, .3)}
 .sk:active{transform:scale(.92)}
 .sk svg{width:34px;height:34px;display:block}
 
@@ -112,10 +113,10 @@ button{border:0;background:none;color:var(--fg);cursor:pointer;font:inherit}
  width:70px;height:70px;border-radius:50%;
  background:linear-gradient(135deg,var(--accent),var(--accent2));
  display:flex;align-items:center;justify-content:center;
- box-shadow:0 10px 28px -6px rgba(242, 188, 95, .75),inset 0 1px 2px rgba(255,255,255,.5);
- border:1px solid rgba(255,255,255,.3);transition:transform .2s,box-shadow .2s;
+ box-shadow:0 10px 28px -6px rgba(199, 139, 35, .75),inset 0 1px 2px rgba(var(--hi),.5);
+ border:1px solid rgba(var(--hi),.3);transition:transform .2s,box-shadow .2s;
 }
-.pp:hover{transform:scale(1.06);box-shadow:0 14px 34px -4px rgba(242, 188, 95, .9)}
+.pp:hover{transform:scale(1.06);box-shadow:0 14px 34px -4px rgba(199, 139, 35, .9)}
 .pp:active{transform:scale(.93)}
 .pp svg{width:32px;height:32px;fill:#081018}
 
@@ -134,13 +135,13 @@ button{border:0;background:none;color:var(--fg);cursor:pointer;font:inherit}
 }
 .vol-slider::-webkit-slider-thumb{
  -webkit-appearance:none;appearance:none;width:16px;height:16px;border-radius:50%;
- background:var(--accent);cursor:pointer;box-shadow:0 0 0 3px rgba(242, 188, 95, .4);
+ background:var(--accent);cursor:pointer;box-shadow:0 0 0 3px rgba(199, 139, 35, .4);
  transition:transform .15s;
 }
 .vol-slider::-webkit-slider-thumb:hover{transform:scale(1.15)}
 .vol-slider::-moz-range-thumb{
  width:16px;height:16px;border-radius:50%;background:var(--accent);
- border:none;cursor:pointer;box-shadow:0 0 0 3px rgba(242, 188, 95, .4);
+ border:none;cursor:pointer;box-shadow:0 0 0 3px rgba(199, 139, 35, .4);
 }
 /* Lock Marker Pin exactly at 10% of physical bar */
 .vol-lock-pin{
@@ -148,7 +149,7 @@ button{border:0;background:none;color:var(--fg);cursor:pointer;font:inherit}
  pointer-events:none;z-index:4;display:flex;flex-direction:column;align-items:center;
 }
 .vol-lock-pin .lock-icon{
- font-size:10px;margin-bottom:1px;filter:drop-shadow(0 1px 3px rgba(0,0,0,.8));line-height:1;
+ font-size:10px;margin-bottom:1px;filter:drop-shadow(0 1px 3px rgba(var(--ts),.8));line-height:1;
 }
 .vol-lock-pin .lock-line{
  width:2px;height:12px;background:var(--accent);border-radius:1px;opacity:.9;box-shadow:0 0 4px var(--accent);
@@ -201,15 +202,15 @@ footer strong{color:var(--fg);font-size:11.5px}
     <svg viewBox="0 0 240 240" class="enso-svg">
       <defs>
         <linearGradient id="zenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#b8934e" />
-          <stop offset="35%" stop-color="#4eaab8" />
-          <stop offset="70%" stop-color="#9f7b3d" />
-          <stop offset="100%" stop-color="#569da0" />
+          <stop offset="0%" stop-color="#d0a658" />
+          <stop offset="35%" stop-color="#56a2ae" />
+          <stop offset="70%" stop-color="#d8b16e" />
+          <stop offset="100%" stop-color="#69a6a8" />
         </linearGradient>
         <radialGradient id="zenGlow" cx="50%" cy="50%" r="50%">
           <stop offset="45%" stop-color="transparent" />
-          <stop offset="80%" stop-color="#2d3124" stop-opacity="0.35" />
-          <stop offset="100%" stop-color="#392b13" stop-opacity="0.65" />
+          <stop offset="80%" stop-color="#e7e6d8" stop-opacity="0.35" />
+          <stop offset="100%" stop-color="#ece0ca" stop-opacity="0.65" />
         </radialGradient>
         <filter id="mossTexture" x="-10%" y="-10%" width="120%" height="120%">
           <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
@@ -220,7 +221,7 @@ footer strong{color:var(--fg);font-size:11.5px}
       <circle cx="120" cy="120" r="94" fill="url(#zenGlow)" />
       
       <!-- Outer faint organic guide -->
-      <circle cx="120" cy="120" r="104" fill="none" stroke="#5b5132" stroke-width="1" stroke-dasharray="3 9" opacity="0.45" />
+      <circle cx="120" cy="120" r="104" fill="none" stroke="#e0d1ad" stroke-width="1" stroke-dasharray="3 9" opacity="0.45" />
       
       <!-- Organic Mossy Zen Enso Circle -->
       <path class="enso-path" filter="url(#mossTexture)" d="M 120 22 C 176 22 218 64 218 120 C 218 174 174 218 120 218 C 68 218 24 176 24 120 C 24 66 66 24 116 22" 
@@ -228,17 +229,17 @@ footer strong{color:var(--fg);font-size:11.5px}
         
       <!-- Secondary overlapping moss branch stroke -->
       <path d="M 112 28 C 164 26 210 68 210 120 C 210 168 170 210 120 210 C 72 210 32 170 32 120 C 32 78 64 36 108 30" 
-        fill="none" stroke="#2a5c64" stroke-width="3.5" stroke-dasharray="28 8 16 12" opacity="0.85" />
+        fill="none" stroke="#a6cfd5" stroke-width="3.5" stroke-dasharray="28 8 16 12" opacity="0.85" />
         
       <!-- Delicate moss nodes -->
-      <circle cx="214" cy="102" r="2.8" fill="#e4bf6d" />
-      <circle cx="208" cy="146" r="2.4" fill="#bac897" />
-      <circle cx="42" cy="88" r="2.5" fill="#d6c27b" />
-      <circle cx="52" cy="160" r="2.8" fill="#c8c589" />
-      <circle cx="154" cy="214" r="2.6" fill="#9dceb4" />
+      <circle cx="214" cy="102" r="2.8" fill="#b78a2e" />
+      <circle cx="208" cy="146" r="2.4" fill="#858951" />
+      <circle cx="42" cy="88" r="2.5" fill="#a68a3a" />
+      <circle cx="52" cy="160" r="2.8" fill="#968a45" />
+      <circle cx="154" cy="214" r="2.6" fill="#658867" />
       
       <!-- Center subtle leaf point -->
-      <path d="M 120 110 C 124 116 126 122 120 130 C 114 122 116 116 120 110 Z" fill="#c8c589" opacity="0.65" />
+      <path d="M 120 110 C 124 116 126 122 120 130 C 114 122 116 116 120 110 Z" fill="#968a45" opacity="0.65" />
     </svg>
     
    <!-- Glassmorphic Frosted Center Disc -->
