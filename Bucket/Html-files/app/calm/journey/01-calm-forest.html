@@ -445,11 +445,32 @@ const SC={
    const gr=cx.createRadialGradient(x,y,0,x,y,R2);gr.addColorStop(0,`rgba(${C1},${g})`);gr.addColorStop(1,`rgba(${C1},0)`);cx.fillStyle=gr;cx.fillRect(x-R2,y-R2,R2*2,R2*2);
   })}},
  mist(){
-  const p=mk(8,()=>({x:R(0,1),y:R(.15,.85),r:R(.35,.65),s:R(.01,.035),ph:R(0,6.3)}));
-  return(t)=>{p.forEach(o=>{
-   const x=(o.x+Math.sin(t*o.s+o.ph)*.2)*W,y=o.y*H,r=o.r*Math.max(W,H),gr=cx.createRadialGradient(x,y,0,x,y,r);
-   gr.addColorStop(0,`rgba(${C2},.18)`);gr.addColorStop(1,`rgba(${C2},0)`);cx.fillStyle=gr;cx.fillRect(0,0,W,H);
-  })}},
+  // soft, irregular cloud-like bokeh blobs with no fixed outline, spread over the height, drifting very slowly
+  const clouds=mk(9,(_,i)=>({x:R(-.1,1.1),y:(i+R(.2,.8))/9*.92+.04,w:R(.18,.34),s:R(.012,.026),ph:R(0,6.3),
+   parts:mk(7,()=>({dx:R(-.9,.9),dy:R(-.6,.6),r:R(.35,1),k:R(.02,.05),p:R(0,6.3),g:R(.9,1)}))}));
+  const buf=document.createElement("canvas"),bx=buf.getContext("2d");
+  return(t)=>{
+   const k=cv.width/W;
+   if(buf.width!==cv.width||buf.height!==cv.height){buf.width=cv.width;buf.height=cv.height}
+   bx.setTransform(1,0,0,1,0,0);bx.clearRect(0,0,buf.width,buf.height);bx.setTransform(k,0,0,k,0,0);
+   clouds.forEach(c=>{
+    const ox=(c.x+Math.sin(t*c.s+c.ph)*.12)*W,oy=(c.y+Math.cos(t*c.s*.7+c.ph)*.04)*H,R0=c.w*Math.min(W,H);
+    c.parts.forEach(p=>{
+     const x=ox+p.dx*R0+Math.sin(t*p.k+p.p)*R0*.1,y=oy+p.dy*R0+Math.cos(t*p.k*.8+p.p)*R0*.08,r=p.r*R0;
+     const gr=bx.createRadialGradient(x,y,0,x,y,r);
+     gr.addColorStop(0,`rgba(${C2},${p.g})`);gr.addColorStop(.55,`rgba(${C2},${p.g*.6})`);gr.addColorStop(1,`rgba(${C2},0)`);
+     bx.fillStyle=gr;bx.fillRect(x-r,y-r,r*2,r*2);
+    });
+   });
+   // depth strength: 0% in the foreground (bottom), 60% in the far haze (middle), 25% at the top canopy
+   bx.globalCompositeOperation="destination-in";
+   const m=bx.createLinearGradient(0,0,0,H);
+   m.addColorStop(0,"rgba(0,0,0,.25)");m.addColorStop(.2,"rgba(0,0,0,.45)");m.addColorStop(.45,"rgba(0,0,0,.6)");
+   m.addColorStop(.6,"rgba(0,0,0,.45)");m.addColorStop(.76,"rgba(0,0,0,0)");m.addColorStop(1,"rgba(0,0,0,0)");
+   bx.fillStyle=m;bx.fillRect(0,0,W,H);bx.globalCompositeOperation="source-over";
+   cx.drawImage(buf,0,0,W,H);
+  };
+ },
  water(){
   const p=mk(40,()=>({x:R(0,1),y:R(.2,1),r:R(2.0,5.0),s:R(.025,.07),ph:R(0,6.3),a:R(.3,.9)}));
   return(t)=>{p.forEach(o=>{
