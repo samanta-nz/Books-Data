@@ -16,22 +16,23 @@
 
 ## ۲) ترکیب رنگی گوی و کنترل‌ها
 
-- **عنوان ترکیب رنگی:** «سبز مه‌آلود و فیروزه‌ای»
-- **نسخه‌ی روشن:** صفحه #EDF8F2 → #CAECEB | گوی: مرکز سفید ۸۰٪، میانه #23C7C2، لبه #239558 | دکمه‌ی پخش: گرادیان #23C7C2 → #239558 با آیکون سفید | نوار پیشرفت: #23C7C2 → #239558 | متن: #1B3C2A | پنل کنترل: شیشه‌ی سفید ۵۵٪
-- **نسخه‌ی تاریک:** صفحه #0A1A11 → #133938 | گوی: مرکز سفید ۸۰٪، میانه #5FF2ED، لبه #65ECA4 | دکمه‌ی پخش: گرادیان #5FF2ED → #65ECA4 با آیکون سفید | نوار پیشرفت: #5FF2ED → #65ECA4 | متن: #E4F1EA | پنل کنترل: شیشه‌ی مشکی ۲۸٪
-- **گوی:** کره‌ی درخشان (sphere) که با نفس ۹ ثانیه‌ای باز و بسته می‌شه. **ذرات صفحه:** مه + کرم شب‌تاب.
+- **عنوان ترکیب رنگی:** «سبز جنگلی» (کپی از قالب مرجع ۰۲ جنگل)
+- **نسخه‌ی روشن:** صفحه hsl(145 25% 92%) → hsl(160 30% 86%) | ac `#238c52` | ac2 `#1b6f40` | متن hsl(155 45% 10%) | کارت سفید ۸۰٪ | گوی: گرادیان ثابت hsl(145 55% 32%) → hsl(155 60% 28%)
+- **نسخه‌ی تاریک:** صفحه hsl(155 45% 7%) → hsl(165 55% 4%) | ac `#52c285` | ac2 `#84d896` | متن hsl(135 25% 95%) | کارت سیاه‌سبز ۷۲٪ | گوی: همان گرادیان ثابت
+- **دکمه‌ی پخش و نوار پیشرفت:** گرادیان ac2 → ac؛ آیکون پخش `#081018`.
+- **گوی:** حلقه‌ی ذن ارگانیک با دیسک شیشه‌ای وسط (نماد 🍃 و عنوان بخش فعلی) که با نفس ۹ ثانیه‌ای بزرگ و کوچک می‌شه. **ذرات صفحه:** مه + کرم شب‌تاب.
 
 ## ۳) پرامپت بک‌گراند (دقیق و کامل)
 
-دو تصویر لازم است: نسخه‌ی روشن و تاریک. روی هر تصویر لایه‌ی محو رنگی خودکار می‌افته تا کنترل‌ها خوانا بمونن.
+یک تصویر لازم است (JPEG، ۹:۱۶). نسخه‌ی روشن و تاریک از همین یک تصویر ساخته می‌شوند: لایه‌ی محو رنگی با تم عوض می‌شود تا کنترل‌ها خوانا بمونن. پرامپت نسخه‌ی تاریک دیگر لازم نیست.
 
 ### پرامپت نسخه‌ی روشن (انگلیسی؛ برای Midjourney / Flux / SDXL / Imagen)
 
 ```text
-A serene temperate forest path in early morning, eye-level view looking slightly down a narrow soft earth path that bends gently out of sight behind a thick tree trunk. Tall slender beech-like trunks with pale grey bark and moss on their lower parts, a soft canopy overhead with scattered gaps letting thin shafts of warm light fall as dappled patches on the path and ferns. Fresh pale green and sage foliage, light mist hanging low between the trunks, small ferns and moss beside the path. Airy, high-key, soft focus depth, photographic with gentle film softness. Palette: #EDF8F2, #CAECEB, #239558, #23C7C2. Vertical 9:16, 1080x1920 px. Phone background behind a UI: keep the central 40% (30 to 70% of the height) soft, low-detail and low-contrast for a glowing orb; keep the bottom 35% calm and slightly darker for a control panel; put the gentle interest in the top third and margins. Gentle contrast, no bright hotspots, comfortable for hour-long viewing. No text, logos, watermark, people, faces, hands, foreground animals, buildings, boats, cars or UI elements.
+A serene temperate forest path in early morning, eye-level view looking slightly down a narrow soft earth path that bends gently out of sight behind a thick tree trunk. Tall slender beech-like trunks with pale grey bark and moss on their lower parts, a soft canopy overhead with scattered gaps letting thin shafts of warm light fall as dappled patches on the path and ferns. Fresh pale green and sage foliage, light mist hanging low between the trunks, small ferns and moss beside the path. Airy, high-key, soft focus depth, photographic with gentle film softness. Palette: pale misty sage-green tones with deep forest-green accents (#238c52, #1b6f40). Vertical 9:16, 1080x1920 px. Phone background behind a UI: keep the central 40% (30 to 70% of the height) soft, low-detail and low-contrast for a glowing orb; keep the bottom 35% calm and slightly darker for a control panel; put the gentle interest in the top third and margins. Gentle contrast, no bright hotspots, comfortable for hour-long viewing. No text, logos, watermark, people, faces, hands, foreground animals, buildings, boats, cars or UI elements.
 ```
 
-### پرامپت نسخه‌ی تاریک
+### پرامپت نسخه‌ی تاریک (دیگر لازم نیست)
 
 ```text
 The same forest path at deep blue twilight, almost night. Dark green-teal canopy, a few soft pale moonbeams filtering through gaps, faint mist glowing slightly teal between the trunks, a scattering of tiny out-of-focus warm-green firefly bokeh points in the mid-distance, the path barely visible with cool reflected light, moss and ferns in deep shadow. Very low-key, quiet, soft contrast, photographic. Palette: #0A1A11, #133938, #65ECA4, #5FF2ED. Vertical 9:16, 1080x1920 px. Phone background behind a UI: keep the central 40% soft, low-detail and low-contrast for a glowing orb; keep the bottom 35% calm and darker for a control panel; interest in the top third and margins. No bright hotspots. No text, logos, watermark, people, faces, hands, foreground animals, buildings, boats, cars or UI elements.
@@ -45,22 +46,20 @@ text, letters, watermark, logo, signature, people, face, hands, animals in foreg
 
 ### مشخصات خروجی و نسخه‌ی ویدیویی اختیاری
 
-- دو فایل `01-calm-forest-bg-light.webp` و `01-calm-forest-bg-dark.webp`، ۱۰۸۰×۱۹۲۰، کیفیت ۷۰ تا ۸۰، هر کدام حداکثر حدود ۱۵۰ تا ۲۰۰ کیلوبایت. ترکیب‌بندی هر دو یکسان باشه تا تعویض تم ناگهانی نشه.
+- یک فایل `01-calm-forest-bg.jpg`، ۱۰۸۰×۱۹۲۰، JPEG با کیفیت حدود ۸۰، حدود ۱۲۰ تا ۲۰۰ کیلوبایت (فایل فعلی از قالب مرجع: ۱۱۹ کیلوبایت).
 - لوپ ویدیویی (فعلاً در صفحه پشتیبانی نمی‌شه): `Seamless loop of 8 to 10 seconds: mist drifts very slowly between the trunks, light shafts shimmer subtly as leaves move in a faint breeze, a few fireflies drift (dark version only). Camera locked off, 9:16, 1080x1920, 24 fps, MP4 under 1.5 MB, no audio.`
 
 ## ۴) تزریق صدا و بک‌گراند به HTML
 
-```python
-import base64, json, re, glob
-n = '01-calm-forest'
-h = open(n + '.html', encoding='utf-8').read()
-uris = ['data:audio/mpeg;base64,' + base64.b64encode(open(f, 'rb').read()).decode() for f in sorted(glob.glob(n + '-0*.mp3'))]
-h = re.sub(r'AUDIO=\[.*?\];', lambda m: 'AUDIO=' + json.dumps(uris) + ';', h, count=1, flags=re.S)
-img = lambda p: 'data:image/webp;base64,' + base64.b64encode(open(p, 'rb').read()).decode()
-bg = 'const BG={light:"' + img(n + '-bg-light.webp') + '",dark:"' + img(n + '-bg-dark.webp') + '"};'
-h = re.sub(r'const BG=\{.*?\};', lambda m: bg, h, count=1, flags=re.S)
-open(n + '.html', 'w', encoding='utf-8').write(h)
+```bash
+python3 Bucket/Html-files/app/calm/template/build-episode.py --name 01-calm-forest \
+  --title "جنگل آرام" --eyebrow "سفر صوتی آرامش / ۱" --english "Calm Forest Journey" \
+  --desc "مراقبه در دل طبیعت کهن · ۶ بخش پیوسته" --disc-label "آرامش در جنگل" \
+  --enso-label "حلقه ذن آرامش" --app-id cj-01 --scene mist+fireflies \
+  --parts parts-01-calm-forest.json --assets ./assets --out 01-calm-forest.html
 ```
+
+پوشه‌ی `assets` باید `01-calm-forest-01.mp3` تا `01-calm-forest-06.mp3` (به ترتیب بخش‌ها) و `01-calm-forest-bg.jpg` داشته باشد. فایل `parts-01-calm-forest.json` فهرست شش عنوان بخش (همان عنوان‌های `### بخش` در بخش ۵ همین راهنما) است.
 
 تعداد MP3 باید ۶ باشد و ترتیب فایل‌ها با ترتیب بخش‌ها یکی. تم صفحه خودکار تاریک/روشن می‌شه؛ اگه وب‌ویو تم رو نمی‌رسونه: `setTheme('dark')` یا `setTheme('light')`.
 
