@@ -325,7 +325,7 @@ const total=()=>D.reduce((a,b)=>a+b,0);
 const pos=()=>D.slice(0,cur).reduce((a,b)=>a+b,0)+(P[cur]?P[cur].currentTime:0);
 
 function ui(){
- const t=total(),p=pos(),pl=P[cur]&&!P[cur].paused;
+ const t=total(),p=pos(),pl=!!(P[cur]&&!P[cur].paused);
  document.body.classList.toggle("playing",pl);
  $("pp").innerHTML=pl?PAUSE:PLAY;
  $("fill").style.width=(t>0?p/t*100:0)+"%";
@@ -333,7 +333,7 @@ function ui(){
  $("tt").textContent=tf(t);
  const pTitle=PART_TITLES[cur]||("بخش "+fa(cur+1));
  if($("discStatus"))$("discStatus").textContent=pTitle;
- if($("note"))$("note").textContent=pTitle;
+ if($("note")&&ready)$("note").textContent=pTitle;
 }
 
 function setVolume(v){
