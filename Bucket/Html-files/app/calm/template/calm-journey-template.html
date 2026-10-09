@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<!--TEMPLATE_NOTE: calm/journey template. Placeholders: {{NAME}} {{TITLE}} {{SUBTITLE}} {{APP_ID}} {{SCENE}} {{ENSO_LABEL}}. AUDIO and BG are filled by build-episode.py. Palette (:root blocks) and scenes (SC) are per-episode content, see calm-journey rules in README section 6. -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>{{TITLE}}</title>
+<!-- key: Bucket/Html-files/app/calm/journey/{{NAME}}.html | app id: {{APP_ID}} | audience: all | parts: 6 | audio: embedded HQ MP3 (narration + soundscape) | backgrounds: embedded WebP (light, dark) -->
+<style>
+:root{color-scheme:light dark;
+ --bg1:#EDF8F2;--bg2:#CAECEB;--fg:#1B3C2A;--mut:#3F6250;
+ --ac:#239558;--ac2:#23C7C2;--fx1:178,70%,46%;--fx2:148,62%,36%;
+ --card:rgba(255,255,255,.55);--bd:rgba(35,149,88,.28);--bg-ov:rgba(237,248,242,.38)}
+
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){
+ --bg1:#0A1A11;--bg2:#133938;--fg:#E4F1EA;--mut:#A9C9B7;
+ --ac:#65ECA4;--ac2:#5FF2ED;--fx1:178,85%,66%;--fx2:148,78%,66%;
+ --card:rgba(0,0,0,.28);--bd:rgba(95,242,237,.22);--bg-ov:rgba(10,26,17,.42)}}
+
+:root[data-theme=dark]{
+ --bg1:#0A1A11;--bg2:#133938;--fg:#E4F1EA;--mut:#A9C9B7;
+ --ac:#65ECA4;--ac2:#5FF2ED;--fx1:178,85%,66%;--fx2:148,78%,66%;
+ --card:rgba(0,0,0,.28);--bd:rgba(95,242,237,.22);--bg-ov:rgba(10,26,17,.42)}
+
+:root[data-theme=light]{
+ --bg1:#EDF8F2;--bg2:#CAECEB;--fg:#1B3C2A;--mut:#3F6250;
+ --ac:#239558;--ac2:#23C7C2;--fx1:178,70%,46%;--fx2:148,62%,36%;
+ --card:rgba(255,255,255,.55);--bd:rgba(35,149,88,.28);--bg-ov:rgba(237,248,242,.38)}
+
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{background:linear-gradient(160deg,var(--bg1),var(--bg2));color:var(--fg);font-family:Vazirmatn,Tahoma,sans-serif;
+ overflow:hidden;padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0)}
+
+#bg-img{position:fixed;inset:-10px;z-index:0;background:center/cover no-repeat;filter:blur(0.5px) brightness(.92);transform:scale(1.02)}
+#fx{position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+main{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:6vh 20px 5vh;text-align:center}
+
+header h1{font-size:clamp(22px,5.2vw,28px);font-weight:800;letter-spacing:-.3px;text-shadow:0 1px 12px hsl(0 0% 50% / .25)}
+.sub{font-size:12.5px;color:var(--mut);margin-top:6px}
+
+.stage{flex:1;display:flex;align-items:center;justify-content:center;width:100%}
+.zen-ring{position:relative;width:min(58vw,250px);aspect-ratio:1;display:flex;align-items:center;justify-content:center;
+ transition:transform 1.2s ease,opacity .8s;opacity:.92}
+.enso-svg{width:100%;height:100%;filter:drop-shadow(0 0 18px hsla(var(--fx2),.45));transition:transform 1.2s ease}
+.zen-ring::before,.zen-ring::after{content:"";position:absolute;inset:-8%;border-radius:50%;border:1px dashed hsla(var(--fx2),.35);opacity:0;pointer-events:none}
+.playing .zen-ring{animation:breathe 9s ease-in-out infinite;opacity:1}
+.playing .zen-ring::before{animation:ring 9s ease-out infinite}
+.playing .zen-ring::after{animation:ring 9s ease-out 4.5s infinite}
+@keyframes breathe{0%,100%{transform:scale(.92)}50%{transform:scale(1.06)}}
+@keyframes ring{0%{transform:scale(.95);opacity:.55}100%{transform:scale(1.4);opacity:0}}
+
+.panel{width:min(100%,420px);background:var(--card);border:1px solid var(--bd);border-radius:26px;padding:16px 18px;
+ backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 16px 40px -12px hsl(0 0% 0% / .3)}
+
+.bar{height:6px;border-radius:9px;background:var(--bd);cursor:pointer;position:relative;margin:4px 0 8px;direction:ltr}
+.fill{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:9px;background:linear-gradient(90deg,var(--ac2),var(--ac))}
+.fill::after{content:"";position:absolute;right:-6px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;
+ background:var(--ac2);box-shadow:0 0 0 4px hsla(var(--fx1),.4)}
+
+.tm{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);direction:ltr;font-variant-numeric:tabular-nums}
+
+.ctl{display:flex;align-items:center;justify-content:center;gap:24px;margin:8px 0 6px}
+button{border:0;background:none;color:var(--fg);cursor:pointer;font:inherit}
+
+.sk{width:50px;height:50px;border-radius:50%;background:var(--card);border:1.5px solid var(--bd);display:flex;align-items:center;justify-content:center;
+ transition:transform .18s,border-color .18s;color:var(--fg)}
+.sk:hover{border-color:hsla(var(--fx1),.6)}
+.sk:active{transform:scale(.92)}
+.sk svg{width:32px;height:32px}
+
+.pp{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--ac2),var(--ac));display:flex;align-items:center;justify-content:center;
+ box-shadow:0 10px 28px -6px hsla(var(--fx1),.8),inset 0 1px 2px hsl(0 0% 100% / .35);border:1px solid hsla(var(--fx1),.5);transition:transform .2s,box-shadow .2s}
+.pp:hover{transform:scale(1.04)}
+.pp:active{transform:scale(.93)}
+.pp svg{width:32px;height:32px;fill:#fff}
+
+.vol-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:12px;padding-top:10px;border-top:1px solid var(--bd);
+ font-size:12px;color:var(--mut);direction:ltr}
+.vol-ico{width:18px;height:18px;fill:currentColor;flex-shrink:0}
+.vol-wrap{position:relative;flex:1;height:24px;display:flex;align-items:center}
+.vol-slider{width:100%;height:5px;-webkit-appearance:none;appearance:none;background:linear-gradient(90deg,transparent calc(7.5px + (100% - 15px) * .1),var(--bd) calc(7.5px + (100% - 15px) * .1));border-radius:8px;outline:none;cursor:pointer}
+.vol-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:15px;height:15px;border-radius:50%;background:var(--ac2);cursor:pointer;
+ box-shadow:0 0 0 3px hsla(var(--fx1),.4);transition:transform .15s}
+.vol-slider::-webkit-slider-thumb:hover{transform:scale(1.15)}
+.vol-slider::-moz-range-thumb{width:15px;height:15px;border-radius:50%;background:var(--ac2);border:none;cursor:pointer;box-shadow:0 0 0 3px hsla(var(--fx1),.4)}
+.vol-lock{position:absolute;left:calc(7.5px + (100% - 15px) * .1);top:-7px;transform:translateX(-50%);font-size:10px;line-height:1;color:var(--mut);opacity:.85;cursor:help}
+
+.note{font-size:12px;color:var(--mut);margin-top:6px;min-height:1em}
+button:disabled{opacity:.4;cursor:default}
+@media (prefers-reduced-motion:reduce){.playing .zen-ring,.playing .zen-ring::before,.playing .zen-ring::after{animation:none}}
+</style>
+</head>
+<body>
+<div id="bg-img"></div>
+<canvas id="fx"></canvas>
+<main>
+ <header>
+  <h1>{{TITLE}}</h1>
+  <div class="sub">{{SUBTITLE}}</div>
+ </header>
+
+ <div class="stage">
+  <div class="zen-ring" id="zenRing" aria-label="{{ENSO_LABEL}}">
+    <svg viewBox="0 0 240 240" class="enso-svg" aria-hidden="true">
+      <defs>
+        <!-- Two-colour continuous gradient from the episode palette -->
+        <linearGradient id="forestGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:var(--ac2)" />
+          <stop offset="100%" style="stop-color:var(--ac)" />
+        </linearGradient>
+        <!-- Second stroke runs the opposite way (leaf texture) -->
+        <linearGradient id="forestLeafGrad" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:var(--ac)" />
+          <stop offset="100%" style="stop-color:var(--ac2)" />
+        </linearGradient>
+        <radialGradient id="forestHalo" cx="50%" cy="50%" r="50%">
+          <stop offset="45%" stop-color="transparent" />
+          <stop offset="80%" style="stop-color:var(--ac);stop-opacity:.22" />
+          <stop offset="100%" style="stop-color:var(--ac2);stop-opacity:0" />
+        </radialGradient>
+        <filter id="brushTexture" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.2" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </defs>
+
+      <circle cx="120" cy="120" r="100" fill="url(#forestHalo)" />
+      <circle cx="120" cy="120" r="104" fill="none" stroke-width="1" stroke-dasharray="3 9" opacity="0.45" style="stroke:var(--ac2)" />
+
+      <!-- Main organic enso stroke -->
+      <path filter="url(#brushTexture)" d="M 120 22 C 176 22 218 64 218 120 C 218 174 174 218 120 218 C 68 218 24 176 24 120 C 24 66 66 24 116 22"
+        fill="none" stroke="url(#forestGrad)" stroke-width="9.5" stroke-linecap="round" stroke-linejoin="round" />
+      <!-- Secondary interwoven stroke with broken dash rhythm -->
+      <path d="M 112 28 C 164 26 210 68 210 120 C 210 168 170 210 120 210 C 72 210 32 170 32 120 C 32 78 64 36 108 30"
+        fill="none" stroke="url(#forestLeafGrad)" stroke-width="3.5" stroke-dasharray="26 8 18 10" opacity="0.9" />
+
+      <!-- Dew drops and leaves alternating around the ring -->
+      <circle cx="226.3" cy="148.5" r="2.4" style="fill:var(--ac2)" />
+      <path d="M 0 0 Q 5 -5 11 0 Q 5 5 0 0 Z" transform="translate(148.5 226.3) rotate(-15)" style="fill:var(--ac)" opacity="0.85" />
+      <circle cx="35.7" cy="190.7" r="2.6" style="fill:var(--ac2)" />
+      <path d="M 0 0 Q 5 -5 11 0 Q 5 5 0 0 Z" transform="translate(16.6 82.4) rotate(40)" style="fill:var(--ac)" opacity="0.85" />
+      <circle cx="100.9" cy="11.7" r="2.2" style="fill:var(--ac2)" />
+      <path d="M 0 0 Q 5 -5 11 0 Q 5 5 0 0 Z" transform="translate(204.3 49.3) rotate(-50)" style="fill:var(--ac)" opacity="0.85" />
+    </svg>
+  </div>
+ </div>
+
+ <section class="panel">
+  <div class="bar" id="bar"><div class="fill" id="fill"></div></div>
+  <div class="tm"><span id="el">۰:۰۰</span><span id="tt">۰:۰۰</span></div>
+
+  <div class="ctl">
+   <!-- +15 s on the start side of the flow -->
+   <button class="sk" id="fw" aria-label="۱۵ ثانیه جلو">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+     <path d="M18.13 6.86A8 8 0 1 1 12 4"/>
+     <path d="M9.53 1.53L12 4 9.53 6.47"/>
+     <text x="12" y="15.5" font-size="8.2" font-weight="800" text-anchor="middle" fill="currentColor" stroke="none" font-family="Vazirmatn, Tahoma, sans-serif">۱۵</text>
+    </svg>
+   </button>
+
+   <button class="pp" id="pp" aria-label="پخش / مکث"></button>
+
+   <!-- -15 s on the end side of the flow -->
+   <button class="sk" id="bk" aria-label="۱۵ ثانیه عقب">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+     <path d="M5.87 6.86A8 8 0 1 0 12 4"/>
+     <path d="M14.47 1.53L12 4 14.47 6.47"/>
+     <text x="12" y="15.5" font-size="8.2" font-weight="800" text-anchor="middle" fill="currentColor" stroke="none" font-family="Vazirmatn, Tahoma, sans-serif">۱۵</text>
+    </svg>
+   </button>
+  </div>
+
+  <!-- Volume: full bar 0-100; values below 10 are locked and the lock mark sits at 10% of the bar -->
+  <div class="vol-row">
+   <svg class="vol-ico" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+   <div class="vol-wrap">
+    <input type="range" class="vol-slider" id="vol" min="0" max="100" value="85" aria-label="تنظیم صدا">
+    <span class="vol-lock" title="حداقل میزان صدا ۱۰٪ است (قفل زیر ۱۰٪ برای جلوگیری از سکوت ناخواسته)">🔒</span>
+   </div>
+   <span id="vol-txt">۸۵٪</span>
+  </div>
+
+  <div class="note" id="note"></div>
+ </section>
+</main>
+
+<script>
+const NAME="{{NAME}}",SCENE="{{SCENE}}".split("+");
+const AUDIO=[];
+const BG={light:"",dark:""};
+const FA="۰۱۲۳۴۵۶۷۸۹",fa=s=>String(s).replace(/[0-9]/g,d=>FA[d]);
+const tf=s=>{s=Math.max(0,Math.floor(s||0));const m=Math.floor(s/60);return fa(m)+":"+fa(String(s%60).padStart(2,"0"))};
+const $=id=>document.getElementById(id),KEY="lp_"+NAME;
+const st={g(k,d){try{const v=localStorage.getItem(KEY+"_"+k);return v===null?d:v}catch(e){return d}},s(k,v){try{localStorage.setItem(KEY+"_"+k,v)}catch(e){}}};
+
+/* ---------- theme and background ---------- */
+const DARK_Q=matchMedia("(prefers-color-scheme: dark)");
+function isDark(){const t=document.documentElement.dataset.theme;return t==="dark"||(t!=="light"&&DARK_Q.matches)}
+function applyBg(){
+ const src=isDark()?BG.dark:BG.light;
+ if(src)$("bg-img").style.backgroundImage='linear-gradient(var(--bg-ov),var(--bg-ov)),url("'+src+'")';
+}
+window.setTheme=t=>{
+ if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;else delete document.documentElement.dataset.theme;
+ colors();applyBg();
+};
+
+/* ---------- player ---------- */
+const ready=AUDIO.length>0&&AUDIO.every(Boolean);
+const P=AUDIO.map(src=>{const a=new Audio();a.preload="metadata";if(src)a.src=src;return a});
+const D=P.map(()=>0);let cur=0,lastSave=0,masterVolume=0.85;
+
+const PLAY='<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>',PAUSE='<svg viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>';
+const total=()=>D.reduce((a,b)=>a+b,0);
+const pos=()=>D.slice(0,cur).reduce((a,b)=>a+b,0)+(P[cur]?P[cur].currentTime:0);
+
+function ui(){
+ const t=total(),p=pos(),pl=!!(P[cur]&&!P[cur].paused);
+ document.body.classList.toggle("playing",pl);
+ $("pp").innerHTML=pl?PAUSE:PLAY;
+ $("fill").style.width=(t>0?p/t*100:0)+"%";
+ $("el").textContent=tf(p);
+ $("tt").textContent=tf(t);
+}
+
+function setVolume(v){
+ masterVolume=Math.max(0.1,Math.min(1.0,v));
+ P.forEach(a=>{a.volume=masterVolume});
+ const pct=Math.round(masterVolume*100);
+ $("vol-txt").textContent=fa(pct)+"٪";
+ $("vol").value=pct;
+ st.s("vol",String(pct));
+}
+
+function go(i,t,play){
+ if(P[cur]&&cur!==i)P[cur].pause();
+ cur=i;const a=P[i];
+ a.volume=masterVolume;
+ const f=()=>{try{a.currentTime=t||0}catch(e){}};
+ if(a.readyState>0)f();else a.addEventListener("loadedmetadata",f,{once:true});
+ if(play)a.play().catch(()=>{});
+ ui();
+}
+
+function seekAbs(x){
+ let r=Math.max(0,Math.min(x,total()-.1)),i=0;
+ while(i<P.length-1&&D[i]>0&&r>=D[i]){r-=D[i];i++}
+ const w=!!(P[cur]&&!P[cur].paused);
+ go(i,r,w);
+}
+
+P.forEach((a,i)=>{
+ a.addEventListener("loadedmetadata",()=>{D[i]=a.duration||0;ui()});
+ a.addEventListener("timeupdate",()=>{if(i!==cur)return;ui();const n=Date.now();if(n-lastSave>4000){lastSave=n;st.s("pos",pos().toFixed(1))}});
+ a.addEventListener("play",()=>{P.forEach((o,j)=>{if(j!==i&&!o.paused)o.pause()});cur=i;ui();if("mediaSession" in navigator)navigator.mediaSession.playbackState="playing"});
+ a.addEventListener("pause",()=>{st.s("pos",pos().toFixed(1));ui();if("mediaSession" in navigator)navigator.mediaSession.playbackState="paused"});
+ a.addEventListener("ended",()=>{if(i<P.length-1){go(i+1,0,true)}else{st.s("pos","0");go(0,0,false)}});
+});
+
+function toggle(){
+ if(!ready)return;
+ const a=P[cur];
+ a.volume=masterVolume;
+ if(a.paused){a.play().catch(()=>{})}else{a.pause()}
+}
+
+function skip(d){if(ready)seekAbs(pos()+d)}
+
+$("pp").onclick=toggle;
+$("bk").onclick=()=>skip(-15);
+$("fw").onclick=()=>skip(15);
+$("bar").onclick=e=>{if(!ready)return;const r=e.currentTarget.getBoundingClientRect();seekAbs(((e.clientX-r.left)/r.width)*total())};
+
+// Volume input: values below 10 are locked
+$("vol").oninput=e=>{
+ let v=parseInt(e.target.value,10);
+ if(v<10)v=10;
+ setVolume(v/100);
+};
+setVolume(Math.max(10,parseInt(st.g("vol","85"),10))/100);
+
+if(ready){
+ const saved=parseFloat(st.g("pos","0"))||0;let n=0;
+ P.forEach(a=>a.addEventListener("loadedmetadata",()=>{if(++n===P.length&&saved>3&&saved<total()-5)seekAbs(saved)},{once:true}));
+ if("mediaSession" in navigator){
+  const m=navigator.mediaSession;
+  m.metadata=new MediaMetadata({title:document.title,artist:"همیار من"});
+  m.setActionHandler("play",toggle);
+  m.setActionHandler("pause",toggle);
+  m.setActionHandler("seekbackward",()=>skip(-15));
+  m.setActionHandler("seekforward",()=>skip(15));
+ }
+}else{
+ ["pp","bk","fw"].forEach(i=>$(i).disabled=true);
+ $("note").textContent="صدای این تمرین هنوز اضافه نشده است.";
+}
+ui();
+
+/* ---------- canvas scenes: drifting mist and fireflies ---------- */
+const cv=$("fx"),cx=cv.getContext("2d");
+let W=0,H=0,C1="178,70%,46%",C2="148,62%,36%",FLY=0.5,T=0,last=0,layers=[];
+const RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+function colors(){
+ const s=getComputedStyle(document.documentElement);
+ C1=s.getPropertyValue("--fx1").trim()||C1;
+ C2=s.getPropertyValue("--fx2").trim()||C2;
+ FLY=isDark()?0.9:0.5;
+}
+function size(){const d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0)}
+const R=(a,b)=>a+Math.random()*(b-a);
+const mk=(n,f)=>Array.from({length:n},f);
+const SC={
+ mist(){
+  const p=mk(6,()=>({x:R(0,1),y:R(0.4,1),r:R(0.3,0.55),s:R(0.01,0.03),ph:R(0,6.3)}));
+  return(t)=>{p.forEach(o=>{
+   const x=(o.x+Math.sin(t*o.s+o.ph)*0.15)*W,y=o.y*H,r=o.r*Math.max(W,H);
+   const gr=cx.createRadialGradient(x,y,0,x,y,r);
+   gr.addColorStop(0,`hsla(${C1},.12)`);gr.addColorStop(1,`hsla(${C1},0)`);
+   cx.fillStyle=gr;cx.fillRect(0,0,W,H);
+  })};
+ },
+ fireflies(){
+  const f=mk(16,()=>({x:R(0,1),y:R(0.25,0.95),ax:R(0.02,0.06),ay:R(0.02,0.05),fx:R(0.02,0.06),fy:R(0.03,0.07),ph:R(0,6.3),bs:R(0.5,1.4),r:R(1.6,2.8)}));
+  return(t)=>{f.forEach(o=>{
+   const b=Math.pow(Math.max(0,Math.sin(t*o.bs+o.ph)),6);
+   if(b<0.02)return;
+   const x=(o.x+Math.sin(t*o.fx+o.ph)*o.ax)*W,y=(o.y+Math.cos(t*o.fy+o.ph*1.3)*o.ay)*H;
+   const rad=o.r*6;
+   const gr=cx.createRadialGradient(x,y,0,x,y,rad);
+   gr.addColorStop(0,`hsla(${C2},${(FLY*b).toFixed(3)})`);gr.addColorStop(1,`hsla(${C2},0)`);
+   cx.fillStyle=gr;cx.beginPath();cx.arc(x,y,rad,0,Math.PI*2);cx.fill();
+  })};
+ }
+};
+function build(){layers=SCENE.map(n=>(SC[n]||SC.mist)())}
+function frame(ts){
+ requestAnimationFrame(frame);
+ if(document.hidden||ts-last<33)return;
+ const dt=ts-last;last=ts;T=ts/1000;
+ cx.clearRect(0,0,W,H);
+ layers.forEach(l=>l(T,dt));
+}
+addEventListener("resize",size);
+try{DARK_Q.addEventListener("change",()=>{colors();applyBg()})}catch(e){}
+size();colors();build();applyBg();
+if(RM){cx.clearRect(0,0,W,H);layers.forEach(l=>l(0,0))}else requestAnimationFrame(frame);
+</script>
+</body>
+</html>
