@@ -20,7 +20,7 @@
 - **نسخه‌ی روشن:** صفحه hsl(145 25% 92%) → hsl(160 30% 86%) | ac `#238c52` | ac2 `#1b6f40` | متن hsl(155 45% 10%) | کارت سفید ۸۰٪ | گوی: گرادیان ثابت hsl(145 55% 32%) → hsl(155 60% 28%)
 - **نسخه‌ی تاریک:** صفحه hsl(155 45% 7%) → hsl(165 55% 4%) | ac `#52c285` | ac2 `#84d896` | متن hsl(135 25% 95%) | کارت سیاه‌سبز ۷۲٪ | گوی: همان گرادیان ثابت
 - **دکمه‌ی پخش و نوار پیشرفت:** گرادیان ac2 → ac؛ آیکون پخش `#081018`.
-- **گوی:** حلقه‌ی ذن ارگانیک با دیسک شیشه‌ای وسط (نماد 🍃 و عنوان بخش فعلی) که با نفس ۹ ثانیه‌ای بزرگ و کوچک می‌شه. **ذرات صفحه:** مه + کرم شب‌تاب.
+- **گوی:** حلقه‌ی ذن ارگانیک با دیسک شیشه‌ای وسط (نماد 🍃 و عنوان بخش فعلی) که با نفس ۹ ثانیه‌ای بزرگ و کوچک می‌شه. **ذرات صفحه:** فقط مه؛ کرم شب‌تاب (ذرات معلق) از صحنه‌ی ۰۱ حذف شده است.
 
 ## ۳) پرامپت بک‌گراند (دقیق و کامل)
 
@@ -47,7 +47,7 @@ text, letters, watermark, logo, signature, people, face, hands, animals in foreg
 ### مشخصات خروجی و نسخه‌ی ویدیویی اختیاری
 
 - یک فایل `01-calm-forest-bg.jpg`، ۱۰۸۰×۱۹۲۰، JPEG با کیفیت حدود ۸۰، حدود ۱۲۰ تا ۲۰۰ کیلوبایت (فایل فعلی از قالب مرجع: ۱۱۹ کیلوبایت).
-- لوپ ویدیویی (فعلاً در صفحه پشتیبانی نمی‌شه): `Seamless loop of 8 to 10 seconds: mist drifts very slowly between the trunks, light shafts shimmer subtly as leaves move in a faint breeze, a few fireflies drift (dark version only). Camera locked off, 9:16, 1080x1920, 24 fps, MP4 under 1.5 MB, no audio.`
+- لوپ ویدیویی (فعلاً در صفحه پشتیبانی نمی‌شه): `Seamless loop of 8 to 10 seconds: mist drifts very slowly between the trunks, light shafts shimmer subtly as leaves move in a faint breeze. Camera locked off, 9:16, 1080x1920, 24 fps, MP4 under 1.5 MB, no audio.`
 
 ## ۴) تزریق صدا و بک‌گراند به HTML
 
@@ -55,7 +55,7 @@ text, letters, watermark, logo, signature, people, face, hands, animals in foreg
 python3 Bucket/Html-files/app/calm/template/build-episode.py --name 01-calm-forest \
   --title "جنگل آرام" --eyebrow "سفر صوتی آرامش / ۱" --english "Calm Forest Journey" \
   --desc "مراقبه در دل طبیعت کهن · ۶ بخش پیوسته" --disc-label "آرامش در جنگل" \
-  --enso-label "حلقه ذن آرامش" --app-id cj-01 --scene mist+fireflies \
+  --enso-label "حلقه ذن آرامش" --app-id cj-01 --scene mist \
   --parts parts-01-calm-forest.json --assets ./assets --out 01-calm-forest.html
 ```
 
