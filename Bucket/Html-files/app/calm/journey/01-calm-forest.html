@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <title>جنگل آرام</title>
-<!-- key: Bucket/Html-files/app/calm/journey/01-calm-forest.html | app id: cj-01 | audience: all | parts: 6 | audio: embedded HQ MP3 (narration + forest soundscape) | backgrounds: embedded WebP (light, dark) -->
+<!-- key: Bucket/Html-files/app/calm/journey/01-calm-forest.html | app id: cj-01 | audience: all | parts: 6 | audio: embedded HQ MP3 (narration + soundscape) | backgrounds: embedded WebP (light, dark) -->
 <style>
 :root{color-scheme:light dark;
  --bg1:#EDF8F2;--bg2:#CAECEB;--fg:#1B3C2A;--mut:#3F6250;
@@ -78,12 +78,13 @@ button{border:0;background:none;color:var(--fg);cursor:pointer;font:inherit}
 .vol-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:12px;padding-top:10px;border-top:1px solid var(--bd);
  font-size:12px;color:var(--mut);direction:ltr}
 .vol-ico{width:18px;height:18px;fill:currentColor;flex-shrink:0}
-.vol-slider{flex:1;height:5px;-webkit-appearance:none;appearance:none;background:var(--bd);border-radius:8px;outline:none;cursor:pointer}
+.vol-wrap{position:relative;flex:1;height:24px;display:flex;align-items:center}
+.vol-slider{width:100%;height:5px;-webkit-appearance:none;appearance:none;background:linear-gradient(90deg,transparent calc(7.5px + (100% - 15px) * .1),var(--bd) calc(7.5px + (100% - 15px) * .1));border-radius:8px;outline:none;cursor:pointer}
 .vol-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:15px;height:15px;border-radius:50%;background:var(--ac2);cursor:pointer;
  box-shadow:0 0 0 3px hsla(var(--fx1),.4);transition:transform .15s}
 .vol-slider::-webkit-slider-thumb:hover{transform:scale(1.15)}
 .vol-slider::-moz-range-thumb{width:15px;height:15px;border-radius:50%;background:var(--ac2);border:none;cursor:pointer;box-shadow:0 0 0 3px hsla(var(--fx1),.4)}
-.vol-lock{display:inline-flex;align-items:center;gap:3px;font-size:10.5px;color:var(--mut);opacity:.85;cursor:help}
+.vol-lock{position:absolute;left:calc(7.5px + (100% - 15px) * .1);top:-7px;transform:translateX(-50%);font-size:10px;line-height:1;color:var(--mut);opacity:.85;cursor:help}
 
 .note{font-size:12px;color:var(--mut);margin-top:6px;min-height:1em}
 button:disabled{opacity:.4;cursor:default}
@@ -153,8 +154,8 @@ button:disabled{opacity:.4;cursor:default}
    <!-- +15 s on the start side of the flow -->
    <button class="sk" id="fw" aria-label="۱۵ ثانیه جلو">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-     <path d="M12 4.5A7.5 7.5 0 1 1 4.5 12"/>
-     <path d="M12 1.5l3.5 3.5L12 8.5"/>
+     <path d="M18.13 6.86A8 8 0 1 1 12 4"/>
+     <path d="M9.53 1.53L12 4 9.53 6.47"/>
      <text x="12" y="15.5" font-size="8.2" font-weight="800" text-anchor="middle" fill="currentColor" stroke="none" font-family="Vazirmatn, Tahoma, sans-serif">۱۵</text>
     </svg>
    </button>
@@ -164,19 +165,21 @@ button:disabled{opacity:.4;cursor:default}
    <!-- -15 s on the end side of the flow -->
    <button class="sk" id="bk" aria-label="۱۵ ثانیه عقب">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-     <path d="M12 4.5A7.5 7.5 0 1 0 19.5 12"/>
-     <path d="M12 1.5L8.5 5 12 8.5"/>
+     <path d="M5.87 6.86A8 8 0 1 0 12 4"/>
+     <path d="M14.47 1.53L12 4 14.47 6.47"/>
      <text x="12" y="15.5" font-size="8.2" font-weight="800" text-anchor="middle" fill="currentColor" stroke="none" font-family="Vazirmatn, Tahoma, sans-serif">۱۵</text>
     </svg>
    </button>
   </div>
 
-  <!-- Volume slider: 10 to 100, values below 10 are locked -->
+  <!-- Volume: full bar 0-100; values below 10 are locked and the lock mark sits at 10% of the bar -->
   <div class="vol-row">
    <svg class="vol-ico" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-   <input type="range" class="vol-slider" id="vol" min="10" max="100" value="85" aria-label="تنظیم صدا">
+   <div class="vol-wrap">
+    <input type="range" class="vol-slider" id="vol" min="0" max="100" value="85" aria-label="تنظیم صدا">
+    <span class="vol-lock" title="حداقل میزان صدا ۱۰٪ است (قفل زیر ۱۰٪ برای جلوگیری از سکوت ناخواسته)">🔒</span>
+   </div>
    <span id="vol-txt">۸۵٪</span>
-   <span class="vol-lock" title="حداقل میزان صدا ۱۰٪ است (قفل زیر ۱۰٪ برای جلوگیری از سکوت ناخواسته)">🔒</span>
   </div>
 
   <div class="note" id="note"></div>
