@@ -145,6 +145,9 @@ def to_light(h, palette):
     assert n_card == 1, '--card not found in :root'
     new = new.replace('color-scheme:dark;', 'color-scheme:light;')
     new = new.replace('--ts:0,0,0;', '--ts:255,255,255;').replace('--sh:0,0,0;', '--sh:110,128,150;')
+    # light image wash: the palette's light colour at 65 % (readability over the photo)
+    new, n_ov = re.subn(r'--bg-ov:[^;]*;', f'--bg-ov:rgba({to_csv(hex_rgb(palette["bg1"]))}, 0.65);', new, count=1)
+    assert n_ov == 1, '--bg-ov not found in :root'
     assert 'color-scheme:light;' in new and '--ts:255,255,255;' in new and '--sh:110,128,150;' in new
     h = h.replace(block, new, 1)
     meta = '<meta name="color-scheme" content="dark">'
