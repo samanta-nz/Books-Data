@@ -1,0 +1,125 @@
+{
+  "source_git_blob": "0ed630cc62eb43bb8c657321a7c02195f147af9a",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "voiced_max_F0_ratio": 0.8,
+  "part": 3,
+  "positions": 11,
+  "source_pause_seconds": 96,
+  "pcm_duration_seconds": 178.12,
+  "mp3_decoded_duration_seconds": 178.176,
+  "mp3_sha256": "0a03f8c3713630f2adbbd6d31cd75690f45f701b5b055dc82632d5531c637453",
+  "cues": [
+    {
+      "id": "p3s01",
+      "text": "حالا فقط گوش بده.",
+      "source_text": "حالا فقط گوش بده.",
+      "start_seconds": 0.0,
+      "speech_samples": 52800,
+      "source_pause_seconds": 5,
+      "source_max_F0": 246.11361782528647,
+      "adjusted_max_F0": 196.89089426022917
+    },
+    {
+      "id": "p3s02",
+      "text": "بارون چند لایه صدا داره. دورترین لایه، یه سایه‌ی نرم از هیس‌هیس، مثل نفسِ خیلی بزرگ که همه‌چیز رو پوشونده.",
+      "source_text": "بارون چند لایه صدا داره. دورترین لایه، یه سایه‌ی نرم از هیس‌هیس، مثل نفسِ خیلی بزرگ که همه‌چیز رو پوشونده.",
+      "start_seconds": 7.2,
+      "speech_samples": 286080,
+      "source_pause_seconds": 8,
+      "source_max_F0": 237.31749874836598,
+      "adjusted_max_F0": 189.85399899869282
+    },
+    {
+      "id": "p3s03",
+      "text": "لایه‌ی بعدی، نزدیک‌تر: بارونی که روی برگ‌ها می‌ریزه. یه شرشرِ کوچیک که همه جا پخشه.",
+      "source_text": "لایه‌ی بعدی، نزدیک‌تر: بارونی که روی برگ‌ها می‌ریزه. یه شرشرِ کوچیک که همه جا پخشه.",
+      "start_seconds": 27.12,
+      "speech_samples": 226560,
+      "source_pause_seconds": 8,
+      "source_max_F0": 267.26645218973397,
+      "adjusted_max_F0": 213.81316175178716
+    },
+    {
+      "id": "p3s04",
+      "text": "و نزدیک‌ترین لایه: قطره‌هایی که روی چتر می‌افتن. تق‌تق‌تق. گاهی سریع، گاهی یه کم آهسته‌تر.",
+      "source_text": "و نزدیک‌ترین لایه: قطره‌هایی که روی چتر می‌افتن. تق‌تق‌تق. گاهی سریع، گاهی یه کم آهسته‌تر.",
+      "start_seconds": 44.56,
+      "speech_samples": 274560,
+      "source_pause_seconds": 8,
+      "source_max_F0": 291.5760036764203,
+      "adjusted_max_F0": 233.26080294113626
+    },
+    {
+      "id": "p3s05",
+      "text": "نمی‌خواد بشماریشون. نمی‌خواد الگوشون رو پیدا کنی. فقط می‌ذاری توی گوشت بیان.",
+      "source_text": "نمی‌خواد بشماریشون. نمی‌خواد الگوشون رو پیدا کنی. فقط می‌ذاری توی گوشت بیان.",
+      "start_seconds": 64.0,
+      "speech_samples": 169920,
+      "source_pause_seconds": 10,
+      "source_max_F0": 234.1382723302983,
+      "adjusted_max_F0": 187.31061786423865
+    },
+    {
+      "id": "p3s06",
+      "text": "اگه ذهنت رفت سراغ چیزی، یه صدای بارون رو پیدا کن، همون تق‌تق روی چتر، و باهاش برگرد.",
+      "source_text": "اگه ذهنت رفت سراغ چیزی، یه صدای بارون رو پیدا کن، همون تق‌تق روی چتر، و باهاش برگرد.",
+      "start_seconds": 81.08,
+      "speech_samples": 207360,
+      "source_pause_seconds": 10,
+      "source_max_F0": 315.945047277515,
+      "adjusted_max_F0": 252.75603782201202
+    },
+    {
+      "id": "p3s07",
+      "text": "اگه صدای واقعی یه ماشین یا یه در به گوشت رسید، اشکالی نداره؛ می‌تونی بذاریش توی پس‌زمینه و دوباره به صدای بارون گوش بدی.",
+      "source_text": "اگه صدای واقعی یه ماشین یا یه در به گوشت رسید، اشکالی نداره؛ می‌تونی بذاریش توی پس‌زمینه و دوباره به صدای بارون گوش بدی.",
+      "start_seconds": 99.72,
+      "speech_samples": 250560,
+      "source_pause_seconds": 10,
+      "source_max_F0": 262.4031624935753,
+      "adjusted_max_F0": 209.9225299948602
+    },
+    {
+      "id": "p3s08",
+      "text": "یه نفس بکش، همراه با قطره‌ها.",
+      "source_text": "یه نفس بکش، همراه با قطره‌ها.",
+      "start_seconds": 120.16,
+      "speech_samples": 101760,
+      "source_pause_seconds": 4,
+      "source_max_F0": 117.46327015771348,
+      "adjusted_max_F0": 93.9706161261708
+    },
+    {
+      "id": "p3s09",
+      "text": "بازدم.",
+      "source_text": "بازدم.",
+      "start_seconds": 128.4,
+      "speech_samples": 34560,
+      "source_pause_seconds": 8,
+      "source_max_F0": 171.80073055205878,
+      "adjusted_max_F0": 137.44058444164702
+    },
+    {
+      "id": "p3s10",
+      "text": "بارون بین صداهای دیگه یه فضای آروم باز می‌کنه. بذار صدای بارون همین‌طور نرم و یکنواخت توی گوشت بمونه.",
+      "source_text": "بارون بین صداهای دیگه یه فضای آروم باز می‌کنه. بذار صدای بارون همین‌طور نرم و یکنواخت توی گوشت بمونه.",
+      "start_seconds": 137.84,
+      "speech_samples": 310080,
+      "source_pause_seconds": 10,
+      "source_max_F0": 231.50969191410263,
+      "adjusted_max_F0": 185.20775353128212
+    },
+    {
+      "id": "p3s11",
+      "text": "چند ثانیه فقط گوش بده.",
+      "source_text": "چند ثانیه فقط گوش بده.",
+      "start_seconds": 160.76,
+      "speech_samples": 56640,
+      "source_pause_seconds": 15,
+      "source_max_F0": 278.0422820469225,
+      "adjusted_max_F0": 222.433825637538
+    }
+  ],
+  "disclaimer": "Partial episode-06 listening review. User reference recording not used; HTML remains unmodified."
+}
