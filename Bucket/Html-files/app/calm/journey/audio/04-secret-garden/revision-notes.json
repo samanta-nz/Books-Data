@@ -5,10 +5,16 @@
     "p3s08": {
       "archive": "source-clips-part02-05-and-part03-01-09.zip",
       "reason": "User explicitly requested regeneration of the fountain sentence ('ریجنریت'). Do not use this archived take in final compilation.",
-      "replacement_status": "pending",
+      "replacement_status": "recorded",
       "source_text": "به صدای فواره گوش کن. یکنواخته و همین یکنواختی آرامش‌بخشه.",
-      "source_pause_after_seconds": 10
+      "source_pause_after_seconds": 10,
+      "replacement_archive": "source-clips-part03-fountain-redo-and-garden-parts04-06.zip",
+      "replacement_raw_sha256": "fbef4f6edc7b2a17eef3e1d4d4797cf567d0f6d3a5abe7b3e5dea2620c9dd71b",
+      "replacement_source_pause_after_seconds": 10,
+      "review_mp3": "04-secret-garden-p3s08-regenerated-review.mp3",
+      "review_mp3_sha256": "c45fb4556d52c72656f54a29260343ab5b20d4a84e938de8adf30a915370a86a",
+      "preview_duration_seconds": 18.168
     }
   },
-  "instruction": "Regenerate p3s08 with the same source wording and voice-08 at normal speaking speed; keep the source 10-second pause. Apply the episode-04 maximum voiced F0 -20% rule during compilation. Do not use the discarded recording."
+  "instruction": "Use the p3s08 take from replacement_archive only; discard the older take. Keep source wording and 10-second pause; apply the episode-04 maximum voiced F0 -20% rule during compilation."
 }
