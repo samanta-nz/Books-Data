@@ -1,0 +1,14 @@
+{
+  "episode": "04-secret-garden",
+  "read_only_source_git_sha": "880c1059ebfc9cdd162fc303698db72963b45d94",
+  "discarded_takes": {
+    "p3s08": {
+      "archive": "source-clips-part02-05-and-part03-01-09.zip",
+      "reason": "User explicitly requested regeneration of the fountain sentence ('ریجنریت'). Do not use this archived take in final compilation.",
+      "replacement_status": "pending",
+      "source_text": "به صدای فواره گوش کن. یکنواخته و همین یکنواختی آرامش‌بخشه.",
+      "source_pause_after_seconds": 10
+    }
+  },
+  "instruction": "Regenerate p3s08 with the same source wording and voice-08 at normal speaking speed; keep the source 10-second pause. Apply the episode-04 maximum voiced F0 -20% rule during compilation. Do not use the discarded recording."
+}
