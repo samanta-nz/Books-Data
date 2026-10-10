@@ -16,5 +16,23 @@
       "preview_duration_seconds": 18.168
     }
   },
-  "instruction": "Use the p3s08 take from replacement_archive only; discard the older take. Keep source wording and 10-second pause; apply the episode-04 maximum voiced F0 -20% rule during compilation."
+  "instruction": "Use the p3s08 take from replacement_archive only; discard the older take. Keep source wording and 10-second pause; apply the episode-04 maximum voiced F0 -20% rule during compilation.",
+  "approved_remaining_wording": {
+    "p1s10": {
+      "source": "و ول کن.",
+      "record": "و خیلی آروم رها کن",
+      "source_pause_after_seconds": 5
+    },
+    "p4s04": {
+      "source": "یه بار دیگه. دم،",
+      "record": "یه بار دیگه. حالا باهم، دم",
+      "source_pause_after_seconds": 5
+    },
+    "p6s20": {
+      "source": "و اگه لازم داشتی، چند ثانیه‌ی دیگه همین‌جا بمون و بعد بلند شو.",
+      "record": "و اگه دوست داشتی، چند ثانیه‌ی دیگه همین‌جا بمون و بعد بلند شو.",
+      "source_pause_after_seconds": 5
+    }
+  },
+  "reference_policy_episode_04": "User explicitly chose to record the remaining episode-04 cues fresh with male voice-08 rather than wait for the inaccessible reference audio. Do not claim to have used the reference; this approval is for episode 04 only."
 }
