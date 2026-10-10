@@ -1,0 +1,114 @@
+{
+  "source_git_blob": "0ed630cc62eb43bb8c657321a7c02195f147af9a",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "voiced_max_F0_ratio": 0.8,
+  "section": 1,
+  "segment_count": 11,
+  "source_pause_seconds": 51,
+  "pcm_duration_seconds": 146.64,
+  "decoded_duration_seconds": 146.688,
+  "mp3_sha256": "a231a48d25992ac1318d6af676b499bf520333cbafcab30d7468d8494e74ab61",
+  "cues": [
+    {
+      "id": "p1s01",
+      "text": "سلام. امروز قراره زیر بارون قدم بزنیم؛ نه بارونی که مجبورت کنه بدوی، بلکه بارونی که آروم می‌باره و قرار نیست زیرش به جایی برسی.",
+      "start_seconds": 0.0,
+      "speech_samples": 279360,
+      "source_pause_seconds": 3,
+      "source_max_F0": 301.76208818520047,
+      "adjusted_max_F0": 241.4096705481604
+    },
+    {
+      "id": "p1s02",
+      "text": "یه دلیل علمی کوچیک هم هست که چرا صدای بارون آروممون می‌کنه. توی یه پژوهش سوئدی، آدم‌ها بعد از استرس، وقتی صداهای طبیعت می‌شنیدن، نسبت به وقتی نویز محیطی می‌شنیدن، سریع‌تر به حالت آروم برمی‌گشتن. تفاوتش زیاد نبود، ولی قابل اندازه‌گیری بود.",
+      "start_seconds": 14.64,
+      "speech_samples": 514560,
+      "source_pause_seconds": 4,
+      "source_max_F0": 307.81177289508526,
+      "adjusted_max_F0": 246.24941831606822
+    },
+    {
+      "id": "p1s03",
+      "text": "پس اگه بارون رو دوست نداری، نگران نباش؛ می‌تونی به‌جاش یه نم‌نمِ خیلی نرم رو تصور کنی، یا فقط سقفِ یه ایوون.",
+      "start_seconds": 40.08,
+      "speech_samples": 248640,
+      "source_pause_seconds": 4,
+      "source_max_F0": 302.2328620343957,
+      "adjusted_max_F0": 241.78628962751657
+    },
+    {
+      "id": "p1s04",
+      "text": "حالا یه جای راحت پیدا کن. اگه نشستی، کمرت رو به صندلی بده، و اگه دراز کشیدی، یه بالش کوچیک زیر زانوهات بذار.",
+      "start_seconds": 54.44,
+      "speech_samples": 250560,
+      "source_pause_seconds": 4,
+      "source_max_F0": 303.40424761429097,
+      "adjusted_max_F0": 242.72339809143278
+    },
+    {
+      "id": "p1s05",
+      "text": "اگه راحتی، چشم‌هات رو ببند؛ وگرنه نگاهت رو روی یه نقطه‌ی ساده از زمین یا میز نگه دار.",
+      "start_seconds": 68.88,
+      "speech_samples": 189120,
+      "source_pause_seconds": 5,
+      "source_max_F0": 223.24998925543946,
+      "adjusted_max_F0": 178.59999140435156
+    },
+    {
+      "id": "p1s06",
+      "text": "شونه‌ها رو بیار بالا، و با بازدم، مثل قطره‌ای که از لبه‌ی بام می‌چکه، رهاشون کن.",
+      "start_seconds": 81.76,
+      "speech_samples": 208320,
+      "source_pause_seconds": 5,
+      "source_max_F0": 282.9065441517657,
+      "adjusted_max_F0": 226.32523532141255
+    },
+    {
+      "id": "p1s07",
+      "text": "یه بار دیگه. بالا،",
+      "start_seconds": 95.44,
+      "speech_samples": 74880,
+      "source_pause_seconds": 2,
+      "source_max_F0": 291.96652535049054,
+      "adjusted_max_F0": 233.57322028039243
+    },
+    {
+      "id": "p1s08",
+      "text": "و رها.",
+      "start_seconds": 100.56,
+      "speech_samples": 48960,
+      "source_pause_seconds": 5,
+      "source_max_F0": 187.36300755268186,
+      "adjusted_max_F0": 149.8904060421455
+    },
+    {
+      "id": "p1s09",
+      "text": "فکت رو شل کن. دندون‌ها از هم جدا بشن، زبونت کف دهنت بشینه.",
+      "start_seconds": 107.6,
+      "speech_samples": 172800,
+      "source_pause_seconds": 5,
+      "source_max_F0": 240.54625086149545,
+      "adjusted_max_F0": 192.43700068919634
+    },
+    {
+      "id": "p1s10",
+      "text": "حالا فقط نفست رو دنبال کن، بدون اینکه عوضش کنی. می‌بینی کجا می‌ره؟ کجا برمی‌گرده؟",
+      "start_seconds": 119.8,
+      "speech_samples": 189120,
+      "source_pause_seconds": 8,
+      "source_max_F0": 256.7934471948097,
+      "adjusted_max_F0": 205.43475775584776
+    },
+    {
+      "id": "p1s11",
+      "text": "خیلی خب. با نفس بعدی، از در می‌ریم بیرون.",
+      "start_seconds": 135.68,
+      "speech_samples": 119040,
+      "source_pause_seconds": 6,
+      "source_max_F0": 310.86293023583846,
+      "adjusted_max_F0": 248.6903441886708
+    }
+  ],
+  "disclaimer": "Part one only; whole episode 06 not yet complete; reference recording not used."
+}
