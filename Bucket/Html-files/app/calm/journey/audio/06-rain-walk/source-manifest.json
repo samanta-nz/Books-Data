@@ -4,7 +4,7 @@
   "source_sha256": "dbb75f0cdd677ff5aea04d882120769b4d75f5ac146ceacec48877b5c3e6aa8e",
   "source_guide_speed": 1.3,
   "source_guide_outputs": "Six mono MP3 files, 64–96 kbps, numbered 01..06",
-  "narrator": "Pending user confirmation; do not synthesize until selected.",
+  "narrator": "voice-08 (male), approved by user for episode 06",
   "user_reference_note": "The user-supplied reference audio link has not been accessible. The user authorized new voice-08 takes for episode 04 only, not for episode 06.",
   "sections": [
     {
@@ -455,5 +455,8 @@
       "source_text": "امیدوارم هر وقت خواستی، ریتم آروم بارون رو دوباره به یاد بیاری.",
       "source_pause_after_seconds": 3
     }
-  ]
+  ],
+  "approved_speaking_speed": 1.0,
+  "voiced_F0_target": "maximum -20% (same male voice-08 processing as episode 04; verify before final publication)",
+  "reference_policy": "User chose freshly recorded voice-08 for similar episode-06 phrases while the supplied audio reference remains inaccessible. Do not claim the reference was used."
 }
