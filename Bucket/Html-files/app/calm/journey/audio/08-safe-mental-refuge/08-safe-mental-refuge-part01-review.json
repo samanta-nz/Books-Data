@@ -1,0 +1,114 @@
+{
+  "episode": "08-safe-mental-refuge",
+  "part": 1,
+  "status": "FINAL MIX WITH SAFE FOREST AMBIENCE",
+  "source_git_blob": "e97fbe19aea76c41300be99f72ad9a4b4c16d780",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "max_voiced_F0_ratio": 0.8,
+  "positions": 8,
+  "exact_explicit_source_pause_seconds": 37,
+  "pcm_duration_seconds": 97.32,
+  "mp3_decoded_duration_seconds": 97.416,
+  "mp3_sha256": "a86b680ed2971077fcb15f1fa20d6c654380c30eea27847d21dc1cd87812fe57",
+  "cues": [
+    {
+      "id": "p1s01",
+      "text": "سلام. قبل از شروع، فقط این رو بدون: این تمرین برای ساختن یه جای امن در ذهنته. لازم نیست چیزی رو به یادت بیاری یا به چیزی فکر کنی که ناراحتت می‌کنه.",
+      "source_pause_seconds": 3,
+      "start_seconds": 0.0,
+      "speech_samples": 301440,
+      "source_archive": "source-clips-batch01.zip",
+      "source_max_F0": 293.6808682875721,
+      "adjusted_max_F0": 234.94469463005768,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s02",
+      "text": "اگه به خاطر تجربه‌های گذشته ادامه‌ی تمرین برات سخت شد، می‌تونی همین‌جا مکث کنی و به چیزهای واقعی اطرافت برگردی. هیچ عجله‌ای نیست.",
+      "source_pause_seconds": 4,
+      "start_seconds": 15.56,
+      "speech_samples": 300480,
+      "source_archive": "source-clips-batch01.zip",
+      "source_max_F0": 293.8772714759906,
+      "adjusted_max_F0": 235.1018171807925,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s03",
+      "text": "بیا چند لحظه با هم روی امنیت تمرکز کنیم. اگه نشستی، تکیه بده و پاهات رو روی زمین بذار.",
+      "source_pause_seconds": 3,
+      "start_seconds": 32.08,
+      "speech_samples": 206400,
+      "source_archive": "source-clips-batch01.zip",
+      "source_max_F0": 314.921681214493,
+      "adjusted_max_F0": 251.93734497159443,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s04",
+      "text": "اگه راحتی، چشم‌هات رو ببند. اگه ترجیح می‌دی باز بمونن، نگاهت رو روی یه نقطه‌ی ساده از زمین یا میز نگه دار.",
+      "source_pause_seconds": 4,
+      "start_seconds": 43.68,
+      "speech_samples": 241920,
+      "source_archive": "source-clips-batch01.zip",
+      "source_max_F0": 302.0915426253838,
+      "adjusted_max_F0": 241.673234100307,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s05",
+      "text": "شونه‌هات رو یه بار بالا ببر و با بازدم رها کن.",
+      "source_pause_seconds": 5,
+      "start_seconds": 57.76,
+      "speech_samples": 120960,
+      "source_archive": "source-clips-batch01.zip",
+      "source_max_F0": 226.74764823350017,
+      "adjusted_max_F0": 181.39811858680014,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s06",
+      "text": "یه بار دیگه. حالا باهم، دم",
+      "source_pause_seconds": 4,
+      "start_seconds": 67.8,
+      "speech_samples": 106560,
+      "source_archive": "source-clips-batch02.zip",
+      "source_max_F0": 252.838688791581,
+      "adjusted_max_F0": 202.2709510332648,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s07",
+      "text": "و بازدم آروم.",
+      "source_pause_seconds": 8,
+      "start_seconds": 76.24,
+      "speech_samples": 88320,
+      "source_archive": "source-clips-batch02.zip",
+      "source_max_F0": 160.7271383259014,
+      "adjusted_max_F0": 128.58171066072111,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s08",
+      "text": "خوبه. بیا بریم سراغ یه جای امن.",
+      "source_pause_seconds": 6,
+      "start_seconds": 87.92,
+      "speech_samples": 81600,
+      "source_archive": "source-clips-batch02.zip",
+      "source_max_F0": 314.6663649693501,
+      "adjusted_max_F0": 251.73309197548014,
+      "gain": 1.0
+    }
+  ],
+  "ambience": {
+    "fade_in_start_seconds": 0,
+    "fade_in_end_seconds": 228.12,
+    "fade_out_start_seconds": 405.84,
+    "fade_out_end_seconds": 577.17,
+    "fade_in_duration_seconds": 228.12,
+    "fade_out_duration_seconds": 171.32999999999998,
+    "ambient_mid_rms": 0.005787765303472794,
+    "ambient_mid_dbfs": -44.749781760711905
+  }
+}

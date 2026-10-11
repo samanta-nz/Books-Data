@@ -6,7 +6,7 @@
   "source_guide_speed": 1.3,
   "planned_speed": 1.0,
   "voice_selection": "voice-08 (male), selected by user for this episode",
-  "readiness": "PARTIAL raw recordings only. No final audio, soundscape or HTML has been approved or built.",
+  "readiness": "COMPLETE: five-part narration with soft forest ambience embedded in self-contained HTML; source pauses unchanged.",
   "source_position_count": 45,
   "source_pause_seconds": 250,
   "sections": [
@@ -299,12 +299,24 @@
     "p4s01",
     "p4s02",
     "p4s03",
+    "p4s04",
     "p4s05",
+    "p4s06",
+    "p4s07",
     "p4s08",
     "p4s09",
     "p4s10",
+    "p5s01",
+    "p5s02",
+    "p5s03",
+    "p5s04",
     "p5s05",
-    "p5s06"
+    "p5s06",
+    "p5s07",
+    "p5s08",
+    "p5s09",
+    "p5s10",
+    "p5s11"
   ],
   "reusable_breath_source": {
     "episode": "06-rain-walk",
@@ -345,5 +357,16 @@
       "sha256": "5c8f40868a1a78ce3370f5c5f6e69d746aa5cd384418bb47c18a9fe7f57877df",
       "source_pause_after_seconds": 4
     }
+  },
+  "final_raw_take_notes": "Batch09 reuses the approved standalone inhale, extracts an identical return sentence from episode 06, and splits a single ending take at a quiet sentence boundary; all 250 seconds of source pauses are applied per position during rendering.",
+  "final_mix_sha256": "c8e78bcc9d2490d47e82f91c0e3ea31b9d7cd48c9a8c730272425586e7d26659",
+  "final_pcm_duration_seconds": 577.17,
+  "final_soundscape": {
+    "narrative_fade_policy": "README: 4-minute arrival to p3s01 scene sounds, continuous subtle middle, 3-minute departure from p4s07 grounding; all boundaries tied exactly to source cues.",
+    "fade_in_start_seconds": 0,
+    "fade_in_end_seconds": 228.12,
+    "fade_out_start_seconds": 405.84,
+    "fade_out_end_seconds": 577.17,
+    "source_pause_seconds_unchanged": 250
   }
 }

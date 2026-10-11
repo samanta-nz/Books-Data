@@ -1,0 +1,136 @@
+{
+  "episode": "08-safe-mental-refuge",
+  "part": 4,
+  "status": "FINAL MIX WITH SAFE FOREST AMBIENCE",
+  "source_git_blob": "e97fbe19aea76c41300be99f72ad9a4b4c16d780",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "max_voiced_F0_ratio": 0.8,
+  "positions": 10,
+  "exact_explicit_source_pause_seconds": 60,
+  "pcm_duration_seconds": 107.6,
+  "mp3_decoded_duration_seconds": 107.712,
+  "mp3_sha256": "a29e38c29595c6847ff025a643ed50965fca4226a1ec654886e0b6b3a03e3e3d",
+  "cues": [
+    {
+      "id": "p4s01",
+      "text": "حالا یه نفس بکش و بوی برگ‌های خیس رو حس کن؛ شاید یه بوی ملایم و کمی شیرین هم از خاک و سنگ بلند شده باشه.",
+      "source_pause_seconds": 4,
+      "start_seconds": 0.0,
+      "speech_samples": 293760,
+      "source_archive": "source-clips-batch06.zip",
+      "source_max_F0": 275.9785138748538,
+      "adjusted_max_F0": 220.78281109988302,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s02",
+      "text": "دم می‌گیری،",
+      "source_pause_seconds": 4,
+      "start_seconds": 16.24,
+      "speech_samples": 35520,
+      "source_archive": "source-clips-batch07.zip",
+      "source_max_F0": 127.32833191876223,
+      "adjusted_max_F0": 101.8626655350098,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s03",
+      "text": "و بازدم کمی طولانی‌تر.",
+      "source_pause_seconds": 6,
+      "start_seconds": 21.72,
+      "speech_samples": 96960,
+      "source_archive": "source-clips-batch07.zip",
+      "source_max_F0": 306.2445251157263,
+      "adjusted_max_F0": 244.99562009258102,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s04",
+      "text": "باز هم. حالا باهم، دم",
+      "source_pause_seconds": 4,
+      "start_seconds": 31.76,
+      "speech_samples": 87360,
+      "source_archive": "source-clips-batch09-final.zip",
+      "source_max_F0": 238.8499931033899,
+      "adjusted_max_F0": 191.07999448271192,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s05",
+      "text": "و بازدم.",
+      "source_pause_seconds": 6,
+      "start_seconds": 39.4,
+      "speech_samples": 48960,
+      "source_archive": "source-clips-batch05-reused-exhale.zip",
+      "source_max_F0": 112.1373453941882,
+      "adjusted_max_F0": 89.70987631535057,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s06",
+      "text": "حالا وزن بدنت رو حس کن؛ ببین صندلی یا سطح زیرت چطور وزنت رو نگه داشته. زمین هم می‌تونه تکیه‌گاهت باشه.",
+      "source_pause_seconds": 8,
+      "start_seconds": 47.44,
+      "speech_samples": 253440,
+      "source_archive": "source-clips-batch09-final.zip",
+      "source_max_F0": 265.86901939596873,
+      "adjusted_max_F0": 212.695215516775,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s07",
+      "text": "شانه‌هات رو یه کم شل کن. فک رو شل کن. لازم نیست چیزی رو حل کنی.",
+      "source_pause_seconds": 8,
+      "start_seconds": 66.0,
+      "speech_samples": 177600,
+      "source_archive": "source-clips-batch09-final.zip",
+      "source_max_F0": 244.90700219905023,
+      "adjusted_max_F0": 195.92560175924018,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s08",
+      "text": "یه نفس دیگه.",
+      "source_pause_seconds": 3,
+      "start_seconds": 81.4,
+      "speech_samples": 42240,
+      "source_archive": "source-clips-batch08-reused-short.zip",
+      "source_max_F0": 262.28911417427275,
+      "adjusted_max_F0": 209.83129133941821,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s09",
+      "text": "حالا باهم، دم",
+      "source_pause_seconds": 5,
+      "start_seconds": 86.16,
+      "speech_samples": 57600,
+      "source_archive": "source-clips-batch03-reused-breath.zip",
+      "source_max_F0": 238.8499931034542,
+      "adjusted_max_F0": 191.07999448276337,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s10",
+      "text": "و بازدم.",
+      "source_pause_seconds": 12,
+      "start_seconds": 93.56,
+      "speech_samples": 48960,
+      "source_archive": "source-clips-batch05-reused-exhale.zip",
+      "source_max_F0": 112.1373453941882,
+      "adjusted_max_F0": 89.70987631535057,
+      "gain": 1.0
+    }
+  ],
+  "ambience": {
+    "fade_in_start_seconds": 0,
+    "fade_in_end_seconds": 228.12,
+    "fade_out_start_seconds": 405.84,
+    "fade_out_end_seconds": 577.17,
+    "fade_in_duration_seconds": 228.12,
+    "fade_out_duration_seconds": 171.32999999999998,
+    "ambient_mid_rms": 0.005787765303472794,
+    "ambient_mid_dbfs": -44.749781760711905
+  }
+}

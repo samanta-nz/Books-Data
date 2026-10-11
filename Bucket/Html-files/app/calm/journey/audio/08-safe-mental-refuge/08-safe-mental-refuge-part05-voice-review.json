@@ -1,0 +1,137 @@
+{
+  "episode": "08-safe-mental-refuge",
+  "part": 5,
+  "status": "VOICE-ONLY PREVIEW; no ambience; do not embed in HTML yet",
+  "source_git_blob": "e97fbe19aea76c41300be99f72ad9a4b4c16d780",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "max_voiced_F0_ratio": 0.8,
+  "positions": 11,
+  "exact_explicit_source_pause_seconds": 53,
+  "pcm_duration_seconds": 129.73,
+  "mp3_decoded_duration_seconds": 129.792,
+  "mp3_sha256": "0e71167b1f6896e223c49d43fd2942823a787b006d79f0f97bbbcfcfbdb1b3a0",
+  "cues": [
+    {
+      "id": "p5s01",
+      "text": "کم‌کم وقتشه برگردیم. اما این جای امن همیشه هست. هر وقت خواستی می‌تونی برگردی.",
+      "source_pause_seconds": 5,
+      "start_seconds": 0.0,
+      "speech_samples": 169920,
+      "source_archive": "source-clips-batch09-final.zip",
+      "source_max_F0": 319.26966535454864,
+      "adjusted_max_F0": 255.41573228363893,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s02",
+      "text": "یه نگاه آخر به اطراف بنداز؛ به درخت‌ها، به نور و به سنگی که همون‌جا آروم قرار گرفته.",
+      "source_pause_seconds": 6,
+      "start_seconds": 12.08,
+      "speech_samples": 225600,
+      "source_archive": "source-clips-batch09-final.zip",
+      "source_max_F0": 309.97585414065776,
+      "adjusted_max_F0": 247.98068331252625,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s03",
+      "text": "حالا دوباره به اتاق و سطحی که زیرت رو نگه داشته توجه کن. دست‌هات و پاهات رو حس کن و یه نفس آروم بکش.",
+      "source_pause_seconds": 4,
+      "start_seconds": 27.48,
+      "speech_samples": 269760,
+      "source_archive": "source-clips-batch09-final.zip",
+      "source_max_F0": 227.94388724136746,
+      "adjusted_max_F0": 182.355109793094,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s04",
+      "text": "نفس بعدی رو کمی عمیق‌تر بکش.",
+      "source_pause_seconds": 4,
+      "start_seconds": 42.72,
+      "speech_samples": 93120,
+      "source_archive": "source-clips-batch09-final.zip",
+      "source_max_F0": 250.39671058049186,
+      "adjusted_max_F0": 200.3173684643935,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s05",
+      "text": "و بازدم.",
+      "source_pause_seconds": 5,
+      "start_seconds": 50.6,
+      "speech_samples": 48960,
+      "source_archive": "source-clips-batch05-reused-exhale.zip",
+      "source_max_F0": 112.1373453941882,
+      "adjusted_max_F0": 89.70987631535057,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s06",
+      "text": "به صداهای واقعی اتاق گوش بده.",
+      "source_pause_seconds": 4,
+      "start_seconds": 57.64,
+      "speech_samples": 90240,
+      "source_archive": "source-clips-batch08-reused-short.zip",
+      "source_max_F0": 273.32513403201636,
+      "adjusted_max_F0": 218.6601072256131,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s07",
+      "text": "هر وقت آماده بودی، چشم‌هات رو باز کن.",
+      "source_pause_seconds": 6,
+      "start_seconds": 65.4,
+      "speech_samples": 82800,
+      "source_archive": "source-clips-batch09-final.zip",
+      "source_max_F0": 238.87192105952195,
+      "adjusted_max_F0": 191.09753684761756,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s08",
+      "text": "اگه خواستی دوباره به این جای امن سر بزنی، چند نفس طبیعی بکش و یکی از جزئیات آشنای این فضا رو به یاد بیار.",
+      "source_pause_seconds": 5,
+      "start_seconds": 74.85,
+      "speech_samples": 244800,
+      "source_archive": "source-clips-batch09-final.zip",
+      "source_max_F0": 280.44511685447713,
+      "adjusted_max_F0": 224.35609348358173,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s09",
+      "text": "اگه بعد از تمرین ناراحت یا بی‌قرار شدی، تمرین رو متوقف کن و به چیزهای واقعی اطرافت توجه کن؛ می‌تونی یه لیوان آب بخوری، چند نفس طبیعی بکشی یا چند ثانیه توی اتاق راه بری.",
+      "source_pause_seconds": 8,
+      "start_seconds": 90.05,
+      "speech_samples": 385920,
+      "source_archive": "source-clips-batch09-final.zip",
+      "source_max_F0": 319.3160858404968,
+      "adjusted_max_F0": 255.45286867239744,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s10",
+      "text": "ممنون که یه فرصت کوتاه به خودت دادی.",
+      "source_pause_seconds": 3,
+      "start_seconds": 114.13,
+      "speech_samples": 79200,
+      "source_archive": "source-clips-batch09-final.zip",
+      "source_max_F0": 192.97831666479559,
+      "adjusted_max_F0": 154.38265333183648,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s11",
+      "text": "امیدوارم هر وقت خواستی، بتونی این جای امن رو دوباره توی ذهنت پیدا کنی.",
+      "source_pause_seconds": 3,
+      "start_seconds": 120.43,
+      "speech_samples": 151200,
+      "source_archive": "source-clips-batch09-final.zip",
+      "source_max_F0": 256.677090517801,
+      "adjusted_max_F0": 205.3416724142408,
+      "gain": 1.0
+    }
+  ]
+}
