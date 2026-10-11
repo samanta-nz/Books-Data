@@ -1,0 +1,80 @@
+{
+  "episode": "10-five-senses-garden",
+  "part": 6,
+  "status": "FINAL MIX WITH GARDEN AMBIENCE",
+  "source_git_blob": "913505a9193b3c2123f2b98ac2b0e61628323649",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "max_voiced_F0_ratio": 0.8,
+  "positions": 5,
+  "exact_explicit_source_pause_seconds": 19,
+  "pcm_duration_seconds": 53.28,
+  "mp3_decoded_duration_seconds": 53.376,
+  "mp3_sha256": "598e36beb6aa5bb99575393e0813cac27941db8713480da6adf882871c64de91",
+  "cues": [
+    {
+      "id": "p6s01",
+      "text": "آروم از باغ بیرون بیا. اول به رنگ‌های باغ نگاه کن، بعد به عطر گیاه‌ها و صداهای اطراف توجه کن.",
+      "source_pause_seconds": 3,
+      "start_seconds": 0.0,
+      "speech_samples": 249600,
+      "source_archive": "source-clips-batch07.zip",
+      "source_max_F0": 317.9596843408934,
+      "adjusted_max_F0": 254.3677474727147,
+      "gain": 1.0
+    },
+    {
+      "id": "p6s02",
+      "text": "کم‌کم توجهت رو از باغ به محیط واقعی بیار.",
+      "source_pause_seconds": 4,
+      "start_seconds": 13.4,
+      "speech_samples": 133440,
+      "source_archive": "source-clips-batch07.zip",
+      "source_max_F0": 277.72375052274634,
+      "adjusted_max_F0": 222.1790004181971,
+      "gain": 1.0
+    },
+    {
+      "id": "p6s03",
+      "text": "سطح زیرت رو حس کن و به صداهای اتاق گوش بده. هر وقت آماده بودی، چشم‌هات رو باز کن.",
+      "source_pause_seconds": 6,
+      "start_seconds": 22.96,
+      "speech_samples": 217920,
+      "source_archive": "source-clips-batch07.zip",
+      "source_max_F0": 202.86240500923358,
+      "adjusted_max_F0": 162.28992400738687,
+      "gain": 0.9931448509181529
+    },
+    {
+      "id": "p6s04",
+      "text": "ممنون که با حواس‌ت این باغ رو کشف کردی.",
+      "source_pause_seconds": 3,
+      "start_seconds": 38.04,
+      "speech_samples": 91200,
+      "source_archive": "source-clips-batch07.zip",
+      "source_max_F0": 251.2447465205177,
+      "adjusted_max_F0": 200.9957972164142,
+      "gain": 1.0
+    },
+    {
+      "id": "p6s05",
+      "text": "امیدوارم یکی از حس‌های این باغ تا ادامه‌ی روز باهات بمونه.",
+      "source_pause_seconds": 3,
+      "start_seconds": 44.84,
+      "speech_samples": 130560,
+      "source_archive": "source-clips-batch07.zip",
+      "source_max_F0": 262.9231705163755,
+      "adjusted_max_F0": 210.33853641310037,
+      "gain": 1.0
+    }
+  ],
+  "ambience": {
+    "fade_in_start_seconds": 74.6,
+    "fade_in_end_seconds": 127.87999999999997,
+    "fade_out_start_seconds": 314.6,
+    "fade_out_end_seconds": 367.88,
+    "fade_duration_seconds": 53.27999999999997,
+    "ambient_mid_rms": 0.005784803141146773,
+    "ambient_mid_dbfs": -44.75422831304623
+  }
+}

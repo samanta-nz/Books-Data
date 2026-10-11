@@ -1,0 +1,80 @@
+{
+  "episode": "10-five-senses-garden",
+  "part": 4,
+  "status": "FINAL MIX WITH GARDEN AMBIENCE",
+  "source_git_blob": "913505a9193b3c2123f2b98ac2b0e61628323649",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "max_voiced_F0_ratio": 0.8,
+  "positions": 5,
+  "exact_explicit_source_pause_seconds": 39,
+  "pcm_duration_seconds": 73.28,
+  "mp3_decoded_duration_seconds": 73.392,
+  "mp3_sha256": "da589d05b4451ba8fb00fe4a177094183a73aba38ec4069bf25a9c5f6edeb7d4",
+  "cues": [
+    {
+      "id": "p4s01",
+      "text": "اگه چیزی برای چشیدن داری، شاید کمی نون و عسل باشه. یه لقمه‌ی کوچیک کافیه.",
+      "source_pause_seconds": 5,
+      "start_seconds": 0.0,
+      "speech_samples": 174720,
+      "source_archive": "source-clips-batch06.zip",
+      "source_max_F0": 276.42939790826364,
+      "adjusted_max_F0": 221.14351832661092,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s02",
+      "text": "حالا گوش بده: صدای بال زدن یه زنبور، خیلی دور و آروم.",
+      "source_pause_seconds": 8,
+      "start_seconds": 12.28,
+      "speech_samples": 183360,
+      "source_archive": "source-clips-batch06.zip",
+      "source_max_F0": 289.876824785302,
+      "adjusted_max_F0": 231.90145982824163,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s03",
+      "text": "بعد صدای برگ‌ها رو می‌شنوی که توی باد به هم می‌خورن و خش‌خش می‌کنن.",
+      "source_pause_seconds": 8,
+      "start_seconds": 27.92,
+      "speech_samples": 160320,
+      "source_archive": "source-clips-batch06.zip",
+      "source_max_F0": 232.6905560298307,
+      "adjusted_max_F0": 186.15244482386458,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s04",
+      "text": "و صدای آبی که از گلدون روی خاک می‌ریزه.",
+      "source_pause_seconds": 8,
+      "start_seconds": 42.6,
+      "speech_samples": 100800,
+      "source_archive": "source-clips-batch06.zip",
+      "source_max_F0": 291.6114909760409,
+      "adjusted_max_F0": 233.28919278083274,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s05",
+      "text": "اگه صدایی از اتاق به گوشت رسید، می‌تونی بذاری در پس‌زمینه بمونه؛ مثل صدایی که از بیرون باغ می‌آد.",
+      "source_pause_seconds": 10,
+      "start_seconds": 54.8,
+      "speech_samples": 203520,
+      "source_archive": "source-clips-batch06.zip",
+      "source_max_F0": 233.22300806185928,
+      "adjusted_max_F0": 186.57840644948743,
+      "gain": 1.0
+    }
+  ],
+  "ambience": {
+    "fade_in_start_seconds": 74.6,
+    "fade_in_end_seconds": 127.87999999999997,
+    "fade_out_start_seconds": 314.6,
+    "fade_out_end_seconds": 367.88,
+    "fade_duration_seconds": 53.27999999999997,
+    "ambient_mid_rms": 0.005784803141146773,
+    "ambient_mid_dbfs": -44.75422831304623
+  }
+}
