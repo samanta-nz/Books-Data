@@ -1,0 +1,16 @@
+{
+  "source_git_blob": "0ed630cc62eb43bb8c657321a7c02195f147af9a",
+  "user_approved_replacement": {
+    "p5s11": {
+      "source_text": "بدنت چه حسی داره؟ هر چی هست، درسته.",
+      "record_text": "بدنت چه حسی داره؟ بهش فکر کن",
+      "source_pause_after_seconds": 10,
+      "discarded_archive": "source-clips-part05-02-11.zip",
+      "discarded_sha256": "eac7c96676f450bfa2fafb2531e6b49191fd9e72375d6f9a4415e109cf7063ad",
+      "replacement_archive": "source-clips-part05-11-redo-and-part06-01-09.zip",
+      "replacement_sha256": "191d76df67a8193354ac599ba5ed53e5078c74863cbf29809b8368dfe566736e",
+      "status": "recorded"
+    }
+  },
+  "instruction": "Do not use the old p5s11 WAV or the old 06 part-05 review MP3. Rebuild review with replacement take and all original pauses."
+}
