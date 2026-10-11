@@ -42,9 +42,12 @@ def inventory(name, source=None):
                 cue=cues[ident]
                 assert (x['source_text'],x['source_pause_after_seconds'])==(cue['source_text'],cue['source_pause_after_seconds']),ident
                 # Only the earlier user-approved 'حالا باهم، دم' extension may alter source speech.
-                expected=cue['source_text'].replace('دم،','حالا باهم، دم')
-                assert x['text'] in (cue['source_text'],expected),ident
-                if x['text']!=cue['source_text']:
+                # Persian quotation marks are non-spoken punctuation; their
+                # removal in a TTS prompt does not change the spoken words.
+                spoken=cue['source_text'].replace('«','').replace('»','')
+                expected=spoken.replace('دم،','حالا باهم، دم')
+                assert x['text'] in (cue['source_text'],spoken,expected),ident
+                if x['text'] not in (cue['source_text'],spoken):
                     assert 'reused_from_episode' in x,ident
                 raw=z.read('raw/'+x['raw_asset'])
                 assert hashlib.sha256(raw).hexdigest()==x['sha256'],ident
