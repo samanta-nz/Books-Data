@@ -83,11 +83,12 @@ def replace_ambience_with_external(html: str, uri: str) -> str:
     updated, n = WAV_URI_RE.subn(lambda _m: uri, html, count=1)
     if n != 1:
         raise RuntimeError(f"Expected one embedded WAV ambience; replaced {n}")
-    old = (
-        "const b64=AMB.slice(AMB.indexOf(',')+1),binary=atob(b64),bytes=new Uint8Array(binary.length); "
-        "for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i); "
-        "ambCtx.decodeAudioData(bytes.buffer).then(buffer=>{"
-    )
+    start = updated.find("const b64=AMB.slice(")
+    end_marker = "ambCtx.decodeAudioData(bytes.buffer).then(buffer=>{"
+    end = updated.find(end_marker, start)
+    if start < 0 or end < 0:
+        raise RuntimeError("Could not find ambience decoder block in the source HTML")
+    end += len(end_marker)
     new = (
         "const ambBytes=AMB.startsWith('data:')?"
         "Promise.resolve((()=>{const b64=AMB.slice(AMB.indexOf(',')+1),binary=atob(b64),"
@@ -96,9 +97,7 @@ def replace_ambience_with_external(html: str, uri: str) -> str:
         "fetch(AMB).then(r=>{if(!r.ok)throw new Error('ambience fetch failed');return r.arrayBuffer()}); "
         "ambBytes.then(audioBytes=>ambCtx.decodeAudioData(audioBytes)).then(buffer=>{"
     )
-    if old not in updated:
-        raise RuntimeError("Could not patch ambience loader for the external-assets example")
-    updated = updated.replace(old, new, 1)
+    updated = updated[:start] + new + updated[end:]
     return updated
 
 
