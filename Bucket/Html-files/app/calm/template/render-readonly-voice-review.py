@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate source-take ZIPs and render a voice-only section preview for 08/10.
+"""Validate source-take ZIPs and render a voice-only preview for 08/10/12.
 
 The complete episode and soundscape must be built only after every source cue
 has a reviewed take. Section previews are deliberately NOT embedded into HTML.
@@ -16,7 +16,8 @@ import wave
 from zipfile import ZipFile
 
 CALM=Path(__file__).resolve().parents[1]
-EPISODES={'08-safe-mental-refuge':(5,45,250), '10-five-senses-garden':(6,31,164)}
+EPISODES={'08-safe-mental-refuge':(5,45,250), '10-five-senses-garden':(6,31,164),
+          '12-virtual-nature':(6,35,183)}
 FS=24000
 
 

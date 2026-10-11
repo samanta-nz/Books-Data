@@ -12,7 +12,8 @@ from pathlib import Path
 import re
 
 EPISODES = {'08-safe-mental-refuge': (5, 45, 250),
-            '10-five-senses-garden': (6, 31, 164)}
+            '10-five-senses-garden': (6, 31, 164),
+            '12-virtual-nature': (6, 35, 183)}
 DIGITS = str.maketrans('۰۱۲۳۴۵۶۷۸۹', '0123456789')
 SOURCE_ROOT = 'https://github.com/samanta-nz/Read-Only-Books-Data/blob/main/Bucket/Html-files/app/calm/journey/'
 CALM = Path(__file__).resolve().parents[1]

@@ -1,0 +1,292 @@
+{
+  "source_url": "https://github.com/samanta-nz/Read-Only-Books-Data/blob/main/Bucket/Html-files/app/calm/journey/12-virtual-nature.md",
+  "source_git_blob": "83b56e12af0ad3d17dec6e415066f8a9e675e1d3",
+  "source_sha256": "6cfde0e4536ee6cd6f60abefa569112826af71b682d557487881b2e04f19f679",
+  "source_title": "طبیعت مجازی — راهنمای تولید صوت",
+  "source_guide_speed": 1.3,
+  "planned_speed": 1.0,
+  "voice_selection": "voice-08 (male), selected by user for episode 12",
+  "readiness": "PARTIAL raw recordings only. No final audio, soundscape or HTML has been approved or built.",
+  "source_position_count": 35,
+  "source_pause_seconds": 183,
+  "sections": [
+    {
+      "section": 1,
+      "source_title": "پیش از شروع، درباره‌ی این تمرین",
+      "positions": 7,
+      "source_pause_seconds": 32
+    },
+    {
+      "section": 2,
+      "source_title": "ورود به چشم‌انداز",
+      "positions": 5,
+      "source_pause_seconds": 26
+    },
+    {
+      "section": 3,
+      "source_title": "صدای باد در دره",
+      "positions": 4,
+      "source_pause_seconds": 31
+    },
+    {
+      "section": 4,
+      "source_title": "نفس با افق",
+      "positions": 6,
+      "source_pause_seconds": 33
+    },
+    {
+      "section": 5,
+      "source_title": "جای رسیدن به آرامش",
+      "positions": 5,
+      "source_pause_seconds": 30
+    },
+    {
+      "section": 6,
+      "source_title": "برگشت به اتاق",
+      "positions": 8,
+      "source_pause_seconds": 31
+    }
+  ],
+  "positions": [
+    {
+      "id": "p1s01",
+      "source_text": "سلام. امروز قراره یه چشم‌انداز طبیعی و آروم رو توی ذهنمون تصور کنیم.",
+      "source_pause_after_seconds": 3
+    },
+    {
+      "id": "p1s02",
+      "source_text": "گاهی رسیدن به طبیعت واقعی سخته و شلوغی شهر، صفحه‌ها و کارهای روزمره خسته‌مون می‌کنن. این تمرین یه فرصت کوتاهه برای ساختن یه چشم‌انداز آروم توی ذهن؛ نه برای جایگزین کردن طبیعت واقعی.",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p1s03",
+      "source_text": "جای راحتی پیدا کن. اگه نشستی، کمرت رو به صندلی بده و پاهات رو روی زمین بذار.",
+      "source_pause_after_seconds": 3
+    },
+    {
+      "id": "p1s04",
+      "source_text": "اگه راحتی، چشم‌هات رو ببند؛ وگرنه نگاهت رو روی یه نقطه‌ی ساده از زمین یا میز نگه دار.",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p1s05",
+      "source_text": "یه دم آروم بگیر.",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p1s06",
+      "source_text": "بعد آهسته بازدم کن.",
+      "source_pause_after_seconds": 8
+    },
+    {
+      "id": "p1s07",
+      "source_text": "خوبه، حالا بریم سراغ چشم‌اندازمون.",
+      "source_pause_after_seconds": 6
+    },
+    {
+      "id": "p2s01",
+      "source_text": "تصور کن از یه مسیر آروم بالا می‌ری و به تپه‌های نرم و مه‌گرفته می‌رسی.",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p2s02",
+      "source_text": "روی تپه‌ی اول یه علفزار بلند می‌بینی و بالاتر، آسمونی به رنگ آبی آروم.",
+      "source_pause_after_seconds": 3
+    },
+    {
+      "id": "p2s03",
+      "source_text": "پشت اون، لایه‌های بیشتری از تپه‌ها روی هم قرار گرفتن؛ هر کدوم کمی روشن‌تر از قبلی.",
+      "source_pause_after_seconds": 5
+    },
+    {
+      "id": "p2s04",
+      "source_text": "بالای سرت یه ابر نازک و سفیده. می‌تونی چند لحظه تماشاش کنی؛ اگه هم توجهت جای دیگه‌ای رفت، اشکالی نداره.",
+      "source_pause_after_seconds": 8
+    },
+    {
+      "id": "p2s05",
+      "source_text": "و دورتر از همه، یه خط نقره‌ای خیلی کمرنگ دور افق دیده می‌شه.",
+      "source_pause_after_seconds": 6
+    },
+    {
+      "id": "p3s01",
+      "source_text": "حالا گوش بده. باد آروم از روی تپه‌ها می‌وزه و دوباره توی دره فروکش می‌کنه.",
+      "source_pause_after_seconds": 5
+    },
+    {
+      "id": "p3s02",
+      "source_text": "از اون طرف دره، صدای جریان آرومی می‌آد؛ مثل یه نجوا که از دور شنیده می‌شه.",
+      "source_pause_after_seconds": 8
+    },
+    {
+      "id": "p3s03",
+      "source_text": "اگه صدایی از اتاق به گوشت رسید، مجبور نیستی نادیده‌اش بگیری؛ بذار در پس‌زمینه باشه و هر وقت خواستی به صداهای تمرین برگرد.",
+      "source_pause_after_seconds": 10
+    },
+    {
+      "id": "p3s04",
+      "source_text": "وقتی صدا محو می‌شه، صدای دیگه‌ای جاش می‌آد؛ همون‌قدر آروم.",
+      "source_pause_after_seconds": 8
+    },
+    {
+      "id": "p4s01",
+      "source_text": "چشم‌هات رو ببند و بذار نفست با پهنای آسمون همراه بشه.",
+      "source_pause_after_seconds": 3
+    },
+    {
+      "id": "p4s02",
+      "source_text": "یه دم آروم بگیر.",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p4s03",
+      "source_text": "بعد تصور کن با بازدمت، مثل یه ابر آروم حرکت می‌کنی.",
+      "source_pause_after_seconds": 8
+    },
+    {
+      "id": "p4s04",
+      "source_text": "دم،",
+      "source_pause_after_seconds": 5
+    },
+    {
+      "id": "p4s05",
+      "source_text": "و بازدم.",
+      "source_pause_after_seconds": 9
+    },
+    {
+      "id": "p4s06",
+      "source_text": "بدنت ممکنه سبک‌تر به نظر برسه؛ هم‌زمان وزنش رو روی صندلی یا تخت و حرکت نفست رو حس کن.",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p5s01",
+      "source_text": "حالا بالای این تپه‌های آروم ایستادی. از شلوغی فاصله گرفتی و فقط این روشنایی ملایم رو حس می‌کنی.",
+      "source_pause_after_seconds": 5
+    },
+    {
+      "id": "p5s02",
+      "source_text": "اگه فکر سنگینی ذهنت رو مشغول کرد، دنبالش نرو؛ می‌تونی مثل یه ابر نگاهش کنی و بذاری از جلوی ذهنت رد بشه.",
+      "source_pause_after_seconds": 8
+    },
+    {
+      "id": "p5s03",
+      "source_text": "یه نفس عمیق دیگه. دم،",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p5s04",
+      "source_text": "و بازدم کامل.",
+      "source_pause_after_seconds": 5
+    },
+    {
+      "id": "p5s05",
+      "source_text": "اگه دوست داری، چند لحظه‌ی دیگه همین‌جا بمون و به حس آرامشی که پیدا کردی توجه کن.",
+      "source_pause_after_seconds": 8
+    },
+    {
+      "id": "p6s01",
+      "source_text": "آروم از این چشم‌انداز برگرد به فضای واقعی اطرافت؛ می‌تونی حس آرامش رو هم با خودت نگه داری.",
+      "source_pause_after_seconds": 3
+    },
+    {
+      "id": "p6s02",
+      "source_text": "تصویر تپه‌ها رو بذار دورتر بشه.",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p6s03",
+      "source_text": "دوباره به صندلی یا تخت، دست‌ها، پاها و ریتم معمول نفست توجه کن.",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p6s04",
+      "source_text": "هر وقت آماده بودی، چشم‌هات رو باز کن.",
+      "source_pause_after_seconds": 6
+    },
+    {
+      "id": "p6s05",
+      "source_text": "هر وقت به مکثی کوتاه نیاز داشتی، چند نفس طبیعی بکش و برای لحظه‌ای یه چشم‌انداز آروم رو به یاد بیار.",
+      "source_pause_after_seconds": 5
+    },
+    {
+      "id": "p6s06",
+      "source_text": "اگه بعد از تمرین هنوز ناآروم بودی، تمرین رو کنار بذار و به یه چیز واقعی اطرافت نگاه کن.",
+      "source_pause_after_seconds": 3
+    },
+    {
+      "id": "p6s07",
+      "source_text": "ممنون که این چشم‌انداز رو با من تصور کردی.",
+      "source_pause_after_seconds": 3
+    },
+    {
+      "id": "p6s08",
+      "source_text": "امیدوارم هر وقت خواستی، دوباره بتونی این چشم‌انداز آروم رو به یاد بیاری.",
+      "source_pause_after_seconds": 3
+    }
+  ],
+  "approved_speaking_speed": 1.0,
+  "voiced_F0_target": "At rendering, reduce the voiced F0 maximum by 20% without time stretching; keep 1.0x.",
+  "reuse_policy": "Identical short phrases use approved voice-08 takes from 06, 08 and 10; standalone دم uses the single reusable حالا باهم، دم take; each source pause remains independent.",
+  "recorded_positions": [
+    "p1s01",
+    "p1s02",
+    "p1s03",
+    "p1s04",
+    "p1s05",
+    "p1s06",
+    "p1s07",
+    "p2s01",
+    "p2s02",
+    "p2s03",
+    "p2s04",
+    "p2s05",
+    "p4s02",
+    "p4s04",
+    "p4s05",
+    "p6s04"
+  ],
+  "reused_short_cues": {
+    "p1s04": {
+      "reused_from_episode": "06-rain-walk",
+      "reused_from_position": "p1s05",
+      "reused_from_archive": "source-clips-part01-01-07.zip",
+      "sha256": "61bbbf54a73646fc2fbf87457c7971fdb1f33b36238bc26913da55708ad38a5d",
+      "source_pause_after_seconds": 4
+    },
+    "p1s05": {
+      "reused_from_episode": "10-five-senses-garden",
+      "reused_from_position": "p1s05",
+      "reused_from_archive": "source-clips-batch01.zip",
+      "sha256": "f85749b497351ccaf011fcbdfdd596a1b43028ec3099136cc56b1dc1653c4810",
+      "source_pause_after_seconds": 4
+    },
+    "p4s02": {
+      "reused_from_episode": "10-five-senses-garden",
+      "reused_from_position": "p1s05",
+      "reused_from_archive": "source-clips-batch01.zip",
+      "sha256": "f85749b497351ccaf011fcbdfdd596a1b43028ec3099136cc56b1dc1653c4810",
+      "source_pause_after_seconds": 4
+    },
+    "p4s04": {
+      "reused_from_episode": "06-rain-walk",
+      "reused_from_position": "p4s16",
+      "reused_from_archive": "source-clips-part02-03-and-part04-reusable-breath.zip",
+      "sha256": "8ea7adb2df759a97ecf301a4829fdf539b09db9cf4b0afd757c6e03fb71d6399",
+      "source_pause_after_seconds": 5
+    },
+    "p4s05": {
+      "reused_from_episode": "06-rain-walk",
+      "reused_from_position": "p2s11",
+      "reused_from_archive": "source-clips-part02-03-and-part04-reusable-breath.zip",
+      "sha256": "243c6f463733c248a258c1bcf93acd724435d8b8af253eed0cb3fa128ae6a6cc",
+      "source_pause_after_seconds": 9
+    },
+    "p6s04": {
+      "reused_from_episode": "08-safe-mental-refuge",
+      "reused_from_position": "p5s07",
+      "reused_from_archive": "source-clips-batch09-final.zip",
+      "sha256": "139f2afba1c3f6b76716d42d9e99cfb6801e960f5aab80ed95976cc37be0ed1f",
+      "source_pause_after_seconds": 6
+    }
+  }
+}
