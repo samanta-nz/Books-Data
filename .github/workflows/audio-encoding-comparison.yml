@@ -33,6 +33,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: beach-waves-audio-comparison
-          path: output/**
+          path: output/beach-waves-audio-comparison.zip
           if-no-files-found: error
           retention-days: 14
