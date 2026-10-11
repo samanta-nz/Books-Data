@@ -300,9 +300,11 @@
     "p4s02",
     "p4s03",
     "p4s05",
+    "p4s08",
     "p4s09",
     "p4s10",
-    "p5s05"
+    "p5s05",
+    "p5s06"
   ],
   "reusable_breath_source": {
     "episode": "06-rain-walk",
@@ -327,5 +329,21 @@
       "p4s10",
       "p5s05"
     ]
+  },
+  "reused_short_cues": {
+    "p4s08": {
+      "reused_from_episode": "06-rain-walk",
+      "reused_from_position": "p4s15",
+      "reused_from_archive": "source-clips-part04-07-15-and-part05-01.zip",
+      "sha256": "7d11f3963e9ca1ee017dd4d229946123cbbe6b02bdadeae1b17abbe85f33051a",
+      "source_pause_after_seconds": 3
+    },
+    "p5s06": {
+      "reused_from_episode": "06-rain-walk",
+      "reused_from_position": "p6s15",
+      "reused_from_archive": "source-clips-part06-shared-04-short-cues.zip",
+      "sha256": "5c8f40868a1a78ce3370f5c5f6e69d746aa5cd384418bb47c18a9fe7f57877df",
+      "source_pause_after_seconds": 4
+    }
   }
 }
