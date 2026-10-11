@@ -1,0 +1,60 @@
+{
+  "episode": "12-virtual-nature",
+  "part": 3,
+  "status": "VOICE-ONLY PREVIEW; no ambience; do not embed in HTML yet",
+  "source_git_blob": "83b56e12af0ad3d17dec6e415066f8a9e675e1d3",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "max_voiced_F0_ratio": 0.8,
+  "positions": 4,
+  "exact_explicit_source_pause_seconds": 31,
+  "pcm_duration_seconds": 66.0,
+  "mp3_decoded_duration_seconds": 66.048,
+  "mp3_sha256": "2845d7907fa9c0080624946e1baf41849cfc4077a3e2dc4d346062423c666553",
+  "cues": [
+    {
+      "id": "p3s01",
+      "text": "حالا گوش بده. باد آروم از روی تپه‌ها می‌وزه و دوباره توی دره فروکش می‌کنه.",
+      "source_pause_seconds": 5,
+      "start_seconds": 0.0,
+      "speech_samples": 235200,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 249.80876582015483,
+      "adjusted_max_F0": 199.84701265612387,
+      "gain": 1.0
+    },
+    {
+      "id": "p3s02",
+      "text": "از اون طرف دره، صدای جریان آرومی می‌آد؛ مثل یه نجوا که از دور شنیده می‌شه.",
+      "source_pause_seconds": 8,
+      "start_seconds": 14.8,
+      "speech_samples": 189120,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 233.06592734128992,
+      "adjusted_max_F0": 186.45274187303195,
+      "gain": 1.0
+    },
+    {
+      "id": "p3s03",
+      "text": "اگه صدایی از اتاق به گوشت رسید، مجبور نیستی نادیده‌اش بگیری؛ بذار در پس‌زمینه باشه و هر وقت خواستی به صداهای تمرین برگرد.",
+      "source_pause_seconds": 10,
+      "start_seconds": 30.68,
+      "speech_samples": 267840,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 310.0512618193554,
+      "adjusted_max_F0": 248.0410094554843,
+      "gain": 1.0
+    },
+    {
+      "id": "p3s04",
+      "text": "وقتی صدا محو می‌شه، صدای دیگه‌ای جاش می‌آد؛ همون‌قدر آروم.",
+      "source_pause_seconds": 8,
+      "start_seconds": 51.84,
+      "speech_samples": 147840,
+      "source_archive": "source-clips-batch05-final.zip",
+      "source_max_F0": 236.721129623503,
+      "adjusted_max_F0": 189.3769036988024,
+      "gain": 1.0
+    }
+  ]
+}

@@ -6,7 +6,7 @@
   "source_guide_speed": 1.3,
   "planned_speed": 1.0,
   "voice_selection": "voice-08 (male), selected by user for episode 12",
-  "readiness": "PARTIAL raw recordings only. No final audio, soundscape or HTML has been approved or built.",
+  "readiness": "COMPLETE: six-part narration with gentle hillside wind/stream embedded in self-contained HTML; source pauses unchanged.",
   "source_position_count": 35,
   "source_pause_seconds": 183,
   "sections": [
@@ -243,6 +243,7 @@
     "p3s01",
     "p3s02",
     "p3s03",
+    "p3s04",
     "p4s01",
     "p4s02",
     "p4s03",
@@ -253,7 +254,15 @@
     "p5s02",
     "p5s03",
     "p5s04",
-    "p6s04"
+    "p5s05",
+    "p6s01",
+    "p6s02",
+    "p6s03",
+    "p6s04",
+    "p6s05",
+    "p6s06",
+    "p6s07",
+    "p6s08"
   ],
   "reused_short_cues": {
     "p1s04": {
@@ -298,5 +307,15 @@
       "sha256": "139f2afba1c3f6b76716d42d9e99cfb6801e960f5aab80ed95976cc37be0ed1f",
       "source_pause_after_seconds": 6
     }
+  },
+  "final_mix_sha256": "2472d2f2cc805b3a006fd19d610debb4ab1e8f18738f134bbab3fd6f39fda097",
+  "final_pcm_duration_seconds": 430.33,
+  "final_soundscape": {
+    "narrative_fade_policy": "Equal cue-synchronized fades scaled to the short source: from p2s01 landscape entrance and p6s01 return; unchanged source pauses and a continuous calm middle.",
+    "fade_in_start_seconds": 82.56,
+    "fade_in_end_seconds": 167.57,
+    "fade_out_start_seconds": 345.32,
+    "fade_out_end_seconds": 430.33,
+    "source_pause_seconds_unchanged": 183
   }
 }

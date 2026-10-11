@@ -1,0 +1,113 @@
+{
+  "episode": "12-virtual-nature",
+  "part": 6,
+  "status": "FINAL MIX WITH HILLSIDE AMBIENCE",
+  "source_git_blob": "83b56e12af0ad3d17dec6e415066f8a9e675e1d3",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "max_voiced_F0_ratio": 0.8,
+  "positions": 8,
+  "exact_explicit_source_pause_seconds": 31,
+  "pcm_duration_seconds": 85.01,
+  "mp3_decoded_duration_seconds": 85.128,
+  "mp3_sha256": "4e3a47a65cfae302f3c8f20b419bf1c3b9cd6dd5fad11a91aab2125084a0d3f1",
+  "cues": [
+    {
+      "id": "p6s01",
+      "text": "آروم از این چشم‌انداز برگرد به فضای واقعی اطرافت؛ می‌تونی حس آرامش رو هم با خودت نگه داری.",
+      "source_pause_seconds": 3,
+      "start_seconds": 0.0,
+      "speech_samples": 238080,
+      "source_archive": "source-clips-batch05-final.zip",
+      "source_max_F0": 308.6043863872052,
+      "adjusted_max_F0": 246.8835091097642,
+      "gain": 1.0
+    },
+    {
+      "id": "p6s02",
+      "text": "تصویر تپه‌ها رو بذار دورتر بشه.",
+      "source_pause_seconds": 4,
+      "start_seconds": 12.92,
+      "speech_samples": 76800,
+      "source_archive": "source-clips-batch05-final.zip",
+      "source_max_F0": 301.0662396261685,
+      "adjusted_max_F0": 240.8529917009348,
+      "gain": 1.0
+    },
+    {
+      "id": "p6s03",
+      "text": "دوباره به صندلی یا تخت، دست‌ها، پاها و ریتم معمول نفست توجه کن.",
+      "source_pause_seconds": 4,
+      "start_seconds": 20.12,
+      "speech_samples": 203520,
+      "source_archive": "source-clips-batch05-final.zip",
+      "source_max_F0": 266.0076609145861,
+      "adjusted_max_F0": 212.80612873166888,
+      "gain": 1.0
+    },
+    {
+      "id": "p6s04",
+      "text": "هر وقت آماده بودی، چشم‌هات رو باز کن.",
+      "source_pause_seconds": 6,
+      "start_seconds": 32.6,
+      "speech_samples": 82800,
+      "source_archive": "source-clips-batch01-reused-short.zip",
+      "source_max_F0": 238.87192105952195,
+      "adjusted_max_F0": 191.09753684761756,
+      "gain": 1.0
+    },
+    {
+      "id": "p6s05",
+      "text": "هر وقت به مکثی کوتاه نیاز داشتی، چند نفس طبیعی بکش و برای لحظه‌ای یه چشم‌انداز آروم رو به یاد بیار.",
+      "source_pause_seconds": 5,
+      "start_seconds": 42.05,
+      "speech_samples": 254400,
+      "source_archive": "source-clips-batch05-final.zip",
+      "source_max_F0": 275.6932188656469,
+      "adjusted_max_F0": 220.5545750925175,
+      "gain": 1.0
+    },
+    {
+      "id": "p6s06",
+      "text": "اگه بعد از تمرین هنوز ناآروم بودی، تمرین رو کنار بذار و به یه چیز واقعی اطرافت نگاه کن.",
+      "source_pause_seconds": 3,
+      "start_seconds": 57.65,
+      "speech_samples": 189120,
+      "source_archive": "source-clips-batch05-final.zip",
+      "source_max_F0": 317.48905116390284,
+      "adjusted_max_F0": 253.99124093112226,
+      "gain": 1.0
+    },
+    {
+      "id": "p6s07",
+      "text": "ممنون که این چشم‌انداز رو با من تصور کردی.",
+      "source_pause_seconds": 3,
+      "start_seconds": 68.53,
+      "speech_samples": 89280,
+      "source_archive": "source-clips-batch05-final.zip",
+      "source_max_F0": 176.34293635138326,
+      "adjusted_max_F0": 141.07434908110662,
+      "gain": 1.0
+    },
+    {
+      "id": "p6s08",
+      "text": "امیدوارم هر وقت خواستی، دوباره بتونی این چشم‌انداز آروم رو به یاد بیاری.",
+      "source_pause_seconds": 3,
+      "start_seconds": 75.25,
+      "speech_samples": 162240,
+      "source_archive": "source-clips-batch05-final.zip",
+      "source_max_F0": 280.57440426725327,
+      "adjusted_max_F0": 224.45952341380263,
+      "gain": 1.0
+    }
+  ],
+  "ambience": {
+    "fade_in_start_seconds": 82.56,
+    "fade_in_end_seconds": 167.57,
+    "fade_out_start_seconds": 345.32,
+    "fade_out_end_seconds": 430.33,
+    "fade_duration_seconds": 85.00999999999999,
+    "ambient_mid_rms": 0.0055820946446013785,
+    "ambient_mid_dbfs": -45.06405608614997
+  }
+}
