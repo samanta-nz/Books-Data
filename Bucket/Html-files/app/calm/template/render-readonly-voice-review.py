@@ -72,9 +72,9 @@ def render(name,part,m,seen):
     import numpy as np
     import lameenc
     import miniaudio
-    cues=[x for x in m['positions'] if x['id'].startswith(f'p{part}s')]
+    cues=[x for x in m['positions'] if part is None or x['id'].startswith(f'p{part}s')]
     missing=[x['id'] for x in cues if x['id'] not in seen]
-    if missing:raise ValueError(f'Refusing an incomplete section: {missing}')
+    if missing:raise ValueError(f'Refusing incomplete narration: {missing}')
     process=processor()
     chunks=[];events=[];offset=0
     for x in cues:
@@ -86,7 +86,8 @@ def render(name,part,m,seen):
                            source_archive=archive,**pitch))
         chunks.extend((pcm,np.zeros(FS*pause,dtype='<i2')))
         offset+=len(pcm)+FS*pause
-    assert sum(x['source_pause_seconds'] for x in events)==m['sections'][part-1]['source_pause_seconds']
+    required_pauses=(m['source_pause_seconds'] if part is None else m['sections'][part-1]['source_pause_seconds'])
+    assert sum(x['source_pause_seconds'] for x in events)==required_pauses
     joined=np.concatenate(chunks)
     assert len(joined)==offset
     enc=lameenc.Encoder();enc.set_channels(1);enc.set_in_sample_rate(FS)
@@ -97,7 +98,8 @@ def render(name,part,m,seen):
     d=miniaudio.decode(bytes(audio),output_format=miniaudio.SampleFormat.SIGNED16,nchannels=1,sample_rate=FS)
     assert abs(d.num_frames-len(joined))<FS*.12
     folder=CALM/'journey/audio'/name
-    output=folder/(name+f'-part{part:02}-voice-review.mp3')
+    suffix='full' if part is None else f'part{part:02}'
+    output=folder/(name+f'-{suffix}-voice-review.mp3')
     output.write_bytes(audio)
     report={'episode':name,'part':part,'status':'VOICE-ONLY PREVIEW; no ambience; do not embed in HTML yet',
             'source_git_blob':m['source_git_blob'],'voice_id':'voice-08','speed':1.0,
@@ -114,13 +116,19 @@ def main():
     ap.add_argument('episode',choices=EPISODES)
     ap.add_argument('--source',type=Path,help='optional authenticated Read-Only-Books-Data .md for hash verification')
     ap.add_argument('--check',action='store_true')
-    ap.add_argument('--part',type=int)
+    mode=ap.add_mutually_exclusive_group()
+    mode.add_argument('--part',type=int)
+    mode.add_argument('--full',action='store_true',help='render only if all source positions are verified')
     args=ap.parse_args()
     m,seen,missing=inventory(args.episode,args.source)
     print(args.episode,f'{len(seen)}/{len(m["positions"])} raw takes verified, {len(missing)} remaining')
     if args.check:return
-    if args.part not in range(1,len(m['sections'])+1):ap.error('pass a valid --part for voice-only preview')
-    render(args.episode,args.part,m,seen)
+    if args.full:
+        if missing:raise SystemExit(f'Refusing incomplete full preview: {missing}')
+        render(args.episode,None,m,seen)
+    else:
+        if args.part not in range(1,len(m['sections'])+1):ap.error('pass a valid --part for voice-only preview')
+        render(args.episode,args.part,m,seen)
 
 
 if __name__=='__main__':main()

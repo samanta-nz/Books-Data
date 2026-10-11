@@ -6,7 +6,7 @@
   "source_guide_speed": 1.3,
   "planned_speed": 1.0,
   "voice_selection": "voice-08 (male), selected by user for this episode",
-  "readiness": "PARTIAL raw recordings only. No final audio, soundscape or HTML has been approved or built.",
+  "readiness": "Complete raw narration pending final mix and HTML.",
   "source_position_count": 31,
   "source_pause_seconds": 164,
   "sections": [
@@ -230,7 +230,15 @@
     "p4s03",
     "p4s04",
     "p4s05",
-    "p5s04"
+    "p5s01",
+    "p5s02",
+    "p5s03",
+    "p5s04",
+    "p6s01",
+    "p6s02",
+    "p6s03",
+    "p6s04",
+    "p6s05"
   ],
   "reusable_breath_source": {
     "episode": "06-rain-walk",
