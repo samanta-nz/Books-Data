@@ -6,9 +6,10 @@
   "part": 5,
   "positions": 12,
   "source_pause_seconds": 110,
-  "pcm_duration_seconds": 211.04,
-  "mp3_decoded_duration_seconds": 211.104,
-  "mp3_sha256": "29cb1707e3396b3b707218dde76a61be28027c69180fe444e98fc3b053aba458",
+  "pcm_duration_seconds": 210.24,
+  "mp3_decoded_duration_seconds": 210.288,
+  "mp3_sha256": "95b04e4f211c5593fc82dd94b50bb6b2bb664eaa29cc9d9a554744d4e1668401",
+  "user_corrected_position": "p5s11",
   "cues": [
     {
       "id": "p5s01",
@@ -112,24 +113,24 @@
     },
     {
       "id": "p5s11",
-      "text": "بدنت چه حسی داره؟ هر چی هست، درسته.",
+      "text": "بدنت چه حسی داره؟ بهش فکر کن",
       "source_text": "بدنت چه حسی داره؟ هر چی هست، درسته.",
       "start_seconds": 179.28,
-      "speech_samples": 100800,
+      "speech_samples": 81600,
       "source_pause_seconds": 10,
-      "source_max_F0": 281.91174987329424,
-      "adjusted_max_F0": 225.5293998986354
+      "source_max_F0": 310.963117301952,
+      "adjusted_max_F0": 248.77049384156163
     },
     {
       "id": "p5s12",
       "text": "همین‌جوری که هستی، خوبه.",
       "source_text": "همین‌جوری که هستی، خوبه.",
-      "start_seconds": 193.48,
+      "start_seconds": 192.68,
       "speech_samples": 61440,
       "source_pause_seconds": 15,
       "source_max_F0": 319.07373220957237,
       "adjusted_max_F0": 255.25898576765792
     }
   ],
-  "disclaimer": "Part-five-only review; full episode 06 not yet complete. Supplied reference recording not used."
+  "disclaimer": "Corrected fifth-section review; whole episode 06 not yet complete. Supplied audio reference not used."
 }
