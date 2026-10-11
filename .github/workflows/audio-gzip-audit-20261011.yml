@@ -1,0 +1,133 @@
+name: Temporary audio GZIP comparison
+on:
+  push:
+    branches:
+      - audit/audio-gzip-sample-20261011
+permissions:
+  contents: read
+jobs:
+  build-audit-artifacts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+      - name: GZIP HTML and make audio comparison samples
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import base64, gzip, json, re, shutil, subprocess
+          from pathlib import Path
+
+          src = Path("Bucket/Html-files/app/calm/journey/01-calm-forest.html")
+          out = Path("audit-output")
+          out.mkdir(parents=True, exist_ok=True)
+          raw = src.read_bytes()
+          data_uri = re.compile(rb'data:(audio/(?:mpeg|wav));base64,([A-Za-z0-9+/=\\r\\n]+)')
+          matches = list(data_uri.finditer(raw))
+          tracks = []
+          for i, m in enumerate(matches, 1):
+              mime = m.group(1).decode("ascii")
+              payload = re.sub(rb"\\s+", b"", m.group(2))
+              content = base64.b64decode(payload)
+              ext = "mp3" if mime == "audio/mpeg" else "wav"
+              name = (f"narration-{len([t for t in tracks if t['mime']=='audio/mpeg'])+1:02d}.mp3"
+                      if ext == "mp3" else "forest-ambience.wav")
+              target = out / name
+              target.write_bytes(content)
+              tracks.append({"mime": mime, "name": name, "encoded_chars": len(payload),
+                             "bytes": len(content), "path": str(target)})
+
+          mp3s = [t for t in tracks if t["mime"] == "audio/mpeg"]
+          wavs = [t for t in tracks if t["mime"] == "audio/wav"]
+          if len(mp3s) != 6 or len(wavs) != 1:
+              raise SystemExit(f"Expected six MP3 tracks and one WAV ambience, found {len(mp3s)} MP3 and {len(wavs)} WAV")
+
+          # Stable gzip header (no source timestamp or embedded filename).
+          gz_path = out / "01-calm-forest.html.gz"
+          with src.open("rb") as fi, gz_path.open("wb") as fo:
+              with gzip.GzipFile(filename="", mode="wb", compresslevel=9, fileobj=fo, mtime=0) as gz:
+                  shutil.copyfileobj(fi, gz)
+
+          # Keep the decoded originals so the user can A/B compare the transcodes.
+          narration_src = out / "sample-narration-original.mp3"
+          shutil.copyfile(mp3s[0]["path"], narration_src)
+          narration_opus = out / "sample-narration-opus-48k.ogg"
+          narration_mp3 = out / "sample-narration-mp3-48k.mp3"
+          ambience_src = Path(wavs[0]["path"])
+          ambience_opus = out / "sample-forest-ambience-opus-48k.ogg"
+          ambience_mp3 = out / "sample-forest-ambience-mp3-64k.mp3"
+
+          def run(args):
+              subprocess.run(args, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+          run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(narration_src),
+               "-vn", "-ac", "1", "-ar", "24000", "-c:a", "libopus", "-b:a", "48k",
+               "-vbr", "on", "-application", "audio", str(narration_opus)])
+          run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(narration_src),
+               "-vn", "-ac", "1", "-ar", "24000", "-c:a", "libmp3lame", "-b:a", "48k",
+               str(narration_mp3)])
+          run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(ambience_src),
+               "-vn", "-ac", "1", "-ar", "24000", "-c:a", "libopus", "-b:a", "48k",
+               "-vbr", "on", "-application", "audio", str(ambience_opus)])
+          run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(ambience_src),
+               "-vn", "-ac", "1", "-ar", "24000", "-c:a", "libmp3lame", "-b:a", "64k",
+               str(ambience_mp3)])
+
+          def probe(path):
+              p = subprocess.run(["ffprobe", "-v", "error", "-show_entries",
+                                  "stream=codec_name,sample_rate,channels,bit_rate,bits_per_sample:format=duration,size,bit_rate",
+                                  "-of", "json", str(path)], check=True, capture_output=True, text=True)
+              return json.loads(p.stdout)
+
+          files = [src, gz_path, narration_src, narration_opus, narration_mp3,
+                   ambience_src, ambience_opus, ambience_mp3]
+          for t in tracks:
+              t["size_mib"] = round(t["bytes"] / 1048576, 3)
+          report = {
+              "source": str(src),
+              "html_original_bytes": len(raw),
+              "html_original_mib": round(len(raw) / 1048576, 3),
+              "html_gzip9_bytes": gz_path.stat().st_size,
+              "html_gzip9_mib": round(gz_path.stat().st_size / 1048576, 3),
+              "html_gzip_savings_percent": round((1 - gz_path.stat().st_size / len(raw)) * 100, 2),
+              "audio_tracks": tracks,
+              "samples": {p.name: {"bytes": p.stat().st_size,
+                                   "mib": round(p.stat().st_size / 1048576, 3),
+                                   "probe": probe(p)}
+                          for p in [narration_src, narration_opus, narration_mp3,
+                                    ambience_src, ambience_opus, ambience_mp3]}
+          }
+          (out / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+          lines = [
+              "01-calm-forest.html — measured GZIP/audio comparison",
+              f"Original HTML: {len(raw):,} bytes ({len(raw)/1048576:.3f} MiB)",
+              f"GZIP level 9: {gz_path.stat().st_size:,} bytes ({gz_path.stat().st_size/1048576:.3f} MiB)",
+              f"GZIP saving: {(1-gz_path.stat().st_size/len(raw))*100:.2f}%",
+              "",
+              "Embedded audio streams:",
+          ]
+          for t in tracks:
+              lines.append(f"  {t['name']}: {t['bytes']:,} bytes ({t['size_mib']:.3f} MiB), MIME={t['mime']}, Base64 chars={t['encoded_chars']:,}")
+          lines += ["", "A/B sample files (size and probe details are in report.json):"]
+          for p in [narration_src, narration_opus, narration_mp3, ambience_src, ambience_opus, ambience_mp3]:
+              lines.append(f"  {p.name}: {p.stat().st_size:,} bytes ({p.stat().st_size/1048576:.3f} MiB)")
+          lines += ["", "Notes:",
+                    "- The GZIP file is the untouched original HTML compressed at level 9.",
+                    "- Audio samples are transcoded tests, not claims of perceptual equivalence; listen to the original and converted samples side by side.",
+                    "- Re-encoding an already-lossy MP3 is generationally lossy, even when a lower bitrate reduces file size.",
+                    "- To serve the .gz directly, the host must set Content-Encoding: gzip; otherwise the app must decompress it before loading as HTML."]
+          (out / "report.txt").write_text("\\n".join(lines) + "\\n", encoding="utf-8")
+          print((out / "report.txt").read_text(encoding="utf-8"))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: calm-forest-gzip-audio-comparison
+          path: audit-output/
+          if-no-files-found: error
+          retention-days: 7
