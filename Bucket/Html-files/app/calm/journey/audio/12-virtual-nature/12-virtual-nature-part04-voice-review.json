@@ -1,0 +1,82 @@
+{
+  "episode": "12-virtual-nature",
+  "part": 4,
+  "status": "VOICE-ONLY PREVIEW; no ambience; do not embed in HTML yet",
+  "source_git_blob": "83b56e12af0ad3d17dec6e415066f8a9e675e1d3",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "max_voiced_F0_ratio": 0.8,
+  "positions": 6,
+  "exact_explicit_source_pause_seconds": 33,
+  "pcm_duration_seconds": 62.68,
+  "mp3_decoded_duration_seconds": 62.736,
+  "mp3_sha256": "be70105f50dda80bacb613cf36db64576ab3b7a1ae7e243efd83f1b464b7c28b",
+  "cues": [
+    {
+      "id": "p4s01",
+      "text": "چشم‌هات رو ببند و بذار نفست با پهنای آسمون همراه بشه.",
+      "source_pause_seconds": 3,
+      "start_seconds": 0.0,
+      "speech_samples": 155520,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 177.7123325564161,
+      "adjusted_max_F0": 142.1698660451329,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s02",
+      "text": "یه دم آروم بگیر.",
+      "source_pause_seconds": 4,
+      "start_seconds": 9.48,
+      "speech_samples": 53760,
+      "source_archive": "source-clips-batch01-reused-short.zip",
+      "source_max_F0": 193.33677614851842,
+      "adjusted_max_F0": 154.66942091881475,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s03",
+      "text": "بعد تصور کن با بازدمت، مثل یه ابر آروم حرکت می‌کنی.",
+      "source_pause_seconds": 8,
+      "start_seconds": 15.72,
+      "speech_samples": 149760,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 287.68757808389574,
+      "adjusted_max_F0": 230.15006246711664,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s04",
+      "text": "حالا باهم، دم",
+      "source_pause_seconds": 5,
+      "start_seconds": 29.96,
+      "speech_samples": 57600,
+      "source_archive": "source-clips-batch01-reused-short.zip",
+      "source_max_F0": 238.8499931034542,
+      "adjusted_max_F0": 191.07999448276337,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s05",
+      "text": "و بازدم.",
+      "source_pause_seconds": 9,
+      "start_seconds": 37.36,
+      "speech_samples": 48960,
+      "source_archive": "source-clips-batch01-reused-short.zip",
+      "source_max_F0": 112.1373453941882,
+      "adjusted_max_F0": 89.70987631535057,
+      "gain": 1.0
+    },
+    {
+      "id": "p4s06",
+      "text": "بدنت ممکنه سبک‌تر به نظر برسه؛ هم‌زمان وزنش رو روی صندلی یا تخت و حرکت نفست رو حس کن.",
+      "source_pause_seconds": 4,
+      "start_seconds": 48.4,
+      "speech_samples": 246720,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 236.09311087673365,
+      "adjusted_max_F0": 188.8744887013869,
+      "gain": 1.0
+    }
+  ]
+}
