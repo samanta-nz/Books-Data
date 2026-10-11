@@ -1,0 +1,38 @@
+name: Compare beach-waves audio encodings
+
+on:
+  push:
+    branches:
+      - "experiment/audio-encoding-comparison-20261011"
+    paths:
+      - "tools/audio_compare.py"
+      - ".github/workflows/audio-encoding-comparison.yml"
+      - "Bucket/Html-files/app/calm/journey/02-beach-waves.html"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-comparison:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out experiment branch
+        uses: actions/checkout@v4
+
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes ffmpeg
+
+      - name: Generate gzip and embedded audio samples
+        run: python3 tools/audio_compare.py
+
+      - name: Upload all generated samples and size reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: beach-waves-audio-comparison
+          path: output/**
+          if-no-files-found: error
+          retention-days: 14
