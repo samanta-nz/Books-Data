@@ -1,0 +1,104 @@
+{
+  "episode": "08-safe-mental-refuge",
+  "part": 2,
+  "status": "VOICE-ONLY PREVIEW; no ambience; do not embed in HTML yet",
+  "source_git_blob": "e97fbe19aea76c41300be99f72ad9a4b4c16d780",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "max_voiced_F0_ratio": 0.8,
+  "positions": 8,
+  "exact_explicit_source_pause_seconds": 49,
+  "pcm_duration_seconds": 130.8,
+  "mp3_decoded_duration_seconds": 130.848,
+  "mp3_sha256": "b3e86d6edb854dee0c95bd0205fa826e82bb51d4c62f86f46d2145e860832790",
+  "cues": [
+    {
+      "id": "p2s01",
+      "text": "تصور کن توی یه جنگل آروم، یه فضای باز کوچیک هست؛ نه خیلی بزرگ و نه ترسناک، فقط به اندازه‌ای که بتونی دست‌هات رو باز کنی.",
+      "source_pause_seconds": 5,
+      "start_seconds": 0.0,
+      "speech_samples": 282240,
+      "source_archive": "source-clips-batch02.zip",
+      "source_max_F0": 312.57343473096853,
+      "adjusted_max_F0": 250.05874778477482,
+      "gain": 1.0
+    },
+    {
+      "id": "p2s02",
+      "text": "زمین نرمه و علف‌های سبز کوتاهی اطراف پاهات رو گرفتن. وسط این فضای باز یه سنگ صاف و خنک هست؛ می‌تونی بهش تکیه بدی و چند لحظه استراحت کنی.",
+      "source_pause_seconds": 6,
+      "start_seconds": 16.76,
+      "speech_samples": 345600,
+      "source_archive": "source-clips-batch02.zip",
+      "source_max_F0": 274.2800930263419,
+      "adjusted_max_F0": 219.42407442107356,
+      "gain": 1.0
+    },
+    {
+      "id": "p2s03",
+      "text": "از لابه‌لای شاخه‌ها یه تکه از آسمون دیده می‌شه. درخت‌ها اطراف فضا رو گرفتن و نور ملایمی روی برگ‌ها و صورتت می‌افته.",
+      "source_pause_seconds": 8,
+      "start_seconds": 37.16,
+      "speech_samples": 268800,
+      "source_archive": "source-clips-batch02.zip",
+      "source_max_F0": 281.6454088784279,
+      "adjusted_max_F0": 225.31632710274232,
+      "gain": 1.0
+    },
+    {
+      "id": "p2s04",
+      "text": "حالا چند تا چیز رو انتخاب کن. نه همه‌ی چیزها رو، فقط چیزهایی که امنیت و آرامش می‌دن. مثلاً یه سقف سبز، یه چشمه، یه نوری که ملایمه.",
+      "source_pause_seconds": 4,
+      "start_seconds": 56.36,
+      "speech_samples": 308160,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 316.720037592216,
+      "adjusted_max_F0": 253.3760300737728,
+      "gain": 1.0
+    },
+    {
+      "id": "p2s05",
+      "text": "اگه تصویر یا صدای ناخوشایندی وارد این فضا شد، می‌تونی ازش بخوای بیرون بره یا تصور کنی پشت یه دیوار شیشه‌ای قرارش می‌دی. هر وقت خواستی، می‌تونی دیوار رو باز کنی.",
+      "source_pause_seconds": 6,
+      "start_seconds": 73.2,
+      "speech_samples": 350400,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 289.7364067605776,
+      "adjusted_max_F0": 231.7891254084621,
+      "gain": 1.0
+    },
+    {
+      "id": "p2s06",
+      "text": "حالا یه جای مخصوص خودت داری؛ جایی که ازت نمی‌خواد بهتر یا متفاوت باشی. می‌تونی هر وقت خواستی همین‌جا بمونی.",
+      "source_pause_seconds": 8,
+      "start_seconds": 93.8,
+      "speech_samples": 249600,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 241.91952936129164,
+      "adjusted_max_F0": 193.53562348903333,
+      "gain": 1.0
+    },
+    {
+      "id": "p2s07",
+      "text": "یه نفس عمیق. حالا باهم، دم",
+      "source_pause_seconds": 4,
+      "start_seconds": 112.2,
+      "speech_samples": 109440,
+      "source_archive": "source-clips-batch03-reused-breath.zip",
+      "source_max_F0": 249.57087614317655,
+      "adjusted_max_F0": 199.65670091454126,
+      "gain": 1.0
+    },
+    {
+      "id": "p2s08",
+      "text": "و بازدم.",
+      "source_pause_seconds": 8,
+      "start_seconds": 120.76,
+      "speech_samples": 48960,
+      "source_archive": "source-clips-batch05-reused-exhale.zip",
+      "source_max_F0": 112.1373453941882,
+      "adjusted_max_F0": 89.70987631535057,
+      "gain": 1.0
+    }
+  ]
+}

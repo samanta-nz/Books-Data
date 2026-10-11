@@ -283,9 +283,19 @@
     "p2s01",
     "p2s02",
     "p2s03",
+    "p2s04",
+    "p2s05",
+    "p2s06",
     "p2s07",
+    "p2s08",
+    "p3s01",
+    "p3s02",
     "p3s07",
-    "p4s09"
+    "p3s08",
+    "p4s05",
+    "p4s09",
+    "p4s10",
+    "p5s05"
   ],
   "reusable_breath_source": {
     "episode": "06-rain-walk",
@@ -297,5 +307,18 @@
       "p3s07": "p2s10",
       "p4s09": "p4s16"
     }
+  },
+  "reusable_exhale_source": {
+    "episode": "06-rain-walk",
+    "archive": "source-clips-part02-03-and-part04-reusable-breath.zip",
+    "take_id": "p2s11",
+    "sha256": "243c6f463733c248a258c1bcf93acd724435d8b8af253eed0cb3fa128ae6a6cc",
+    "applied_to": [
+      "p2s08",
+      "p3s08",
+      "p4s05",
+      "p4s10",
+      "p5s05"
+    ]
   }
 }

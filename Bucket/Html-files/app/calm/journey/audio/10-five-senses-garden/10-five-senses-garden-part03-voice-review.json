@@ -1,0 +1,82 @@
+{
+  "episode": "10-five-senses-garden",
+  "part": 3,
+  "status": "VOICE-ONLY PREVIEW; no ambience; do not embed in HTML yet",
+  "source_git_blob": "913505a9193b3c2123f2b98ac2b0e61628323649",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "max_voiced_F0_ratio": 0.8,
+  "positions": 6,
+  "exact_explicit_source_pause_seconds": 33,
+  "pcm_duration_seconds": 66.96,
+  "mp3_decoded_duration_seconds": 67.008,
+  "mp3_sha256": "e80b8ffd6f0b1188b2127810e194c3109bfbc80192de789021281d393ddaf1ac",
+  "cues": [
+    {
+      "id": "p3s01",
+      "text": "حالا یه بوی دیگه رو انتخاب کن؛ مثلاً نعناع تازه یا اسطوخودوسی که با لمس برگ‌هاش عطرش بیشتر می‌شه.",
+      "source_pause_seconds": 4,
+      "start_seconds": 0.0,
+      "speech_samples": 250560,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 306.36511656346084,
+      "adjusted_max_F0": 245.0920932507687,
+      "gain": 1.0
+    },
+    {
+      "id": "p3s02",
+      "text": "حالا باهم، دم",
+      "source_pause_seconds": 4,
+      "start_seconds": 14.44,
+      "speech_samples": 57600,
+      "source_archive": "source-clips-batch03-reused-breath.zip",
+      "source_max_F0": 238.8499931034542,
+      "adjusted_max_F0": 191.07999448276337,
+      "gain": 1.0
+    },
+    {
+      "id": "p3s03",
+      "text": "و بازدم.",
+      "source_pause_seconds": 6,
+      "start_seconds": 20.84,
+      "speech_samples": 48960,
+      "source_archive": "source-clips-batch05-reused-exhale.zip",
+      "source_max_F0": 112.1373453941882,
+      "adjusted_max_F0": 89.70987631535057,
+      "gain": 1.0
+    },
+    {
+      "id": "p3s04",
+      "text": "حالا آروم دستت رو روی یه برگ بکش. سطحش نرمه و کمی خنکه.",
+      "source_pause_seconds": 5,
+      "start_seconds": 28.88,
+      "speech_samples": 188160,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 199.40691846068162,
+      "adjusted_max_F0": 159.5255347685453,
+      "gain": 1.0
+    },
+    {
+      "id": "p3s05",
+      "text": "یه تکه‌ی کوچیک از گوجه‌فرنگی رو بچش و به طعم و آبدار بودنش توجه کن.",
+      "source_pause_seconds": 8,
+      "start_seconds": 41.72,
+      "speech_samples": 155520,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 271.0179242279035,
+      "adjusted_max_F0": 216.81433938232283,
+      "gain": 1.0
+    },
+    {
+      "id": "p3s06",
+      "text": "یه بار دیگه بو بکش؛ این بار عطر نعناع رو.",
+      "source_pause_seconds": 6,
+      "start_seconds": 56.2,
+      "speech_samples": 114240,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 305.4446290122578,
+      "adjusted_max_F0": 244.35570320980625,
+      "gain": 1.0
+    }
+  ]
+}
