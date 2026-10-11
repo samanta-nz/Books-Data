@@ -6,8 +6,8 @@
   "source_explicit_pause_seconds": 556,
   "segment_count": 82,
   "pcm_duration_seconds": 1149.6,
-  "mp3_decoded_duration_seconds": 1149.648,
-  "mp3_sha256": "efd84d554416346b49255a3d27d9143dfd6e316ad5e79b39c9671ad48302443e",
+  "mp3_decoded_duration_seconds": 1149.696,
+  "mp3_sha256": "b090b334e54a8299497e761b3f90d820d77d4595d02bdc2f08132cd50bc1ab98",
   "cues": [
     {
       "id": "p1s01",
@@ -1077,5 +1077,42 @@
     }
   ],
   "user_corrected_line": "بدنت چه حسی داره؟ توجه کن و عمیق‌تر احساسش کن.",
-  "reference_audio_used": false
+  "reference_audio_used": false,
+  "ambience": {
+    "episode": "06-rain-walk",
+    "kind": "soft_rain",
+    "seed": 6606,
+    "fade_in_start_seconds": 146.64,
+    "fade_in_end_seconds": 386.64,
+    "fade_out_start_seconds": 942.12,
+    "fade_out_end_seconds": 1122.12,
+    "fade_policy": "README soundscape: 4-minute arrival, gentle breathing modulation in the middle, 3-minute departure",
+    "ambient_rms": 0.005907672918525177,
+    "ambient_dbfs": -44.57167115282093,
+    "ambient_mid_rms": 0.007504082327630104,
+    "ambient_mid_dbfs": -42.49404819876499,
+    "dry_voice_rms": 0.06049212406411283,
+    "voice_to_ambient_db": 20.205647836562882,
+    "full_dry_sha256": "efd84d554416346b49255a3d27d9143dfd6e316ad5e79b39c9671ad48302443e",
+    "full_wet_sha256": "b090b334e54a8299497e761b3f90d820d77d4595d02bdc2f08132cd50bc1ab98",
+    "part_dry_sha256": [
+      "a231a48d25992ac1318d6af676b499bf520333cbafcab30d7468d8494e74ab61",
+      "3253246edfdd5db29ec80cffe43acf16e6dd43210c387ad6b02549cd82e35db0",
+      "0a03f8c3713630f2adbbd6d31cd75690f45f701b5b055dc82632d5531c637453",
+      "ea52403a793631dd0b04d8f8c18121531ddb73eaf054beaaad00b73e9292d611",
+      "b9b99d9b919f3c2904481ab42b993ce9d83aede6343d5aa6ff9f5e52cd3cdb4f",
+      "99d560c037de6726b4030d79347d3f259b0e453afb67e5a6c6548add9866fc74"
+    ],
+    "part_wet_sha256": [
+      "b4da11624eb644a970901269ae14a9549882784f65dd5f706bffbf1dd6e44542",
+      "8c829b9e2b062f599296921938d3c8e51a529a021d5a6e859284ae4c1b00bef2",
+      "0a4d6c24aaa073e4ca0afe7904c581a947d940baff3ad0ac8282986d75b007c7",
+      "34dc36a2718ed1f9145ea48f618cd0290ab07940e98223050b9992f73daac951",
+      "7acba6d49eeb8a1b109ef70175dcf0b8bcece93a8201862f2190bd0c12e94c33",
+      "521154b2c700bf7a1f48ff4eb694efdb893eda86ef514398d514883876231b83"
+    ],
+    "narration_pause_seconds": 556,
+    "sample_rate": 24000
+  },
+  "source_narration_pause_seconds_unchanged": 556
 }

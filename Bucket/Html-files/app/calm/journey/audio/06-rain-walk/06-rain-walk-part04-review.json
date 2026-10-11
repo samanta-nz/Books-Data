@@ -7,8 +7,8 @@
   "positions": 17,
   "source_pause_seconds": 125,
   "pcm_duration_seconds": 214.72,
-  "mp3_decoded_duration_seconds": 214.776,
-  "mp3_sha256": "ea52403a793631dd0b04d8f8c18121531ddb73eaf054beaaad00b73e9292d611",
+  "mp3_decoded_duration_seconds": 214.824,
+  "mp3_sha256": "34dc36a2718ed1f9145ea48f618cd0290ab07940e98223050b9992f73daac951",
   "cues": [
     {
       "id": "p4s01",
@@ -231,5 +231,14 @@
       "source_max_F0": 112.1373453941882,
       "adjusted_max_F0": 89.70987631535057
     }
-  ]
+  ],
+  "ambience": {
+    "kind": "soft_rain",
+    "fade_in_start_seconds": 146.64,
+    "fade_in_end_seconds": 386.64,
+    "fade_out_start_seconds": 942.12,
+    "fade_out_end_seconds": 1122.12,
+    "ambient_mid_dbfs": -42.49404819876499
+  },
+  "source_narration_pause_seconds_unchanged": 125
 }
