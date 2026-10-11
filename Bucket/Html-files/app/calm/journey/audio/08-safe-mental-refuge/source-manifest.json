@@ -1,0 +1,281 @@
+{
+  "source_url": "https://github.com/samanta-nz/Read-Only-Books-Data/blob/main/Bucket/Html-files/app/calm/journey/08-safe-mental-refuge.md",
+  "source_git_blob": "e97fbe19aea76c41300be99f72ad9a4b4c16d780",
+  "source_sha256": "134dada5d57d8e0158408dfd21b52a6c2040de04eb6704b46b03677ce9f4c658",
+  "source_title": "جای امن ذهنی — راهنمای تولید صوت",
+  "source_guide_speed": 1.3,
+  "planned_speed": 1.0,
+  "voice_selection": "voice-08 (male), selected by user for this episode",
+  "readiness": "PARTIAL raw recordings only. No final audio, soundscape or HTML has been approved or built.",
+  "source_position_count": 45,
+  "source_pause_seconds": 250,
+  "sections": [
+    {
+      "section": 1,
+      "source_title": "پیش از شروع، امنیت اول",
+      "positions": 8,
+      "source_pause_seconds": 37
+    },
+    {
+      "section": 2,
+      "source_title": "ساختن یه جای امن",
+      "positions": 8,
+      "source_pause_seconds": 49
+    },
+    {
+      "section": 3,
+      "source_title": "صداهای امن",
+      "positions": 8,
+      "source_pause_seconds": 51
+    },
+    {
+      "section": 4,
+      "source_title": "بو و مسیر بدن",
+      "positions": 10,
+      "source_pause_seconds": 60
+    },
+    {
+      "section": 5,
+      "source_title": "بازگشت و بستن نرم",
+      "positions": 11,
+      "source_pause_seconds": 53
+    }
+  ],
+  "positions": [
+    {
+      "id": "p1s01",
+      "source_text": "سلام. قبل از شروع، فقط این رو بدون: این تمرین برای ساختن یه جای امن در ذهنته. لازم نیست چیزی رو به یادت بیاری یا به چیزی فکر کنی که ناراحتت می‌کنه.",
+      "source_pause_after_seconds": 3
+    },
+    {
+      "id": "p1s02",
+      "source_text": "اگه به خاطر تجربه‌های گذشته ادامه‌ی تمرین برات سخت شد، می‌تونی همین‌جا مکث کنی و به چیزهای واقعی اطرافت برگردی. هیچ عجله‌ای نیست.",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p1s03",
+      "source_text": "بیا چند لحظه با هم روی امنیت تمرکز کنیم. اگه نشستی، تکیه بده و پاهات رو روی زمین بذار.",
+      "source_pause_after_seconds": 3
+    },
+    {
+      "id": "p1s04",
+      "source_text": "اگه راحتی، چشم‌هات رو ببند. اگه ترجیح می‌دی باز بمونن، نگاهت رو روی یه نقطه‌ی ساده از زمین یا میز نگه دار.",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p1s05",
+      "source_text": "شونه‌هات رو یه بار بالا ببر و با بازدم رها کن.",
+      "source_pause_after_seconds": 5
+    },
+    {
+      "id": "p1s06",
+      "source_text": "یه بار دیگه. دم،",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p1s07",
+      "source_text": "و بازدم آروم.",
+      "source_pause_after_seconds": 8
+    },
+    {
+      "id": "p1s08",
+      "source_text": "خوبه. بیا بریم سراغ یه جای امن.",
+      "source_pause_after_seconds": 6
+    },
+    {
+      "id": "p2s01",
+      "source_text": "تصور کن توی یه جنگل آروم، یه فضای باز کوچیک هست؛ نه خیلی بزرگ و نه ترسناک، فقط به اندازه‌ای که بتونی دست‌هات رو باز کنی.",
+      "source_pause_after_seconds": 5
+    },
+    {
+      "id": "p2s02",
+      "source_text": "زمین نرمه و علف‌های سبز کوتاهی اطراف پاهات رو گرفتن. وسط این فضای باز یه سنگ صاف و خنک هست؛ می‌تونی بهش تکیه بدی و چند لحظه استراحت کنی.",
+      "source_pause_after_seconds": 6
+    },
+    {
+      "id": "p2s03",
+      "source_text": "از لابه‌لای شاخه‌ها یه تکه از آسمون دیده می‌شه. درخت‌ها اطراف فضا رو گرفتن و نور ملایمی روی برگ‌ها و صورتت می‌افته.",
+      "source_pause_after_seconds": 8
+    },
+    {
+      "id": "p2s04",
+      "source_text": "حالا چند تا چیز رو انتخاب کن. نه همه‌ی چیزها رو، فقط چیزهایی که امنیت و آرامش می‌دن. مثلاً یه سقف سبز، یه چشمه، یه نوری که ملایمه.",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p2s05",
+      "source_text": "اگه تصویر یا صدای ناخوشایندی وارد این فضا شد، می‌تونی ازش بخوای بیرون بره یا تصور کنی پشت یه دیوار شیشه‌ای قرارش می‌دی. هر وقت خواستی، می‌تونی دیوار رو باز کنی.",
+      "source_pause_after_seconds": 6
+    },
+    {
+      "id": "p2s06",
+      "source_text": "حالا یه جای مخصوص خودت داری؛ جایی که ازت نمی‌خواد بهتر یا متفاوت باشی. می‌تونی هر وقت خواستی همین‌جا بمونی.",
+      "source_pause_after_seconds": 8
+    },
+    {
+      "id": "p2s07",
+      "source_text": "یه نفس عمیق. دم،",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p2s08",
+      "source_text": "و بازدم.",
+      "source_pause_after_seconds": 8
+    },
+    {
+      "id": "p3s01",
+      "source_text": "حالا فقط گوش بده. باد ملایمی از لابه‌لای برگ‌ها می‌آیه و دور می‌شه.",
+      "source_pause_after_seconds": 5
+    },
+    {
+      "id": "p3s02",
+      "source_text": "یه پرنده از دور آروم آواز می‌خونه؛ صدایش مثل یه نجواست و بعد دوباره سکوت می‌شه.",
+      "source_pause_after_seconds": 6
+    },
+    {
+      "id": "p3s03",
+      "source_text": "برگ‌ها وقتی باد می‌وزه، صدای نرمی دارن. این صدا شبیه نفس بیرون دادن از شاخه‌هاست.",
+      "source_pause_after_seconds": 8
+    },
+    {
+      "id": "p3s04",
+      "source_text": "اگه صدایی از اتاق به گوشت رسید، مجبور نیستی نادیده‌اش بگیری؛ بذار در پس‌زمینه باشه و به تمرین ادامه بده.",
+      "source_pause_after_seconds": 10
+    },
+    {
+      "id": "p3s05",
+      "source_text": "اگه دوست داری، یه لحظه چشم‌هات رو باز کن و به اتاق نگاه کن. اگه ترجیح می‌دی بسته بمونن، اشکالی نداره.",
+      "source_pause_after_seconds": 5
+    },
+    {
+      "id": "p3s06",
+      "source_text": "می‌تونی آروم به خودت بگی: «اینجا امنه.» اگه راحتی، این جمله رو با صدای خیلی آهسته بگو و به صدای خودت گوش بده.",
+      "source_pause_after_seconds": 5
+    },
+    {
+      "id": "p3s07",
+      "source_text": "یه نفس عمیق. دم،",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p3s08",
+      "source_text": "و بازدم.",
+      "source_pause_after_seconds": 8
+    },
+    {
+      "id": "p4s01",
+      "source_text": "حالا یه نفس بکش و بوی برگ‌های خیس رو حس کن؛ شاید یه بوی ملایم و کمی شیرین هم از خاک و سنگ بلند شده باشه.",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p4s02",
+      "source_text": "دم می‌گیری،",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p4s03",
+      "source_text": "و بازدم کمی طولانی‌تر.",
+      "source_pause_after_seconds": 6
+    },
+    {
+      "id": "p4s04",
+      "source_text": "باز هم. دم،",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p4s05",
+      "source_text": "و بازدم.",
+      "source_pause_after_seconds": 6
+    },
+    {
+      "id": "p4s06",
+      "source_text": "حالا وزن بدنت رو حس کن؛ ببین صندلی یا سطح زیرت چطور وزنت رو نگه داشته. زمین هم می‌تونه تکیه‌گاهت باشه.",
+      "source_pause_after_seconds": 8
+    },
+    {
+      "id": "p4s07",
+      "source_text": "شانه‌هات رو یه کم شل کن. فک رو شل کن. لازم نیست چیزی رو حل کنی.",
+      "source_pause_after_seconds": 8
+    },
+    {
+      "id": "p4s08",
+      "source_text": "یه نفس دیگه.",
+      "source_pause_after_seconds": 3
+    },
+    {
+      "id": "p4s09",
+      "source_text": "دم،",
+      "source_pause_after_seconds": 5
+    },
+    {
+      "id": "p4s10",
+      "source_text": "و بازدم.",
+      "source_pause_after_seconds": 12
+    },
+    {
+      "id": "p5s01",
+      "source_text": "کم‌کم وقتشه برگردیم. اما این جای امن همیشه هست. هر وقت خواستی می‌تونی برگردی.",
+      "source_pause_after_seconds": 5
+    },
+    {
+      "id": "p5s02",
+      "source_text": "یه نگاه آخر به اطراف بنداز؛ به درخت‌ها، به نور و به سنگی که همون‌جا آروم قرار گرفته.",
+      "source_pause_after_seconds": 6
+    },
+    {
+      "id": "p5s03",
+      "source_text": "حالا دوباره به اتاق و سطحی که زیرت رو نگه داشته توجه کن. دست‌هات و پاهات رو حس کن و یه نفس آروم بکش.",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p5s04",
+      "source_text": "نفس بعدی رو کمی عمیق‌تر بکش.",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p5s05",
+      "source_text": "و بازدم.",
+      "source_pause_after_seconds": 5
+    },
+    {
+      "id": "p5s06",
+      "source_text": "به صداهای واقعی اتاق گوش بده.",
+      "source_pause_after_seconds": 4
+    },
+    {
+      "id": "p5s07",
+      "source_text": "هر وقت آماده بودی، چشم‌هات رو باز کن.",
+      "source_pause_after_seconds": 6
+    },
+    {
+      "id": "p5s08",
+      "source_text": "اگه خواستی دوباره به این جای امن سر بزنی، چند نفس طبیعی بکش و یکی از جزئیات آشنای این فضا رو به یاد بیار.",
+      "source_pause_after_seconds": 5
+    },
+    {
+      "id": "p5s09",
+      "source_text": "اگه بعد از تمرین ناراحت یا بی‌قرار شدی، تمرین رو متوقف کن و به چیزهای واقعی اطرافت توجه کن؛ می‌تونی یه لیوان آب بخوری، چند نفس طبیعی بکشی یا چند ثانیه توی اتاق راه بری.",
+      "source_pause_after_seconds": 8
+    },
+    {
+      "id": "p5s10",
+      "source_text": "ممنون که یه فرصت کوتاه به خودت دادی.",
+      "source_pause_after_seconds": 3
+    },
+    {
+      "id": "p5s11",
+      "source_text": "امیدوارم هر وقت خواستی، بتونی این جای امن رو دوباره توی ذهنت پیدا کنی.",
+      "source_pause_after_seconds": 3
+    }
+  ],
+  "approved_speaking_speed": 1.0,
+  "voiced_F0_target": "At rendering, reduce the voiced F0 maximum by 20% without time stretching; keep 1.0x.",
+  "reuse_policy": "For standalone دم in later cues, reuse the single voice-08 حالا باهم، دم take from episode 06; never re-record it.",
+  "recorded_positions": [
+    "p1s01",
+    "p1s02",
+    "p1s03",
+    "p1s04",
+    "p1s05"
+  ]
+}
