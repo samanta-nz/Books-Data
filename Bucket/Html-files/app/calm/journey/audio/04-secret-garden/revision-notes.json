@@ -1,0 +1,38 @@
+{
+  "episode": "04-secret-garden",
+  "read_only_source_git_sha": "880c1059ebfc9cdd162fc303698db72963b45d94",
+  "discarded_takes": {
+    "p3s08": {
+      "archive": "source-clips-part02-05-and-part03-01-09.zip",
+      "reason": "User explicitly requested regeneration of the fountain sentence ('ریجنریت'). Do not use this archived take in final compilation.",
+      "replacement_status": "recorded",
+      "source_text": "به صدای فواره گوش کن. یکنواخته و همین یکنواختی آرامش‌بخشه.",
+      "source_pause_after_seconds": 10,
+      "replacement_archive": "source-clips-part03-fountain-redo-and-garden-parts04-06.zip",
+      "replacement_raw_sha256": "fbef4f6edc7b2a17eef3e1d4d4797cf567d0f6d3a5abe7b3e5dea2620c9dd71b",
+      "replacement_source_pause_after_seconds": 10,
+      "review_mp3": "04-secret-garden-p3s08-regenerated-review.mp3",
+      "review_mp3_sha256": "c45fb4556d52c72656f54a29260343ab5b20d4a84e938de8adf30a915370a86a",
+      "preview_duration_seconds": 18.168
+    }
+  },
+  "instruction": "Use the p3s08 take from replacement_archive only; discard the older take. Keep source wording and 10-second pause; apply the episode-04 maximum voiced F0 -20% rule during compilation.",
+  "approved_remaining_wording": {
+    "p1s10": {
+      "source": "و ول کن.",
+      "record": "و خیلی آروم رها کن",
+      "source_pause_after_seconds": 5
+    },
+    "p4s04": {
+      "source": "یه بار دیگه. دم،",
+      "record": "یه بار دیگه. حالا باهم، دم",
+      "source_pause_after_seconds": 5
+    },
+    "p6s20": {
+      "source": "و اگه لازم داشتی، چند ثانیه‌ی دیگه همین‌جا بمون و بعد بلند شو.",
+      "record": "و اگه دوست داشتی، چند ثانیه‌ی دیگه همین‌جا بمون و بعد بلند شو.",
+      "source_pause_after_seconds": 5
+    }
+  },
+  "reference_policy_episode_04": "User explicitly chose to record the remaining episode-04 cues fresh with male voice-08 rather than wait for the inaccessible reference audio. Do not claim to have used the reference; this approval is for episode 04 only."
+}

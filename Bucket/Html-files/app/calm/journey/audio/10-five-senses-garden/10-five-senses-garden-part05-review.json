@@ -1,0 +1,69 @@
+{
+  "episode": "10-five-senses-garden",
+  "part": 5,
+  "status": "FINAL MIX WITH GARDEN AMBIENCE",
+  "source_git_blob": "913505a9193b3c2123f2b98ac2b0e61628323649",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "max_voiced_F0_ratio": 0.8,
+  "positions": 4,
+  "exact_explicit_source_pause_seconds": 21,
+  "pcm_duration_seconds": 48.44,
+  "mp3_decoded_duration_seconds": 48.552,
+  "mp3_sha256": "9d41e724731327988368eb6591a20095ddbab8e2a592d84dd4edf2a7dbb5541f",
+  "cues": [
+    {
+      "id": "p5s01",
+      "text": "حالا بذار همه‌ی حس‌ها کنار هم قرار بگیرن: نور و رنگی که می‌بینی، صدایی که می‌شنوی، عطر گیاه‌ها و نرمی برگ زیر انگشت‌هات.",
+      "source_pause_seconds": 5,
+      "start_seconds": 0.0,
+      "speech_samples": 296640,
+      "source_archive": "source-clips-batch07.zip",
+      "source_max_F0": 267.97941112524376,
+      "adjusted_max_F0": 214.38352890019502,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s02",
+      "text": "می‌تونی هر بار روی یکی از این حس‌ها تمرکز کنی و بعد، هر وقت خواستی، به بقیه برگردی.",
+      "source_pause_seconds": 4,
+      "start_seconds": 17.36,
+      "speech_samples": 181440,
+      "source_archive": "source-clips-batch07.zip",
+      "source_max_F0": 286.47713930534644,
+      "adjusted_max_F0": 229.18171144427714,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s03",
+      "text": "یه نفس عمیق بکش. حالا باهم، دم",
+      "source_pause_seconds": 4,
+      "start_seconds": 28.92,
+      "speech_samples": 131520,
+      "source_archive": "source-clips-batch07.zip",
+      "source_max_F0": 303.34940887618893,
+      "adjusted_max_F0": 242.6795271009512,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s04",
+      "text": "و بازدم.",
+      "source_pause_seconds": 8,
+      "start_seconds": 38.4,
+      "speech_samples": 48960,
+      "source_archive": "source-clips-batch05-reused-exhale.zip",
+      "source_max_F0": 112.1373453941882,
+      "adjusted_max_F0": 89.70987631535057,
+      "gain": 1.0
+    }
+  ],
+  "ambience": {
+    "fade_in_start_seconds": 74.6,
+    "fade_in_end_seconds": 127.87999999999997,
+    "fade_out_start_seconds": 314.6,
+    "fade_out_end_seconds": 367.88,
+    "fade_duration_seconds": 53.27999999999997,
+    "ambient_mid_rms": 0.005784803141146773,
+    "ambient_mid_dbfs": -44.75422831304623
+  }
+}

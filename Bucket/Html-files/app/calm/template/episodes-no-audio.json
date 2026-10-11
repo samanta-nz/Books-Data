@@ -1,0 +1,314 @@
+[
+  {
+    "name": "02-beach-waves",
+    "source": "02-beach-waves.md",
+    "title": "ساحل و موج",
+    "eyebrow": "سفر صوتی آرامش / ۲",
+    "english": "Beach Waves Journey",
+    "desc": "مراقبه‌ی ساحل و موج · ۶ بخش پیوسته",
+    "disc_label": "آرامش در ساحل",
+    "enso_label": "حلقه ذن آرامش",
+    "app_id": "cj-02",
+    "parts": [
+      "بخش ۱: پیش از شروع، جا گرفتن",
+      "بخش ۲: رسیدن به ساحل",
+      "بخش ۳: صدای موج",
+      "بخش ۴: نفس با موج",
+      "بخش ۵: سپردن به موج",
+      "بخش ۶: برگشت و فرود"
+    ],
+    "theme": "light",
+    "scene": "waves+mist",
+    "palette": {
+      "bg1": "#F8F1ED",
+      "bg2": "#CAE3EC",
+      "accent": "#239CC7",
+      "accent2": "#955023",
+      "fg": "#3C281B",
+      "glass": 0.55
+    }
+  },
+  {
+    "name": "03-mountain-cabin",
+    "source": "03-mountain-cabin.md",
+    "title": "کلبه‌ی کوهستانی",
+    "eyebrow": "سفر صوتی آرامش / ۳",
+    "english": "Mountain Cabin Journey",
+    "desc": "مراقبه‌ی کلبه‌ی کوهستانی · ۶ بخش پیوسته",
+    "disc_label": "آرامش در کلبه",
+    "enso_label": "حلقه ذن آرامش",
+    "app_id": "cj-03",
+    "parts": [
+      "بخش ۱: پیش از شروع، جا گرفتن",
+      "بخش ۲: راه کوهستانی تا کلبه",
+      "بخش ۳: داخل کلبه",
+      "بخش ۴: صدای آتش و نفس",
+      "بخش ۵: پنجره و بادِ بیرون",
+      "بخش ۶: برگشت و فرود"
+    ],
+    "theme": "dark",
+    "scene": "fireflies",
+    "palette": {
+      "bg1": "#0A111A",
+      "bg2": "#392813",
+      "accent": "#F2AD5F",
+      "accent2": "#65A4EC",
+      "fg": "#E4EAF1"
+    }
+  },
+  {
+    "name": "04-secret-garden",
+    "source": "04-secret-garden.md",
+    "title": "باغ پنهان",
+    "eyebrow": "سفر صوتی آرامش / ۴",
+    "english": "Secret Garden Journey",
+    "desc": "مراقبه‌ی باغ پنهان · ۶ بخش پیوسته",
+    "disc_label": "آرامش در باغ",
+    "enso_label": "حلقه ذن آرامش",
+    "app_id": "cj-04",
+    "parts": [
+      "بخش ۱: پیش از شروع، جا گرفتن",
+      "بخش ۲: دیوار و در",
+      "بخش ۳: داخل باغ",
+      "بخش ۴: بو، لمس و نفس",
+      "بخش ۵: نیمکت و کاشتنِ یه دونه",
+      "بخش ۶: برگشت و بستن در"
+    ],
+    "theme": "dark",
+    "scene": "fireflies",
+    "palette": {
+      "bg1": "#0F1A0A",
+      "bg2": "#391326",
+      "accent": "#F25FA8",
+      "accent2": "#92EC65",
+      "fg": "#E9F1E4"
+    }
+  },
+  {
+    "name": "05-river-boat",
+    "source": "05-river-boat.md",
+    "title": "قایق روی رودخانه",
+    "eyebrow": "سفر صوتی آرامش / ۵",
+    "english": "River Boat Journey",
+    "desc": "مراقبه‌ی قایق روی رودخانه · ۶ بخش پیوسته",
+    "disc_label": "آرامش در رودخانه",
+    "enso_label": "حلقه ذن آرامش",
+    "app_id": "cj-05",
+    "parts": [
+      "بخش ۱: پیش از شروع، جا گرفتن",
+      "بخش ۲: رسیدن به رود و سوار شدن",
+      "بخش ۳: حرکت آروم و صدای آب",
+      "بخش ۴: نفس با جریان",
+      "بخش ۵: برگ‌ها روی آب",
+      "بخش ۶: برگشت به ساحل"
+    ],
+    "theme": "light",
+    "scene": "waves+mist",
+    "palette": {
+      "bg1": "#EDF6F8",
+      "bg2": "#ECE0CA",
+      "accent": "#C78B23",
+      "accent2": "#238695",
+      "fg": "#1B373C",
+      "glass": 0.55
+    }
+  },
+  {
+    "name": "06-rain-walk",
+    "source": "06-rain-walk.md",
+    "title": "قدم زدن زیر باران",
+    "eyebrow": "سفر صوتی آرامش / ۶",
+    "english": "Rain Walk Journey",
+    "desc": "مراقبه‌ی قدم زدن زیر باران · ۶ بخش پیوسته",
+    "disc_label": "آرامش زیر باران",
+    "enso_label": "حلقه ذن آرامش",
+    "app_id": "cj-06",
+    "parts": [
+      "بخش ۱: پیش از شروع، جا گرفتن",
+      "بخش ۲: شروع قدم زدن",
+      "بخش ۳: صدای باران",
+      "بخش ۴: بوی خاک و لمس قطره‌ها",
+      "بخش ۵: قطره‌های فکر",
+      "بخش ۶: برگشت زیر سقف"
+    ],
+    "theme": "dark",
+    "scene": "water+fireflies",
+    "palette": {
+      "bg1": "#0A0F1A",
+      "bg2": "#291339",
+      "accent": "#B55FF2",
+      "accent2": "#658DEC",
+      "fg": "#E4E8F1"
+    }
+  },
+  {
+    "name": "07-sensory-forest",
+    "source": "07-sensory-forest.md",
+    "title": "جنگل حسی",
+    "eyebrow": "سفر صوتی آرامش / ۷",
+    "english": "Sensory Forest Journey",
+    "desc": "مراقبه‌ی جنگل حسی · ۶ بخش پیوسته",
+    "disc_label": "آرامش در جنگل",
+    "enso_label": "حلقه ذن آرامش",
+    "app_id": "cj-07",
+    "parts": [
+      "بخش ۱: پیش از شروع، جا گرفتن",
+      "بخش ۲: دیدن",
+      "بخش ۳: شنیدن و بوییدن",
+      "بخش ۴: لمس و چشیدن",
+      "بخش ۵: همه‌ی حس‌ها با هم",
+      "بخش ۶: برگشت از جنگل"
+    ],
+    "theme": "light",
+    "scene": "mist",
+    "palette": {
+      "bg1": "#F2F8ED",
+      "bg2": "#CAECD0",
+      "accent": "#23C73F",
+      "accent2": "#589523",
+      "fg": "#2A3C1B",
+      "glass": 0.55
+    }
+  },
+  {
+    "name": "08-safe-mental-refuge",
+    "source": "08-safe-mental-refuge.md",
+    "title": "جای امن ذهنی",
+    "eyebrow": "سفر صوتی آرامش / ۸",
+    "english": "Safe Mental Refuge Journey",
+    "desc": "مراقبه‌ی جای امن ذهنی · ۵ بخش پیوسته",
+    "disc_label": "آرامش در جای امن",
+    "enso_label": "حلقه ذن آرامش",
+    "app_id": "cj-08",
+    "parts": [
+      "بخش ۱: پیش از شروع، امنیت اول",
+      "بخش ۲: ساختن یه جای امن",
+      "بخش ۳: صداهای امن",
+      "بخش ۴: بو و مسیر بدن",
+      "بخش ۵: بازگشت و بستن نرم"
+    ],
+    "theme": "light",
+    "scene": "mist",
+    "palette": {
+      "bg1": "#EEF3F0",
+      "bg2": "#D5E6E0",
+      "accent": "#5FB8B0",
+      "accent2": "#2E7A62",
+      "fg": "#1F3A33",
+      "glass": 0.55
+    }
+  },
+  {
+    "name": "09-urban-green-space",
+    "source": "09-urban-green-space.md",
+    "title": "گوشه‌ی سبز شهری",
+    "eyebrow": "سفر صوتی آرامش / ۹",
+    "english": "Urban Green Space Journey",
+    "desc": "مراقبه‌ی گوشه‌ی سبز شهری · ۶ بخش پیوسته",
+    "disc_label": "آرامش در باغچه",
+    "enso_label": "حلقه ذن آرامش",
+    "app_id": "cj-09",
+    "parts": [
+      "بخش ۱: پیش از شروع، نفس با شهر",
+      "بخش ۲: ورود به باغچه",
+      "بخش ۳: صداهای شهر در باغ",
+      "بخش ۴: نشستن روی نیمکت",
+      "بخش ۵: نفس با چشم‌انداز شهری",
+      "بخش ۶: برگشت به روز"
+    ],
+    "theme": "dark",
+    "scene": "fireflies",
+    "palette": {
+      "bg1": "#0E130D",
+      "bg2": "#1E2E1A",
+      "accent": "#B6E36A",
+      "accent2": "#A3D97B",
+      "fg": "#E4EEDC"
+    }
+  },
+  {
+    "name": "10-five-senses-garden",
+    "source": "10-five-senses-garden.md",
+    "title": "باغ پنج حس",
+    "eyebrow": "سفر صوتی آرامش / ۱۰",
+    "english": "Five Senses Garden Journey",
+    "desc": "مراقبه‌ی باغ پنج حس · ۶ بخش پیوسته",
+    "disc_label": "آرامش در باغ",
+    "enso_label": "حلقه ذن آرامش",
+    "app_id": "cj-10",
+    "parts": [
+      "بخش ۱: پیش از شروع، جا گرفتن",
+      "بخش ۲: ورود به باغ",
+      "بخش ۳: بو و لمس",
+      "بخش ۴: چشیدن و صدا",
+      "بخش ۵: حس‌های باغ کنار هم",
+      "بخش ۶: برگشت به اتاق"
+    ],
+    "theme": "dark",
+    "scene": "fireflies",
+    "palette": {
+      "bg1": "#130E09",
+      "bg2": "#33220F",
+      "accent": "#FFD27A",
+      "accent2": "#F0A36A",
+      "fg": "#F3E6D6"
+    }
+  },
+  {
+    "name": "11-calm-waterspace",
+    "source": "11-calm-waterspace.md",
+    "title": "آبی آرام",
+    "eyebrow": "سفر صوتی آرامش / ۱۱",
+    "english": "Calm Waterspace Journey",
+    "desc": "مراقبه‌ی آبی آرام · ۶ بخش پیوسته",
+    "disc_label": "آرامش کنار آب",
+    "enso_label": "حلقه ذن آرامش",
+    "app_id": "cj-11",
+    "parts": [
+      "بخش ۱: پیش از شروع، کنار آب",
+      "بخش ۲: نزدیک شدن به آب",
+      "بخش ۳: قطره و حلقه‌ها",
+      "بخش ۴: نفس با آرامش آب",
+      "بخش ۵: سپردن به آب",
+      "بخش ۶: برگشت از کنار آب"
+    ],
+    "theme": "light",
+    "scene": "waves+mist",
+    "palette": {
+      "bg1": "#EEF6F8",
+      "bg2": "#C9E6EE",
+      "accent": "#5FB5CF",
+      "accent2": "#1E6E8C",
+      "fg": "#163A48",
+      "glass": 0.55
+    }
+  },
+  {
+    "name": "12-virtual-nature",
+    "source": "12-virtual-nature.md",
+    "title": "طبیعت مجازی",
+    "eyebrow": "سفر صوتی آرامش / ۱۲",
+    "english": "Virtual Nature Journey",
+    "desc": "مراقبه‌ی طبیعت مجازی · ۶ بخش پیوسته",
+    "disc_label": "آرامش در طبیعت",
+    "enso_label": "حلقه ذن آرامش",
+    "app_id": "cj-12",
+    "parts": [
+      "بخش ۱: پیش از شروع، درباره‌ی این تمرین",
+      "بخش ۲: ورود به چشم‌انداز",
+      "بخش ۳: صدای باد در دره",
+      "بخش ۴: نفس با افق",
+      "بخش ۵: جای رسیدن به آرامش",
+      "بخش ۶: برگشت به اتاق"
+    ],
+    "theme": "dark",
+    "scene": "fireflies",
+    "palette": {
+      "bg1": "#0B0E1A",
+      "bg2": "#1B2140",
+      "accent": "#C1CDFF",
+      "accent2": "#9DB0F0",
+      "fg": "#E4E9FA"
+    }
+  }
+]

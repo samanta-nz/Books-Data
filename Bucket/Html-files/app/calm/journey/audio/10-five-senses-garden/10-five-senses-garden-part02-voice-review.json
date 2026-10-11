@@ -1,0 +1,60 @@
+{
+  "episode": "10-five-senses-garden",
+  "part": 2,
+  "status": "VOICE-ONLY PREVIEW; no ambience; do not embed in HTML yet",
+  "source_git_blob": "913505a9193b3c2123f2b98ac2b0e61628323649",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "max_voiced_F0_ratio": 0.8,
+  "positions": 4,
+  "exact_explicit_source_pause_seconds": 21,
+  "pcm_duration_seconds": 51.32,
+  "mp3_decoded_duration_seconds": 51.384,
+  "mp3_sha256": "b44ab7203f620494d186edffa2eb7f779adf403a44a1aa13eedcc6018f6e65e6",
+  "cues": [
+    {
+      "id": "p2s01",
+      "text": "از یه درِ کوچیک وارد باغ می‌شی. یه مسیر سنگی با رنگ‌های گرم جلوی پاته و تا دل باغ ادامه داره.",
+      "source_pause_seconds": 4,
+      "start_seconds": 0.0,
+      "speech_samples": 229440,
+      "source_archive": "source-clips-batch02.zip",
+      "source_max_F0": 301.95827198110936,
+      "adjusted_max_F0": 241.5666175848875,
+      "gain": 1.0
+    },
+    {
+      "id": "p2s02",
+      "text": "گرمای آفتاب صبحگاهی رو روی صورتت حس کن؛ نرم و دلپذیره.",
+      "source_pause_seconds": 3,
+      "start_seconds": 13.56,
+      "speech_samples": 151680,
+      "source_archive": "source-clips-batch02.zip",
+      "source_max_F0": 271.3747895861496,
+      "adjusted_max_F0": 217.09983166891965,
+      "gain": 1.0
+    },
+    {
+      "id": "p2s03",
+      "text": "سمت چپت یه بوته اسطوخودوسه. آروم بهش نزدیک شو و به برگ‌هاش نگاه کن.",
+      "source_pause_seconds": 6,
+      "start_seconds": 22.88,
+      "speech_samples": 172800,
+      "source_archive": "source-clips-batch02.zip",
+      "source_max_F0": 270.1994663029587,
+      "adjusted_max_F0": 216.15957304236696,
+      "gain": 1.0
+    },
+    {
+      "id": "p2s04",
+      "text": "یه نفس بکش و عطرش رو حس کن؛ شاید بوی اسطوخودوس باشه، شاید هم نعناع تازه.",
+      "source_pause_seconds": 8,
+      "start_seconds": 36.08,
+      "speech_samples": 173760,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 307.67849929697167,
+      "adjusted_max_F0": 246.14279943757734,
+      "gain": 1.0
+    }
+  ]
+}

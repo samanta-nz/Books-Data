@@ -1,0 +1,80 @@
+{
+  "episode": "12-virtual-nature",
+  "part": 5,
+  "status": "FINAL MIX WITH HILLSIDE AMBIENCE",
+  "source_git_blob": "83b56e12af0ad3d17dec6e415066f8a9e675e1d3",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "max_voiced_F0_ratio": 0.8,
+  "positions": 5,
+  "exact_explicit_source_pause_seconds": 30,
+  "pcm_duration_seconds": 66.0,
+  "mp3_decoded_duration_seconds": 66.096,
+  "mp3_sha256": "9091b5bfb91fe65c7787d4e2b7ba861d689c94d425db2dd94aa8064ddc44e6ec",
+  "cues": [
+    {
+      "id": "p5s01",
+      "text": "حالا بالای این تپه‌های آروم ایستادی. از شلوغی فاصله گرفتی و فقط این روشنایی ملایم رو حس می‌کنی.",
+      "source_pause_seconds": 5,
+      "start_seconds": 0.0,
+      "speech_samples": 248640,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 263.8188302848784,
+      "adjusted_max_F0": 211.05506422790273,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s02",
+      "text": "اگه فکر سنگینی ذهنت رو مشغول کرد، دنبالش نرو؛ می‌تونی مثل یه ابر نگاهش کنی و بذاری از جلوی ذهنت رد بشه.",
+      "source_pause_seconds": 8,
+      "start_seconds": 15.36,
+      "speech_samples": 241920,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 319.4730796735197,
+      "adjusted_max_F0": 255.57846373881577,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s03",
+      "text": "یه نفس عمیق دیگه. حالا باهم، دم",
+      "source_pause_seconds": 4,
+      "start_seconds": 33.44,
+      "speech_samples": 120000,
+      "source_archive": "source-clips-batch03-reused-inhale.zip",
+      "source_max_F0": 265.0174211048737,
+      "adjusted_max_F0": 212.01393688389896,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s04",
+      "text": "و بازدم کامل.",
+      "source_pause_seconds": 5,
+      "start_seconds": 42.44,
+      "speech_samples": 69120,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 164.52467429145221,
+      "adjusted_max_F0": 131.61973943316178,
+      "gain": 1.0
+    },
+    {
+      "id": "p5s05",
+      "text": "اگه دوست داری، چند لحظه‌ی دیگه همین‌جا بمون و به حس آرامشی که پیدا کردی توجه کن.",
+      "source_pause_seconds": 8,
+      "start_seconds": 50.32,
+      "speech_samples": 184320,
+      "source_archive": "source-clips-batch05-final.zip",
+      "source_max_F0": 284.0339807297157,
+      "adjusted_max_F0": 227.22718458377258,
+      "gain": 1.0
+    }
+  ],
+  "ambience": {
+    "fade_in_start_seconds": 82.56,
+    "fade_in_end_seconds": 167.57,
+    "fade_out_start_seconds": 345.32,
+    "fade_out_end_seconds": 430.33,
+    "fade_duration_seconds": 85.00999999999999,
+    "ambient_mid_rms": 0.0055820946446013785,
+    "ambient_mid_dbfs": -45.06405608614997
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "episode": "12-virtual-nature",
+  "part": 1,
+  "status": "VOICE-ONLY PREVIEW; no ambience; do not embed in HTML yet",
+  "source_git_blob": "83b56e12af0ad3d17dec6e415066f8a9e675e1d3",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "max_voiced_F0_ratio": 0.8,
+  "positions": 7,
+  "exact_explicit_source_pause_seconds": 32,
+  "pcm_duration_seconds": 82.56,
+  "mp3_decoded_duration_seconds": 82.608,
+  "mp3_sha256": "5efa22507a1fa9a04df9ccb564dcdc223499942f487073a9653731752af86543",
+  "cues": [
+    {
+      "id": "p1s01",
+      "text": "سلام. امروز قراره یه چشم‌انداز طبیعی و آروم رو توی ذهنمون تصور کنیم.",
+      "source_pause_seconds": 3,
+      "start_seconds": 0.0,
+      "speech_samples": 164160,
+      "source_archive": "source-clips-batch02.zip",
+      "source_max_F0": 269.0310445036564,
+      "adjusted_max_F0": 215.22483560292514,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s02",
+      "text": "گاهی رسیدن به طبیعت واقعی سخته و شلوغی شهر، صفحه‌ها و کارهای روزمره خسته‌مون می‌کنن. این تمرین یه فرصت کوتاهه برای ساختن یه چشم‌انداز آروم توی ذهن؛ نه برای جایگزین کردن طبیعت واقعی.",
+      "source_pause_seconds": 4,
+      "start_seconds": 9.84,
+      "speech_samples": 443520,
+      "source_archive": "source-clips-batch02.zip",
+      "source_max_F0": 318.5020951644626,
+      "adjusted_max_F0": 254.8016761315701,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s03",
+      "text": "جای راحتی پیدا کن. اگه نشستی، کمرت رو به صندلی بده و پاهات رو روی زمین بذار.",
+      "source_pause_seconds": 3,
+      "start_seconds": 32.32,
+      "speech_samples": 201600,
+      "source_archive": "source-clips-batch02.zip",
+      "source_max_F0": 313.2564283447016,
+      "adjusted_max_F0": 250.60514267576127,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s04",
+      "text": "اگه راحتی، چشم‌هات رو ببند؛ وگرنه نگاهت رو روی یه نقطه‌ی ساده از زمین یا میز نگه دار.",
+      "source_pause_seconds": 4,
+      "start_seconds": 43.72,
+      "speech_samples": 189120,
+      "source_archive": "source-clips-batch01-reused-short.zip",
+      "source_max_F0": 223.24998925543946,
+      "adjusted_max_F0": 178.59999140435156,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s05",
+      "text": "یه دم آروم بگیر.",
+      "source_pause_seconds": 4,
+      "start_seconds": 55.6,
+      "speech_samples": 53760,
+      "source_archive": "source-clips-batch01-reused-short.zip",
+      "source_max_F0": 193.33677614851842,
+      "adjusted_max_F0": 154.66942091881475,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s06",
+      "text": "بعد آهسته بازدم کن.",
+      "source_pause_seconds": 8,
+      "start_seconds": 61.84,
+      "speech_samples": 75840,
+      "source_archive": "source-clips-batch02.zip",
+      "source_max_F0": 257.7345178827083,
+      "adjusted_max_F0": 206.18761430616667,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s07",
+      "text": "خوبه، حالا بریم سراغ چشم‌اندازمون.",
+      "source_pause_seconds": 6,
+      "start_seconds": 73.0,
+      "speech_samples": 85440,
+      "source_archive": "source-clips-batch02.zip",
+      "source_max_F0": 251.99409730189655,
+      "adjusted_max_F0": 201.59527784151726,
+      "gain": 1.0
+    }
+  ]
+}

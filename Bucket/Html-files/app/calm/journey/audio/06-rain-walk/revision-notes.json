@@ -1,0 +1,26 @@
+{
+  "source_git_blob": "0ed630cc62eb43bb8c657321a7c02195f147af9a",
+  "user_approved_replacement": {
+    "p5s11": {
+      "source_text": "بدنت چه حسی داره؟ هر چی هست، درسته.",
+      "record_text": "بدنت چه حسی داره؟ توجه کن و عمیق‌تر احساسش کن.",
+      "source_pause_after_seconds": 10,
+      "discarded_takes": [
+        {
+          "archive": "source-clips-part05-02-11.zip",
+          "sha256": "eac7c96676f450bfa2fafb2531e6b49191fd9e72375d6f9a4415e109cf7063ad",
+          "text": "بدنت چه حسی داره؟ هر چی هست، درسته."
+        },
+        {
+          "archive": "source-clips-part05-11-redo-and-part06-01-09.zip",
+          "sha256": "191d76df67a8193354ac599ba5ed53e5078c74863cbf29809b8368dfe566736e",
+          "text": "بدنت چه حسی داره؟ بهش فکر کن"
+        }
+      ],
+      "replacement_archive": "source-clips-zz-final-six-and-corrected-p5s11.zip",
+      "replacement_sha256": "ef947f1ba724e13cf46d2aefde18a30dab3dbfd82500c9a5f11cf263b1125180",
+      "status": "recorded"
+    }
+  },
+  "instruction": "Use only the latest p5s11 take from replacement_archive in full review and part-five review; discard both earlier versions. All source pause durations unchanged."
+}

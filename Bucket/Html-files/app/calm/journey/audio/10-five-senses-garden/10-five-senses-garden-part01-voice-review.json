@@ -1,0 +1,93 @@
+{
+  "episode": "10-five-senses-garden",
+  "part": 1,
+  "status": "VOICE-ONLY PREVIEW; no ambience; do not embed in HTML yet",
+  "source_git_blob": "913505a9193b3c2123f2b98ac2b0e61628323649",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "max_voiced_F0_ratio": 0.8,
+  "positions": 7,
+  "exact_explicit_source_pause_seconds": 31,
+  "pcm_duration_seconds": 74.6,
+  "mp3_decoded_duration_seconds": 74.664,
+  "mp3_sha256": "00f03e7ea86a15ba5f9211d8cae8ca1372dc5c8b431d8c90dde27e8e139639f8",
+  "cues": [
+    {
+      "id": "p1s01",
+      "text": "سلام. امروز با هم به یه باغچه‌ی کوچیک می‌ریم و با حواس مختلف، جزئیاتش رو کشف می‌کنیم.",
+      "source_pause_seconds": 3,
+      "start_seconds": 0.0,
+      "speech_samples": 192000,
+      "source_archive": "source-clips-batch01.zip",
+      "source_max_F0": 253.6370494006657,
+      "adjusted_max_F0": 202.90963952053255,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s02",
+      "text": "قرار نیست کاری رو درست یا غلط انجام بدی. فقط ببین توی این باغ کدوم چیزها بیشتر به دلت می‌شینن.",
+      "source_pause_seconds": 2,
+      "start_seconds": 11.0,
+      "speech_samples": 197760,
+      "source_archive": "source-clips-batch01.zip",
+      "source_max_F0": 306.25673945256983,
+      "adjusted_max_F0": 245.00539156205588,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s03",
+      "text": "یه جای راحت پیدا کن. اگه نشستی، کمرت رو به صندلی بده.",
+      "source_pause_seconds": 3,
+      "start_seconds": 21.24,
+      "speech_samples": 143040,
+      "source_archive": "source-clips-batch01.zip",
+      "source_max_F0": 279.1538702968781,
+      "adjusted_max_F0": 223.32309623750248,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s04",
+      "text": "اگه راحتی، چشم‌هات رو ببند؛ اگه ترجیح می‌دی باز بمونن، نگاهت رو روی یه نقطه‌ی ساده از زمین یا میز نگه دار.",
+      "source_pause_seconds": 4,
+      "start_seconds": 30.2,
+      "speech_samples": 277440,
+      "source_archive": "source-clips-batch01.zip",
+      "source_max_F0": 313.1571007146797,
+      "adjusted_max_F0": 250.52568057174378,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s05",
+      "text": "یه دم آروم بگیر.",
+      "source_pause_seconds": 5,
+      "start_seconds": 45.76,
+      "speech_samples": 53760,
+      "source_archive": "source-clips-batch01.zip",
+      "source_max_F0": 193.33677614851842,
+      "adjusted_max_F0": 154.66942091881475,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s06",
+      "text": "بعد به‌آرومی بازدم کن.",
+      "source_pause_seconds": 8,
+      "start_seconds": 53.0,
+      "speech_samples": 114240,
+      "source_archive": "source-clips-batch02.zip",
+      "source_max_F0": 250.2960971270829,
+      "adjusted_max_F0": 200.23687770166634,
+      "gain": 1.0
+    },
+    {
+      "id": "p1s07",
+      "text": "خوبه. بریم سراغ باغچه.",
+      "source_pause_seconds": 6,
+      "start_seconds": 65.76,
+      "speech_samples": 68160,
+      "source_archive": "source-clips-batch02.zip",
+      "source_max_F0": 314.5057204784409,
+      "adjusted_max_F0": 251.60457638275273,
+      "gain": 1.0
+    }
+  ]
+}

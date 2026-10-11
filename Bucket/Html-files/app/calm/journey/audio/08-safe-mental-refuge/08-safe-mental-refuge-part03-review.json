@@ -1,0 +1,114 @@
+{
+  "episode": "08-safe-mental-refuge",
+  "part": 3,
+  "status": "FINAL MIX WITH SAFE FOREST AMBIENCE",
+  "source_git_blob": "e97fbe19aea76c41300be99f72ad9a4b4c16d780",
+  "voice_id": "voice-08",
+  "speed": 1.0,
+  "max_voiced_F0_ratio": 0.8,
+  "positions": 8,
+  "exact_explicit_source_pause_seconds": 51,
+  "pcm_duration_seconds": 111.72,
+  "mp3_decoded_duration_seconds": 111.816,
+  "mp3_sha256": "23ded2df9b52428dafe2be2d777c90dc6c88ec574337bc8bfa5711aab0b601a9",
+  "cues": [
+    {
+      "id": "p3s01",
+      "text": "حالا فقط گوش بده. باد ملایمی از لابه‌لای برگ‌ها می‌آیه و دور می‌شه.",
+      "source_pause_seconds": 5,
+      "start_seconds": 0.0,
+      "speech_samples": 208320,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 293.7971758671425,
+      "adjusted_max_F0": 235.03774069371403,
+      "gain": 1.0
+    },
+    {
+      "id": "p3s02",
+      "text": "یه پرنده از دور آروم آواز می‌خونه؛ صدایش مثل یه نجواست و بعد دوباره سکوت می‌شه.",
+      "source_pause_seconds": 6,
+      "start_seconds": 13.68,
+      "speech_samples": 234240,
+      "source_archive": "source-clips-batch04.zip",
+      "source_max_F0": 268.8748345324314,
+      "adjusted_max_F0": 215.09986762594514,
+      "gain": 1.0
+    },
+    {
+      "id": "p3s03",
+      "text": "برگ‌ها وقتی باد می‌وزه، صدای نرمی دارن. این صدا شبیه نفس بیرون دادن از شاخه‌هاست.",
+      "source_pause_seconds": 8,
+      "start_seconds": 29.44,
+      "speech_samples": 195840,
+      "source_archive": "source-clips-batch06.zip",
+      "source_max_F0": 308.960602498402,
+      "adjusted_max_F0": 247.16848199872163,
+      "gain": 1.0
+    },
+    {
+      "id": "p3s04",
+      "text": "اگه صدایی از اتاق به گوشت رسید، مجبور نیستی نادیده‌اش بگیری؛ بذار در پس‌زمینه باشه و به تمرین ادامه بده.",
+      "source_pause_seconds": 10,
+      "start_seconds": 45.6,
+      "speech_samples": 217920,
+      "source_archive": "source-clips-batch06.zip",
+      "source_max_F0": 316.7242412890753,
+      "adjusted_max_F0": 253.37939303126024,
+      "gain": 1.0
+    },
+    {
+      "id": "p3s05",
+      "text": "اگه دوست داری، یه لحظه چشم‌هات رو باز کن و به اتاق نگاه کن. اگه ترجیح می‌دی بسته بمونن، اشکالی نداره.",
+      "source_pause_seconds": 5,
+      "start_seconds": 64.68,
+      "speech_samples": 219840,
+      "source_archive": "source-clips-batch06.zip",
+      "source_max_F0": 318.3858823754488,
+      "adjusted_max_F0": 254.70870590035904,
+      "gain": 1.0
+    },
+    {
+      "id": "p3s06",
+      "text": "می‌تونی آروم به خودت بگی: اینجا امنه. اگه راحتی، این جمله رو با صدای خیلی آهسته بگو و به صدای خودت گوش بده.",
+      "source_pause_seconds": 5,
+      "start_seconds": 78.84,
+      "speech_samples": 222720,
+      "source_archive": "source-clips-batch06.zip",
+      "source_max_F0": 316.55210913807167,
+      "adjusted_max_F0": 253.24168731045734,
+      "gain": 1.0
+    },
+    {
+      "id": "p3s07",
+      "text": "یه نفس عمیق. حالا باهم، دم",
+      "source_pause_seconds": 4,
+      "start_seconds": 93.12,
+      "speech_samples": 109440,
+      "source_archive": "source-clips-batch03-reused-breath.zip",
+      "source_max_F0": 249.57087614317655,
+      "adjusted_max_F0": 199.65670091454126,
+      "gain": 1.0
+    },
+    {
+      "id": "p3s08",
+      "text": "و بازدم.",
+      "source_pause_seconds": 8,
+      "start_seconds": 101.68,
+      "speech_samples": 48960,
+      "source_archive": "source-clips-batch05-reused-exhale.zip",
+      "source_max_F0": 112.1373453941882,
+      "adjusted_max_F0": 89.70987631535057,
+      "gain": 1.0
+    }
+  ],
+  "ambience": {
+    "fade_in_start_seconds": 0,
+    "fade_in_end_seconds": 228.12,
+    "fade_out_start_seconds": 405.84,
+    "fade_out_end_seconds": 577.17,
+    "fade_in_duration_seconds": 228.12,
+    "fade_out_duration_seconds": 171.32999999999998,
+    "ambient_mid_rms": 0.005787765303472794,
+    "ambient_mid_dbfs": -44.749781760711905
+  }
+}
