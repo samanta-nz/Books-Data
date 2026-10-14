@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0c1420">
+<!--TEMPLATE_NOTE: قالب ثابت «سفر آرام». فقط جای‌نگهدارهای دو‌آکولاد را build-episode.py پر می‌کند؛ رنگ، پس‌زمینه، هدر، کنترل‌ها و فوتر را دستی تغییر ندهید. این یادداشت هنگام ساخت حذف می‌شود. -->
+<!-- key: {{NAME}} | app id: {{APP_ID}} | audience: all | parts: 6 | audio: embedded HQ MP3 (narration + ambience) | background: embedded JPEG (dark overlay in CSS) -->
+<title>{{TITLE}}</title>
+<style>
+:root{
+ color-scheme:dark;
+ --hi:255,255,255;--ts:0,0,0;--sh:0,0,0;
+ --bg1:hsl(155 45% 7%);--bg2:hsl(165 55% 4%);--fg:hsl(135 25% 95%);--mut:hsl(140 18% 75%);
+ --accent:#52c285;--accent2:#84d896;--fx1:82, 194, 133;--fx2:132, 216, 150;
+ --card:rgba(12, 28, 19, 0.72);--bd:rgba(82, 194, 133, 0.28);--bg-ov:rgba(8, 20, 14, 0.52);--surface:rgba(16, 36, 25, 0.78);--line:rgba(82, 194, 133, 0.2);
+ --disc-bg:radial-gradient(circle at 35% 30%, rgba(var(--hi),.14), rgba(82, 194, 133, .16) 60%, rgba(var(--sh),.35));
+ --disc-bd:rgba(var(--hi),.2);--disc-glow:rgba(82, 194, 133, .25);
+}
+
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{
+ background:radial-gradient(ellipse at 85% 2%,var(--bg2),transparent 65%),var(--bg1);
+ color:var(--fg);font-family:Vazirmatn,Tahoma,sans-serif;
+ overflow-x:hidden;overflow-y:auto;
+ padding:max(14px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));
+ transition:background .4s,color .4s;
+ min-height:100svh;display:flex;flex-direction:column;align-items:center;
+}
+
+#bg-img{position:fixed;inset:-10px;z-index:0;background:linear-gradient(var(--bg-ov),var(--bg-ov)),url('{{BG}}');background-size:cover;background-position:center;opacity:.95;pointer-events:none}
+#fx{position:fixed;inset:0;z-index:1;pointer-events:none}
+
+main{
+ position:relative;z-index:2;width:100%;max-width:480px;margin:0 auto;display:flex;flex-direction:column;
+ gap:14px;flex:1;isolation:isolate;justify-content:space-between;
+}
+
+/* Header cloned from Template */
+header{display:grid;grid-template-columns:minmax(0,1fr) auto 42px;align-items:center;gap:12px;padding:4px 2px 2px}
+.heading{min-width:0;flex:1}
+.eyebrow{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--accent);font-weight:700;margin-bottom:4px;letter-spacing:.4px}
+.eyebrow i{display:block;width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+.heading h1{font-size:clamp(22px,5.4vw,27px);line-height:1.45;font-weight:800;letter-spacing:-.5px;margin:0;color:var(--fg);text-shadow:0 2px 14px rgba(var(--ts),.5)}
+.english{direction:ltr;text-align:right;font-family:Vazirmatn,Arial,sans-serif;font-size:11px;line-height:1.5;letter-spacing:.35px;font-weight:500;color:var(--mut);margin:2px 0 0}
+header p{font-size:11px;font-weight:400;color:var(--mut);margin:3px 0 0}
+.brand{display:flex;justify-content:center;align-items:center;gap:8px;color:var(--accent);font-size:18px;font-weight:800;letter-spacing:-.3px}
+.header-brand{flex-direction:column;gap:3px;font-size:15px;line-height:1.35;white-space:nowrap}
+.brand .tag{font-size:8.5px;letter-spacing:.5px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#09121c;padding:2px 7px;border-radius:6px;direction:ltr;font-weight:800}
+.header-brand .tag{font-size:7.5px;padding:2px 5px;letter-spacing:.3px}
+
+/* Center Stage & Zen Ring */
+.stage{flex:1;display:flex;align-items:center;justify-content:center;width:100%;min-height:240px;padding:8px 0}
+.zen-ring{position:relative;width:min(62vw,240px);aspect-ratio:1;display:flex;align-items:center;justify-content:center;transition:transform 1.2s ease,opacity .8s;opacity:.95}
+.enso-svg{width:100%;height:100%;filter:drop-shadow(0 0 20px rgba(82, 194, 133, .4));transition:transform 1.2s ease}
+.zen-ring::before,.zen-ring::after{content:"";position:absolute;inset:-8%;border-radius:50%;border:1px dashed var(--bd);opacity:0;pointer-events:none}
+.playing .zen-ring{animation:breathe 9s ease-in-out infinite;opacity:1}
+.playing .zen-ring::before{animation:ring 9s ease-out infinite}
+.playing .zen-ring::after{animation:ring 9s ease-out 4.5s infinite}
+@keyframes breathe{0%,100%{transform:scale(.94)}50%{transform:scale(1.05)}}
+@keyframes ring{0%{transform:scale(.95);opacity:.6}100%{transform:scale(1.42);opacity:0}}
+
+/* Glassmorphic Frosted Center Disc inside Zen Ring */
+.zen-disc{
+ position:absolute;inset:20%;border-radius:50%;
+ background:var(--disc-bg);
+ backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+ border:1.5px solid var(--disc-bd);
+ box-shadow:0 12px 36px -4px rgba(var(--sh),.55),inset 0 1px 3px rgba(var(--hi),.4),inset 0 -6px 14px var(--disc-glow),0 0 28px var(--disc-glow);
+ display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+ pointer-events:none;z-index:3;
+ transition:transform .5s cubic-bezier(.34,1.56,.64,1),box-shadow .5s ease;
+}
+.playing .zen-disc{
+ animation:discPulse 9s ease-in-out infinite;
+ box-shadow:0 14px 44px -4px rgba(var(--sh),.65),inset 0 1px 4px rgba(var(--hi),.5),inset 0 -8px 20px var(--disc-glow),0 0 38px var(--disc-glow);
+}
+@keyframes discPulse{0%,100%{transform:scale(0.96)}50%{transform:scale(1.05)}}
+.disc-core{display:flex;flex-direction:column;align-items:center;gap:2px;color:var(--fg);padding:0 8px}
+.disc-icon{font-size:26px;filter:drop-shadow(0 2px 10px rgba(var(--ts),.5));transition:transform .4s ease}
+.playing .disc-icon{animation:iconFloat 4s ease-in-out infinite alternate}
+@keyframes iconFloat{0%{transform:translateY(0px) rotate(-3deg)}100%{transform:translateY(-4px) rotate(3deg)}}
+.disc-status{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:.3px;text-shadow:0 1px 8px rgba(var(--ts),.7);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:120px}
+
+/* Controller Panel */
+.panel{
+ width:100%;background:var(--card);border:1px solid var(--bd);border-radius:24px;
+ padding:15px 18px 16px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+ box-shadow:0 18px 45px -12px rgba(var(--sh),.6),inset 0 1px 2px rgba(var(--hi),.08);
+}
+
+.bar{height:6px;border-radius:9px;background:var(--bd);cursor:pointer;position:relative;margin:4px 0 8px;direction:ltr}
+.fill{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:9px;background:linear-gradient(90deg,var(--accent2),var(--accent))}
+.fill::after{content:"";position:absolute;right:-6px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(82, 194, 133, .4)}
+
+.tm{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);direction:ltr;font-variant-numeric:tabular-nums;font-weight:600}
+
+/* Standardized Circular ±15s Skip and Play Controller */
+.ctl{display:flex;align-items:center;justify-content:center;gap:22px;margin:10px 0 8px;direction:ltr}
+button{border:0;background:none;color:var(--fg);cursor:pointer;font:inherit}
+
+.sk{
+ width:52px;height:52px;border-radius:50%;background:rgba(var(--hi),.05);
+ border:1.5px solid var(--bd);display:flex;align-items:center;justify-content:center;
+ transition:transform .18s,background .18s,border-color .18s,box-shadow .18s;color:var(--fg);
+}
+.sk:hover{background:rgba(82, 194, 133, .22);border-color:var(--accent);transform:scale(1.08);box-shadow:0 4px 16px rgba(82, 194, 133, .3)}
+.sk:active{transform:scale(.92)}
+.sk svg{width:34px;height:34px;display:block}
+
+.pp{
+ width:70px;height:70px;border-radius:50%;
+ background:linear-gradient(135deg,var(--accent),var(--accent2));
+ display:flex;align-items:center;justify-content:center;
+ box-shadow:0 10px 28px -6px rgba(82, 194, 133, .75),inset 0 1px 2px rgba(var(--hi),.5);
+ border:1px solid rgba(var(--hi),.3);transition:transform .2s,box-shadow .2s;
+}
+.pp:hover{transform:scale(1.06);box-shadow:0 14px 34px -4px rgba(82, 194, 133, .9)}
+.pp:active{transform:scale(.93)}
+.pp svg{width:32px;height:32px;fill:#081018}
+
+/* Volume Row with 10% Lock Visualization */
+.vol-row{
+ display:flex;align-items:center;justify-content:center;gap:10px;
+ margin-top:12px;padding-top:10px;border-top:1px solid var(--bd);
+ font-size:12px;color:var(--mut);direction:ltr;
+}
+.vol-ico{width:18px;height:18px;fill:currentColor;flex-shrink:0}
+.vol-track-wrapper{position:relative;flex:1;display:flex;align-items:center;height:24px}
+.vol-slider{
+ width:100%;height:6px;-webkit-appearance:none;appearance:none;
+ background:linear-gradient(90deg, rgba(239,68,68,.35) 0%, rgba(239,68,68,.35) 10%, var(--bd) 10%, var(--bd) 100%);
+ border-radius:8px;outline:none;cursor:pointer;position:relative;z-index:2;
+}
+.vol-slider::-webkit-slider-thumb{
+ -webkit-appearance:none;appearance:none;width:16px;height:16px;border-radius:50%;
+ background:var(--accent);cursor:pointer;box-shadow:0 0 0 3px rgba(82, 194, 133, .4);
+ transition:transform .15s;
+}
+.vol-slider::-webkit-slider-thumb:hover{transform:scale(1.15)}
+.vol-slider::-moz-range-thumb{
+ width:16px;height:16px;border-radius:50%;background:var(--accent);
+ border:none;cursor:pointer;box-shadow:0 0 0 3px rgba(82, 194, 133, .4);
+}
+/* Lock Marker Pin exactly at 10% of physical bar */
+.vol-lock-pin{
+ position:absolute;left:10%;top:50%;transform:translate(-50%, -50%);
+ pointer-events:none;z-index:4;display:flex;flex-direction:column;align-items:center;
+}
+.vol-lock-pin .lock-icon{
+ font-size:10px;margin-bottom:1px;filter:drop-shadow(0 1px 3px rgba(var(--ts),.8));line-height:1;
+}
+.vol-lock-pin .lock-line{
+ width:2px;height:12px;background:var(--accent);border-radius:1px;opacity:.9;box-shadow:0 0 4px var(--accent);
+}
+#vol-txt{min-width:32px;font-variant-numeric:tabular-nums;font-weight:700;color:var(--fg);text-align:right}
+
+.note{font-size:11.5px;color:var(--mut);margin-top:6px;min-height:1.2em;text-align:center;font-weight:500}
+button:disabled{opacity:.4;cursor:default}
+
+/* Footer cloned from Template */
+footer{
+ text-align:center;border-top:1px solid var(--bd);padding-top:16px;margin-top:8px;
+ font-size:11px;color:var(--mut);
+}
+footer p{margin:4px 0}
+footer .brand{font-size:16px;margin:8px 0}
+footer strong{color:var(--fg);font-size:11.5px}
+
+@media(max-width:360px){
+ main{padding:6px 0}
+ header h1{font-size:21px}
+ .zen-ring{width:200px}
+ .ctl{gap:16px}
+ .sk{width:46px;height:46px}
+ .pp{width:62px;height:62px}
+}
+@media (prefers-reduced-motion:reduce){
+ .playing .zen-ring,.playing .zen-ring::before,.playing .zen-ring::after,.playing .zen-disc,.playing .disc-icon{animation:none!important}
+}
+</style>
+</head>
+<body>
+<div id="bg-img"></div>
+<canvas id="fx"></canvas>
+
+<main>
+ <header>
+  <div class="heading">
+   <div class="eyebrow"><i></i>{{EYEBROW}}</div>
+   <h1>{{TITLE}}</h1>
+   <div class="english" lang="en" dir="ltr">{{ENGLISH}}</div>
+   <p>{{DESC}}</p>
+  </div>
+  <div class="brand header-brand">همیار من <span class="tag" lang="en" dir="ltr">HAMYAR E MAN</span></div>
+ </header>
+
+ <div class="stage">
+  <div class="zen-ring" id="zenRing" aria-label="{{ENSO_LABEL}}">
+   
+    <svg viewBox="0 0 240 240" class="enso-svg">
+      <defs>
+        <linearGradient id="zenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="hsl(145, 55%, 32%)" />
+          <stop offset="35%" stop-color="hsl(152, 65%, 24%)" />
+          <stop offset="70%" stop-color="hsl(140, 50%, 18%)" />
+          <stop offset="100%" stop-color="hsl(155, 60%, 28%)" />
+        </linearGradient>
+        <radialGradient id="zenGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="45%" stop-color="transparent" />
+          <stop offset="80%" stop-color="hsl(145, 45%, 18%)" stop-opacity="0.35" />
+          <stop offset="100%" stop-color="hsl(140, 50%, 10%)" stop-opacity="0.65" />
+        </radialGradient>
+        <filter id="mossTexture" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </defs>
+      <!-- Background subtle halo -->
+      <circle cx="120" cy="120" r="94" fill="url(#zenGlow)" />
+      
+      <!-- Outer faint organic guide -->
+      <circle cx="120" cy="120" r="104" fill="none" stroke="hsl(145, 45%, 25%)" stroke-width="1" stroke-dasharray="3 9" opacity="0.45" />
+      
+      <!-- Organic Mossy Zen Enso Circle -->
+      <path class="enso-path" filter="url(#mossTexture)" d="M 120 22 C 176 22 218 64 218 120 C 218 174 174 218 120 218 C 68 218 24 176 24 120 C 24 66 66 24 116 22" 
+        fill="none" stroke="url(#zenGrad)" stroke-width="9.5" stroke-linecap="round" stroke-linejoin="round" />
+        
+      <!-- Secondary overlapping moss branch stroke -->
+      <path d="M 112 28 C 164 26 210 68 210 120 C 210 168 170 210 120 210 C 72 210 32 170 32 120 C 32 78 64 36 108 30" 
+        fill="none" stroke="hsl(148, 50%, 22%)" stroke-width="3.5" stroke-dasharray="28 8 16 12" opacity="0.85" />
+        
+      <!-- Delicate moss nodes -->
+      <circle cx="214" cy="102" r="2.8" fill="hsl(142, 55%, 35%)" />
+      <circle cx="208" cy="146" r="2.4" fill="hsl(142, 50%, 28%)" />
+      <circle cx="42" cy="88" r="2.5" fill="hsl(142, 52%, 32%)" />
+      <circle cx="52" cy="160" r="2.8" fill="hsl(145, 55%, 30%)" />
+      <circle cx="154" cy="214" r="2.6" fill="hsl(140, 50%, 32%)" />
+      
+      <!-- Center subtle leaf point -->
+      <path d="M 120 110 C 124 116 126 122 120 130 C 114 122 116 116 120 110 Z" fill="hsl(145, 55%, 30%)" opacity="0.65" />
+    </svg>
+    
+   <!-- Glassmorphic Frosted Center Disc -->
+   <div class="zen-disc" aria-hidden="true">
+    <div class="disc-core">
+     <span class="disc-icon">🍃</span>
+     <span class="disc-status" id="discStatus">{{DISC_LABEL}}</span>
+    </div>
+   </div>
+  </div>
+ </div>
+
+ <section class="panel">
+  <div class="bar" id="bar"><div class="fill" id="fill"></div></div>
+  <div class="tm"><span id="el">۰:۰۰</span><span id="tt">۰:۰۰</span></div>
+
+  <!-- Standardized Circular ±15s Skip and Play Controls (Left: Rewind -15s, Center: Play, Right: Forward +15s) -->
+  <div class="ctl">
+   <!-- Rewind -15s (Left / Back) -->
+   <button class="sk" id="bk" aria-label="۱۵ ثانیه عقب" title="۱۵ ثانیه عقب">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+     <path d="M3.5 11 A 8.5 8.5 0 1 0 12 3.5 C 9.5 3.5 7.2 4.6 5.6 6.4 L 3.5 8.5" />
+     <polyline points="3.5 3.5 3.5 8.5 8.5 8.5" />
+     <text x="12" y="15" font-size="7.5" font-weight="900" text-anchor="middle" fill="currentColor" stroke="none" font-family="Vazirmatn, Tahoma, sans-serif">۱۵</text>
+    </svg>
+   </button>
+
+   <!-- Play / Pause -->
+   <button class="pp" id="pp" aria-label="پخش / مکث" title="پخش / مکث"></button>
+
+   <!-- Forward +15s (Right / Forward) -->
+   <button class="sk" id="fw" aria-label="۱۵ ثانیه جلو" title="۱۵ ثانیه جلو">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+     <path d="M20.5 11 A 8.5 8.5 0 1 1 12 3.5 C 14.5 3.5 16.8 4.6 18.4 6.4 L 20.5 8.5" />
+     <polyline points="20.5 3.5 20.5 8.5 15.5 8.5" />
+     <text x="12" y="15" font-size="7.5" font-weight="900" text-anchor="middle" fill="currentColor" stroke="none" font-family="Vazirmatn, Tahoma, sans-serif">۱۵</text>
+    </svg>
+   </button>
+  </div>
+
+  <!-- Volume Slider with 10% Lock Pin Representation (physical bar width starts at 0% and locks thumb >= 10%) -->
+  <div class="vol-row">
+   <button class="vol-btn" id="volMuteBtn" aria-label="قطع / وصل صدا" title="قطع / وصل صدا" style="border:0;background:none;color:inherit;cursor:pointer;display:flex;align-items:center">
+    <svg class="vol-ico" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+   </button>
+   <div class="vol-track-wrapper">
+    <input type="range" class="vol-slider" id="vol" min="0" max="100" value="85" step="1" aria-label="تنظیم صدا">
+    <div class="vol-lock-pin" id="volLockPin" title="حداقل حجم صدا ۱۰٪ (قفل شده زیر ۱۰٪ برای جلوگیری از سکوت ناخواسته)">
+     <span class="lock-icon">🔒</span>
+     <span class="lock-line"></span>
+    </div>
+   </div>
+   <output id="vol-txt">۸۵٪</output>
+  </div>
+
+  <div class="note" id="note"></div>
+ </section>
+
+ <footer>
+  <p>تهیه شده اختصاصی برای اپلیکیشن</p>
+  <div class="brand">همیار من <span class="tag" lang="en" dir="ltr">HAMYAR E MAN</span></div>
+  <p>برای امیدان آینده ایران زمین</p>
+  <p><strong>اپلیکیشن همیار من (فراتر از آموزش)</strong></p>
+ </footer>
+</main>
+
+<script>
+const SCENE="{{SCENE}}".split("+");
+const AUDIO=[{{AUDIO}}];
+const FA="۰۱۲۳۴۵۶۷۸۹",fa=s=>String(s).replace(/[0-9]/g,d=>FA[d]);
+const tf=s=>{s=Math.max(0,Math.floor(s||0));const m=Math.floor(s/60);return fa(m)+":"+fa(String(s%60).padStart(2,"0"))};
+const $=id=>document.getElementById(id),NAME="{{NAME}}",KEY="lp_"+NAME;
+const st={g(k,d){try{const v=localStorage.getItem(KEY+"_"+k);return v===null?d:v}catch(e){return d}},s(k,v){try{localStorage.setItem(KEY+"_"+k,v)}catch(e){}}};
+
+const PART_TITLES=[{{PART_TITLES}}];
+
+const ready=AUDIO.length>0&&AUDIO.every(Boolean);
+const P=AUDIO.map(src=>{const a=new Audio();a.preload="metadata";if(src)a.src=src;return a});
+const D=P.map(()=>0);let cur=0,lastSave=0,masterVolume=0.85,preMuteVol=0.85;
+
+const PLAY='<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>',PAUSE='<svg viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>';
+const total=()=>D.reduce((a,b)=>a+b,0);
+const pos=()=>D.slice(0,cur).reduce((a,b)=>a+b,0)+(P[cur]?P[cur].currentTime:0);
+
+function ui(){
+ const t=total(),p=pos(),pl=!!(P[cur]&&!P[cur].paused);
+ document.body.classList.toggle("playing",pl);
+ $("pp").innerHTML=pl?PAUSE:PLAY;
+ $("fill").style.width=(t>0?p/t*100:0)+"%";
+ $("el").textContent=tf(p);
+ $("tt").textContent=tf(t);
+ const pTitle=PART_TITLES[cur]||("بخش "+fa(cur+1));
+ if($("discStatus"))$("discStatus").textContent=pTitle;
+ if($("note")&&ready)$("note").textContent=pTitle;
+}
+
+function setVolume(v){
+ masterVolume=Math.max(0.10,Math.min(1.0,v));
+ P.forEach(a=>{a.volume=masterVolume});
+ const pct=Math.round(masterVolume*100);
+ $("vol-txt").textContent=fa(pct)+"٪";
+ $("vol").value=pct;
+ st.s("vol",String(pct));
+}
+
+function go(i,t,play){
+ if(P[cur]&&cur!==i)P[cur].pause();
+ cur=i;const a=P[i];
+ a.volume=masterVolume;
+ const f=()=>{try{a.currentTime=t||0}catch(e){}};
+ if(a.readyState>0)f();else a.addEventListener("loadedmetadata",f,{once:true});
+ if(play)a.play().catch(()=>{});
+ ui();
+}
+
+function seekAbs(x){
+ let r=Math.max(0,Math.min(x,total()-.1)),i=0;
+ while(i<P.length-1&&r>=D[i]){r-=D[i];i++}
+ const w=!P[cur].paused;
+ go(i,r,w);
+}
+
+P.forEach((a,i)=>{
+ a.addEventListener("loadedmetadata",()=>{D[i]=a.duration||0;ui()});
+ a.addEventListener("timeupdate",()=>{if(i!==cur)return;ui();const n=Date.now();if(n-lastSave>4000){lastSave=n;st.s("pos",pos().toFixed(1))}});
+ a.addEventListener("play",()=>{P.forEach((o,j)=>{if(j!==i&&!o.paused)o.pause()});cur=i;ui();if("mediaSession"in navigator)navigator.mediaSession.playbackState="playing"});
+ a.addEventListener("pause",()=>{st.s("pos",pos().toFixed(1));ui();if("mediaSession"in navigator)navigator.mediaSession.playbackState="paused"});
+ a.addEventListener("ended",()=>{if(i<P.length-1){go(i+1,0,true)}else{st.s("pos","0");go(0,0,false)}});
+});
+
+function toggle(){
+ if(!ready)return;
+ const a=P[cur];
+ a.volume=masterVolume;
+ if(a.paused){
+  a.play().catch(()=>{});
+ }else{
+  a.pause();
+ }
+}
+
+function skip(d){if(ready)seekAbs(pos()+d)}
+
+$("pp").onclick=toggle;
+$("bk").onclick=()=>skip(-15);
+$("fw").onclick=()=>skip(15);
+$("bar").onclick=e=>{if(!ready)return;const r=e.currentTarget.getBoundingClientRect();seekAbs(((e.clientX-r.left)/r.width)*total())};
+
+// Volume input (enforces min 10%, physical thumb cannot go below 10% marker)
+$("vol").oninput=e=>{
+ let v=parseInt(e.target.value,10);
+ if(v<10){
+  v=10;
+  e.target.value=10;
+ }
+ setVolume(v/100);
+};
+
+// Mute toggle (cycles between current and min 10%)
+$("volMuteBtn").onclick=()=>{
+ if(masterVolume>0.12){
+  preMuteVol=masterVolume;
+  setVolume(0.10);
+ }else{
+  setVolume(preMuteVol||0.85);
+ }
+};
+
+// Initialize saved volume or default 85%
+const savedVol=parseInt(st.g("vol","85"),10);
+setVolume(Math.max(10,savedVol)/100);
+
+if(ready){
+ const saved=parseFloat(st.g("pos","0"))||0;let n=0;
+ P.forEach(a=>a.addEventListener("loadedmetadata",()=>{if(++n===P.length&&saved>3&&saved<total()-5)seekAbs(saved)},{once:true}));
+ if("mediaSession"in navigator){
+  const m=navigator.mediaSession;
+  m.metadata=new MediaMetadata({title:document.title,artist:"همیار من"});
+  m.setActionHandler("play",toggle);
+  m.setActionHandler("pause",toggle);
+  m.setActionHandler("seekbackward",()=>skip(-15));
+  m.setActionHandler("seekforward",()=>skip(15));
+ }
+}else{
+ ["pp","bk","fw"].forEach(i=>$(i).disabled=true);
+ $("note").textContent="صدای این تمرین هنوز اضافه نشده است.";
+}
+ui();
+
+
+/* ---------- vibrant moving bokeh & particle visual scenes (~30fps) ---------- */
+const cv=$("fx"),cx=cv.getContext("2d");let W=0,H=0,C1="120,60%,45%",C2="200,70%,50%",T=0,last=0;
+const RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+function colors(){const s=getComputedStyle(document.documentElement);C1=s.getPropertyValue("--fx1").trim()||C1;C2=s.getPropertyValue("--fx2").trim()||C2}
+function size(){const d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0)}
+const R=(a,b)=>a+Math.random()*(b-a);
+const mk=(n,f)=>Array.from({length:n},f);
+
+const SC={
+ fireflies(){
+  const p=mk(45,()=>({x:R(0,1),y:R(.1,1),r:R(1.8,4.5),s:R(.02,.08),ph:R(0,6.3),a:R(.3,.95)}));
+  return(t)=>{p.forEach(o=>{
+   const x=(o.x+Math.sin(t*o.s+o.ph)*.06)*W,y=(o.y+Math.cos(t*o.s*1.2+o.ph)*.05)*H,g=(Math.sin(t*.7+o.ph)*.5+.5)*o.a+.15,R2=o.r*8;
+   const gr=cx.createRadialGradient(x,y,0,x,y,R2);gr.addColorStop(0,`rgba(${C1},${g})`);gr.addColorStop(1,`rgba(${C1},0)`);cx.fillStyle=gr;cx.fillRect(x-R2,y-R2,R2*2,R2*2);
+  })}},
+ mist(){
+  // soft, irregular cloud-like bokeh blobs with no fixed outline, spread over the height, drifting very slowly
+  const clouds=mk(9,(_,i)=>({x:R(-.1,1.1),y:(i+R(.2,.8))/9*.92+.04,w:R(.18,.34),s:R(.012,.026),ph:R(0,6.3),
+   parts:mk(7,()=>({dx:R(-.9,.9),dy:R(-.6,.6),r:R(.35,1),k:R(.02,.05),p:R(0,6.3),g:R(.9,1)}))}));
+  const buf=document.createElement("canvas"),bx=buf.getContext("2d");
+  return(t)=>{
+   const k=cv.width/W;
+   if(buf.width!==cv.width||buf.height!==cv.height){buf.width=cv.width;buf.height=cv.height}
+   bx.setTransform(1,0,0,1,0,0);bx.clearRect(0,0,buf.width,buf.height);bx.setTransform(k,0,0,k,0,0);
+   clouds.forEach(c=>{
+    const ox=(c.x+Math.sin(t*c.s+c.ph)*.12)*W,oy=(c.y+Math.cos(t*c.s*.7+c.ph)*.04)*H,R0=c.w*Math.min(W,H);
+    c.parts.forEach(p=>{
+     const x=ox+p.dx*R0+Math.sin(t*p.k+p.p)*R0*.1,y=oy+p.dy*R0+Math.cos(t*p.k*.8+p.p)*R0*.08,r=p.r*R0;
+     const gr=bx.createRadialGradient(x,y,0,x,y,r);
+     gr.addColorStop(0,`rgba(${C2},${p.g})`);gr.addColorStop(.55,`rgba(${C2},${p.g*.6})`);gr.addColorStop(1,`rgba(${C2},0)`);
+     bx.fillStyle=gr;bx.fillRect(x-r,y-r,r*2,r*2);
+    });
+   });
+   // depth strength: 0% in the foreground (bottom), 60% in the far haze (middle), 25% at the top canopy
+   bx.globalCompositeOperation="destination-in";
+   const m=bx.createLinearGradient(0,0,0,H);
+   m.addColorStop(0,"rgba(0,0,0,.25)");m.addColorStop(.2,"rgba(0,0,0,.45)");m.addColorStop(.45,"rgba(0,0,0,.6)");
+   m.addColorStop(.6,"rgba(0,0,0,.45)");m.addColorStop(.76,"rgba(0,0,0,0)");m.addColorStop(1,"rgba(0,0,0,0)");
+   bx.fillStyle=m;bx.fillRect(0,0,W,H);bx.globalCompositeOperation="source-over";
+   cx.drawImage(buf,0,0,W,H);
+  };
+ },
+ water(){
+  const p=mk(40,()=>({x:R(0,1),y:R(.2,1),r:R(2.0,5.0),s:R(.025,.07),ph:R(0,6.3),a:R(.3,.9)}));
+  return(t)=>{p.forEach(o=>{
+   const x=(o.x+Math.cos(t*o.s+o.ph)*.06)*W,y=(o.y+Math.sin(t*o.s*1.3+o.ph)*.04)*H,g=(Math.sin(t*.6+o.ph)*.5+.5)*o.a+.12,R2=o.r*7.5;
+   const gr=cx.createRadialGradient(x,y,0,x,y,R2);gr.addColorStop(0,`rgba(${C1},${g})`);gr.addColorStop(1,`rgba(${C1},0)`);cx.fillStyle=gr;cx.fillRect(x-R2,y-R2,R2*2,R2*2);
+  })}},
+ waves(){
+  const p=mk(7,()=>({x:R(0,1),y:R(.3,.9),r:R(.35,.7),s:R(.012,.03),ph:R(0,6.3)}));
+  return(t)=>{p.forEach(o=>{
+   const x=(o.x+Math.sin(t*o.s+o.ph)*.18)*W,y=o.y*H,r=o.r*Math.max(W,H),gr=cx.createRadialGradient(x,y,0,x,y,r);
+   gr.addColorStop(0,`rgba(${C2},.16)`);gr.addColorStop(1,`rgba(${C2},0)`);cx.fillStyle=gr;cx.fillRect(0,0,W,H);
+  })}},
+ bokeh(){
+  const p=mk(35,()=>({x:R(0,1),y:R(0,1),r:R(6,22),s:R(.01,.04),ph:R(0,6.3),a:R(.12,.35)}));
+  return(t)=>{p.forEach(o=>{
+   const x=(o.x+Math.sin(t*o.s+o.ph)*.04)*W,y=(o.y+Math.cos(t*o.s*.9+o.ph)*.05)*H,g=(Math.sin(t*.5+o.ph)*.5+.5)*o.a+.08;
+   const gr=cx.createRadialGradient(x,y,0,x,y,o.r*2);gr.addColorStop(0,`rgba(${C1},${g})`);gr.addColorStop(1,`rgba(${C1},0)`);cx.fillStyle=gr;cx.fillRect(x-o.r*2,y-o.r*2,o.r*4,o.r*4);
+  })}}
+};
+
+const layers=[];
+SCENE.forEach(k=>{if(SC[k])layers.push(SC[k]())});
+if(layers.length===0&&SC.bokeh)layers.push(SC.bokeh());
+
+function frame(ts){
+ if(!last)last=ts;
+ const dt=ts-last;last=ts;T=ts/1000;
+ cx.clearRect(0,0,W,H);
+ layers.forEach(l=>l(T,dt));
+ if(!RM)requestAnimationFrame(frame);
+}
+
+addEventListener("resize",size);
+size();colors();
+if(RM){frame(100);layers.forEach(l=>l(0,0))}else{requestAnimationFrame(frame)}
+</script>
+</body>
+</html>
