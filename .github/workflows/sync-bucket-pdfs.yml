@@ -1,0 +1,68 @@
+name: Sync Bucket PDFs
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_prefix:
+        description: "Bucket prefix to scan (leave empty for all)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  sync-pdfs:
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.BUCKET_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.BUCKET_SECRET_KEY }}
+      AWS_ENDPOINT_URL: ${{ secrets.BUCKET_ENDPOINT }}
+      BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
+    steps:
+      - name: Checkout Books-Data
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install AWS CLI
+        run: |
+          python -m pip install --upgrade awscli
+
+      - name: Validate bucket configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          : "${AWS_ACCESS_KEY_ID:?Missing BUCKET_ACCESS_KEY secret}"
+          : "${AWS_SECRET_ACCESS_KEY:?Missing BUCKET_SECRET_KEY secret}"
+          : "${AWS_ENDPOINT_URL:?Missing BUCKET_ENDPOINT secret}"
+          : "${BUCKET_NAME:?Missing BUCKET_NAME secret}"
+
+      - name: Download PDFs preserving bucket paths
+        shell: bash
+        env:
+          SOURCE_PREFIX: ${{ inputs.source_prefix }}
+        run: |
+          set -euo pipefail
+          mkdir -p Books/Bucket
+          aws s3 cp "s3://${BUCKET_NAME}/${SOURCE_PREFIX}" Books/Bucket/ \
+            --recursive \
+            --endpoint-url "$AWS_ENDPOINT_URL" \
+            --exclude "*" \
+            --include "*.pdf" \
+            --include "*.PDF" \
+            --no-progress
+
+      - name: Commit synced PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Books/Bucket
+          if git diff --cached --quiet; then
+            echo "No PDF changes to commit."
+            exit 0
+          fi
+          git commit -m "Sync PDFs from bucket"
+          git push
