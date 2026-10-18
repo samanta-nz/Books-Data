@@ -1,0 +1,54 @@
+{
+  "contentCommit": "42362a5f6fc6ac429eb2d0dcc506ecc398822e12",
+  "applicationCommit": "253e50cfe9487bead94ed97242ab08b0f8fed7b2",
+  "htmlHashMatches": 252,
+  "themeHashMatches": 252,
+  "sourceAndApplicationBlobMatches": 504,
+  "embeddedLockedChecks": 2520,
+  "payloadsComparedToExportedBanksAndExams": 225,
+  "scopeCounts": {
+    "1": 28,
+    "2": 28,
+    "3": 28,
+    "4": 28,
+    "5": 28,
+    "6": 28,
+    "7": 28,
+    "8": 28,
+    "0": 28
+  },
+  "modeCounts": {
+    "summary": 9,
+    "flash": 9,
+    "sample": 9,
+    "assessment": 192,
+    "assessment-index": 9,
+    "final": 24
+  },
+  "canonicalQuestions": 411,
+  "canonicalCards": 190,
+  "wholeBookPoolCountedTwice": false,
+  "existingBrowserEvidence": {
+    "passedGroups": 23,
+    "exactHtmlBytesMatchBuildRecords": true,
+    "reexecuted": false,
+    "bridge": "mock using exact existing signatures"
+  },
+  "existingAndroidEvidence": {
+    "tests": 154,
+    "skipped": 2,
+    "failures": 0,
+    "deviceRun": false,
+    "reexecuted": false
+  },
+  "newContentGenerated": false,
+  "existingRoutesModified": false,
+  "independentQa": "NOT_RUN",
+  "bucketSync": "NOT_RUN",
+  "apkRelease": "NOT_RUN",
+  "verdict": "AUTHOR_VERIFIED_EXISTING_OUTPUTS",
+  "limitations": [
+    "Independent QA receipt and runtime activation are separate steps.",
+    "No real Android-device execution is claimed."
+  ]
+}

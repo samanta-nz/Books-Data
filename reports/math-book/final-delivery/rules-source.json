@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/samanta-nz/com.hamyareman.final",
+  "commit": "2c7c69db021dfefc74034377f2d30620890a7c18",
+  "zip_url": "https://github.com/samanta-nz/com.hamyareman.final/raw/2c7c69db021dfefc74034377f2d30620890a7c18/Rules/exam-content-builder.rules.zip",
+  "zip_sha256": "8eca0a4edfc3f90b6004a46e182062b5eb0f56fcd07a23a42874ddc4cce02bc2",
+  "schema_sha256": "37588e25a94a8f97ea5d13295ec5c6dc0ef4f369784e0fb6163f7dc6e2640c20",
+  "version": "2026-10-18.contracts-2",
+  "note": "Canonical rules remain in the verified Rules ZIP; this metadata is a locator, not replacement rules."
+}

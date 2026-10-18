@@ -1,0 +1,143 @@
+{
+  "packet": {
+    "handoff_id": "USER-MATH9-ALL-20261018",
+    "revision": 1,
+    "task_id": "MATH9-ALL-COMPLETION-20261018",
+    "packet_type": "WORK_ORDER",
+    "from": {
+      "role_id": "user",
+      "thread_id": null,
+      "host_id": null
+    },
+    "to": {
+      "role_id": "exam-content-builder",
+      "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+      "host_id": "durable"
+    },
+    "reply_to": {
+      "role_id": "exam-content-builder",
+      "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+      "host_id": "durable"
+    },
+    "in_reply_to": null,
+    "scope": {
+      "grade": 9,
+      "book": "ریاضی نهم",
+      "book_code": "C905",
+      "chapters": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "whole_book": true,
+      "levels": [
+        "آسان",
+        "متوسط",
+        "دشوار",
+        "درخشان"
+      ],
+      "versions_per_level": 6
+    },
+    "expected_action": "RESUME_AND_COMPLETE_ALL_MATH9_CONTENT_DELIVERY",
+    "origin_instruction_ref": "Direct user request in this chat: «پروسه قبلی را کامل کن برای همه ریاضی نهم». Scope and commit/push authorization persist from earlier user requests; no bucket upload or release authorized.",
+    "acceptance_criteria": [
+      "Deliver all eight chapters plus whole-book review using existing verified content; do not create duplicate banks or menu entries.",
+      "Match all 252 HTML and 252 themes to the exact Application assets and current template locked bytes.",
+      "Retain post-finish selftest grading, one-sentence sample feedback, single-card flashcards, Persian digits, Vazir, fixed theme and existing Hamyar storage.",
+      "Keep all 24 whole-book papers at 20 marks and the verified national-paper form; clearly label manual self-assessment.",
+      "Publish complete GitHub paths, manifest and author verification; report independent QA, device execution, sync and release separately."
+    ],
+    "rules": [
+      {
+        "path": "WORKFLOW_RULES.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "dd24ad2ba603c0e714cbfd5edbe0418fe54e95d696ec36a3e3fbb0b0367fd2c7"
+      },
+      {
+        "path": "HANDOFF.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ec0b47e279101b60f935150ef7167265f1dce1a7ea054eade94440667a95a834"
+      },
+      {
+        "path": "TEMPLATE_POLICY.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ec2401d3e833e0c78bb325f68e59ff262e618e0ce8cf8f0560405314fc946619"
+      },
+      {
+        "path": "AUDIO_POLICY.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ddec8d654f2f3b829e37fdba4e22ee1a54d263b5bffd5dc006ffc32209f4a1b8"
+      },
+      {
+        "path": "role-contracts/exam-content-builder.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "fb498a30431e26f3139fdb3207686dacbecbbe050e297628a92353ae0cdd92c5"
+      },
+      {
+        "path": "routes.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "bef925590465e3126a7deb818610d6889ed1f7334748a51717cb4ebe6e712e84"
+      },
+      {
+        "path": "registry.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "80b5a388a716c1547a3ffe2cd5cb4c265fde7d497dd55a30cd4dd8770f79237b"
+      },
+      {
+        "path": "TOKEN_POLICY.md",
+        "version": "2026-10-18.compact-1",
+        "sha256": "48849465a56131434a8810c36bedab3d3e8c0d0a54f17facf3f19ac398907fbf"
+      },
+      {
+        "path": "HANDOFF.schema.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "37588e25a94a8f97ea5d13295ec5c6dc0ef4f369784e0fb6163f7dc6e2640c20"
+      }
+    ],
+    "repositories": [
+      {
+        "url": "https://github.com/samanta-nz/Books-Data",
+        "branch": "codex/g9-math-whole-book",
+        "source_commit": "42362a5f6fc6ac429eb2d0dcc506ecc398822e12",
+        "role": "frozen-content-and-evidence"
+      },
+      {
+        "url": "https://github.com/samanta-nz/com.hamyareman.final",
+        "branch": "codex/g9-math-whole-book",
+        "source_commit": "253e50cfe9487bead94ed97242ab08b0f8fed7b2",
+        "role": "matching-application-source-and-bundled-assets"
+      }
+    ],
+    "artifacts": [],
+    "mapping": {
+      "manifest_path": "reports/math-book/final-delivery/all-files.manifest.json",
+      "routes_path": "reports/math-book/routes.json",
+      "application_routes": "grades/g09/src/main/assets/content/math-practice-routes.json",
+      "existing_routes": 252,
+      "duplicate_menu_creation": false
+    },
+    "dependencies": [],
+    "validation": [],
+    "payload": {
+      "operation_kind": "CONTENT_GENERATION",
+      "captured_direct_user_instruction": "پروسه قبلی را کامل کن برای همه ریاضی نهم",
+      "capture_type": "DIRECT_CHAT_REQUEST_NOT_A_MANAGER_MESSAGE",
+      "reuse_existing_output": true,
+      "push_to_existing_delivery_branches": true,
+      "authorized_runtime_activation": false
+    }
+  },
+  "packet_sha256": "331fd4a010574de5d62fa0faee8440de0cc5473c57344e32830986d80417ab6f",
+  "state": {
+    "transport": "DRAFT",
+    "input_decision": "ACCEPTED",
+    "work_status": "IN_PROGRESS",
+    "publication": "NONE",
+    "delivery_receipt": null
+  }
+}

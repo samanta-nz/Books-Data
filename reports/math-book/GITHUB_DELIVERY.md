@@ -1,5 +1,7 @@
 # نشانی‌های تحویل GitHub
 
+راهنمای کامل هر هشت فصل و مرور جامع: [START_HERE_ALL_MATH9.md](https://github.com/samanta-nz/Books-Data/blob/codex/g9-math-whole-book/reports/math-book/final-delivery/START_HERE_ALL_MATH9.md). manifest کامل، همهٔ ۲۵۲ HTML و Themeهای متناظر را به commit ثابت محتوا و اپ متصل می‌کند.
+
 این مرحله پس از دستور تازهٔ کاربر برای commit و push انجام می‌شود؛ گزارش‌های آزمون قبلی مربوط به مرحلهٔ تولید و بررسی محلی‌اند.
 
 | مورد | نشانی |
