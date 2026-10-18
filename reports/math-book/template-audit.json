@@ -1,0 +1,1284 @@
+{
+  "upstream": "https://github.com/samanta-nz/Books-Data/tree/main/teaching%20-%20template",
+  "revision": "51afd4c3a91be6026668fa248aaaa762c384bd70",
+  "reference": "teaching - template/lesson-template.preview-standalone.html",
+  "completedExample": "teaching - template/ryazif01d01.html",
+  "lockedFiles": {
+    "assets/css/locked/00-fonts.css": "3b6dadbb152e3a30c43429d9d33e7ffe85e357aa5b97331bef9ae81d9a990def",
+    "assets/css/locked/10-base.css": "e44f180c32ebb10dc9db44595cfd057a50904fd1765dbb62d4f48477beafe4c1",
+    "assets/css/locked/20-header.css": "9cc3812747576677af0ed57e4999634bb1135b2693bbe97471e5372c70688ef8",
+    "assets/css/locked/30-floater.css": "7cc98709995a620ad730d06078097e596a5aa4a3b5bf699674e34a27ff60a8d7",
+    "assets/css/locked/40-content.css": "b655b8bdf4537a12f3bf4caa30d0876e473f639ee9c7540adf6fe6c8a21db7de",
+    "assets/css/locked/50-interactive.css": "7853fb08c117d8cf6484eeff8e82e66f394162be38163cdb6ddf23d6e0497821",
+    "assets/css/locked/60-eye-care.css": "8d581e4c87185bc80e0d718c16224731e5f2a71e937f21546e3dbaf6574585cd",
+    "assets/css/locked/70-footer.css": "b61e722a8ec6e66da3143b5455513398d3f973e0062e99344fe5ea2c2791d389",
+    "assets/css/locked/90-a11y-print.css": "aada6cce3b552883e40c9178c4087ab95134765c89ca3969a63fc76a75aa7068",
+    "assets/js/locked/ui.js": "65496954fa8cbebc95a402cb1b49430797cb12cc60289266365bf2d9a22d2799"
+  },
+  "generatedFiles": [
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-brilliant-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-brilliant-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-brilliant-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-brilliant-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-brilliant-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-brilliant-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-easy-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-easy-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-easy-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-easy-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-easy-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-easy-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-hard-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-hard-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-hard-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-hard-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-hard-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-hard-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-medium-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-medium-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-medium-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-medium-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-medium-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05-medium-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N10.1/TAB05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N10.1/assets/css/theme/TAB05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-brilliant-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-brilliant-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-brilliant-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-brilliant-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-brilliant-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-brilliant-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-easy-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-easy-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-easy-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-easy-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-easy-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-easy-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-hard-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-hard-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-hard-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-hard-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-hard-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-hard-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-medium-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-medium-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-medium-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-medium-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-medium-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05-medium-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N2.5/TAB05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N2.5/assets/css/theme/TAB05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-brilliant-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-brilliant-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-brilliant-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-brilliant-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-brilliant-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-brilliant-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-easy-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-easy-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-easy-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-easy-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-easy-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-easy-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-hard-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-hard-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-hard-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-hard-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-hard-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-hard-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-medium-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-medium-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-medium-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-medium-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-medium-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05-medium-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N3.4/TAB05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N3.4/assets/css/theme/TAB05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-brilliant-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-brilliant-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-brilliant-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-brilliant-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-brilliant-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-brilliant-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-easy-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-easy-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-easy-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-easy-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-easy-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-easy-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-hard-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-hard-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-hard-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-hard-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-hard-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-hard-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-medium-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-medium-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-medium-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-medium-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-medium-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05-medium-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N4.6/TAB05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N4.6/assets/css/theme/TAB05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-brilliant-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-brilliant-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-brilliant-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-brilliant-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-brilliant-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-brilliant-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-easy-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-easy-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-easy-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-easy-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-easy-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-easy-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-hard-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-hard-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-hard-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-hard-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-hard-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-hard-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-medium-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-medium-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-medium-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-medium-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-medium-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05-medium-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N5.5/TAB05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N5.5/assets/css/theme/TAB05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-brilliant-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-brilliant-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-brilliant-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-brilliant-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-brilliant-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-brilliant-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-easy-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-easy-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-easy-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-easy-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-easy-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-easy-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-hard-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-hard-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-hard-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-hard-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-hard-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-hard-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-medium-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-medium-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-medium-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-medium-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-medium-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05-medium-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N6.4/TAB05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N6.4/assets/css/theme/TAB05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-brilliant-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-brilliant-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-brilliant-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-brilliant-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-brilliant-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-brilliant-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-easy-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-easy-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-easy-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-easy-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-easy-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-easy-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-hard-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-hard-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-hard-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-hard-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-hard-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-hard-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-medium-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-medium-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-medium-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-medium-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-medium-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05-medium-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N7.4/TAB05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N7.4/assets/css/theme/TAB05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-brilliant-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-brilliant-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-brilliant-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-brilliant-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-brilliant-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-brilliant-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-easy-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-easy-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-easy-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-easy-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-easy-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-easy-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-hard-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-hard-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-hard-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-hard-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-hard-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-hard-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-medium-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-medium-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-medium-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-medium-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-medium-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05-medium-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N8.4/TAB05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N8.4/assets/css/theme/TAB05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-brilliant-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-brilliant-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-brilliant-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-brilliant-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-brilliant-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-brilliant-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-easy-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-easy-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-easy-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-easy-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-easy-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-easy-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-hard-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-hard-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-hard-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-hard-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-hard-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-hard-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-01.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-medium-01.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-02.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-medium-02.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-03.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-medium-03.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-04.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-medium-04.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-medium-05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-06.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05-medium-06.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    },
+    {
+      "html": "Bucket/Html-files/app/books/C905/N9.4/TAB05.html",
+      "theme": "Bucket/Html-files/app/books/C905/N9.4/assets/css/theme/TAB05.theme.css",
+      "templateRevision": "51afd4c3a91be6026668fa248aaaa762c384bd70"
+    }
+  ],
+  "lockedVerification": "OK — all locked files intact",
+  "fontCompatibility": "Actual Vazir FD 400/500/700 kept in page themes by explicit user rule; locked Vazirmatn assets remain byte-identical.",
+  "upstreamLockedAndChecksumByteMatch": true,
+  "checksumFileSha256": "056e954de98ef4a09ddeb0dd142e0dc4fe6aee075bff2b369f5ba02217191274"
+}

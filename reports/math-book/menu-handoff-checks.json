@@ -1,0 +1,13 @@
+{
+  "unpackedValidatorPassed": true,
+  "supportPatchAppliesToRecordedBase": true,
+  "mergeIdempotent": true,
+  "otherBooksAndEightChaptersPreserved": true,
+  "routeCount": 28,
+  "htmlFiles": 28,
+  "themeFiles": 28,
+  "wholeBookPackCount": 1,
+  "allHtmlBytesMatchValidatedOutput": true,
+  "androidDeviceRun": false,
+  "externalSyncPerformed": false
+}

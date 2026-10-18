@@ -1,0 +1,403 @@
+Picked up JAVA_TOOL_OPTIONS:  -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080 -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.6.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :core-appwrite:preBuild UP-TO-DATE
+> Task :core-common:preBuild UP-TO-DATE
+> Task :core-common:preDebugBuild UP-TO-DATE
+> Task :core-appwrite:preDebugBuild UP-TO-DATE
+> Task :core-appwrite:generateDebugResources
+> Task :core-common:generateDebugResources
+> Task :core-appwrite:processDebugNavigationResources
+> Task :core-appwrite:javaPreCompileDebug
+> Task :core-common:packageDebugResources
+> Task :core-designsystem:preBuild UP-TO-DATE
+> Task :core-appwrite:packageDebugResources
+> Task :core-common:processDebugNavigationResources FROM-CACHE
+> Task :core-appwrite:parseDebugLocalResources
+> Task :core-common:parseDebugLocalResources
+> Task :core-common:generateDebugRFile
+> Task :core-appwrite:generateDebugRFile
+> Task :core-designsystem:preDebugBuild UP-TO-DATE
+> Task :core-designsystem:generateDebugResources FROM-CACHE
+> Task :core-designsystem:packageDebugResources
+> Task :core-designsystem:processDebugNavigationResources FROM-CACHE
+> Task :core-designsystem:parseDebugLocalResources FROM-CACHE
+> Task :core-designsystem:generateDebugRFile
+> Task :core-designsystem:javaPreCompileDebug FROM-CACHE
+> Task :core-notifications:preBuild UP-TO-DATE
+> Task :core-notifications:preDebugBuild UP-TO-DATE
+> Task :core-notifications:generateDebugResources
+> Task :core-notifications:packageDebugResources
+> Task :core-notifications:processDebugNavigationResources
+> Task :core-notifications:parseDebugLocalResources
+> Task :core-notifications:generateDebugRFile
+> Task :core-notifications:javaPreCompileDebug FROM-CACHE
+> Task :core-security:preBuild UP-TO-DATE
+> Task :core-security:preDebugBuild UP-TO-DATE
+> Task :core-security:generateDebugResources FROM-CACHE
+> Task :core-security:packageDebugResources
+> Task :core-security:processDebugNavigationResources FROM-CACHE
+> Task :core-security:parseDebugLocalResources FROM-CACHE
+> Task :core-security:generateDebugRFile
+> Task :core-security:javaPreCompileDebug FROM-CACHE
+> Task :core-sync:preBuild UP-TO-DATE
+> Task :core-sync:preDebugBuild UP-TO-DATE
+> Task :core-sync:generateDebugResources FROM-CACHE
+> Task :core-sync:packageDebugResources
+> Task :core-sync:processDebugNavigationResources FROM-CACHE
+> Task :core-sync:parseDebugLocalResources FROM-CACHE
+> Task :core-sync:generateDebugRFile
+> Task :core-sync:javaPreCompileDebug FROM-CACHE
+> Task :feature-calls:preBuild UP-TO-DATE
+> Task :feature-calls:preDebugBuild UP-TO-DATE
+> Task :feature-calls:generateDebugResources
+> Task :feature-calls:packageDebugResources
+> Task :feature-calls:processDebugNavigationResources
+> Task :feature-calls:parseDebugLocalResources
+> Task :feature-calls:generateDebugRFile
+> Task :feature-calls:javaPreCompileDebug FROM-CACHE
+> Task :feature-hearttoheart:preBuild UP-TO-DATE
+> Task :feature-hearttoheart:preDebugBuild UP-TO-DATE
+> Task :feature-hearttoheart:generateDebugResources FROM-CACHE
+> Task :feature-hearttoheart:packageDebugResources
+> Task :feature-hearttoheart:processDebugNavigationResources FROM-CACHE
+> Task :feature-hearttoheart:parseDebugLocalResources FROM-CACHE
+> Task :feature-hearttoheart:generateDebugRFile
+> Task :feature-hearttoheart:javaPreCompileDebug FROM-CACHE
+> Task :feature-pairing:preBuild UP-TO-DATE
+> Task :feature-pairing:preDebugBuild UP-TO-DATE
+> Task :feature-pairing:generateDebugResources FROM-CACHE
+> Task :feature-pairing:packageDebugResources
+> Task :feature-pairing:processDebugNavigationResources FROM-CACHE
+> Task :feature-pairing:parseDebugLocalResources FROM-CACHE
+> Task :feature-pairing:generateDebugRFile
+> Task :feature-pairing:javaPreCompileDebug FROM-CACHE
+> Task :feature-playback:preBuild UP-TO-DATE
+> Task :feature-playback:preDebugBuild UP-TO-DATE
+> Task :feature-playback:generateDebugResources
+> Task :feature-playback:packageDebugResources
+> Task :feature-playback:processDebugNavigationResources
+> Task :feature-playback:parseDebugLocalResources
+> Task :feature-playback:generateDebugRFile
+> Task :feature-playback:javaPreCompileDebug FROM-CACHE
+> Task :feature-study:preBuild UP-TO-DATE
+> Task :feature-study:preDebugBuild UP-TO-DATE
+> Task :feature-study:generateDebugResources FROM-CACHE
+> Task :feature-study:packageDebugResources
+> Task :feature-study:processDebugNavigationResources FROM-CACHE
+> Task :feature-study:parseDebugLocalResources FROM-CACHE
+> Task :feature-study:generateDebugRFile
+> Task :feature-study:javaPreCompileDebug FROM-CACHE
+> Task :grade-g09:preBuild UP-TO-DATE
+> Task :grade-g09:preDebugBuild UP-TO-DATE
+> Task :grade-g09:generateDebugResources FROM-CACHE
+> Task :grade-g09:packageDebugResources
+> Task :grade-g09:processDebugNavigationResources FROM-CACHE
+> Task :grade-g09:parseDebugLocalResources FROM-CACHE
+> Task :grade-g09:generateDebugRFile
+> Task :grade-g09:javaPreCompileDebug FROM-CACHE
+> Task :hamyar-app:preBuild UP-TO-DATE
+> Task :hamyar-app:preP09DebugBuild UP-TO-DATE
+> Task :hamyar-app:generateP09DebugBuildConfig
+> Task :hamyar-app:generateP09DebugResValues
+> Task :hamyar-app:generateP09DebugResources
+> Task :hamyar-app:packageP09DebugResources
+> Task :patches:preBuild UP-TO-DATE
+> Task :patches:preDebugBuild UP-TO-DATE
+> Task :patches:processDebugNavigationResources FROM-CACHE
+> Task :core-common:compileDebugKotlin
+> Task :hamyar-app:processP09DebugNavigationResources
+> Task :core-common:javaPreCompileDebug FROM-CACHE
+> Task :core-common:compileDebugJavaWithJavac NO-SOURCE
+> Task :core-common:bundleLibCompileToJarDebug
+
+> Task :core-appwrite:compileDebugKotlin
+w: file:///workspace/hamyar-math-app/core/core-appwrite/src/main/java/com/hamyareman/ir/platform/core/appwrite/AuthService.kt:492:26 Unnecessary safe call on a non-null receiver of type 'LocalStore'.
+w: file:///workspace/hamyar-math-app/core/core-appwrite/src/main/java/com/hamyareman/ir/platform/core/appwrite/FunctionsService.kt:93:43 Unnecessary safe call on a non-null receiver of type 'ResponseBody'.
+w: file:///workspace/hamyar-math-app/core/core-appwrite/src/main/java/com/hamyareman/ir/platform/core/appwrite/FunctionsService.kt:102:30 'when' expression over a subject of type 'Any?' is not exhaustive. Add a 'null' or 'else' branch.
+w: file:///workspace/hamyar-math-app/core/core-appwrite/src/main/java/com/hamyareman/ir/platform/core/appwrite/FunctionsService.kt:107:32 'when' expression over a subject of type 'Any?' is not exhaustive. Add a 'null' or 'else' branch.
+w: file:///workspace/hamyar-math-app/core/core-appwrite/src/main/java/com/hamyareman/ir/platform/core/appwrite/TablesDbService.kt:124:9 Expression is unused.
+w: file:///workspace/hamyar-math-app/core/core-appwrite/src/main/java/com/hamyareman/ir/platform/core/appwrite/TablesDbService.kt:134:9 Expression is unused.
+w: file:///workspace/hamyar-math-app/core/core-appwrite/src/main/java/com/hamyareman/ir/platform/core/appwrite/TablesDbService.kt:150:9 Expression is unused.
+w: file:///workspace/hamyar-math-app/core/core-appwrite/src/main/java/com/hamyareman/ir/platform/core/appwrite/TablesDbService.kt:159:9 Expression is unused.
+
+> Task :core-appwrite:compileDebugJavaWithJavac NO-SOURCE
+> Task :core-appwrite:bundleLibRuntimeToJarDebug
+> Task :core-appwrite:processDebugJavaRes
+> Task :core-common:bundleLibRuntimeToJarDebug
+> Task :core-common:processDebugJavaRes
+
+> Task :core-designsystem:compileDebugKotlin
+w: file:///workspace/hamyar-math-app/core/core-designsystem/src/main/java/com/hamyareman/ir/platform/core/designsystem/Components.kt:77:45 'val Icons.Outlined.HelpOutline: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.HelpOutline.
+w: file:///workspace/hamyar-math-app/core/core-designsystem/src/main/java/com/hamyareman/ir/platform/core/designsystem/PinLockGate.kt:506:28 Unnecessary safe call on a non-null receiver of type '(String) -> Boolean'.
+
+> Task :core-designsystem:compileDebugJavaWithJavac NO-SOURCE
+> Task :core-designsystem:bundleLibRuntimeToJarDebug
+> Task :core-designsystem:processDebugJavaRes
+
+> Task :core-notifications:compileDebugKotlin
+w: file:///workspace/hamyar-math-app/core/core-notifications/src/main/java/com/hamyareman/ir/platform/core/notifications/QuietHours.kt:153:28 Unnecessary safe call on a non-null receiver of type 'NotificationManager'.
+w: file:///workspace/hamyar-math-app/core/core-notifications/src/main/java/com/hamyareman/ir/platform/core/notifications/QuietHours.kt:161:34 Unnecessary safe call on a non-null receiver of type 'NotificationManager'.
+
+> Task :core-notifications:compileDebugJavaWithJavac NO-SOURCE
+> Task :core-notifications:bundleLibRuntimeToJarDebug
+> Task :core-notifications:processDebugJavaRes
+> Task :core-appwrite:bundleLibCompileToJarDebug
+> Task :core-sync:compileDebugKotlin
+> Task :core-sync:compileDebugJavaWithJavac NO-SOURCE
+> Task :core-sync:bundleLibRuntimeToJarDebug
+> Task :core-sync:processDebugJavaRes
+> Task :core-designsystem:bundleLibCompileToJarDebug
+
+> Task :feature-calls:compileDebugKotlin
+w: file:///workspace/hamyar-math-app/features/feature-calls/src/main/java/com/hamyareman/ir/platform/feature/calls/CallEngine.kt:389:58 The corresponding parameter in the supertype 'SdpAdapter' is named 'sdp'. This may cause problems when calling this function with named arguments.
+
+> Task :feature-calls:compileDebugJavaWithJavac NO-SOURCE
+> Task :feature-calls:bundleLibRuntimeToJarDebug
+> Task :feature-calls:processDebugJavaRes
+> Task :core-security:compileDebugKotlin
+> Task :core-security:compileDebugJavaWithJavac NO-SOURCE
+> Task :core-security:bundleLibRuntimeToJarDebug
+> Task :core-security:processDebugJavaRes
+> Task :feature-pairing:compileDebugKotlin
+> Task :feature-pairing:compileDebugJavaWithJavac NO-SOURCE
+> Task :feature-pairing:bundleLibRuntimeToJarDebug
+> Task :feature-pairing:processDebugJavaRes
+> Task :core-sync:bundleLibCompileToJarDebug
+> Task :feature-hearttoheart:compileDebugKotlin
+> Task :feature-hearttoheart:compileDebugJavaWithJavac NO-SOURCE
+> Task :feature-hearttoheart:bundleLibRuntimeToJarDebug
+> Task :feature-hearttoheart:processDebugJavaRes
+> Task :feature-study:compileDebugKotlin
+> Task :feature-study:compileDebugJavaWithJavac NO-SOURCE
+> Task :feature-study:bundleLibRuntimeToJarDebug
+> Task :feature-study:processDebugJavaRes
+> Task :feature-study:bundleLibCompileToJarDebug
+
+> Task :feature-playback:compileDebugKotlin
+w: file:///workspace/hamyar-math-app/features/feature-playback/src/main/java/com/hamyareman/ir/platform/feature/playback/PlaybackService.kt:130:58 'constructor(p0: MediaSession): MediaSession.ConnectionResult.AcceptedResultBuilder' is deprecated. Deprecated in Java.
+w: file:///workspace/hamyar-math-app/features/feature-playback/src/main/java/com/hamyareman/ir/platform/feature/playback/PlaybackService.kt:167:30 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///workspace/hamyar-math-app/features/feature-playback/src/main/java/com/hamyareman/ir/platform/feature/playback/PlaybackService.kt:180:34 'fun onPlayerCommandRequest(p0: MediaSession, p1: MediaSession.ControllerInfo, p2: Int): Int' is deprecated. Deprecated in Java.
+w: file:///workspace/hamyar-math-app/features/feature-playback/src/main/java/com/hamyareman/ir/platform/feature/playback/SleepPlaybackService.kt:61:58 'constructor(p0: MediaSession): MediaSession.ConnectionResult.AcceptedResultBuilder' is deprecated. Deprecated in Java.
+
+> Task :feature-playback:compileDebugJavaWithJavac NO-SOURCE
+> Task :feature-playback:bundleLibRuntimeToJarDebug
+> Task :feature-playback:processDebugJavaRes
+> Task :core-notifications:bundleLibCompileToJarDebug
+> Task :core-security:bundleLibCompileToJarDebug
+> Task :feature-calls:bundleLibCompileToJarDebug
+> Task :feature-hearttoheart:bundleLibCompileToJarDebug
+> Task :feature-pairing:bundleLibCompileToJarDebug
+> Task :feature-playback:bundleLibCompileToJarDebug
+> Task :hamyar-app:parseP09DebugLocalResources
+> Task :hamyar-app:generateP09DebugRFile
+> Task :patches:generateDebugResources FROM-CACHE
+> Task :patches:packageDebugResources
+> Task :patches:parseDebugLocalResources FROM-CACHE
+> Task :patches:generateDebugRFile
+> Task :grade-g09:compileDebugKotlin
+> Task :grade-g09:compileDebugJavaWithJavac NO-SOURCE
+> Task :grade-g09:bundleLibRuntimeToJarDebug
+> Task :grade-g09:processDebugJavaRes
+> Task :grade-g09:bundleLibCompileToJarDebug
+> Task :patches:javaPreCompileDebug FROM-CACHE
+> Task :hamyar-app:javaPreCompileP09Debug FROM-CACHE
+> Task :core-appwrite:mapDebugSourceSetPaths
+> Task :patches:compileDebugKotlin
+> Task :patches:compileDebugJavaWithJavac NO-SOURCE
+> Task :patches:bundleLibCompileToJarDebug
+> Task :core-appwrite:compileDebugLibraryResources
+> Task :core-common:mapDebugSourceSetPaths
+> Task :core-common:compileDebugLibraryResources FROM-CACHE
+> Task :core-designsystem:mapDebugSourceSetPaths
+> Task :core-designsystem:compileDebugLibraryResources FROM-CACHE
+> Task :core-notifications:mapDebugSourceSetPaths
+> Task :core-notifications:compileDebugLibraryResources
+> Task :core-security:mapDebugSourceSetPaths
+> Task :core-security:compileDebugLibraryResources FROM-CACHE
+> Task :core-sync:mapDebugSourceSetPaths
+> Task :core-sync:compileDebugLibraryResources FROM-CACHE
+> Task :feature-calls:mapDebugSourceSetPaths
+> Task :feature-calls:compileDebugLibraryResources
+> Task :feature-hearttoheart:mapDebugSourceSetPaths
+> Task :feature-hearttoheart:compileDebugLibraryResources FROM-CACHE
+> Task :feature-pairing:mapDebugSourceSetPaths
+> Task :feature-pairing:compileDebugLibraryResources FROM-CACHE
+> Task :feature-playback:mapDebugSourceSetPaths
+> Task :feature-playback:compileDebugLibraryResources
+> Task :feature-study:mapDebugSourceSetPaths
+> Task :feature-study:compileDebugLibraryResources FROM-CACHE
+> Task :grade-g09:mapDebugSourceSetPaths
+> Task :grade-g09:compileDebugLibraryResources FROM-CACHE
+> Task :core-appwrite:writeDebugAarMetadata
+> Task :core-common:writeDebugAarMetadata
+> Task :core-designsystem:writeDebugAarMetadata
+> Task :core-notifications:writeDebugAarMetadata
+> Task :core-security:writeDebugAarMetadata
+> Task :core-sync:writeDebugAarMetadata
+> Task :feature-calls:writeDebugAarMetadata
+> Task :feature-hearttoheart:writeDebugAarMetadata
+> Task :feature-pairing:writeDebugAarMetadata
+> Task :feature-playback:writeDebugAarMetadata
+> Task :feature-study:writeDebugAarMetadata
+> Task :grade-g09:writeDebugAarMetadata
+> Task :patches:writeDebugAarMetadata
+> Task :core-appwrite:extractDeepLinksDebug
+> Task :core-appwrite:processDebugManifest
+> Task :core-common:extractDeepLinksDebug FROM-CACHE
+> Task :core-common:processDebugManifest
+> Task :core-designsystem:extractDeepLinksDebug FROM-CACHE
+> Task :core-designsystem:processDebugManifest
+> Task :core-notifications:extractDeepLinksDebug FROM-CACHE
+> Task :core-notifications:processDebugManifest
+> Task :core-security:extractDeepLinksDebug FROM-CACHE
+> Task :core-security:processDebugManifest
+> Task :core-sync:extractDeepLinksDebug FROM-CACHE
+> Task :core-sync:processDebugManifest
+> Task :feature-calls:extractDeepLinksDebug FROM-CACHE
+> Task :feature-calls:processDebugManifest
+> Task :feature-hearttoheart:extractDeepLinksDebug FROM-CACHE
+> Task :feature-hearttoheart:processDebugManifest
+> Task :feature-pairing:extractDeepLinksDebug FROM-CACHE
+> Task :feature-pairing:processDebugManifest
+> Task :feature-playback:extractDeepLinksDebug FROM-CACHE
+> Task :feature-playback:processDebugManifest
+> Task :feature-study:extractDeepLinksDebug FROM-CACHE
+> Task :feature-study:processDebugManifest
+> Task :grade-g09:extractDeepLinksDebug FROM-CACHE
+> Task :grade-g09:processDebugManifest
+> Task :patches:extractDeepLinksDebug FROM-CACHE
+> Task :patches:processDebugManifest
+> Task :patches:mapDebugSourceSetPaths
+> Task :patches:compileDebugLibraryResources FROM-CACHE
+> Task :patches:bundleLibRuntimeToJarDebug
+> Task :patches:processDebugJavaRes
+> Task :patches:preDebugUnitTestBuild UP-TO-DATE
+> Task :patches:generateDebugUnitTestStubRFile
+> Task :patches:compileDebugUnitTestKotlin
+> Task :patches:javaPreCompileDebugUnitTest FROM-CACHE
+> Task :patches:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :patches:processDebugUnitTestJavaRes
+
+> Task :patches:testDebugUnitTest
+Picked up JAVA_TOOL_OPTIONS:  -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080 -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080
+
+> Task :hamyar-app:checkP09DebugAarMetadata
+> Task :hamyar-app:mapP09DebugSourceSetPaths
+> Task :hamyar-app:compileP09DebugNavigationResources
+> Task :hamyar-app:mergeP09DebugResources
+> Task :hamyar-app:createP09DebugCompatibleScreenManifests
+> Task :hamyar-app:extractDeepLinksP09Debug
+> Task :hamyar-app:processP09DebugMainManifest
+> Task :hamyar-app:processP09DebugManifest
+> Task :hamyar-app:processP09DebugManifestForPackage
+> Task :hamyar-app:processP09DebugResources
+> Task :hamyar-app:preP09DebugUnitTestBuild UP-TO-DATE
+> Task :hamyar-app:javaPreCompileP09DebugUnitTest FROM-CACHE
+> Task :feature-study:preDebugUnitTestBuild UP-TO-DATE
+> Task :hamyar-app:compileP09DebugKotlin
+> Task :feature-study:generateDebugUnitTestStubRFile
+> Task :feature-study:compileDebugUnitTestKotlin
+> Task :feature-study:javaPreCompileDebugUnitTest FROM-CACHE
+> Task :feature-study:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :feature-study:processDebugUnitTestJavaRes
+
+> Task :feature-study:testDebugUnitTest
+Picked up JAVA_TOOL_OPTIONS:  -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080 -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080
+
+> Task :hamyar-app:compileP09DebugKotlin
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/MainActivity.kt:255:41 No cast needed.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/di/AppContainer.kt:70:53 Expression is unused.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/appearance/FontFloater.kt:154:56 'fun Modifier.menuAnchor(): Modifier' is deprecated. Use overload that takes ExposedDropdownMenuAnchorType and enabled parameters.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/auth/LoginScreen.kt:501:9 'fun Divider(modifier: Modifier = ..., thickness: Dp = ..., color: Color = ...): Unit' is deprecated. Renamed to HorizontalDivider.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/auth/LoginScreen.kt:503:9 'fun Divider(modifier: Modifier = ..., thickness: Dp = ..., color: Color = ...): Unit' is deprecated. Renamed to HorizontalDivider.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/components/LinedNotebook.kt:461:31 'val Icons.Filled.FormatAlignRight: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.FormatAlignRight.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/components/LinedNotebook.kt:481:31 'val Icons.Filled.FormatAlignLeft: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.FormatAlignLeft.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/content/ContentScreens.kt:155:45 Unnecessary safe call on a non-null receiver of type 'ContentItem'.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/content/ContentScreens.kt:156:13 Unnecessary safe call on a non-null receiver of type 'ContentItem'.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/content/ContentScreens.kt:168:32 Unnecessary safe call on a non-null receiver of type 'ContentItem'.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/content/ContentScreens.kt:179:13 Condition is always 'false'.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/content/ContentScreens.kt:260:13 Condition is always 'true'.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/cycle/PeriodTrainingScreen.kt:74:9 'fun TabRow(selectedTabIndex: Int, modifier: Modifier = ..., containerColor: Color = ..., contentColor: Color = ..., indicator: ComposableFunction1<List<TabPosition>, Unit> = ..., divider: ComposableFunction0<Unit> = ..., tabs: ComposableFunction0<Unit>): Unit' is deprecated. Replaced with PrimaryTabRow and SecondaryTabRow.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/forum/ConversationsScreen.kt:48:9 'fun TabRow(selectedTabIndex: Int, modifier: Modifier = ..., containerColor: Color = ..., contentColor: Color = ..., indicator: ComposableFunction1<List<TabPosition>, Unit> = ..., divider: ComposableFunction0<Unit> = ..., tabs: ComposableFunction0<Unit>): Unit' is deprecated. Replaced with PrimaryTabRow and SecondaryTabRow.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/forum/ForumScreen.kt:49:19 'val LocalClipboardManager: ProvidableCompositionLocal<ClipboardManager>' is deprecated. Use LocalClipboard instead which supports suspend functions.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/forum/ForumScreen.kt:125:59 'val Icons.Filled.ArrowForward: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowForward.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/forum/ForumScreen.kt:127:82 'val Icons.Filled.HelpOutline: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.HelpOutline.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/forum/ForumScreen.kt:201:35 'val Icons.Filled.Send: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.Send.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/learning/LearningScreens.kt:94:8 Annotation 'androidx.media3.common.util.UnstableApi' is not annotated with '@RequiresOptIn'. '@OptIn' has no effect.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/learning/LessonPlayerScreen.kt:302:30 'val Icons.Filled.VolumeUp: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.VolumeUp.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/profile/IranPlaces.kt:101:48 'fun Modifier.menuAnchor(): Modifier' is deprecated. Use overload that takes ExposedDropdownMenuAnchorType and enabled parameters.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/profile/JalaliBirthDateFields.kt:115:48 'fun Modifier.menuAnchor(): Modifier' is deprecated. Use overload that takes ExposedDropdownMenuAnchorType and enabled parameters.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/profile/StudentProfileScreen.kt:251:42 Condition is always 'true'.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/profile/StudentProfileScreen.kt:251:57 Condition is always 'true'.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/safespace/DiaryScreens.kt:757:52 'val Icons.Filled.MenuBook: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.MenuBook.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/safespace/DiaryScreens.kt:1233:52 'val Icons.Filled.MenuBook: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.MenuBook.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/safespace/PoetryBookScreen.kt:294:52 'val Icons.Filled.MenuBook: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.MenuBook.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/safespace/PoetryBookScreen.kt:340:52 'val Icons.Filled.MenuBook: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.MenuBook.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/safespace/SafeSpaceScreens.kt:147:63 Condition is always 'true'.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/safespace/SafeSpaceScreens.kt:162:64 Condition is always 'true'.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/safespace/SafeSpaceScreens.kt:196:36 'val Icons.Outlined.MenuBook: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.MenuBook.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/BookCommentsPanel.kt:189:37 'val Icons.Outlined.Reply: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.Reply.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/BookNodeScreen.kt:223:87 The corresponding parameter in the supertype 'HmkWebViewClient' is named 'url'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/ClassPlanScreen.kt:110:9 'fun ScrollableTabRow(selectedTabIndex: Int, modifier: Modifier = ..., containerColor: Color = ..., contentColor: Color = ..., edgePadding: Dp = ..., indicator: ComposableFunction1<List<TabPosition>, Unit> = ..., divider: ComposableFunction0<Unit> = ..., tabs: ComposableFunction0<Unit>): Unit' is deprecated. Replaced with PrimaryScrollableTabRow and SecondaryScrollableTabRow tab variants.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/FreeReadingScreen.kt:124:13 'fun TabRow(selectedTabIndex: Int, modifier: Modifier = ..., containerColor: Color = ..., contentColor: Color = ..., indicator: ComposableFunction1<List<TabPosition>, Unit> = ..., divider: ComposableFunction0<Unit> = ..., tabs: ComposableFunction0<Unit>): Unit' is deprecated. Replaced with PrimaryTabRow and SecondaryTabRow.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/FreeReadingScreen.kt:141:9 'fun TabRow(selectedTabIndex: Int, modifier: Modifier = ..., containerColor: Color = ..., contentColor: Color = ..., indicator: ComposableFunction1<List<TabPosition>, Unit> = ..., divider: ComposableFunction0<Unit> = ..., tabs: ComposableFunction0<Unit>): Unit' is deprecated. Replaced with PrimaryTabRow and SecondaryTabRow.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/FreeReadingScreen.kt:196:45 'val Icons.Outlined.LibraryBooks: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.LibraryBooks.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/FreeReadingScreen.kt:690:87 The corresponding parameter in the supertype 'HmkWebViewClient' is named 'url'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/HmkWebViewClient.kt:79:13 Condition is always 'false'.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/LessonTeachScreen.kt:647:55 'val Icons.Filled.VolumeOff: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.VolumeOff.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/LessonTeachScreen.kt:647:83 'val Icons.Filled.VolumeUp: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.VolumeUp.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/PdfScreen.kt:1244:93 'val Icons.Filled.OpenInNew: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.OpenInNew.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/PdfScreen.kt:1288:71 'val Icons.Filled.OpenInNew: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.OpenInNew.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/PremiumMediaPlayer.kt:294:150 'val Icons.Filled.VolumeOff: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.VolumeOff.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/PremiumMediaPlayer.kt:294:179 'val Icons.Filled.VolumeUp: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.VolumeUp.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/RemoteLessonScreen.kt:28:9 'fun ScrollableTabRow(selectedTabIndex: Int, modifier: Modifier = ..., containerColor: Color = ..., contentColor: Color = ..., edgePadding: Dp = ..., indicator: ComposableFunction1<List<TabPosition>, Unit> = ..., divider: ComposableFunction0<Unit> = ..., tabs: ComposableFunction0<Unit>): Unit' is deprecated. Replaced with PrimaryScrollableTabRow and SecondaryScrollableTabRow tab variants.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/StudyPdfCache.kt:154:83 Unnecessary non-null assertion (!!) on a non-null receiver of type 'String'.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/StudyPdfCache.kt:190:83 Unnecessary non-null assertion (!!) on a non-null receiver of type 'String'.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/StudyPdfCache.kt:257:83 Unnecessary non-null assertion (!!) on a non-null receiver of type 'String'.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/UnifiedGallery.kt:143:72 'val Icons.Filled.Sort: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.Sort.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/UnifiedGallery.kt:246:64 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/VideoTeachScreen.kt:94:34 'var systemUiVisibility: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/VideoTeachScreen.kt:96:19 'var systemUiVisibility: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/VideoTeachScreen.kt:97:50 'static field SYSTEM_UI_FLAG_FULLSCREEN: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/VideoTeachScreen.kt:98:35 'static field SYSTEM_UI_FLAG_HIDE_NAVIGATION: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/VideoTeachScreen.kt:99:35 'static field SYSTEM_UI_FLAG_IMMERSIVE_STICKY: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/VideoTeachScreen.kt:100:35 'static field SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/VideoTeachScreen.kt:101:35 'static field SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/VideoTeachScreen.kt:102:35 'static field SYSTEM_UI_FLAG_LAYOUT_STABLE: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/study/VideoTeachScreen.kt:105:38 'var systemUiVisibility: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/update/ApkUpdate.kt:364:36 'static field ACTION_INSTALL_PACKAGE: String' is deprecated. Deprecated in Java.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/update/UpdateGate.kt:109:26 'val LocalLifecycleOwner: ProvidableCompositionLocal<LifecycleOwner>' is deprecated. Moved to lifecycle-runtime-compose library in androidx.lifecycle.compose package.
+w: file:///workspace/hamyar-math-app/apps/student/src/main/java/com/hamyareman/ir/ui/wellness/WellnessScreen.kt:188:49 The corresponding parameter in the supertype 'WellnessLogSink' is named 'move'. This may cause problems when calling this function with named arguments.
+
+> Task :hamyar-app:compileP09DebugJavaWithJavac
+Picked up JAVA_TOOL_OPTIONS:  -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080 -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080
+
+Picked up JAVA_TOOL_OPTIONS:  -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080 -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080
+
+Picked up JAVA_TOOL_OPTIONS:  -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080 -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080
+
+
+> Task :hamyar-app:bundleP09DebugClassesToRuntimeJar
+> Task :hamyar-app:bundleP09DebugClassesToCompileJar
+> Task :hamyar-app:processP09DebugJavaRes
+> Task :hamyar-app:compileP09DebugUnitTestKotlin
+> Task :hamyar-app:compileP09DebugUnitTestJavaWithJavac NO-SOURCE
+> Task :hamyar-app:processP09DebugUnitTestJavaRes
+
+> Task :hamyar-app:testP09DebugUnitTest
+Picked up JAVA_TOOL_OPTIONS:  -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080 -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080
+
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+[Incubating] Problems report is available at: file:///workspace/hamyar-math-app/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.6.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 3m 58s
+232 actionable tasks: 170 executed, 62 from cache
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.6.0/userguide/configuration_cache_enabling.html

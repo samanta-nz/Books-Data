@@ -1,0 +1,1229 @@
+{
+  "sources": [
+    {
+      "id": "faradars",
+      "title": "فرادرس؛ راهنمای تدریس فصل اول",
+      "url": "https://blog.faradars.org/تدریس-فصل-اول-ریاضی-نهم-راهنمای-کامل/",
+      "years": [],
+      "regions": [],
+      "role": "تطبیق سرفصل",
+      "review": "متن واقعی صفحه بررسی شد؛ سال آزمون ندارد."
+    },
+    {
+      "id": "openstax",
+      "title": "OpenStax؛ Basic Set Concepts",
+      "url": "https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts",
+      "years": [],
+      "regions": [],
+      "role": "مرجع مفهومی",
+      "review": "تعریف مجموعه، عضویت، تهی، تعداد اعضا و برابری بررسی شد."
+    },
+    {
+      "id": "gharavi",
+      "title": "گردآوری مهدی غروی؛ فصل اول، خرداد ۱۴۰۲ و ۱۴۰۳",
+      "url": "https://www.scribd.com/document/890121118/1-14018305993",
+      "years": [
+        1402,
+        1403
+      ],
+      "regions": [
+        "سمنان",
+        "کرمانشاه",
+        "خراسان رضوی",
+        "خوزستان",
+        "آذربایجان شرقی",
+        "گیلان",
+        "یزد",
+        "همدان",
+        "خراسان جنوبی",
+        "کردستان",
+        "البرز",
+        "گلستان",
+        "هرمزگان",
+        "آذربایجان غربی",
+        "بوشهر",
+        "فارس",
+        "لرستان",
+        "مرکزی",
+        "تهران",
+        "ایلام",
+        "اصفهان",
+        "چهارمحال و بختیاری",
+        "قزوین",
+        "کرمان",
+        "سیستان و بلوچستان",
+        "زنجان",
+        "کهگیلویه و بویراحمد",
+        "کشوری"
+      ],
+      "role": "سبک امتحانی و پالایش الگوها",
+      "review": "متن سؤال‌های فصل مشاهده شد. انتساب استان‌ها از گردآوری ثانویه است؛ اصل همهٔ برگه‌های استانی جداگانه احراز نشده است. موارد دارای OCR خراب حذف شدند."
+    },
+    {
+      "id": "mamoallemim",
+      "title": "ما معلمیم؛ نمونه سؤال فصل اول با پاسخنامه، ۸ صفحه",
+      "url": "https://www.mamoallemim.com/wp-content/uploads/2024/10/نمونه-سوال-فصل-اول-ریاضی-نهم-با-پاسخنامه.pdf",
+      "years": [
+        1403
+      ],
+      "regions": [],
+      "role": "تنوع نوع سؤال",
+      "review": "متن سؤال و پاسخنامهٔ PDF بررسی شد؛ ۱۴۰۳ سال انتشار است، نه انتساب به امتحان رسمی. پاسخ تبدیل {3x|x∈W,-3<x<5} در منبع با قید روی x سازگار نیست و استفاده نشد."
+    },
+    {
+      "id": "bekhun",
+      "title": "بخون؛ مجموعه‌ها، نمونه سؤال و پاسخ",
+      "url": "https://bekhun.com/exam-season1-math9/",
+      "years": [
+        1403
+      ],
+      "regions": [],
+      "role": "شناسایی ابهام و خطای پاسخنامه",
+      "review": "متن واقعی و پاسخنامه بررسی شد. پاسخ تهیِ دارای یک عضو و پاسخ عدد نه مثبت نه منفی غلط‌اند؛ پاسخ‌های منبع مرجع قطعی نیستند."
+    },
+    {
+      "id": "school1401",
+      "title": "مدرسهٔ محدثه ۱، ناحیهٔ ۳ تبریز؛ ۱۴۰۱/۱۰/۱۹، دبیر شهنازی",
+      "url": "https://www.scribd.com/document/967002702/ریاضی-نهم-1401-شهنازی-محدثه-1",
+      "years": [
+        1401
+      ],
+      "regions": [
+        "آذربایجان شرقی"
+      ],
+      "role": "آزمون مدرسه",
+      "review": "سربرگ و سؤال‌های متنی مرتبط با فصل اول بررسی شد؛ سؤال‌های صرفاً تصویری و سایر فصل‌ها وارد استخراج نشدند."
+    },
+    {
+      "id": "national1404",
+      "title": "هماهنگ کشوری ریاضی نهم؛ ۱۴۰۴/۰۳/۰۴، نسخهٔ صبح",
+      "url": "https://dl.heyvagroup.com/admin/Files/upload/159824234سوالات%20امتحان%20نهایی%20ریاضی%20پایه%20نهم%20کشوری%20خرداد%20۱۴۰۴.pdf",
+      "years": [
+        1404
+      ],
+      "regions": [
+        "کشوری"
+      ],
+      "role": "آزمون رسمی بازنشرشده",
+      "review": "PDF چهارضفحه‌ای با سربرگ مرکز ارزشیابی بررسی شد؛ سؤال ۲الف و بخش متنی ۴ج استخراج شد. سؤال‌های تصویری دارای OCR ناقص وارد بانک نشدند."
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://gama.ir/test/detail/4151/نمونه-سوالات-طبقه-بندی-شده-فصل-اول-ریاضی-نهم-مجموعه-ها",
+      "status": "صفحهٔ مورد اشارهٔ قالب در ابزار وب قابل دسترسی نبود؛ کد تصحیحی از آن کپی نشده است."
+    },
+    {
+      "url": "https://gama.ir/azmoon",
+      "status": "به papers هدایت شد؛ متن آزمون آنلاین و اسکریپت تصحیح در دسترس قرار نگرفت."
+    },
+    {
+      "url": "https://blog.faradars.org/نمونه-سوال-ریاضی-نهم-فصل-اول/",
+      "status": "نشانی نمونه سؤال قالب و نسخهٔ amp قابل دسترسی نبود."
+    },
+    {
+      "url": "https://blog.filimo.school/nemoone/nemoone-math/nemoone-math-9th/s1-5/",
+      "status": "صفحه و PDF باز شدند، اما PDF متن استخراج‌پذیر نداشت؛ در آمار سؤال استخراج‌شده شمرده نشد."
+    },
+    {
+      "url": "https://asgharbojari19.blogfa.com/",
+      "status": "آرشیو ۱۴۰۰ بررسی شد؛ لینک PDF مربوط به فصل اول باز نشد و در پوشش محتوایی آن سال شمرده نشد."
+    },
+    {
+      "url": "https://www.kanoon.ir/Downloads/ExamQuestion/41793",
+      "status": "نسخهٔ ۱۴۰۱ البرز باز نشد."
+    },
+    {
+      "url": "https://www.kanoon.ir/Downloads/ExamQuestion/29663",
+      "status": "PDF منتسب به ۱۴۰۰ بدون متن قابل بررسی و با خطای تصویر؛ سؤال استخراج نشد."
+    },
+    {
+      "url": "https://www.heyvagroup.com/shownews/12700/سوالات-امتحان-نهایی-ریاضی-پایه-نهم-کشوری-خرداد-۱۴۰۴.html",
+      "status": "صفحهٔ واسط برای یافتن PDF رسمی؛ جدا از PDF به‌عنوان مجموعه سؤال شمرده نشد."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "gharavi:1",
+      "sourceId": "gharavi",
+      "locator": "1",
+      "semanticFamily": "nested-empty",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:2",
+      "sourceId": "gharavi",
+      "locator": "2",
+      "semanticFamily": "cardinality",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:3",
+      "sourceId": "gharavi",
+      "locator": "3",
+      "semanticFamily": "empty-singleton",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:4",
+      "sourceId": "gharavi",
+      "locator": "4",
+      "semanticFamily": "self-subset",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:5",
+      "sourceId": "gharavi",
+      "locator": "5",
+      "semanticFamily": "empty-subset",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:6",
+      "sourceId": "gharavi",
+      "locator": "6",
+      "semanticFamily": "empty-singleton",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:3"
+    },
+    {
+      "id": "gharavi:7",
+      "sourceId": "gharavi",
+      "locator": "7",
+      "semanticFamily": "defined",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:8",
+      "sourceId": "gharavi",
+      "locator": "8",
+      "semanticFamily": "defined",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:7"
+    },
+    {
+      "id": "gharavi:9",
+      "sourceId": "gharavi",
+      "locator": "9",
+      "semanticFamily": "defined",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:7"
+    },
+    {
+      "id": "gharavi:10",
+      "sourceId": "gharavi",
+      "locator": "10",
+      "semanticFamily": "empty-singleton",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:3"
+    },
+    {
+      "id": "gharavi:11",
+      "sourceId": "gharavi",
+      "locator": "11",
+      "semanticFamily": "empty-singleton",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:3"
+    },
+    {
+      "id": "gharavi:12",
+      "sourceId": "gharavi",
+      "locator": "12",
+      "semanticFamily": "defined",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:7"
+    },
+    {
+      "id": "gharavi:14",
+      "sourceId": "gharavi",
+      "locator": "14",
+      "semanticFamily": "empty-singleton",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:3"
+    },
+    {
+      "id": "gharavi:15",
+      "sourceId": "gharavi",
+      "locator": "15",
+      "semanticFamily": "subsets",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:16",
+      "sourceId": "gharavi",
+      "locator": "16",
+      "semanticFamily": "defined",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:7"
+    },
+    {
+      "id": "gharavi:17",
+      "sourceId": "gharavi",
+      "locator": "17",
+      "semanticFamily": "defined",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:7"
+    },
+    {
+      "id": "gharavi:18",
+      "sourceId": "gharavi",
+      "locator": "18",
+      "semanticFamily": "cardinality",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:2"
+    },
+    {
+      "id": "gharavi:20",
+      "sourceId": "gharavi",
+      "locator": "20",
+      "semanticFamily": "empty-subset",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:5"
+    },
+    {
+      "id": "gharavi:21",
+      "sourceId": "gharavi",
+      "locator": "21",
+      "semanticFamily": "subsets",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:15"
+    },
+    {
+      "id": "gharavi:23",
+      "sourceId": "gharavi",
+      "locator": "23",
+      "semanticFamily": "subsets-divisors",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:24",
+      "sourceId": "gharavi",
+      "locator": "24",
+      "semanticFamily": "subsets",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:15"
+    },
+    {
+      "id": "gharavi:25",
+      "sourceId": "gharavi",
+      "locator": "25",
+      "semanticFamily": "empty-subset",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:5"
+    },
+    {
+      "id": "gharavi:26",
+      "sourceId": "gharavi",
+      "locator": "26",
+      "semanticFamily": "subsets",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:15"
+    },
+    {
+      "id": "gharavi:28",
+      "sourceId": "gharavi",
+      "locator": "28",
+      "semanticFamily": "subsets",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:15"
+    },
+    {
+      "id": "gharavi:30",
+      "sourceId": "gharavi",
+      "locator": "30",
+      "semanticFamily": "subset",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:31",
+      "sourceId": "gharavi",
+      "locator": "31",
+      "semanticFamily": "equal-parameter",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:32",
+      "sourceId": "gharavi",
+      "locator": "32",
+      "semanticFamily": "equal-parameter",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:31"
+    },
+    {
+      "id": "gharavi:34",
+      "sourceId": "gharavi",
+      "locator": "34",
+      "semanticFamily": "equal-parameter",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:31"
+    },
+    {
+      "id": "gharavi:35",
+      "sourceId": "gharavi",
+      "locator": "35",
+      "semanticFamily": "subset-minimum",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:36",
+      "sourceId": "gharavi",
+      "locator": "36",
+      "semanticFamily": "list-subsets",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:37",
+      "sourceId": "gharavi",
+      "locator": "37",
+      "semanticFamily": "list-subsets",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:36"
+    },
+    {
+      "id": "gharavi:38",
+      "sourceId": "gharavi",
+      "locator": "38",
+      "semanticFamily": "builder",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:39",
+      "sourceId": "gharavi",
+      "locator": "39",
+      "semanticFamily": "linear-image",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:40",
+      "sourceId": "gharavi",
+      "locator": "40",
+      "semanticFamily": "linear-image",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:39"
+    },
+    {
+      "id": "gharavi:41",
+      "sourceId": "gharavi",
+      "locator": "41",
+      "semanticFamily": "linear-image",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:39"
+    },
+    {
+      "id": "gharavi:42",
+      "sourceId": "gharavi",
+      "locator": "42",
+      "semanticFamily": "builder",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:38"
+    },
+    {
+      "id": "gharavi:43",
+      "sourceId": "gharavi",
+      "locator": "43",
+      "semanticFamily": "linear-image",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:39"
+    },
+    {
+      "id": "gharavi:44",
+      "sourceId": "gharavi",
+      "locator": "44",
+      "semanticFamily": "linear-image",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:39"
+    },
+    {
+      "id": "gharavi:45",
+      "sourceId": "gharavi",
+      "locator": "45",
+      "semanticFamily": "builder",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:38"
+    },
+    {
+      "id": "gharavi:46",
+      "sourceId": "gharavi",
+      "locator": "46",
+      "semanticFamily": "set-identity",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:47",
+      "sourceId": "gharavi",
+      "locator": "47",
+      "semanticFamily": "union-count",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:50",
+      "sourceId": "gharavi",
+      "locator": "50",
+      "semanticFamily": "subset-difference",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:52",
+      "sourceId": "gharavi",
+      "locator": "52",
+      "semanticFamily": "disjoint-example",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:53",
+      "sourceId": "gharavi",
+      "locator": "53",
+      "semanticFamily": "set-operations",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:54",
+      "sourceId": "gharavi",
+      "locator": "54",
+      "semanticFamily": "nested-operations",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:56",
+      "sourceId": "gharavi",
+      "locator": "56",
+      "semanticFamily": "nested-operations",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:54"
+    },
+    {
+      "id": "gharavi:59",
+      "sourceId": "gharavi",
+      "locator": "59",
+      "semanticFamily": "builder-operations",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:60",
+      "sourceId": "gharavi",
+      "locator": "60",
+      "semanticFamily": "set-operations",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:53"
+    },
+    {
+      "id": "gharavi:61",
+      "sourceId": "gharavi",
+      "locator": "61",
+      "semanticFamily": "set-operations",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:53"
+    },
+    {
+      "id": "gharavi:62",
+      "sourceId": "gharavi",
+      "locator": "62",
+      "semanticFamily": "set-operations",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:53"
+    },
+    {
+      "id": "gharavi:64",
+      "sourceId": "gharavi",
+      "locator": "64",
+      "semanticFamily": "set-operations",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:53"
+    },
+    {
+      "id": "gharavi:65",
+      "sourceId": "gharavi",
+      "locator": "65",
+      "semanticFamily": "set-operations",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:53"
+    },
+    {
+      "id": "gharavi:68",
+      "sourceId": "gharavi",
+      "locator": "68",
+      "semanticFamily": "nested-operations",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:54"
+    },
+    {
+      "id": "gharavi:69",
+      "sourceId": "gharavi",
+      "locator": "69",
+      "semanticFamily": "union-count",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:47"
+    },
+    {
+      "id": "gharavi:84",
+      "sourceId": "gharavi",
+      "locator": "84",
+      "semanticFamily": "sample-count",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:85",
+      "sourceId": "gharavi",
+      "locator": "85",
+      "semanticFamily": "single-die",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:86",
+      "sourceId": "gharavi",
+      "locator": "86",
+      "semanticFamily": "single-die",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:85"
+    },
+    {
+      "id": "gharavi:87",
+      "sourceId": "gharavi",
+      "locator": "87",
+      "semanticFamily": "coins-exact",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:88",
+      "sourceId": "gharavi",
+      "locator": "88",
+      "semanticFamily": "die-prime",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:89",
+      "sourceId": "gharavi",
+      "locator": "89",
+      "semanticFamily": "single-die",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:85"
+    },
+    {
+      "id": "gharavi:91",
+      "sourceId": "gharavi",
+      "locator": "91",
+      "semanticFamily": "dice-sum",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:92",
+      "sourceId": "gharavi",
+      "locator": "92",
+      "semanticFamily": "dice-threshold",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:93",
+      "sourceId": "gharavi",
+      "locator": "93",
+      "semanticFamily": "coins-exact",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:87"
+    },
+    {
+      "id": "gharavi:94",
+      "sourceId": "gharavi",
+      "locator": "94",
+      "semanticFamily": "coins-exact",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:87"
+    },
+    {
+      "id": "gharavi:95",
+      "sourceId": "gharavi",
+      "locator": "95",
+      "semanticFamily": "dice-sum",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:91"
+    },
+    {
+      "id": "gharavi:96",
+      "sourceId": "gharavi",
+      "locator": "96",
+      "semanticFamily": "die-prime",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:88"
+    },
+    {
+      "id": "gharavi:97",
+      "sourceId": "gharavi",
+      "locator": "97",
+      "semanticFamily": "die-prime",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:88"
+    },
+    {
+      "id": "gharavi:98",
+      "sourceId": "gharavi",
+      "locator": "98",
+      "semanticFamily": "dice-both",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:99",
+      "sourceId": "gharavi",
+      "locator": "99",
+      "semanticFamily": "cards-threshold",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:100",
+      "sourceId": "gharavi",
+      "locator": "100",
+      "semanticFamily": "cards-and",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:101",
+      "sourceId": "gharavi",
+      "locator": "101",
+      "semanticFamily": "cards-complement",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "gharavi:112",
+      "sourceId": "gharavi",
+      "locator": "112",
+      "semanticFamily": "cards-property",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "mamoallemim:1a",
+      "sourceId": "mamoallemim",
+      "locator": "1a",
+      "semanticFamily": "empty-singleton",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:3"
+    },
+    {
+      "id": "mamoallemim:1b",
+      "sourceId": "mamoallemim",
+      "locator": "1b",
+      "semanticFamily": "subset-transitive",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "mamoallemim:1c",
+      "sourceId": "mamoallemim",
+      "locator": "1c",
+      "semanticFamily": "subset-disjoint-counterexample",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "mamoallemim:1d",
+      "sourceId": "mamoallemim",
+      "locator": "1d",
+      "semanticFamily": "set-identity",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:46"
+    },
+    {
+      "id": "mamoallemim:2a",
+      "sourceId": "mamoallemim",
+      "locator": "2a",
+      "semanticFamily": "cardinality",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:2"
+    },
+    {
+      "id": "mamoallemim:2b",
+      "sourceId": "mamoallemim",
+      "locator": "2b",
+      "semanticFamily": "builder",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:38"
+    },
+    {
+      "id": "mamoallemim:2d",
+      "sourceId": "mamoallemim",
+      "locator": "2d",
+      "semanticFamily": "subsets",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:15"
+    },
+    {
+      "id": "mamoallemim:3",
+      "sourceId": "mamoallemim",
+      "locator": "3",
+      "semanticFamily": "set-operations",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:53"
+    },
+    {
+      "id": "mamoallemim:4a",
+      "sourceId": "mamoallemim",
+      "locator": "4a",
+      "semanticFamily": "builder",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:38"
+    },
+    {
+      "id": "mamoallemim:4b",
+      "sourceId": "mamoallemim",
+      "locator": "4b",
+      "semanticFamily": "square-image",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "mamoallemim:5-1",
+      "sourceId": "mamoallemim",
+      "locator": "5-1",
+      "semanticFamily": "defined",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:7"
+    },
+    {
+      "id": "mamoallemim:5-2",
+      "sourceId": "mamoallemim",
+      "locator": "5-2",
+      "semanticFamily": "builder",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:38"
+    },
+    {
+      "id": "mamoallemim:5-3",
+      "sourceId": "mamoallemim",
+      "locator": "5-3",
+      "semanticFamily": "set-operations",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:53"
+    },
+    {
+      "id": "mamoallemim:5-4",
+      "sourceId": "mamoallemim",
+      "locator": "5-4",
+      "semanticFamily": "single-die",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:85"
+    },
+    {
+      "id": "mamoallemim:8a",
+      "sourceId": "mamoallemim",
+      "locator": "8a",
+      "semanticFamily": "coins-atleast",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "mamoallemim:8b",
+      "sourceId": "mamoallemim",
+      "locator": "8b",
+      "semanticFamily": "coins-exact",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:87"
+    },
+    {
+      "id": "mamoallemim:8c",
+      "sourceId": "mamoallemim",
+      "locator": "8c",
+      "semanticFamily": "impossible-event",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "mamoallemim:9a",
+      "sourceId": "mamoallemim",
+      "locator": "9a",
+      "semanticFamily": "dice-sum",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:91"
+    },
+    {
+      "id": "mamoallemim:9b",
+      "sourceId": "mamoallemim",
+      "locator": "9b",
+      "semanticFamily": "dice-both",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:98"
+    },
+    {
+      "id": "mamoallemim:9c",
+      "sourceId": "mamoallemim",
+      "locator": "9c",
+      "semanticFamily": "dice-modulo",
+      "decision": "retain-pattern",
+      "duplicateOf": null
+    },
+    {
+      "id": "mamoallemim:10b",
+      "sourceId": "mamoallemim",
+      "locator": "10b",
+      "semanticFamily": "cards-property",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:112"
+    },
+    {
+      "id": "mamoallemim:10c",
+      "sourceId": "mamoallemim",
+      "locator": "10c",
+      "semanticFamily": "cards-and",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:100"
+    },
+    {
+      "id": "school1401:1a",
+      "sourceId": "school1401",
+      "locator": "1a",
+      "semanticFamily": "self-subset",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:4"
+    },
+    {
+      "id": "school1401:1c",
+      "sourceId": "school1401",
+      "locator": "1c",
+      "semanticFamily": "set-identity",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:46"
+    },
+    {
+      "id": "school1401:2a",
+      "sourceId": "school1401",
+      "locator": "2a",
+      "semanticFamily": "subsets",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:15"
+    },
+    {
+      "id": "school1401:3-1",
+      "sourceId": "school1401",
+      "locator": "3-1",
+      "semanticFamily": "defined",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:7"
+    },
+    {
+      "id": "school1401:3-2",
+      "sourceId": "school1401",
+      "locator": "3-2",
+      "semanticFamily": "single-die",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:85"
+    },
+    {
+      "id": "school1401:5",
+      "sourceId": "school1401",
+      "locator": "5",
+      "semanticFamily": "equal-parameter",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:31"
+    },
+    {
+      "id": "school1401:6a",
+      "sourceId": "school1401",
+      "locator": "6a",
+      "semanticFamily": "builder",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:38"
+    },
+    {
+      "id": "school1401:6b",
+      "sourceId": "school1401",
+      "locator": "6b",
+      "semanticFamily": "builder",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:38"
+    },
+    {
+      "id": "school1401:8",
+      "sourceId": "school1401",
+      "locator": "8",
+      "semanticFamily": "dice-both",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:98"
+    },
+    {
+      "id": "national1404:2a",
+      "sourceId": "national1404",
+      "locator": "2a",
+      "semanticFamily": "cardinality",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:2"
+    },
+    {
+      "id": "national1404:4c",
+      "sourceId": "national1404",
+      "locator": "4c",
+      "semanticFamily": "builder",
+      "decision": "duplicate",
+      "duplicateOf": "gharavi:38"
+    }
+  ],
+  "excluded": [
+    {
+      "source": "gharavi",
+      "locator": "13",
+      "reason": "ابهام در تعیین سه عدد اول کمتر از ده؛ چهار عدد اول در این بازه وجود دارد."
+    },
+    {
+      "source": "gharavi",
+      "locator": "29",
+      "reason": "متن OCR گزینه‌ها چند گزارهٔ درست را القا می‌کند؛ اصل تصویر احراز نشد."
+    },
+    {
+      "source": "mamoallemim",
+      "locator": "4c",
+      "reason": "اختلاف قید روی x با پاسخنامه؛ از بازنویسی مبهم صرف‌نظر شد."
+    },
+    {
+      "source": "bekhun",
+      "locator": "بخش معرفی، پاسخ ۱پ",
+      "reason": "کلید پاسخ، تهی را دارای یک عضو اعلام کرده؛ مردود."
+    },
+    {
+      "source": "bekhun",
+      "locator": "بخش معرفی، پاسخ ۲الف",
+      "reason": "عدد نه مثبت نه منفی صفر است؛ پاسخ تهی در منبع مردود."
+    }
+  ],
+  "rawCount": 110,
+  "duplicateCount": 67,
+  "rejectedCount": 5,
+  "retainedSourcePatterns": 38,
+  "note": "منبع فقط برای اهداف و سبک به‌کار رفته؛ سؤال‌های HTML تألیفی‌اند. تعداد الگوهای منبع با تعداد هدف‌های تألیفی بانک یکی نیست. نسخه‌های عددی خودآزمایی به‌عنوان سؤال یکتای بانک شمرده نمی‌شوند.",
+  "contentVersion": "2026-10-18.2",
+  "sharedContentRules": "CONTENT_RULES.md",
+  "displayFont": "Vazir 30.1.0 Farsi-Digits",
+  "assessmentGrading": "only after explicit finish",
+  "learnerSources": "omitted from learner HTML; provenance in separate report",
+  "grade": 9,
+  "book": "ریاضی نهم",
+  "chapter": "فصل اول: مجموعه‌ها",
+  "appSourceCommit": "c09746a5210c7fc9ea4e55fc48a97127b2f5a8d9",
+  "template": "teaching - template/lesson-template.preview-standalone.html",
+  "reviewedSources": 7,
+  "years": [
+    1401,
+    1402,
+    1403,
+    1404
+  ],
+  "finalBankCount": 60,
+  "difficulty": {
+    "آسان": 14,
+    "متوسط": 14,
+    "دشوار": 18,
+    "درخشان": 14
+  },
+  "types": {
+    "mcq": 5,
+    "tf": 4,
+    "short": 37,
+    "set": 10,
+    "essay": 4
+  },
+  "flashcards": 28,
+  "assessmentFiles": 24,
+  "assessmentItems": 336,
+  "generatedFiles": [
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB03.html",
+      "sha256": "f11eb16c32f0e8d9bc8076a631c69335211e52ff2dec94da78099ef5a7979578",
+      "kind": "summary",
+      "questionCount": 0
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB02.html",
+      "sha256": "3210fad70dd1f5054f86160cb84c9a7fb4e3e27b97f329f81f5e9e3ce949c0b6",
+      "kind": "flash",
+      "questionCount": 0
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB04.html",
+      "sha256": "326daaa1a04944955e45bfe5f00c2e3ca9523c8f68c0d6ebe75713984e3a3c66",
+      "kind": "exam",
+      "questionCount": 60
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-01.html",
+      "sha256": "86d2da801e2050400f75048c84e9681616e4b3d154e4acf7f359ab9c309033d2",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-02.html",
+      "sha256": "3eb05bb5655a189bbfd75ff604c10e138a9c781608ceb03d55c5587cd74fb07c",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-03.html",
+      "sha256": "5fef53efde5a852d2aee6e50b1cb50cf4dc894df725bab881b0c1ef88a19fc53",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-04.html",
+      "sha256": "710aa5785e168e0464bbb0745b2d44b013b631232bd31cc64cb8a9d374072b92",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-05.html",
+      "sha256": "304d2ecf03d1848e15024c620aca3513de83db6fe86c767c9197a6cee455df55",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-06.html",
+      "sha256": "45f489ec7b5c8e4f5ba221a60065f75008c57088018c3020bf44c643462d3c06",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-01.html",
+      "sha256": "089bfc149e45492f15ac87bf869d2121388b8d0691cd0ea69e336b8f7fb2753d",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-02.html",
+      "sha256": "f802239ad5e961f4cd3c56e3f7fde83dcf13a0bfcf834af9d79860517bce3707",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-03.html",
+      "sha256": "6c13dc7286afb27e5eac67b60531fed92e57e69ef8bfa4981657848fabd750ef",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-04.html",
+      "sha256": "251fcad1582f1ba041336a51d1842e2ba2aadd693bd0438a88b28e12e97a2b91",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-05.html",
+      "sha256": "b5f3098d65eca219d38baa4f809555dc5ac99691653d91869364a915aaac033d",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-06.html",
+      "sha256": "48d70e4abf945be9e9e32f95dbffe8b5bd9dab71a5084b842a9124646e2ad234",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-01.html",
+      "sha256": "64641ae1aa01ba14a89ebf3935bf3c2272fc68a9a0ad470739cd307b2eb07dfe",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-02.html",
+      "sha256": "ef21526c9d080dd6cb1f2ff950a0e332c59e01e75ab1491bf0112d40ed1efa06",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-03.html",
+      "sha256": "5a2da37c98983c74dd8a8af518ba9e4347f61983169646ef64240af86c5f6447",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-04.html",
+      "sha256": "d7013cd6d06036d6bca4d4bc7d3a7debf258619455157fd8f0364d5011c094dc",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-05.html",
+      "sha256": "88a66b48f03b6c81a17e686aae320c1af9a09d34cbda7ccd1653db2d46b9b63e",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-06.html",
+      "sha256": "1efae74daacb8c803ab92e5d2cfa4faf46ab60a697b49018b558a250e5fc9d3b",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-01.html",
+      "sha256": "4476b454e286cca6e1b3665d1ee515bebe6ab3287eb512475fd22d3b6a275704",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-02.html",
+      "sha256": "bfb5c47e2a7f5610ed0db1fd57cd0cf4813375ed808b34e0870e607a2afeca37",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-03.html",
+      "sha256": "c531a7d6d814210278345c0b4980735143a685f5941786d6371a6ae1ea2f5efe",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-04.html",
+      "sha256": "3d5564834adce7fbcc288d7cbeae0979cdbb18363f511dbf5d1fa27af6226704",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-05.html",
+      "sha256": "2e7c44d865b1cea765a143337b3ee1862af6b7d56a61939a9fee158c56112f1b",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-06.html",
+      "sha256": "720127d0d73232e3baef32061f49642651f24f866786423f202f8068e1280239",
+      "kind": "exam",
+      "questionCount": 14
+    },
+    {
+      "path": "Bucket/Html-files/app/books/C905/N2.5/TAB05.html",
+      "sha256": "8970403d9165dea926fdc4bde106049b0b79686e0e96e5ddcbbbdb16ec62f429",
+      "kind": "exam",
+      "questionCount": 0
+    }
+  ],
+  "answerChecks": 392,
+  "notes": [
+    "آزمون‌های درخشان تمرین تکمیلی‌اند.",
+    "پوشش واقعی سال ۱۴۰۵ احراز نشد؛ جست‌وجو انجام شد.",
+    "اجرای اندروید روی دستگاه واقعی جدا از آزمایش Chromium گزارش می‌شود."
+  ]
+}

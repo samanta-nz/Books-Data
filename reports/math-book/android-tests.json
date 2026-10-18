@@ -1,0 +1,32 @@
+{
+  "build": "passed",
+  "modules": {
+    "app": {
+      "tests": 131,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2
+    },
+    "study": {
+      "tests": 20,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "patches": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "total": 154,
+  "mergedHtmlFiles": 252,
+  "byteComparisons": 252,
+  "menuAndManifestMatch": true,
+  "deviceRun": false,
+  "mergedThemeFiles": 252,
+  "currentAssetsMerge": "passed",
+  "unitTestsLog": "android-tests.log",
+  "currentAssetsLog": "android-assets-current.log"
+}

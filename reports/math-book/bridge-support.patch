@@ -1,0 +1,238 @@
+diff --git a/apps/student/src/main/assets/math/c905/hamyar-persist.js b/apps/student/src/main/assets/math/c905/hamyar-persist.js
+index 5760e45..e024041 100644
+--- a/apps/student/src/main/assets/math/c905/hamyar-persist.js
++++ b/apps/student/src/main/assets/math/c905/hamyar-persist.js
+@@ -1,5 +1,7 @@
+ /* همیار: ذخیرهٔ پاسخ/آرشیو/نمره روی دستگاه + صحت‌سنجی انتهای هر صفحه */
+ (function () {
++  // Standalone practice documents own their versioned, per-document state.
++  if (window.HamyarPractice) return;
+   if (window.__hamyarHooked) return;
+   window.__hamyarHooked = true;
+ 
+@@ -16,6 +18,15 @@
+     document.querySelectorAll('input[type="radio"]:checked').forEach(function (r) {
+       payload.radios[r.name] = r.value;
+     });
++    // Keep newer per-document records when older content shares the same
++    // existing pack/kind key. Old fields remain available to restore().
++    try {
++      var previous = window.Hamyar ? Hamyar.loadState() : localStorage.getItem("hamyar_html_state");
++      var envelope = JSON.parse(previous || "{}");
++      if (envelope && typeof envelope === "object" && !Array.isArray(envelope)) {
++        payload = Object.assign(envelope, payload);
++      }
++    } catch (e) {}
+     var raw = JSON.stringify(payload);
+     try { localStorage.setItem("hamyar_html_state", raw); } catch (e) {}
+     if (window.Hamyar) {
+diff --git a/apps/student/src/main/java/com/hamyareman/ir/ui/study/BookNodeScreen.kt b/apps/student/src/main/java/com/hamyareman/ir/ui/study/BookNodeScreen.kt
+index ff95401..64a1746 100644
+--- a/apps/student/src/main/java/com/hamyareman/ir/ui/study/BookNodeScreen.kt
++++ b/apps/student/src/main/java/com/hamyareman/ir/ui/study/BookNodeScreen.kt
+@@ -64,6 +64,10 @@ fun BookNodeScreen(
+     // فایلِ هنوز آپلودنشده به‌جای خطا، «در دست تولید» را نشان می‌دهد.
+     var missing by remember(bucketKey) { mutableStateOf(false) }
+     val effectiveKey = if (missing) BooksMenu.SPACEHOLDER_KEY else bucketKey
++    val context = LocalContext.current
++    val bundled = androidx.compose.runtime.remember(effectiveKey) {
++        BundledMathPractice.forBucket(context, effectiveKey)
++    }
+     Column(Modifier.fillMaxSize()) {
+         if (audioKey.isNotBlank()) {
+             val packId = remember(audioKey) { "book-" + StudyMedia.bookCacheKey("track", audioKey) }
+@@ -77,7 +81,9 @@ fun BookNodeScreen(
+                 tracks = listOf(TeachTrack("صوت تدریس", audioKey, cacheKey)),
+             )
+         }
+-        if (BooksMenu.isPdf(effectiveKey)) {
++        if (bundled != null) {
++            MathInteractiveHtml(bundled.packId, bundled.kind, bundled.assetPath)
++        } else if (BooksMenu.isPdf(effectiveKey)) {
+             BookPdfPages(effectiveKey) { missing = true }
+         } else {
+             RemoteHtmlPage(effectiveKey, audioKey, onMissing = { missing = true })
+diff --git a/apps/student/src/main/java/com/hamyareman/ir/ui/study/BundledMathPractice.kt b/apps/student/src/main/java/com/hamyareman/ir/ui/study/BundledMathPractice.kt
+new file mode 100644
+index 0000000..553e6df
+--- /dev/null
++++ b/apps/student/src/main/java/com/hamyareman/ir/ui/study/BundledMathPractice.kt
+@@ -0,0 +1,44 @@
++package com.hamyareman.ir.ui.study
++
++import android.content.Context
++import org.json.JSONObject
++
++/** Explicit bucket-to-asset routes shipped only by the matching grade module. */
++internal object BundledMathPractice {
++    data class Route(val bucketKey: String, val assetPath: String, val packId: String, val kind: String)
++
++    private const val ASSET_PREFIX = "file:///android_asset/"
++    private const val CONTENT_PREFIX = "math/c905/practice/"
++
++    @Volatile private var routes: List<Route>? = null
++
++    internal fun parse(raw: String): List<Route> {
++        val array = JSONObject(raw).getJSONArray("routes")
++        return (0 until array.length()).map { index ->
++            val item = array.getJSONObject(index)
++            Route(item.getString("bucketKey"), item.getString("assetPath"), item.getString("packId"), item.getString("kind")).also {
++                require(it.bucketKey.startsWith("Bucket/Html-files/app/books/C905/"))
++                require(it.assetPath.startsWith(CONTENT_PREFIX) && it.assetPath.endsWith(".html"))
++                require(it.assetPath.matches(Regex("[A-Za-z0-9._/-]+")))
++                require(it.assetPath.split('/').none { part -> part == ".." || part == "." })
++                require(it.packId.matches(Regex("C905_E[0-9]{2}-SUM")))
++                require(it.kind in setOf("summary", "flash", "exam"))
++            }
++        }.also { require(it.map(Route::bucketKey).distinct().size == it.size) }
++    }
++
++    private fun all(context: Context): List<Route> = routes ?: synchronized(this) {
++        routes ?: runCatching {
++            context.applicationContext.assets.open("content/math-practice-routes.json")
++                .bufferedReader().use { parse(it.readText()) }
++        }.getOrDefault(emptyList()).also { routes = it }
++    }
++
++    fun forBucket(context: Context, bucketKey: String): Route? = all(context).firstOrNull { it.bucketKey == bucketKey }
++
++    fun forAssetUrl(context: Context, url: String): Route? {
++        if (!url.startsWith(ASSET_PREFIX)) return null
++        val path = url.removePrefix(ASSET_PREFIX).substringBefore('#').substringBefore('?')
++        return all(context).firstOrNull { it.assetPath == path }
++    }
++}
+diff --git a/apps/student/src/main/java/com/hamyareman/ir/ui/study/MathHtmlWebView.kt b/apps/student/src/main/java/com/hamyareman/ir/ui/study/MathHtmlWebView.kt
+index 87c1d00..2562eff 100644
+--- a/apps/student/src/main/java/com/hamyareman/ir/ui/study/MathHtmlWebView.kt
++++ b/apps/student/src/main/java/com/hamyareman/ir/ui/study/MathHtmlWebView.kt
+@@ -37,7 +37,26 @@ internal fun MathInteractiveHtml(
+         factory = { c ->
+             ZoomResetWebView(c).apply {
+                 webViewClient = object : WebViewClient() {
+-                    override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest) = false
++                    override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
++                        if (!assetPath.startsWith("math/c905/practice/")) return false
++                        if (!request.isForMainFrame) return true
++                        val route = BundledMathPractice.forAssetUrl(c, request.url.toString())
++                        if (route != null) {
++                            // A link can change the content kind (exam -> flash). Bind
++                            // the existing interface to that document before it loads.
++                            view.addJavascriptInterface(
++                                HamyarHtmlBridge(c.applicationContext, route.packId, route.kind, store, progress),
++                                "Hamyar",
++                            )
++                            return false
++                        }
++                        if (request.url.scheme in setOf("https", "http")) {
++                            runCatching {
++                                c.startActivity(android.content.Intent(android.content.Intent.ACTION_VIEW, request.url))
++                            }
++                        }
++                        return true
++                    }
+ 
+                     override fun onScaleChanged(view: WebView, oldScale: Float, newScale: Float) {
+                         /* زوم فقط مالِ WebView است — به Compose خبر نمی‌دهیم. */
+@@ -45,7 +64,7 @@ internal fun MathInteractiveHtml(
+ 
+                     override fun onPageFinished(view: WebView, url: String) {
+                         view.evaluateJavascript(
+-                            "(function(){var s=document.createElement('script');s.src='file:///android_asset/math/c905/hamyar-persist.js';document.documentElement.appendChild(s);})();",
++                            "(function(){if(window.HamyarPractice)return;var s=document.createElement('script');s.src='file:///android_asset/math/c905/hamyar-persist.js';document.documentElement.appendChild(s);})();",
+                             null,
+                         )
+                         view.bindManagedMediaLifecycle()
+diff --git a/apps/student/src/test/java/com/hamyareman/ir/ui/study/BundledMathPracticeTest.kt b/apps/student/src/test/java/com/hamyareman/ir/ui/study/BundledMathPracticeTest.kt
+new file mode 100644
+index 0000000..f46f45e
+--- /dev/null
++++ b/apps/student/src/test/java/com/hamyareman/ir/ui/study/BundledMathPracticeTest.kt
+@@ -0,0 +1,24 @@
++package com.hamyareman.ir.ui.study
++
++import org.junit.Assert.assertEquals
++import org.junit.Assert.assertThrows
++import org.junit.Test
++
++class BundledMathPracticeTest {
++    private fun payload(asset: String) = """{"routes":[{"bucketKey":"Bucket/Html-files/app/books/C905/N2.5/TAB05.html","assetPath":"$asset","packId":"C905_E01-SUM","kind":"exam"}]}"""
++
++    @Test fun `canonical route preserves pack and kind`() {
++        val route = BundledMathPractice.parse(payload("math/c905/practice/N2.5/TAB05.html")).single()
++        assertEquals("C905_E01-SUM", route.packId)
++        assertEquals("exam", route.kind)
++    }
++
++    @Test fun `route cannot escape bundled practice assets`() {
++        assertThrows(IllegalArgumentException::class.java) {
++            BundledMathPractice.parse(payload("math/c905/practice/../../private.html"))
++        }
++        assertThrows(IllegalArgumentException::class.java) {
++            BundledMathPractice.parse(payload("https://example.com/exam.html"))
++        }
++    }
++}
+diff --git a/features/feature-study/src/main/java/com/hamyareman/ir/platform/feature/study/MathExamLedger.kt b/features/feature-study/src/main/java/com/hamyareman/ir/platform/feature/study/MathExamLedger.kt
+index 08a3abb..2985115 100644
+--- a/features/feature-study/src/main/java/com/hamyareman/ir/platform/feature/study/MathExamLedger.kt
++++ b/features/feature-study/src/main/java/com/hamyareman/ir/platform/feature/study/MathExamLedger.kt
+@@ -11,6 +11,11 @@ import org.json.JSONObject
+  */
+ object MathExamLedger {
+ 
++    /** Namespaced HTML ids end in qNN; do not concatenate version/chapter digits. */
++    fun questionNumber(id: String): Int? =
++        Regex("(?:^|[-_])q([0-9]+)$").find(id)?.groupValues?.get(1)?.toIntOrNull()
++            ?: id.filter(Char::isDigit).toIntOrNull()
++
+     data class Sitting(
+         val n: Int,
+         val scorePct: Int,
+diff --git a/features/feature-study/src/main/java/com/hamyareman/ir/platform/feature/study/StudyProgressRepository.kt b/features/feature-study/src/main/java/com/hamyareman/ir/platform/feature/study/StudyProgressRepository.kt
+index d124f71..042f37c 100644
+--- a/features/feature-study/src/main/java/com/hamyareman/ir/platform/feature/study/StudyProgressRepository.kt
++++ b/features/feature-study/src/main/java/com/hamyareman/ir/platform/feature/study/StudyProgressRepository.kt
+@@ -243,7 +243,7 @@ class StudyProgressRepository(
+             scorePct = scorePct.coerceIn(0, 100),
+             total = total.coerceAtLeast(0),
+             correctCount = correctCount.coerceAtLeast(0),
+-            wrongNumbers = wrongIds.mapNotNull { it.filter { ch -> ch.isDigit() }.toIntOrNull() },
++            wrongNumbers = wrongIds.mapNotNull(MathExamLedger::questionNumber),
+             wrongIds = wrongIds,
+             atMs = atMs,
+             dateKey = dateKey,
+diff --git a/features/feature-study/src/test/java/com/hamyareman/ir/platform/feature/study/MathExamLedgerTest.kt b/features/feature-study/src/test/java/com/hamyareman/ir/platform/feature/study/MathExamLedgerTest.kt
+index 1cb12ad..680ff27 100644
+--- a/features/feature-study/src/test/java/com/hamyareman/ir/platform/feature/study/MathExamLedgerTest.kt
++++ b/features/feature-study/src/test/java/com/hamyareman/ir/platform/feature/study/MathExamLedgerTest.kt
+@@ -6,6 +6,13 @@ import org.junit.Test
+ 
+ class MathExamLedgerTest {
+ 
++    @Test
++    fun `namespaced HTML ids keep their question number`() {
++        assertEquals(12, MathExamLedger.questionNumber("f01-tab05-easy-03_f01-easy-v3-q12"))
++        assertEquals(4, MathExamLedger.questionNumber("q4"))
++        assertEquals(7, MathExamLedger.questionNumber("7"))
++    }
++
+     private fun q(id: String, answer: String, vararg options: String) = StudyPack.Question(
+         id = id, type = "mcq", text = "؟", options = options.toList(), answer = answer,
+         explanation = "", topic = "ت", difficulty = 1, refSectionId = "s1",
+diff --git a/patches/src/main/java/com/hamyareman/ir/ui/study/HamyarHtmlAppearance.kt b/patches/src/main/java/com/hamyareman/ir/ui/study/HamyarHtmlAppearance.kt
+index 3fcde57..9fecba0 100644
+--- a/patches/src/main/java/com/hamyareman/ir/ui/study/HamyarHtmlAppearance.kt
++++ b/patches/src/main/java/com/hamyareman/ir/ui/study/HamyarHtmlAppearance.kt
+@@ -91,6 +91,11 @@ fun WebView.publishHamyarAppearance(
+           function styleFor(doc, isMusicFrame) {
+             if (!doc || !doc.documentElement) return;
+             var root = doc.documentElement;
++            // Assessments may explicitly preserve their reference template palette.
++            if (!isMusicFrame && root.getAttribute('data-hamyar-fixed-theme') === 'light') {
++              root.style.colorScheme = 'only light';
++              return;
++            }
+             root.setAttribute('data-hamyar-theme-preference', preference);
+             root.setAttribute('data-hamyar-theme', resolvedTheme);
+             root.setAttribute('data-hamyar-music-palette', isMusicFrame ? musicPalette : 'default');

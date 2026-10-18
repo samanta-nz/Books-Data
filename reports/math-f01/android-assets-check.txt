@@ -1,0 +1,71 @@
+Picked up JAVA_TOOL_OPTIONS:  -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080 -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.6.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :core-common:generateDebugAssets UP-TO-DATE
+> Task :core-appwrite:generateDebugAssets UP-TO-DATE
+> Task :core-common:preBuild UP-TO-DATE
+> Task :core-common:preDebugBuild UP-TO-DATE
+> Task :core-appwrite:preBuild UP-TO-DATE
+> Task :core-appwrite:preDebugBuild UP-TO-DATE
+> Task :core-appwrite:mergeDebugAssets UP-TO-DATE
+> Task :core-common:mergeDebugAssets UP-TO-DATE
+> Task :core-designsystem:generateDebugAssets UP-TO-DATE
+> Task :core-designsystem:preBuild UP-TO-DATE
+> Task :core-notifications:generateDebugAssets UP-TO-DATE
+> Task :core-designsystem:preDebugBuild UP-TO-DATE
+> Task :core-notifications:preBuild UP-TO-DATE
+> Task :core-notifications:preDebugBuild UP-TO-DATE
+> Task :core-designsystem:mergeDebugAssets UP-TO-DATE
+> Task :core-security:generateDebugAssets UP-TO-DATE
+> Task :core-security:preBuild UP-TO-DATE
+> Task :core-security:preDebugBuild UP-TO-DATE
+> Task :core-notifications:mergeDebugAssets UP-TO-DATE
+> Task :core-security:mergeDebugAssets UP-TO-DATE
+> Task :core-sync:generateDebugAssets UP-TO-DATE
+> Task :core-sync:preBuild UP-TO-DATE
+> Task :core-sync:preDebugBuild UP-TO-DATE
+> Task :feature-calls:generateDebugAssets UP-TO-DATE
+> Task :feature-calls:preBuild UP-TO-DATE
+> Task :feature-calls:preDebugBuild UP-TO-DATE
+> Task :core-sync:mergeDebugAssets UP-TO-DATE
+> Task :feature-hearttoheart:generateDebugAssets UP-TO-DATE
+> Task :feature-hearttoheart:preBuild UP-TO-DATE
+> Task :feature-hearttoheart:preDebugBuild UP-TO-DATE
+> Task :feature-hearttoheart:mergeDebugAssets UP-TO-DATE
+> Task :feature-calls:mergeDebugAssets UP-TO-DATE
+> Task :feature-pairing:generateDebugAssets UP-TO-DATE
+> Task :feature-pairing:preBuild UP-TO-DATE
+> Task :feature-pairing:preDebugBuild UP-TO-DATE
+> Task :feature-playback:generateDebugAssets UP-TO-DATE
+> Task :feature-pairing:mergeDebugAssets UP-TO-DATE
+> Task :feature-study:generateDebugAssets UP-TO-DATE
+> Task :feature-playback:preBuild UP-TO-DATE
+> Task :feature-study:preBuild UP-TO-DATE
+> Task :feature-playback:preDebugBuild UP-TO-DATE
+> Task :feature-study:preDebugBuild UP-TO-DATE
+> Task :feature-playback:mergeDebugAssets UP-TO-DATE
+> Task :grade-g09:generateDebugAssets UP-TO-DATE
+> Task :grade-g09:preBuild UP-TO-DATE
+> Task :grade-g09:preDebugBuild UP-TO-DATE
+> Task :feature-study:mergeDebugAssets UP-TO-DATE
+> Task :hamyar-app:generateP09DebugAssets UP-TO-DATE
+> Task :hamyar-app:preBuild UP-TO-DATE
+> Task :hamyar-app:preP09DebugBuild UP-TO-DATE
+> Task :patches:generateDebugAssets UP-TO-DATE
+> Task :patches:preBuild UP-TO-DATE
+> Task :patches:preDebugBuild UP-TO-DATE
+> Task :patches:mergeDebugAssets UP-TO-DATE
+> Task :grade-g09:mergeDebugAssets
+> Task :hamyar-app:mergeP09DebugAssets
+
+[Incubating] Problems report is available at: file:///workspace/hamyar-math-app/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.6.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 13s
+14 actionable tasks: 2 executed, 12 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.6.0/userguide/configuration_cache_enabling.html

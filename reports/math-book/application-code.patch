@@ -1,0 +1,4653 @@
+diff --git a/apps/student/src/main/assets/math/c905/hamyar-persist.js b/apps/student/src/main/assets/math/c905/hamyar-persist.js
+index 5760e45..e024041 100644
+--- a/apps/student/src/main/assets/math/c905/hamyar-persist.js
++++ b/apps/student/src/main/assets/math/c905/hamyar-persist.js
+@@ -1,5 +1,7 @@
+ /* همیار: ذخیرهٔ پاسخ/آرشیو/نمره روی دستگاه + صحت‌سنجی انتهای هر صفحه */
+ (function () {
++  // Standalone practice documents own their versioned, per-document state.
++  if (window.HamyarPractice) return;
+   if (window.__hamyarHooked) return;
+   window.__hamyarHooked = true;
+ 
+@@ -16,6 +18,15 @@
+     document.querySelectorAll('input[type="radio"]:checked').forEach(function (r) {
+       payload.radios[r.name] = r.value;
+     });
++    // Keep newer per-document records when older content shares the same
++    // existing pack/kind key. Old fields remain available to restore().
++    try {
++      var previous = window.Hamyar ? Hamyar.loadState() : localStorage.getItem("hamyar_html_state");
++      var envelope = JSON.parse(previous || "{}");
++      if (envelope && typeof envelope === "object" && !Array.isArray(envelope)) {
++        payload = Object.assign(envelope, payload);
++      }
++    } catch (e) {}
+     var raw = JSON.stringify(payload);
+     try { localStorage.setItem("hamyar_html_state", raw); } catch (e) {}
+     if (window.Hamyar) {
+diff --git a/apps/student/src/main/java/com/hamyareman/ir/ui/study/BookNodeScreen.kt b/apps/student/src/main/java/com/hamyareman/ir/ui/study/BookNodeScreen.kt
+index ff95401..64a1746 100644
+--- a/apps/student/src/main/java/com/hamyareman/ir/ui/study/BookNodeScreen.kt
++++ b/apps/student/src/main/java/com/hamyareman/ir/ui/study/BookNodeScreen.kt
+@@ -64,6 +64,10 @@ fun BookNodeScreen(
+     // فایلِ هنوز آپلودنشده به‌جای خطا، «در دست تولید» را نشان می‌دهد.
+     var missing by remember(bucketKey) { mutableStateOf(false) }
+     val effectiveKey = if (missing) BooksMenu.SPACEHOLDER_KEY else bucketKey
++    val context = LocalContext.current
++    val bundled = androidx.compose.runtime.remember(effectiveKey) {
++        BundledMathPractice.forBucket(context, effectiveKey)
++    }
+     Column(Modifier.fillMaxSize()) {
+         if (audioKey.isNotBlank()) {
+             val packId = remember(audioKey) { "book-" + StudyMedia.bookCacheKey("track", audioKey) }
+@@ -77,7 +81,9 @@ fun BookNodeScreen(
+                 tracks = listOf(TeachTrack("صوت تدریس", audioKey, cacheKey)),
+             )
+         }
+-        if (BooksMenu.isPdf(effectiveKey)) {
++        if (bundled != null) {
++            MathInteractiveHtml(bundled.packId, bundled.kind, bundled.assetPath)
++        } else if (BooksMenu.isPdf(effectiveKey)) {
+             BookPdfPages(effectiveKey) { missing = true }
+         } else {
+             RemoteHtmlPage(effectiveKey, audioKey, onMissing = { missing = true })
+diff --git a/apps/student/src/main/java/com/hamyareman/ir/ui/study/BundledMathPractice.kt b/apps/student/src/main/java/com/hamyareman/ir/ui/study/BundledMathPractice.kt
+new file mode 100644
+index 0000000..553e6df
+--- /dev/null
++++ b/apps/student/src/main/java/com/hamyareman/ir/ui/study/BundledMathPractice.kt
+@@ -0,0 +1,44 @@
++package com.hamyareman.ir.ui.study
++
++import android.content.Context
++import org.json.JSONObject
++
++/** Explicit bucket-to-asset routes shipped only by the matching grade module. */
++internal object BundledMathPractice {
++    data class Route(val bucketKey: String, val assetPath: String, val packId: String, val kind: String)
++
++    private const val ASSET_PREFIX = "file:///android_asset/"
++    private const val CONTENT_PREFIX = "math/c905/practice/"
++
++    @Volatile private var routes: List<Route>? = null
++
++    internal fun parse(raw: String): List<Route> {
++        val array = JSONObject(raw).getJSONArray("routes")
++        return (0 until array.length()).map { index ->
++            val item = array.getJSONObject(index)
++            Route(item.getString("bucketKey"), item.getString("assetPath"), item.getString("packId"), item.getString("kind")).also {
++                require(it.bucketKey.startsWith("Bucket/Html-files/app/books/C905/"))
++                require(it.assetPath.startsWith(CONTENT_PREFIX) && it.assetPath.endsWith(".html"))
++                require(it.assetPath.matches(Regex("[A-Za-z0-9._/-]+")))
++                require(it.assetPath.split('/').none { part -> part == ".." || part == "." })
++                require(it.packId.matches(Regex("C905_E[0-9]{2}-SUM")))
++                require(it.kind in setOf("summary", "flash", "exam"))
++            }
++        }.also { require(it.map(Route::bucketKey).distinct().size == it.size) }
++    }
++
++    private fun all(context: Context): List<Route> = routes ?: synchronized(this) {
++        routes ?: runCatching {
++            context.applicationContext.assets.open("content/math-practice-routes.json")
++                .bufferedReader().use { parse(it.readText()) }
++        }.getOrDefault(emptyList()).also { routes = it }
++    }
++
++    fun forBucket(context: Context, bucketKey: String): Route? = all(context).firstOrNull { it.bucketKey == bucketKey }
++
++    fun forAssetUrl(context: Context, url: String): Route? {
++        if (!url.startsWith(ASSET_PREFIX)) return null
++        val path = url.removePrefix(ASSET_PREFIX).substringBefore('#').substringBefore('?')
++        return all(context).firstOrNull { it.assetPath == path }
++    }
++}
+diff --git a/apps/student/src/main/java/com/hamyareman/ir/ui/study/MathHtmlWebView.kt b/apps/student/src/main/java/com/hamyareman/ir/ui/study/MathHtmlWebView.kt
+index 87c1d00..2562eff 100644
+--- a/apps/student/src/main/java/com/hamyareman/ir/ui/study/MathHtmlWebView.kt
++++ b/apps/student/src/main/java/com/hamyareman/ir/ui/study/MathHtmlWebView.kt
+@@ -37,7 +37,26 @@ internal fun MathInteractiveHtml(
+         factory = { c ->
+             ZoomResetWebView(c).apply {
+                 webViewClient = object : WebViewClient() {
+-                    override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest) = false
++                    override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
++                        if (!assetPath.startsWith("math/c905/practice/")) return false
++                        if (!request.isForMainFrame) return true
++                        val route = BundledMathPractice.forAssetUrl(c, request.url.toString())
++                        if (route != null) {
++                            // A link can change the content kind (exam -> flash). Bind
++                            // the existing interface to that document before it loads.
++                            view.addJavascriptInterface(
++                                HamyarHtmlBridge(c.applicationContext, route.packId, route.kind, store, progress),
++                                "Hamyar",
++                            )
++                            return false
++                        }
++                        if (request.url.scheme in setOf("https", "http")) {
++                            runCatching {
++                                c.startActivity(android.content.Intent(android.content.Intent.ACTION_VIEW, request.url))
++                            }
++                        }
++                        return true
++                    }
+ 
+                     override fun onScaleChanged(view: WebView, oldScale: Float, newScale: Float) {
+                         /* زوم فقط مالِ WebView است — به Compose خبر نمی‌دهیم. */
+@@ -45,7 +64,7 @@ internal fun MathInteractiveHtml(
+ 
+                     override fun onPageFinished(view: WebView, url: String) {
+                         view.evaluateJavascript(
+-                            "(function(){var s=document.createElement('script');s.src='file:///android_asset/math/c905/hamyar-persist.js';document.documentElement.appendChild(s);})();",
++                            "(function(){if(window.HamyarPractice)return;var s=document.createElement('script');s.src='file:///android_asset/math/c905/hamyar-persist.js';document.documentElement.appendChild(s);})();",
+                             null,
+                         )
+                         view.bindManagedMediaLifecycle()
+diff --git a/apps/student/src/test/java/com/hamyareman/ir/ui/study/BundledMathPracticeTest.kt b/apps/student/src/test/java/com/hamyareman/ir/ui/study/BundledMathPracticeTest.kt
+new file mode 100644
+index 0000000..f46f45e
+--- /dev/null
++++ b/apps/student/src/test/java/com/hamyareman/ir/ui/study/BundledMathPracticeTest.kt
+@@ -0,0 +1,24 @@
++package com.hamyareman.ir.ui.study
++
++import org.junit.Assert.assertEquals
++import org.junit.Assert.assertThrows
++import org.junit.Test
++
++class BundledMathPracticeTest {
++    private fun payload(asset: String) = """{"routes":[{"bucketKey":"Bucket/Html-files/app/books/C905/N2.5/TAB05.html","assetPath":"$asset","packId":"C905_E01-SUM","kind":"exam"}]}"""
++
++    @Test fun `canonical route preserves pack and kind`() {
++        val route = BundledMathPractice.parse(payload("math/c905/practice/N2.5/TAB05.html")).single()
++        assertEquals("C905_E01-SUM", route.packId)
++        assertEquals("exam", route.kind)
++    }
++
++    @Test fun `route cannot escape bundled practice assets`() {
++        assertThrows(IllegalArgumentException::class.java) {
++            BundledMathPractice.parse(payload("math/c905/practice/../../private.html"))
++        }
++        assertThrows(IllegalArgumentException::class.java) {
++            BundledMathPractice.parse(payload("https://example.com/exam.html"))
++        }
++    }
++}
+diff --git a/features/feature-study/src/main/java/com/hamyareman/ir/platform/feature/study/MathExamLedger.kt b/features/feature-study/src/main/java/com/hamyareman/ir/platform/feature/study/MathExamLedger.kt
+index 08a3abb..2985115 100644
+--- a/features/feature-study/src/main/java/com/hamyareman/ir/platform/feature/study/MathExamLedger.kt
++++ b/features/feature-study/src/main/java/com/hamyareman/ir/platform/feature/study/MathExamLedger.kt
+@@ -11,6 +11,11 @@ import org.json.JSONObject
+  */
+ object MathExamLedger {
+ 
++    /** Namespaced HTML ids end in qNN; do not concatenate version/chapter digits. */
++    fun questionNumber(id: String): Int? =
++        Regex("(?:^|[-_])q([0-9]+)$").find(id)?.groupValues?.get(1)?.toIntOrNull()
++            ?: id.filter(Char::isDigit).toIntOrNull()
++
+     data class Sitting(
+         val n: Int,
+         val scorePct: Int,
+diff --git a/features/feature-study/src/main/java/com/hamyareman/ir/platform/feature/study/StudyProgressRepository.kt b/features/feature-study/src/main/java/com/hamyareman/ir/platform/feature/study/StudyProgressRepository.kt
+index d124f71..042f37c 100644
+--- a/features/feature-study/src/main/java/com/hamyareman/ir/platform/feature/study/StudyProgressRepository.kt
++++ b/features/feature-study/src/main/java/com/hamyareman/ir/platform/feature/study/StudyProgressRepository.kt
+@@ -243,7 +243,7 @@ class StudyProgressRepository(
+             scorePct = scorePct.coerceIn(0, 100),
+             total = total.coerceAtLeast(0),
+             correctCount = correctCount.coerceAtLeast(0),
+-            wrongNumbers = wrongIds.mapNotNull { it.filter { ch -> ch.isDigit() }.toIntOrNull() },
++            wrongNumbers = wrongIds.mapNotNull(MathExamLedger::questionNumber),
+             wrongIds = wrongIds,
+             atMs = atMs,
+             dateKey = dateKey,
+diff --git a/features/feature-study/src/test/java/com/hamyareman/ir/platform/feature/study/MathExamLedgerTest.kt b/features/feature-study/src/test/java/com/hamyareman/ir/platform/feature/study/MathExamLedgerTest.kt
+index 1cb12ad..680ff27 100644
+--- a/features/feature-study/src/test/java/com/hamyareman/ir/platform/feature/study/MathExamLedgerTest.kt
++++ b/features/feature-study/src/test/java/com/hamyareman/ir/platform/feature/study/MathExamLedgerTest.kt
+@@ -6,6 +6,13 @@ import org.junit.Test
+ 
+ class MathExamLedgerTest {
+ 
++    @Test
++    fun `namespaced HTML ids keep their question number`() {
++        assertEquals(12, MathExamLedger.questionNumber("f01-tab05-easy-03_f01-easy-v3-q12"))
++        assertEquals(4, MathExamLedger.questionNumber("q4"))
++        assertEquals(7, MathExamLedger.questionNumber("7"))
++    }
++
+     private fun q(id: String, answer: String, vararg options: String) = StudyPack.Question(
+         id = id, type = "mcq", text = "؟", options = options.toList(), answer = answer,
+         explanation = "", topic = "ت", difficulty = 1, refSectionId = "s1",
+diff --git a/grades/g09/src/main/assets/content/books-menu.json b/grades/g09/src/main/assets/content/books-menu.json
+index bfde5e9..e13c205 100644
+--- a/grades/g09/src/main/assets/content/books-menu.json
++++ b/grades/g09/src/main/assets/content/books-menu.json
+@@ -5950,6 +5950,48 @@
+               "children": []
+             }
+           ]
++        },
++        {
++          "kind": "container",
++          "title": "مرور جامع کل کتاب",
++          "key": null,
++          "ready": true,
++          "teachKey": null,
++          "audioKey": null,
++          "tabs": [],
++          "children": [
++            {
++              "kind": "wrapup",
++              "title": "مرور و تمرین کل کتاب",
++              "key": null,
++              "ready": true,
++              "teachKey": null,
++              "audioKey": null,
++              "tabs": [
++                {
++                  "title": "فلش‌کارت‌های کل کتاب",
++                  "key": "Bucket/Html-files/app/books/C905/N10.1/TAB02.html",
++                  "ready": true
++                },
++                {
++                  "title": "خلاصه و نکات امتحانی کل کتاب",
++                  "key": "Bucket/Html-files/app/books/C905/N10.1/TAB03.html",
++                  "ready": true
++                },
++                {
++                  "title": "نمونه‌سؤالات جامع کل کتاب",
++                  "key": "Bucket/Html-files/app/books/C905/N10.1/TAB04.html",
++                  "ready": true
++                },
++                {
++                  "title": "خودآزمایی نهایی کل کتاب",
++                  "key": "Bucket/Html-files/app/books/C905/N10.1/TAB05.html",
++                  "ready": true
++                }
++              ],
++              "children": []
++            }
++          ]
+         }
+       ]
+     },
+diff --git a/grades/g09/src/main/assets/content/math-practice-routes.json b/grades/g09/src/main/assets/content/math-practice-routes.json
+new file mode 100644
+index 0000000..3d4a115
+--- /dev/null
++++ b/grades/g09/src/main/assets/content/math-practice-routes.json
+@@ -0,0 +1,1566 @@
++{
++  "schemaVersion": 1,
++  "bookCode": "C905",
++  "sourceMenu": "/workspace/hamyar-math-app/grades/g09/src/main/assets/content/books-menu.json",
++  "scopes": [
++    {
++      "scope": 1,
++      "packId": "C905_E01-SUM",
++      "directory": "Bucket/Html-files/app/books/C905/N2.5"
++    },
++    {
++      "scope": 2,
++      "packId": "C905_E02-SUM",
++      "directory": "Bucket/Html-files/app/books/C905/N3.4"
++    },
++    {
++      "scope": 3,
++      "packId": "C905_E03-SUM",
++      "directory": "Bucket/Html-files/app/books/C905/N4.6"
++    },
++    {
++      "scope": 4,
++      "packId": "C905_E04-SUM",
++      "directory": "Bucket/Html-files/app/books/C905/N5.5"
++    },
++    {
++      "scope": 5,
++      "packId": "C905_E05-SUM",
++      "directory": "Bucket/Html-files/app/books/C905/N6.4"
++    },
++    {
++      "scope": 6,
++      "packId": "C905_E06-SUM",
++      "directory": "Bucket/Html-files/app/books/C905/N7.4"
++    },
++    {
++      "scope": 7,
++      "packId": "C905_E07-SUM",
++      "directory": "Bucket/Html-files/app/books/C905/N8.4"
++    },
++    {
++      "scope": 8,
++      "packId": "C905_E08-SUM",
++      "directory": "Bucket/Html-files/app/books/C905/N9.4"
++    },
++    {
++      "scope": 0,
++      "packId": "C905_E00-SUM",
++      "directory": "Bucket/Html-files/app/books/C905/N10.1"
++    }
++  ],
++  "routes": [
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB03.html",
++      "assetPath": "math/c905/practice/N2.5/TAB03.html",
++      "packId": "C905_E01-SUM",
++      "kind": "summary"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB02.html",
++      "assetPath": "math/c905/practice/N2.5/TAB02.html",
++      "packId": "C905_E01-SUM",
++      "kind": "flash"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB04.html",
++      "assetPath": "math/c905/practice/N2.5/TAB04.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-01.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-easy-01.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-02.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-easy-02.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-03.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-easy-03.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-04.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-easy-04.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-05.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-easy-05.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-easy-06.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-easy-06.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-01.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-medium-01.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-02.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-medium-02.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-03.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-medium-03.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-04.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-medium-04.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-05.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-medium-05.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-medium-06.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-medium-06.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-01.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-hard-01.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-02.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-hard-02.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-03.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-hard-03.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-04.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-hard-04.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-05.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-hard-05.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-hard-06.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-hard-06.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-01.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-brilliant-01.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-02.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-brilliant-02.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-03.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-brilliant-03.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-04.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-brilliant-04.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-05.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-brilliant-05.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05-brilliant-06.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05-brilliant-06.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N2.5/TAB05.html",
++      "assetPath": "math/c905/practice/N2.5/TAB05.html",
++      "packId": "C905_E01-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB03.html",
++      "assetPath": "math/c905/practice/N3.4/TAB03.html",
++      "packId": "C905_E02-SUM",
++      "kind": "summary"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB02.html",
++      "assetPath": "math/c905/practice/N3.4/TAB02.html",
++      "packId": "C905_E02-SUM",
++      "kind": "flash"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB04.html",
++      "assetPath": "math/c905/practice/N3.4/TAB04.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-01.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-easy-01.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-02.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-easy-02.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-03.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-easy-03.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-04.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-easy-04.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-05.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-easy-05.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-06.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-easy-06.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-01.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-medium-01.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-02.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-medium-02.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-03.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-medium-03.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-04.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-medium-04.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-05.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-medium-05.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-06.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-medium-06.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-01.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-hard-01.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-02.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-hard-02.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-03.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-hard-03.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-04.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-hard-04.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-05.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-hard-05.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-06.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-hard-06.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-01.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-brilliant-01.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-02.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-brilliant-02.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-03.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-brilliant-03.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-04.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-brilliant-04.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-05.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-brilliant-05.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-06.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05-brilliant-06.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N3.4/TAB05.html",
++      "assetPath": "math/c905/practice/N3.4/TAB05.html",
++      "packId": "C905_E02-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB03.html",
++      "assetPath": "math/c905/practice/N4.6/TAB03.html",
++      "packId": "C905_E03-SUM",
++      "kind": "summary"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB02.html",
++      "assetPath": "math/c905/practice/N4.6/TAB02.html",
++      "packId": "C905_E03-SUM",
++      "kind": "flash"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB04.html",
++      "assetPath": "math/c905/practice/N4.6/TAB04.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-01.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-easy-01.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-02.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-easy-02.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-03.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-easy-03.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-04.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-easy-04.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-05.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-easy-05.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-06.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-easy-06.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-01.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-medium-01.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-02.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-medium-02.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-03.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-medium-03.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-04.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-medium-04.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-05.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-medium-05.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-06.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-medium-06.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-01.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-hard-01.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-02.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-hard-02.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-03.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-hard-03.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-04.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-hard-04.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-05.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-hard-05.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-06.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-hard-06.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-01.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-brilliant-01.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-02.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-brilliant-02.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-03.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-brilliant-03.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-04.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-brilliant-04.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-05.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-brilliant-05.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-06.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05-brilliant-06.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N4.6/TAB05.html",
++      "assetPath": "math/c905/practice/N4.6/TAB05.html",
++      "packId": "C905_E03-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB03.html",
++      "assetPath": "math/c905/practice/N5.5/TAB03.html",
++      "packId": "C905_E04-SUM",
++      "kind": "summary"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB02.html",
++      "assetPath": "math/c905/practice/N5.5/TAB02.html",
++      "packId": "C905_E04-SUM",
++      "kind": "flash"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB04.html",
++      "assetPath": "math/c905/practice/N5.5/TAB04.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-01.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-easy-01.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-02.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-easy-02.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-03.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-easy-03.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-04.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-easy-04.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-05.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-easy-05.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-06.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-easy-06.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-01.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-medium-01.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-02.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-medium-02.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-03.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-medium-03.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-04.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-medium-04.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-05.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-medium-05.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-06.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-medium-06.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-01.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-hard-01.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-02.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-hard-02.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-03.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-hard-03.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-04.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-hard-04.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-05.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-hard-05.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-06.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-hard-06.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-01.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-brilliant-01.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-02.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-brilliant-02.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-03.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-brilliant-03.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-04.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-brilliant-04.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-05.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-brilliant-05.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-06.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05-brilliant-06.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N5.5/TAB05.html",
++      "assetPath": "math/c905/practice/N5.5/TAB05.html",
++      "packId": "C905_E04-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB03.html",
++      "assetPath": "math/c905/practice/N6.4/TAB03.html",
++      "packId": "C905_E05-SUM",
++      "kind": "summary"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB02.html",
++      "assetPath": "math/c905/practice/N6.4/TAB02.html",
++      "packId": "C905_E05-SUM",
++      "kind": "flash"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB04.html",
++      "assetPath": "math/c905/practice/N6.4/TAB04.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-01.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-easy-01.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-02.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-easy-02.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-03.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-easy-03.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-04.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-easy-04.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-05.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-easy-05.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-06.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-easy-06.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-01.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-medium-01.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-02.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-medium-02.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-03.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-medium-03.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-04.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-medium-04.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-05.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-medium-05.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-06.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-medium-06.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-01.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-hard-01.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-02.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-hard-02.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-03.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-hard-03.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-04.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-hard-04.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-05.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-hard-05.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-06.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-hard-06.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-01.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-brilliant-01.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-02.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-brilliant-02.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-03.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-brilliant-03.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-04.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-brilliant-04.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-05.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-brilliant-05.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-06.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05-brilliant-06.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N6.4/TAB05.html",
++      "assetPath": "math/c905/practice/N6.4/TAB05.html",
++      "packId": "C905_E05-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB03.html",
++      "assetPath": "math/c905/practice/N7.4/TAB03.html",
++      "packId": "C905_E06-SUM",
++      "kind": "summary"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB02.html",
++      "assetPath": "math/c905/practice/N7.4/TAB02.html",
++      "packId": "C905_E06-SUM",
++      "kind": "flash"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB04.html",
++      "assetPath": "math/c905/practice/N7.4/TAB04.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-01.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-easy-01.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-02.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-easy-02.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-03.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-easy-03.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-04.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-easy-04.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-05.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-easy-05.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-06.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-easy-06.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-01.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-medium-01.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-02.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-medium-02.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-03.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-medium-03.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-04.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-medium-04.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-05.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-medium-05.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-06.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-medium-06.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-01.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-hard-01.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-02.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-hard-02.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-03.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-hard-03.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-04.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-hard-04.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-05.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-hard-05.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-06.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-hard-06.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-01.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-brilliant-01.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-02.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-brilliant-02.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-03.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-brilliant-03.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-04.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-brilliant-04.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-05.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-brilliant-05.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-06.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05-brilliant-06.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N7.4/TAB05.html",
++      "assetPath": "math/c905/practice/N7.4/TAB05.html",
++      "packId": "C905_E06-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB03.html",
++      "assetPath": "math/c905/practice/N8.4/TAB03.html",
++      "packId": "C905_E07-SUM",
++      "kind": "summary"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB02.html",
++      "assetPath": "math/c905/practice/N8.4/TAB02.html",
++      "packId": "C905_E07-SUM",
++      "kind": "flash"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB04.html",
++      "assetPath": "math/c905/practice/N8.4/TAB04.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-01.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-easy-01.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-02.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-easy-02.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-03.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-easy-03.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-04.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-easy-04.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-05.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-easy-05.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-06.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-easy-06.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-01.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-medium-01.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-02.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-medium-02.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-03.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-medium-03.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-04.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-medium-04.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-05.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-medium-05.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-06.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-medium-06.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-01.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-hard-01.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-02.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-hard-02.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-03.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-hard-03.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-04.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-hard-04.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-05.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-hard-05.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-06.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-hard-06.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-01.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-brilliant-01.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-02.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-brilliant-02.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-03.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-brilliant-03.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-04.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-brilliant-04.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-05.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-brilliant-05.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-06.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05-brilliant-06.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N8.4/TAB05.html",
++      "assetPath": "math/c905/practice/N8.4/TAB05.html",
++      "packId": "C905_E07-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB03.html",
++      "assetPath": "math/c905/practice/N9.4/TAB03.html",
++      "packId": "C905_E08-SUM",
++      "kind": "summary"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB02.html",
++      "assetPath": "math/c905/practice/N9.4/TAB02.html",
++      "packId": "C905_E08-SUM",
++      "kind": "flash"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB04.html",
++      "assetPath": "math/c905/practice/N9.4/TAB04.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-01.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-easy-01.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-02.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-easy-02.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-03.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-easy-03.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-04.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-easy-04.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-05.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-easy-05.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-06.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-easy-06.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-01.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-medium-01.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-02.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-medium-02.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-03.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-medium-03.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-04.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-medium-04.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-05.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-medium-05.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-06.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-medium-06.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-01.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-hard-01.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-02.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-hard-02.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-03.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-hard-03.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-04.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-hard-04.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-05.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-hard-05.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-06.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-hard-06.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-01.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-brilliant-01.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-02.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-brilliant-02.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-03.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-brilliant-03.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-04.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-brilliant-04.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-05.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-brilliant-05.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-06.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05-brilliant-06.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N9.4/TAB05.html",
++      "assetPath": "math/c905/practice/N9.4/TAB05.html",
++      "packId": "C905_E08-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB03.html",
++      "assetPath": "math/c905/practice/N10.1/TAB03.html",
++      "packId": "C905_E00-SUM",
++      "kind": "summary"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB02.html",
++      "assetPath": "math/c905/practice/N10.1/TAB02.html",
++      "packId": "C905_E00-SUM",
++      "kind": "flash"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB04.html",
++      "assetPath": "math/c905/practice/N10.1/TAB04.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-01.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-easy-01.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-02.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-easy-02.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-03.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-easy-03.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-04.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-easy-04.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-05.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-easy-05.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-06.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-easy-06.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-01.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-medium-01.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-02.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-medium-02.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-03.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-medium-03.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-04.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-medium-04.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-05.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-medium-05.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-06.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-medium-06.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-01.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-hard-01.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-02.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-hard-02.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-03.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-hard-03.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-04.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-hard-04.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-05.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-hard-05.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-06.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-hard-06.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-01.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-brilliant-01.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-02.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-brilliant-02.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-03.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-brilliant-03.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-04.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-brilliant-04.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-05.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-brilliant-05.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-06.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05-brilliant-06.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    },
++    {
++      "bucketKey": "Bucket/Html-files/app/books/C905/N10.1/TAB05.html",
++      "assetPath": "math/c905/practice/N10.1/TAB05.html",
++      "packId": "C905_E00-SUM",
++      "kind": "exam"
++    }
++  ]
++}
+diff --git a/grades/g09/src/main/resources/math_c905.json b/grades/g09/src/main/resources/math_c905.json
+index b7b14e6..d256719 100644
+--- a/grades/g09/src/main/resources/math_c905.json
++++ b/grades/g09/src/main/resources/math_c905.json
+@@ -86,7 +86,204 @@
+     "teachSpeech": "",
+     "summary": "",
+     "examTips": "",
+-    "flashcards": [],
++    "flashcards": [
++      {
++        "id": "f01-card-01",
++        "front": "چه توصیفی یک مجموعه را مشخص می‌کند؟",
++        "back": "باید بتوان عضویت هر شیء را بدون سلیقه و ابهام تعیین کرد.",
++        "topic": "معرفی مجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-02",
++        "front": "آیا ترتیب اعضا و تکرارشان مجموعه را عوض می‌کند؟",
++        "back": "خیر؛ اعضای متمایز مهم‌اند. {۲,۵,۲}={۵,۲}.",
++        "topic": "معرفی مجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-03",
++        "front": "n(A) چه چیزی را می‌شمارد؟",
++        "back": "تعداد اعضای متمایز A؛ هر عضو تکراری یک بار شمرده می‌شود.",
++        "topic": "معرفی مجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-04",
++        "front": "تفاوت ∅ و {۰} چیست؟",
++        "back": "اولی هیچ عضو و دومی یک عضو به نام صفر دارد.",
++        "topic": "معرفی مجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-05",
++        "front": "تفاوت ∅ و {∅} چیست؟",
++        "back": "∅ تهی است؛ {∅} یک عضو دارد و آن عضو خودش یک مجموعهٔ تهی است.",
++        "topic": "معرفی مجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-06",
++        "front": "آیا «سه عدد بزرگ» مجموعه‌ای مشخص است؟",
++        "back": "خیر؛ بزرگی و اعضای دقیق تعیین نشده‌اند.",
++        "topic": "معرفی مجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-07",
++        "front": "نمادهای ∈ و ⊆ چه تفاوتی دارند؟",
++        "back": "∈ رابطهٔ شیء با مجموعه است؛ ⊆ رابطهٔ دو مجموعه. از a∈A، رابطهٔ {a}⊆A نتیجه می‌شود.",
++        "topic": "نمایش و زیرمجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-08",
++        "front": "دو مجموعه چه وقت برابرند؟",
++        "back": "وقتی هر عضو اولی در دومی و هر عضو دومی در اولی باشد.",
++        "topic": "نمایش و زیرمجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-09",
++        "front": "چگونه فهرست اعضای {x∈ℤ | −۲<x≤۲} را بنویسم؟",
++        "back": "اعضا {-۱,۰,۱,۲} هستند؛ نوع عدد و باز یا بسته بودن کران مهم است.",
++        "topic": "نمایش و زیرمجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-10",
++        "front": "قرارداد ℕ در این بسته چیست؟",
++        "back": "ℕ={۱,۲,۳,…} و W={۰,۱,۲,…}؛ هر پرسش با دامنهٔ متفاوت، آن را صریح تعیین می‌کند.",
++        "topic": "نمایش و زیرمجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-11",
++        "front": "آیا مجموعه زیرمجموعهٔ خودش است؟",
++        "back": "بله؛ همهٔ اعضایش در خودش هستند.",
++        "topic": "نمایش و زیرمجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-12",
++        "front": "چرا تهی زیرمجموعهٔ هر مجموعه است؟",
++        "back": "در تهی عضوی نیست که شرطِ حضور در مجموعهٔ مقصد را نقض کند.",
++        "topic": "نمایش و زیرمجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-13",
++        "front": "یک مجموعهٔ n عضوی چند زیرمجموعه دارد؟",
++        "back": "۲ⁿ؛ هر عضو یا انتخاب می‌شود یا نمی‌شود. تهی و خود مجموعه هم شمرده می‌شوند.",
++        "topic": "نمایش و زیرمجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-14",
++        "front": "زیرمجموعه‌های {a,b} کدام‌اند؟",
++        "back": "∅، {a}، {b} و {a,b}. چهار مجموعهٔ متفاوت داریم.",
++        "topic": "نمایش و زیرمجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-15",
++        "front": "اجتماع A∪B چیست؟",
++        "back": "عضوهایی که در A یا B یا هر دو هستند؛ مشترک‌ها یک بار نوشته می‌شوند.",
++        "topic": "عملیات مجموعه‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-16",
++        "front": "اشتراک A∩B چیست؟",
++        "back": "عضوهایی که هم‌زمان در هر دو مجموعه قرار دارند.",
++        "topic": "عملیات مجموعه‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-17",
++        "front": "تفاضل A−B چیست؟",
++        "back": "عضوهای A که در B نیستند؛ A−B معمولاً با B−A برابر نیست.",
++        "topic": "عملیات مجموعه‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-18",
++        "front": "رابطهٔ تعداد اعضای اجتماع چیست؟",
++        "back": "n(A∪B)=n(A)+n(B)−n(A∩B).",
++        "topic": "عملیات مجموعه‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-19",
++        "front": "اگر A⊆B باشد، اجتماع و اشتراک چه می‌شوند؟",
++        "back": "A∪B=B و A∩B=A.",
++        "topic": "عملیات مجموعه‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-20",
++        "front": "از A−B=∅ چه نتیجه می‌گیریم؟",
++        "back": "همهٔ اعضای A در B هستند؛ پس A⊆B. برابری لزوماً نتیجه نمی‌شود.",
++        "topic": "عملیات مجموعه‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-21",
++        "front": "ناحیهٔ فقط A در نمودار ون کدام است؟",
++        "back": "بخشی از دایرهٔ A که بیرون دایرهٔ B است؛ همان A−B.",
++        "topic": "عملیات مجموعه‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-22",
++        "front": "در عملیات چندمرحله‌ای از کجا شروع کنم؟",
++        "back": "از داخل پرانتز؛ اعضای هر مرحله را جداگانه بنویس تا عضو مشترک اشتباه حذف نشود.",
++        "topic": "عملیات مجموعه‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-23",
++        "front": "چه وقت P(A)=n(A)/n(S) معتبر است؟",
++        "back": "وقتی حالت‌های فضای نمونه هم‌شانس باشند و S متناهی و غیرتهی باشد.",
++        "topic": "مجموعه‌ها و احتمال",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-24",
++        "front": "پیشامد ناممکن و حتمی چه احتمالی دارند؟",
++        "back": "ناممکن صفر و حتمی یک؛ احتمال هر پیشامد بین صفر و یک است.",
++        "topic": "مجموعه‌ها و احتمال",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-25",
++        "front": "فضای نمونهٔ دو سکهٔ سالم چیست؟",
++        "back": "با رعایت ترتیب: RR، RP، PR، PP؛ چهار حالت هم‌شانس.",
++        "topic": "مجموعه‌ها و احتمال",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-26",
++        "front": "دو تاس سالم رنگی چند حالت هم‌شانس دارند؟",
++        "back": "۳۶ زوج مرتب؛ (۱,۲) و (۲,۱) متفاوت‌اند.",
++        "topic": "مجموعه‌ها و احتمال",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-27",
++        "front": "چرا مجموع‌های دو تاس هم‌شانس نیستند؟",
++        "back": "برای هر مجموع، تعداد زوج‌های مرتب متفاوت است؛ مجموع ۲ یک حالت و مجموع ۷ شش حالت دارد.",
++        "topic": "مجموعه‌ها و احتمال",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-28",
++        "front": "«و»، «یا» و «حداقل» را چگونه بخوانم؟",
++        "back": "«و» اشتراک است؛ «یا» اجتماع شامل اشتراک؛ «حداقل یک» را می‌توان با حذف «هیچ» به‌دست آورد.",
++        "topic": "مجموعه‌ها و احتمال",
++        "hint": ""
++      }
++    ],
+     "questions": []
+   },
+   {
+@@ -101,7 +298,162 @@
+     "teachSpeech": "",
+     "summary": "",
+     "examTips": "",
+-    "flashcards": [],
++    "flashcards": [
++      {
++        "id": "f02-card-01",
++        "front": "مفهوم اصلی «عددهای گویا» چیست؟",
++        "back": "عدد گویا را می‌توان به صورت a/b نوشت که a و b صحیح و b ناصفر باشند؛ عدد صحیح نیز گویاست.",
++        "topic": "عددهای گویا",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-02",
++        "front": "قاعدهٔ کلیدی «عددهای گویا» را به یاد بیاور.",
++        "back": "اعشار مختوم و اعشار نامختومِ متناوب گویا هستند؛ در کسر ساده‌شده، مخرجِ دارای فقط عامل‌های اول ۲ و ۵ اعشار مختوم می‌دهد.",
++        "topic": "عددهای گویا",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-03",
++        "front": "یک مثال از «عددهای گویا» را توضیح بده.",
++        "back": "۰.۳۷۵=۳۷۵/۱۰۰۰=۳/۸؛ ولی ۱/۳=۰.۳۳۳… متناوب است.",
++        "topic": "عددهای گویا",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-04",
++        "front": "در «عددهای گویا» مراقب چه اشتباهی باشم؟",
++        "back": "پیش از بررسی مخرج، کسر را ساده کن؛ وجود یک رادیکال هم به‌تنهایی نشانهٔ گنگ بودن نیست.",
++        "topic": "عددهای گویا",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-05",
++        "front": "مفهوم اصلی «عددهای حقیقی» چیست؟",
++        "back": "حقیقی‌ها از دو دستهٔ گویا و گنگ تشکیل می‌شوند؛ گنگ‌ها نمایش اعشاری نامختومِ غیرمتناوب دارند.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-06",
++        "front": "قاعدهٔ کلیدی «عددهای حقیقی» را به یاد بیاور.",
++        "back": "ℕ⊆ℤ⊆ℚ⊆ℝ؛ اشتراک گویا و گنگ تهی است. بین هر دو حقیقی متمایز، بی‌شمار گویا و گنگ وجود دارد.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-07",
++        "front": "یک مثال از «عددهای حقیقی» را توضیح بده.",
++        "back": "√۴۹=۷ گویاست؛ √۱۰ گنگ و بین ۳ و ۴ است، چون ۹<۱۰<۱۶.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-08",
++        "front": "در «عددهای حقیقی» مراقب چه اشتباهی باشم؟",
++        "back": "بازهٔ حقیقی بین دو نقطه، فقط فهرست صحیح‌ها نیست؛ همهٔ نقطه‌های بین کران‌ها را شامل می‌شود.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-09",
++        "front": "مفهوم اصلی «قدر مطلق» چیست؟",
++        "back": "|a| فاصلهٔ a از صفر است؛ |a−b| فاصلهٔ دو نقطهٔ a و b است.",
++        "topic": "قدر مطلق",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-10",
++        "front": "قاعدهٔ کلیدی «قدر مطلق» را به یاد بیاور.",
++        "back": "√(a^(۲))=|a|؛ اگر a≥۰ باشد |a|=a و اگر a<۰ باشد |a|=−a.",
++        "topic": "قدر مطلق",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-11",
++        "front": "یک مثال از «قدر مطلق» را توضیح بده.",
++        "back": "برای a=−۵ داریم √(a^(۲))=۵؛ همچنین |۳−۷|=۴.",
++        "topic": "قدر مطلق",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-12",
++        "front": "در «قدر مطلق» مراقب چه اشتباهی باشم؟",
++        "back": "قدر مطلقِ جمع را بی‌دلیل به مجموع قدر مطلق‌ها تبدیل نکن؛ |۲+(−۲)|=۰ ولی |۲|+|−۲|=۴.",
++        "topic": "قدر مطلق",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-13",
++        "front": "مفهوم اصلی «محاسبهٔ تقریبی» چیست؟",
++        "back": "در قطع، رقم‌های اضافی حذف می‌شوند؛ در گرد کردن، نزدیک‌ترین مقدار در مرتبهٔ خواسته‌شده انتخاب می‌شود.",
++        "topic": "محاسبهٔ تقریبی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-14",
++        "front": "قاعدهٔ کلیدی «محاسبهٔ تقریبی» را به یاد بیاور.",
++        "back": "خطای مطلق برابر |مقدار دقیق−مقدار تقریبی| است؛ برای اعداد منفی هم فاصله را معیار قرار بده.",
++        "topic": "محاسبهٔ تقریبی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-15",
++        "front": "یک مثال از «محاسبهٔ تقریبی» را توضیح بده.",
++        "back": "تا دو رقم اعشار: قطعِ ۲.۳۷۶ برابر ۲.۳۷ و گردکردن آن ۲.۳۸ است.",
++        "topic": "محاسبهٔ تقریبی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-16",
++        "front": "در «محاسبهٔ تقریبی» مراقب چه اشتباهی باشم؟",
++        "back": "قطعِ −۲.۳۷۶ تا دو رقم −۲.۳۷ است؛ با صحیحِ سمت چپ یا گردکردن اشتباه نشود.",
++        "topic": "محاسبهٔ تقریبی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-17",
++        "front": "چرا √(a^(۲)) همیشه a نیست؟",
++        "back": "اگر a منفی باشد، رادیکال نامنفی است؛ نتیجه |a| است.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-18",
++        "front": "|x−c|=d با d>۰ چه جواب‌هایی دارد؟",
++        "back": "x=c−d یا x=c+d؛ دو نقطهٔ دو سوی مرکز c.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-19",
++        "front": "با منفی کردن کران‌های یک نامساوی چه می‌شود؟",
++        "back": "ترتیب روی محور برعکس می‌شود؛ مثلاً ۳<√۱۰<۴ می‌دهد −۴<−√۱۰<−۳.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-20",
++        "front": "آیا حاصل ضرب دو گنگ همیشه گنگ است؟",
++        "back": "خیر؛ √۲×√۲=۲ یک مثال نقض است.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-21",
++        "front": "فاصلهٔ دو عدد چگونه حساب می‌شود؟",
++        "back": "قدر مطلق تفاضل مختصات؛ ترتیب کم کردن روی فاصله اثر ندارد.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-22",
++        "front": "برای اعشار متناوب مرکب چه کار کنم؟",
++        "back": "دو مضرب ده از عدد را طوری کم کن که بخش تکرارشونده حذف شود؛ قسمت غیرتکراری را هم حساب کن.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      }
++    ],
+     "questions": []
+   },
+   {
+@@ -116,7 +468,2414 @@
+     "teachSpeech": "",
+     "summary": "",
+     "examTips": "",
+-    "flashcards": [],
++    "flashcards": [
++      {
++        "id": "f03-card-01",
++        "front": "مفهوم اصلی «استدلال» چیست؟",
++        "back": "با داده‌ها و دانسته‌های معتبر برای نتیجهٔ تازه دلیل می‌آوریم؛ دادهٔ مسئله «فرض» و خواستهٔ آن «حکم» است.",
++        "topic": "استدلال",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-02",
++        "front": "قاعدهٔ کلیدی «استدلال» را به یاد بیاور.",
++        "back": "مثال‌های محدود، گزارهٔ عمومی را ثابت نمی‌کنند؛ یک مثال نقض درست برای رد گزارهٔ عمومی کافی است.",
++        "topic": "استدلال",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-03",
++        "front": "یک مثال از «استدلال» را توضیح بده.",
++        "back": "«هر مستطیل مربع است» با مستطیل ۲×۵ رد می‌شود؛ فرض مستطیل بودن برقرار و حکم مربع بودن نادرست است.",
++        "topic": "استدلال",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-04",
++        "front": "در «استدلال» مراقب چه اشتباهی باشم؟",
++        "back": "ظاهر شکل و اندازه‌گیری محدود را جای دلیل عمومی ننویس؛ حکم را هم از ابتدا فرض نکن.",
++        "topic": "استدلال",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-05",
++        "front": "مفهوم اصلی «آشنایی با اثبات» چیست؟",
++        "back": "اثبات، زنجیره‌ای از دلیل‌های معتبر است که از فرض به حکم می‌رسد.",
++        "topic": "آشنایی با اثبات",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-06",
++        "front": "قاعدهٔ کلیدی «آشنایی با اثبات» را به یاد بیاور.",
++        "back": "در مثلث مجموع زاویه‌ها ۱۸۰ درجه است؛ زاویهٔ خارجی برابر مجموع دو زاویهٔ داخلی غیرمجاور است.",
++        "topic": "آشنایی با اثبات",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-07",
++        "front": "یک مثال از «آشنایی با اثبات» را توضیح بده.",
++        "back": "دو زاویهٔ متقابل به رأس هر دو با یک زاویهٔ مشترک مکمل‌اند؛ با کم کردن مشترک، برابری نتیجه می‌شود.",
++        "topic": "آشنایی با اثبات",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-08",
++        "front": "در «آشنایی با اثبات» مراقب چه اشتباهی باشم؟",
++        "back": "هر پاره‌خطی که در شکل عمود به نظر می‌رسد، بدون علامت یا دلیل عمود نیست؛ محل ارتفاع‌ها هم همیشه داخل مثلث نیست.",
++        "topic": "آشنایی با اثبات",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-09",
++        "front": "مفهوم اصلی «هم‌نهشتی مثلث‌ها» چیست؟",
++        "back": "در هم‌نهشتی، اندازه و شکل یکسان‌اند و رأس‌ها، ضلع‌ها و زاویه‌ها تناظر مشخص دارند.",
++        "topic": "هم‌نهشتی مثلث‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-10",
++        "front": "قاعدهٔ کلیدی «هم‌نهشتی مثلث‌ها» را به یاد بیاور.",
++        "back": "معیارها: سه ضلع؛ دو ضلع و زاویهٔ بین آن‌ها؛ دو زاویه و ضلع بین آن‌ها. در قائم‌ها، وتر و یک ضلع قائمه نیز کافی است.",
++        "topic": "هم‌نهشتی مثلث‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-11",
++        "front": "یک مثال از «هم‌نهشتی مثلث‌ها» را توضیح بده.",
++        "back": "اگر ABC≅DEF باشد، AB متناظر DE و زاویهٔ C متناظر F است؛ ترتیب نام رأس‌ها راهنمای تناظر است.",
++        "topic": "هم‌نهشتی مثلث‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-12",
++        "front": "در «هم‌نهشتی مثلث‌ها» مراقب چه اشتباهی باشم؟",
++        "back": "سه زاویه فقط تشابه می‌دهد؛ دو ضلع و زاویهٔ غیرمحصور هم همیشه هم‌نهشتی را تضمین نمی‌کند.",
++        "topic": "هم‌نهشتی مثلث‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-13",
++        "front": "مفهوم اصلی «حل مسئله در هندسه» چیست؟",
++        "back": "شکل کمکی، رسم عمود یا وصل کردن نقطه‌ها می‌تواند دو مثلث مناسب برای هم‌نهشتی بسازد.",
++        "topic": "حل مسئله در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-14",
++        "front": "قاعدهٔ کلیدی «حل مسئله در هندسه» را به یاد بیاور.",
++        "back": "در مثلث متساوی‌الساقین، نیمساز رأس، میانه و ارتفاع وارد بر قاعده هم هست؛ دلیل آن هم‌نهشتی دو مثلث دو سوی نیمساز است.",
++        "topic": "حل مسئله در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-15",
++        "front": "یک مثال از «حل مسئله در هندسه» را توضیح بده.",
++        "back": "اگر AB=AC و AD نیمساز A باشد، AB=AC، AD مشترک و دو زاویهٔ A برابرند؛ پس BD=DC.",
++        "topic": "حل مسئله در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-16",
++        "front": "در «حل مسئله در هندسه» مراقب چه اشتباهی باشم؟",
++        "back": "پیش از نتیجه‌گیری، معیار هم‌نهشتی و هر سه دادهٔ لازم را بنویس؛ «چون دو مثلث شبیه‌اند» دلیل هم‌نهشتی نیست.",
++        "topic": "حل مسئله در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-17",
++        "front": "مفهوم اصلی «شکل‌های متشابه» چیست؟",
++        "back": "زاویه‌های متناظر برابر و ضلع‌های متناظر متناسب‌اند؛ ضریب تشابه جهت مشخص دارد.",
++        "topic": "شکل‌های متشابه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-18",
++        "front": "قاعدهٔ کلیدی «شکل‌های متشابه» را به یاد بیاور.",
++        "back": "اگر نسبت طول بزرگ به کوچک k باشد، هر طول و محیط نیز k برابر می‌شود؛ برای مساحت، نسبت k^(۲) است.",
++        "topic": "شکل‌های متشابه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-19",
++        "front": "یک مثال از «شکل‌های متشابه» را توضیح بده.",
++        "back": "در دو مثلث متشابه اگر ضلع‌های متناظر ۶ و ۱۵ باشند، نسبت بزرگ به کوچک ۵/۲ است؛ ضلع ۸ به ۲۰ متناظر می‌شود.",
++        "topic": "شکل‌های متشابه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-20",
++        "front": "در «شکل‌های متشابه» مراقب چه اشتباهی باشم؟",
++        "back": "زاویه را در ضریب تشابه ضرب نکن؛ در نقشه نیز واحدهای طول را پیش از نسبت‌گیری یکسان کن.",
++        "topic": "شکل‌های متشابه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-21",
++        "front": "در نام ABC≅DEF، ضلع AC با کدام ضلع متناظر است؟",
++        "back": "با DF؛ A متناظر D و C متناظر F است.",
++        "topic": "استدلال و اثبات در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-22",
++        "front": "نقطهٔ روی عمودمنصف چه ویژگی دارد؟",
++        "back": "فاصله‌اش از دو سر پاره‌خط برابر است.",
++        "topic": "استدلال و اثبات در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-23",
++        "front": "نقطهٔ روی نیمساز از دو ضلع چه فاصله‌ای دارد؟",
++        "back": "دو فاصلهٔ عمودی برابر دارد؛ فاصله از خط با عمود سنجیده می‌شود.",
++        "topic": "استدلال و اثبات در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-24",
++        "front": "دو مماس از یک نقطهٔ بیرون دایره چه طولی دارند؟",
++        "back": "برابرند؛ از دو مثلث قائم با شعاع‌های برابر و وتر مشترک استفاده می‌کنیم.",
++        "topic": "استدلال و اثبات در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-25",
++        "front": "مقیاس ۱:۵۰۰۰۰ یعنی چه؟",
++        "back": "هر یک سانتی‌متر نقشه، پنجاه‌هزار سانتی‌متر یا پانصد متر واقعی است.",
++        "topic": "استدلال و اثبات در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-26",
++        "front": "محل برخورد ارتفاع‌های مثلث کجاست؟",
++        "back": "در حاده داخل، در قائم روی رأس قائمه و در منفرجه بیرون مثلث است.",
++        "topic": "استدلال و اثبات در هندسه",
++        "hint": ""
++      }
++    ],
++    "questions": []
++  },
++  {
++    "packId": "C905_E04-SUM",
++    "lessonId": "E04-SUM",
++    "title": "جمع‌بندی فصل ۴",
++    "pdfFileName": "",
++    "pdfOnly": false,
++    "audioFileId": "",
++    "teachText": "",
++    "teachHtml": "",
++    "teachSpeech": "",
++    "summary": "",
++    "examTips": "",
++    "flashcards": [
++      {
++        "id": "f04-card-01",
++        "front": "مفهوم اصلی «توان صحیح» چیست؟",
++        "back": "a^n حاصل ضرب n عامل a است؛ برای پایهٔ ناصفر، a^۰=۱ و a^(−n)=۱/a^n.",
++        "topic": "توان صحیح",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-02",
++        "front": "قاعدهٔ کلیدی «توان صحیح» را به یاد بیاور.",
++        "back": "در ضرب هم‌پایه نماها جمع؛ در تقسیم تفریق؛ در توانِ توان ضرب می‌شوند.",
++        "topic": "توان صحیح",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-03",
++        "front": "یک مثال از «توان صحیح» را توضیح بده.",
++        "back": "۲^(۳)×۲^(−۵)=۲^(−۲)=۱/۴؛ ولی (۲^(۳))^(۲)=۲^(۶).",
++        "topic": "توان صحیح",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-04",
++        "front": "در «توان صحیح» مراقب چه اشتباهی باشم؟",
++        "back": "−۳^(۲)=−۹ اما (−۳)^(۲)=۹؛ نمای منفی، علامت پاسخ را به‌تنهایی منفی نمی‌کند.",
++        "topic": "توان صحیح",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-05",
++        "front": "مفهوم اصلی «نماد علمی» چیست؟",
++        "back": "شکل استاندارد، c×۱۰^n است که ۱≤c<۱۰ و n عدد صحیح باشد.",
++        "topic": "نماد علمی",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-06",
++        "front": "قاعدهٔ کلیدی «نماد علمی» را به یاد بیاور.",
++        "back": "اگر ممیز ضریب یک مرتبه چپ برود، توان یک واحد زیاد می‌شود؛ برای جمع، ابتدا توان‌های ده را هم‌ارز کن.",
++        "topic": "نماد علمی",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-07",
++        "front": "یک مثال از «نماد علمی» را توضیح بده.",
++        "back": "۰.۰۰۰۷۲=۷.۲×۱۰^(−۴)؛ همچنین ۴۲۰۰۰۰=۴.۲×۱۰^(۵).",
++        "topic": "نماد علمی",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-08",
++        "front": "در «نماد علمی» مراقب چه اشتباهی باشم؟",
++        "back": "۴۲×۱۰^(۴) مقدار درستی دارد ولی استاندارد نیست؛ ضریب نباید ده یا بیشتر باشد.",
++        "topic": "نماد علمی",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-09",
++        "front": "مفهوم اصلی «ریشه‌گیری» چیست؟",
++        "back": "نماد √a ریشهٔ دوم نامنفی است؛ عدد مثبت دو ریشهٔ دوم دارد. ریشهٔ سومِ منفی، عددی منفی است.",
++        "topic": "ریشه‌گیری",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-10",
++        "front": "قاعدهٔ کلیدی «ریشه‌گیری» را به یاد بیاور.",
++        "back": "برای a,b≥۰، √a×√b=√(ab)؛ همچنین √(a^(۲))=|a|.",
++        "topic": "ریشه‌گیری",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-11",
++        "front": "یک مثال از «ریشه‌گیری» را توضیح بده.",
++        "back": "√۷۲=√(۳۶×۲)=۶√۲؛ ∛(−۱۲۵)=−۵.",
++        "topic": "ریشه‌گیری",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-12",
++        "front": "در «ریشه‌گیری» مراقب چه اشتباهی باشم؟",
++        "back": "در اعداد حقیقی، ریشهٔ دوم عدد منفی تعریف نشده؛ قانون ضرب رادیکال را بی‌شرط به هر عددی تعمیم نده.",
++        "topic": "ریشه‌گیری",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-13",
++        "front": "مفهوم اصلی «جمع، تفریق و گویا کردن» چیست؟",
++        "back": "رادیکال‌های هم‌نوع عدد زیر رادیکال یکسان دارند؛ ابتدا عامل مربع کامل را بیرون بکش.",
++        "topic": "جمع، تفریق و گویا کردن",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-14",
++        "front": "قاعدهٔ کلیدی «جمع، تفریق و گویا کردن» را به یاد بیاور.",
++        "back": "a√c+b√c=(a+b)√c؛ برای مخرج دو جمله‌ای، مزدوج را در صورت و مخرج ضرب کن.",
++        "topic": "جمع، تفریق و گویا کردن",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-15",
++        "front": "یک مثال از «جمع، تفریق و گویا کردن» را توضیح بده.",
++        "back": "√۱۲+√۲۷=۲√۳+۳√۳=۵√۳؛ ۱/(√۳−۱)=(√۳+۱)/۲.",
++        "topic": "جمع، تفریق و گویا کردن",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-16",
++        "front": "در «جمع، تفریق و گویا کردن» مراقب چه اشتباهی باشم؟",
++        "back": "√a+√b معمولاً √(a+b) نیست؛ گویا کردن فقط مخرج را هدف می‌گیرد و مقدار کسر باید حفظ شود.",
++        "topic": "جمع، تفریق و گویا کردن",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-17",
++        "front": "a^m×a^n چه می‌شود؟",
++        "back": "a^(m+n)؛ پایه ثابت می‌ماند.",
++        "topic": "توان و ریشه",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-18",
++        "front": "a^m÷a^n چه می‌شود؟",
++        "back": "a^(m−n)، با شرط a≠۰.",
++        "topic": "توان و ریشه",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-19",
++        "front": "(a^m)^n چه می‌شود؟",
++        "back": "a^(mn)؛ نماها در هم ضرب می‌شوند.",
++        "topic": "توان و ریشه",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-20",
++        "front": "نمای منفی چه معنایی دارد؟",
++        "back": "معکوس توان مثبت؛ ۲^(−۳)=۱/۸.",
++        "topic": "توان و ریشه",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-21",
++        "front": "مزدوج √a−√b چیست؟",
++        "back": "√a+√b؛ حاصل ضربشان a−b است.",
++        "topic": "توان و ریشه",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-22",
++        "front": "چرا ضریب ۰.۴ در نماد علمی استاندارد نیست؟",
++        "back": "ضریب باید دست‌کم یک و کمتر از ده باشد؛ ۰.۴×۱۰^n=۴×۱۰^(n−۱).",
++        "topic": "توان و ریشه",
++        "hint": ""
++      }
++    ],
++    "questions": []
++  },
++  {
++    "packId": "C905_E05-SUM",
++    "lessonId": "E05-SUM",
++    "title": "جمع‌بندی فصل ۵",
++    "pdfFileName": "",
++    "pdfOnly": false,
++    "audioFileId": "",
++    "teachText": "",
++    "teachHtml": "",
++    "teachSpeech": "",
++    "summary": "",
++    "examTips": "",
++    "flashcards": [
++      {
++        "id": "f05-card-01",
++        "front": "مفهوم اصلی «عبارت جبری» چیست؟",
++        "back": "تک‌جمله‌ای توان‌های صحیح نامنفیِ متغیرها دارد؛ در جمله‌های هم‌نوع، بخش حرفی یکسان است.",
++        "topic": "عبارت جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-02",
++        "front": "قاعدهٔ کلیدی «عبارت جبری» را به یاد بیاور.",
++        "back": "درجهٔ کل تک‌جمله‌ای مجموع نماهاست؛ درجهٔ چندجمله‌ای را پس از ساده‌سازی، از بزرگ‌ترین درجهٔ باقی‌مانده می‌گیریم.",
++        "topic": "عبارت جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-03",
++        "front": "یک مثال از «عبارت جبری» را توضیح بده.",
++        "back": "۳x^(۲)y درجهٔ کل ۳ و نسبت به x درجهٔ ۲ دارد؛ ۵x−۲x+۴=۳x+۴.",
++        "topic": "عبارت جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-04",
++        "front": "در «عبارت جبری» مراقب چه اشتباهی باشم؟",
++        "back": "ضریب −x برابر −۱ است؛ x و x^(۲) جملهٔ هم‌نوع نیستند و ضریبِ حذف‌شده را در درجه حساب نمی‌کنیم.",
++        "topic": "عبارت جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-05",
++        "front": "مفهوم اصلی «اتحادها» چیست؟",
++        "back": "اتحاد تساوی‌ای است که برای همهٔ مقدارهای مجاز متغیرها درست باشد.",
++        "topic": "اتحادها",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-06",
++        "front": "قاعدهٔ کلیدی «اتحادها» را به یاد بیاور.",
++        "back": "(a±b)^(۲)=a^(۲)±۲ab+b^(۲)؛ (a+b)(a−b)=a^(۲)−b^(۲)؛ (x+a)(x+b)=x^(۲)+(a+b)x+ab.",
++        "topic": "اتحادها",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-07",
++        "front": "یک مثال از «اتحادها» را توضیح بده.",
++        "back": "(۲x−۳)^(۲)=۴x^(۲)−۱۲x+۹؛ (x+۵)(x−۵)=x^(۲)−۲۵.",
++        "topic": "اتحادها",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-08",
++        "front": "در «اتحادها» مراقب چه اشتباهی باشم؟",
++        "back": "در مربع مجموع و تفاضل، جملهٔ میانی را حذف نکن؛ مربعِ جملهٔ منفی در پایان مثبت است.",
++        "topic": "اتحادها",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-09",
++        "front": "مفهوم اصلی «تجزیه و کاربرد» چیست؟",
++        "back": "تجزیه یعنی نوشتن عبارت به صورت حاصل ضرب؛ معکوس بسط است.",
++        "topic": "تجزیه و کاربرد",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-10",
++        "front": "قاعدهٔ کلیدی «تجزیه و کاربرد» را به یاد بیاور.",
++        "back": "اول عامل مشترک را بررسی کن؛ سپس مربع کامل، مزدوج یا جملهٔ مشترک را به کار ببر و با ضرب کنترل کن.",
++        "topic": "تجزیه و کاربرد",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-11",
++        "front": "یک مثال از «تجزیه و کاربرد» را توضیح بده.",
++        "back": "۳x^(۲)−۲۷=۳(x^(۲)−۹)=۳(x−۳)(x+۳)؛ x^(۲)+۵x+۶=(x+۲)(x+۳).",
++        "topic": "تجزیه و کاربرد",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-12",
++        "front": "در «تجزیه و کاربرد» مراقب چه اشتباهی باشم؟",
++        "back": "از صورت یک جمع، فقط یک جمله را با مخرج حذف نکن؛ عاملِ مشترکِ کل عبارت لازم است.",
++        "topic": "تجزیه و کاربرد",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-13",
++        "front": "مفهوم اصلی «نابرابری و نامعادله» چیست؟",
++        "back": "جواب نامعادله مجموعهٔ مقدارهایی است که رابطهٔ نابرابری را درست می‌کنند.",
++        "topic": "نابرابری و نامعادله",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-14",
++        "front": "قاعدهٔ کلیدی «نابرابری و نامعادله» را به یاد بیاور.",
++        "back": "جمع ثابت و ضرب مثبت، جهت را حفظ می‌کنند؛ ضرب یا تقسیم بر منفی، جهت را برعکس می‌کند.",
++        "topic": "نابرابری و نامعادله",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-15",
++        "front": "یک مثال از «نابرابری و نامعادله» را توضیح بده.",
++        "back": "−۲x+۱<۷ ⇒ −۲x<۶ ⇒ x>−۳؛ کران در نامساوی اکید عضو نیست.",
++        "topic": "نابرابری و نامعادله",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-16",
++        "front": "در «نابرابری و نامعادله» مراقب چه اشتباهی باشم؟",
++        "back": "در مسئلهٔ تعداد، جواب باید صحیح و در شمارش نامنفی باشد؛ مرز یک نامعادله به‌تنهایی تمام مجموعهٔ جواب نیست.",
++        "topic": "نابرابری و نامعادله",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-17",
++        "front": "درجهٔ کل ۵x^(۲)y^(۳) چند است؟",
++        "back": "پنج؛ مجموع نماهای دو متغیر.",
++        "topic": "عبارت‌های جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-18",
++        "front": "صفر شدن حاصل ضرب چه می‌گوید؟",
++        "back": "دست‌کم یکی از عامل‌ها صفر است؛ هر عامل را جدا برابر صفر بگذار.",
++        "topic": "عبارت‌های جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-19",
++        "front": "عامل مشترک را در کدام مرحله بگیرم؟",
++        "back": "پیش از اتحادها؛ با بیرون کشیدن آن، شکل اصلی تجزیه واضح‌تر می‌شود.",
++        "topic": "عبارت‌های جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-20",
++        "front": "در نامعادله چرا تقسیم بر منفی حساس است؟",
++        "back": "جهت علامت برعکس می‌شود؛ روی محور قرینه کردن ترتیب را عوض می‌کند.",
++        "topic": "عبارت‌های جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-21",
++        "front": "آیا مرزِ x<۳ عضو جواب است؟",
++        "back": "خیر؛ علامت اکید کران را نمی‌پذیرد، ولی x≤۳ آن را می‌پذیرد.",
++        "topic": "عبارت‌های جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-22",
++        "front": "چطور تجزیه را کنترل کنم؟",
++        "back": "عامل‌ها را دوباره در هم ضرب و با عبارت اولیه مقایسه کن.",
++        "topic": "عبارت‌های جبری",
++        "hint": ""
++      }
++    ],
++    "questions": []
++  },
++  {
++    "packId": "C905_E06-SUM",
++    "lessonId": "E06-SUM",
++    "title": "جمع‌بندی فصل ۶",
++    "pdfFileName": "",
++    "pdfOnly": false,
++    "audioFileId": "",
++    "teachText": "",
++    "teachHtml": "",
++    "teachSpeech": "",
++    "summary": "",
++    "examTips": "",
++    "flashcards": [
++      {
++        "id": "f06-card-01",
++        "front": "مفهوم اصلی «معادلهٔ خط» چیست؟",
++        "back": "هر نقطهٔ روی خط، معادلهٔ آن را برآورده می‌کند؛ در y=mx+b، طول x و عرض y هستند.",
++        "topic": "معادلهٔ خط",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-02",
++        "front": "قاعدهٔ کلیدی «معادلهٔ خط» را به یاد بیاور.",
++        "back": "برای محور y، مقدار x=۰ و برای محور x، مقدار y=۰ بگذار؛ برای رسم، دو نقطهٔ متفاوت کافی است.",
++        "topic": "معادلهٔ خط",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-03",
++        "front": "یک مثال از «معادلهٔ خط» را توضیح بده.",
++        "back": "در y=۲x−۴، نقطه‌های (۰,−۴) و (۲,۰) روی خط‌اند و دو برخورد با محورها هستند.",
++        "topic": "معادلهٔ خط",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-04",
++        "front": "در «معادلهٔ خط» مراقب چه اشتباهی باشم؟",
++        "back": "مختصات را جابه‌جا نکن؛ خط x=۳ عمودی است و به شکل y=mx+b با m حقیقی نوشته نمی‌شود.",
++        "topic": "معادلهٔ خط",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-05",
++        "front": "مفهوم اصلی «شیب و عرض از مبدأ» چیست؟",
++        "back": "شیب، نسبت تغییر عرض به تغییر طول است؛ عرض از مبدأ محل برخورد با محور y است.",
++        "topic": "شیب و عرض از مبدأ",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-06",
++        "front": "قاعدهٔ کلیدی «شیب و عرض از مبدأ» را به یاد بیاور.",
++        "back": "m=(y_(۲)−y_(۱))/(x_(۲)−x_(۱))؛ خط افقی شیب صفر و خط عمودی شیب تعریف‌نشده دارد.",
++        "topic": "شیب و عرض از مبدأ",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-07",
++        "front": "یک مثال از «شیب و عرض از مبدأ» را توضیح بده.",
++        "back": "در ۲y−۶x=۸ ابتدا y=۳x+۴ بنویس؛ شیب ۳ و عرض از مبدأ ۴ است.",
++        "topic": "شیب و عرض از مبدأ",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-08",
++        "front": "در «شیب و عرض از مبدأ» مراقب چه اشتباهی باشم؟",
++        "back": "ضریب ظاهری x پیش از تنها کردن y لزوماً شیب نیست؛ ترتیب کم کردن در صورت و مخرج باید یکسان باشد.",
++        "topic": "شیب و عرض از مبدأ",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-09",
++        "front": "مفهوم اصلی «توازی و تقاطع» چیست؟",
++        "back": "خط‌های غیرعمودی با شیب برابر یا منطبق‌اند یا موازی و جدا.",
++        "topic": "توازی و تقاطع",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-10",
++        "front": "قاعدهٔ کلیدی «توازی و تقاطع» را به یاد بیاور.",
++        "back": "اگر شیب برابر و عرض از مبدأ متفاوت باشد، تقاطع ندارند؛ شیب‌های متفاوت یک نقطهٔ تقاطع می‌دهند.",
++        "topic": "توازی و تقاطع",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-11",
++        "front": "یک مثال از «توازی و تقاطع» را توضیح بده.",
++        "back": "y=۲x+۱ و y=۲x−۳ موازی و جدا هستند؛ y=۲x+۱ و ۲y=۴x+۲ یک خط‌اند.",
++        "topic": "توازی و تقاطع",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-12",
++        "front": "در «توازی و تقاطع» مراقب چه اشتباهی باشم؟",
++        "back": "برابری شیب به‌تنهایی به معنی یکسان بودن دو خط نیست؛ ثابت‌ها را هم بررسی کن.",
++        "topic": "توازی و تقاطع",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-13",
++        "front": "مفهوم اصلی «دستگاه خطی» چیست؟",
++        "back": "جواب دستگاه، زوج مرتبِ مشترک دو معادله است؛ روش حذف، جایگذاری و رسم، یک نقطه را توصیف می‌کنند.",
++        "topic": "دستگاه خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-14",
++        "front": "قاعدهٔ کلیدی «دستگاه خطی» را به یاد بیاور.",
++        "back": "در حذف، تمام یک معادله را در ضریب مناسب ضرب کن؛ در پایان جواب را در هر دو معادله کنترل کن.",
++        "topic": "دستگاه خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-15",
++        "front": "یک مثال از «دستگاه خطی» را توضیح بده.",
++        "back": "x+y=۷ و x−y=۱ ⇒ ۲x=۸ ⇒ x=۴، y=۳.",
++        "topic": "دستگاه خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-16",
++        "front": "در «دستگاه خطی» مراقب چه اشتباهی باشم؟",
++        "back": "فقط یک معادله را کنترل نکن؛ دستگاه می‌تواند یک، بی‌شمار یا هیچ جواب داشته باشد.",
++        "topic": "دستگاه خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-17",
++        "front": "خط x=c چه شکلی است؟",
++        "back": "عمودی و موازی محور عرض‌ها؛ شیب تعریف‌نشده دارد.",
++        "topic": "خط و معادله‌های خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-18",
++        "front": "خط y=c چه شکلی است؟",
++        "back": "افقی و موازی محور طول‌ها؛ شیب صفر دارد.",
++        "topic": "خط و معادله‌های خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-19",
++        "front": "برای نقطهٔ برخورد دو خط چه می‌کنم؟",
++        "back": "دو معادله را هم‌زمان حل می‌کنم؛ جواب یک زوج مرتب است.",
++        "topic": "خط و معادله‌های خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-20",
++        "front": "شرط دو خط منطبق چیست؟",
++        "back": "هم شیب و هم عرض از مبدأ برابر باشند؛ در فرم کلی، همهٔ ضریب‌ها و ثابت با یک نسبت باشند.",
++        "topic": "خط و معادله‌های خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-21",
++        "front": "چرا جواب دستگاه را در هر دو معادله بررسی کنم؟",
++        "back": "ممکن است خطای علامت یا حذف باعث شود جواب فقط یکی را درست کند.",
++        "topic": "خط و معادله‌های خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-22",
++        "front": "در مسئلهٔ هزینهٔ خطی، عرض از مبدأ چه معنایی دارد؟",
++        "back": "هزینهٔ ثابت در شروع، یعنی در مقدار صفرِ متغیر مستقل.",
++        "topic": "خط و معادله‌های خطی",
++        "hint": ""
++      }
++    ],
++    "questions": []
++  },
++  {
++    "packId": "C905_E07-SUM",
++    "lessonId": "E07-SUM",
++    "title": "جمع‌بندی فصل ۷",
++    "pdfFileName": "",
++    "pdfOnly": false,
++    "audioFileId": "",
++    "teachText": "",
++    "teachHtml": "",
++    "teachSpeech": "",
++    "summary": "",
++    "examTips": "",
++    "flashcards": [
++      {
++        "id": "f07-card-01",
++        "front": "مفهوم اصلی «تعریف و دامنه» چیست؟",
++        "back": "عبارت گویا نسبت دو چندجمله‌ای است؛ مخرج نباید صفر شود.",
++        "topic": "تعریف و دامنه",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-02",
++        "front": "قاعدهٔ کلیدی «تعریف و دامنه» را به یاد بیاور.",
++        "back": "تمام صفرهای مخرجِ اولیه ممنوع‌اند؛ حذف عامل، مقدار ممنوع را دوباره مجاز نمی‌کند.",
++        "topic": "تعریف و دامنه",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-03",
++        "front": "یک مثال از «تعریف و دامنه» را توضیح بده.",
++        "back": "(x^(۲)−۹)/(x−۳)=x+۳ برای x≠۳؛ عبارت اولیه در x=۳ تعریف نشده است.",
++        "topic": "تعریف و دامنه",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-04",
++        "front": "در «تعریف و دامنه» مراقب چه اشتباهی باشم؟",
++        "back": "صفرِ صورت معمولاً ممنوع نیست؛ در تقسیم، علاوه بر مخرج‌ها، خود مقسوم‌علیه هم باید ناصفر باشد.",
++        "topic": "تعریف و دامنه",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-05",
++        "front": "مفهوم اصلی «ساده‌کردن» چیست؟",
++        "back": "صورت و مخرج را به عامل‌ها تجزیه کن و فقط عامل مشترک ناصفر را حذف کن.",
++        "topic": "ساده‌کردن",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-06",
++        "front": "قاعدهٔ کلیدی «ساده‌کردن» را به یاد بیاور.",
++        "back": "علامت را می‌توان یک بار از صورت یا مخرج بیرون آورد؛ x−a و a−x قرینه‌اند.",
++        "topic": "ساده‌کردن",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-07",
++        "front": "یک مثال از «ساده‌کردن» را توضیح بده.",
++        "back": "(x^(۲)−۴)/(x−۲)=x+۲ برای x≠۲؛ (x−۲)/(۲−x)=−۱.",
++        "topic": "ساده‌کردن",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-08",
++        "front": "در «ساده‌کردن» مراقب چه اشتباهی باشم؟",
++        "back": "(x+۳)/x برابر ۳ نیست؛ x عاملِ مشترکِ همهٔ صورت نیست.",
++        "topic": "ساده‌کردن",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-09",
++        "front": "مفهوم اصلی «چهار عمل روی کسرهای جبری» چیست؟",
++        "back": "برای جمع و تفریق، مخرج مشترک لازم است؛ برای ضرب، عامل‌گیری پیش از بسط کمک می‌کند.",
++        "topic": "چهار عمل روی کسرهای جبری",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-10",
++        "front": "قاعدهٔ کلیدی «چهار عمل روی کسرهای جبری» را به یاد بیاور.",
++        "back": "در تقسیم، فقط کسر دوم را معکوس کن؛ منفیِ صورتِ کسر دوم در تفریق به همهٔ جمله‌ها می‌رسد.",
++        "topic": "چهار عمل روی کسرهای جبری",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-11",
++        "front": "یک مثال از «چهار عمل روی کسرهای جبری» را توضیح بده.",
++        "back": "۱/(x−۱)+۱/(x+۱)=۲x/(x^(۲)−۱)، با x≠±۱.",
++        "topic": "چهار عمل روی کسرهای جبری",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-12",
++        "front": "در «چهار عمل روی کسرهای جبری» مراقب چه اشتباهی باشم؟",
++        "back": "صورت‌ها و مخرج‌ها را جدا جمع نکن؛ در مخرج‌های قرینه، علامت را پیش از محاسبه اصلاح کن.",
++        "topic": "چهار عمل روی کسرهای جبری",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-13",
++        "front": "مفهوم اصلی «تقسیم چندجمله‌ای‌ها» چیست؟",
++        "back": "جمله‌ها را با توان نزولی بنویس و برای توانِ غایب، ضریب صفر در نظر بگیر.",
++        "topic": "تقسیم چندجمله‌ای‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-14",
++        "front": "قاعدهٔ کلیدی «تقسیم چندجمله‌ای‌ها» را به یاد بیاور.",
++        "back": "مقسوم=مقسوم‌علیه×خارج‌قسمت+باقی‌مانده؛ باقی‌مانده صفر یا دارای درجهٔ کمتر از مقسوم‌علیه است.",
++        "topic": "تقسیم چندجمله‌ای‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-15",
++        "front": "یک مثال از «تقسیم چندجمله‌ای‌ها» را توضیح بده.",
++        "back": "x^(۲)−۵x+۸=(x−۲)(x−۳)+۲؛ خارج‌قسمت x−۳ و باقی‌مانده ۲ است.",
++        "topic": "تقسیم چندجمله‌ای‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-16",
++        "front": "در «تقسیم چندجمله‌ای‌ها» مراقب چه اشتباهی باشم؟",
++        "back": "پس از هر ضرب، تمام عبارت را کم کن و علامت همهٔ جمله‌ها را عوض کن؛ یک توانِ غایب را جابه‌جا نکن.",
++        "topic": "تقسیم چندجمله‌ای‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-17",
++        "front": "در تقسیم کسرهای جبری چه چیزی وارونه می‌شود؟",
++        "back": "فقط کسر دوم؛ کسر اول به همان صورت باقی می‌ماند.",
++        "topic": "عبارت‌های گویا",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-18",
++        "front": "در دامنهٔ A÷B چه چیزهایی را بررسی کنم؟",
++        "back": "مخرج‌های اولیهٔ A و B ناصفر باشند و مقدار B نیز صفر نباشد.",
++        "topic": "عبارت‌های گویا",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-19",
++        "front": "آیا x=۳ بعد از ساده‌کردن (x^(۲)−۹)/(x−۳) مجاز می‌شود؟",
++        "back": "خیر؛ دامنه از عبارت اصلی به دست می‌آید.",
++        "topic": "عبارت‌های گویا",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-20",
++        "front": "در تقسیم چندجمله‌ای، جملهٔ غایب چه می‌شود؟",
++        "back": "جای آن توان را با ضریب صفر حفظ می‌کنیم تا ستون‌ها جابه‌جا نشوند.",
++        "topic": "عبارت‌های گویا",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-21",
++        "front": "درجهٔ باقی‌مانده چه محدودیتی دارد؟",
++        "back": "باقی‌مانده صفر یا درجه‌اش کمتر از درجهٔ مقسوم‌علیه است.",
++        "topic": "عبارت‌های گویا",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-22",
++        "front": "چرا a−x=−(x−a) مهم است؟",
++        "back": "مخرج‌های قرینه را هم‌علامت می‌کند و از خطای علامت در جمع و تفریق جلوگیری می‌کند.",
++        "topic": "عبارت‌های گویا",
++        "hint": ""
++      }
++    ],
++    "questions": []
++  },
++  {
++    "packId": "C905_E08-SUM",
++    "lessonId": "E08-SUM",
++    "title": "جمع‌بندی فصل ۸",
++    "pdfFileName": "",
++    "pdfOnly": false,
++    "audioFileId": "",
++    "teachText": "",
++    "teachHtml": "",
++    "teachSpeech": "",
++    "summary": "",
++    "examTips": "",
++    "flashcards": [
++      {
++        "id": "f08-card-01",
++        "front": "مفهوم اصلی «کره» چیست؟",
++        "back": "شعاع نصف قطر است؛ مساحت برای سطح و حجم برای گنجایش یا مقدار ماده به کار می‌رود.",
++        "topic": "کره",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-02",
++        "front": "قاعدهٔ کلیدی «کره» را به یاد بیاور.",
++        "back": "S=۴πr^(۲) و V=۴πr^(۳)/۳؛ نیم‌کره نصف حجم کره دارد.",
++        "topic": "کره",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-03",
++        "front": "یک مثال از «کره» را توضیح بده.",
++        "back": "برای r=۳ و π=۳، مساحت ۱۰۸ و حجم ۱۰۸ است؛ برابری عددی این نمونه یک قانون عمومی نیست.",
++        "topic": "کره",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-04",
++        "front": "در «کره» مراقب چه اشتباهی باشم؟",
++        "back": "سانتی‌متر مربع با سانتی‌متر مکعب فرق دارد؛ قطر را به جای شعاع در فرمول نگذار.",
++        "topic": "کره",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-05",
++        "front": "مفهوم اصلی «نیم‌کره و پوسته» چیست؟",
++        "back": "سطح خمیدهٔ نیم‌کره، دایرهٔ کف را شامل نمی‌شود؛ در توپ توخالی، حجم فضای خالی جزو ماده نیست.",
++        "topic": "نیم‌کره و پوسته",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-06",
++        "front": "قاعدهٔ کلیدی «نیم‌کره و پوسته» را به یاد بیاور.",
++        "back": "سطح خمیدهٔ نیم‌کره ۲πr^(۲) و سطح کل با کف ۳πr^(۲) است؛ حجم پوسته تفاضل حجم کرهٔ بیرونی و درونی است.",
++        "topic": "نیم‌کره و پوسته",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-07",
++        "front": "یک مثال از «نیم‌کره و پوسته» را توضیح بده.",
++        "back": "نیم‌کرهٔ r=۲ با π=۳، سطح خمیدهٔ ۲۴ و سطح کل ۳۶ دارد.",
++        "topic": "نیم‌کره و پوسته",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-08",
++        "front": "در «نیم‌کره و پوسته» مراقب چه اشتباهی باشم؟",
++        "back": "در جسم‌های چسبیده، سطح اتصال داخل جسم می‌رود؛ سطح‌های داخلی را در پوشش خارجی جمع نکن.",
++        "topic": "نیم‌کره و پوسته",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-09",
++        "front": "مفهوم اصلی «هرم» چیست؟",
++        "back": "هرم یک قاعدهٔ چندضلعی و وجه‌های جانبی مثلثی دارد؛ ارتفاع عمودی با ارتفاع وجه فرق می‌کند.",
++        "topic": "هرم",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-10",
++        "front": "قاعدهٔ کلیدی «هرم» را به یاد بیاور.",
++        "back": "V=Sقاعده×h/۳؛ هرم قاعده‌مربع با ضلع a، مساحت قاعدهٔ a^(۲) دارد.",
++        "topic": "هرم",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-11",
++        "front": "یک مثال از «هرم» را توضیح بده.",
++        "back": "قاعدهٔ مربعی ضلع ۶ و ارتفاع عمودی ۵، حجم ۶۰ می‌دهد؛ هرم مربع چهار مثلث جانبی دارد.",
++        "topic": "هرم",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-12",
++        "front": "در «هرم» مراقب چه اشتباهی باشم؟",
++        "back": "در فرمول حجم، ارتفاع عمودی لازم است؛ طول یال یا ارتفاع مثلث جانبی را بی‌دلیل جای h نگذار.",
++        "topic": "هرم",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-13",
++        "front": "مفهوم اصلی «مخروط» چیست؟",
++        "back": "شعاع r، ارتفاع عمودی h و مولد l سه اندازهٔ متفاوت‌اند؛ در مخروط قائم، l^(۲)=r^(۲)+h^(۲).",
++        "topic": "مخروط",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-14",
++        "front": "قاعدهٔ کلیدی «مخروط» را به یاد بیاور.",
++        "back": "V=πr^(۲)h/۳؛ مساحت جانبی πrl و مساحت کل πr(l+r) است.",
++        "topic": "مخروط",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-15",
++        "front": "یک مثال از «مخروط» را توضیح بده.",
++        "back": "برای r=۳ و l=۵، ارتفاع ۴ است؛ با π=۳ حجم ۳۶ و مساحت جانبی ۴۵ می‌شود.",
++        "topic": "مخروط",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-16",
++        "front": "در «مخروط» مراقب چه اشتباهی باشم؟",
++        "back": "اگر فقط پوشش جانبی خواسته شده، دایرهٔ کف را اضافه نکن؛ در حجم از مولد استفاده نکن.",
++        "topic": "مخروط",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-17",
++        "front": "مفهوم اصلی «دوران، مقیاس و واحد» چیست؟",
++        "back": "دوران شکل دوبعدی حول محور، حجم تازه می‌سازد؛ ضلع روی محور معمولاً ارتفاع است.",
++        "topic": "دوران، مقیاس و واحد",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-18",
++        "front": "قاعدهٔ کلیدی «دوران، مقیاس و واحد» را به یاد بیاور.",
++        "back": "نیم‌دایره حول قطر: کره؛ ربع دایره حول شعاع: نیم‌کره؛ مثلث قائم حول ضلع قائمه: مخروط؛ مستطیل حول ضلع: استوانه.",
++        "topic": "دوران، مقیاس و واحد",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-19",
++        "front": "یک مثال از «دوران، مقیاس و واحد» را توضیح بده.",
++        "back": "هر ۱۰۰۰ سانتی‌متر مکعب یک لیتر است؛ دوبرابر شدن همهٔ طول‌ها، مساحت را چهار و حجم را هشت برابر می‌کند.",
++        "topic": "دوران، مقیاس و واحد",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-20",
++        "front": "در «دوران، مقیاس و واحد» مراقب چه اشتباهی باشم؟",
++        "back": "در تبدیل واحد مکعب، ضریب طول را مکعب کن؛ عوض کردن محور دوران می‌تواند حجم را تغییر بدهد.",
++        "topic": "دوران، مقیاس و واحد",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-21",
++        "front": "در مخروط قائم، مولد با ارتفاع چه فرقی دارد؟",
++        "back": "مولد روی سطح جانبی از رأس تا محیط قاعده است؛ ارتفاع بر صفحهٔ قاعده عمود است.",
++        "topic": "حجم و مساحت",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-22",
++        "front": "هرم با قاعدهٔ nضلعی چند وجه دارد؟",
++        "back": "n وجه مثلثی جانبی و یک قاعده؛ در مجموع n+۱ وجه.",
++        "topic": "حجم و مساحت",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-23",
++        "front": "برای پوشاندن توپ، حجم لازم است یا مساحت؟",
++        "back": "مساحت سطح با واحد مربع؛ حجم برای مقدار فضای داخل یا ماده است.",
++        "topic": "حجم و مساحت",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-24",
++        "front": "اگر شعاع کره سه برابر شود چه اتفاقی می‌افتد؟",
++        "back": "مساحت نه برابر و حجم بیست‌وهفت برابر می‌شود.",
++        "topic": "حجم و مساحت",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-25",
++        "front": "دایرهٔ اتصال نیم‌کره به استوانه را در سطح خارجی بشمارم؟",
++        "back": "خیر؛ سطح تماس داخل جسم قرار می‌گیرد.",
++        "topic": "حجم و مساحت",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-26",
++        "front": "هنگام ذوب چند جسم چه چیزی حفظ می‌شود؟",
++        "back": "با فرض نبود اتلاف ماده، مجموع حجم‌ها حفظ می‌شود؛ مساحت‌ها لزوماً حفظ نمی‌شوند.",
++        "topic": "حجم و مساحت",
++        "hint": ""
++      }
++    ],
++    "questions": []
++  },
++  {
++    "packId": "C905_E00-SUM",
++    "lessonId": "E00-SUM",
++    "title": "مرور جامع کل کتاب",
++    "pdfFileName": "",
++    "pdfOnly": false,
++    "audioFileId": "",
++    "teachText": "",
++    "teachHtml": "",
++    "teachSpeech": "",
++    "summary": "",
++    "examTips": "",
++    "flashcards": [
++      {
++        "id": "f01-card-01",
++        "front": "چه توصیفی یک مجموعه را مشخص می‌کند؟",
++        "back": "باید بتوان عضویت هر شیء را بدون سلیقه و ابهام تعیین کرد.",
++        "topic": "معرفی مجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-02",
++        "front": "آیا ترتیب اعضا و تکرارشان مجموعه را عوض می‌کند؟",
++        "back": "خیر؛ اعضای متمایز مهم‌اند. {۲,۵,۲}={۵,۲}.",
++        "topic": "معرفی مجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-03",
++        "front": "n(A) چه چیزی را می‌شمارد؟",
++        "back": "تعداد اعضای متمایز A؛ هر عضو تکراری یک بار شمرده می‌شود.",
++        "topic": "معرفی مجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-04",
++        "front": "تفاوت ∅ و {۰} چیست؟",
++        "back": "اولی هیچ عضو و دومی یک عضو به نام صفر دارد.",
++        "topic": "معرفی مجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-05",
++        "front": "تفاوت ∅ و {∅} چیست؟",
++        "back": "∅ تهی است؛ {∅} یک عضو دارد و آن عضو خودش یک مجموعهٔ تهی است.",
++        "topic": "معرفی مجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-06",
++        "front": "آیا «سه عدد بزرگ» مجموعه‌ای مشخص است؟",
++        "back": "خیر؛ بزرگی و اعضای دقیق تعیین نشده‌اند.",
++        "topic": "معرفی مجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-07",
++        "front": "نمادهای ∈ و ⊆ چه تفاوتی دارند؟",
++        "back": "∈ رابطهٔ شیء با مجموعه است؛ ⊆ رابطهٔ دو مجموعه. از a∈A، رابطهٔ {a}⊆A نتیجه می‌شود.",
++        "topic": "نمایش و زیرمجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-08",
++        "front": "دو مجموعه چه وقت برابرند؟",
++        "back": "وقتی هر عضو اولی در دومی و هر عضو دومی در اولی باشد.",
++        "topic": "نمایش و زیرمجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-09",
++        "front": "چگونه فهرست اعضای {x∈ℤ | −۲<x≤۲} را بنویسم؟",
++        "back": "اعضا {-۱,۰,۱,۲} هستند؛ نوع عدد و باز یا بسته بودن کران مهم است.",
++        "topic": "نمایش و زیرمجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-10",
++        "front": "قرارداد ℕ در این بسته چیست؟",
++        "back": "ℕ={۱,۲,۳,…} و W={۰,۱,۲,…}؛ هر پرسش با دامنهٔ متفاوت، آن را صریح تعیین می‌کند.",
++        "topic": "نمایش و زیرمجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-11",
++        "front": "آیا مجموعه زیرمجموعهٔ خودش است؟",
++        "back": "بله؛ همهٔ اعضایش در خودش هستند.",
++        "topic": "نمایش و زیرمجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-12",
++        "front": "چرا تهی زیرمجموعهٔ هر مجموعه است؟",
++        "back": "در تهی عضوی نیست که شرطِ حضور در مجموعهٔ مقصد را نقض کند.",
++        "topic": "نمایش و زیرمجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-13",
++        "front": "یک مجموعهٔ n عضوی چند زیرمجموعه دارد؟",
++        "back": "۲ⁿ؛ هر عضو یا انتخاب می‌شود یا نمی‌شود. تهی و خود مجموعه هم شمرده می‌شوند.",
++        "topic": "نمایش و زیرمجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-14",
++        "front": "زیرمجموعه‌های {a,b} کدام‌اند؟",
++        "back": "∅، {a}، {b} و {a,b}. چهار مجموعهٔ متفاوت داریم.",
++        "topic": "نمایش و زیرمجموعه",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-15",
++        "front": "اجتماع A∪B چیست؟",
++        "back": "عضوهایی که در A یا B یا هر دو هستند؛ مشترک‌ها یک بار نوشته می‌شوند.",
++        "topic": "عملیات مجموعه‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-16",
++        "front": "اشتراک A∩B چیست؟",
++        "back": "عضوهایی که هم‌زمان در هر دو مجموعه قرار دارند.",
++        "topic": "عملیات مجموعه‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-17",
++        "front": "تفاضل A−B چیست؟",
++        "back": "عضوهای A که در B نیستند؛ A−B معمولاً با B−A برابر نیست.",
++        "topic": "عملیات مجموعه‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-18",
++        "front": "رابطهٔ تعداد اعضای اجتماع چیست؟",
++        "back": "n(A∪B)=n(A)+n(B)−n(A∩B).",
++        "topic": "عملیات مجموعه‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-19",
++        "front": "اگر A⊆B باشد، اجتماع و اشتراک چه می‌شوند؟",
++        "back": "A∪B=B و A∩B=A.",
++        "topic": "عملیات مجموعه‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-20",
++        "front": "از A−B=∅ چه نتیجه می‌گیریم؟",
++        "back": "همهٔ اعضای A در B هستند؛ پس A⊆B. برابری لزوماً نتیجه نمی‌شود.",
++        "topic": "عملیات مجموعه‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-21",
++        "front": "ناحیهٔ فقط A در نمودار ون کدام است؟",
++        "back": "بخشی از دایرهٔ A که بیرون دایرهٔ B است؛ همان A−B.",
++        "topic": "عملیات مجموعه‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-22",
++        "front": "در عملیات چندمرحله‌ای از کجا شروع کنم؟",
++        "back": "از داخل پرانتز؛ اعضای هر مرحله را جداگانه بنویس تا عضو مشترک اشتباه حذف نشود.",
++        "topic": "عملیات مجموعه‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-23",
++        "front": "چه وقت P(A)=n(A)/n(S) معتبر است؟",
++        "back": "وقتی حالت‌های فضای نمونه هم‌شانس باشند و S متناهی و غیرتهی باشد.",
++        "topic": "مجموعه‌ها و احتمال",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-24",
++        "front": "پیشامد ناممکن و حتمی چه احتمالی دارند؟",
++        "back": "ناممکن صفر و حتمی یک؛ احتمال هر پیشامد بین صفر و یک است.",
++        "topic": "مجموعه‌ها و احتمال",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-25",
++        "front": "فضای نمونهٔ دو سکهٔ سالم چیست؟",
++        "back": "با رعایت ترتیب: RR، RP، PR، PP؛ چهار حالت هم‌شانس.",
++        "topic": "مجموعه‌ها و احتمال",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-26",
++        "front": "دو تاس سالم رنگی چند حالت هم‌شانس دارند؟",
++        "back": "۳۶ زوج مرتب؛ (۱,۲) و (۲,۱) متفاوت‌اند.",
++        "topic": "مجموعه‌ها و احتمال",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-27",
++        "front": "چرا مجموع‌های دو تاس هم‌شانس نیستند؟",
++        "back": "برای هر مجموع، تعداد زوج‌های مرتب متفاوت است؛ مجموع ۲ یک حالت و مجموع ۷ شش حالت دارد.",
++        "topic": "مجموعه‌ها و احتمال",
++        "hint": ""
++      },
++      {
++        "id": "f01-card-28",
++        "front": "«و»، «یا» و «حداقل» را چگونه بخوانم؟",
++        "back": "«و» اشتراک است؛ «یا» اجتماع شامل اشتراک؛ «حداقل یک» را می‌توان با حذف «هیچ» به‌دست آورد.",
++        "topic": "مجموعه‌ها و احتمال",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-01",
++        "front": "مفهوم اصلی «عددهای گویا» چیست؟",
++        "back": "عدد گویا را می‌توان به صورت a/b نوشت که a و b صحیح و b ناصفر باشند؛ عدد صحیح نیز گویاست.",
++        "topic": "عددهای گویا",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-02",
++        "front": "قاعدهٔ کلیدی «عددهای گویا» را به یاد بیاور.",
++        "back": "اعشار مختوم و اعشار نامختومِ متناوب گویا هستند؛ در کسر ساده‌شده، مخرجِ دارای فقط عامل‌های اول ۲ و ۵ اعشار مختوم می‌دهد.",
++        "topic": "عددهای گویا",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-03",
++        "front": "یک مثال از «عددهای گویا» را توضیح بده.",
++        "back": "۰.۳۷۵=۳۷۵/۱۰۰۰=۳/۸؛ ولی ۱/۳=۰.۳۳۳… متناوب است.",
++        "topic": "عددهای گویا",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-04",
++        "front": "در «عددهای گویا» مراقب چه اشتباهی باشم؟",
++        "back": "پیش از بررسی مخرج، کسر را ساده کن؛ وجود یک رادیکال هم به‌تنهایی نشانهٔ گنگ بودن نیست.",
++        "topic": "عددهای گویا",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-05",
++        "front": "مفهوم اصلی «عددهای حقیقی» چیست؟",
++        "back": "حقیقی‌ها از دو دستهٔ گویا و گنگ تشکیل می‌شوند؛ گنگ‌ها نمایش اعشاری نامختومِ غیرمتناوب دارند.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-06",
++        "front": "قاعدهٔ کلیدی «عددهای حقیقی» را به یاد بیاور.",
++        "back": "ℕ⊆ℤ⊆ℚ⊆ℝ؛ اشتراک گویا و گنگ تهی است. بین هر دو حقیقی متمایز، بی‌شمار گویا و گنگ وجود دارد.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-07",
++        "front": "یک مثال از «عددهای حقیقی» را توضیح بده.",
++        "back": "√۴۹=۷ گویاست؛ √۱۰ گنگ و بین ۳ و ۴ است، چون ۹<۱۰<۱۶.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-08",
++        "front": "در «عددهای حقیقی» مراقب چه اشتباهی باشم؟",
++        "back": "بازهٔ حقیقی بین دو نقطه، فقط فهرست صحیح‌ها نیست؛ همهٔ نقطه‌های بین کران‌ها را شامل می‌شود.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-09",
++        "front": "مفهوم اصلی «قدر مطلق» چیست؟",
++        "back": "|a| فاصلهٔ a از صفر است؛ |a−b| فاصلهٔ دو نقطهٔ a و b است.",
++        "topic": "قدر مطلق",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-10",
++        "front": "قاعدهٔ کلیدی «قدر مطلق» را به یاد بیاور.",
++        "back": "√(a^(۲))=|a|؛ اگر a≥۰ باشد |a|=a و اگر a<۰ باشد |a|=−a.",
++        "topic": "قدر مطلق",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-11",
++        "front": "یک مثال از «قدر مطلق» را توضیح بده.",
++        "back": "برای a=−۵ داریم √(a^(۲))=۵؛ همچنین |۳−۷|=۴.",
++        "topic": "قدر مطلق",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-12",
++        "front": "در «قدر مطلق» مراقب چه اشتباهی باشم؟",
++        "back": "قدر مطلقِ جمع را بی‌دلیل به مجموع قدر مطلق‌ها تبدیل نکن؛ |۲+(−۲)|=۰ ولی |۲|+|−۲|=۴.",
++        "topic": "قدر مطلق",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-13",
++        "front": "مفهوم اصلی «محاسبهٔ تقریبی» چیست؟",
++        "back": "در قطع، رقم‌های اضافی حذف می‌شوند؛ در گرد کردن، نزدیک‌ترین مقدار در مرتبهٔ خواسته‌شده انتخاب می‌شود.",
++        "topic": "محاسبهٔ تقریبی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-14",
++        "front": "قاعدهٔ کلیدی «محاسبهٔ تقریبی» را به یاد بیاور.",
++        "back": "خطای مطلق برابر |مقدار دقیق−مقدار تقریبی| است؛ برای اعداد منفی هم فاصله را معیار قرار بده.",
++        "topic": "محاسبهٔ تقریبی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-15",
++        "front": "یک مثال از «محاسبهٔ تقریبی» را توضیح بده.",
++        "back": "تا دو رقم اعشار: قطعِ ۲.۳۷۶ برابر ۲.۳۷ و گردکردن آن ۲.۳۸ است.",
++        "topic": "محاسبهٔ تقریبی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-16",
++        "front": "در «محاسبهٔ تقریبی» مراقب چه اشتباهی باشم؟",
++        "back": "قطعِ −۲.۳۷۶ تا دو رقم −۲.۳۷ است؛ با صحیحِ سمت چپ یا گردکردن اشتباه نشود.",
++        "topic": "محاسبهٔ تقریبی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-17",
++        "front": "چرا √(a^(۲)) همیشه a نیست؟",
++        "back": "اگر a منفی باشد، رادیکال نامنفی است؛ نتیجه |a| است.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-18",
++        "front": "|x−c|=d با d>۰ چه جواب‌هایی دارد؟",
++        "back": "x=c−d یا x=c+d؛ دو نقطهٔ دو سوی مرکز c.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-19",
++        "front": "با منفی کردن کران‌های یک نامساوی چه می‌شود؟",
++        "back": "ترتیب روی محور برعکس می‌شود؛ مثلاً ۳<√۱۰<۴ می‌دهد −۴<−√۱۰<−۳.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-20",
++        "front": "آیا حاصل ضرب دو گنگ همیشه گنگ است؟",
++        "back": "خیر؛ √۲×√۲=۲ یک مثال نقض است.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-21",
++        "front": "فاصلهٔ دو عدد چگونه حساب می‌شود؟",
++        "back": "قدر مطلق تفاضل مختصات؛ ترتیب کم کردن روی فاصله اثر ندارد.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f02-card-22",
++        "front": "برای اعشار متناوب مرکب چه کار کنم؟",
++        "back": "دو مضرب ده از عدد را طوری کم کن که بخش تکرارشونده حذف شود؛ قسمت غیرتکراری را هم حساب کن.",
++        "topic": "عددهای حقیقی",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-01",
++        "front": "مفهوم اصلی «استدلال» چیست؟",
++        "back": "با داده‌ها و دانسته‌های معتبر برای نتیجهٔ تازه دلیل می‌آوریم؛ دادهٔ مسئله «فرض» و خواستهٔ آن «حکم» است.",
++        "topic": "استدلال",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-02",
++        "front": "قاعدهٔ کلیدی «استدلال» را به یاد بیاور.",
++        "back": "مثال‌های محدود، گزارهٔ عمومی را ثابت نمی‌کنند؛ یک مثال نقض درست برای رد گزارهٔ عمومی کافی است.",
++        "topic": "استدلال",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-03",
++        "front": "یک مثال از «استدلال» را توضیح بده.",
++        "back": "«هر مستطیل مربع است» با مستطیل ۲×۵ رد می‌شود؛ فرض مستطیل بودن برقرار و حکم مربع بودن نادرست است.",
++        "topic": "استدلال",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-04",
++        "front": "در «استدلال» مراقب چه اشتباهی باشم؟",
++        "back": "ظاهر شکل و اندازه‌گیری محدود را جای دلیل عمومی ننویس؛ حکم را هم از ابتدا فرض نکن.",
++        "topic": "استدلال",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-05",
++        "front": "مفهوم اصلی «آشنایی با اثبات» چیست؟",
++        "back": "اثبات، زنجیره‌ای از دلیل‌های معتبر است که از فرض به حکم می‌رسد.",
++        "topic": "آشنایی با اثبات",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-06",
++        "front": "قاعدهٔ کلیدی «آشنایی با اثبات» را به یاد بیاور.",
++        "back": "در مثلث مجموع زاویه‌ها ۱۸۰ درجه است؛ زاویهٔ خارجی برابر مجموع دو زاویهٔ داخلی غیرمجاور است.",
++        "topic": "آشنایی با اثبات",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-07",
++        "front": "یک مثال از «آشنایی با اثبات» را توضیح بده.",
++        "back": "دو زاویهٔ متقابل به رأس هر دو با یک زاویهٔ مشترک مکمل‌اند؛ با کم کردن مشترک، برابری نتیجه می‌شود.",
++        "topic": "آشنایی با اثبات",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-08",
++        "front": "در «آشنایی با اثبات» مراقب چه اشتباهی باشم؟",
++        "back": "هر پاره‌خطی که در شکل عمود به نظر می‌رسد، بدون علامت یا دلیل عمود نیست؛ محل ارتفاع‌ها هم همیشه داخل مثلث نیست.",
++        "topic": "آشنایی با اثبات",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-09",
++        "front": "مفهوم اصلی «هم‌نهشتی مثلث‌ها» چیست؟",
++        "back": "در هم‌نهشتی، اندازه و شکل یکسان‌اند و رأس‌ها، ضلع‌ها و زاویه‌ها تناظر مشخص دارند.",
++        "topic": "هم‌نهشتی مثلث‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-10",
++        "front": "قاعدهٔ کلیدی «هم‌نهشتی مثلث‌ها» را به یاد بیاور.",
++        "back": "معیارها: سه ضلع؛ دو ضلع و زاویهٔ بین آن‌ها؛ دو زاویه و ضلع بین آن‌ها. در قائم‌ها، وتر و یک ضلع قائمه نیز کافی است.",
++        "topic": "هم‌نهشتی مثلث‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-11",
++        "front": "یک مثال از «هم‌نهشتی مثلث‌ها» را توضیح بده.",
++        "back": "اگر ABC≅DEF باشد، AB متناظر DE و زاویهٔ C متناظر F است؛ ترتیب نام رأس‌ها راهنمای تناظر است.",
++        "topic": "هم‌نهشتی مثلث‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-12",
++        "front": "در «هم‌نهشتی مثلث‌ها» مراقب چه اشتباهی باشم؟",
++        "back": "سه زاویه فقط تشابه می‌دهد؛ دو ضلع و زاویهٔ غیرمحصور هم همیشه هم‌نهشتی را تضمین نمی‌کند.",
++        "topic": "هم‌نهشتی مثلث‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-13",
++        "front": "مفهوم اصلی «حل مسئله در هندسه» چیست؟",
++        "back": "شکل کمکی، رسم عمود یا وصل کردن نقطه‌ها می‌تواند دو مثلث مناسب برای هم‌نهشتی بسازد.",
++        "topic": "حل مسئله در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-14",
++        "front": "قاعدهٔ کلیدی «حل مسئله در هندسه» را به یاد بیاور.",
++        "back": "در مثلث متساوی‌الساقین، نیمساز رأس، میانه و ارتفاع وارد بر قاعده هم هست؛ دلیل آن هم‌نهشتی دو مثلث دو سوی نیمساز است.",
++        "topic": "حل مسئله در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-15",
++        "front": "یک مثال از «حل مسئله در هندسه» را توضیح بده.",
++        "back": "اگر AB=AC و AD نیمساز A باشد، AB=AC، AD مشترک و دو زاویهٔ A برابرند؛ پس BD=DC.",
++        "topic": "حل مسئله در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-16",
++        "front": "در «حل مسئله در هندسه» مراقب چه اشتباهی باشم؟",
++        "back": "پیش از نتیجه‌گیری، معیار هم‌نهشتی و هر سه دادهٔ لازم را بنویس؛ «چون دو مثلث شبیه‌اند» دلیل هم‌نهشتی نیست.",
++        "topic": "حل مسئله در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-17",
++        "front": "مفهوم اصلی «شکل‌های متشابه» چیست؟",
++        "back": "زاویه‌های متناظر برابر و ضلع‌های متناظر متناسب‌اند؛ ضریب تشابه جهت مشخص دارد.",
++        "topic": "شکل‌های متشابه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-18",
++        "front": "قاعدهٔ کلیدی «شکل‌های متشابه» را به یاد بیاور.",
++        "back": "اگر نسبت طول بزرگ به کوچک k باشد، هر طول و محیط نیز k برابر می‌شود؛ برای مساحت، نسبت k^(۲) است.",
++        "topic": "شکل‌های متشابه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-19",
++        "front": "یک مثال از «شکل‌های متشابه» را توضیح بده.",
++        "back": "در دو مثلث متشابه اگر ضلع‌های متناظر ۶ و ۱۵ باشند، نسبت بزرگ به کوچک ۵/۲ است؛ ضلع ۸ به ۲۰ متناظر می‌شود.",
++        "topic": "شکل‌های متشابه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-20",
++        "front": "در «شکل‌های متشابه» مراقب چه اشتباهی باشم؟",
++        "back": "زاویه را در ضریب تشابه ضرب نکن؛ در نقشه نیز واحدهای طول را پیش از نسبت‌گیری یکسان کن.",
++        "topic": "شکل‌های متشابه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-21",
++        "front": "در نام ABC≅DEF، ضلع AC با کدام ضلع متناظر است؟",
++        "back": "با DF؛ A متناظر D و C متناظر F است.",
++        "topic": "استدلال و اثبات در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-22",
++        "front": "نقطهٔ روی عمودمنصف چه ویژگی دارد؟",
++        "back": "فاصله‌اش از دو سر پاره‌خط برابر است.",
++        "topic": "استدلال و اثبات در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-23",
++        "front": "نقطهٔ روی نیمساز از دو ضلع چه فاصله‌ای دارد؟",
++        "back": "دو فاصلهٔ عمودی برابر دارد؛ فاصله از خط با عمود سنجیده می‌شود.",
++        "topic": "استدلال و اثبات در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-24",
++        "front": "دو مماس از یک نقطهٔ بیرون دایره چه طولی دارند؟",
++        "back": "برابرند؛ از دو مثلث قائم با شعاع‌های برابر و وتر مشترک استفاده می‌کنیم.",
++        "topic": "استدلال و اثبات در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-25",
++        "front": "مقیاس ۱:۵۰۰۰۰ یعنی چه؟",
++        "back": "هر یک سانتی‌متر نقشه، پنجاه‌هزار سانتی‌متر یا پانصد متر واقعی است.",
++        "topic": "استدلال و اثبات در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f03-card-26",
++        "front": "محل برخورد ارتفاع‌های مثلث کجاست؟",
++        "back": "در حاده داخل، در قائم روی رأس قائمه و در منفرجه بیرون مثلث است.",
++        "topic": "استدلال و اثبات در هندسه",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-01",
++        "front": "مفهوم اصلی «توان صحیح» چیست؟",
++        "back": "a^n حاصل ضرب n عامل a است؛ برای پایهٔ ناصفر، a^۰=۱ و a^(−n)=۱/a^n.",
++        "topic": "توان صحیح",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-02",
++        "front": "قاعدهٔ کلیدی «توان صحیح» را به یاد بیاور.",
++        "back": "در ضرب هم‌پایه نماها جمع؛ در تقسیم تفریق؛ در توانِ توان ضرب می‌شوند.",
++        "topic": "توان صحیح",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-03",
++        "front": "یک مثال از «توان صحیح» را توضیح بده.",
++        "back": "۲^(۳)×۲^(−۵)=۲^(−۲)=۱/۴؛ ولی (۲^(۳))^(۲)=۲^(۶).",
++        "topic": "توان صحیح",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-04",
++        "front": "در «توان صحیح» مراقب چه اشتباهی باشم؟",
++        "back": "−۳^(۲)=−۹ اما (−۳)^(۲)=۹؛ نمای منفی، علامت پاسخ را به‌تنهایی منفی نمی‌کند.",
++        "topic": "توان صحیح",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-05",
++        "front": "مفهوم اصلی «نماد علمی» چیست؟",
++        "back": "شکل استاندارد، c×۱۰^n است که ۱≤c<۱۰ و n عدد صحیح باشد.",
++        "topic": "نماد علمی",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-06",
++        "front": "قاعدهٔ کلیدی «نماد علمی» را به یاد بیاور.",
++        "back": "اگر ممیز ضریب یک مرتبه چپ برود، توان یک واحد زیاد می‌شود؛ برای جمع، ابتدا توان‌های ده را هم‌ارز کن.",
++        "topic": "نماد علمی",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-07",
++        "front": "یک مثال از «نماد علمی» را توضیح بده.",
++        "back": "۰.۰۰۰۷۲=۷.۲×۱۰^(−۴)؛ همچنین ۴۲۰۰۰۰=۴.۲×۱۰^(۵).",
++        "topic": "نماد علمی",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-08",
++        "front": "در «نماد علمی» مراقب چه اشتباهی باشم؟",
++        "back": "۴۲×۱۰^(۴) مقدار درستی دارد ولی استاندارد نیست؛ ضریب نباید ده یا بیشتر باشد.",
++        "topic": "نماد علمی",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-09",
++        "front": "مفهوم اصلی «ریشه‌گیری» چیست؟",
++        "back": "نماد √a ریشهٔ دوم نامنفی است؛ عدد مثبت دو ریشهٔ دوم دارد. ریشهٔ سومِ منفی، عددی منفی است.",
++        "topic": "ریشه‌گیری",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-10",
++        "front": "قاعدهٔ کلیدی «ریشه‌گیری» را به یاد بیاور.",
++        "back": "برای a,b≥۰، √a×√b=√(ab)؛ همچنین √(a^(۲))=|a|.",
++        "topic": "ریشه‌گیری",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-11",
++        "front": "یک مثال از «ریشه‌گیری» را توضیح بده.",
++        "back": "√۷۲=√(۳۶×۲)=۶√۲؛ ∛(−۱۲۵)=−۵.",
++        "topic": "ریشه‌گیری",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-12",
++        "front": "در «ریشه‌گیری» مراقب چه اشتباهی باشم؟",
++        "back": "در اعداد حقیقی، ریشهٔ دوم عدد منفی تعریف نشده؛ قانون ضرب رادیکال را بی‌شرط به هر عددی تعمیم نده.",
++        "topic": "ریشه‌گیری",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-13",
++        "front": "مفهوم اصلی «جمع، تفریق و گویا کردن» چیست؟",
++        "back": "رادیکال‌های هم‌نوع عدد زیر رادیکال یکسان دارند؛ ابتدا عامل مربع کامل را بیرون بکش.",
++        "topic": "جمع، تفریق و گویا کردن",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-14",
++        "front": "قاعدهٔ کلیدی «جمع، تفریق و گویا کردن» را به یاد بیاور.",
++        "back": "a√c+b√c=(a+b)√c؛ برای مخرج دو جمله‌ای، مزدوج را در صورت و مخرج ضرب کن.",
++        "topic": "جمع، تفریق و گویا کردن",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-15",
++        "front": "یک مثال از «جمع، تفریق و گویا کردن» را توضیح بده.",
++        "back": "√۱۲+√۲۷=۲√۳+۳√۳=۵√۳؛ ۱/(√۳−۱)=(√۳+۱)/۲.",
++        "topic": "جمع، تفریق و گویا کردن",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-16",
++        "front": "در «جمع، تفریق و گویا کردن» مراقب چه اشتباهی باشم؟",
++        "back": "√a+√b معمولاً √(a+b) نیست؛ گویا کردن فقط مخرج را هدف می‌گیرد و مقدار کسر باید حفظ شود.",
++        "topic": "جمع، تفریق و گویا کردن",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-17",
++        "front": "a^m×a^n چه می‌شود؟",
++        "back": "a^(m+n)؛ پایه ثابت می‌ماند.",
++        "topic": "توان و ریشه",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-18",
++        "front": "a^m÷a^n چه می‌شود؟",
++        "back": "a^(m−n)، با شرط a≠۰.",
++        "topic": "توان و ریشه",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-19",
++        "front": "(a^m)^n چه می‌شود؟",
++        "back": "a^(mn)؛ نماها در هم ضرب می‌شوند.",
++        "topic": "توان و ریشه",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-20",
++        "front": "نمای منفی چه معنایی دارد؟",
++        "back": "معکوس توان مثبت؛ ۲^(−۳)=۱/۸.",
++        "topic": "توان و ریشه",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-21",
++        "front": "مزدوج √a−√b چیست؟",
++        "back": "√a+√b؛ حاصل ضربشان a−b است.",
++        "topic": "توان و ریشه",
++        "hint": ""
++      },
++      {
++        "id": "f04-card-22",
++        "front": "چرا ضریب ۰.۴ در نماد علمی استاندارد نیست؟",
++        "back": "ضریب باید دست‌کم یک و کمتر از ده باشد؛ ۰.۴×۱۰^n=۴×۱۰^(n−۱).",
++        "topic": "توان و ریشه",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-01",
++        "front": "مفهوم اصلی «عبارت جبری» چیست؟",
++        "back": "تک‌جمله‌ای توان‌های صحیح نامنفیِ متغیرها دارد؛ در جمله‌های هم‌نوع، بخش حرفی یکسان است.",
++        "topic": "عبارت جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-02",
++        "front": "قاعدهٔ کلیدی «عبارت جبری» را به یاد بیاور.",
++        "back": "درجهٔ کل تک‌جمله‌ای مجموع نماهاست؛ درجهٔ چندجمله‌ای را پس از ساده‌سازی، از بزرگ‌ترین درجهٔ باقی‌مانده می‌گیریم.",
++        "topic": "عبارت جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-03",
++        "front": "یک مثال از «عبارت جبری» را توضیح بده.",
++        "back": "۳x^(۲)y درجهٔ کل ۳ و نسبت به x درجهٔ ۲ دارد؛ ۵x−۲x+۴=۳x+۴.",
++        "topic": "عبارت جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-04",
++        "front": "در «عبارت جبری» مراقب چه اشتباهی باشم؟",
++        "back": "ضریب −x برابر −۱ است؛ x و x^(۲) جملهٔ هم‌نوع نیستند و ضریبِ حذف‌شده را در درجه حساب نمی‌کنیم.",
++        "topic": "عبارت جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-05",
++        "front": "مفهوم اصلی «اتحادها» چیست؟",
++        "back": "اتحاد تساوی‌ای است که برای همهٔ مقدارهای مجاز متغیرها درست باشد.",
++        "topic": "اتحادها",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-06",
++        "front": "قاعدهٔ کلیدی «اتحادها» را به یاد بیاور.",
++        "back": "(a±b)^(۲)=a^(۲)±۲ab+b^(۲)؛ (a+b)(a−b)=a^(۲)−b^(۲)؛ (x+a)(x+b)=x^(۲)+(a+b)x+ab.",
++        "topic": "اتحادها",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-07",
++        "front": "یک مثال از «اتحادها» را توضیح بده.",
++        "back": "(۲x−۳)^(۲)=۴x^(۲)−۱۲x+۹؛ (x+۵)(x−۵)=x^(۲)−۲۵.",
++        "topic": "اتحادها",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-08",
++        "front": "در «اتحادها» مراقب چه اشتباهی باشم؟",
++        "back": "در مربع مجموع و تفاضل، جملهٔ میانی را حذف نکن؛ مربعِ جملهٔ منفی در پایان مثبت است.",
++        "topic": "اتحادها",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-09",
++        "front": "مفهوم اصلی «تجزیه و کاربرد» چیست؟",
++        "back": "تجزیه یعنی نوشتن عبارت به صورت حاصل ضرب؛ معکوس بسط است.",
++        "topic": "تجزیه و کاربرد",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-10",
++        "front": "قاعدهٔ کلیدی «تجزیه و کاربرد» را به یاد بیاور.",
++        "back": "اول عامل مشترک را بررسی کن؛ سپس مربع کامل، مزدوج یا جملهٔ مشترک را به کار ببر و با ضرب کنترل کن.",
++        "topic": "تجزیه و کاربرد",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-11",
++        "front": "یک مثال از «تجزیه و کاربرد» را توضیح بده.",
++        "back": "۳x^(۲)−۲۷=۳(x^(۲)−۹)=۳(x−۳)(x+۳)؛ x^(۲)+۵x+۶=(x+۲)(x+۳).",
++        "topic": "تجزیه و کاربرد",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-12",
++        "front": "در «تجزیه و کاربرد» مراقب چه اشتباهی باشم؟",
++        "back": "از صورت یک جمع، فقط یک جمله را با مخرج حذف نکن؛ عاملِ مشترکِ کل عبارت لازم است.",
++        "topic": "تجزیه و کاربرد",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-13",
++        "front": "مفهوم اصلی «نابرابری و نامعادله» چیست؟",
++        "back": "جواب نامعادله مجموعهٔ مقدارهایی است که رابطهٔ نابرابری را درست می‌کنند.",
++        "topic": "نابرابری و نامعادله",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-14",
++        "front": "قاعدهٔ کلیدی «نابرابری و نامعادله» را به یاد بیاور.",
++        "back": "جمع ثابت و ضرب مثبت، جهت را حفظ می‌کنند؛ ضرب یا تقسیم بر منفی، جهت را برعکس می‌کند.",
++        "topic": "نابرابری و نامعادله",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-15",
++        "front": "یک مثال از «نابرابری و نامعادله» را توضیح بده.",
++        "back": "−۲x+۱<۷ ⇒ −۲x<۶ ⇒ x>−۳؛ کران در نامساوی اکید عضو نیست.",
++        "topic": "نابرابری و نامعادله",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-16",
++        "front": "در «نابرابری و نامعادله» مراقب چه اشتباهی باشم؟",
++        "back": "در مسئلهٔ تعداد، جواب باید صحیح و در شمارش نامنفی باشد؛ مرز یک نامعادله به‌تنهایی تمام مجموعهٔ جواب نیست.",
++        "topic": "نابرابری و نامعادله",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-17",
++        "front": "درجهٔ کل ۵x^(۲)y^(۳) چند است؟",
++        "back": "پنج؛ مجموع نماهای دو متغیر.",
++        "topic": "عبارت‌های جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-18",
++        "front": "صفر شدن حاصل ضرب چه می‌گوید؟",
++        "back": "دست‌کم یکی از عامل‌ها صفر است؛ هر عامل را جدا برابر صفر بگذار.",
++        "topic": "عبارت‌های جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-19",
++        "front": "عامل مشترک را در کدام مرحله بگیرم؟",
++        "back": "پیش از اتحادها؛ با بیرون کشیدن آن، شکل اصلی تجزیه واضح‌تر می‌شود.",
++        "topic": "عبارت‌های جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-20",
++        "front": "در نامعادله چرا تقسیم بر منفی حساس است؟",
++        "back": "جهت علامت برعکس می‌شود؛ روی محور قرینه کردن ترتیب را عوض می‌کند.",
++        "topic": "عبارت‌های جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-21",
++        "front": "آیا مرزِ x<۳ عضو جواب است؟",
++        "back": "خیر؛ علامت اکید کران را نمی‌پذیرد، ولی x≤۳ آن را می‌پذیرد.",
++        "topic": "عبارت‌های جبری",
++        "hint": ""
++      },
++      {
++        "id": "f05-card-22",
++        "front": "چطور تجزیه را کنترل کنم؟",
++        "back": "عامل‌ها را دوباره در هم ضرب و با عبارت اولیه مقایسه کن.",
++        "topic": "عبارت‌های جبری",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-01",
++        "front": "مفهوم اصلی «معادلهٔ خط» چیست؟",
++        "back": "هر نقطهٔ روی خط، معادلهٔ آن را برآورده می‌کند؛ در y=mx+b، طول x و عرض y هستند.",
++        "topic": "معادلهٔ خط",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-02",
++        "front": "قاعدهٔ کلیدی «معادلهٔ خط» را به یاد بیاور.",
++        "back": "برای محور y، مقدار x=۰ و برای محور x، مقدار y=۰ بگذار؛ برای رسم، دو نقطهٔ متفاوت کافی است.",
++        "topic": "معادلهٔ خط",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-03",
++        "front": "یک مثال از «معادلهٔ خط» را توضیح بده.",
++        "back": "در y=۲x−۴، نقطه‌های (۰,−۴) و (۲,۰) روی خط‌اند و دو برخورد با محورها هستند.",
++        "topic": "معادلهٔ خط",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-04",
++        "front": "در «معادلهٔ خط» مراقب چه اشتباهی باشم؟",
++        "back": "مختصات را جابه‌جا نکن؛ خط x=۳ عمودی است و به شکل y=mx+b با m حقیقی نوشته نمی‌شود.",
++        "topic": "معادلهٔ خط",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-05",
++        "front": "مفهوم اصلی «شیب و عرض از مبدأ» چیست؟",
++        "back": "شیب، نسبت تغییر عرض به تغییر طول است؛ عرض از مبدأ محل برخورد با محور y است.",
++        "topic": "شیب و عرض از مبدأ",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-06",
++        "front": "قاعدهٔ کلیدی «شیب و عرض از مبدأ» را به یاد بیاور.",
++        "back": "m=(y_(۲)−y_(۱))/(x_(۲)−x_(۱))؛ خط افقی شیب صفر و خط عمودی شیب تعریف‌نشده دارد.",
++        "topic": "شیب و عرض از مبدأ",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-07",
++        "front": "یک مثال از «شیب و عرض از مبدأ» را توضیح بده.",
++        "back": "در ۲y−۶x=۸ ابتدا y=۳x+۴ بنویس؛ شیب ۳ و عرض از مبدأ ۴ است.",
++        "topic": "شیب و عرض از مبدأ",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-08",
++        "front": "در «شیب و عرض از مبدأ» مراقب چه اشتباهی باشم؟",
++        "back": "ضریب ظاهری x پیش از تنها کردن y لزوماً شیب نیست؛ ترتیب کم کردن در صورت و مخرج باید یکسان باشد.",
++        "topic": "شیب و عرض از مبدأ",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-09",
++        "front": "مفهوم اصلی «توازی و تقاطع» چیست؟",
++        "back": "خط‌های غیرعمودی با شیب برابر یا منطبق‌اند یا موازی و جدا.",
++        "topic": "توازی و تقاطع",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-10",
++        "front": "قاعدهٔ کلیدی «توازی و تقاطع» را به یاد بیاور.",
++        "back": "اگر شیب برابر و عرض از مبدأ متفاوت باشد، تقاطع ندارند؛ شیب‌های متفاوت یک نقطهٔ تقاطع می‌دهند.",
++        "topic": "توازی و تقاطع",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-11",
++        "front": "یک مثال از «توازی و تقاطع» را توضیح بده.",
++        "back": "y=۲x+۱ و y=۲x−۳ موازی و جدا هستند؛ y=۲x+۱ و ۲y=۴x+۲ یک خط‌اند.",
++        "topic": "توازی و تقاطع",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-12",
++        "front": "در «توازی و تقاطع» مراقب چه اشتباهی باشم؟",
++        "back": "برابری شیب به‌تنهایی به معنی یکسان بودن دو خط نیست؛ ثابت‌ها را هم بررسی کن.",
++        "topic": "توازی و تقاطع",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-13",
++        "front": "مفهوم اصلی «دستگاه خطی» چیست؟",
++        "back": "جواب دستگاه، زوج مرتبِ مشترک دو معادله است؛ روش حذف، جایگذاری و رسم، یک نقطه را توصیف می‌کنند.",
++        "topic": "دستگاه خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-14",
++        "front": "قاعدهٔ کلیدی «دستگاه خطی» را به یاد بیاور.",
++        "back": "در حذف، تمام یک معادله را در ضریب مناسب ضرب کن؛ در پایان جواب را در هر دو معادله کنترل کن.",
++        "topic": "دستگاه خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-15",
++        "front": "یک مثال از «دستگاه خطی» را توضیح بده.",
++        "back": "x+y=۷ و x−y=۱ ⇒ ۲x=۸ ⇒ x=۴، y=۳.",
++        "topic": "دستگاه خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-16",
++        "front": "در «دستگاه خطی» مراقب چه اشتباهی باشم؟",
++        "back": "فقط یک معادله را کنترل نکن؛ دستگاه می‌تواند یک، بی‌شمار یا هیچ جواب داشته باشد.",
++        "topic": "دستگاه خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-17",
++        "front": "خط x=c چه شکلی است؟",
++        "back": "عمودی و موازی محور عرض‌ها؛ شیب تعریف‌نشده دارد.",
++        "topic": "خط و معادله‌های خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-18",
++        "front": "خط y=c چه شکلی است؟",
++        "back": "افقی و موازی محور طول‌ها؛ شیب صفر دارد.",
++        "topic": "خط و معادله‌های خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-19",
++        "front": "برای نقطهٔ برخورد دو خط چه می‌کنم؟",
++        "back": "دو معادله را هم‌زمان حل می‌کنم؛ جواب یک زوج مرتب است.",
++        "topic": "خط و معادله‌های خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-20",
++        "front": "شرط دو خط منطبق چیست؟",
++        "back": "هم شیب و هم عرض از مبدأ برابر باشند؛ در فرم کلی، همهٔ ضریب‌ها و ثابت با یک نسبت باشند.",
++        "topic": "خط و معادله‌های خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-21",
++        "front": "چرا جواب دستگاه را در هر دو معادله بررسی کنم؟",
++        "back": "ممکن است خطای علامت یا حذف باعث شود جواب فقط یکی را درست کند.",
++        "topic": "خط و معادله‌های خطی",
++        "hint": ""
++      },
++      {
++        "id": "f06-card-22",
++        "front": "در مسئلهٔ هزینهٔ خطی، عرض از مبدأ چه معنایی دارد؟",
++        "back": "هزینهٔ ثابت در شروع، یعنی در مقدار صفرِ متغیر مستقل.",
++        "topic": "خط و معادله‌های خطی",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-01",
++        "front": "مفهوم اصلی «تعریف و دامنه» چیست؟",
++        "back": "عبارت گویا نسبت دو چندجمله‌ای است؛ مخرج نباید صفر شود.",
++        "topic": "تعریف و دامنه",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-02",
++        "front": "قاعدهٔ کلیدی «تعریف و دامنه» را به یاد بیاور.",
++        "back": "تمام صفرهای مخرجِ اولیه ممنوع‌اند؛ حذف عامل، مقدار ممنوع را دوباره مجاز نمی‌کند.",
++        "topic": "تعریف و دامنه",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-03",
++        "front": "یک مثال از «تعریف و دامنه» را توضیح بده.",
++        "back": "(x^(۲)−۹)/(x−۳)=x+۳ برای x≠۳؛ عبارت اولیه در x=۳ تعریف نشده است.",
++        "topic": "تعریف و دامنه",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-04",
++        "front": "در «تعریف و دامنه» مراقب چه اشتباهی باشم؟",
++        "back": "صفرِ صورت معمولاً ممنوع نیست؛ در تقسیم، علاوه بر مخرج‌ها، خود مقسوم‌علیه هم باید ناصفر باشد.",
++        "topic": "تعریف و دامنه",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-05",
++        "front": "مفهوم اصلی «ساده‌کردن» چیست؟",
++        "back": "صورت و مخرج را به عامل‌ها تجزیه کن و فقط عامل مشترک ناصفر را حذف کن.",
++        "topic": "ساده‌کردن",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-06",
++        "front": "قاعدهٔ کلیدی «ساده‌کردن» را به یاد بیاور.",
++        "back": "علامت را می‌توان یک بار از صورت یا مخرج بیرون آورد؛ x−a و a−x قرینه‌اند.",
++        "topic": "ساده‌کردن",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-07",
++        "front": "یک مثال از «ساده‌کردن» را توضیح بده.",
++        "back": "(x^(۲)−۴)/(x−۲)=x+۲ برای x≠۲؛ (x−۲)/(۲−x)=−۱.",
++        "topic": "ساده‌کردن",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-08",
++        "front": "در «ساده‌کردن» مراقب چه اشتباهی باشم؟",
++        "back": "(x+۳)/x برابر ۳ نیست؛ x عاملِ مشترکِ همهٔ صورت نیست.",
++        "topic": "ساده‌کردن",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-09",
++        "front": "مفهوم اصلی «چهار عمل روی کسرهای جبری» چیست؟",
++        "back": "برای جمع و تفریق، مخرج مشترک لازم است؛ برای ضرب، عامل‌گیری پیش از بسط کمک می‌کند.",
++        "topic": "چهار عمل روی کسرهای جبری",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-10",
++        "front": "قاعدهٔ کلیدی «چهار عمل روی کسرهای جبری» را به یاد بیاور.",
++        "back": "در تقسیم، فقط کسر دوم را معکوس کن؛ منفیِ صورتِ کسر دوم در تفریق به همهٔ جمله‌ها می‌رسد.",
++        "topic": "چهار عمل روی کسرهای جبری",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-11",
++        "front": "یک مثال از «چهار عمل روی کسرهای جبری» را توضیح بده.",
++        "back": "۱/(x−۱)+۱/(x+۱)=۲x/(x^(۲)−۱)، با x≠±۱.",
++        "topic": "چهار عمل روی کسرهای جبری",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-12",
++        "front": "در «چهار عمل روی کسرهای جبری» مراقب چه اشتباهی باشم؟",
++        "back": "صورت‌ها و مخرج‌ها را جدا جمع نکن؛ در مخرج‌های قرینه، علامت را پیش از محاسبه اصلاح کن.",
++        "topic": "چهار عمل روی کسرهای جبری",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-13",
++        "front": "مفهوم اصلی «تقسیم چندجمله‌ای‌ها» چیست؟",
++        "back": "جمله‌ها را با توان نزولی بنویس و برای توانِ غایب، ضریب صفر در نظر بگیر.",
++        "topic": "تقسیم چندجمله‌ای‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-14",
++        "front": "قاعدهٔ کلیدی «تقسیم چندجمله‌ای‌ها» را به یاد بیاور.",
++        "back": "مقسوم=مقسوم‌علیه×خارج‌قسمت+باقی‌مانده؛ باقی‌مانده صفر یا دارای درجهٔ کمتر از مقسوم‌علیه است.",
++        "topic": "تقسیم چندجمله‌ای‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-15",
++        "front": "یک مثال از «تقسیم چندجمله‌ای‌ها» را توضیح بده.",
++        "back": "x^(۲)−۵x+۸=(x−۲)(x−۳)+۲؛ خارج‌قسمت x−۳ و باقی‌مانده ۲ است.",
++        "topic": "تقسیم چندجمله‌ای‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-16",
++        "front": "در «تقسیم چندجمله‌ای‌ها» مراقب چه اشتباهی باشم؟",
++        "back": "پس از هر ضرب، تمام عبارت را کم کن و علامت همهٔ جمله‌ها را عوض کن؛ یک توانِ غایب را جابه‌جا نکن.",
++        "topic": "تقسیم چندجمله‌ای‌ها",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-17",
++        "front": "در تقسیم کسرهای جبری چه چیزی وارونه می‌شود؟",
++        "back": "فقط کسر دوم؛ کسر اول به همان صورت باقی می‌ماند.",
++        "topic": "عبارت‌های گویا",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-18",
++        "front": "در دامنهٔ A÷B چه چیزهایی را بررسی کنم؟",
++        "back": "مخرج‌های اولیهٔ A و B ناصفر باشند و مقدار B نیز صفر نباشد.",
++        "topic": "عبارت‌های گویا",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-19",
++        "front": "آیا x=۳ بعد از ساده‌کردن (x^(۲)−۹)/(x−۳) مجاز می‌شود؟",
++        "back": "خیر؛ دامنه از عبارت اصلی به دست می‌آید.",
++        "topic": "عبارت‌های گویا",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-20",
++        "front": "در تقسیم چندجمله‌ای، جملهٔ غایب چه می‌شود؟",
++        "back": "جای آن توان را با ضریب صفر حفظ می‌کنیم تا ستون‌ها جابه‌جا نشوند.",
++        "topic": "عبارت‌های گویا",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-21",
++        "front": "درجهٔ باقی‌مانده چه محدودیتی دارد؟",
++        "back": "باقی‌مانده صفر یا درجه‌اش کمتر از درجهٔ مقسوم‌علیه است.",
++        "topic": "عبارت‌های گویا",
++        "hint": ""
++      },
++      {
++        "id": "f07-card-22",
++        "front": "چرا a−x=−(x−a) مهم است؟",
++        "back": "مخرج‌های قرینه را هم‌علامت می‌کند و از خطای علامت در جمع و تفریق جلوگیری می‌کند.",
++        "topic": "عبارت‌های گویا",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-01",
++        "front": "مفهوم اصلی «کره» چیست؟",
++        "back": "شعاع نصف قطر است؛ مساحت برای سطح و حجم برای گنجایش یا مقدار ماده به کار می‌رود.",
++        "topic": "کره",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-02",
++        "front": "قاعدهٔ کلیدی «کره» را به یاد بیاور.",
++        "back": "S=۴πr^(۲) و V=۴πr^(۳)/۳؛ نیم‌کره نصف حجم کره دارد.",
++        "topic": "کره",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-03",
++        "front": "یک مثال از «کره» را توضیح بده.",
++        "back": "برای r=۳ و π=۳، مساحت ۱۰۸ و حجم ۱۰۸ است؛ برابری عددی این نمونه یک قانون عمومی نیست.",
++        "topic": "کره",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-04",
++        "front": "در «کره» مراقب چه اشتباهی باشم؟",
++        "back": "سانتی‌متر مربع با سانتی‌متر مکعب فرق دارد؛ قطر را به جای شعاع در فرمول نگذار.",
++        "topic": "کره",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-05",
++        "front": "مفهوم اصلی «نیم‌کره و پوسته» چیست؟",
++        "back": "سطح خمیدهٔ نیم‌کره، دایرهٔ کف را شامل نمی‌شود؛ در توپ توخالی، حجم فضای خالی جزو ماده نیست.",
++        "topic": "نیم‌کره و پوسته",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-06",
++        "front": "قاعدهٔ کلیدی «نیم‌کره و پوسته» را به یاد بیاور.",
++        "back": "سطح خمیدهٔ نیم‌کره ۲πr^(۲) و سطح کل با کف ۳πr^(۲) است؛ حجم پوسته تفاضل حجم کرهٔ بیرونی و درونی است.",
++        "topic": "نیم‌کره و پوسته",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-07",
++        "front": "یک مثال از «نیم‌کره و پوسته» را توضیح بده.",
++        "back": "نیم‌کرهٔ r=۲ با π=۳، سطح خمیدهٔ ۲۴ و سطح کل ۳۶ دارد.",
++        "topic": "نیم‌کره و پوسته",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-08",
++        "front": "در «نیم‌کره و پوسته» مراقب چه اشتباهی باشم؟",
++        "back": "در جسم‌های چسبیده، سطح اتصال داخل جسم می‌رود؛ سطح‌های داخلی را در پوشش خارجی جمع نکن.",
++        "topic": "نیم‌کره و پوسته",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-09",
++        "front": "مفهوم اصلی «هرم» چیست؟",
++        "back": "هرم یک قاعدهٔ چندضلعی و وجه‌های جانبی مثلثی دارد؛ ارتفاع عمودی با ارتفاع وجه فرق می‌کند.",
++        "topic": "هرم",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-10",
++        "front": "قاعدهٔ کلیدی «هرم» را به یاد بیاور.",
++        "back": "V=Sقاعده×h/۳؛ هرم قاعده‌مربع با ضلع a، مساحت قاعدهٔ a^(۲) دارد.",
++        "topic": "هرم",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-11",
++        "front": "یک مثال از «هرم» را توضیح بده.",
++        "back": "قاعدهٔ مربعی ضلع ۶ و ارتفاع عمودی ۵، حجم ۶۰ می‌دهد؛ هرم مربع چهار مثلث جانبی دارد.",
++        "topic": "هرم",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-12",
++        "front": "در «هرم» مراقب چه اشتباهی باشم؟",
++        "back": "در فرمول حجم، ارتفاع عمودی لازم است؛ طول یال یا ارتفاع مثلث جانبی را بی‌دلیل جای h نگذار.",
++        "topic": "هرم",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-13",
++        "front": "مفهوم اصلی «مخروط» چیست؟",
++        "back": "شعاع r، ارتفاع عمودی h و مولد l سه اندازهٔ متفاوت‌اند؛ در مخروط قائم، l^(۲)=r^(۲)+h^(۲).",
++        "topic": "مخروط",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-14",
++        "front": "قاعدهٔ کلیدی «مخروط» را به یاد بیاور.",
++        "back": "V=πr^(۲)h/۳؛ مساحت جانبی πrl و مساحت کل πr(l+r) است.",
++        "topic": "مخروط",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-15",
++        "front": "یک مثال از «مخروط» را توضیح بده.",
++        "back": "برای r=۳ و l=۵، ارتفاع ۴ است؛ با π=۳ حجم ۳۶ و مساحت جانبی ۴۵ می‌شود.",
++        "topic": "مخروط",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-16",
++        "front": "در «مخروط» مراقب چه اشتباهی باشم؟",
++        "back": "اگر فقط پوشش جانبی خواسته شده، دایرهٔ کف را اضافه نکن؛ در حجم از مولد استفاده نکن.",
++        "topic": "مخروط",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-17",
++        "front": "مفهوم اصلی «دوران، مقیاس و واحد» چیست؟",
++        "back": "دوران شکل دوبعدی حول محور، حجم تازه می‌سازد؛ ضلع روی محور معمولاً ارتفاع است.",
++        "topic": "دوران، مقیاس و واحد",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-18",
++        "front": "قاعدهٔ کلیدی «دوران، مقیاس و واحد» را به یاد بیاور.",
++        "back": "نیم‌دایره حول قطر: کره؛ ربع دایره حول شعاع: نیم‌کره؛ مثلث قائم حول ضلع قائمه: مخروط؛ مستطیل حول ضلع: استوانه.",
++        "topic": "دوران، مقیاس و واحد",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-19",
++        "front": "یک مثال از «دوران، مقیاس و واحد» را توضیح بده.",
++        "back": "هر ۱۰۰۰ سانتی‌متر مکعب یک لیتر است؛ دوبرابر شدن همهٔ طول‌ها، مساحت را چهار و حجم را هشت برابر می‌کند.",
++        "topic": "دوران، مقیاس و واحد",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-20",
++        "front": "در «دوران، مقیاس و واحد» مراقب چه اشتباهی باشم؟",
++        "back": "در تبدیل واحد مکعب، ضریب طول را مکعب کن؛ عوض کردن محور دوران می‌تواند حجم را تغییر بدهد.",
++        "topic": "دوران، مقیاس و واحد",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-21",
++        "front": "در مخروط قائم، مولد با ارتفاع چه فرقی دارد؟",
++        "back": "مولد روی سطح جانبی از رأس تا محیط قاعده است؛ ارتفاع بر صفحهٔ قاعده عمود است.",
++        "topic": "حجم و مساحت",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-22",
++        "front": "هرم با قاعدهٔ nضلعی چند وجه دارد؟",
++        "back": "n وجه مثلثی جانبی و یک قاعده؛ در مجموع n+۱ وجه.",
++        "topic": "حجم و مساحت",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-23",
++        "front": "برای پوشاندن توپ، حجم لازم است یا مساحت؟",
++        "back": "مساحت سطح با واحد مربع؛ حجم برای مقدار فضای داخل یا ماده است.",
++        "topic": "حجم و مساحت",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-24",
++        "front": "اگر شعاع کره سه برابر شود چه اتفاقی می‌افتد؟",
++        "back": "مساحت نه برابر و حجم بیست‌وهفت برابر می‌شود.",
++        "topic": "حجم و مساحت",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-25",
++        "front": "دایرهٔ اتصال نیم‌کره به استوانه را در سطح خارجی بشمارم؟",
++        "back": "خیر؛ سطح تماس داخل جسم قرار می‌گیرد.",
++        "topic": "حجم و مساحت",
++        "hint": ""
++      },
++      {
++        "id": "f08-card-26",
++        "front": "هنگام ذوب چند جسم چه چیزی حفظ می‌شود؟",
++        "back": "با فرض نبود اتلاف ماده، مجموع حجم‌ها حفظ می‌شود؛ مساحت‌ها لزوماً حفظ نمی‌شوند.",
++        "topic": "حجم و مساحت",
++        "hint": ""
++      }
++    ],
+     "questions": []
+   }
+ ]
+diff --git a/patches/src/main/java/com/hamyareman/ir/ui/study/HamyarHtmlAppearance.kt b/patches/src/main/java/com/hamyareman/ir/ui/study/HamyarHtmlAppearance.kt
+index 3fcde57..9fecba0 100644
+--- a/patches/src/main/java/com/hamyareman/ir/ui/study/HamyarHtmlAppearance.kt
++++ b/patches/src/main/java/com/hamyareman/ir/ui/study/HamyarHtmlAppearance.kt
+@@ -91,6 +91,11 @@ fun WebView.publishHamyarAppearance(
+           function styleFor(doc, isMusicFrame) {
+             if (!doc || !doc.documentElement) return;
+             var root = doc.documentElement;
++            // Assessments may explicitly preserve their reference template palette.
++            if (!isMusicFrame && root.getAttribute('data-hamyar-fixed-theme') === 'light') {
++              root.style.colorScheme = 'only light';
++              return;
++            }
+             root.setAttribute('data-hamyar-theme-preference', preference);
+             root.setAttribute('data-hamyar-theme', resolvedTheme);
+             root.setAttribute('data-hamyar-music-palette', isMusicFrame ? musicPalette : 'default');

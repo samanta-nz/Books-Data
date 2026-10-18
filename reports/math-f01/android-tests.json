@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "command": ":hamyar-app:testP09DebugUnitTest :patches:testDebugUnitTest :feature-study:testDebugUnitTest",
+  "projects": [
+    {
+      "project": "app",
+      "suites": 25,
+      "tests": 131,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2
+    },
+    {
+      "project": "patches",
+      "suites": 1,
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "project": "study",
+      "suites": 4,
+      "tests": 20,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "physicalDeviceRun": false,
+  "mergedAssetsVerified": 28,
+  "mergedAssetsPath": "/workspace/hamyar-math-app/apps/student/build/intermediates/assets/p09Debug/mergeP09DebugAssets/math/c905/practice/N2.5"
+}

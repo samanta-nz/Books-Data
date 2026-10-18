@@ -1,0 +1,42 @@
+{
+  "variants": 24,
+  "mainQuestionsPerPaper": 16,
+  "partsPerPaper": 38,
+  "totalMarks": 20,
+  "mainQuestionMarks": [
+    1,
+    1,
+    1,
+    1.25,
+    0.5,
+    1.25,
+    1.25,
+    1.75,
+    2.25,
+    2,
+    1,
+    2,
+    1.25,
+    1,
+    1,
+    0.5
+  ],
+  "chapterMarks": {
+    "2": 1.75,
+    "3": 1.5,
+    "4": 2.0,
+    "1": 2.0,
+    "5": 2.75,
+    "6": 3.5,
+    "7": 3.5,
+    "8": 3.0
+  },
+  "checks": {
+    "logicalAnswersReviewed": 264,
+    "exactAutomaticAnswers": 216,
+    "manualRubricsReviewed": 432,
+    "symbolicWorkedKeys": 264
+  },
+  "manualPolicy": "هیچ برهان، رسم یا پاسخ تشریحی با ادعای تصحیح ماشینی قطعی نمره نمی‌گیرد؛ نمرهٔ راه‌حل با خودارزیابی مرحله‌ای و برچسب نیاز به تأیید دبیر ثبت می‌شود.",
+  "blueprintSource": "هماهنگ کشوری ریاضی نهم، نوبت صبح ۱۴۰۴/۰۳/۰۴"
+}
