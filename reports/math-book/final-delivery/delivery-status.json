@@ -1,0 +1,31 @@
+{
+  "task_id": "MATH9-ALL-COMPLETION-20261018",
+  "manifest_sha256": "26e6293ae93647674aae3f6f84a61c4a6de31637aa0282897db6090d8b28699c",
+  "manifest_commit": "d15af17b4fadd51c515898e37bd6b2501dd09a10",
+  "content_commit": "42362a5f6fc6ac429eb2d0dcc506ecc398822e12",
+  "application_commit": "253e50cfe9487bead94ed97242ab08b0f8fed7b2",
+  "author_work_status": "COMPLETED",
+  "end_to_end_status": "PARTIAL_PENDING_EXTERNAL_STEPS",
+  "publication": "GITHUB_ONLY",
+  "independent_qa": "NOT_RUN",
+  "real_android_device": "NOT_RUN",
+  "bucket_sync": "NOT_RUN",
+  "apk_release": "NOT_RUN",
+  "inter_chat_transport": "BLOCKED_NO_TRANSPORT",
+  "qa_request_ref": {
+    "handoff_id": "QA-MATH9-ALL-20261018",
+    "revision": 1,
+    "packet_sha256": "6a045db5a0e0f2eb2a01980b4aaa3579cafdb4419880855e44385c31b0deab75"
+  },
+  "sync_draft_ref": {
+    "handoff_id": "SYNC-MATH9-ALL-20261018",
+    "revision": 1,
+    "packet_sha256": "3eda844ef14daea19b05fa00ea4aae33583b43ed4a4a771e3350838bd69b90e0"
+  },
+  "result_ref": {
+    "handoff_id": "RESULT-USER-MATH9-ALL-20261018",
+    "revision": 1,
+    "packet_sha256": "0b84bdba927cc1e8a771c333ba97f34592c81846f24a6b9704f419dfcbaaf12d"
+  },
+  "reason": "No official outbound chat transport; neither QA nor activation receipts have been received."
+}
