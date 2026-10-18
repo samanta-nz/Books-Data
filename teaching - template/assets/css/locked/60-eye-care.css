@@ -1,0 +1,18 @@
+/* ============================================================
+   LOCKED FILE — DO NOT EDIT (humans-only maintenance)
+   هیچ ایجنت، اسکریپت یا ابزار خودکاری حق تغییر این فایل را ندارد.
+   Section : 60 — eye-care mode (strong by default; levels 0-3)
+   Verify  : python3 tools/verify_locked.py
+   Colours/icons/palette → ../theme/<lesson>.theme.css (editable)
+   ============================================================ */
+/* Warm amber film multiplied over the whole page: cuts blue light, keeps dark text dark.
+   Level is set on <html data-eye="0..3">; default 2 (strong). */
+html::after{content:"";position:fixed;inset:0;z-index:9000;pointer-events:none;background:#ffc47a;mix-blend-mode:multiply;opacity:var(--eye-op,.6);transition:opacity .35s}
+html[data-eye="0"]{--eye-op:0;
+  --page-bg-1:#e4eaee;--page-bg-2:#eef1f3;--page-bg-3:#e1e8ee;--paper:#f7f8f6;--main-bg:#f3f5f3;--card:#ffffff;--card-edge:#d3dbe0;
+  --ink:#1b2530;--ink-soft:#33404e;--muted:#566474;--svg-bg:#ffffff}
+html[data-eye="1"]{--eye-op:.35}
+html[data-eye="2"]{--eye-op:.6}
+html[data-eye="3"]{--eye-op:.85;--ink:#2c1d0d;--ink-soft:#463015;--muted:#5a4426;
+  --page-bg-1:#dcc99b;--page-bg-2:#e4d2a6;--page-bg-3:#d8c595;--paper:#eddcb4;--main-bg:#e9d7ad;--card:#f1e1ba;--card-edge:#cbb383;--svg-bg:#f3e5bf}
+@media print{html::after{display:none}}

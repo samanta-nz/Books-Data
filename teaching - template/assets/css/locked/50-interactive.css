@@ -1,0 +1,36 @@
+/* ============================================================
+   LOCKED FILE — DO NOT EDIT (humans-only maintenance)
+   هیچ ایجنت، اسکریپت یا ابزار خودکاری حق تغییر این فایل را ندارد.
+   Section : 50 — interactive lab + visual gallery + SVG/canvas surfaces
+   Verify  : python3 tools/verify_locked.py
+   Colours/icons/palette → ../theme/<lesson>.theme.css (editable)
+   ============================================================ */
+.lab{border:2px solid var(--card-edge);background:var(--card);background:linear-gradient(160deg,#ffffff66,color-mix(in srgb,var(--c2) 10%,var(--card)));border-radius:22px;padding:20px;margin:18px 0;box-shadow:0 12px 28px #3b2a1418}
+.lab svg{display:block;width:100%;height:auto;direction:ltr;font:25px Vazirmatn,Tahoma,sans-serif;max-width:100%;background:var(--svg-bg);border-radius:14px;margin:16px 0}
+.lab canvas{display:block;width:100%;height:auto;direction:ltr;background:var(--svg-bg);border-radius:14px;border:1px solid var(--card-edge);margin:16px 0}
+.result,.current{background:#ffffffa0;border-right:5px solid var(--c2);padding:12px 14px;border-radius:11px}
+.result{font-weight:800}
+.fallback{font-size:.85rem;color:var(--muted)}
+.lab:not([data-kind="dice"]) svg{}
+@media(max-width:600px){.lab{padding:12px 9px}.lab:not([data-kind="dice"]) svg{font-size:36px}}
+.visual-gallery{margin:26px 0;padding:20px;border:2px solid var(--card-edge);border-radius:24px;background:var(--card);background:linear-gradient(160deg,#ffffff55,color-mix(in srgb,var(--c5) 9%,var(--card)))}
+.visual-gallery>p{max-width:78ch}
+.visual-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.visual-card{min-width:0;padding:15px;border:1px solid var(--card-edge);border-radius:18px;background:var(--card);box-shadow:0 8px 20px #3b2a1414}
+.visual-card:nth-child(4n+1){border-top:5px solid var(--c1)}.visual-card:nth-child(4n+2){border-top:5px solid var(--c2)}
+.visual-card:nth-child(4n+3){border-top:5px solid var(--c4)}.visual-card:nth-child(4n+4){border-top:5px solid var(--c5)}
+.visual-card .dialogue{margin-top:2px}.visual-card figure{margin:10px 0}
+.concept-svg{display:block;width:100%;height:auto;direction:ltr;max-width:100%;border:1px solid var(--card-edge);border-radius:14px;background:var(--svg-bg)}
+/* make the near-white SVG panels follow the paper tone (eye comfort) */
+.concept-svg [fill="#f8fbff"],.concept-svg [fill="#f2f4ef"],.concept-svg [fill="#f3f5f0"]{fill:var(--svg-bg)}
+.visual-frame{opacity:0;pointer-events:none;transform:translateY(7px);transform-box:fill-box;transform-origin:center;transition:opacity .42s ease,transform .42s ease}
+.visual-frame[aria-hidden="false"]{opacity:1;pointer-events:auto;transform:none}
+.visual-card figcaption{font-size:.92rem;line-height:1.9}
+.visual-card figcaption strong{display:block;color:var(--accent)}
+.visual-card details{background:#ffffff55}
+.visual-card .source{display:block;margin-top:8px}
+.visual-card>button{width:100%}
+.visual-controls{margin:14px 0}
+.visual-status{min-height:2em;color:var(--ink-soft)}
+@media(max-width:760px){.visual-grid{grid-template-columns:minmax(0,1fr)}.visual-gallery{padding:13px 10px}.visual-card{padding:11px}}
+.concept-map{max-width:100%;height:auto;direction:ltr}

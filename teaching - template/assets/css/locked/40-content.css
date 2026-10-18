@@ -1,0 +1,80 @@
+/* ============================================================
+   LOCKED FILE — DO NOT EDIT (humans-only maintenance)
+   هیچ ایجنت، اسکریپت یا ابزار خودکاری حق تغییر این فایل را ندارد.
+   Section : 40 — lesson content (sections, dialogues, math, details, quiz)
+   Verify  : python3 tools/verify_locked.py
+   Colours/icons/palette → ../theme/<lesson>.theme.css (editable)
+   ============================================================ */
+/* hero */
+.hero{position:relative;padding:26px 24px;margin-bottom:28px;border-radius:24px;overflow:hidden;border:1px solid var(--card-edge);border-right:7px solid var(--accent);
+  background:linear-gradient(120deg,var(--card),var(--accent-soft) 130%);box-shadow:0 14px 34px #3b2a1422}
+.hero:after{content:"";position:absolute;left:-40px;top:-40px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,var(--c2),transparent 68%);opacity:.22;pointer-events:none}
+.hero h2{margin:.7em 0 .3em;font-size:1.5rem;color:var(--ink)}
+.badge{position:relative;display:inline-block;overflow:hidden;isolation:isolate;padding:5px 16px;border-radius:99px;font-weight:800;color:#fff;
+  background:linear-gradient(120deg,var(--c1),var(--c4));animation:badgeFloat 3.2s ease-in-out infinite}
+.badge:before{content:"✦";margin-left:8px;display:inline-block;animation:badgeStar 1.4s ease-in-out infinite}
+.badge:after{content:"";position:absolute;inset:0;width:38%;background:linear-gradient(105deg,transparent,#ffffffa0,transparent);transform:translateX(-180%) skewX(-18deg);animation:badgeShine 2.6s ease-in-out infinite;z-index:-1}
+/* sections: every section gets its own colour from the theme */
+section.lesson-section{--sec:var(--c1);position:relative;margin:30px 0;padding:28px 24px 22px;border-radius:24px;scroll-margin-top:16px;
+  background:var(--card);background:linear-gradient(180deg,color-mix(in srgb,var(--sec) 9%,var(--card)),var(--card) 140px);border:1px solid var(--card-edge);
+  box-shadow:0 12px 30px #3b2a1418;overflow:hidden}
+section.lesson-section:before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:var(--sec);background:linear-gradient(90deg,var(--sec),color-mix(in srgb,var(--sec) 35%,#fff))}
+section.lesson-section:nth-of-type(6n+1){--sec:var(--c1)}section.lesson-section:nth-of-type(6n+2){--sec:var(--c2)}section.lesson-section:nth-of-type(6n+3){--sec:var(--c3)}
+section.lesson-section:nth-of-type(6n+4){--sec:var(--c4)}section.lesson-section:nth-of-type(6n+5){--sec:var(--c5)}section.lesson-section:nth-of-type(6n+6){--sec:var(--c6)}
+section.lesson-section>h2{position:relative;color:var(--sec);margin:.2em 0 .6em;padding-bottom:.35em}
+section.lesson-section>h2:after{content:"";position:absolute;right:0;bottom:0;width:64px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--sec),transparent)}
+section.lesson-section h3{color:var(--sec)}
+.number-label{display:inline-block;padding:2px 14px;border-radius:99px;font-size:.82rem;font-weight:800;color:#fff;background:var(--sec,var(--accent));box-shadow:0 6px 14px #00000026}
+/* dialogue */
+.dialogue{display:flex;align-items:flex-start;gap:13px;margin:18px 0}
+.avatar{flex:0 0 50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;color:#fff;
+  background:linear-gradient(135deg,var(--teacher-ink),#4d7a55);box-shadow:0 8px 16px #1f3d2c40,inset 0 1px 0 #ffffff50}
+.sarvnaz .avatar{background:linear-gradient(135deg,var(--student-ink),#c0627a);box-shadow:0 8px 16px #6b2d3d40,inset 0 1px 0 #ffffff50}
+.bubble{position:relative;flex:1;border:1px solid var(--teacher-bd);border-radius:6px 20px 20px 20px;padding:14px 19px;background:var(--teacher-bg);box-shadow:0 6px 16px #3b2a1412}
+.sarvnaz .bubble{border-color:var(--student-bd);background:var(--student-bg);border-radius:20px 6px 20px 20px}
+.speaker{display:block;font-size:.86rem;font-weight:800;color:var(--teacher-ink);margin-bottom:6px}
+.sarvnaz .speaker{color:var(--student-ink)}
+.speaker small{font-weight:600;opacity:.85}
+.speechbody{font-size:1.02rem;line-height:2.15;color:var(--ink)}
+.speechbody>:first-child{margin-top:0}.speechbody>:last-child{margin-bottom:0}
+/* math — direction always LTR, never altered */
+.math,math{direction:ltr;unicode-bidi:isolate;display:inline-block;vertical-align:middle;font-family:"DejaVu Sans","Cambria Math",serif;max-width:100%;overflow-x:auto}
+.math{white-space:nowrap;font-size:.96em;padding:0 .4em;border-radius:8px;background:#ffffff66;box-shadow:inset 0 0 0 1px #8a6f4a22}
+math{font-size:1.15em}math mtext{font-family:inherit}
+/* examples / exercises */
+.example,.exercise{position:relative;border-top:2px dashed var(--card-edge);padding:22px 0;scroll-margin-top:16px}
+.example:first-of-type,.exercise:first-of-type{border-top:0}
+.level{display:inline-block;padding:3px 13px;border-radius:99px;font-weight:700;color:var(--sec,var(--accent));background:#ffffff80;box-shadow:inset 0 0 0 1.5px var(--sec,var(--accent))}
+.level,.source{font-size:.82rem}
+.source{color:var(--muted)}
+.media{max-width:100%;margin:24px auto;padding:12px;border:1px solid var(--card-edge);background:var(--svg-bg);border-radius:16px;box-shadow:0 8px 20px #3b2a1418}
+.media img{display:block;width:100%;height:auto;max-width:100%;border-radius:8px}
+.media figcaption{font-size:.84rem;color:var(--muted);margin:10px 0 0;text-align:center}
+/* details */
+details{background:#ffffff4d;border:1px solid var(--card-edge);border-radius:16px;padding:10px 14px;margin:14px 0;transition:background .2s}
+details[open]{background:#ffffff80}
+summary{position:relative;font-weight:800;cursor:pointer;color:var(--sec,var(--accent));list-style:none;padding-right:30px;min-height:34px;display:flex;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"+";position:absolute;right:0;top:50%;translate:0 -50%;width:24px;height:24px;line-height:22px;text-align:center;border-radius:50%;color:#fff;background:var(--sec,var(--accent));transition:transform .25s}
+details[open]>summary:before{content:"−";transform:rotate(180deg)}
+details.solution{background:var(--ok-bg);background:color-mix(in srgb,var(--ok) 9%,var(--card));border-color:#8fb48a}
+details.solution>summary{color:var(--ok)}details.solution>summary:before{background:var(--ok)}
+details.support{background:#f1e0bb;background:color-mix(in srgb,var(--c3) 10%,var(--card));border-color:#d1b07a}
+details.support>summary{color:var(--c3)}details.support>summary:before{background:var(--c3)}
+/* quiz */
+.quiz{border:2px solid var(--card-edge);padding:16px;border-radius:18px;margin:20px 0;min-inline-size:0;background:#ffffff40}
+legend{max-width:100%;font-weight:800;padding:0 10px;color:var(--sec,var(--accent))}
+.choice{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;margin:8px 0;background:#ffffff70;border:1.5px solid transparent;border-radius:13px;cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
+.choice:hover{transform:translateX(-3px);border-color:var(--sec,var(--accent))}
+.choice:has(input:checked){border-color:var(--sec,var(--accent));background:#fffc}
+.choice input{margin-top:12px;accent-color:var(--sec,var(--accent));flex-shrink:0}
+.choice span{min-width:0}
+.feedback{min-height:1.8em;font-weight:800;margin-top:10px;padding:2px 2px}
+.feedback[data-result="correct"]{color:var(--ok);background:var(--ok-bg);padding:8px 12px;border-radius:11px}
+.feedback[data-result="incorrect"]{color:var(--bad);background:var(--bad-bg);padding:8px 12px;border-radius:11px}
+.controls{display:flex;gap:10px;flex-wrap:wrap}
+@keyframes badgeShine{0%,35%{transform:translateX(-180%) skewX(-18deg)}75%,100%{transform:translateX(330%) skewX(-18deg)}}
+@keyframes badgeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes badgeStar{0%,100%{transform:scale(.9) rotate(0);opacity:.7}50%{transform:scale(1.25) rotate(18deg);opacity:1}}
+@media(max-width:600px){section.lesson-section{padding:24px 12px 16px;border-radius:20px}.dialogue{gap:7px}.avatar{flex-basis:36px;height:36px;font-size:.8rem}
+ .bubble{padding:12px 12px}.speechbody{font-size:1rem}.math{font-size:.9em}.controls{gap:7px}.controls button{padding:7px 10px}h2{font-size:1.22rem}}

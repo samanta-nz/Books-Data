@@ -1,0 +1,18 @@
+/* ============================================================
+   LOCKED FILE — DO NOT EDIT (humans-only maintenance)
+   هیچ ایجنت، اسکریپت یا ابزار خودکاری حق تغییر این فایل را ندارد.
+   Section : 90 — motion control, reduced-motion, print
+   Verify  : python3 tools/verify_locked.py
+   Colours/icons/palette → ../theme/<lesson>.theme.css (editable)
+   ============================================================ */
+.no-motion *,.no-motion *:before,.no-motion *:after{animation:none!important;transition:none!important}
+.header-pause{position:relative;margin-top:14px;font-size:.8rem}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}html{scroll-behavior:auto}
+  .visual-frame{transform:none!important}}
+@media print{
+  html::after,.fab-wrap,.hdr-orb,.ftr-orb,.hdr-wave,.ftr-wave{display:none!important}
+  body{background:#fff}.container{margin:0;box-shadow:none;border-radius:0}
+  header#top,.site-footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  button,.controls,.skip{display:none}details>*{display:block!important}
+  .dialogue,.example{break-inside:avoid}.lesson-section{break-inside:auto;box-shadow:none}
+}

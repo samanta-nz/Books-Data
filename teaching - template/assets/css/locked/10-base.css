@@ -1,0 +1,55 @@
+/* ============================================================
+   LOCKED FILE — DO NOT EDIT (humans-only maintenance)
+   هیچ ایجنت، اسکریپت یا ابزار خودکاری حق تغییر این فایل را ندارد.
+   Section : 10 — base / dark-mode lock / typography
+   Verify  : python3 tools/verify_locked.py
+   Colours/icons/palette → ../theme/<lesson>.theme.css (editable)
+   ============================================================ */
+/* ---- Light-only lock: the phone's dark/light setting is ignored ---- */
+:root{color-scheme:only light}
+@media (prefers-color-scheme:dark){:root{color-scheme:only light}}
+@media (prefers-color-scheme:light){:root{color-scheme:only light}}
+
+/* ---- Default tokens (the theme file overrides these) ---- */
+:root{
+  --page-bg-1:#e2d2aa;--page-bg-2:#eadbb6;--page-bg-3:#dfcfae;
+  --paper:#f2e6c6;--main-bg:#efe2c0;--card:#f7edd2;--card-edge:#d6c397;
+  --ink:#2a1f14;--ink-soft:#43331f;--muted:#65543b;--link:#4a3290;
+  --accent:#4b3f9e;--accent-soft:#e1d8ef;
+  --c1:#4b3f9e;--c2:#0f6b64;--c3:#9a5412;--c4:#a3305a;--c5:#1f5f9e;--c6:#346a24;
+  --hdr-1:#150f36;--hdr-2:#261a5e;--hdr-3:#3a2a78;
+  --hdr-glow-1:#8a6bff;--hdr-glow-2:#00c9ad;--hdr-text:#fff3d6;
+  --hdr-pattern:linear-gradient(#ffffff22 1px,transparent 1px),linear-gradient(90deg,#ffffff22 1px,transparent 1px);
+  --hdr-pattern-size:28px 28px;
+  --ftr-1:#1a1240;--ftr-2:#0e3b4a;--ftr-3:#4a1d5c;--ftr-glow:#ffb86b;--ftr-text:#fdf1d6;
+  --teacher-bg:#e3ebd6;--teacher-bd:#b7c7a1;--teacher-ink:#1f3d2c;
+  --student-bg:#f6dfd0;--student-bd:#dcb5a1;--student-ink:#6b2d3d;
+  --svg-bg:#fbf3dc;--ok:#1f6b4a;--ok-bg:#d6e9d1;--bad:#9c2b3a;--bad-bg:#f3d4cf;
+  --motif-1:"{ }";--motif-2:"∈";--motif-3:"∅";
+  --icon-1:"📘";--icon-2:"✏️";--icon-3:"🔎";--icon-4:"💡";--icon-5:"🎯";
+}
+
+*,*:before,*:after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;min-height:100vh;font-family:Vazirmatn,Tahoma,sans-serif;line-height:2;color:var(--ink);text-align:right;
+  background:radial-gradient(circle at 12% 8%,var(--page-bg-3),transparent 45%),linear-gradient(135deg,var(--page-bg-1),var(--page-bg-2),var(--page-bg-3));
+  background-attachment:fixed}
+.container{max-width:1120px;margin:22px auto;background:var(--paper);border-radius:30px;overflow:hidden;
+  box-shadow:0 26px 70px #3b2a1445,0 0 0 1px #00000010}
+main{padding:34px 28px 64px;background:var(--main-bg);position:relative}
+main,section,article,fieldset,.dialogue,.bubble{min-width:0}
+p{margin:.65em 0}
+a{color:var(--link);text-underline-offset:4px}
+h2{color:var(--accent);font-size:1.4rem;line-height:1.8}
+h3{color:var(--ink-soft);font-size:1.12rem;line-height:1.9}
+ol{list-style-type:persian}
+ul,ol{padding-inline-start:1.6em}
+li::marker{color:var(--accent);font-weight:700}
+.skip{position:absolute;top:-100px;right:10px;z-index:100;background:var(--card);padding:12px;border-radius:10px}
+.skip:focus{top:8px}
+button{font:inherit;min-height:44px;border:1px solid #8a6f4a55;border-radius:13px;padding:7px 16px;
+  background:var(--accent-soft);color:var(--accent);cursor:pointer;font-weight:700;transition:transform .2s,box-shadow .2s,background .2s}
+button:hover{transform:translateY(-2px);box-shadow:0 8px 18px #3b2a1428}
+button[aria-pressed="true"]{background:var(--accent);color:#fff}
+button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid #9a6516;outline-offset:4px}
+@media(max-width:600px){body{background-attachment:scroll}.container{margin:8px;border-radius:22px}main{padding:22px 12px 44px}}

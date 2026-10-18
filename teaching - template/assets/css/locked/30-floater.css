@@ -1,0 +1,41 @@
+/* ============================================================
+   LOCKED FILE — DO NOT EDIT (humans-only maintenance)
+   هیچ ایجنت، اسکریپت یا ابزار خودکاری حق تغییر این فایل را ندارد.
+   Section : 30 — collapsible floater (TOC + top + eye-care + motion)
+   Verify  : python3 tools/verify_locked.py
+   Colours/icons/palette → ../theme/<lesson>.theme.css (editable)
+   ============================================================ */
+.fab-wrap{position:fixed;left:max(14px,env(safe-area-inset-left));bottom:max(14px,env(safe-area-inset-bottom));z-index:60;direction:rtl}
+.fab{position:relative;width:56px;height:56px;min-height:56px;padding:0;border:0;border-radius:50%;display:grid;place-items:center;color:#fff;
+  background:linear-gradient(135deg,var(--hdr-2),var(--hdr-glow-1));box-shadow:0 12px 28px #1a0f3c66,inset 0 1px 0 #ffffff50}
+.fab:hover{transform:translateY(-3px) scale(1.04)}
+.fab:before{content:"";position:absolute;inset:-5px;border-radius:50%;pointer-events:none;
+  background:conic-gradient(var(--hdr-glow-2) calc(var(--p,0)*1%),#ffffff00 0);
+  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 4px),#000 calc(100% - 3px));mask:radial-gradient(farthest-side,transparent calc(100% - 4px),#000 calc(100% - 3px))}
+.fab-bars{position:relative;width:22px;height:16px}
+.fab-bars i{position:absolute;left:0;right:0;height:2.5px;border-radius:3px;background:currentColor;transition:transform .3s,opacity .2s,top .3s}
+.fab-bars i:nth-child(1){top:0}.fab-bars i:nth-child(2){top:6.5px}.fab-bars i:nth-child(3){top:13px}
+.fab-wrap.open .fab-bars i:nth-child(1){top:6.5px;transform:rotate(45deg)}
+.fab-wrap.open .fab-bars i:nth-child(2){opacity:0}
+.fab-wrap.open .fab-bars i:nth-child(3){top:6.5px;transform:rotate(-45deg)}
+.fab-panel{position:absolute;left:0;bottom:70px;width:min(320px,calc(100vw - 28px));max-height:min(74vh,560px);overflow:auto;overscroll-behavior:contain;
+  padding:14px;border-radius:24px;background:var(--card);border:1px solid var(--card-edge);box-shadow:0 26px 64px #2a1f1455;
+  transform-origin:bottom left;transform:scale(.82) translateY(12px);opacity:0;visibility:hidden;transition:transform .28s cubic-bezier(.2,.9,.3,1.2),opacity .2s,visibility .28s}
+.fab-wrap.open .fab-panel{transform:none;opacity:1;visibility:visible}
+.fab-title{display:flex;align-items:center;justify-content:space-between;margin:2px 4px 10px;font-weight:800;color:var(--ink)}
+.fab-title small{font-weight:700;color:var(--accent);background:var(--accent-soft);padding:1px 10px;border-radius:99px}
+.fab-toc{display:grid;gap:6px;margin:0 0 12px}
+.fab-toc a{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:14px;text-decoration:none;color:var(--ink);background:#ffffff55;border:1px solid transparent;transition:transform .2s,background .2s}
+.fab-toc a:before{content:"";flex:0 0 11px;height:11px;border-radius:50%;background:var(--dot,var(--accent));box-shadow:0 0 0 4px #00000014;box-shadow:0 0 0 4px color-mix(in srgb,var(--dot,var(--accent)) 22%,transparent)}
+.fab-toc a:hover{transform:translateX(-4px);background:#ffffffa0}
+.fab-toc a[aria-current="true"]{background:var(--dot,var(--accent));color:#fff;font-weight:800}
+.fab-toc a[aria-current="true"]:before{background:#fff;box-shadow:0 0 0 4px #ffffff40}
+.fab-toc a:nth-child(6n+1){--dot:var(--c1)}.fab-toc a:nth-child(6n+2){--dot:var(--c2)}.fab-toc a:nth-child(6n+3){--dot:var(--c3)}
+.fab-toc a:nth-child(6n+4){--dot:var(--c4)}.fab-toc a:nth-child(6n+5){--dot:var(--c5)}.fab-toc a:nth-child(6n+6){--dot:var(--c6)}
+.fab-tools{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.fab-tools button{min-height:44px;padding:6px 8px;font-size:.85rem}
+.eye-box{padding:10px;border-radius:16px;background:#ffffff55;border:1px dashed var(--card-edge)}
+.eye-box>span{display:block;font-weight:800;font-size:.9rem;margin-bottom:8px;color:var(--ink)}
+.eye-seg{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.eye-seg button{min-height:40px;padding:4px 2px;font-size:.78rem;border-radius:11px}
+@media print{.fab-wrap{display:none!important}}

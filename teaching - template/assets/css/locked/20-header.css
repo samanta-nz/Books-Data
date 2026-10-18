@@ -1,0 +1,39 @@
+/* ============================================================
+   LOCKED FILE — DO NOT EDIT (humans-only maintenance)
+   هیچ ایجنت، اسکریپت یا ابزار خودکاری حق تغییر این فایل را ندارد.
+   Section : 20 — header (dark, patterned, wavy edge)
+   Verify  : python3 tools/verify_locked.py
+   Colours/icons/palette → ../theme/<lesson>.theme.css (editable)
+   ============================================================ */
+header#top{position:relative;overflow:hidden;isolation:isolate;padding:48px 22px 74px;text-align:center;color:var(--hdr-text);
+  background:linear-gradient(135deg,var(--hdr-1),var(--hdr-2) 55%,var(--hdr-3))}
+header#top:before{content:"";position:absolute;inset:0;z-index:-2;opacity:.42;
+  background:radial-gradient(circle at 14% 18%,var(--hdr-glow-1),transparent 42%),radial-gradient(circle at 88% 82%,var(--hdr-glow-2),transparent 40%);
+  animation:hdrBreath 9s ease-in-out infinite}
+header#top:after{content:"";position:absolute;inset:0;z-index:-1;opacity:.32;background-image:var(--hdr-pattern);background-size:var(--hdr-pattern-size);
+  -webkit-mask:linear-gradient(#000,transparent 92%);mask:linear-gradient(#000,transparent 92%)}
+.hdr-orb{position:absolute;z-index:-1;border-radius:50%;filter:blur(1px);animation:orbFloat 8s ease-in-out infinite}
+.hdr-orb.o1{width:150px;height:150px;top:-60px;right:6%;background:radial-gradient(circle at 30% 30%,#ffffff55,var(--hdr-glow-1) 60%,transparent 70%);opacity:.5}
+.hdr-orb.o2{width:96px;height:96px;bottom:20px;left:9%;background:radial-gradient(circle at 30% 30%,#ffffff55,var(--hdr-glow-2) 60%,transparent 70%);opacity:.45;animation-delay:-3s}
+.hdr-wave{position:absolute;inset:auto 0 -1px 0;height:38px;background:var(--main-bg);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 40V24C140 2 300 2 460 20S760 40 920 22 1110 4 1200 16V40Z'/%3E%3C/svg%3E") center/100% 100% no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 40V24C140 2 300 2 460 20S760 40 920 22 1110 4 1200 16V40Z'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+header#top h1{position:relative;margin:0 0 10px;font-size:clamp(1.4rem,3.4vw,2.35rem);font-weight:900;line-height:1.7;
+  background:linear-gradient(100deg,#fff 0%,#ffe9b8 35%,#fff 55%,#c9f2e6 80%,#fff 100%);background-size:220% auto;
+  -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 3px 10px #0008);animation:titleShimmer 5s ease-in-out infinite}
+.book-motif,.icon-row{position:relative;display:flex;justify-content:center;direction:ltr}
+.book-motif{gap:24px;margin:0 auto 14px}
+.icon-row{gap:16px;margin:16px auto 0;flex-wrap:wrap}
+.hm,.hi{display:inline-flex;align-items:center;justify-content:center;border:1px solid #ffffff3d;background:linear-gradient(145deg,#ffffff2e,#ffffff0d);
+  box-shadow:0 10px 22px #0000004d,inset 0 1px 0 #ffffff40;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);animation:chipDrift 4s ease-in-out infinite}
+.hm{width:46px;height:46px;border-radius:16px;font-size:1.5rem;color:#fff}
+.hi{width:42px;height:42px;border-radius:14px;font-size:1.3rem}
+.hm-1:before{content:var(--motif-1)}.hm-2:before{content:var(--motif-2)}.hm-3:before{content:var(--motif-3)}
+.hi-1:before{content:var(--icon-1)}.hi-2:before{content:var(--icon-2)}.hi-3:before{content:var(--icon-3)}.hi-4:before{content:var(--icon-4)}.hi-5:before{content:var(--icon-5)}
+.hm:nth-child(2),.hi:nth-child(2){animation-delay:-.8s}.hm:nth-child(3),.hi:nth-child(3){animation-delay:-1.6s}.hi:nth-child(4){animation-delay:-2.4s}.hi:nth-child(5){animation-delay:-3.2s}
+@keyframes titleShimmer{0%,100%{background-position:180% center}50%{background-position:-20% center}}
+@keyframes chipDrift{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-8px) rotate(5deg)}}
+@keyframes orbFloat{50%{transform:translate(16px,14px) scale(1.1)}}
+@keyframes hdrBreath{50%{opacity:.62}}
+@media(max-width:600px){header#top{padding:38px 14px 66px}.hm{width:40px;height:40px}.hi{width:38px;height:38px}}
