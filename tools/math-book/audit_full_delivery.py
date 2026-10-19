@@ -19,6 +19,7 @@ def main():
  parser=argparse.ArgumentParser();parser.add_argument('--app',type=Path,default=Path('/workspace/hamyar-math-app'))
  parser.add_argument('--output',type=Path);parser.add_argument('--fresh-browser-evidence',action='store_true')
  parser.add_argument('--content-commit',default='42362a5f6fc6ac429eb2d0dcc506ecc398822e12');parser.add_argument('--app-commit',default='253e50cfe9487bead94ed97242ab08b0f8fed7b2');args=parser.parse_args()
+ args.content_commit=git(ROOT,'rev-parse',args.content_commit).decode().strip();args.app_commit=git(args.app,'rev-parse',args.app_commit).decode().strip()
  report=ROOT/'reports/math-book';out=args.output or report/'final-delivery';out.mkdir(parents=True,exist_ok=True)
  routes=load(report/'routes.json')['routes'];assert len(routes)==252
  build=load(report/'build-report.json');old=load(ROOT/'reports/math-f01/research-audit.json')
@@ -80,7 +81,10 @@ def main():
  if args.fresh_browser_evidence:
   regression=load(report/'qa-fix-20261019/remediation-tests.json');coverage=regression['byteCoverage']
   assert coverage['changedPagesExercised']==coverage['changedSinceComprehensive'] and coverage['unchangedPages']+coverage['changedPagesExercised']==252
+  baseline=load(report/'qa-fix-20261019/comprehensive-browser-inputs.json')
+  for asset in manifest['assets']:assert asset['sha256']==coverage['testedHtmlSha256'].get(asset['bucketKey'],baseline[asset['bucketKey']]),asset['bucketKey']
   manifest['storage']['accountIsolationStatus']='M9-QA-003_OPEN_NATIVE_GUEST_LEGACY'
+  manifest['storage']['accountIsolationVerified']=False
   manifest['priorQa']=dict(verdict='FAIL',packetSha256='80662e13947ff8ef7312ab61210e4f0ea6b652ecf126a54aa48345aaa71422c8',reportCommit='367979b00c7e192615e1c141069952d20eaef670')
   manifest['authorRemediation']=dict(findingIds=['M9-QA-001','M9-QA-002','M9-QA-004','M9-QA-005'],changedHtmlFiles=219,newCanonicalQuestionsAdded=0,canonicalPromptsCorrected=2,byteCoverage=coverage)
   for dep in manifest['dependencies']:
