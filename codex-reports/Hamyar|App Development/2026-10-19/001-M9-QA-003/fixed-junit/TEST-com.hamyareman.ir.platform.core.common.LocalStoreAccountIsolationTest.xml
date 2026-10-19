@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-19T05:59:02.668Z" hostname="d1791b0ba179" time="2.439">
+  <properties/>
+  <testcase name="alreadyInitializedAccountIsPreservedAcrossUpgrade" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="1.81"/>
+  <testcase name="logoutCannotReadMigratedAccountLegacyData" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.031"/>
+  <testcase name="accountsStaySeparateAndReturningToARestoresItsDocument" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.029"/>
+  <testcase name="defaultStoreAuthKeysRemainGlobalAndContentRemainsScoped" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.076"/>
+  <testcase name="authPrefixInMathStoreIsStillScopedRatherThanGlobal" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.023"/>
+  <testcase name="guestClearAndRemoveNeverDeleteAccountOrLegacyData" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.02"/>
+  <testcase name="guestEditsSurviveStoreRecreationWithoutChangingAOrB" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.043"/>
+  <testcase name="typedLegacyValuesMigrateOnlyToTheirKnownOwner" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.029"/>
+  <testcase name="explicitlyBoundBlankOwnerDoesNotFollowSignedInAccount" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.027"/>
+  <testcase name="unattributedLegacyDataIsNotImportedByGuestOrNewAccount" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.053"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

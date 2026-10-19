@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.hamyareman.ir.platform.core.common.PrivacyPolicyTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-19T05:59:05.202Z" hostname="d1791b0ba179" time="0.002">
+  <properties/>
+  <testcase name="username mapping table is a server table and never a private one" classname="com.hamyareman.ir.platform.core.common.PrivacyPolicyTest" time="0.001"/>
+  <testcase name="album items live on the server and never in the private set" classname="com.hamyareman.ir.platform.core.common.PrivacyPolicyTest" time="0.0"/>
+  <testcase name="private tables never overlap with shareable ones" classname="com.hamyareman.ir.platform.core.common.PrivacyPolicyTest" time="0.0"/>
+  <testcase name="shareable tables are not private" classname="com.hamyareman.ir.platform.core.common.PrivacyPolicyTest" time="0.0"/>
+  <testcase name="all private tables are flagged" classname="com.hamyareman.ir.platform.core.common.PrivacyPolicyTest" time="0.0"/>
+  <testcase name="server tables never include a private table" classname="com.hamyareman.ir.platform.core.common.PrivacyPolicyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

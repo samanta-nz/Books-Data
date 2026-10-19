@@ -1,0 +1,242 @@
+diff --git a/core/core-common/build.gradle.kts b/core/core-common/build.gradle.kts
+index 8fa337f..9285ab7 100644
+--- a/core/core-common/build.gradle.kts
++++ b/core/core-common/build.gradle.kts
+@@ -33,4 +33,5 @@ dependencies {
+     implementation(libs.androidx.core.ktx)
+     implementation(libs.kotlinx.coroutines.android)
+     testImplementation(libs.junit)
++    testImplementation("org.robolectric:robolectric:4.16.1")
+ }
+diff --git a/core/core-common/src/main/java/com/hamyareman/ir/platform/core/common/LocalStore.kt b/core/core-common/src/main/java/com/hamyareman/ir/platform/core/common/LocalStore.kt
+index a83fb52..0d8b853 100644
+--- a/core/core-common/src/main/java/com/hamyareman/ir/platform/core/common/LocalStore.kt
++++ b/core/core-common/src/main/java/com/hamyareman/ir/platform/core/common/LocalStore.kt
+@@ -20,13 +20,15 @@ open class LocalStore(context: Context, name: String = "roozhayeman_local", priv
+         if (!accountIsolationEnabled || (storeNameValue == DEFAULT_STORE && key.startsWith("auth_"))) return basePrefs
+         val owner = boundOwner ?: appContext.getSharedPreferences(DEFAULT_STORE, Context.MODE_PRIVATE)
+             .getString("auth_user_id","").orEmpty()
+-        if(owner.isBlank())return basePrefs
+-        val scoped = appContext.getSharedPreferences(storeNameValue+"__"+StableIds.of("user",owner),Context.MODE_PRIVATE)
++        // Legacy preferences can still contain a migrated account's data. A blank
++        // owner must use its own store, never read or modify those legacy bytes.
++        val scope = if (owner.isBlank()) "guest" else StableIds.of("user", owner)
++        val scoped = appContext.getSharedPreferences(storeNameValue+"__"+scope,Context.MODE_PRIVATE)
+         synchronized(MIGRATION_LOCK) {
+             if (!scoped.getBoolean("_scope_initialized",false)) {
+                 val legacyOwner = basePrefs.getString("_legacy_owner",null)
+                 val editor = scoped.edit()
+-                if (legacyOwner == owner) basePrefs.all.forEach { (field,value) ->
++                if (owner.isNotBlank() && legacyOwner == owner) basePrefs.all.forEach { (field,value) ->
+                     if(field.startsWith("_") || (storeNameValue == DEFAULT_STORE && field.startsWith("auth_")))return@forEach
+                     when(value) {
+                         is String -> editor.putString(field,value)
+diff --git a/core/core-common/src/test/java/com/hamyareman/ir/platform/core/common/LocalStoreAccountIsolationTest.kt b/core/core-common/src/test/java/com/hamyareman/ir/platform/core/common/LocalStoreAccountIsolationTest.kt
+new file mode 100644
+index 0000000..d5ce552
+--- /dev/null
++++ b/core/core-common/src/test/java/com/hamyareman/ir/platform/core/common/LocalStoreAccountIsolationTest.kt
+@@ -0,0 +1,203 @@
++package com.hamyareman.ir.platform.core.common
++
++import android.content.Context
++import android.content.SharedPreferences
++import org.junit.Assert.*
++import org.junit.Before
++import org.junit.Test
++import org.junit.runner.RunWith
++import org.robolectric.RobolectricTestRunner
++import org.robolectric.RuntimeEnvironment
++import org.robolectric.annotation.Config
++
++/** Exercises the real LocalStore routing/migration with Android preferences on the host JVM. */
++@RunWith(RobolectricTestRunner::class)
++@Config(manifest = Config.NONE, sdk = [28])
++class LocalStoreAccountIsolationTest {
++    private lateinit var context: Context
++    private lateinit var auth: SharedPreferences
++    private lateinit var legacy: SharedPreferences
++    private lateinit var store: LocalStore
++
++    @Before
++    fun setUp() {
++        context = RuntimeEnvironment.getApplication()
++        auth = context.getSharedPreferences(DEFAULT_STORE, Context.MODE_PRIVATE)
++        legacy = context.getSharedPreferences(MATH_STORE, Context.MODE_PRIVATE)
++        store = LocalStore(context, MATH_STORE)
++    }
++
++    private fun login(owner: String) {
++        assertTrue(auth.edit().putString("auth_user_id", owner).commit())
++    }
++
++    private fun migrateA() {
++        login("account-A")
++        assertTrue(legacy.edit().putString(HTML_KEY, A_DOCUMENT).commit())
++        LocalStore.enableAccountIsolation(context)
++        assertEquals("account-A", legacy.getString("_legacy_owner", null))
++        assertEquals(A_DOCUMENT, store.getString(HTML_KEY))
++    }
++
++    @Test
++    fun logoutCannotReadMigratedAccountLegacyData() {
++        migrateA()
++        // Migration intentionally retains base bytes; they must remain inaccessible to guests.
++        assertEquals(A_DOCUMENT, legacy.getString(HTML_KEY, null))
++        login("")
++        assertEquals("", store.getString(HTML_KEY))
++        assertFalse(store.contains(HTML_KEY))
++        assertTrue(store.keysWithPrefix("html:").isEmpty())
++        LocalStore.enableAccountIsolation(context)
++        assertEquals("", LocalStore(context, MATH_STORE).getString(HTML_KEY))
++    }
++
++    @Test
++    fun accountsStaySeparateAndReturningToARestoresItsDocument() {
++        migrateA()
++        login("account-B")
++        assertEquals("", store.getString(HTML_KEY))
++        store.putStringDurable(HTML_KEY, B_DOCUMENT)
++        login("account-A")
++        assertEquals(A_DOCUMENT, store.getString(HTML_KEY))
++        login("account-B")
++        assertEquals(B_DOCUMENT, store.getString(HTML_KEY))
++    }
++
++    @Test
++    fun guestEditsSurviveStoreRecreationWithoutChangingAOrB() {
++        migrateA()
++        login("")
++        store.putString(HTML_KEY, GUEST_DOCUMENT)
++        assertEquals(GUEST_DOCUMENT, LocalStore(context, MATH_STORE).getString(HTML_KEY))
++        login("account-B")
++        assertEquals("", store.getString(HTML_KEY))
++        login("account-A")
++        assertEquals(A_DOCUMENT, store.getString(HTML_KEY))
++        assertEquals(A_DOCUMENT, legacy.getString(HTML_KEY, null))
++        login("")
++        assertEquals(GUEST_DOCUMENT, store.getString(HTML_KEY))
++    }
++
++    @Test
++    fun alreadyInitializedAccountIsPreservedAcrossUpgrade() {
++        // Represents an account already migrated by the old implementation before logout.
++        login("")
++        legacy.edit().putString("_legacy_owner", "account-A")
++            .putString(HTML_KEY, A_DOCUMENT).commit()
++        context.getSharedPreferences(MATH_STORE + "__" + StableIds.of("user", "account-A"), Context.MODE_PRIVATE)
++            .edit().putBoolean("_scope_initialized", true).putString(HTML_KEY, B_DOCUMENT).commit()
++        LocalStore.enableAccountIsolation(context)
++        assertEquals("", store.getString(HTML_KEY))
++        login("account-A")
++        assertEquals(B_DOCUMENT, store.getString(HTML_KEY))
++    }
++
++    @Test
++    fun guestClearAndRemoveNeverDeleteAccountOrLegacyData() {
++        migrateA()
++        login("")
++        store.remove(HTML_KEY)
++        store.clearPrefix("html:")
++        assertEquals(A_DOCUMENT, legacy.getString(HTML_KEY, null))
++        store.putStringDurable(HTML_KEY, GUEST_DOCUMENT)
++        store.clearAll()
++        assertEquals("", store.getString(HTML_KEY))
++        assertTrue(store.getBool("_scope_initialized"))
++        login("account-A")
++        assertEquals(A_DOCUMENT, store.getString(HTML_KEY))
++        // Clearing A must not cause a subsequent lazy read to re-import the old base document.
++        store.clearAll()
++        assertEquals("", LocalStore(context, MATH_STORE).getString(HTML_KEY))
++        assertEquals(A_DOCUMENT, legacy.getString(HTML_KEY, null))
++    }
++
++    @Test
++    fun explicitlyBoundBlankOwnerDoesNotFollowSignedInAccount() {
++        migrateA()
++        val guest = store.forAccount("")
++        assertEquals("", guest.getString(HTML_KEY))
++        guest.putStringDurable(HTML_KEY, GUEST_DOCUMENT)
++        assertEquals(A_DOCUMENT, store.getString(HTML_KEY))
++        login("account-B")
++        assertEquals(GUEST_DOCUMENT, guest.getString(HTML_KEY))
++        assertEquals(A_DOCUMENT, store.forAccount("account-A").getString(HTML_KEY))
++    }
++
++    @Test
++    fun unattributedLegacyDataIsNotImportedByGuestOrNewAccount() {
++        login("")
++        legacy.edit().putString(HTML_KEY, A_DOCUMENT).commit()
++        LocalStore.enableAccountIsolation(context)
++        assertEquals("_unassigned", legacy.getString("_legacy_owner", null))
++        assertEquals("", store.getString(HTML_KEY))
++        login("account-B")
++        assertEquals("", store.getString(HTML_KEY))
++        assertEquals(A_DOCUMENT, legacy.getString(HTML_KEY, null))
++    }
++
++    @Test
++    fun defaultStoreAuthKeysRemainGlobalAndContentRemainsScoped() {
++        login("account-A")
++        auth.edit().putString("profile", "A profile")
++            .putString("auth_token", "test-token").commit()
++        LocalStore.enableAccountIsolation(context)
++        val local = LocalStore(context)
++        assertEquals("A profile", local.getString("profile"))
++        login("")
++        assertEquals("", local.getString("profile"))
++        assertEquals("test-token", local.getString("auth_token"))
++        local.putStringDurable("auth_token", "new-test-token")
++        assertEquals("new-test-token", auth.getString("auth_token", null))
++        assertEquals(setOf("auth_user_id", "auth_token"), local.keysWithPrefix("auth_"))
++        local.remove("auth_token")
++        assertFalse(auth.contains("auth_token"))
++        local.putStringDurable("auth_user_id", "account-A")
++        assertEquals("A profile", local.getString("profile"))
++        assertFalse(context.getSharedPreferences(DEFAULT_STORE + "__" + StableIds.of("user", "account-A"), Context.MODE_PRIVATE)
++            .contains("auth_user_id"))
++    }
++
++    @Test
++    fun authPrefixInMathStoreIsStillScopedRatherThanGlobal() {
++        migrateA()
++        store.putStringDurable("auth_fixture", "A-only")
++        login("")
++        assertEquals("", store.getString("auth_fixture"))
++        store.putStringDurable("auth_fixture", "guest-only")
++        login("account-A")
++        assertEquals("A-only", store.getString("auth_fixture"))
++    }
++
++    @Test
++    fun typedLegacyValuesMigrateOnlyToTheirKnownOwner() {
++        login("account-A")
++        legacy.edit().putInt("int", 3).putLong("long", 42L).putFloat("float", 0.5f)
++            .putBoolean("bool", true).putStringSet("set", setOf("x", "y"))
++            .putString("_internal", "not-user-data").commit()
++        LocalStore.enableAccountIsolation(context)
++        assertEquals(3, store.getInt("int"))
++        assertEquals(42L, store.getLong("long"))
++        assertEquals(0.5f, store.getFloat("float"), 0.0f)
++        assertTrue(store.getBool("bool"))
++        assertEquals(setOf("x", "y"), store.getStringSet("set"))
++        assertFalse(store.contains("_internal"))
++        login("")
++        assertEquals(0, store.getInt("int"))
++        assertEquals(0L, store.getLong("long"))
++        assertEquals(0f, store.getFloat("float"), 0.0f)
++        assertFalse(store.getBool("bool"))
++        assertTrue(store.getStringSet("set").isEmpty())
++    }
++
++    companion object {
++        private const val DEFAULT_STORE = "roozhayeman_local"
++        private const val MATH_STORE = "hamyar_math_html"
++        // Real bridge key and document IDs from the delivered grade-nine final exam.
++        private const val HTML_KEY = "html:exam:C905_E00-SUM"
++        private const val A_DOCUMENT = """{"schema":"hamyar-math-practice-1","documents":{"f00-tab05-easy-01":{"contentVersion":"2026-10-19.qa-fix-1","sessionId":"fixture-A","answers":{"f00-final-l1-v1-p01-q01":"نادرست"},"submitted":{},"errors":[{"questionId":"f00-final-l1-v1-p01-q01","studentAnswer":"نادرست","correctAnswer":"درست","recordedAt":"2026-10-19T00:00:00Z","errorCategory":"نیاز به مرور درست یا نادرست"}],"history":[],"cards":{},"cardIndex":0,"currentQuestion":0,"finished":false,"examReported":false}}}"""
++        private val B_DOCUMENT = A_DOCUMENT.replace("fixture-A", "fixture-B")
++        private val GUEST_DOCUMENT = A_DOCUMENT.replace("fixture-A", "fixture-guest")
++            .replaceFirst("نادرست", "درست")
++    }
++}

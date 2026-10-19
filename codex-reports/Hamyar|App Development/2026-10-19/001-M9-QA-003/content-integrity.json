@@ -1,0 +1,20 @@
+{
+  "base_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+  "application_commit": "7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04",
+  "asset_trees": [
+    {
+      "path": "grades/g09/src/main/assets",
+      "base_tree": "9158818c7aa68ce1927f8ce50b50e36a73e1b31e",
+      "fixed_tree": "9158818c7aa68ce1927f8ce50b50e36a73e1b31e",
+      "unchanged": true
+    },
+    {
+      "path": "apps/student/src/main/assets",
+      "base_tree": "843e943ee067e0a7e3672e52410e82f9fe132831",
+      "fixed_tree": "843e943ee067e0a7e3672e52410e82f9fe132831",
+      "unchanged": true
+    }
+  ],
+  "all_grade_9_and_shared_student_assets_unchanged": true,
+  "menus_themes_banks_not_regenerated": true
+}

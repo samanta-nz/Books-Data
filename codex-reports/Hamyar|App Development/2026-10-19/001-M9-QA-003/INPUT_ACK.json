@@ -1,0 +1,139 @@
+{
+  "packet": {
+    "handoff_id": "ACK-CODE-MATH9-ACCOUNT-20261019",
+    "revision": 1,
+    "task_id": "MATH9-ALL-COMPLETION-20261018",
+    "packet_type": "INPUT_ACK",
+    "from": {
+      "role_id": "app-development",
+      "thread_id": "01a14fd8-c537-7154-b31b-4d057bf4a07b",
+      "host_id": "durable"
+    },
+    "to": {
+      "role_id": "exam-content-builder",
+      "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+      "host_id": "durable"
+    },
+    "reply_to": {
+      "role_id": "app-development",
+      "thread_id": "01a14fd8-c537-7154-b31b-4d057bf4a07b",
+      "host_id": "durable"
+    },
+    "in_reply_to": {
+      "handoff_id": "CODE-MATH9-ACCOUNT-20261019",
+      "revision": 2,
+      "packet_sha256": "5dd09178afe120d7edf86c2a8ed398d4e60296f00bed15ecca7f0b0a160b852e"
+    },
+    "scope": {
+      "grade": 9,
+      "book": "ریاضی نهم",
+      "finding_id": "M9-QA-003",
+      "component": "LocalStore account/guest/legacy isolation",
+      "content_generation": false
+    },
+    "expected_action": "RECORD_INPUT_DECISION_ONLY",
+    "origin_instruction_ref": "User forwarded the full published QA_REPORT and requested continuation of the grade-nine math workflow; exam-content-builder role contract routes native storage fixes to app-development.",
+    "acceptance_criteria": [
+      "Inspect actual LocalStore.prefsFor and enableAccountIsolation: a blank owner must not expose basePrefs left by account A legacy migration.",
+      "Preserve valid account A data and existing auth-key behavior; use the current storage architecture without inventing backend or API.",
+      "Add meaningful regression coverage for A -> logout -> guest, A -> B, guest edits not changing A, and returning to A after legacy migration.",
+      "Exercise actual hamyar_math_html keys and data-model documents; do not change or regenerate math banks, menus, themes or assessment assets.",
+      "Record exact resulting code commit, tests and device/emulator evidence; NOT_RUN for unexecuted device work, no substituted Chromium proof of native isolation.",
+      "Return CODE_DELIVERY in reply to this exact packet and requester, with commit/hash/artifacts and remaining dependencies; no main merge, bucket activation or APK release."
+    ],
+    "rules": [
+      {
+        "path": "WORKFLOW_RULES.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "dd24ad2ba603c0e714cbfd5edbe0418fe54e95d696ec36a3e3fbb0b0367fd2c7"
+      },
+      {
+        "path": "HANDOFF.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ec0b47e279101b60f935150ef7167265f1dce1a7ea054eade94440667a95a834"
+      },
+      {
+        "path": "TEMPLATE_POLICY.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ec2401d3e833e0c78bb325f68e59ff262e618e0ce8cf8f0560405314fc946619"
+      },
+      {
+        "path": "AUDIO_POLICY.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ddec8d654f2f3b829e37fdba4e22ee1a54d263b5bffd5dc006ffc32209f4a1b8"
+      },
+      {
+        "path": "role-contracts/exam-content-builder.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "fb498a30431e26f3139fdb3207686dacbecbbe050e297628a92353ae0cdd92c5"
+      },
+      {
+        "path": "routes.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "bef925590465e3126a7deb818610d6889ed1f7334748a51717cb4ebe6e712e84"
+      },
+      {
+        "path": "registry.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "80b5a388a716c1547a3ffe2cd5cb4c265fde7d497dd55a30cd4dd8770f79237b"
+      },
+      {
+        "path": "TOKEN_POLICY.md",
+        "version": "2026-10-18.compact-1",
+        "sha256": "48849465a56131434a8810c36bedab3d3e8c0d0a54f17facf3f19ac398907fbf"
+      },
+      {
+        "path": "HANDOFF.schema.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "37588e25a94a8f97ea5d13295ec5c6dc0ef4f369784e0fb6163f7dc6e2640c20"
+      }
+    ],
+    "repositories": [
+      {
+        "url": "https://github.com/samanta-nz/com.hamyareman.final",
+        "branch": "codex/g9-math-whole-book",
+        "source_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+        "note": "Native LocalStore is unchanged in the assessment-asset remediation; inspect current delivered branch and preserve its new HTML assets.",
+        "qa_checked_native_commit": "253e50cfe9487bead94ed97242ab08b0f8fed7b2"
+      }
+    ],
+    "artifacts": [],
+    "mapping": {
+      "content_route_changes": false,
+      "store": "hamyar_math_html",
+      "source_files": [
+        "core/core-common/src/main/java/com/hamyareman/ir/platform/core/common/LocalStore.kt",
+        "apps/student/src/main/java/com/hamyareman/ir/ui/study/MathHtmlWebView.kt"
+      ],
+      "expected_source_blob": "a83fb5275e3a429b02a5982b48915f7102c32d68"
+    },
+    "dependencies": [],
+    "validation": [],
+    "payload": {
+      "decision": "ACCEPTED",
+      "accepted_scope": [
+        "M9-QA-003: isolate blank-owner preferences from legacy account data; preserve auth routing and account data"
+      ],
+      "blocked_scope": [],
+      "checks_performed": [
+        "Request schema and canonical packet hash verified",
+        "Both immutable QA artifact sizes and SHA-256 values verified",
+        "Exact source commit 3e6e91dea23e2b373ec3c68d4b2cfc995569efd7 checked out",
+        "LocalStore source git blob a83fb5275e3a429b02a5982b48915f7102c32d68 matched",
+        "CODE_REQUEST from exam-content-builder to app-development allowed by routes.json"
+      ],
+      "reason_codes": [],
+      "owner": "app-development",
+      "next_action": "Reproduce and fix native preference routing; run focused regression tests and return CODE_DELIVERY to exam-content-builder.",
+      "source_transport": "User manually forwarded the published request in this chat; no automatic interchat delivery claimed."
+    }
+  },
+  "packet_sha256": "e5fa2fe426babf0f6cfd3565afa253219ca72a7bc325e189ff9b578a458229bd",
+  "state": {
+    "transport": "BLOCKED_NO_TRANSPORT",
+    "input_decision": "ACCEPTED",
+    "work_status": "COMPLETED",
+    "publication": "NONE",
+    "delivery_receipt": null
+  }
+}

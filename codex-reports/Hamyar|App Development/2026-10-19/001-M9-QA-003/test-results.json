@@ -1,0 +1,353 @@
+{
+  "base_application_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+  "fixed_application_commit": "7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04",
+  "execution": {
+    "kind": "Host JVM, Robolectric 4.16.1, Android API 28",
+    "production_class": "LocalStore",
+    "real_device": "NOT_RUN",
+    "emulator": "NOT_RUN",
+    "installed_apk_webview": "NOT_RUN",
+    "full_application_build": "NOT_RUN",
+    "independent_QA": "PENDING"
+  },
+  "baseline": {
+    "production_source": "Original LocalStore.kt from the exact base commit, with the new tests/dependency overlay",
+    "result": {
+      "suites": [
+        {
+          "suite": "com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest",
+          "tests": 10,
+          "failures": 8,
+          "errors": 0,
+          "skipped": 0,
+          "cases": [
+            {
+              "name": "alreadyInitializedAccountIsPreservedAcrossUpgrade",
+              "verdict": "FAIL"
+            },
+            {
+              "name": "logoutCannotReadMigratedAccountLegacyData",
+              "verdict": "FAIL"
+            },
+            {
+              "name": "accountsStaySeparateAndReturningToARestoresItsDocument",
+              "verdict": "PASS"
+            },
+            {
+              "name": "defaultStoreAuthKeysRemainGlobalAndContentRemainsScoped",
+              "verdict": "FAIL"
+            },
+            {
+              "name": "authPrefixInMathStoreIsStillScopedRatherThanGlobal",
+              "verdict": "PASS"
+            },
+            {
+              "name": "guestClearAndRemoveNeverDeleteAccountOrLegacyData",
+              "verdict": "FAIL"
+            },
+            {
+              "name": "guestEditsSurviveStoreRecreationWithoutChangingAOrB",
+              "verdict": "FAIL"
+            },
+            {
+              "name": "typedLegacyValuesMigrateOnlyToTheirKnownOwner",
+              "verdict": "FAIL"
+            },
+            {
+              "name": "explicitlyBoundBlankOwnerDoesNotFollowSignedInAccount",
+              "verdict": "FAIL"
+            },
+            {
+              "name": "unattributedLegacyDataIsNotImportedByGuestOrNewAccount",
+              "verdict": "FAIL"
+            }
+          ]
+        }
+      ],
+      "totals": {
+        "tests": 10,
+        "failures": 8,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "command": "./gradlew :core-common:testDebugUnitTest --tests \"*LocalStoreAccountIsolationTest\""
+  },
+  "fixed": {
+    "result": {
+      "suites": [
+        {
+          "suite": "com.hamyareman.ir.platform.core.common.BillingStatusTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "cases": [
+            {
+              "name": "paidOnlyYearlyOrRefundPending",
+              "verdict": "PASS"
+            },
+            {
+              "name": "chips",
+              "verdict": "PASS"
+            },
+            {
+              "name": "adminOpsSharesBootstrapFunction",
+              "verdict": "PASS"
+            }
+          ]
+        },
+        {
+          "suite": "com.hamyareman.ir.platform.core.common.ConditionalCachePolicyTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "cases": [
+            {
+              "name": "sameSizeWithoutMetadataIsNotAnUnchangedFile",
+              "verdict": "PASS"
+            },
+            {
+              "name": "changedEtagWinsEvenWhenSizeAndModifiedTimeMatch",
+              "verdict": "PASS"
+            },
+            {
+              "name": "lengthChangeAlwaysInvalidatesCachedValidator",
+              "verdict": "PASS"
+            }
+          ]
+        },
+        {
+          "suite": "com.hamyareman.ir.platform.core.common.InternationalDateRuleTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "cases": [
+            {
+              "name": "invalidDateCannotCreateAnOccasion",
+              "verdict": "PASS"
+            },
+            {
+              "name": "programmerDayRespectsLeapYears",
+              "verdict": "PASS"
+            },
+            {
+              "name": "internationalWeeksIncludeLastDayAndStopAfterwards",
+              "verdict": "PASS"
+            },
+            {
+              "name": "fathersDayUsesThirdSundayNotFixedJune16",
+              "verdict": "PASS"
+            }
+          ]
+        },
+        {
+          "suite": "com.hamyareman.ir.platform.core.common.JalaliDateTest",
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "cases": [
+            {
+              "name": "known gregorian dates convert to jalali",
+              "verdict": "PASS"
+            },
+            {
+              "name": "persian digits replace latin digits only",
+              "verdict": "PASS"
+            },
+            {
+              "name": "jalali gregorian round trip for civil years",
+              "verdict": "PASS"
+            },
+            {
+              "name": "leap esfand has 30 days only on leap years",
+              "verdict": "PASS"
+            },
+            {
+              "name": "parse jalali accepts slash and persian digits",
+              "verdict": "PASS"
+            },
+            {
+              "name": "jalali formatting uses zero padding and persian digits",
+              "verdict": "PASS"
+            },
+            {
+              "name": "month names cover all twelve months",
+              "verdict": "PASS"
+            },
+            {
+              "name": "latin digits normalise persian and arabic input",
+              "verdict": "PASS"
+            },
+            {
+              "name": "iso instant uses tehran calendar day",
+              "verdict": "PASS"
+            },
+            {
+              "name": "age is completed years from jalali birthday",
+              "verdict": "PASS"
+            }
+          ]
+        },
+        {
+          "suite": "com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest",
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "cases": [
+            {
+              "name": "alreadyInitializedAccountIsPreservedAcrossUpgrade",
+              "verdict": "PASS"
+            },
+            {
+              "name": "logoutCannotReadMigratedAccountLegacyData",
+              "verdict": "PASS"
+            },
+            {
+              "name": "accountsStaySeparateAndReturningToARestoresItsDocument",
+              "verdict": "PASS"
+            },
+            {
+              "name": "defaultStoreAuthKeysRemainGlobalAndContentRemainsScoped",
+              "verdict": "PASS"
+            },
+            {
+              "name": "authPrefixInMathStoreIsStillScopedRatherThanGlobal",
+              "verdict": "PASS"
+            },
+            {
+              "name": "guestClearAndRemoveNeverDeleteAccountOrLegacyData",
+              "verdict": "PASS"
+            },
+            {
+              "name": "guestEditsSurviveStoreRecreationWithoutChangingAOrB",
+              "verdict": "PASS"
+            },
+            {
+              "name": "typedLegacyValuesMigrateOnlyToTheirKnownOwner",
+              "verdict": "PASS"
+            },
+            {
+              "name": "explicitlyBoundBlankOwnerDoesNotFollowSignedInAccount",
+              "verdict": "PASS"
+            },
+            {
+              "name": "unattributedLegacyDataIsNotImportedByGuestOrNewAccount",
+              "verdict": "PASS"
+            }
+          ]
+        },
+        {
+          "suite": "com.hamyareman.ir.platform.core.common.PrivacyPolicyTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "cases": [
+            {
+              "name": "username mapping table is a server table and never a private one",
+              "verdict": "PASS"
+            },
+            {
+              "name": "album items live on the server and never in the private set",
+              "verdict": "PASS"
+            },
+            {
+              "name": "private tables never overlap with shareable ones",
+              "verdict": "PASS"
+            },
+            {
+              "name": "shareable tables are not private",
+              "verdict": "PASS"
+            },
+            {
+              "name": "all private tables are flagged",
+              "verdict": "PASS"
+            },
+            {
+              "name": "server tables never include a private table",
+              "verdict": "PASS"
+            }
+          ]
+        },
+        {
+          "suite": "com.hamyareman.ir.platform.core.common.RemoteObjectStatusTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "cases": [
+            {
+              "name": "accessAndNetworkFailuresNeverBecomeUnderConstruction",
+              "verdict": "PASS"
+            },
+            {
+              "name": "stableIdsStayWithinAppwriteLimitsAndSeparateAmbiguousInputs",
+              "verdict": "PASS"
+            }
+          ]
+        },
+        {
+          "suite": "com.hamyareman.ir.platform.core.common.SchoolAudiencePolicyTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "cases": [
+            {
+              "name": "religionGroupsIncludeOnlyEligibleBooks",
+              "verdict": "PASS"
+            },
+            {
+              "name": "genderSupplementsPreserveTheSharedBook",
+              "verdict": "PASS"
+            },
+            {
+              "name": "pilotAndStreamChoicesDoNotLeakBooks",
+              "verdict": "PASS"
+            }
+          ]
+        },
+        {
+          "suite": "com.hamyareman.ir.platform.core.common.SchoolCalendarDateRuleTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "cases": [
+            {
+              "name": "lunarMonthEndAndDisplacement",
+              "verdict": "PASS"
+            },
+            {
+              "name": "leapYearProgrammerDay",
+              "verdict": "PASS"
+            },
+            {
+              "name": "solarMovingRuleAndHistoricalDate",
+              "verdict": "PASS"
+            }
+          ]
+        }
+      ],
+      "totals": {
+        "tests": 44,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "command": "./gradlew :core-common:testDebugUnitTest :core-common:verifyNoGradeDependencies",
+    "grade_dependency_check": "PASS"
+  },
+  "other": {
+    "content_readiness_script": "PASS: 4 tests",
+    "git_diff_check": "PASS",
+    "publication_scope_guard": "FAIL: Shared changes require a new core version; fails on input branch before this patch as well",
+    "device_evidence": "adb devices -l returned no attached devices"
+  }
+}

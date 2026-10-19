@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.hamyareman.ir.platform.core.common.JalaliDateTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-19T05:59:05.119Z" hostname="d1791b0ba179" time="0.081">
+  <properties/>
+  <testcase name="known gregorian dates convert to jalali" classname="com.hamyareman.ir.platform.core.common.JalaliDateTest" time="0.021"/>
+  <testcase name="persian digits replace latin digits only" classname="com.hamyareman.ir.platform.core.common.JalaliDateTest" time="0.001"/>
+  <testcase name="jalali gregorian round trip for civil years" classname="com.hamyareman.ir.platform.core.common.JalaliDateTest" time="0.053"/>
+  <testcase name="leap esfand has 30 days only on leap years" classname="com.hamyareman.ir.platform.core.common.JalaliDateTest" time="0.0"/>
+  <testcase name="parse jalali accepts slash and persian digits" classname="com.hamyareman.ir.platform.core.common.JalaliDateTest" time="0.001"/>
+  <testcase name="jalali formatting uses zero padding and persian digits" classname="com.hamyareman.ir.platform.core.common.JalaliDateTest" time="0.002"/>
+  <testcase name="month names cover all twelve months" classname="com.hamyareman.ir.platform.core.common.JalaliDateTest" time="0.002"/>
+  <testcase name="latin digits normalise persian and arabic input" classname="com.hamyareman.ir.platform.core.common.JalaliDateTest" time="0.0"/>
+  <testcase name="iso instant uses tehran calendar day" classname="com.hamyareman.ir.platform.core.common.JalaliDateTest" time="0.001"/>
+  <testcase name="age is completed years from jalali birthday" classname="com.hamyareman.ir.platform.core.common.JalaliDateTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

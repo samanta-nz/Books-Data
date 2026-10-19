@@ -1,0 +1,26 @@
+{
+  "repository": "https://github.com/samanta-nz/com.hamyareman.final",
+  "branch": "codex/fix-math-account-guest-isolation",
+  "base_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+  "application_commit": "7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04",
+  "files": [
+    {
+      "path": "core/core-common/build.gradle.kts",
+      "bytes": 946,
+      "sha256": "dac90ba2fe06810b2c03b81d5730fbe15d8a7a1845ed9b4195dd8d04a6c1af82",
+      "url": "https://github.com/samanta-nz/com.hamyareman.final/blob/7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04/core/core-common/build.gradle.kts"
+    },
+    {
+      "path": "core/core-common/src/main/java/com/hamyareman/ir/platform/core/common/LocalStore.kt",
+      "bytes": 6932,
+      "sha256": "b39b89cf4c6bcab71fe6a2ee6c9627071ae4cb7ed47581ded112455bf48681fd",
+      "url": "https://github.com/samanta-nz/com.hamyareman.final/blob/7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04/core/core-common/src/main/java/com/hamyareman/ir/platform/core/common/LocalStore.kt"
+    },
+    {
+      "path": "core/core-common/src/test/java/com/hamyareman/ir/platform/core/common/LocalStoreAccountIsolationTest.kt",
+      "bytes": 9044,
+      "sha256": "fdfebe436dca6f5ad98facf4eb649aa2e532e009eeae22c2dae38819b8d5945b",
+      "url": "https://github.com/samanta-nz/com.hamyareman.final/blob/7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04/core/core-common/src/test/java/com/hamyareman/ir/platform/core/common/LocalStoreAccountIsolationTest.kt"
+    }
+  ]
+}

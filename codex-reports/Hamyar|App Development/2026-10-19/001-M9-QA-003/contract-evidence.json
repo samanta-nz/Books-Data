@@ -1,0 +1,50 @@
+{
+  "base_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+  "storage_file": "hamyar_math_html",
+  "native_key": "html:exam:C905_E00-SUM",
+  "schema": "hamyar-math-practice-1",
+  "records": [
+    {
+      "path": "core/core-common/src/main/java/com/hamyareman/ir/platform/core/common/LocalStore.kt",
+      "bytes": 6932,
+      "sha256": "b39b89cf4c6bcab71fe6a2ee6c9627071ae4cb7ed47581ded112455bf48681fd",
+      "baseline_sha256": "603d31601681dce2e3fab0110693e324bb8c3b20ef6167aed290e7b6854681b8",
+      "unchanged": false
+    },
+    {
+      "path": "apps/student/src/main/java/com/hamyareman/ir/ui/study/MathHtmlWebView.kt",
+      "bytes": 6801,
+      "sha256": "c2ea2b90c6786c4902c1138332622413580f62a4ff9265f62bb5e97d408df077",
+      "baseline_sha256": "c2ea2b90c6786c4902c1138332622413580f62a4ff9265f62bb5e97d408df077",
+      "unchanged": true
+    },
+    {
+      "path": "apps/student/src/main/assets/math/c905/hamyar-persist.js",
+      "bytes": 11023,
+      "sha256": "675eb7c75e546e3a5ca5e3419e8420bb52c26efcbacc0d5fb3750111951f48b6",
+      "baseline_sha256": "675eb7c75e546e3a5ca5e3419e8420bb52c26efcbacc0d5fb3750111951f48b6",
+      "unchanged": true
+    },
+    {
+      "path": "grades/g09/src/main/assets/content/math-practice-routes.json",
+      "bytes": 54471,
+      "sha256": "cee5abf55203b32a113b6b8349ac1dce35641169cd6ee3a5b29f35379df4b0b2",
+      "baseline_sha256": "cee5abf55203b32a113b6b8349ac1dce35641169cd6ee3a5b29f35379df4b0b2",
+      "unchanged": true
+    },
+    {
+      "path": "grades/g09/src/main/assets/math/c905/practice/N10.1/TAB05-easy-01.html",
+      "bytes": 456828,
+      "sha256": "842ae368aaad4a4e070a0896634648cee51826f63f58478310e8602caf295694",
+      "fixture_document": {
+        "id": "f00-tab05-easy-01",
+        "scopeId": "f00",
+        "packId": "C905_E00-SUM",
+        "kind": "exam",
+        "contentVersion": "2026-10-19.qa-fix-1"
+      },
+      "unchanged": true
+    }
+  ],
+  "application_commit": "7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04"
+}

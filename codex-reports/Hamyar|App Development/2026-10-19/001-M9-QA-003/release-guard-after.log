@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/app-account-fix/scripts/check-release-scope.py", line 24, in <module>
+    assert current>baseline['core'],'Shared changes require a new core version'
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Shared changes require a new core version
