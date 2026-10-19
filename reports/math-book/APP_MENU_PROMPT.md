@@ -1,5 +1,8 @@
 # پرامپت مستقل تحویل منوی مرور جامع ریاضی نهم به ایجنت اپ/سینک
 
+نسخهٔ اصلاحی پس از گزارش FAIL: [گزارش اصلاح و درخواست بازآزمایی](qa-fix-20261019/README.md). برای وضعیت جاری این نسخه، نتیجهٔ QA قبلی را PASS فرض نکنید.
+
+
 فایل‌ها با اجازهٔ کاربر روی GitHub پوش شده‌اند. هدف، بررسی و استفاده از خروجی‌های آمادهٔ کل کتاب و منوی پیاده‌شدهٔ اپ است؛ تولید دوبارهٔ بانک سؤال یا افزودن دوبارهٔ منو لازم نیست. هیچ تغییر، commit، push، upload، bucket sync یا release تازه‌ای انجام نده، مگر در محدودهٔ دستور کاربرِ همین نشست باشد.
 
 ## آدرس‌های واقعی GitHub و شاخهٔ مورد استفاده
@@ -8,15 +11,15 @@
 |---|---|
 | آدرس اصلی پروژهٔ اپ | https://github.com/samanta-nz/com.hamyareman.final |
 | سورس اپ با منوی کل کتاب و تمام فایل‌های آفلاین | https://github.com/samanta-nz/com.hamyareman.final/tree/codex/g9-math-whole-book |
-| کامیت دقیق اپ | https://github.com/samanta-nz/com.hamyareman.final/commit/253e50cfe9487bead94ed97242ab08b0f8fed7b2 |
+| کامیت دقیق اپ | https://github.com/samanta-nz/com.hamyareman.final/commit/3e6e91dea23e2b373ec3c68d4b2cfc995569efd7 |
 | ریپوی اصلی محتوا | https://github.com/samanta-nz/Books-Data |
 | شاخهٔ فایل‌های تولیدی و گزارش‌ها | https://github.com/samanta-nz/Books-Data/tree/codex/g9-math-whole-book |
 | همین پرامپت در GitHub | https://github.com/samanta-nz/Books-Data/blob/codex/g9-math-whole-book/reports/math-book/APP_MENU_PROMPT.md |
 | متن خام همین پرامپت | https://raw.githubusercontent.com/samanta-nz/Books-Data/refs/heads/codex/g9-math-whole-book/reports/math-book/APP_MENU_PROMPT.md |
 | بستهٔ کوچک تحویل کل کتاب | https://github.com/samanta-nz/Books-Data/raw/refs/heads/codex/g9-math-whole-book/reports/math-book/whole-book-menu-handoff.zip |
 | تمام محتوای ریاضی نهم | https://github.com/samanta-nz/Books-Data/tree/codex/g9-math-whole-book/Bucket/Html-files/app/books/C905 |
-| فایل منوی اپ | https://github.com/samanta-nz/com.hamyareman.final/blob/253e50cfe9487bead94ed97242ab08b0f8fed7b2/grades/g09/src/main/assets/content/books-menu.json |
-| manifest مسیرهای اپ | https://github.com/samanta-nz/com.hamyareman.final/blob/253e50cfe9487bead94ed97242ab08b0f8fed7b2/grades/g09/src/main/assets/content/math-practice-routes.json |
+| فایل منوی اپ | https://github.com/samanta-nz/com.hamyareman.final/blob/3e6e91dea23e2b373ec3c68d4b2cfc995569efd7/grades/g09/src/main/assets/content/books-menu.json |
+| manifest مسیرهای اپ | https://github.com/samanta-nz/com.hamyareman.final/blob/3e6e91dea23e2b373ec3c68d4b2cfc995569efd7/grades/g09/src/main/assets/content/math-practice-routes.json |
 
 شاخهٔ تحویل در هر دو ریپو دقیقاً `codex/g9-math-whole-book` است. در این اجرا ادغام در `main` یا انتشار اپ/باکت انجام نشده است؛ برای پیدا کردن فایل‌ها فقط `main` را جست‌وجو نکن. در checkout شاخهٔ منتشرشده، منو، bridge، metadata و assets از قبل حاضرند؛ ابتدا وجود و سازگاری آن‌ها را بررسی کن و patch را دوباره اعمال نکن.
 

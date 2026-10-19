@@ -6,6 +6,10 @@ CHAPTERS={1:'مجموعه‌ها',2:'عددهای حقیقی',3:'استدلال 
 def frac(n,d=1):return str(F(n,d))
 def roster(xs):return '{'+', '.join(map(str,sorted(set(xs))))+'}' if xs else '∅'
 def pwr(x,n):return f'({x})^{n}'
+def signed_term(coefficient, symbol=''):
+ if not coefficient:return ''
+ magnitude='' if abs(coefficient)==1 and symbol else str(abs(coefficient))
+ return ('+' if coefficient>0 else '−')+magnitude+symbol
 class Bank:
  def __init__(self,chapter,v):self.chapter=chapter;self.v=v;self.rows=[]
  def add(self,level,objective,topic,prompt,answer,feedback,kind='short',options=None,check=None,aliases=None,mistakes=None,diagram=None,rubric=None):

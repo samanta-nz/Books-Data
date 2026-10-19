@@ -1,5 +1,8 @@
 # نشانی‌های تحویل GitHub
 
+نسخهٔ اصلاحی پس از گزارش FAIL: [گزارش اصلاح و درخواست بازآزمایی](qa-fix-20261019/README.md). برای وضعیت جاری این نسخه، نتیجهٔ QA قبلی را PASS فرض نکنید.
+
+
 راهنمای کامل هر هشت فصل و مرور جامع: [START_HERE_ALL_MATH9.md](https://github.com/samanta-nz/Books-Data/blob/codex/g9-math-whole-book/reports/math-book/final-delivery/START_HERE_ALL_MATH9.md). manifest کامل، همهٔ ۲۵۲ HTML و Themeهای متناظر را به commit ثابت محتوا و اپ متصل می‌کند.
 
 این مرحله پس از دستور تازهٔ کاربر برای commit و push انجام می‌شود؛ گزارش‌های آزمون قبلی مربوط به مرحلهٔ تولید و بررسی محلی‌اند.
@@ -8,7 +11,7 @@
 |---|---|
 | پروژهٔ اصلی اپ | https://github.com/samanta-nz/com.hamyareman.final |
 | سورس اپِ آماده | https://github.com/samanta-nz/com.hamyareman.final/tree/codex/g9-math-whole-book |
-| کامیت اپ | https://github.com/samanta-nz/com.hamyareman.final/commit/253e50cfe9487bead94ed97242ab08b0f8fed7b2 |
+| کامیت اپ | https://github.com/samanta-nz/com.hamyareman.final/commit/3e6e91dea23e2b373ec3c68d4b2cfc995569efd7 |
 | ریپوی اصلی محتوا | https://github.com/samanta-nz/Books-Data |
 | شاخهٔ محتوا | https://github.com/samanta-nz/Books-Data/tree/codex/g9-math-whole-book |
 | پرامپت قابل ارسال به ایجنت | https://github.com/samanta-nz/Books-Data/blob/codex/g9-math-whole-book/reports/math-book/APP_MENU_PROMPT.md |

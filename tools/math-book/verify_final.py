@@ -25,11 +25,25 @@ def run(write=True):
     assert q['marks']>0 and q['marks']*4==int(q['marks']*4)
     if q['type'] in ('short','set'):verify(q);counts['exactAutomaticAnswers']+=1
     elif q['type']=='tf':
-     expected='درست' if (v%2==1 if pair[1]!=2 else v%2==0) else 'نادرست'
+     if pair==(1,2):
+      angles=list(map(int,re.search(r'زاویه‌های مثلث (\d+)، (\d+) و (\d+)',q['prompt']).groups()))
+      assert sum(angles)==180 and min(angles)>0
+      expected='درست' if max(angles)<90 else 'نادرست'
+     else:expected='درست' if v%2==1 else 'نادرست'
      assert q['answer']==expected,(pair,v,q['answer']);counts['logicalAnswersReviewed']+=1
     elif q['type']=='mcq':
      assert len(q['options'])==len(set(q['options']))==4 and q['options'].count(q['answer'])==1
-     assert q['answer']=={1:'√x',2:'(4/3)πR³',3:str(4+v+level),4:'دایره'}[q['part']]
+     if pair==(3,1):
+      assert q['answer'].startswith('√(x+') and sum('√' in x for x in q['options'])==1
+     elif pair==(3,2):
+      radius=int(re.search(r'شعاع (\d+)',q['prompt']).group(1))
+      assert sp.sympify(q['answer'].replace('π',''))==sp.Rational(4,3)*radius**3
+     elif pair==(3,3):
+      aa,kk,bb,jj=map(int,re.search(r'A=(\d+)\+(\d+)x و B=(\d+)\+(\d+)x',q['prompt']).groups())
+      assert sp.Rational(q['answer'])==sp.Rational(bb-aa,kk-jj)
+     elif pair==(3,4):
+      radius=int(re.search(r'شعاع قاعدهٔ (\d+)',q['prompt']).group(1))
+      assert int(q['answer'].replace('π',''))==radius**2
      counts['logicalAnswersReviewed']+=1
     elif q['type']=='text':
      assert q['answer']=={(2,4):'طول‌ها',(4,2):'∈',(15,1):'مخروط'}[pair];counts['logicalAnswersReviewed']+=1
@@ -40,6 +54,27 @@ def run(write=True):
       sample=q['answer'].split('؛')[0];got=key_expression(sample)
       assert sp.simplify(expression(cert)-got)==0,(pair,q['answer'],cert)
       counts['symbolicWorkedKeys']+=1
+     if pair==(5,1):
+      size=int(re.search(r'1 تا (\d+)',q['prompt']).group(1))
+      outcomes=list(range(1,size+1))
+      if 'دقیقاً یکی' in q['prompt']:valid=[i for i in outcomes if sum([i%2==0,i%3==0])==1]
+      elif 'یا' in q['prompt']:valid=[i for i in outcomes if any(i%d==0 for d in [2,3])]
+      elif 'نبودن' in q['prompt']:valid=[i for i in outcomes if i%3!=0]
+      else:valid=[i for i in outcomes if i%3==0]
+      assert sp.Rational(q['answer'].split('=')[-1])==sp.Rational(len(valid),size)
+      counts['probabilityEventsEnumerated']+=1
+     if pair==(9,1):
+      actual=re.search(r'حاصل (.+?) را به صورت',q['prompt']).group(1)
+      assert sp.simplify(key_expression(actual)-expression(cert))==0
+     if pair==(7,1):
+      radius,distance=map(int,re.search(r'شعاع (\d+)،.+OP=(\d+)',q['prompt']).groups())
+      tangent=int(re.search(r'هر دو طول (\d+)',q['answer']).group(1))
+      assert distance>radius>0 and sp.sqrt(distance**2-radius**2)==tangent
+      counts['tangentLengthsIndependentlyChecked']+=1
+     if pair==(16,1):
+      side,height=map(int,re.search(r'ضلع قاعدهٔ (\d+) و ارتفاع هر وجه جانبی (\d+)',q['prompt']).groups())
+      assert side>0 and height>sp.Rational(side,2)
+      counts['pyramidNetDimensionsChecked']+=1
      if pair==(9,3):
       k,a,target=map(int,re.search(r'−(\d+)x\+(\d+)≤(\d+)',q['prompt']).groups())
       assert q['answer'].replace('−','-')=='x≥'+str(sp.Rational(a-target,k));counts['symbolicWorkedKeys']+=1

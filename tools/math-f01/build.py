@@ -99,6 +99,7 @@ def main():
     def page(filename,title,body,kind,questions_=None,cards=None,variant=0,mode=None):
         docid='f01-'+filename[:-5].lower()
         data=dict(id=docid,kind=kind,variant=variant,contentVersion=version,mode=mode or kind,scopeId='f01',packId='C905_E01-SUM',chapterNumber=1,chapterTitle='فصل اول: مجموعه‌ها')
+        if mode=='assessment':data['contentVersion']='2026-10-19.qa-fix-1'
         if questions_ is not None:data['questions']=questions_
         if cards is not None:data['cards']=cards
         text=make_page(output/filename,packaged/filename,title,data,body,'<script>'+runtime+'</script>')
@@ -121,7 +122,9 @@ def main():
     for level,(slug,label) in enumerate(zip(slugs,LEVELS),1):
         links=[]
         for v in range(1,7):
-            qs=[q for q in questions(v) if q['level']==level]
+            sys.path.insert(0,str(HERE.parent/'math-book'))
+            from exam_cases import assessment_cases
+            qs=assessment_cases(1,[q for q in questions(v) if q['level']==level],v)
             for i,q in enumerate(qs,1):
                 q['id']=f'f01-{slug}-v{v}-q{i:02d}'
                 q['sources']=['gharavi'] if level<3 else []

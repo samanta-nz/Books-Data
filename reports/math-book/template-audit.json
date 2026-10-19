@@ -1278,7 +1278,5 @@
     }
   ],
   "lockedVerification": "OK — all locked files intact",
-  "fontCompatibility": "Actual Vazir FD 400/500/700 kept in page themes by explicit user rule; locked Vazirmatn assets remain byte-identical.",
-  "upstreamLockedAndChecksumByteMatch": true,
-  "checksumFileSha256": "056e954de98ef4a09ddeb0dd142e0dc4fe6aee075bff2b369f5ba02217191274"
+  "fontCompatibility": "Actual Vazir FD 400/500/700 kept in page themes by explicit user rule; locked Vazirmatn assets remain byte-identical."
 }

@@ -35,7 +35,10 @@
     "logicalAnswersReviewed": 264,
     "exactAutomaticAnswers": 216,
     "manualRubricsReviewed": 432,
-    "symbolicWorkedKeys": 264
+    "probabilityEventsEnumerated": 24,
+    "tangentLengthsIndependentlyChecked": 24,
+    "symbolicWorkedKeys": 264,
+    "pyramidNetDimensionsChecked": 24
   },
   "manualPolicy": "هیچ برهان، رسم یا پاسخ تشریحی با ادعای تصحیح ماشینی قطعی نمره نمی‌گیرد؛ نمرهٔ راه‌حل با خودارزیابی مرحله‌ای و برچسب نیاز به تأیید دبیر ثبت می‌شود.",
   "blueprintSource": "هماهنگ کشوری ریاضی نهم، نوبت صبح ۱۴۰۴/۰۳/۰۴"

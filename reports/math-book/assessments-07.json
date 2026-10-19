@@ -17,31 +17,31 @@
         "semanticKey": "7:تشخیص عبارت گویا",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "کدام عبارت، نسبت دو چندجمله‌ای است؟",
-        "answer": "(x²+1)/(x−2)",
+        "prompt": "کدام عبارت نسبت دو چندجمله‌ای است؟",
+        "answer": "(x²+3)/(x−4)",
         "feedback": "در عبارت گویا، صورت و مخرج باید چندجمله‌ای باشند و مخرج چندجمله‌ای صفر نباشد.",
         "type": "mcq",
         "options": [
-          "(x²+1)/(x−2)",
-          "√x/(x+1)",
-          "|x|/(x+1)",
-          "2^x/(x+1)"
+          "(x²+3)/(x−4)",
+          "√x/(x+3)",
+          "|x|/(x+3)",
+          "3^x/(x+1)"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "تشخیص عبارت گویا"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "√x/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند",
-          "|x|/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند",
-          "2^x/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 1,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 1,
+          "canonicalFamily": "f07-01"
+        }
       },
       {
         "id": "f07-easy-v1-q02",
@@ -375,31 +375,31 @@
         "semanticKey": "7:تشخیص عبارت گویا",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "کدام عبارت، نسبت دو چندجمله‌ای است؟",
-        "answer": "(x²+1)/(x−2)",
+        "prompt": "کدام عبارت نسبت دو چندجمله‌ای است؟",
+        "answer": "(x²+4)/(x−5)",
         "feedback": "در عبارت گویا، صورت و مخرج باید چندجمله‌ای باشند و مخرج چندجمله‌ای صفر نباشد.",
         "type": "mcq",
         "options": [
-          "(x²+1)/(x−2)",
-          "√x/(x+1)",
-          "|x|/(x+1)",
-          "2^x/(x+1)"
+          "(x²+4)/(x−5)",
+          "√x/(x+4)",
+          "|x|/(x+4)",
+          "4^x/(x+1)"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "تشخیص عبارت گویا"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "√x/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند",
-          "|x|/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند",
-          "2^x/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 2,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 2,
+          "canonicalFamily": "f07-01"
+        }
       },
       {
         "id": "f07-easy-v2-q02",
@@ -733,31 +733,31 @@
         "semanticKey": "7:تشخیص عبارت گویا",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "کدام عبارت، نسبت دو چندجمله‌ای است؟",
-        "answer": "(x²+1)/(x−2)",
+        "prompt": "کدام عبارت نسبت دو چندجمله‌ای است؟",
+        "answer": "(x²+5)/(x−6)",
         "feedback": "در عبارت گویا، صورت و مخرج باید چندجمله‌ای باشند و مخرج چندجمله‌ای صفر نباشد.",
         "type": "mcq",
         "options": [
-          "(x²+1)/(x−2)",
-          "√x/(x+1)",
-          "|x|/(x+1)",
-          "2^x/(x+1)"
+          "(x²+5)/(x−6)",
+          "√x/(x+5)",
+          "|x|/(x+5)",
+          "5^x/(x+1)"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "تشخیص عبارت گویا"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "√x/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند",
-          "|x|/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند",
-          "2^x/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 3,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 3,
+          "canonicalFamily": "f07-01"
+        }
       },
       {
         "id": "f07-easy-v3-q02",
@@ -865,14 +865,14 @@
         "semanticKey": "7:حذف عامل مشترک عددی در کسر جبری",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "برای x≠0، مقدار (12x)/(2x) چند است؟",
+        "prompt": "برای x≠0، مقدار (30x)/(5x) چند است؟",
         "answer": "6",
         "feedback": "عامل مشترک ناصفر از صورت و مخرج حذف می‌شود.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((12*x)/(2*x))"
+          "expression": "cancel((30*x)/(5*x))"
         },
         "aliases": [],
         "mistakes": {},
@@ -934,14 +934,14 @@
         "semanticKey": "7:جمع کسرهای هم‌مخرج با صورت ثابت",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "در حاصل 6/x+2/x=(c)/x با x≠0، c چند است؟",
-        "answer": "8",
+        "prompt": "در حاصل 6/x+5/x=(c)/x با x≠0، c چند است؟",
+        "answer": "11",
         "feedback": "در مخرج‌های برابر فقط صورت‌ها جمع می‌شوند.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "6+2"
+          "expression": "6+5"
         },
         "aliases": [],
         "mistakes": {},
@@ -964,14 +964,14 @@
         "semanticKey": "7:تفریق کسرهای هم‌مخرج",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "در حاصل (6x+2)/(x+1)−(6x−1)/(x+1)=c/(x+1)، c چند است؟",
-        "answer": "3",
+        "prompt": "در حاصل (6x+5)/(x+1)−(6x−1)/(x+1)=c/(x+1)، c چند است؟",
+        "answer": "6",
         "feedback": "علامت منفی را به تمام صورت دوم اعمال کن.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "expand((6*x+2)-(6*x-1))"
+          "expression": "expand((6*x+5)-(6*x-1))"
         },
         "aliases": [],
         "mistakes": {},
@@ -994,14 +994,14 @@
         "semanticKey": "7:ضرب دو کسر سادهٔ جبری",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "برای x≠0، حاصل (6/x)×(x/2) چند است؟",
-        "answer": "3",
+        "prompt": "برای x≠0، حاصل (6/x)×(x/5) چند است؟",
+        "answer": "6/5",
         "feedback": "صورت‌ها و مخرج‌ها ضرب می‌شوند و عامل مشترک x حذف می‌شود.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((6/x)*(x/2))"
+          "expression": "cancel((6/x)*(x/5))"
         },
         "aliases": [],
         "mistakes": {},
@@ -1024,14 +1024,14 @@
         "semanticKey": "7:تقسیم بر کسر و وارون کردن مقسوم‌علیه",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "برای x≠0، حاصل (6/x)÷(2/x) چند است؟",
-        "answer": "3",
+        "prompt": "برای x≠0، حاصل (6/x)÷(5/x) چند است؟",
+        "answer": "6/5",
         "feedback": "کسر نخست را در معکوس کسر دوم ضرب کن.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((6/x)/(2/x))"
+          "expression": "cancel((6/x)/(5/x))"
         },
         "aliases": [],
         "mistakes": {},
@@ -1091,31 +1091,31 @@
         "semanticKey": "7:تشخیص عبارت گویا",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "کدام عبارت، نسبت دو چندجمله‌ای است؟",
-        "answer": "(x²+1)/(x−2)",
+        "prompt": "کدام عبارت نسبت دو چندجمله‌ای است؟",
+        "answer": "(x²+6)/(x−7)",
         "feedback": "در عبارت گویا، صورت و مخرج باید چندجمله‌ای باشند و مخرج چندجمله‌ای صفر نباشد.",
         "type": "mcq",
         "options": [
-          "(x²+1)/(x−2)",
-          "√x/(x+1)",
-          "|x|/(x+1)",
-          "2^x/(x+1)"
+          "(x²+6)/(x−7)",
+          "√x/(x+6)",
+          "|x|/(x+6)",
+          "6^x/(x+1)"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "تشخیص عبارت گویا"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "√x/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند",
-          "|x|/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند",
-          "2^x/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 4,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 4,
+          "canonicalFamily": "f07-01"
+        }
       },
       {
         "id": "f07-easy-v4-q02",
@@ -1223,14 +1223,14 @@
         "semanticKey": "7:حذف عامل مشترک عددی در کسر جبری",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "برای x≠0، مقدار (21x)/(3x) چند است؟",
+        "prompt": "برای x≠0، مقدار (42x)/(6x) چند است؟",
         "answer": "7",
         "feedback": "عامل مشترک ناصفر از صورت و مخرج حذف می‌شود.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((21*x)/(3*x))"
+          "expression": "cancel((42*x)/(6*x))"
         },
         "aliases": [],
         "mistakes": {},
@@ -1292,14 +1292,14 @@
         "semanticKey": "7:جمع کسرهای هم‌مخرج با صورت ثابت",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "در حاصل 7/x+3/x=(c)/x با x≠0، c چند است؟",
-        "answer": "10",
+        "prompt": "در حاصل 7/x+6/x=(c)/x با x≠0، c چند است؟",
+        "answer": "13",
         "feedback": "در مخرج‌های برابر فقط صورت‌ها جمع می‌شوند.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "7+3"
+          "expression": "7+6"
         },
         "aliases": [],
         "mistakes": {},
@@ -1322,14 +1322,14 @@
         "semanticKey": "7:تفریق کسرهای هم‌مخرج",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "در حاصل (7x+3)/(x+1)−(7x−1)/(x+1)=c/(x+1)، c چند است؟",
-        "answer": "4",
+        "prompt": "در حاصل (7x+6)/(x+1)−(7x−1)/(x+1)=c/(x+1)، c چند است؟",
+        "answer": "7",
         "feedback": "علامت منفی را به تمام صورت دوم اعمال کن.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "expand((7*x+3)-(7*x-1))"
+          "expression": "expand((7*x+6)-(7*x-1))"
         },
         "aliases": [],
         "mistakes": {},
@@ -1352,14 +1352,14 @@
         "semanticKey": "7:ضرب دو کسر سادهٔ جبری",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "برای x≠0، حاصل (7/x)×(x/3) چند است؟",
-        "answer": "7/3",
+        "prompt": "برای x≠0، حاصل (7/x)×(x/6) چند است؟",
+        "answer": "7/6",
         "feedback": "صورت‌ها و مخرج‌ها ضرب می‌شوند و عامل مشترک x حذف می‌شود.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((7/x)*(x/3))"
+          "expression": "cancel((7/x)*(x/6))"
         },
         "aliases": [],
         "mistakes": {},
@@ -1382,14 +1382,14 @@
         "semanticKey": "7:تقسیم بر کسر و وارون کردن مقسوم‌علیه",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "برای x≠0، حاصل (7/x)÷(3/x) چند است؟",
-        "answer": "7/3",
+        "prompt": "برای x≠0، حاصل (7/x)÷(6/x) چند است؟",
+        "answer": "7/6",
         "feedback": "کسر نخست را در معکوس کسر دوم ضرب کن.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((7/x)/(3/x))"
+          "expression": "cancel((7/x)/(6/x))"
         },
         "aliases": [],
         "mistakes": {},
@@ -1449,31 +1449,31 @@
         "semanticKey": "7:تشخیص عبارت گویا",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "کدام عبارت، نسبت دو چندجمله‌ای است؟",
-        "answer": "(x²+1)/(x−2)",
+        "prompt": "کدام عبارت نسبت دو چندجمله‌ای است؟",
+        "answer": "(x²+7)/(x−8)",
         "feedback": "در عبارت گویا، صورت و مخرج باید چندجمله‌ای باشند و مخرج چندجمله‌ای صفر نباشد.",
         "type": "mcq",
         "options": [
-          "(x²+1)/(x−2)",
-          "√x/(x+1)",
-          "|x|/(x+1)",
-          "2^x/(x+1)"
+          "(x²+7)/(x−8)",
+          "√x/(x+7)",
+          "|x|/(x+7)",
+          "7^x/(x+1)"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "تشخیص عبارت گویا"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "√x/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند",
-          "|x|/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند",
-          "2^x/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 5,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 5,
+          "canonicalFamily": "f07-01"
+        }
       },
       {
         "id": "f07-easy-v5-q02",
@@ -1581,14 +1581,14 @@
         "semanticKey": "7:حذف عامل مشترک عددی در کسر جبری",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "برای x≠0، مقدار (32x)/(4x) چند است؟",
+        "prompt": "برای x≠0، مقدار (56x)/(7x) چند است؟",
         "answer": "8",
         "feedback": "عامل مشترک ناصفر از صورت و مخرج حذف می‌شود.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((32*x)/(4*x))"
+          "expression": "cancel((56*x)/(7*x))"
         },
         "aliases": [],
         "mistakes": {},
@@ -1650,14 +1650,14 @@
         "semanticKey": "7:جمع کسرهای هم‌مخرج با صورت ثابت",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "در حاصل 8/x+4/x=(c)/x با x≠0، c چند است؟",
-        "answer": "12",
+        "prompt": "در حاصل 8/x+7/x=(c)/x با x≠0، c چند است؟",
+        "answer": "15",
         "feedback": "در مخرج‌های برابر فقط صورت‌ها جمع می‌شوند.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "8+4"
+          "expression": "8+7"
         },
         "aliases": [],
         "mistakes": {},
@@ -1680,14 +1680,14 @@
         "semanticKey": "7:تفریق کسرهای هم‌مخرج",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "در حاصل (8x+4)/(x+1)−(8x−1)/(x+1)=c/(x+1)، c چند است؟",
-        "answer": "5",
+        "prompt": "در حاصل (8x+7)/(x+1)−(8x−1)/(x+1)=c/(x+1)، c چند است؟",
+        "answer": "8",
         "feedback": "علامت منفی را به تمام صورت دوم اعمال کن.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "expand((8*x+4)-(8*x-1))"
+          "expression": "expand((8*x+7)-(8*x-1))"
         },
         "aliases": [],
         "mistakes": {},
@@ -1710,14 +1710,14 @@
         "semanticKey": "7:ضرب دو کسر سادهٔ جبری",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "برای x≠0، حاصل (8/x)×(x/4) چند است؟",
-        "answer": "2",
+        "prompt": "برای x≠0، حاصل (8/x)×(x/7) چند است؟",
+        "answer": "8/7",
         "feedback": "صورت‌ها و مخرج‌ها ضرب می‌شوند و عامل مشترک x حذف می‌شود.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((8/x)*(x/4))"
+          "expression": "cancel((8/x)*(x/7))"
         },
         "aliases": [],
         "mistakes": {},
@@ -1740,14 +1740,14 @@
         "semanticKey": "7:تقسیم بر کسر و وارون کردن مقسوم‌علیه",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "برای x≠0، حاصل (8/x)÷(4/x) چند است؟",
-        "answer": "2",
+        "prompt": "برای x≠0، حاصل (8/x)÷(7/x) چند است؟",
+        "answer": "8/7",
         "feedback": "کسر نخست را در معکوس کسر دوم ضرب کن.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((8/x)/(4/x))"
+          "expression": "cancel((8/x)/(7/x))"
         },
         "aliases": [],
         "mistakes": {},
@@ -1807,31 +1807,31 @@
         "semanticKey": "7:تشخیص عبارت گویا",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "کدام عبارت، نسبت دو چندجمله‌ای است؟",
-        "answer": "(x²+1)/(x−2)",
+        "prompt": "کدام عبارت نسبت دو چندجمله‌ای است؟",
+        "answer": "(x²+8)/(x−9)",
         "feedback": "در عبارت گویا، صورت و مخرج باید چندجمله‌ای باشند و مخرج چندجمله‌ای صفر نباشد.",
         "type": "mcq",
         "options": [
-          "(x²+1)/(x−2)",
-          "√x/(x+1)",
-          "|x|/(x+1)",
-          "2^x/(x+1)"
+          "(x²+8)/(x−9)",
+          "√x/(x+8)",
+          "|x|/(x+8)",
+          "8^x/(x+1)"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "تشخیص عبارت گویا"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "√x/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند",
-          "|x|/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند",
-          "2^x/(x+1)": "گزینهٔ انتخابی شرط «تشخیص عبارت گویا» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 6,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 6,
+          "canonicalFamily": "f07-01"
+        }
       },
       {
         "id": "f07-easy-v6-q02",
@@ -1939,14 +1939,14 @@
         "semanticKey": "7:حذف عامل مشترک عددی در کسر جبری",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "برای x≠0، مقدار (18x)/(2x) چند است؟",
+        "prompt": "برای x≠0، مقدار (72x)/(8x) چند است؟",
         "answer": "9",
         "feedback": "عامل مشترک ناصفر از صورت و مخرج حذف می‌شود.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((18*x)/(2*x))"
+          "expression": "cancel((72*x)/(8*x))"
         },
         "aliases": [],
         "mistakes": {},
@@ -2008,14 +2008,14 @@
         "semanticKey": "7:جمع کسرهای هم‌مخرج با صورت ثابت",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "در حاصل 9/x+2/x=(c)/x با x≠0، c چند است؟",
-        "answer": "11",
+        "prompt": "در حاصل 9/x+8/x=(c)/x با x≠0، c چند است؟",
+        "answer": "17",
         "feedback": "در مخرج‌های برابر فقط صورت‌ها جمع می‌شوند.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "9+2"
+          "expression": "9+8"
         },
         "aliases": [],
         "mistakes": {},
@@ -2038,14 +2038,14 @@
         "semanticKey": "7:تفریق کسرهای هم‌مخرج",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "در حاصل (9x+2)/(x+1)−(9x−1)/(x+1)=c/(x+1)، c چند است؟",
-        "answer": "3",
+        "prompt": "در حاصل (9x+8)/(x+1)−(9x−1)/(x+1)=c/(x+1)، c چند است؟",
+        "answer": "9",
         "feedback": "علامت منفی را به تمام صورت دوم اعمال کن.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "expand((9*x+2)-(9*x-1))"
+          "expression": "expand((9*x+8)-(9*x-1))"
         },
         "aliases": [],
         "mistakes": {},
@@ -2068,14 +2068,14 @@
         "semanticKey": "7:ضرب دو کسر سادهٔ جبری",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "برای x≠0، حاصل (9/x)×(x/2) چند است؟",
-        "answer": "9/2",
+        "prompt": "برای x≠0، حاصل (9/x)×(x/8) چند است؟",
+        "answer": "9/8",
         "feedback": "صورت‌ها و مخرج‌ها ضرب می‌شوند و عامل مشترک x حذف می‌شود.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((9/x)*(x/2))"
+          "expression": "cancel((9/x)*(x/8))"
         },
         "aliases": [],
         "mistakes": {},
@@ -2098,14 +2098,14 @@
         "semanticKey": "7:تقسیم بر کسر و وارون کردن مقسوم‌علیه",
         "level": 1,
         "difficulty": "آسان",
-        "prompt": "برای x≠0، حاصل (9/x)÷(2/x) چند است؟",
-        "answer": "9/2",
+        "prompt": "برای x≠0، حاصل (9/x)÷(8/x) چند است؟",
+        "answer": "9/8",
         "feedback": "کسر نخست را در معکوس کسر دوم ضرب کن.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((9/x)/(2/x))"
+          "expression": "cancel((9/x)/(8/x))"
         },
         "aliases": [],
         "mistakes": {},
@@ -2199,7 +2199,7 @@
         "semanticKey": "7:ساده‌سازی تفاضل مربع‌ها",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "برای x≠±4، ساده‌شدهٔ (x²−16)/(x−4) کدام است؟",
+        "prompt": "برای x≠4، ساده‌شدهٔ (x²−16)/(x−4) کدام است؟",
         "answer": "x+4",
         "feedback": "صورت را به دو مزدوج تجزیه و عامل x−a را حذف کن.",
         "type": "mcq",
@@ -2319,31 +2319,31 @@
         "semanticKey": "7:عامل در برابر جملهٔ قابل حذف",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "کدام ساده‌سازی برای x≠0 درست است؟",
-        "answer": "(x²+x)/x=x+1",
+        "prompt": "برای x≠0، ساده‌سازی (x²+3x)/x کدام است؟",
+        "answer": "x+3",
         "feedback": "حذف، روی عامل مشترکِ کل صورت و مخرج مجاز است؛ جمله‌ای از یک جمع را تنها حذف نکن.",
         "type": "mcq",
         "options": [
-          "(x²+x)/x=x+1",
-          "(x+1)/x=1+1",
-          "(x+2)/x=2",
-          "(x²+1)/x=x+1"
+          "x+3",
+          "x²+3",
+          "x+3x",
+          "4x"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "عامل در برابر جملهٔ قابل حذف"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "(x+1)/x=1+1": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند",
-          "(x+2)/x=2": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند",
-          "(x²+1)/x=x+1": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 1,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 1,
+          "canonicalFamily": "f07-16"
+        }
       },
       {
         "id": "f07-medium-v1-q06",
@@ -2553,31 +2553,31 @@
         "semanticKey": "7:درجهٔ باقی‌مانده",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "اگر مقسوم‌علیه درجهٔ دو باشد، کدام عبارت نمی‌تواند باقی‌ماندهٔ تقسیم استاندارد باشد؟",
-        "answer": "x²+1",
+        "prompt": "در تقسیم بر x²+3، کدام عبارت نمی‌تواند باقی‌ماندهٔ استاندارد باشد؟",
+        "answer": "x²+4",
         "feedback": "باقی‌مانده باید صفر یا درجه‌ای کمتر از درجهٔ مقسوم‌علیه داشته باشد.",
         "type": "mcq",
         "options": [
-          "x²+1",
-          "0",
-          "x+1",
-          "−3"
+          "x²+4",
+          "x+3",
+          "3",
+          "0"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "درجهٔ باقی‌مانده"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "0": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند",
-          "x+1": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند",
-          "−3": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 1,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 1,
+          "canonicalFamily": "f07-23"
+        }
       }
     ]
   },
@@ -2632,7 +2632,7 @@
         "semanticKey": "7:ساده‌سازی تفاضل مربع‌ها",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "برای x≠±5، ساده‌شدهٔ (x²−25)/(x−5) کدام است؟",
+        "prompt": "برای x≠5، ساده‌شدهٔ (x²−25)/(x−5) کدام است؟",
         "answer": "x+5",
         "feedback": "صورت را به دو مزدوج تجزیه و عامل x−a را حذف کن.",
         "type": "mcq",
@@ -2752,31 +2752,31 @@
         "semanticKey": "7:عامل در برابر جملهٔ قابل حذف",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "کدام ساده‌سازی برای x≠0 درست است؟",
-        "answer": "(x²+x)/x=x+1",
+        "prompt": "برای x≠0، ساده‌سازی (x²+4x)/x کدام است؟",
+        "answer": "x+4",
         "feedback": "حذف، روی عامل مشترکِ کل صورت و مخرج مجاز است؛ جمله‌ای از یک جمع را تنها حذف نکن.",
         "type": "mcq",
         "options": [
-          "(x²+x)/x=x+1",
-          "(x+1)/x=1+1",
-          "(x+2)/x=2",
-          "(x²+1)/x=x+1"
+          "x+4",
+          "x²+4",
+          "x+4x",
+          "5x"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "عامل در برابر جملهٔ قابل حذف"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "(x+1)/x=1+1": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند",
-          "(x+2)/x=2": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند",
-          "(x²+1)/x=x+1": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 2,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 2,
+          "canonicalFamily": "f07-16"
+        }
       },
       {
         "id": "f07-medium-v2-q06",
@@ -2986,31 +2986,31 @@
         "semanticKey": "7:درجهٔ باقی‌مانده",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "اگر مقسوم‌علیه درجهٔ دو باشد، کدام عبارت نمی‌تواند باقی‌ماندهٔ تقسیم استاندارد باشد؟",
-        "answer": "x²+1",
+        "prompt": "در تقسیم بر x²+4، کدام عبارت نمی‌تواند باقی‌ماندهٔ استاندارد باشد؟",
+        "answer": "x²+5",
         "feedback": "باقی‌مانده باید صفر یا درجه‌ای کمتر از درجهٔ مقسوم‌علیه داشته باشد.",
         "type": "mcq",
         "options": [
-          "x²+1",
-          "0",
-          "x+1",
-          "−3"
+          "x²+5",
+          "x+4",
+          "4",
+          "0"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "درجهٔ باقی‌مانده"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "0": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند",
-          "x+1": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند",
-          "−3": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 2,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 2,
+          "canonicalFamily": "f07-23"
+        }
       }
     ]
   },
@@ -3065,7 +3065,7 @@
         "semanticKey": "7:ساده‌سازی تفاضل مربع‌ها",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "برای x≠±6، ساده‌شدهٔ (x²−36)/(x−6) کدام است؟",
+        "prompt": "برای x≠6، ساده‌شدهٔ (x²−36)/(x−6) کدام است؟",
         "answer": "x+6",
         "feedback": "صورت را به دو مزدوج تجزیه و عامل x−a را حذف کن.",
         "type": "mcq",
@@ -3185,31 +3185,31 @@
         "semanticKey": "7:عامل در برابر جملهٔ قابل حذف",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "کدام ساده‌سازی برای x≠0 درست است؟",
-        "answer": "(x²+x)/x=x+1",
+        "prompt": "برای x≠0، ساده‌سازی (x²+5x)/x کدام است؟",
+        "answer": "x+5",
         "feedback": "حذف، روی عامل مشترکِ کل صورت و مخرج مجاز است؛ جمله‌ای از یک جمع را تنها حذف نکن.",
         "type": "mcq",
         "options": [
-          "(x²+x)/x=x+1",
-          "(x+1)/x=1+1",
-          "(x+2)/x=2",
-          "(x²+1)/x=x+1"
+          "x+5",
+          "x²+5",
+          "x+5x",
+          "6x"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "عامل در برابر جملهٔ قابل حذف"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "(x+1)/x=1+1": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند",
-          "(x+2)/x=2": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند",
-          "(x²+1)/x=x+1": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 3,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 3,
+          "canonicalFamily": "f07-16"
+        }
       },
       {
         "id": "f07-medium-v3-q06",
@@ -3224,14 +3224,14 @@
         "semanticKey": "7:جمع با مخرج‌های متناسب",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "برای x≠0، حاصل 1/x+1/(2x) را به صورت c/x می‌نویسیم؛ c چند است؟",
-        "answer": "3/2",
+        "prompt": "برای x≠0، حاصل 1/x+1/(5x) را به صورت c/x می‌نویسیم؛ c چند است؟",
+        "answer": "6/5",
         "feedback": "مخرج مشترک kx است؛ صورت کسر اول هم باید در k ضرب شود.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((1/x+1/(2*x))*x)"
+          "expression": "cancel((1/x+1/(5*x))*x)"
         },
         "aliases": [],
         "mistakes": {},
@@ -3284,31 +3284,31 @@
         "semanticKey": "7:تقسیم دو عبارت گویا",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "برای مقدارهای مجاز، حاصل [(x+6)/(x−1)]÷[(2)/(x−1)] کدام است؟",
-        "answer": "(x+6)/2",
+        "prompt": "برای مقدارهای مجاز، حاصل [(x+6)/(x−1)]÷[(5)/(x−1)] کدام است؟",
+        "answer": "(x+6)/5",
         "feedback": "کسر دوم را وارونه و سپس عامل مشترک را حذف کن.",
         "type": "mcq",
         "options": [
-          "(x+6)/2",
-          "2/(x+6)",
+          "(x+6)/5",
+          "5/(x+6)",
           "(x+6)/(x−1)",
-          "2"
+          "5"
         ],
         "check": {
           "kind": "expression-options",
-          "expression": "((x+6)/(x-1))/(2/(x-1))",
+          "expression": "((x+6)/(x-1))/(5/(x-1))",
           "options": [
-            "(x+6)/2",
-            "2/(x+6)",
+            "(x+6)/5",
+            "5/(x+6)",
             "(x+6)/(x-1)",
-            "2"
+            "5"
           ]
         },
         "aliases": [],
         "mistakes": {
-          "2/(x+6)": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند",
+          "5/(x+6)": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند",
           "(x+6)/(x−1)": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند",
-          "2": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند"
+          "5": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند"
         },
         "diagram": null,
         "rubric": [],
@@ -3329,14 +3329,14 @@
         "semanticKey": "7:تقسیم چندجمله‌ای بر تک‌جمله‌ای",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "در حاصل (6x³+2x²)/x با x≠0، ضریب x چند است؟",
-        "answer": "2",
+        "prompt": "در حاصل (6x³+5x²)/x با x≠0، ضریب x چند است؟",
+        "answer": "5",
         "feedback": "هر جملهٔ صورت را جدا بر تک‌جمله‌ای مخرج تقسیم کن.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((6*x**3+2*x**2)/x).coeff(x)"
+          "expression": "cancel((6*x**3+5*x**2)/x).coeff(x)"
         },
         "aliases": [],
         "mistakes": {},
@@ -3419,31 +3419,31 @@
         "semanticKey": "7:درجهٔ باقی‌مانده",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "اگر مقسوم‌علیه درجهٔ دو باشد، کدام عبارت نمی‌تواند باقی‌ماندهٔ تقسیم استاندارد باشد؟",
-        "answer": "x²+1",
+        "prompt": "در تقسیم بر x²+5، کدام عبارت نمی‌تواند باقی‌ماندهٔ استاندارد باشد؟",
+        "answer": "x²+6",
         "feedback": "باقی‌مانده باید صفر یا درجه‌ای کمتر از درجهٔ مقسوم‌علیه داشته باشد.",
         "type": "mcq",
         "options": [
-          "x²+1",
-          "0",
-          "x+1",
-          "−3"
+          "x²+6",
+          "x+5",
+          "5",
+          "0"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "درجهٔ باقی‌مانده"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "0": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند",
-          "x+1": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند",
-          "−3": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 3,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 3,
+          "canonicalFamily": "f07-23"
+        }
       }
     ]
   },
@@ -3498,7 +3498,7 @@
         "semanticKey": "7:ساده‌سازی تفاضل مربع‌ها",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "برای x≠±7، ساده‌شدهٔ (x²−49)/(x−7) کدام است؟",
+        "prompt": "برای x≠7، ساده‌شدهٔ (x²−49)/(x−7) کدام است؟",
         "answer": "x+7",
         "feedback": "صورت را به دو مزدوج تجزیه و عامل x−a را حذف کن.",
         "type": "mcq",
@@ -3618,31 +3618,31 @@
         "semanticKey": "7:عامل در برابر جملهٔ قابل حذف",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "کدام ساده‌سازی برای x≠0 درست است؟",
-        "answer": "(x²+x)/x=x+1",
+        "prompt": "برای x≠0، ساده‌سازی (x²+6x)/x کدام است؟",
+        "answer": "x+6",
         "feedback": "حذف، روی عامل مشترکِ کل صورت و مخرج مجاز است؛ جمله‌ای از یک جمع را تنها حذف نکن.",
         "type": "mcq",
         "options": [
-          "(x²+x)/x=x+1",
-          "(x+1)/x=1+1",
-          "(x+2)/x=2",
-          "(x²+1)/x=x+1"
+          "x+6",
+          "x²+6",
+          "x+6x",
+          "7x"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "عامل در برابر جملهٔ قابل حذف"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "(x+1)/x=1+1": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند",
-          "(x+2)/x=2": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند",
-          "(x²+1)/x=x+1": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 4,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 4,
+          "canonicalFamily": "f07-16"
+        }
       },
       {
         "id": "f07-medium-v4-q06",
@@ -3657,14 +3657,14 @@
         "semanticKey": "7:جمع با مخرج‌های متناسب",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "برای x≠0، حاصل 1/x+1/(3x) را به صورت c/x می‌نویسیم؛ c چند است؟",
-        "answer": "4/3",
+        "prompt": "برای x≠0، حاصل 1/x+1/(6x) را به صورت c/x می‌نویسیم؛ c چند است؟",
+        "answer": "7/6",
         "feedback": "مخرج مشترک kx است؛ صورت کسر اول هم باید در k ضرب شود.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((1/x+1/(3*x))*x)"
+          "expression": "cancel((1/x+1/(6*x))*x)"
         },
         "aliases": [],
         "mistakes": {},
@@ -3717,31 +3717,31 @@
         "semanticKey": "7:تقسیم دو عبارت گویا",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "برای مقدارهای مجاز، حاصل [(x+7)/(x−1)]÷[(3)/(x−1)] کدام است؟",
-        "answer": "(x+7)/3",
+        "prompt": "برای مقدارهای مجاز، حاصل [(x+7)/(x−1)]÷[(6)/(x−1)] کدام است؟",
+        "answer": "(x+7)/6",
         "feedback": "کسر دوم را وارونه و سپس عامل مشترک را حذف کن.",
         "type": "mcq",
         "options": [
-          "(x+7)/3",
-          "3/(x+7)",
+          "(x+7)/6",
+          "6/(x+7)",
           "(x+7)/(x−1)",
-          "3"
+          "6"
         ],
         "check": {
           "kind": "expression-options",
-          "expression": "((x+7)/(x-1))/(3/(x-1))",
+          "expression": "((x+7)/(x-1))/(6/(x-1))",
           "options": [
-            "(x+7)/3",
-            "3/(x+7)",
+            "(x+7)/6",
+            "6/(x+7)",
             "(x+7)/(x-1)",
-            "3"
+            "6"
           ]
         },
         "aliases": [],
         "mistakes": {
-          "3/(x+7)": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند",
+          "6/(x+7)": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند",
           "(x+7)/(x−1)": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند",
-          "3": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند"
+          "6": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند"
         },
         "diagram": null,
         "rubric": [],
@@ -3762,14 +3762,14 @@
         "semanticKey": "7:تقسیم چندجمله‌ای بر تک‌جمله‌ای",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "در حاصل (7x³+3x²)/x با x≠0، ضریب x چند است؟",
-        "answer": "3",
+        "prompt": "در حاصل (7x³+6x²)/x با x≠0، ضریب x چند است؟",
+        "answer": "6",
         "feedback": "هر جملهٔ صورت را جدا بر تک‌جمله‌ای مخرج تقسیم کن.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((7*x**3+3*x**2)/x).coeff(x)"
+          "expression": "cancel((7*x**3+6*x**2)/x).coeff(x)"
         },
         "aliases": [],
         "mistakes": {},
@@ -3852,31 +3852,31 @@
         "semanticKey": "7:درجهٔ باقی‌مانده",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "اگر مقسوم‌علیه درجهٔ دو باشد، کدام عبارت نمی‌تواند باقی‌ماندهٔ تقسیم استاندارد باشد؟",
-        "answer": "x²+1",
+        "prompt": "در تقسیم بر x²+6، کدام عبارت نمی‌تواند باقی‌ماندهٔ استاندارد باشد؟",
+        "answer": "x²+7",
         "feedback": "باقی‌مانده باید صفر یا درجه‌ای کمتر از درجهٔ مقسوم‌علیه داشته باشد.",
         "type": "mcq",
         "options": [
-          "x²+1",
-          "0",
-          "x+1",
-          "−3"
+          "x²+7",
+          "x+6",
+          "6",
+          "0"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "درجهٔ باقی‌مانده"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "0": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند",
-          "x+1": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند",
-          "−3": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 4,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 4,
+          "canonicalFamily": "f07-23"
+        }
       }
     ]
   },
@@ -3931,7 +3931,7 @@
         "semanticKey": "7:ساده‌سازی تفاضل مربع‌ها",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "برای x≠±8، ساده‌شدهٔ (x²−64)/(x−8) کدام است؟",
+        "prompt": "برای x≠8، ساده‌شدهٔ (x²−64)/(x−8) کدام است؟",
         "answer": "x+8",
         "feedback": "صورت را به دو مزدوج تجزیه و عامل x−a را حذف کن.",
         "type": "mcq",
@@ -4051,31 +4051,31 @@
         "semanticKey": "7:عامل در برابر جملهٔ قابل حذف",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "کدام ساده‌سازی برای x≠0 درست است؟",
-        "answer": "(x²+x)/x=x+1",
+        "prompt": "برای x≠0، ساده‌سازی (x²+7x)/x کدام است؟",
+        "answer": "x+7",
         "feedback": "حذف، روی عامل مشترکِ کل صورت و مخرج مجاز است؛ جمله‌ای از یک جمع را تنها حذف نکن.",
         "type": "mcq",
         "options": [
-          "(x²+x)/x=x+1",
-          "(x+1)/x=1+1",
-          "(x+2)/x=2",
-          "(x²+1)/x=x+1"
+          "x+7",
+          "x²+7",
+          "x+7x",
+          "8x"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "عامل در برابر جملهٔ قابل حذف"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "(x+1)/x=1+1": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند",
-          "(x+2)/x=2": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند",
-          "(x²+1)/x=x+1": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 5,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 5,
+          "canonicalFamily": "f07-16"
+        }
       },
       {
         "id": "f07-medium-v5-q06",
@@ -4090,14 +4090,14 @@
         "semanticKey": "7:جمع با مخرج‌های متناسب",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "برای x≠0، حاصل 1/x+1/(4x) را به صورت c/x می‌نویسیم؛ c چند است؟",
-        "answer": "5/4",
+        "prompt": "برای x≠0، حاصل 1/x+1/(7x) را به صورت c/x می‌نویسیم؛ c چند است؟",
+        "answer": "8/7",
         "feedback": "مخرج مشترک kx است؛ صورت کسر اول هم باید در k ضرب شود.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((1/x+1/(4*x))*x)"
+          "expression": "cancel((1/x+1/(7*x))*x)"
         },
         "aliases": [],
         "mistakes": {},
@@ -4150,31 +4150,31 @@
         "semanticKey": "7:تقسیم دو عبارت گویا",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "برای مقدارهای مجاز، حاصل [(x+8)/(x−1)]÷[(4)/(x−1)] کدام است؟",
-        "answer": "(x+8)/4",
+        "prompt": "برای مقدارهای مجاز، حاصل [(x+8)/(x−1)]÷[(7)/(x−1)] کدام است؟",
+        "answer": "(x+8)/7",
         "feedback": "کسر دوم را وارونه و سپس عامل مشترک را حذف کن.",
         "type": "mcq",
         "options": [
-          "(x+8)/4",
-          "4/(x+8)",
+          "(x+8)/7",
+          "7/(x+8)",
           "(x+8)/(x−1)",
-          "4"
+          "7"
         ],
         "check": {
           "kind": "expression-options",
-          "expression": "((x+8)/(x-1))/(4/(x-1))",
+          "expression": "((x+8)/(x-1))/(7/(x-1))",
           "options": [
-            "(x+8)/4",
-            "4/(x+8)",
+            "(x+8)/7",
+            "7/(x+8)",
             "(x+8)/(x-1)",
-            "4"
+            "7"
           ]
         },
         "aliases": [],
         "mistakes": {
-          "4/(x+8)": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند",
+          "7/(x+8)": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند",
           "(x+8)/(x−1)": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند",
-          "4": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند"
+          "7": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند"
         },
         "diagram": null,
         "rubric": [],
@@ -4195,14 +4195,14 @@
         "semanticKey": "7:تقسیم چندجمله‌ای بر تک‌جمله‌ای",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "در حاصل (8x³+4x²)/x با x≠0، ضریب x چند است؟",
-        "answer": "4",
+        "prompt": "در حاصل (8x³+7x²)/x با x≠0، ضریب x چند است؟",
+        "answer": "7",
         "feedback": "هر جملهٔ صورت را جدا بر تک‌جمله‌ای مخرج تقسیم کن.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((8*x**3+4*x**2)/x).coeff(x)"
+          "expression": "cancel((8*x**3+7*x**2)/x).coeff(x)"
         },
         "aliases": [],
         "mistakes": {},
@@ -4285,31 +4285,31 @@
         "semanticKey": "7:درجهٔ باقی‌مانده",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "اگر مقسوم‌علیه درجهٔ دو باشد، کدام عبارت نمی‌تواند باقی‌ماندهٔ تقسیم استاندارد باشد؟",
-        "answer": "x²+1",
+        "prompt": "در تقسیم بر x²+7، کدام عبارت نمی‌تواند باقی‌ماندهٔ استاندارد باشد؟",
+        "answer": "x²+8",
         "feedback": "باقی‌مانده باید صفر یا درجه‌ای کمتر از درجهٔ مقسوم‌علیه داشته باشد.",
         "type": "mcq",
         "options": [
-          "x²+1",
-          "0",
-          "x+1",
-          "−3"
+          "x²+8",
+          "x+7",
+          "7",
+          "0"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "درجهٔ باقی‌مانده"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "0": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند",
-          "x+1": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند",
-          "−3": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 5,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 5,
+          "canonicalFamily": "f07-23"
+        }
       }
     ]
   },
@@ -4364,7 +4364,7 @@
         "semanticKey": "7:ساده‌سازی تفاضل مربع‌ها",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "برای x≠±9، ساده‌شدهٔ (x²−81)/(x−9) کدام است؟",
+        "prompt": "برای x≠9، ساده‌شدهٔ (x²−81)/(x−9) کدام است؟",
         "answer": "x+9",
         "feedback": "صورت را به دو مزدوج تجزیه و عامل x−a را حذف کن.",
         "type": "mcq",
@@ -4484,31 +4484,31 @@
         "semanticKey": "7:عامل در برابر جملهٔ قابل حذف",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "کدام ساده‌سازی برای x≠0 درست است؟",
-        "answer": "(x²+x)/x=x+1",
+        "prompt": "برای x≠0، ساده‌سازی (x²+8x)/x کدام است؟",
+        "answer": "x+8",
         "feedback": "حذف، روی عامل مشترکِ کل صورت و مخرج مجاز است؛ جمله‌ای از یک جمع را تنها حذف نکن.",
         "type": "mcq",
         "options": [
-          "(x²+x)/x=x+1",
-          "(x+1)/x=1+1",
-          "(x+2)/x=2",
-          "(x²+1)/x=x+1"
+          "x+8",
+          "x²+8",
+          "x+8x",
+          "9x"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "عامل در برابر جملهٔ قابل حذف"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "(x+1)/x=1+1": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند",
-          "(x+2)/x=2": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند",
-          "(x²+1)/x=x+1": "گزینهٔ انتخابی شرط «عامل در برابر جملهٔ قابل حذف» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 6,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 6,
+          "canonicalFamily": "f07-16"
+        }
       },
       {
         "id": "f07-medium-v6-q06",
@@ -4523,14 +4523,14 @@
         "semanticKey": "7:جمع با مخرج‌های متناسب",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "برای x≠0، حاصل 1/x+1/(2x) را به صورت c/x می‌نویسیم؛ c چند است؟",
-        "answer": "3/2",
+        "prompt": "برای x≠0، حاصل 1/x+1/(8x) را به صورت c/x می‌نویسیم؛ c چند است؟",
+        "answer": "9/8",
         "feedback": "مخرج مشترک kx است؛ صورت کسر اول هم باید در k ضرب شود.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((1/x+1/(2*x))*x)"
+          "expression": "cancel((1/x+1/(8*x))*x)"
         },
         "aliases": [],
         "mistakes": {},
@@ -4583,31 +4583,31 @@
         "semanticKey": "7:تقسیم دو عبارت گویا",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "برای مقدارهای مجاز، حاصل [(x+9)/(x−1)]÷[(2)/(x−1)] کدام است؟",
-        "answer": "(x+9)/2",
+        "prompt": "برای مقدارهای مجاز، حاصل [(x+9)/(x−1)]÷[(8)/(x−1)] کدام است؟",
+        "answer": "(x+9)/8",
         "feedback": "کسر دوم را وارونه و سپس عامل مشترک را حذف کن.",
         "type": "mcq",
         "options": [
-          "(x+9)/2",
-          "2/(x+9)",
+          "(x+9)/8",
+          "8/(x+9)",
           "(x+9)/(x−1)",
-          "2"
+          "8"
         ],
         "check": {
           "kind": "expression-options",
-          "expression": "((x+9)/(x-1))/(2/(x-1))",
+          "expression": "((x+9)/(x-1))/(8/(x-1))",
           "options": [
-            "(x+9)/2",
-            "2/(x+9)",
+            "(x+9)/8",
+            "8/(x+9)",
             "(x+9)/(x-1)",
-            "2"
+            "8"
           ]
         },
         "aliases": [],
         "mistakes": {
-          "2/(x+9)": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند",
+          "8/(x+9)": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند",
           "(x+9)/(x−1)": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند",
-          "2": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند"
+          "8": "گزینهٔ انتخابی شرط «تقسیم دو عبارت گویا» را رعایت نمی‌کند"
         },
         "diagram": null,
         "rubric": [],
@@ -4628,14 +4628,14 @@
         "semanticKey": "7:تقسیم چندجمله‌ای بر تک‌جمله‌ای",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "در حاصل (9x³+2x²)/x با x≠0، ضریب x چند است؟",
-        "answer": "2",
+        "prompt": "در حاصل (9x³+8x²)/x با x≠0، ضریب x چند است؟",
+        "answer": "8",
         "feedback": "هر جملهٔ صورت را جدا بر تک‌جمله‌ای مخرج تقسیم کن.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "cancel((9*x**3+2*x**2)/x).coeff(x)"
+          "expression": "cancel((9*x**3+8*x**2)/x).coeff(x)"
         },
         "aliases": [],
         "mistakes": {},
@@ -4718,31 +4718,31 @@
         "semanticKey": "7:درجهٔ باقی‌مانده",
         "level": 2,
         "difficulty": "متوسط",
-        "prompt": "اگر مقسوم‌علیه درجهٔ دو باشد، کدام عبارت نمی‌تواند باقی‌ماندهٔ تقسیم استاندارد باشد؟",
-        "answer": "x²+1",
+        "prompt": "در تقسیم بر x²+8، کدام عبارت نمی‌تواند باقی‌ماندهٔ استاندارد باشد؟",
+        "answer": "x²+9",
         "feedback": "باقی‌مانده باید صفر یا درجه‌ای کمتر از درجهٔ مقسوم‌علیه داشته باشد.",
         "type": "mcq",
         "options": [
-          "x²+1",
-          "0",
-          "x+1",
-          "−3"
+          "x²+9",
+          "x+8",
+          "8",
+          "0"
         ],
         "check": {
-          "kind": "reviewed-fact",
-          "fact": "درجهٔ باقی‌مانده"
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "0": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند",
-          "x+1": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند",
-          "−3": "گزینهٔ انتخابی شرط «درجهٔ باقی‌مانده» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 6,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 6,
+          "canonicalFamily": "f07-23"
+        }
       }
     ],
     "menu": "<section class=\"level-card\"><h2>متوسط</h2><p>تمرین مستقل همین فصل؛ پاسخ‌ها تا پایان قابل ویرایش‌اند.</p><div class=\"exam-links\"><a href=\"TAB05-medium-01.html\">آزمون 1</a><a href=\"TAB05-medium-02.html\">آزمون 2</a><a href=\"TAB05-medium-03.html\">آزمون 3</a><a href=\"TAB05-medium-04.html\">آزمون 4</a><a href=\"TAB05-medium-05.html\">آزمون 5</a><a href=\"TAB05-medium-06.html\">آزمون 6</a></div></section>"
@@ -4922,37 +4922,31 @@
         "semanticKey": "7:کسر مرکب با صورت جمع",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "برای x≠0 و x≠−1، حاصل (1+1/x)/(1/x) کدام است؟",
-        "answer": "x+1",
+        "prompt": "برای x≠0، حاصل (3+1/x)/(1/x) چیست؟",
+        "answer": "3x+1",
         "feedback": "صورت و مخرج کسر بزرگ را در x ضرب کن؛ صورت به x+1 و مخرج به یک تبدیل می‌شود.",
         "type": "mcq",
         "options": [
-          "x+1",
-          "1+1/x",
-          "x",
-          "1/(x+1)"
+          "3x+1",
+          "3+1",
+          "3/x+1",
+          "(3+1)/x"
         ],
         "check": {
-          "kind": "expression-options",
-          "expression": "(1+1/x)/(1/x)",
-          "options": [
-            "x+1",
-            "1+1/x",
-            "x",
-            "1/(x+1)"
-          ]
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "1+1/x": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند",
-          "x": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند",
-          "1/(x+1)": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 1,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 1,
+          "canonicalFamily": "f07-28"
+        }
       },
       {
         "id": "f07-hard-v1-q06",
@@ -5328,37 +5322,31 @@
         "semanticKey": "7:کسر مرکب با صورت جمع",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "برای x≠0 و x≠−1، حاصل (1+1/x)/(1/x) کدام است؟",
-        "answer": "x+1",
+        "prompt": "برای x≠0، حاصل (4+1/x)/(1/x) چیست؟",
+        "answer": "4x+1",
         "feedback": "صورت و مخرج کسر بزرگ را در x ضرب کن؛ صورت به x+1 و مخرج به یک تبدیل می‌شود.",
         "type": "mcq",
         "options": [
-          "x+1",
-          "1+1/x",
-          "x",
-          "1/(x+1)"
+          "4x+1",
+          "4+1",
+          "4/x+1",
+          "(4+1)/x"
         ],
         "check": {
-          "kind": "expression-options",
-          "expression": "(1+1/x)/(1/x)",
-          "options": [
-            "x+1",
-            "1+1/x",
-            "x",
-            "1/(x+1)"
-          ]
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "1+1/x": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند",
-          "x": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند",
-          "1/(x+1)": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 2,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 2,
+          "canonicalFamily": "f07-28"
+        }
       },
       {
         "id": "f07-hard-v2-q06",
@@ -5610,8 +5598,8 @@
         "semanticKey": "7:دامنهٔ تقسیم عبارت گویا",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "در عبارت [1/(x−6)]÷[(x+2)/(x−1)]، همهٔ مقدارهای ممنوع x را بنویس.",
-        "answer": "{-2, 1, 6}",
+        "prompt": "در عبارت [1/(x−6)]÷[(x+5)/(x−1)]، همهٔ مقدارهای ممنوع x را بنویس.",
+        "answer": "{-5, 1, 6}",
         "feedback": "مخرج‌های اولیه نباید صفر شوند و خود مقسوم‌علیه هم نباید صفر باشد.",
         "type": "set",
         "options": [],
@@ -5620,7 +5608,7 @@
           "expressions": [
             "6",
             "1",
-            "-2"
+            "-5"
           ]
         },
         "aliases": [],
@@ -5734,37 +5722,31 @@
         "semanticKey": "7:کسر مرکب با صورت جمع",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "برای x≠0 و x≠−1، حاصل (1+1/x)/(1/x) کدام است؟",
-        "answer": "x+1",
+        "prompt": "برای x≠0، حاصل (5+1/x)/(1/x) چیست؟",
+        "answer": "5x+1",
         "feedback": "صورت و مخرج کسر بزرگ را در x ضرب کن؛ صورت به x+1 و مخرج به یک تبدیل می‌شود.",
         "type": "mcq",
         "options": [
-          "x+1",
-          "1+1/x",
-          "x",
-          "1/(x+1)"
+          "5x+1",
+          "5+1",
+          "5/x+1",
+          "(5+1)/x"
         ],
         "check": {
-          "kind": "expression-options",
-          "expression": "(1+1/x)/(1/x)",
-          "options": [
-            "x+1",
-            "1+1/x",
-            "x",
-            "1/(x+1)"
-          ]
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "1+1/x": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند",
-          "x": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند",
-          "1/(x+1)": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 3,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 3,
+          "canonicalFamily": "f07-28"
+        }
       },
       {
         "id": "f07-hard-v3-q06",
@@ -5824,14 +5806,14 @@
         "semanticKey": "7:ضریب خارج‌قسمت تقسیم چندجمله‌ای",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "در تقسیم x³+6x²+2x+1 بر x+1، ضریب x در خارج‌قسمت چند است؟",
+        "prompt": "در تقسیم x³+6x²+5x+1 بر x+1، ضریب x در خارج‌قسمت چند است؟",
         "answer": "5",
         "feedback": "در تقسیم طولانی، بعد از هر ضرب تمام مقسوم‌علیه را کم کن و علامت‌ها را تغییر بده.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "div(x**3+6*x**2+2*x+1,x+1,x)[0].coeff(x)"
+          "expression": "div(x**3+6*x**2+5*x+1,x+1,x)[0].coeff(x)"
         },
         "aliases": [],
         "mistakes": {},
@@ -5854,14 +5836,14 @@
         "semanticKey": "7:رابطهٔ درستی تقسیم",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "اگر مقسوم‌علیه x−6، خارج‌قسمت x+2 و باقی‌مانده 2 باشد، مقدار مقسوم در x=6 چند است؟",
+        "prompt": "اگر مقسوم‌علیه x−6، خارج‌قسمت x+5 و باقی‌مانده 2 باشد، مقدار مقسوم در x=6 چند است؟",
         "answer": "2",
         "feedback": "در رابطهٔ مقسوم=مقسوم‌علیه×خارج‌قسمت+باقی‌مانده، عامل اول در x=a صفر می‌شود.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "((6-6)*(6+2)+2)"
+          "expression": "((6-6)*(6+5)+2)"
         },
         "aliases": [],
         "mistakes": {},
@@ -6016,8 +5998,8 @@
         "semanticKey": "7:دامنهٔ تقسیم عبارت گویا",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "در عبارت [1/(x−7)]÷[(x+3)/(x−1)]، همهٔ مقدارهای ممنوع x را بنویس.",
-        "answer": "{-3, 1, 7}",
+        "prompt": "در عبارت [1/(x−7)]÷[(x+6)/(x−1)]، همهٔ مقدارهای ممنوع x را بنویس.",
+        "answer": "{-6, 1, 7}",
         "feedback": "مخرج‌های اولیه نباید صفر شوند و خود مقسوم‌علیه هم نباید صفر باشد.",
         "type": "set",
         "options": [],
@@ -6026,7 +6008,7 @@
           "expressions": [
             "7",
             "1",
-            "-3"
+            "-6"
           ]
         },
         "aliases": [],
@@ -6140,37 +6122,31 @@
         "semanticKey": "7:کسر مرکب با صورت جمع",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "برای x≠0 و x≠−1، حاصل (1+1/x)/(1/x) کدام است؟",
-        "answer": "x+1",
+        "prompt": "برای x≠0، حاصل (6+1/x)/(1/x) چیست؟",
+        "answer": "6x+1",
         "feedback": "صورت و مخرج کسر بزرگ را در x ضرب کن؛ صورت به x+1 و مخرج به یک تبدیل می‌شود.",
         "type": "mcq",
         "options": [
-          "x+1",
-          "1+1/x",
-          "x",
-          "1/(x+1)"
+          "6x+1",
+          "6+1",
+          "6/x+1",
+          "(6+1)/x"
         ],
         "check": {
-          "kind": "expression-options",
-          "expression": "(1+1/x)/(1/x)",
-          "options": [
-            "x+1",
-            "1+1/x",
-            "x",
-            "1/(x+1)"
-          ]
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "1+1/x": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند",
-          "x": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند",
-          "1/(x+1)": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 4,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 4,
+          "canonicalFamily": "f07-28"
+        }
       },
       {
         "id": "f07-hard-v4-q06",
@@ -6230,14 +6206,14 @@
         "semanticKey": "7:ضریب خارج‌قسمت تقسیم چندجمله‌ای",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "در تقسیم x³+7x²+3x+1 بر x+1، ضریب x در خارج‌قسمت چند است؟",
+        "prompt": "در تقسیم x³+7x²+6x+1 بر x+1، ضریب x در خارج‌قسمت چند است؟",
         "answer": "6",
         "feedback": "در تقسیم طولانی، بعد از هر ضرب تمام مقسوم‌علیه را کم کن و علامت‌ها را تغییر بده.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "div(x**3+7*x**2+3*x+1,x+1,x)[0].coeff(x)"
+          "expression": "div(x**3+7*x**2+6*x+1,x+1,x)[0].coeff(x)"
         },
         "aliases": [],
         "mistakes": {},
@@ -6260,14 +6236,14 @@
         "semanticKey": "7:رابطهٔ درستی تقسیم",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "اگر مقسوم‌علیه x−7، خارج‌قسمت x+3 و باقی‌مانده 2 باشد، مقدار مقسوم در x=7 چند است؟",
+        "prompt": "اگر مقسوم‌علیه x−7، خارج‌قسمت x+6 و باقی‌مانده 2 باشد، مقدار مقسوم در x=7 چند است؟",
         "answer": "2",
         "feedback": "در رابطهٔ مقسوم=مقسوم‌علیه×خارج‌قسمت+باقی‌مانده، عامل اول در x=a صفر می‌شود.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "((7-7)*(7+3)+2)"
+          "expression": "((7-7)*(7+6)+2)"
         },
         "aliases": [],
         "mistakes": {},
@@ -6422,8 +6398,8 @@
         "semanticKey": "7:دامنهٔ تقسیم عبارت گویا",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "در عبارت [1/(x−8)]÷[(x+4)/(x−1)]، همهٔ مقدارهای ممنوع x را بنویس.",
-        "answer": "{-4, 1, 8}",
+        "prompt": "در عبارت [1/(x−8)]÷[(x+7)/(x−1)]، همهٔ مقدارهای ممنوع x را بنویس.",
+        "answer": "{-7, 1, 8}",
         "feedback": "مخرج‌های اولیه نباید صفر شوند و خود مقسوم‌علیه هم نباید صفر باشد.",
         "type": "set",
         "options": [],
@@ -6432,7 +6408,7 @@
           "expressions": [
             "8",
             "1",
-            "-4"
+            "-7"
           ]
         },
         "aliases": [],
@@ -6546,37 +6522,31 @@
         "semanticKey": "7:کسر مرکب با صورت جمع",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "برای x≠0 و x≠−1، حاصل (1+1/x)/(1/x) کدام است؟",
-        "answer": "x+1",
+        "prompt": "برای x≠0، حاصل (7+1/x)/(1/x) چیست؟",
+        "answer": "7x+1",
         "feedback": "صورت و مخرج کسر بزرگ را در x ضرب کن؛ صورت به x+1 و مخرج به یک تبدیل می‌شود.",
         "type": "mcq",
         "options": [
-          "x+1",
-          "1+1/x",
-          "x",
-          "1/(x+1)"
+          "7x+1",
+          "7+1",
+          "7/x+1",
+          "(7+1)/x"
         ],
         "check": {
-          "kind": "expression-options",
-          "expression": "(1+1/x)/(1/x)",
-          "options": [
-            "x+1",
-            "1+1/x",
-            "x",
-            "1/(x+1)"
-          ]
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "1+1/x": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند",
-          "x": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند",
-          "1/(x+1)": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 5,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 5,
+          "canonicalFamily": "f07-28"
+        }
       },
       {
         "id": "f07-hard-v5-q06",
@@ -6636,14 +6606,14 @@
         "semanticKey": "7:ضریب خارج‌قسمت تقسیم چندجمله‌ای",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "در تقسیم x³+8x²+4x+1 بر x+1، ضریب x در خارج‌قسمت چند است؟",
+        "prompt": "در تقسیم x³+8x²+7x+1 بر x+1، ضریب x در خارج‌قسمت چند است؟",
         "answer": "7",
         "feedback": "در تقسیم طولانی، بعد از هر ضرب تمام مقسوم‌علیه را کم کن و علامت‌ها را تغییر بده.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "div(x**3+8*x**2+4*x+1,x+1,x)[0].coeff(x)"
+          "expression": "div(x**3+8*x**2+7*x+1,x+1,x)[0].coeff(x)"
         },
         "aliases": [],
         "mistakes": {},
@@ -6666,14 +6636,14 @@
         "semanticKey": "7:رابطهٔ درستی تقسیم",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "اگر مقسوم‌علیه x−8، خارج‌قسمت x+4 و باقی‌مانده 2 باشد، مقدار مقسوم در x=8 چند است؟",
+        "prompt": "اگر مقسوم‌علیه x−8، خارج‌قسمت x+7 و باقی‌مانده 2 باشد، مقدار مقسوم در x=8 چند است؟",
         "answer": "2",
         "feedback": "در رابطهٔ مقسوم=مقسوم‌علیه×خارج‌قسمت+باقی‌مانده، عامل اول در x=a صفر می‌شود.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "((8-8)*(8+4)+2)"
+          "expression": "((8-8)*(8+7)+2)"
         },
         "aliases": [],
         "mistakes": {},
@@ -6828,8 +6798,8 @@
         "semanticKey": "7:دامنهٔ تقسیم عبارت گویا",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "در عبارت [1/(x−9)]÷[(x+2)/(x−1)]، همهٔ مقدارهای ممنوع x را بنویس.",
-        "answer": "{-2, 1, 9}",
+        "prompt": "در عبارت [1/(x−9)]÷[(x+8)/(x−1)]، همهٔ مقدارهای ممنوع x را بنویس.",
+        "answer": "{-8, 1, 9}",
         "feedback": "مخرج‌های اولیه نباید صفر شوند و خود مقسوم‌علیه هم نباید صفر باشد.",
         "type": "set",
         "options": [],
@@ -6838,7 +6808,7 @@
           "expressions": [
             "9",
             "1",
-            "-2"
+            "-8"
           ]
         },
         "aliases": [],
@@ -6952,37 +6922,31 @@
         "semanticKey": "7:کسر مرکب با صورت جمع",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "برای x≠0 و x≠−1، حاصل (1+1/x)/(1/x) کدام است؟",
-        "answer": "x+1",
+        "prompt": "برای x≠0، حاصل (8+1/x)/(1/x) چیست؟",
+        "answer": "8x+1",
         "feedback": "صورت و مخرج کسر بزرگ را در x ضرب کن؛ صورت به x+1 و مخرج به یک تبدیل می‌شود.",
         "type": "mcq",
         "options": [
-          "x+1",
-          "1+1/x",
-          "x",
-          "1/(x+1)"
+          "8x+1",
+          "8+1",
+          "8/x+1",
+          "(8+1)/x"
         ],
         "check": {
-          "kind": "expression-options",
-          "expression": "(1+1/x)/(1/x)",
-          "options": [
-            "x+1",
-            "1+1/x",
-            "x",
-            "1/(x+1)"
-          ]
+          "kind": "reviewed-case",
+          "review": "Applied case reviewed with its distractors."
         },
         "aliases": [],
-        "mistakes": {
-          "1+1/x": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند",
-          "x": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند",
-          "1/(x+1)": "گزینهٔ انتخابی شرط «کسر مرکب با صورت جمع» را رعایت نمی‌کند"
-        },
+        "mistakes": {},
         "diagram": null,
         "rubric": [],
         "variant": 6,
         "origin": "تألیفی با داده‌های تازه؛ بازبینی مستقل پاسخ",
-        "sources": []
+        "sources": [],
+        "assessmentCase": {
+          "version": 6,
+          "canonicalFamily": "f07-28"
+        }
       },
       {
         "id": "f07-hard-v6-q06",
@@ -7042,14 +7006,14 @@
         "semanticKey": "7:ضریب خارج‌قسمت تقسیم چندجمله‌ای",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "در تقسیم x³+9x²+2x+1 بر x+1، ضریب x در خارج‌قسمت چند است؟",
+        "prompt": "در تقسیم x³+9x²+8x+1 بر x+1، ضریب x در خارج‌قسمت چند است؟",
         "answer": "8",
         "feedback": "در تقسیم طولانی، بعد از هر ضرب تمام مقسوم‌علیه را کم کن و علامت‌ها را تغییر بده.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "div(x**3+9*x**2+2*x+1,x+1,x)[0].coeff(x)"
+          "expression": "div(x**3+9*x**2+8*x+1,x+1,x)[0].coeff(x)"
         },
         "aliases": [],
         "mistakes": {},
@@ -7072,14 +7036,14 @@
         "semanticKey": "7:رابطهٔ درستی تقسیم",
         "level": 3,
         "difficulty": "دشوار",
-        "prompt": "اگر مقسوم‌علیه x−9، خارج‌قسمت x+2 و باقی‌مانده 2 باشد، مقدار مقسوم در x=9 چند است؟",
+        "prompt": "اگر مقسوم‌علیه x−9، خارج‌قسمت x+8 و باقی‌مانده 2 باشد، مقدار مقسوم در x=9 چند است؟",
         "answer": "2",
         "feedback": "در رابطهٔ مقسوم=مقسوم‌علیه×خارج‌قسمت+باقی‌مانده، عامل اول در x=a صفر می‌شود.",
         "type": "short",
         "options": [],
         "check": {
           "kind": "number",
-          "expression": "((9-9)*(9+2)+2)"
+          "expression": "((9-9)*(9+8)+2)"
         },
         "aliases": [],
         "mistakes": {},
@@ -7933,31 +7897,31 @@
         "semanticKey": "7:تقسیم با مقسوم‌علیهٔ درجهٔ دو",
         "level": 4,
         "difficulty": "درخشان",
-        "prompt": "باقی‌ماندهٔ تقسیم x³+6x²+2 بر x²−1 کدام است؟",
-        "answer": "x+8",
+        "prompt": "باقی‌ماندهٔ تقسیم x³+6x²+5 بر x²−1 کدام است؟",
+        "answer": "x+11",
         "feedback": "درجهٔ باقی‌مانده باید کمتر از دو باشد؛ تقسیم طولانی و رابطهٔ کنترل، هر دو ضریب را تعیین می‌کنند.",
         "type": "mcq",
         "options": [
-          "x+8",
-          "x−8",
-          "8",
-          "−x+8"
+          "x+11",
+          "x−11",
+          "11",
+          "−x+11"
         ],
         "check": {
           "kind": "expression-options",
-          "expression": "rem(x**3+6*x**2+2,x**2-1,x)",
+          "expression": "rem(x**3+6*x**2+5,x**2-1,x)",
           "options": [
-            "x+8",
-            "x-8",
-            "8",
-            "-x+8"
+            "x+11",
+            "x-11",
+            "11",
+            "-x+11"
           ]
         },
         "aliases": [],
         "mistakes": {
-          "x−8": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند",
-          "8": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند",
-          "−x+8": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند"
+          "x−11": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند",
+          "11": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند",
+          "−x+11": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند"
         },
         "diagram": null,
         "rubric": [],
@@ -8229,31 +8193,31 @@
         "semanticKey": "7:تقسیم با مقسوم‌علیهٔ درجهٔ دو",
         "level": 4,
         "difficulty": "درخشان",
-        "prompt": "باقی‌ماندهٔ تقسیم x³+7x²+3 بر x²−1 کدام است؟",
-        "answer": "x+10",
+        "prompt": "باقی‌ماندهٔ تقسیم x³+7x²+6 بر x²−1 کدام است؟",
+        "answer": "x+13",
         "feedback": "درجهٔ باقی‌مانده باید کمتر از دو باشد؛ تقسیم طولانی و رابطهٔ کنترل، هر دو ضریب را تعیین می‌کنند.",
         "type": "mcq",
         "options": [
-          "x+10",
-          "x−10",
-          "10",
-          "−x+10"
+          "x+13",
+          "x−13",
+          "13",
+          "−x+13"
         ],
         "check": {
           "kind": "expression-options",
-          "expression": "rem(x**3+7*x**2+3,x**2-1,x)",
+          "expression": "rem(x**3+7*x**2+6,x**2-1,x)",
           "options": [
-            "x+10",
-            "x-10",
-            "10",
-            "-x+10"
+            "x+13",
+            "x-13",
+            "13",
+            "-x+13"
           ]
         },
         "aliases": [],
         "mistakes": {
-          "x−10": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند",
-          "10": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند",
-          "−x+10": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند"
+          "x−13": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند",
+          "13": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند",
+          "−x+13": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند"
         },
         "diagram": null,
         "rubric": [],
@@ -8525,31 +8489,31 @@
         "semanticKey": "7:تقسیم با مقسوم‌علیهٔ درجهٔ دو",
         "level": 4,
         "difficulty": "درخشان",
-        "prompt": "باقی‌ماندهٔ تقسیم x³+8x²+4 بر x²−1 کدام است؟",
-        "answer": "x+12",
+        "prompt": "باقی‌ماندهٔ تقسیم x³+8x²+7 بر x²−1 کدام است؟",
+        "answer": "x+15",
         "feedback": "درجهٔ باقی‌مانده باید کمتر از دو باشد؛ تقسیم طولانی و رابطهٔ کنترل، هر دو ضریب را تعیین می‌کنند.",
         "type": "mcq",
         "options": [
-          "x+12",
-          "x−12",
-          "12",
-          "−x+12"
+          "x+15",
+          "x−15",
+          "15",
+          "−x+15"
         ],
         "check": {
           "kind": "expression-options",
-          "expression": "rem(x**3+8*x**2+4,x**2-1,x)",
+          "expression": "rem(x**3+8*x**2+7,x**2-1,x)",
           "options": [
-            "x+12",
-            "x-12",
-            "12",
-            "-x+12"
+            "x+15",
+            "x-15",
+            "15",
+            "-x+15"
           ]
         },
         "aliases": [],
         "mistakes": {
-          "x−12": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند",
-          "12": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند",
-          "−x+12": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند"
+          "x−15": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند",
+          "15": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند",
+          "−x+15": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند"
         },
         "diagram": null,
         "rubric": [],
@@ -8821,31 +8785,31 @@
         "semanticKey": "7:تقسیم با مقسوم‌علیهٔ درجهٔ دو",
         "level": 4,
         "difficulty": "درخشان",
-        "prompt": "باقی‌ماندهٔ تقسیم x³+9x²+2 بر x²−1 کدام است؟",
-        "answer": "x+11",
+        "prompt": "باقی‌ماندهٔ تقسیم x³+9x²+8 بر x²−1 کدام است؟",
+        "answer": "x+17",
         "feedback": "درجهٔ باقی‌مانده باید کمتر از دو باشد؛ تقسیم طولانی و رابطهٔ کنترل، هر دو ضریب را تعیین می‌کنند.",
         "type": "mcq",
         "options": [
-          "x+11",
-          "x−11",
-          "11",
-          "−x+11"
+          "x+17",
+          "x−17",
+          "17",
+          "−x+17"
         ],
         "check": {
           "kind": "expression-options",
-          "expression": "rem(x**3+9*x**2+2,x**2-1,x)",
+          "expression": "rem(x**3+9*x**2+8,x**2-1,x)",
           "options": [
-            "x+11",
-            "x-11",
-            "11",
-            "-x+11"
+            "x+17",
+            "x-17",
+            "17",
+            "-x+17"
           ]
         },
         "aliases": [],
         "mistakes": {
-          "x−11": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند",
-          "11": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند",
-          "−x+11": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند"
+          "x−17": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند",
+          "17": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند",
+          "−x+17": "گزینهٔ انتخابی شرط «تقسیم با مقسوم‌علیهٔ درجهٔ دو» را رعایت نمی‌کند"
         },
         "diagram": null,
         "rubric": [],

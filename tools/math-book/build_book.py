@@ -4,6 +4,7 @@ from pathlib import Path
 import argparse,base64,copy,hashlib,html,importlib,importlib.util,json,re,subprocess,sys
 from collections import Counter
 from bank_core import CHAPTERS,LEVELS
+from exam_cases import assessment_cases
 from review_content import summary,cards
 sys.path.insert(0,str(Path(__file__).resolve().parent.parent))
 from teaching_shell import make_page,verify_locked,register_generated
@@ -50,6 +51,7 @@ def main():
  def page(ch,directory,filename,title,body,kind,mode,qs=None,cs=None,variant=0):
   scope=f'f{ch:02d}';chapter_title=real[ch-1]['title'] if ch else 'مرور جامع کل کتاب';pack=f'C905_E{ch:02d}-SUM';id=scope+'-'+filename[:-5].lower()
   data=dict(id=id,scopeId=scope,chapterNumber=ch,chapterTitle=chapter_title,packId=pack,kind=kind,mode=mode,variant=variant,contentVersion=VERSION)
+  if mode in ('assessment','final'):data['contentVersion']='2026-10-19.qa-fix-1'
   if qs is not None:data['questions']=qs
   if cs is not None:data['cards']=cs
   if mode=='final':data.update(groupTitles=GROUP_TITLES,mainQuestionMarks=MARKS,totalMarks=20,suggestedMinutes=90)
@@ -76,7 +78,7 @@ def main():
    links=[]
    for v in range(1,7):
     if ch:
-     items=[q for q in importlib.import_module(f'ch{ch:02d}').questions(v) if q['level']==level and q['type']!='essay']
+     items=assessment_cases(ch,[q for q in importlib.import_module(f'ch{ch:02d}').questions(v) if q['level']==level and q['type']!='essay'],v)
      for i,q in enumerate(items,1):q['id']=f'f{ch:02d}-{slug}-v{v}-q{i:02d}'
      body=legacy.exam_body('سطح '+label+' · نسخهٔ '+str(v),assessment=True);mode='assessment'
     else:items=final_questions(level,v);body=final_body('سطح '+label+' · برگهٔ '+str(v));mode='final'
@@ -100,7 +102,7 @@ def main():
   pack['flashcards']=[dict(id=c['id'],front=native_text(c['front']),back=native_text(c['back']),topic=native_text(c['topic']),hint='') for c in values]
   pack['title']=('مرور جامع کل کتاب' if not ch else f'جمع‌بندی فصل {ch}').translate(legacy.DIGITS)
  resource.write_text(json.dumps(packs,ensure_ascii=False,indent=2)+'\n')
- report=dict(contentVersion=VERSION,grade=9,book='ریاضی نهم',actualChapterCount=8,newScopes=scopes,allHtmlFiles=252,newHtmlFiles=len(generated),allChapterExams=192,wholeBookFinalExams=24,totalIndependentExamFiles=216,uniqueCanonicalQuestions=sum(len(q) for q in banks.values()),newUniqueQuestions=sum(len(banks[ch]) for ch in range(2,9)),wholeBankIsSharedCanonicalPool=True,generatedFiles=generated,verification=verification['checks'],finalVerification=final_verification,reference='teaching - template/lesson-template.preview-standalone.html',font='Vazir 30.1.0 Farsi-Digits',sourceSectionInHtml=False,storage='Existing Hamyar bridge and account-scoped LocalStore; per pack, kind and document',appMenuPath=str(menu_path),appStudyResourcePath=str(resource))
+ report=dict(contentVersion=VERSION,assessmentContentVersion='2026-10-19.qa-fix-1',grade=9,book='ریاضی نهم',actualChapterCount=8,newScopes=scopes,allHtmlFiles=252,newHtmlFiles=len(generated),allChapterExams=192,wholeBookFinalExams=24,totalIndependentExamFiles=216,uniqueCanonicalQuestions=sum(len(q) for q in banks.values()),newUniqueQuestions=sum(len(banks[ch]) for ch in range(2,9)),wholeBankIsSharedCanonicalPool=True,generatedFiles=generated,verification=verification['checks'],finalVerification=final_verification,reference='teaching - template/lesson-template.preview-standalone.html',font='Vazir 30.1.0 Farsi-Digits',sourceSectionInHtml=False,storage='Existing Hamyar bridge and account-scoped LocalStore; per pack, kind and document',appMenuPath=str(menu_path),appStudyResourcePath=str(resource))
  (REPORT/'build-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
  register_generated()
  print('PASS: 252 standalone HTML files and the whole-book native menu.',flush=True)

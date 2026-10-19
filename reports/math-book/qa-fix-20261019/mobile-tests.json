@@ -1,0 +1,14 @@
+{
+  "verdict": "AUTHOR_PASS",
+  "viewportWidth": 320,
+  "changedPages": 51,
+  "allChangedPagesWithinViewport": true,
+  "persianDigits": true,
+  "loadedVazirWeights": [
+    400,
+    500,
+    700
+  ],
+  "errors": [],
+  "deviceRun": false
+}

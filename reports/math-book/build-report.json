@@ -1,5 +1,6 @@
 {
   "contentVersion": "2026-10-18.book-1",
+  "assessmentContentVersion": "2026-10-19.qa-fix-1",
   "grade": 9,
   "book": "ریاضی نهم",
   "actualChapterCount": 8,
@@ -219,168 +220,168 @@
       "scope": 2,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "4d525bd2d56181cc15a586e77fff6b1aaf11da75a79bd2d9f44711f9bc991d6a"
+      "sha256": "9e0d52151133a24df77c93255262506bb0aed5e322eefb9c05b2327358b4f734"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-02.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "a7946d80b1683fba496d37ee12c37d603590aeaa3f42e4cf0c2abe446f9a5a9e"
+      "sha256": "79ea891b9feaf6cdb604d7ff5bb376991d089ce3b3f537acb8e82f8e47d79e4c"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-03.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "bb863ccd449b349b9add6c0ee931be5043f723ae4e90a5b17a0e0be7266f2781"
+      "sha256": "122128836c99dff3f5000c876abf7ead3807330c12467a2a92a560053d0d4604"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-04.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "ab9923a5f43006528167933a76546643a0b36373eb2624e290a102577c397e09"
+      "sha256": "b35b74eefe861cd1abc5f04717ea0531f36d7b6e68f4c6c10c2539bdffdb1ceb"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-05.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "3936b1a96726de3d400ded17d196b48834139bdbdfdc8e2c4e250d8af42e030d"
+      "sha256": "d1da6dfa845a6b95d140af7845d18e50048a45ff252295e48e6c55d1384f79a6"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-easy-06.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "e346037fbc5dd708cf16cca164862d0d7cdfe935cd8b38e1db68db01b466cf87"
+      "sha256": "a425471b1c608802aadc31330288ae24fb3ddbcf1bcbe510bf6559dcc1a0a869"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-01.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "0ebce05f1ced82021b7b9b848239edaa9abffe241e2cae1723a2c3fa51bfc10e"
+      "sha256": "7334256fd6d872c810abc8c4c37108f36fef603d5a7ea0d27fd991e07a39ec4f"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-02.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "1e38c61e711cafd578376536990f0dd33a0efd2fa7dda4bf0b92bee97f0faa65"
+      "sha256": "30eea9768dd6e7cecb6f699b0c2cd58ed73f36d28061a1b51f8c4a4cf8c87de3"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-03.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "e3ce07ad1c1f17d6e33cdb3a6ec547802bb6507ad744feadec3706c0096fda2a"
+      "sha256": "db518c4076129d2a5d1375c7b0d83171cbc6a476b2868c44230671673d1f6c55"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-04.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "d9bb5c100f752004b0f81d76f1c830427fcf0025b774d43f408f6b7893661fe3"
+      "sha256": "5ea0623ec20d1e53c31d491bf85c05827689d0775a886935dd4a8590b536d040"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-05.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "3642d399f779cc974f954ef5f3dca143eecd339333f95263deb38500b573cd4d"
+      "sha256": "8fb1c54d9c0ae1b5bc85c9cbeb047a9c9720459577b002079ca5cc3c883a18cd"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-medium-06.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "f6d1952b9537afaaf81dbbef5b5a957cc1731eb7c3458c88acc9cdf19c098bce"
+      "sha256": "71d4d2644ac46129197de6b0bd8f1de2b471cb824a19414c2e7584b089edbbb3"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-01.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "bf414c9cce2c4c6d742c8f9f9d8413010f85e8faeeea80ae78a6a6e4458e6c81"
+      "sha256": "dd688cb88299007cc08c12c80f3cf61fe113b914be08d252fb7e62f8d42446f3"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-02.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "3d3fd5d1a2183bb11eb1d6f6ddb6ca909f966464f68563b204516c8309584ce0"
+      "sha256": "6c96737ef825cf9e04aa4eb34797e7bb882f4f94a3a324564a43b2367b9a3d2d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-03.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "e3f292056f541a635ba551e5db191831ec6254e869efbc80243fcd9912cced76"
+      "sha256": "30b94b22372b96bd40a628bb51088aa35d33dfec6be6f17be521a0199bb713e2"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-04.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "8bf1a8725f571669140111d4194868709c1fdefbc0bb9bfe0f7fe3c04db6b840"
+      "sha256": "ab7fb829d35f59ea590423726a2df43d50285a5c5ced02fa275028f4304c910b"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-05.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "40633c935609f16737019dd55bd4a7bc913380f026263ad471cab42bd0963ef5"
+      "sha256": "38a1227d382af378201d852317bb52cb92f61afe05f06d3afb4a701499cfd414"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-hard-06.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "18a0baafbb4073615a5e9c5a4036ec6847c34435d47630d483fd9af8310e5264"
+      "sha256": "ce7f5e1b88559bafe08b81c7da426806b196c3ac471e787c77a19dd9e362399d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-01.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "def62955e683f84f7a99cbed05376381d666b1f0eb37b72a8579a26f292f9652"
+      "sha256": "3e4dda6e0541c7ff3975bc56730206dc44e5c42d36654cd17cdb7f2b6e4cd3b1"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-02.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "48a87ebe6cfe7abcd33d9f0845afc4b731f33a834e504206cd6d0d6e944fc1b4"
+      "sha256": "b1baa5b835ff2960770a4d958a55722ebda3180582ed6d59aef5739f2cfb5073"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-03.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "700cdb868d5557e55cedd60515d0664fc6b1c27164314d9d111bcd0f8580603d"
+      "sha256": "1847a134c5372b88e44901cac5360c75f5983e0327dc1aba9ad8885ccce857fd"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-04.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "0a3f77a076fc630a20fe15cfc4af7f662aa051cdcefbbf21ad34e5997d818eae"
+      "sha256": "c763b0bdb113704744177491a5caa84168a26376881145c6d25cce25f20c3a86"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-05.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "aa3380019bc8662e1e51b0f9ce0de36dc1087e57042f1826239125a32ff373d9"
+      "sha256": "a0658b468629fb52d611b749cc54d9f0a606b697510313965f8cf1cfb2c14727"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05-brilliant-06.html",
       "scope": 2,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "bb38aee02bfa74f1fb2cf91a3a4a5d204510ed80a97935214e4cdd715155e971"
+      "sha256": "ca3ad923c6ed976cd8f20568ee48d49298eea5a46a33e87fb5739cc516819952"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N3.4/TAB05.html",
@@ -408,175 +409,175 @@
       "scope": 3,
       "mode": "sample",
       "questions": 57,
-      "sha256": "f422b5ea7806f854040371de2285c35e7a2b238b272a57afd7eb6656addac234"
+      "sha256": "3952884ccab713e01303d5d32f41faf026b357db37524d3cd6f4a47356be74db"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-01.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "1006539c40d639550e23163134777464f1ffcd9b6c79530cc5fd3ea8884a120a"
+      "sha256": "a27fb7318639ce7f0bb5b7ee13eea8729ca5a55d932b70b18ae6862ea95c3f40"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-02.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "05aaa2844f915ee1d0a151435e215843d41429219d8dba94501d2c527246968e"
+      "sha256": "c5c7d9f951513fa8245a368a488d83aac9ce5f7825d4e62190d688ab99e92a8b"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-03.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "fc09f1a259f383ad4bf0404a1ab019564f2c4a6c61bad5aeecfcfa09777c7596"
+      "sha256": "e7c2ec85f854e26e97be0795db0d7355fdf24738af1be877bae23fe7db4f6a3d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-04.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "7a26fcfa6a1e55533b093a6b30a8ecf39b287c0b646591a22da04c9271ab19e5"
+      "sha256": "520ae9bd3dd9a883738259c4bc5073379ef06f4e3ed945eb0ded2216d4696ec0"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-05.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "200d611dcd25c7b2915189f102e404dcff17c6a655dba312ac8d8e87da07f864"
+      "sha256": "b47a434fba11d5e33c0b182844729f84bd0e6d57a9c996d2c2e9548301c4cc20"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-easy-06.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "9b3d4da47a0e6f1258e46c9396a6bf09bc3bbcc3a0ae8f65574c7fbb5bc57541"
+      "sha256": "a7dadf87264f770ecca8015d363b1654aa4f8e028a8e3856ed3305ac78e8b014"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-01.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "3577bf5d8542519de4a71ac3064fd1227548da21b5cfbe6f2814b908e715e237"
+      "sha256": "e2d2ede15e5f3e8b76dfc1c8c8256164154ed0eb094ae6443642a8f32e5d170f"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-02.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "84f8c47dc78fb358ed63a597db62eb0729f21a59001d6aa16dda1d61fafba6c3"
+      "sha256": "90f7df278ac4369b2b61bbf9851c1b466f7a89589f85323d09676b6f6d268284"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-03.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "c341798fd9d0d394c82ee4361896701a7158fe22a4f547159549fe65f5443a3a"
+      "sha256": "bc65ff2b8692cd833d130e7e1e27b40b7f072afeaa261787ae101638f971dbe9"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-04.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "4af2bccc98bd3c323e3fac5348e5f5e746c29897ad8d1222c8226a28b083bf8e"
+      "sha256": "3963496c6a6670efd9d8055bfcb72c2e9094b8861d2a3610b9f008a921ddf286"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-05.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "6f93f0279076a7704eb055c6c649260690e50a25b65f3c75f4711160fba37a87"
+      "sha256": "05095c30fb2ed52b6d512f4ce0d5917cb073902a907d07a80fcbde660e83c596"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-medium-06.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "baaeacbec1aab20c150c278aeafada76fb79a437c1141982c0659038efee7e9b"
+      "sha256": "4c618bfe91a2a63cb867617423869412a845b49c6fdac4b4bc644ce84c38abed"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-01.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 18,
-      "sha256": "54f583b2eea1bc22e211368dca7fb0bc0b4eabc1e0e7c2344918bc46b5d2cb10"
+      "sha256": "7b1111876ce9ec47c8c004a787e230d6da7caa0ff6648075bd5fda7d0c2dea16"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-02.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 18,
-      "sha256": "17837176a3e9eb03817dcd2c0c3777bab98aa570766fa911bc68b6e529f6ea14"
+      "sha256": "f63a9ff1b0b9541ab20598120d62f99f309e8c4197d3b967e7d5bbc58ca5a18a"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-03.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 18,
-      "sha256": "1d02e3212b261e2e117a64eb5ec3371bd4dc40fd7d6ec70cf429a802700629f8"
+      "sha256": "209f2cc8a160ec69cf65c9981a4783c69d821a247140bfe9cda80ea198bee11e"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-04.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 18,
-      "sha256": "cbb2d33430822b7f27aa4bc5acbde22698032ea884d99af764b5bd358ac31b00"
+      "sha256": "2244c2f8b351ce0074ed9cf4b1d1627d0aca8a2b284dc6c03b23ee9f7a20a9df"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-05.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 18,
-      "sha256": "9e62dc50fe3e8550bcfea15e36dac9e3f07c3aab2b903a5b6bd29e7fc467b26a"
+      "sha256": "e9ee1168ec0c93581b2e4482a7acb67cd83bb1623bd2a5421b4e5a327d03728e"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-hard-06.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 18,
-      "sha256": "11ec415153a8d9f91892341d1f91c003c8407968f4ea9123bdf7448d3838b82b"
+      "sha256": "7fd646b70aaa3389509cfc53566f828a86046e93dbba49d93fbb5d2c4f9b4193"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-01.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "2d69a47ae369ba149b31113839f9783fcfa14d140371ca49e04e797aea567dc2"
+      "sha256": "1940d971a94e9851fff1f7b9a557b6f7f8730b995017780c2c9264bcfda4ca2d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-02.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "43fcb74a5a6671f68a0b71cf3d7add38587a9cff22daf4cf1cc0c47d92e35f41"
+      "sha256": "da3452b31892dd6e510eb5130864bb8ba88ba6d2da6a56f57afaaf7abd95b103"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-03.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "f7fb9987d2704910927e492eae5e378236e09cfd50334ba89db13a765be43c65"
+      "sha256": "ca7f4dd881685d24682bf223ac5d98627006c173acf25b316072ae53fdd54f06"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-04.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "54e7985dc601521b487a2ade574bc12cb9af6caa80fe79e0672492f4998a3f1e"
+      "sha256": "847e4cef6a035881d8eaf8f21e5549c212d47cd7df4a5547b61a834b7e49a0c3"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-05.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "f59641e25871a28e9bab637cd33bcf05f3d8d2dd39d8f73c81b91ebcbc8f3e02"
+      "sha256": "bbd3460f780838de9052602d18c57b28938738c72f3b1d95301d827cec52965d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05-brilliant-06.html",
       "scope": 3,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "b47747c4b9da1aefe532d2daa0ff35820c6852335d50657ba9d00304cb397ac2"
+      "sha256": "3c4c1b9e8ffe0ad0589f33d82e7d8dc05a6a20c50661a08dcc653e59b46bd5c6"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N4.6/TAB05.html",
@@ -611,168 +612,168 @@
       "scope": 4,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "45579835317fa84db4a671fa8f8d8e9a6ae7cb6e92e54228f26be57231f3ab1f"
+      "sha256": "d2071208ed6f1b133153db0def522b18c30d24a0f371d3cfb9e75a2b8fb29e7d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-02.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "324a48b02920000d9fa855e5cb68bce2e284642c7fdff48820a8d5ceae9ad68a"
+      "sha256": "ed8db323beaccd0c2a2d487b24f79c6c634a5da0f593ace95490704ece2a16e1"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-03.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "63641261cd9129cc509af90b0aab35db714c741d42ddd4016c90a1e4f3d3b6dd"
+      "sha256": "df69c597de24cd0f79a0df25a8574205b0e452615b4cee0ecc14ef1c2e0fdcdb"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-04.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "6e5affc4aa9cc53f3f0897c9a94f1ae8dcbcef848bd95c83f54227474487494a"
+      "sha256": "96b6133f15d8c2da2bb3303769878ef4cd41a513683120bfe884ede4c40bdf9d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-05.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "2f00ff6014721bce52b951f949d86367029b9fd236a185d9f4b21ea259b820c4"
+      "sha256": "5b69ef084cf1f84489e40985b7573dff47e4eef1bff96c5882633aca98ebbe07"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-easy-06.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "461bf892711946b892a37cebff4f0592a67ee64bca84f803e020a7e4129e18ae"
+      "sha256": "729928ac0cba4de4790d10af32f209d9b96a7579ef03ad3a862410ed25597485"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-01.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "660db1332bb69624e84c2e065b09ee8871059ea8f5114bd678db3cd7224746ae"
+      "sha256": "34924fe2b2c3b6421fddfccdcd68a4d838c740ca73f7ff86437d881af8bdc848"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-02.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "32fb761e939c26a8248cff3fd856c29b9b3a7f5b7f0dddeea4f7bc3a92c81f6f"
+      "sha256": "80aaae2c585b422b4dc6ef538d94d38ee99cc40b4515a694e341f93f64373fd1"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-03.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "4a2dd2a60170fc2b35cf68f35844f5c7f24862b5749e3655ade00af03db196da"
+      "sha256": "bbb0e882d73f8439d41442cadd930599b01d1424eef2b5eff16c7315446e21e0"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-04.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "c19d30a007daed625ffd6ff3d57a5560b2cfa44c23b86bc74833ef8d2a4de029"
+      "sha256": "bd92aeb388ab1bec1b12ef2ebe18e477d0ef1185960519304fcdc85b057db31d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-05.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "ae80588e8b41bb4a5d1236a25897aa9146735e61c5c7ebc73ec4b23777412ffb"
+      "sha256": "3a56693e1d36434e200491459d41435eab939e51b71f895672c76df0af08d8e2"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-medium-06.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "5fe4f284a96c69c8bb6acaadde684c8a8a8ef326081e75deae257f9e6de7c850"
+      "sha256": "f5dee2fa75690ee554e7724a07b8434a3b1d4b3b430c32e54749bfefff85a049"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-01.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "072ac806a3bc055108ae209165d0dc088374503d9c378ca802655a6a92a8d94e"
+      "sha256": "496c3b7a3caf30fc884d1e1d3d3d57da1d94eff7aa0765893313fc106f494230"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-02.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "7e12ecc89fcce075825084b58c45e6797b895a0058fc072dc80e6fd5b878c4cb"
+      "sha256": "93ba781f947481bc98ec61c71084510d075e7912b5bba50333e016b82e2d91e2"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-03.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "8c9dc2327e774e9fafd4281cc0dff3c25f31485b96e349f786a6babfeeea88ba"
+      "sha256": "506a109b07e42e00c6a194248df3c2d505f8b03b4b65b34a330b817161056abf"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-04.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "afd8dd5f9d352e6435ff0bfb859f22e6400c7d883de3b30fafa9ff417cd9ae09"
+      "sha256": "a88350c3cf05471013c11661026bd77d2fe8c32301da0c7a5c506b30d576447d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-05.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "79fe02cca637921291f57b8a3c6b2152b87a85447d780a5aef3a51b20bdba434"
+      "sha256": "81c9aa16f17f049e2ba5d1b9573cb993394d833d491a2bff840e5358f47b5847"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-hard-06.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "4ca29ccd1ab4fc408192ab305f5ab436f60a8a69af71e5c5476f77c8621b9c3c"
+      "sha256": "1fb540c06dd065d822230990fa905e1b773b29e911e710e740abf8c4cdeaf8f3"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-01.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 7,
-      "sha256": "68bea9d94a877138b5267779f5448d69fdf757e61225bbb24168eef339735df9"
+      "sha256": "f754c0be5aeeacd5bf8f065a1f6180b4826b8660e3538c2628252d69a7780573"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-02.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 7,
-      "sha256": "1bf2b544fa034de3f96b3c6c5cb1c806650a8a1237f27abe9a5f2a3979bc5974"
+      "sha256": "4ba90ea6e5844df33aac290de4b9cdb97d77ea28838b5fa35ae75874b52d221c"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-03.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 7,
-      "sha256": "667ff107c91301e293576752298e7f986363ae261040ee5382a7ab16730c94ce"
+      "sha256": "b8926d83315ea8cb2e541db4995e12cac7650df047980307c37c61a249be526f"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-04.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 7,
-      "sha256": "a57be0d597b39fab93e09d1757dfd01bbdc3c673d6dad21e04d382ce9f4f569d"
+      "sha256": "a9f2e5db773655a80db8c5af654a18ab2e58d547db0b9319c8a2d560305939ea"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-05.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 7,
-      "sha256": "c52efe80d193aece0695773b76059c821b1a582f7154659f3b2a289d38c8f613"
+      "sha256": "192fb8b1e6590a0b916cefc895c170ed50491a1b18822eb7206a22b2d36638f3"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05-brilliant-06.html",
       "scope": 4,
       "mode": "assessment",
       "questions": 7,
-      "sha256": "1a653e7809de63bb79efc48ce072dc6e61ca1d36b914c6b6a606f97ac5980125"
+      "sha256": "c13789f54ddbcc8d185297a594cf5c56cd12f8be5db29dd07dc7f13e87a7ea30"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N5.5/TAB05.html",
@@ -807,168 +808,168 @@
       "scope": 5,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "3759a28ad7081c197593ec1ae39c6c93f385be0bc819bb8f5c1c9c7c7948e055"
+      "sha256": "e0ab5caf3766b44a844a58db6543c9fc574f16b6a57cceff4e12c63298ccbf1d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-02.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "5d0fa84be4b1ac87693ef0fc02723b91c61bb18876c2ca983242dee4b31d54b8"
+      "sha256": "01c88af1be855fa76350681ce9bd597a19cdab81ce1acf98f51ba4ec4316cc8c"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-03.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "2ded5fb50cb7a95b510a6b01050160642534edae49723950b560f1bbbc8771fe"
+      "sha256": "445c02a9600a123cb914abf3e8e9930657d5a259c1ee6f235407df20e4bb0561"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-04.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "016606b39fecb219fd0de4146918167312d24c0e3feec6ef3591613bd3d0ff87"
+      "sha256": "49084267f774b01fd1c18e6b46c605010ff5968b04564c2c0f50e1175c85e919"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-05.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "dfb93450d56ea9d8827e589d949039b4c55cd92c41440b85f50be531216329bf"
+      "sha256": "6a71523f91ca9335129c7032e561081d455fbb2d7be6df35d033af9f939c93b6"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-easy-06.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "ad5aa59f6bfa16f987e7f394c74393f39dbfe5aeff0ba510fc78aaec0f2ee16f"
+      "sha256": "b2e9ca85770810c50ce6853d7f259c760aa410ec3c372cf7f62356551ea1a3c1"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-01.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "c327fb5448244bfecd2a9a640d6bd0206c89d55abe2ce7268fef3328e242fa79"
+      "sha256": "37548f2848cf0b299b2fe811fc2d454240b0b608beaada637e404a2ed191418c"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-02.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "ebcf8c7a33288c1e8131b9153e05b67445354ee0e27dae3a28c2fe594c6ae418"
+      "sha256": "3afba18517bbda10bb7c995490579d8d07749af3e37255cef20ca4a0c81e3ab2"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-03.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "851b3eee02d311687cba95e876afca1fd975dc35e9db948efe09e6c897054494"
+      "sha256": "c7a287d623502271b20acdd34d844d8b81d56236aa6a3abd9bacde3a865eb58d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-04.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "ba1e47d897c738f8d164f42766feb31b34257491b2977ffb79bbefa515beaf49"
+      "sha256": "00f4fb14267e637afa7bc0ed9238ffd697059638a1ab6d5df1168c2588d671c2"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-05.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "096df787bf5f9afd8aad4a2d2c2f8cfe7d98470f0108613c6877ef28a1efe8f3"
+      "sha256": "5ef6b326d7c8f1236e34abca105e81834df909e611e8a7723cc1a6f5dd9597fc"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-medium-06.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "e08dff5adb7c72223e98e6b4bd3ddd9530ec575670561b7956e5ea749ca2ca2b"
+      "sha256": "96bcbfad653dfb43acd44d8470ccc1f4051cf3b6a16b5ac70a827ab7443cffb8"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-01.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "b9f3588eb96577b99a82ddd5d4c66d774ce01b189f5e1a66c1064822ccac2e59"
+      "sha256": "1fbe4aba8e2cad972ea41802c3799949fa5c7565634d4427364a900e7f8eb10d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-02.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "e5540a6f5d45e283011c3d928dec4f3ce20ef1de4edeeb48425f057311936505"
+      "sha256": "09d21d1884459e339ba1bee6967bd8d998d314f51f74715c1d6554d710e36e38"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-03.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "214d1e4ce6438e0eceea9ca71aba1c023428e6b05e0617a7f96e161d0ffdb9e8"
+      "sha256": "dc4bb9e95a4aef5adc01ee35cd82a1a9387a40494aab151ac6db674b3b514c89"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-04.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "aa33fc1c530f982bd9d56a0f3e8f7b1aa76a9ec68844bb7614ceac8e203967fa"
+      "sha256": "ac6df9ba36c13e863b3fd4d14c399bfcaee881f4f7e831b5e5b9dea90efb3341"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-05.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "05d9398ca490beb6ddfa742cf90a9b1a990cc1325d5865b94b81dbce67f744c4"
+      "sha256": "6e9e8038336afb028edd00b6b836b554f051292c91529945c01369a2467d1ad2"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-hard-06.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 14,
-      "sha256": "fb43ed7f212860b9530991f24c9b133e03ec3e0c5c15fa7cf26f989c86925f16"
+      "sha256": "522293a20cfa9489decca45c2ef8d0816dfbf92602e67479814f08215e3aae51"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-01.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 7,
-      "sha256": "b2bf823b7d4d7fda199ea97cb4b4048b1b60381f337dea6d18e9132554c96a6c"
+      "sha256": "5fa9739012f5781202f4251789266e3a5a626547e10f1bdf7d3332536bc65267"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-02.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 7,
-      "sha256": "f8e48fadc4d982355ef9bee1b2b5d28dc3dd1e9bb914260d2eb2824af3dbb290"
+      "sha256": "874967a405ac43932e4a635e7090ed8d0c77da7fd562b65958174a69ad0fd517"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-03.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 7,
-      "sha256": "148408421d13a2b4dfc535292411aa3cd8857fe3f3f9fc64092c97bba4fd6cc6"
+      "sha256": "bed9828597a5974624d4b1d49295ea131d06b99c807ea771d2156a3436b2e7cd"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-04.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 7,
-      "sha256": "fdd33148ab90808ffce51b22140aa9b3d22de5f1fc374ff392c0da57638bb7dd"
+      "sha256": "6733f15fdf99cb3f364eba53a46d823ba85c216efee6073bb78d39ab9033c7a0"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-05.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 7,
-      "sha256": "a8c944b65b164b1c97852434e96755013a6c7e81224088445759b44bee0c51cf"
+      "sha256": "1166d328ac03bb6c4de20ed8459beed106663bc82ce8d303bdf43aa9fffbbcb4"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05-brilliant-06.html",
       "scope": 5,
       "mode": "assessment",
       "questions": 7,
-      "sha256": "16bb66d36ffa74c5e568568af5336f462bc372cf599d6c459e5176554cfc1b52"
+      "sha256": "6178335f318cc690a84240503261770ee81fa247f7381f8e95e6f7841ce74ae6"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N6.4/TAB05.html",
@@ -1003,168 +1004,168 @@
       "scope": 6,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "05e5242aa1b39dde69d41230742249dc739041122b3a755f478f0f6e231b2da2"
+      "sha256": "8626fb9120468f757c4666627c0fa812c61a69688910d684c26344e4601d812d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-02.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "862bd922747fd43bdb10ed7af42e1d4023c31aa3a4945eed34d76bd6f998ca72"
+      "sha256": "b505743fe3cd06c37243e3c65016d97042fceb1b0752d9d7c60aab5ddf717b2d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-03.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "a5aba077fe76d883e440e5880fed93d6c83449623135b4bf95b1dc848cd67b64"
+      "sha256": "5500a0f26f3ad07faf492a1496d01f60a5e78f0be1fff1afa68b0ea6c6f9550b"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-04.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "aa320481a750f8ae6627133d69f18b34c730194b52e069f4e4d74f1982f8315f"
+      "sha256": "eece3ff3cc53e04b7d823be81f5b0ab8c3b9e4c82fe97064029663557fc3766e"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-05.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "b56e455e47da8f4bd3eaa1e36c0acbcca3130bebd747e26af2f3c054e831ee62"
+      "sha256": "c572bfcbd69ab72b279d89595d08ee28e8fdd13e8d6c6b27e5d740db3f4254e7"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-easy-06.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "5f1ce36945b2d16f0e02ee4e612f63d57fe8949c13fab722971fcf99cd5c504e"
+      "sha256": "75110db8a2caa82b9dbe82eb1b73b993b433f65544ee0273c2f915837abd6089"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-01.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "c483571e09f49a365a3de9c1fd949e0fbeb64387200c6d7034840dbf01a8c50a"
+      "sha256": "33a0d14feed2fff09d70a3df950368ef5105be4b7b2ae5345973d17266de86d7"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-02.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "6b960e2c019f63df4dd38efde76af1b3d0dda1c9b749a7343056a648bd54e804"
+      "sha256": "09c983826c22564e46eaa4c11282db963c0c8cfc386c19dde9e05d8f599ed254"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-03.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "8242f29ba95a4150f961886c70d3629f7ed498f3f72eaec539aa90b8566468f9"
+      "sha256": "9ec59d7d0e23b2b9b9adbc9034c23999f6461c30b58157d9bd7f9fc7fb7a56d2"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-04.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "b0aa94fa6b594de2a84122be4660b9dffe24fd7a50adf75831dc7856c164c183"
+      "sha256": "d2e5c10a165024ad7c406ef5f3c436c10cebcb6988e1410a86ef1b85edcb85dc"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-05.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "360a9bba714e5e0cc7e9043a409d4fa16b797546f5767ee0b45093a6bea8fde1"
+      "sha256": "ad94e8b50254285748c17d7597f9942e3e12a8ef6c97cf02962f636cbd88b56c"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-medium-06.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "6a4742f3062e69aac406af4cd6f086d441722ffa4040d4de6e5aa98166008f9a"
+      "sha256": "d1590c639c198f7fa3d151cbe7425950b39f16ec019d061fd386d2488b2c0e5b"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-01.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "241ae3e589c8e0bb122a5dfea46ac3eb81c88ee0a1ea4d1c3b8797b85c97ce47"
+      "sha256": "dd245335a9f59a652c6f841f4841eb2e1424d145f62a78801e66df1d73e0ae2a"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-02.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "5c2a73b1dd2742ceb91e423d521e8826a6a305699e25b7fdb648143f3aae29c5"
+      "sha256": "679feca460c5349c2a93ffabb77e3aaa61e4ec8dcc33cd256b84d3d9d7c06078"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-03.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "a221237c1226e3248840cfd1c35e78ed06424cc7d71dce0b2c16f6dfa16764f9"
+      "sha256": "2fac010813ef9aa2436027d1c82d9c09fa614e3c0e0cde85302ba4b4b4f57db2"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-04.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "b7802a2eb33af355357a0c958fece5dcee801f7aa1634463292f9f9735069775"
+      "sha256": "12096477084b201ca0f10c4368bd63c2ee9d37d04995cd4406b543a3501555be"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-05.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "0d3e8c23f810acbfc4940e73b7ad1b2bc61c3d2e0bfbc183d5f38d4d3f0f61b1"
+      "sha256": "6ed4650e51a6092e1a45efc23fabaaed8078092710d041ef55433bf90d2a9b0f"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-hard-06.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 13,
-      "sha256": "05d07617dc9ff9b41f3cc6afda84b55a565c8321e4ca56922ef65299d91587b3"
+      "sha256": "05963cb201fd1a968c64cca62d5ec33abaaf8e9b69551ace7cf77095b47dfc28"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-01.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "d8db368bb33c0316a0203a3a0989fc8374309de041a0f78e048469f1e4265b7a"
+      "sha256": "c9cf253cebf170f23572aac573c9826093c0e71f67e3897e4b232fbb0424199b"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-02.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "03cb6a9451f0322c85e62fbd700b8b9da6eb449e77592d50c247431bcaf9cb2d"
+      "sha256": "5abb7899cba880ede7746f015829bc591e35435bba19ead591975dc79ebdb7b8"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-03.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "03d73a7726f363a4975931120b26ba3be8351e05045d0bda6e6856c193daf589"
+      "sha256": "21d8d9026478474af3c49691acb79e25d8276b00764d03f9f3747230889041ef"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-04.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "561289459afcaecc0d7575d3bb4202ebe0c27ccff7958449ab5b57b019de1aeb"
+      "sha256": "b7875005c66173f1be6f0122aba106794ff67a040d9879e03e61564b2b0dd97e"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-05.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "d8fb63d793fd7acb29f5b26d620bf4a09f37440ad6ce15b0c500f423ce5b88fe"
+      "sha256": "73e4bf888fd497a31f68c704bfe22f40f0cfc1574bbe3d546176e99038d4064a"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05-brilliant-06.html",
       "scope": 6,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "3d77ac93e7c43969a0cebfda53935882920c8260186c66850c8e713094dba076"
+      "sha256": "70fc65742f37dfcc33c5d5a08cfe01d6524a8e636b08617b68f3c6cd249557b8"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N7.4/TAB05.html",
@@ -1192,175 +1193,175 @@
       "scope": 7,
       "mode": "sample",
       "questions": 46,
-      "sha256": "fd3405becf0924b3d83b950323a0dbe4195fff3b5e98967522ca792f07737510"
+      "sha256": "fa300788700e23c6816cba802901cd83f9abe732e0f50bf51867eee2b009130a"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-01.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "a6c8a6c571d39c51f2223095ced2f2f4ba0de3283956aaaa7188ebbdfeddfa64"
+      "sha256": "3f95a66dcc4d98cd7a042d9caac8fac99eae4ef7fc436774deee3abbae1fba10"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-02.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "a12bc4188ec2999a223a122762581b1c3f9ee03f982f45e52de3fe1ccd19dcf1"
+      "sha256": "169566308279064b3a06db79d169b9ac9a5e0714088e14e3f522ab5f9f7ec850"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-03.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "fb3cd2c44774fd7af900ee80d40a9a1d773d6345038301676b109eb017ae0e84"
+      "sha256": "b419be487ea17e6cbd24c24f9094037a0c7cfe4a85ae0aaa90973c6ccc49eb57"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-04.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "0a6e02435dfd7e9f7d19b8796aaed6a20c360f22d0c2c06f17770b886eacf97a"
+      "sha256": "5ba0d5d49fb803ce303fac7ea730fd80e929539c75d0c6fe25ceac40f55c4ae0"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-05.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "bc9b0cdff2fae7063da48c9776937e09ae58f9af6d72384e9ace6bf9a8e1dc64"
+      "sha256": "59319bc9520f14e1f2629ea379aa5db8407146cc6936b1d1ba38493aaff17d8b"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-easy-06.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "e9d065f28b459d13810faf63018f343c384e4b83c32fd95173e025728d845880"
+      "sha256": "eeb5d864e9a3087c6af0a3feeceba6c2da8bdb1bda2c060deafefc19195f7639"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-01.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "da62381a7bc6c59ea75b0b4ba01824cbae21619c799931e30a772a7fac5ebb88"
+      "sha256": "1fc6263c26f4ff01f6ddb93ed067654713478ff3ebcadf1accc4b65cb6614c20"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-02.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "8e2b0cdade6e67303d1512f27210f4c1cdc8bf7276e134829848491f509fe108"
+      "sha256": "ddbd2298ecb43dd4a8e05ab0662028d29da9488056c68a8992f692492fb3e377"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-03.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "66ce9644b52873d9c551d2c36d67df1d0862affeedc89e6cc4f0f4b413f1a18b"
+      "sha256": "980e6bb60a850d09cdbf68c97cd8c17dae34e7ec67a1ecd0c6c83a539863ff09"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-04.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "6cecc5498d460b61961a37761d36fa34dec6ecd6762dab6100a8efb5f8534f2b"
+      "sha256": "500054aa9fe44692631a2f1f512a63372a1bb03c4167dc7c3e832809fca295e3"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-05.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "95fb6e1a9ad2b49d3ce72505516f41ad7d53f2402cdf0e615ee64929343daf04"
+      "sha256": "2dc032f483ab55aab668ce262d05968dc49cdf56596dc0278eaa219caab3c61e"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-medium-06.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "c9de1d597ae0f3f678ef5d386e986296e907979164ac22a3c40272db269be156"
+      "sha256": "687da530aeb5fa0a29521691e9f2b8e366898a85549522d1e1be59daecb6ed6e"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-01.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "9681ba0943cbdadc87b5603613fa08340a9f64ad20649e0d28208e14f8e55bad"
+      "sha256": "7adc63bfec2eb765a08a3a2671778a93ccd630966ccec85da1fab244b0e6f74f"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-02.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "8a6fce3cf8664dcbcca1f0f99ba5ab9dddcb9729fd0c447a4ebe109023ef64ad"
+      "sha256": "b5a3ec7e76c275664b2e260084c77bc7f65661cb64d49ecd1e7562b473fb126e"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-03.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "664df1bb0685a26efb20562312e2d0292ff531c819c3105c33dd3f2ee000f302"
+      "sha256": "1a87f4d68e1c5ac097796ad956f7d9792e72256280d5251329a91e8be4169c10"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-04.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "1d12e945302bceb95d01cf77a6cc8c301456b060955a770f132c190fb838cbc7"
+      "sha256": "f9254048e702ef16afda3a69b0d8526ce9aa8704d6a5d3836d20d3f0b0ef5c58"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-05.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "a3338a3cef6a5346598c768655c55b884ac96105d56fafb0a7c95ca0f60e3964"
+      "sha256": "c07df150710d3ca4a365e36decf477953e0b4182e3c292cd7eb7e0e67232fd48"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-hard-06.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "362137b993497b9bcef9e85ec43739c566efda851e0e4e020926451f6ee58ad6"
+      "sha256": "21ed9cdf30d46e1c735902aa1d6ae92d767f01e6d4850d3d23a26032d7fd65e3"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-01.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "19d8bb6f6b621d7655a8345b569bd4aaffe80788a70429759238a53e0345c7e2"
+      "sha256": "d8384a659f05807d8f4d3e2f524ad5981c20884c0e8f3f37963dc253c9001ba5"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-02.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "6e3fb89ce56efe4f065d71ff9d228c32ac840b40cf1fdefc61ecb8518e423388"
+      "sha256": "faf191ea701f7a1075efeefeadc7a0fe5f53df8e30917b02322083717ab4ce63"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-03.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "d5288015a084ec782e170f53ea4726a53702052f2ecdb450d789909ece9f4db2"
+      "sha256": "caf15ac520d04797ff6305d6267e83b0e603d0c5c40e53cefdd802d089678c81"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-04.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "c4eb143a865d38cc81c60c4860b2385cd1cc903f8c86ebb83b7c79cbd573a0ab"
+      "sha256": "f3d03d93a6f87d82725833ad456a6b9cd8118dc08d428bede95ace52b170d6c0"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-05.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "66f8e42aa1bd40338a16073f27390a1dc90a8f54617495992baf23291aa97bcf"
+      "sha256": "2a151700c84dd6832664d4e6509321f62339fa65f4f40042c8532e5e8522b219"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05-brilliant-06.html",
       "scope": 7,
       "mode": "assessment",
       "questions": 8,
-      "sha256": "08f88ecfc51eed2381ef33d339c9f60b2f06ac25282ded22a4bfb79e0225aa40"
+      "sha256": "dd96edeaf74bd7994cd73a3760a9032482bfdbcae61ed0694bfddfb2bf0ac049"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N8.4/TAB05.html",
@@ -1395,168 +1396,168 @@
       "scope": 8,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "e6b8a7ade3222aeaa9b00e3c4caa7d97a3221841ceee164d9b1dff51400d835b"
+      "sha256": "c785a7708351d555b8e1a7ce93a6142aae6d94e2d12958dc0386cda53cb860c9"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-02.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "0d0be5e1260fff891d535a9d31d28bef184d9c0180f3ba1891e39ce6fb68adb5"
+      "sha256": "c7ae04de0bfd6481dc0e42249f4e558d511cda0599b8e46f1e7c0d258b3d4958"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-03.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "2671a209985865b93d12d4b84b98543933a88bb3f2bd0858e35efd631624a686"
+      "sha256": "d5d5fbd411fedbc225a54ab2bd714b543a033bb2a7b908fb8c67e3377e19046a"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-04.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "2bda34bedd169cf966fab427d71f37bc1375b3d40f9e3f45f1da41190c6ab142"
+      "sha256": "288d4f50debe933f32c53c4a0223055e3cc919f276e108cce666577e537f6661"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-05.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "8fe4a6d19a88c49dcda3bf17f90cfcc9a151fbe0ced784c26b72593664b56ec7"
+      "sha256": "e51b74928a7d6b4a55a7ba447adfb6f1db52dc9b7cc0527e16c4fbb08568dc20"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-easy-06.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "322e3736f80304f782212fa378c6fa118b13db79040ac1fbfa9cc0f24196e053"
+      "sha256": "0f39fd663c52e4122a29adfb48bb12ebcd8865ff93ecf22897e7978ff7200573"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-01.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "f47400448c618ab257b23ee5cd6812e1e3c5a77b58bb0e6f427d87a91b4ec58c"
+      "sha256": "4197b06191ec273b2bb4f7dfb6e316133662518ce42b3afbf3e3f5f0491f8287"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-02.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "c44c9ba2516dc7a4cbdb390a23f21270d4d991c10985882b128da445caec3900"
+      "sha256": "2b75b43a6fbeb0ec5e36c0fa13b359b284f66eab3ddf8387787522b6a0584d40"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-03.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "08fb6480d1d18da3685271b046c1f78287f2e601dc9163dc22fcf1c2d03a962d"
+      "sha256": "78152555606a570a4d730d5562f62dee177c58a303eed25d756e77e711985fd3"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-04.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "759a74b32f8a717ea65e0f0ca3289adc6f68e187db863b3309eb04df326433ce"
+      "sha256": "95840ae4ce57d53cba146417038294c60d5b2de339b4e071ae8030e1336d6ab3"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-05.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "84c36193270bcabe56c36538b08f0547c1846dd90c8d7f54de31aede07752b76"
+      "sha256": "83b9bf24cac1bc3f36c033c5f2b7838174db599ef5774052a5e00de6ae72eb34"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-medium-06.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 12,
-      "sha256": "c5c8502d5441ad90eb5b419c7e48b93349e0c8ea0a43fb9df2fbf503274c0e90"
+      "sha256": "ed9a3b86876776586a2b6eeaaa9503c1b0c17774f1817323dd4a67f908dfed25"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-01.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "159f86c99b6b1ba70e88975ca0e25f1c7d70dc077220ab5efa4aeedaf947e147"
+      "sha256": "ad6cbfee54247a63d31e84f4229a71490628109da71592e0ebd78e297bfb6bce"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-02.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "866ace2fcdd56db992be1ef5980bda70390fc2569f6536a3bcfdf6414dfa8b7b"
+      "sha256": "76122fc962bb7d593ef1d818ac4016d20bdbe0d5d9c231ba691761cc1c317ac8"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-03.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "99f6d00ceb071e9ae1d4f10626034f479b2e7807ba1bb43b6f4b90c74f18f4b1"
+      "sha256": "6f5eb1dd4cdfddea21ff3776845c06089acf24a626430fcc90eb7db3d5535e54"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-04.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "4a7d22020b7282b036c2ff30939f5f9807a0845ea29226d862e3adcc3b50bdc4"
+      "sha256": "e7115a1f37848bdfa37df9ba248f1e3d06eb06c3a4933a4b1201061c5913ed30"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-05.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "e67b4b5c03d3436ff976fa96400a518f414502e0511293fe510ac8fe051b78d3"
+      "sha256": "25c8de7fb36d8f6ded5cfb364a7cff9d7c14b769b793660c618b23cfb7553f46"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-hard-06.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 11,
-      "sha256": "0252fa17124a51b182fb278438e84077cbe255123e7fe050f0ecca452057de56"
+      "sha256": "46355ea0e0cf7d2c72a4514285ab8c527580a0501e87cfa36bec1d2a6ba35539"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-01.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 9,
-      "sha256": "5b4943a85ac8d11e8fedbd73bc53471de3a5b0fbae825e1e30719ea9ed7cfdf8"
+      "sha256": "1f4ea4cbcef5eb48e255b81a3d4a94d91217c2aab6641e1f5ff57b652da630dc"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-02.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 9,
-      "sha256": "82b913f237d44681404ce779b671bd3acee92806b5104590f008ca5d6185ad2c"
+      "sha256": "a60dcc1ba846955f806daee7d151a4cbb4047e58906a48d21f9a2f8acef4525f"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-03.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 9,
-      "sha256": "b819cece1258dac4e2cfb8020f6a275365e8c599bea48d7923a361e11d434920"
+      "sha256": "f54a3b6b6634da7f45a7622461b7616392976cf45410a0e857ce4db7eaa9aa95"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-04.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 9,
-      "sha256": "2db91eb2625e9e403b8868a01e56c0232dcc9d1d0040a26cf8ec6f9f03f2b8ef"
+      "sha256": "e0daa89d5a33c3affda8a96e954b5a7959db97c2ecf2ef7b3b94f01761799b6f"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-05.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 9,
-      "sha256": "8d0ee130f33aac22e6dd1fba532715b3044736e2087528730f4e95d1b8e1a848"
+      "sha256": "29879b263a1b95131f39c354006daca1cf65a007ef8578623cab062ff2edeb9b"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05-brilliant-06.html",
       "scope": 8,
       "mode": "assessment",
       "questions": 9,
-      "sha256": "84e30f9cbb0c1c9d5c0569b570b3e6183023ac934564ac745bf0616a35d77aec"
+      "sha256": "399d9d111cf66aeee32c9a3aab411e86bc85159c3526c7d9ed3ccf928e6b4c02"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N9.4/TAB05.html",
@@ -1584,175 +1585,175 @@
       "scope": 0,
       "mode": "sample",
       "questions": 411,
-      "sha256": "5c08618b1c7a33d466cb9e55a67f2ee19818de9a90b67326acc863ab302aacef"
+      "sha256": "00f7eb7ad3aefc32fdfb48f24a6e119da3b38638bc3c0ad48cf5acf844b8691d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-01.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "c9cf6f8522b960cfc43230355e20945c4e432e2f7d9b9b0a3be398b0518dcc04"
+      "sha256": "842ae368aaad4a4e070a0896634648cee51826f63f58478310e8602caf295694"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-02.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "88f3758470375befcfa6a01335e8336160195370a440c5d79ebac8a11c6037c3"
+      "sha256": "18aa91ae6b542ef02809e51f8b88ef962065e859ab52c5311c24205306ca4e47"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-03.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "ae6addd370e1ce7de8eaad4bff8488d2e9e9e9e7f3618c99e745d1d2aecf2020"
+      "sha256": "faf68711ba799497c22dc2da0227efe096cb807610dffbd4a055d0f88ad66b01"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-04.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "8635433f0f30216ef02492d27bf49945d01f56d97a6cce68e15a244015d123f8"
+      "sha256": "9a40a77f2fcc845b1fec4258a0741b0ed447514686d70e9cfd0d86c0fa139438"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-05.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "4896b508d0df4f8dddd6c449f0f2440f5298d489e5358378e2b38d0eaa6f9905"
+      "sha256": "492bcf5ce3f25722b65531a20cf400704f08aa1c0dbce4d472c9a2549004204c"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-06.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "46e419cc4fe6440c775c5785980e6da6f4afb75cf59318e03fbca6d45f0dfda3"
+      "sha256": "c439890faaac714edd9e9e4f10703feb3fd81d700cfe6b9ae02adf3dd163ad9a"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-01.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "9429fe922bcf98271bf346514b92b7c5763dddd09b4e56f79b2c437c32b1bba6"
+      "sha256": "a6f48109f98b3fc391c01c5e290a4df0c5d5ce238121328d8795e11d52b774ef"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-02.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "779352a8b44b68adba48a67a5dd0fdf504bbd4fd21f33a6b04180e319c23c64f"
+      "sha256": "b4065a525ce27642ad125f90fa2d6beae2162b088d36b540b63ddcf570c0032d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-03.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "69f2dd07c4bbdad19979e3721ab00b0589bed2dff88bdccb8d21eece927d77fb"
+      "sha256": "43a8dc6661c8d3ee2329c4882b171ce0b82f7220607f302eaeee833cbfd3a380"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-04.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "e78a3993d52fa76f94a31f1301663fa8018ec3fbdbde2771489483187ccf7b4f"
+      "sha256": "d90d57ee038ca86b32051c673de476a24e2bf02749ee032a5a6109e04adf4608"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-05.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "dac04d51761122512279348791a2e2777975ffd62d98e4d2bad7a6ff1783f75c"
+      "sha256": "81b86f8a77b7bc8ee2549fe9f149a1771b1d21cba541798dfb190ac4af77eba6"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-medium-06.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "b1f650fcd9d40c4d2befdded821c950b501383f96e77e7ec62732b4bda02d517"
+      "sha256": "e5e6547794c16e29e7a5af8f7c872fa941c90a03a56a2d17c2547cfac08378a5"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-01.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "b320487a139ee5bdb1a7cb0eca15dccfe505f2ce82d9c87ea97778fff24ca53e"
+      "sha256": "fd4b0e1bba0862e393dbbabc687ab46fa4b4db5eb4356081955d218915678862"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-02.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "0a6747f0108a6e48c6d0fe98fa6b0a1d7d41d5c1d8d87e6b2f08b7bc9f6413f5"
+      "sha256": "203bfef348f9898f0f16c35ddce1e3898678bf36825822f0a2b5bc5c6b5ff01f"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-03.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "7c3b380cbf113d781633656b423e54119676a0df4ee57c7e616b8bce4dea7b02"
+      "sha256": "62c9891170db9f377bcae1c6f3c29d69b5774f2f60d25fdfaf5a1f090ad485f2"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-04.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "df2c65e7c5780f78bac1635161130ce7a1a400fa4d62e23bf257ee81ee0914b2"
+      "sha256": "3a0a930adfd7d6a0384b4e97d5344bcec003a1ce8bce76618e3fb9b641c8ca9a"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-05.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "2f1115edae2c4a2b74c2bee6e4afde343bf905a92cb4381c8fe666be55577f89"
+      "sha256": "5b2ba8c09b310c3c967b678962d5c44ef8313017decd2a7881605adf290d2272"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-hard-06.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "82ed8f3673b354076bdfaba90b45f80b7789855e7bde90bcd7545469fac16c72"
+      "sha256": "822b6a83a64a629a50bfc8da901febe681593db5e3a362471077e8ad6e1c0388"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-01.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "87ec6a9c2ad65e10c452b6720e7d36dc82b14fde5c82a81b38e97c2d4d5d7ff9"
+      "sha256": "8e59d594804064199bfcf4040c47f99a3eedd39dbdabcbb3469a0aa037341e62"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-02.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "604a51e840a247f63bc33e65103ced1efbcbb025edfbda710347fb7610511e81"
+      "sha256": "3683a2c4998cb796dca4e8f78ed0314ec3cb750b1376ca56b4cd7886df90de63"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-03.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "d89700d8fa10e99b6bd83a6337c4e0e5f825fb12bf37a95686886fcf6d93cba7"
+      "sha256": "10b576b699f6e541e61b803a29c7447a0a57d1b2e20ac2696b4d9a5ac22f7364"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-04.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "0244c431859bac630584391a2b6da09d0d09d9093d415665828fed56393549f4"
+      "sha256": "d576fcf84bfe67a4f5e6c75a1f9f57c28e84c15896f950b44f3b09db15272e2b"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-05.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "9139172587a1bfcd59d1174fd5d7c99f3ebc55cad42d4819fe5d309498d7ede9"
+      "sha256": "45e9e4afe86605cf78806ca2c484f8034df0341f8f48fa533a4fc28b6a4b5bc9"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05-brilliant-06.html",
       "scope": 0,
       "mode": "final",
       "questions": 38,
-      "sha256": "7b80d8e6fcd015dc74fa32ed2362a6d170f33bce52d7f62f4da688904ace8a5b"
+      "sha256": "8134205e975162df31433df5648fe82ba04cdac684b4b6c715b98df1a43b3b5d"
     },
     {
       "path": "Bucket/Html-files/app/books/C905/N10.1/TAB05.html",
@@ -1806,7 +1807,10 @@
       "logicalAnswersReviewed": 264,
       "exactAutomaticAnswers": 216,
       "manualRubricsReviewed": 432,
-      "symbolicWorkedKeys": 264
+      "probabilityEventsEnumerated": 24,
+      "tangentLengthsIndependentlyChecked": 24,
+      "symbolicWorkedKeys": 264,
+      "pyramidNetDimensionsChecked": 24
     },
     "manualPolicy": "هیچ برهان، رسم یا پاسخ تشریحی با ادعای تصحیح ماشینی قطعی نمره نمی‌گیرد؛ نمرهٔ راه‌حل با خودارزیابی مرحله‌ای و برچسب نیاز به تأیید دبیر ثبت می‌شود.",
     "blueprintSource": "هماهنگ کشوری ریاضی نهم، نوبت صبح ۱۴۰۴/۰۳/۰۴"

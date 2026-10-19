@@ -85,6 +85,7 @@ async def main():
     await p.locator('[data-eye-set="'+str(eye)+'"]').click()
     assert await p.get_attribute('html','data-eye')==str(eye)
     assert await p.locator('[data-eye-set="'+str(eye)+'"]').get_attribute('aria-pressed')=='true'
+    await p.evaluate('''()=>{getComputedStyle(document.body).backgroundColor;return Promise.all(document.getAnimations().filter(a=>a.effect&&a.effect.getComputedTiming().iterations!==Infinity).map(a=>a.finished.catch(()=>{})))}''')
     before=await p.evaluate(palette);await p.emulate_media(color_scheme='dark');assert before==await p.evaluate(palette);await p.emulate_media(color_scheme='light')
    await p.locator('[data-eye-set="2"]').click();await p.locator('#motion-toggle').click();assert 'no-motion' in await p.locator('body').get_attribute('class')
    await p.locator('#motion-toggle').click();assert 'no-motion' not in await p.locator('body').get_attribute('class')
@@ -214,6 +215,6 @@ async def main():
   check('legacy state survives, failed storage is disclosed, browser drafts restore and a fresh native account does not inherit browser fallback')
   assert not errors,errors;assert not network,network;check('no JavaScript runtime errors and no external network requests during offline execution')
   await browser.close()
- report=dict(contentVersion='2026-10-18.book-1',browser='Chromium',pages=252,chapterExams=192,weightedFinalPapers=24,checks=CHECKS,passed=len(CHECKS),errors=errors,externalRequests=network,nativeBridge='mock using exact existing signatures; real Android device run is separate')
+ report=dict(contentVersion='2026-10-18.book-1',assessmentContentVersion='2026-10-19.qa-fix-1',browser='Chromium',pages=252,chapterExams=192,weightedFinalPapers=24,checks=CHECKS,passed=len(CHECKS),errors=errors,externalRequests=network,nativeBridge='mock using exact existing signatures; real Android device run is separate')
  (REPORT/'browser-tests.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print('PASS:',len(CHECKS),'integration groups, all 252 pages and 216 exams.',flush=True)
 if __name__=='__main__':asyncio.run(main())

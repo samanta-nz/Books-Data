@@ -1,0 +1,16 @@
+OK — all locked files intact
+PASS: chapter certificates: 2457 {'reviewed-fact': 378, 'number': 1680, 'set': 77, 'manual-review': 217, 'expression-options': 105}
+PASS: 24 final papers, exactly 20 marks, {'logicalAnswersReviewed': 264, 'exactAutomaticAnswers': 216, 'manualRubricsReviewed': 432, 'probabilityEventsEnumerated': 24, 'tangentLengthsIndependentlyChecked': 24, 'symbolicWorkedKeys': 264, 'pyramidNetDimensionsChecked': 24}
+OK — all locked files intact
+PASS: 392 independently enumerated answers; MCQ uniqueness; 4 manual rubrics.
+{"rawCount": 110, "duplicateCount": 67, "rejectedCount": 5, "retainedSourcePatterns": 38, "finalBankCount": 60, "difficulty": {"آسان": 14, "متوسط": 14, "دشوار": 18, "درخشان": 14}, "types": {"mcq": 5, "tf": 4, "short": 37, "set": 10, "essay": 4}, "flashcards": 28, "assessmentFiles": 24, "assessmentItems": 336}
+BUILT: 2 فصل ۲: عددهای حقیقی 49 bank questions; 22 cards; 270 exam parts
+BUILT: 3 فصل ۳: استدلال و اثبات در هندسه 57 bank questions; 26 cards; 306 exam parts
+BUILT: 4 فصل ۴: توان و ریشه 50 bank questions; 22 cards; 276 exam parts
+BUILT: 5 فصل ۵: عبارت‌های جبری 50 bank questions; 22 cards; 276 exam parts
+BUILT: 6 فصل ۶: خط و معادله‌های خطی 50 bank questions; 22 cards; 276 exam parts
+BUILT: 7 فصل ۷: عبارت‌های گویا 46 bank questions; 22 cards; 252 exam parts
+BUILT: 8 فصل ۸: حجم و مساحت 49 bank questions; 26 cards; 264 exam parts
+BUILT: 0 مرور جامع کل کتاب 411 bank questions; 190 cards; 912 exam parts
+OK — all locked files intact
+PASS: 252 standalone HTML files and the whole-book native menu.

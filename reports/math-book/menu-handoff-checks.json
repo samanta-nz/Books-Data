@@ -9,5 +9,13 @@
   "wholeBookPackCount": 1,
   "allHtmlBytesMatchValidatedOutput": true,
   "androidDeviceRun": false,
-  "externalSyncPerformed": false
+  "externalSyncPerformed": false,
+  "currentArchive": {
+    "sha256": "0614163cedecac99a367502c8c15a1e86454e68faeca9e0deb4d115df06b7b56",
+    "validatorReexecuted": true,
+    "htmlFiles": 28,
+    "themeFiles": 28,
+    "nativeIntegrationReexecuted": false,
+    "note": "Native bridge patch is byte-identical; earlier integration evidence retained separately. Corrected HTML/theme bytes were checked against current application assets."
+  }
 }
