@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.hamyareman.ir.platform.core.common.SchoolCalendarDateRuleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-19T06:23:56.386Z" hostname="f1f4de69e15f" time="0.012">
+  <properties/>
+  <testcase name="lunarMonthEndAndDisplacement" classname="com.hamyareman.ir.platform.core.common.SchoolCalendarDateRuleTest" time="0.006"/>
+  <testcase name="leapYearProgrammerDay" classname="com.hamyareman.ir.platform.core.common.SchoolCalendarDateRuleTest" time="0.001"/>
+  <testcase name="solarMovingRuleAndHistoricalDate" classname="com.hamyareman.ir.platform.core.common.SchoolCalendarDateRuleTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

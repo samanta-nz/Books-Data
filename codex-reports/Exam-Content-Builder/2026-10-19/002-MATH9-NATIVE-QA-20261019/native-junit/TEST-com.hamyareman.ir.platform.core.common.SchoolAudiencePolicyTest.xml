@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.hamyareman.ir.platform.core.common.SchoolAudiencePolicyTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-19T06:23:56.385Z" hostname="f1f4de69e15f" time="0.0">
+  <properties/>
+  <testcase name="religionGroupsIncludeOnlyEligibleBooks" classname="com.hamyareman.ir.platform.core.common.SchoolAudiencePolicyTest" time="0.0"/>
+  <testcase name="genderSupplementsPreserveTheSharedBook" classname="com.hamyareman.ir.platform.core.common.SchoolAudiencePolicyTest" time="0.0"/>
+  <testcase name="pilotAndStreamChoicesDoNotLeakBooks" classname="com.hamyareman.ir.platform.core.common.SchoolAudiencePolicyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

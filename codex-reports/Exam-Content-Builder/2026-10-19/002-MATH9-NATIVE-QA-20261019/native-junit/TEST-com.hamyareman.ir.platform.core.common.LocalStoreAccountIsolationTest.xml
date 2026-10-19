@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-19T06:23:31.874Z" hostname="f1f4de69e15f" time="24.504">
+  <properties/>
+  <testcase name="alreadyInitializedAccountIsPreservedAcrossUpgrade" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="1.482"/>
+  <testcase name="logoutCannotReadMigratedAccountLegacyData" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.038"/>
+  <testcase name="accountsStaySeparateAndReturningToARestoresItsDocument" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.04"/>
+  <testcase name="defaultStoreAuthKeysRemainGlobalAndContentRemainsScoped" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.045"/>
+  <testcase name="authPrefixInMathStoreIsStillScopedRatherThanGlobal" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.021"/>
+  <testcase name="guestClearAndRemoveNeverDeleteAccountOrLegacyData" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.037"/>
+  <testcase name="guestEditsSurviveStoreRecreationWithoutChangingAOrB" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.022"/>
+  <testcase name="typedLegacyValuesMigrateOnlyToTheirKnownOwner" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.033"/>
+  <testcase name="explicitlyBoundBlankOwnerDoesNotFollowSignedInAccount" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.016"/>
+  <testcase name="unattributedLegacyDataIsNotImportedByGuestOrNewAccount" classname="com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest" time="0.034"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

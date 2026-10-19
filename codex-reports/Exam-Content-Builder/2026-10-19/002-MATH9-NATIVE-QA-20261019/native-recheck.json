@@ -1,0 +1,100 @@
+{
+  "applicationCommit": "7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04",
+  "checkedAt": "2026-10-19T06:24:48.869401+00:00",
+  "commands": [
+    "./gradlew --no-daemon --max-workers=2 :core-common:testDebugUnitTest :core-common:verifyNoGradeDependencies :hamyar-app:mergeP09DebugAssets"
+  ],
+  "executorRole": "exam-content-builder",
+  "kind": "Author-side host recheck; not independent QA",
+  "unitTests": {
+    "tests": 44,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "suites": [
+    {
+      "suite": "com.hamyareman.ir.platform.core.common.BillingStatusTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.hamyareman.ir.platform.core.common.ConditionalCachePolicyTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.hamyareman.ir.platform.core.common.InternationalDateRuleTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.hamyareman.ir.platform.core.common.JalaliDateTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.hamyareman.ir.platform.core.common.LocalStoreAccountIsolationTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.hamyareman.ir.platform.core.common.PrivacyPolicyTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.hamyareman.ir.platform.core.common.RemoteObjectStatusTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.hamyareman.ir.platform.core.common.SchoolAudiencePolicyTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.hamyareman.ir.platform.core.common.SchoolCalendarDateRuleTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "gradeDependencyCheck": "PASS",
+  "assetMerge": "PASS",
+  "mergedHtmlByteMatches": 252,
+  "mergedThemeByteMatches": 252,
+  "menuAndRoutesByteMatches": true,
+  "fullApkBuild": "NOT_RUN",
+  "device": "NOT_RUN",
+  "emulator": "NOT_RUN",
+  "installedWebView": "NOT_RUN",
+  "independentQa": "PENDING_RETEST",
+  "browserTestsRerunInThisRevision": false,
+  "browserEvidenceReusedBecauseExactBytesUnchanged": true,
+  "initialAttempt": {
+    "status": "STOPPED_BY_AGENT_TO_REUSE_EXISTING_DEPENDENCY_CACHE",
+    "exit": 143,
+    "log": "native-recheck-initial.log",
+    "newAttemptCompleted": true
+  },
+  "sharedCoreReleaseGuard": "Reported FAIL before/after by app-development; future core-version upgrade required, not rerun by this role",
+  "verdict": "PASS_HOST_RECHECK_AND_ASSET_MERGE"
+}
