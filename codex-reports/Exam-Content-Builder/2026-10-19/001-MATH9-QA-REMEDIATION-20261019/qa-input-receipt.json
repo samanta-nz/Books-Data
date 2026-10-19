@@ -1,0 +1,20 @@
+{
+  "reportCommit": "367979b00c7e192615e1c141069952d20eaef670",
+  "reportPath": "codex-reports/Hamyar|code analyses/2026-10-19/001-MATH9-ALL-COMPLETION-20261018/QA_REPORT.json",
+  "packetSha256": "80662e13947ff8ef7312ab61210e4f0ea6b652ecf126a54aa48345aaa71422c8",
+  "schema": "PASS",
+  "allPackageFileHashes": "PASS",
+  "requestBinding": "PASS",
+  "manifestBinding": "PASS",
+  "inputDecision": "ACCEPTED",
+  "verdict": "FAIL",
+  "findingIds": [
+    "M9-QA-001",
+    "M9-QA-002",
+    "M9-QA-003",
+    "M9-QA-004",
+    "M9-QA-005"
+  ],
+  "transfer": "USER_REFERRED_GITHUB_FETCH",
+  "interChatTransport": "BLOCKED_NO_TRANSPORT"
+}

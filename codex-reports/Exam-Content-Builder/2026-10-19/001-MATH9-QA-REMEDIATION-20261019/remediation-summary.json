@@ -1,0 +1,116 @@
+{
+  "revision": "2026-10-19.qa-fix-1",
+  "previousContentCommit": "42362a5f6fc6ac429eb2d0dcc506ecc398822e12",
+  "previousApplicationCommit": "253e50cfe9487bead94ed97242ab08b0f8fed7b2",
+  "previousManifestSha256": "26e6293ae93647674aae3f6f84a61c4a6de31637aa0282897db6090d8b28699c",
+  "applicationCommit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+  "priorQaVerdict": "FAIL_VERIFIED",
+  "priorQaReportRetrieved": true,
+  "priorQaSummaryBindingMatchesRecordedRequest": true,
+  "retrievalNote": "Resolved by user-provided GitHub publication: all eleven package files, canonical packet hash, schema, original request and manifest were verified; see qa-input-receipt.json.",
+  "findings": [
+    {
+      "id": "M9-QA-001",
+      "reportedProblem": "Missing specific final-paper wrong-answer feedback",
+      "authorResolution": "Part-specific reasoning and case key displayed after finish; disclosed rubric guidance for manual parts.",
+      "regression": {
+        "automaticWrongFeedback": 480,
+        "manualFeedback": 432,
+        "preFinishHidden": true
+      },
+      "owner": "exam-content-builder",
+      "status": "AUTHOR_FIXED_PENDING_QA"
+    },
+    {
+      "id": "M9-QA-002",
+      "reportedProblem": "Identical questions repeated across versions and levels",
+      "authorResolution": "Remove limited parameter cycles and author applied cases for fixed questions; do not add variant copies to canonical count.",
+      "previousExtraRenderedInstancesByScope": {
+        "0": 572,
+        "1": 51,
+        "2": 46,
+        "3": 107,
+        "4": 99,
+        "5": 13,
+        "6": 18,
+        "7": 23,
+        "8": 45
+      },
+      "newExtraRenderedInstancesByScope": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      },
+      "owner": "exam-content-builder",
+      "status": "AUTHOR_FIXED_PENDING_QA"
+    },
+    {
+      "id": "M9-QA-004",
+      "authorResolution": "Only the original denominator zero is forbidden; x=-a is explicitly checked as allowed and evaluates to zero.",
+      "owner": "exam-content-builder",
+      "status": "AUTHOR_FIXED_PENDING_QA"
+    },
+    {
+      "id": "M9-QA-005",
+      "authorResolution": "Conventional signed terms in all final polynomial-division and chapter-three similarity cases.",
+      "owner": "exam-content-builder",
+      "status": "AUTHOR_FIXED_PENDING_QA"
+    },
+    {
+      "id": "M9-QA-003",
+      "owner": "app-development",
+      "status": "OPEN_CODE_REQUEST_PREPARED",
+      "reason": "The guest branch still reads basePrefs; no native source change made by this role."
+    }
+  ],
+  "changedHtml": 219,
+  "unchangedOtherHtml": 33,
+  "unchangedThemes": 252,
+  "canonicalQuestionCount": 411,
+  "canonicalKeysUnchanged": 411,
+  "canonicalPromptsCorrected": 2,
+  "unchangedCanonicalCards": 190,
+  "levels": 4,
+  "versionsPerLevel": 6,
+  "marksPerFinal": 20,
+  "sourceResearchUnchanged": true,
+  "authorTests": "PASS",
+  "independentRetest": "PENDING_RETEST",
+  "nativeSourceChanged": false,
+  "nativeUnitTests": {
+    "reexecuted": false,
+    "recordedTotal": 154,
+    "skipped": 2,
+    "failures": 0
+  },
+  "realAndroidDevice": "NOT_RUN",
+  "bucketSync": "NOT_RUN",
+  "apkRelease": "NOT_RUN",
+  "transport": "BLOCKED_NO_TRANSPORT",
+  "qaInputReceipt": {
+    "reportCommit": "367979b00c7e192615e1c141069952d20eaef670",
+    "reportPath": "codex-reports/Hamyar|code analyses/2026-10-19/001-MATH9-ALL-COMPLETION-20261018/QA_REPORT.json",
+    "packetSha256": "80662e13947ff8ef7312ab61210e4f0ea6b652ecf126a54aa48345aaa71422c8",
+    "schema": "PASS",
+    "allPackageFileHashes": "PASS",
+    "requestBinding": "PASS",
+    "manifestBinding": "PASS",
+    "inputDecision": "ACCEPTED",
+    "verdict": "FAIL",
+    "findingIds": [
+      "M9-QA-001",
+      "M9-QA-002",
+      "M9-QA-003",
+      "M9-QA-004",
+      "M9-QA-005"
+    ],
+    "transfer": "USER_REFERRED_GITHUB_FETCH",
+    "interChatTransport": "BLOCKED_NO_TRANSPORT"
+  }
+}

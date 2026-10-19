@@ -1,0 +1,34 @@
+{
+  "task_id": "MATH9-ALL-COMPLETION-20261018",
+  "publication": "GITHUB_ONLY",
+  "manifest_sha256": "96282a60db3d5640628bc4736b2fa6619c84fe0b8124b71a19cf2ee04fa8f495",
+  "manifest_commit": "c9ad9dd3485238c07ba672f924097d538c8530f9",
+  "content_commit": "2a19ac65bbc79f4ce21647c9bf463c6662f82b5b",
+  "application_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+  "prior_qa": "FAIL_VERIFIED",
+  "prior_qa_packet_sha256": "80662e13947ff8ef7312ab61210e4f0ea6b652ecf126a54aa48345aaa71422c8",
+  "author_content_fixes": "M9-QA-001/002/004/005_AUTHOR_PASS_PENDING_QA",
+  "native_finding": "M9-QA-003_OPEN",
+  "qa_retest": "PENDING_RETEST",
+  "device": "NOT_RUN",
+  "bucket_sync": "NOT_RUN",
+  "apk_release": "NOT_RUN",
+  "outbound_transport": "BLOCKED_NO_TRANSPORT",
+  "messages_sent": 0,
+  "remote_ack_received": false,
+  "qa_request_ref": {
+    "handoff_id": "QA-MATH9-ALL-20261018",
+    "revision": 2,
+    "packet_sha256": "10904e15016055bad27a19b868770a2293d4b02c25ee130fbf7a3bd6fee8b842"
+  },
+  "code_request_ref": {
+    "handoff_id": "CODE-MATH9-ACCOUNT-20261019",
+    "revision": 2,
+    "packet_sha256": "5dd09178afe120d7edf86c2a8ed398d4e60296f00bed15ecca7f0b0a160b852e"
+  },
+  "work_result_ref": {
+    "handoff_id": "RESULT-USER-MATH9-ALL-20261018",
+    "revision": 2,
+    "packet_sha256": "0409351d96d7489124b2776aed18d34e4a1766ecb602262051f0bb22f418715c"
+  }
+}

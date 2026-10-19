@@ -1,0 +1,23 @@
+{
+  "kind": "REPORT_PUBLICATION",
+  "role": "exam-content-builder",
+  "published_date": "2026-10-19",
+  "timezone": "UTC",
+  "created_at": "2026-10-19T05:55:58.493545+00:00",
+  "authority": "DIRECT_USER_REQUEST",
+  "report_root_url": "https://github.com/samanta-nz/Books-Data/tree/main/codex-reports/Exam-Content-Builder",
+  "package_url": "https://github.com/samanta-nz/Books-Data/tree/main/codex-reports/Exam-Content-Builder/2026-10-19/001-MATH9-QA-REMEDIATION-20261019",
+  "reference": "MATH9-QA-REMEDIATION-20261019",
+  "source_repository": "https://github.com/samanta-nz/Books-Data",
+  "source_branch": "codex/g9-math-whole-book",
+  "source_commit": "2ffdc5b02d6ee73d60765879cbdef2a663e18de5",
+  "source_directory": "reports/math-book/qa-fix-20261019",
+  "content_commit": "2a19ac65bbc79f4ce21647c9bf463c6662f82b5b",
+  "application_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+  "test_execution": "NO_NEW_TEST_RUN_REPORT_PUBLICATION_ONLY",
+  "qa_status": "PENDING_RETEST",
+  "native_finding": "M9-QA-003_OPEN",
+  "transport": "BLOCKED_NO_TRANSPORT",
+  "bucket_sync": "NOT_RUN",
+  "apk_release": "NOT_RUN"
+}
