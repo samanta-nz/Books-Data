@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "reviewed-fact": 54,
+    "number": 240,
+    "set": 11,
+    "manual-review": 31,
+    "expression-options": 15
+  },
+  "errors": [],
+  "total_bank_ch2_to8": 351,
+  "automatically_checked": 266,
+  "manual_review_needed": 85
+}

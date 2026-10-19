@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8765/Bucket/Html-files/app/books/C905/N10.1/TAB05-easy-01.html",
+  "before": {
+    "result_hidden": true,
+    "feedback_count": 0,
+    "events": [],
+    "storage": "پاسخ‌ها روی دستگاه، در اپ ذخیره شد."
+  },
+  "preconfirm": {
+    "result_hidden": true,
+    "events": []
+  },
+  "after": {
+    "feedback": "پاسخ نادرست\n\nپاسخ صحیح: درست\n\nبارم کسب‌شده: ۰ از ۰٫۲۵",
+    "result": "تصحیح پس از پایان آزمون\n\nامتیاز بخش قابل تصحیح خودکار: ۰ از ۶٫۵\n\n۰ از ۲۰\n\nدرصد بر پایهٔ بارم: ۰٪\n\nثبت نتیجه",
+    "events": [],
+    "error": {
+      "eventId": "mver92cy-1ub7ixwz:f00-final-l1-v1-p01-q01",
+      "questionId": "f00-final-l1-v1-p01-q01",
+      "familyId": "final-q01-p01",
+      "examId": "f00-tab05-easy-01",
+      "sessionId": "mver92cy-1ub7ixwz",
+      "grade": 9,
+      "book": "ریاضی نهم",
+      "bookCode": "C905",
+      "chapter": "فصل 2: عددهای حقیقی",
+      "chapterNumber": 2,
+      "lesson": "درست یا نادرست",
+      "topic": "درست یا نادرست",
+      "questionType": "tf",
+      "difficulty": "آسان",
+      "studentAnswer": "نادرست",
+      "correctAnswer": "درست",
+      "recordedAt": "2026-10-19T04:29:25.778Z",
+      "errorCategory": "نیاز به مرور درست یا نادرست"
+    }
+  }
+}

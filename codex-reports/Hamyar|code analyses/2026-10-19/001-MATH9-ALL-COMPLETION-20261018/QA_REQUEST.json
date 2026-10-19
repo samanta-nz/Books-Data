@@ -1,0 +1,333 @@
+{
+  "packet": {
+    "handoff_id": "QA-MATH9-ALL-20261018",
+    "revision": 1,
+    "task_id": "MATH9-ALL-COMPLETION-20261018",
+    "packet_type": "QA_REQUEST",
+    "from": {
+      "role_id": "exam-content-builder",
+      "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+      "host_id": "durable"
+    },
+    "to": {
+      "role_id": "qa-analyzer",
+      "thread_id": "01a144f7-5dfc-72e2-b905-b961a4bb4075",
+      "host_id": "durable"
+    },
+    "reply_to": {
+      "role_id": "exam-content-builder",
+      "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+      "host_id": "durable"
+    },
+    "in_reply_to": null,
+    "scope": {
+      "grade": 9,
+      "book": "ریاضی نهم",
+      "book_code": "C905",
+      "chapters": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "whole_book": true,
+      "levels": [
+        "آسان",
+        "متوسط",
+        "دشوار",
+        "درخشان"
+      ],
+      "versions_per_level": 6
+    },
+    "expected_action": "INDEPENDENT_QA_OF_FROZEN_ALL_MATH9_DELIVERY_AND_RETURN_QA_REPORT",
+    "origin_instruction_ref": "Direct user request in this chat: «پروسه قبلی را کامل کن برای همه ریاضی نهم». Scope and commit/push authorization persist from earlier user requests; no bucket upload or release authorized.",
+    "acceptance_criteria": [
+      "Bind QA_REPORT to the exact manifest SHA-256 and content/Application commits; retrieve actual artifact bytes.",
+      "Confirm eight chapter scopes plus whole book, 252 routes, 504 HTML/theme files, 216 independent exams and four levels with six versions per scope.",
+      "Review scientific correctness, sole valid MCQ answers, symbolic/numeric acceptance, difficulty and semantic dedup; numeric exam variants are not new canonical questions.",
+      "Compare source provenance and source-pattern deletion ledger; distinguish 411 authored objectives from source patterns and repeated whole-book pool.",
+      "Check template locked bytes, real per-file theme, preserved header/footer/tools, no top tabs or learner source section, Persian digits/Vazir, RTL/mobile and fixed system-independent palette.",
+      "Exercise wrong-answer feedback beneath the same sample question; inspect recorded question metadata, answer, correct key, timestamp and likely error category.",
+      "Verify no selftest correction, key, feedback, score or native result event before confirmed finish, including reload and saved drafts.",
+      "Verify each whole-book paper has 16 main questions, 38 parts, exact 20 marks and the verified morning-1404 blueprint; preserve weighted grading and partial marks.",
+      "Do not claim machine correctness for proof/drawing: inspect explicit self-assessment labels and rubrics, pending state, teacher-confirmation caveat.",
+      "Check actual Hamyar signatures, account/document state isolation, progress/exam ledger mapping and fallback honesty; API/backend must not be invented.",
+      "Review browser/native evidence as author evidence, with mocked bridge limitations; record actual device execution only if performed.",
+      "Return findings to exam-content-builder with affected artifact/question IDs and expected/actual; do not rebuild banks or apply duplicate menus."
+    ],
+    "rules": [
+      {
+        "path": "WORKFLOW_RULES.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "dd24ad2ba603c0e714cbfd5edbe0418fe54e95d696ec36a3e3fbb0b0367fd2c7"
+      },
+      {
+        "path": "HANDOFF.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ec0b47e279101b60f935150ef7167265f1dce1a7ea054eade94440667a95a834"
+      },
+      {
+        "path": "TEMPLATE_POLICY.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ec2401d3e833e0c78bb325f68e59ff262e618e0ce8cf8f0560405314fc946619"
+      },
+      {
+        "path": "AUDIO_POLICY.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ddec8d654f2f3b829e37fdba4e22ee1a54d263b5bffd5dc006ffc32209f4a1b8"
+      },
+      {
+        "path": "role-contracts/exam-content-builder.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "fb498a30431e26f3139fdb3207686dacbecbbe050e297628a92353ae0cdd92c5"
+      },
+      {
+        "path": "routes.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "bef925590465e3126a7deb818610d6889ed1f7334748a51717cb4ebe6e712e84"
+      },
+      {
+        "path": "registry.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "80b5a388a716c1547a3ffe2cd5cb4c265fde7d497dd55a30cd4dd8770f79237b"
+      },
+      {
+        "path": "TOKEN_POLICY.md",
+        "version": "2026-10-18.compact-1",
+        "sha256": "48849465a56131434a8810c36bedab3d3e8c0d0a54f17facf3f19ac398907fbf"
+      },
+      {
+        "path": "HANDOFF.schema.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "37588e25a94a8f97ea5d13295ec5c6dc0ef4f369784e0fb6163f7dc6e2640c20"
+      }
+    ],
+    "repositories": [
+      {
+        "url": "https://github.com/samanta-nz/Books-Data",
+        "branch": "codex/g9-math-whole-book",
+        "source_commit": "42362a5f6fc6ac429eb2d0dcc506ecc398822e12",
+        "role": "frozen-content-and-evidence"
+      },
+      {
+        "url": "https://github.com/samanta-nz/com.hamyareman.final",
+        "branch": "codex/g9-math-whole-book",
+        "source_commit": "253e50cfe9487bead94ed97242ab08b0f8fed7b2",
+        "role": "matching-application-source-and-bundled-assets"
+      },
+      {
+        "url": "https://github.com/samanta-nz/Books-Data",
+        "branch": "codex/g9-math-whole-book",
+        "source_commit": "d15af17b4fadd51c515898e37bd6b2501dd09a10",
+        "role": "frozen-full-delivery-manifest-and-author-audit"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "all-math9-manifest",
+        "kind": "FULL_CONTENT_MANIFEST",
+        "owner_role": "exam-content-builder",
+        "bytes": 313879,
+        "sha256": "26e6293ae93647674aae3f6f84a61c4a6de31637aa0282897db6090d8b28699c",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/d15af17b4fadd51c515898e37bd6b2501dd09a10/reports/math-book/final-delivery/all-files.manifest.json"
+        }
+      },
+      {
+        "artifact_id": "author-audit",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 1352,
+        "sha256": "df24505a6de474c7285c70a670555ba09bda2cede89856d551e22ad79dc3ca09",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/d15af17b4fadd51c515898e37bd6b2501dd09a10/reports/math-book/final-delivery/author-completion-audit.json"
+        }
+      },
+      {
+        "artifact_id": "full-delivery-guide",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 10056,
+        "sha256": "e40e28f7d0f8d518a8ca9a2d4b38321e68d3f39b10cbfb29a07ffc592568c5df",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/d15af17b4fadd51c515898e37bd6b2501dd09a10/reports/math-book/final-delivery/START_HERE_ALL_MATH9.md"
+        }
+      },
+      {
+        "artifact_id": "research-and-quality-report",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 22802,
+        "sha256": "012bede9e048b22ec3d96ddf186c80b9e0e799ac69db074ad8f2a43aadecd3a2",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/d15af17b4fadd51c515898e37bd6b2501dd09a10/reports/math-book/README.md"
+        }
+      },
+      {
+        "artifact_id": "direct-user-order",
+        "kind": "CAPTURED_DIRECT_REQUEST",
+        "owner_role": "exam-content-builder",
+        "bytes": 5259,
+        "sha256": "1feb0c5766303ee778186fd1b2be726f869dcab661ef309314cc44c96b8fa6a2",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/d15af17b4fadd51c515898e37bd6b2501dd09a10/reports/math-book/final-delivery/USER_WORK_ORDER.json"
+        }
+      },
+      {
+        "artifact_id": "rules-locator",
+        "kind": "RULES_SOURCE",
+        "owner_role": "exam-content-builder",
+        "bytes": 602,
+        "sha256": "39bbe54fc236c6cb4975fe545130e888ea40da69ef846759f5e033d1094490b1",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/d15af17b4fadd51c515898e37bd6b2501dd09a10/reports/math-book/final-delivery/rules-source.json"
+        }
+      }
+    ],
+    "mapping": {
+      "manifest_path": "reports/math-book/final-delivery/all-files.manifest.json",
+      "routes_path": "reports/math-book/routes.json",
+      "application_routes": "grades/g09/src/main/assets/content/math-practice-routes.json",
+      "existing_routes": 252,
+      "duplicate_menu_creation": false,
+      "manifest_sha256": "26e6293ae93647674aae3f6f84a61c4a6de31637aa0282897db6090d8b28699c"
+    },
+    "dependencies": [
+      {
+        "id": "author-verification",
+        "requirement": "REQUIRED",
+        "status": "PASS",
+        "owner": {
+          "role_id": "exam-content-builder",
+          "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+          "host_id": "durable"
+        },
+        "evidence": "author-audit"
+      },
+      {
+        "id": "installed-app-compatibility",
+        "requirement": "REQUIRED_FOR_RUNTIME_ACTIVATION",
+        "status": "NOT_RUN",
+        "owner": {
+          "role_id": "app-development",
+          "thread_id": "01a14fd8-c537-7154-b31b-4d057bf4a07b",
+          "host_id": "durable"
+        },
+        "evidence": null
+      },
+      {
+        "id": "audio",
+        "requirement": "N/A",
+        "status": "NOT_REQUESTED",
+        "owner": {
+          "role_id": "exam-content-builder",
+          "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+          "host_id": "durable"
+        },
+        "evidence": "No audio requested in this batch."
+      }
+    ],
+    "validation": [
+      {
+        "kind": "AUTHOR_VERIFICATION",
+        "verdict": "PASS",
+        "manifest_sha256": "26e6293ae93647674aae3f6f84a61c4a6de31637aa0282897db6090d8b28699c",
+        "content_commit": "42362a5f6fc6ac429eb2d0dcc506ecc398822e12",
+        "application_commit": "253e50cfe9487bead94ed97242ab08b0f8fed7b2",
+        "evidence": "author-audit",
+        "note": "Fresh frozen-byte audit; existing browser/native evidence reused for identical payloads."
+      },
+      {
+        "kind": "INDEPENDENT_QA",
+        "verdict": "NOT_RUN",
+        "manifest_sha256": "26e6293ae93647674aae3f6f84a61c4a6de31637aa0282897db6090d8b28699c"
+      },
+      {
+        "kind": "REAL_ANDROID_DEVICE",
+        "verdict": "NOT_RUN",
+        "application_commit": "253e50cfe9487bead94ed97242ab08b0f8fed7b2"
+      }
+    ],
+    "payload": {
+      "manifest_sha256": "26e6293ae93647674aae3f6f84a61c4a6de31637aa0282897db6090d8b28699c",
+      "manifest_commit": "d15af17b4fadd51c515898e37bd6b2501dd09a10",
+      "requester": {
+        "role_id": "exam-content-builder",
+        "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+        "host_id": "durable"
+      },
+      "return_packet_type": "QA_REPORT",
+      "transport_status": "BLOCKED_NO_TRANSPORT",
+      "transport_evidence": "The active tool catalog exposes read/list/wait thread operations, but no official send_message_to_thread or equivalent outbound chat operation.",
+      "author_checks_complete": true,
+      "external_qa_receipt": null,
+      "question_counts": {
+        "chapters": 8,
+        "wholeBookScopes": 1,
+        "htmlFiles": 252,
+        "themeFiles": 252,
+        "independentExams": 216,
+        "chapterExams": 192,
+        "wholeBookFinalExams": 24,
+        "uniqueCanonicalQuestions": 411,
+        "uniqueCanonicalCards": 190
+      },
+      "source_reports": [
+        {
+          "path": "reports/math-book/research-audit.json",
+          "bytes": 141397,
+          "sha256": "43fa25d4fe828b0b894e46c6429fe17c48a609e79d333431e1b9dcb581644fa1",
+          "url": "https://raw.githubusercontent.com/samanta-nz/Books-Data/42362a5f6fc6ac429eb2d0dcc506ecc398822e12/reports/math-book/research-audit.json"
+        },
+        {
+          "path": "reports/math-book/semantic-review.md",
+          "bytes": 48369,
+          "sha256": "2e01bb786f4767b2e8d10a84ec90e09d468672b382d39f36d245931aa590fb79",
+          "url": "https://raw.githubusercontent.com/samanta-nz/Books-Data/42362a5f6fc6ac429eb2d0dcc506ecc398822e12/reports/math-book/semantic-review.md"
+        },
+        {
+          "path": "reports/math-book/research/final-blueprint.json",
+          "bytes": 1123,
+          "sha256": "0f53e8965b62e904c7a261f53443fb3de2feaceea00282638abfc7411eec016d",
+          "url": "https://raw.githubusercontent.com/samanta-nz/Books-Data/42362a5f6fc6ac429eb2d0dcc506ecc398822e12/reports/math-book/research/final-blueprint.json"
+        },
+        {
+          "path": "reports/math-f01/research-audit.json",
+          "bytes": 36260,
+          "sha256": "36172bca7e3347d4efd446bed37fa1392dc2419ce68bc521ed49068bb7949532",
+          "url": "https://raw.githubusercontent.com/samanta-nz/Books-Data/42362a5f6fc6ac429eb2d0dcc506ecc398822e12/reports/math-f01/research-audit.json"
+        },
+        {
+          "path": "reports/math-f01/semantic-review.md",
+          "bytes": 6768,
+          "sha256": "855a924d666b886265a137632b6f17b32e731eee7e927c66c0e3460f349a145f",
+          "url": "https://raw.githubusercontent.com/samanta-nz/Books-Data/42362a5f6fc6ac429eb2d0dcc506ecc398822e12/reports/math-f01/semantic-review.md"
+        }
+      ],
+      "not_authorized": [
+        "bucket upload",
+        "runtime activation",
+        "APK release"
+      ],
+      "device_status": "NOT_RUN"
+    }
+  },
+  "packet_sha256": "6a045db5a0e0f2eb2a01980b4aaa3579cafdb4419880855e44385c31b0deab75",
+  "state": {
+    "transport": "BLOCKED_NO_TRANSPORT",
+    "input_decision": "PENDING",
+    "work_status": "NOT_STARTED",
+    "publication": "GITHUB_ONLY",
+    "delivery_receipt": null
+  }
+}
