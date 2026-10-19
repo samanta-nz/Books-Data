@@ -1,0 +1,477 @@
+{
+  "packet": {
+    "handoff_id": "RESULT-USER-MATH9-ALL-20261018",
+    "revision": 2,
+    "task_id": "MATH9-ALL-COMPLETION-20261018",
+    "packet_type": "WORK_RESULT",
+    "from": {
+      "role_id": "exam-content-builder",
+      "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+      "host_id": "durable"
+    },
+    "to": {
+      "role_id": "user",
+      "thread_id": null,
+      "host_id": null
+    },
+    "reply_to": {
+      "role_id": "exam-content-builder",
+      "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+      "host_id": "durable"
+    },
+    "in_reply_to": {
+      "handoff_id": "USER-MATH9-ALL-20261018",
+      "revision": 1,
+      "packet_sha256": "331fd4a010574de5d62fa0faee8440de0cc5473c57344e32830986d80417ab6f"
+    },
+    "scope": {
+      "grade": 9,
+      "book": "ریاضی نهم",
+      "book_code": "C905",
+      "chapters": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "whole_book": true,
+      "levels": [
+        "آسان",
+        "متوسط",
+        "دشوار",
+        "درخشان"
+      ],
+      "versions_per_level": 6
+    },
+    "expected_action": "REVIEW_FOUR_AUTHOR_FIXES_AND_ROUTE_M9_QA_003_TO_APP_DEVELOPMENT",
+    "origin_instruction_ref": "Direct user request in this chat: «پروسه قبلی را کامل کن برای همه ریاضی نهم». Scope and commit/push authorization persist from earlier user requests; no bucket upload or release authorized.",
+    "acceptance_criteria": [
+      "Deliver all eight chapters plus whole-book review using existing verified content; do not create duplicate banks or menu entries.",
+      "Match all 252 HTML and 252 themes to the exact Application assets and current template locked bytes.",
+      "Retain post-finish selftest grading, one-sentence sample feedback, single-card flashcards, Persian digits, Vazir, fixed theme and existing Hamyar storage.",
+      "Keep all 24 whole-book papers at 20 marks and the verified national-paper form; clearly label manual self-assessment.",
+      "Publish complete GitHub paths, manifest and author verification; report independent QA, device execution, sync and release separately."
+    ],
+    "rules": [
+      {
+        "path": "WORKFLOW_RULES.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "dd24ad2ba603c0e714cbfd5edbe0418fe54e95d696ec36a3e3fbb0b0367fd2c7"
+      },
+      {
+        "path": "HANDOFF.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ec0b47e279101b60f935150ef7167265f1dce1a7ea054eade94440667a95a834"
+      },
+      {
+        "path": "TEMPLATE_POLICY.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ec2401d3e833e0c78bb325f68e59ff262e618e0ce8cf8f0560405314fc946619"
+      },
+      {
+        "path": "AUDIO_POLICY.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ddec8d654f2f3b829e37fdba4e22ee1a54d263b5bffd5dc006ffc32209f4a1b8"
+      },
+      {
+        "path": "role-contracts/exam-content-builder.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "fb498a30431e26f3139fdb3207686dacbecbbe050e297628a92353ae0cdd92c5"
+      },
+      {
+        "path": "routes.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "bef925590465e3126a7deb818610d6889ed1f7334748a51717cb4ebe6e712e84"
+      },
+      {
+        "path": "registry.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "80b5a388a716c1547a3ffe2cd5cb4c265fde7d497dd55a30cd4dd8770f79237b"
+      },
+      {
+        "path": "TOKEN_POLICY.md",
+        "version": "2026-10-18.compact-1",
+        "sha256": "48849465a56131434a8810c36bedab3d3e8c0d0a54f17facf3f19ac398907fbf"
+      },
+      {
+        "path": "HANDOFF.schema.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "37588e25a94a8f97ea5d13295ec5c6dc0ef4f369784e0fb6163f7dc6e2640c20"
+      }
+    ],
+    "repositories": [
+      {
+        "url": "https://github.com/samanta-nz/Books-Data",
+        "branch": "codex/g9-math-whole-book",
+        "source_commit": "2a19ac65bbc79f4ce21647c9bf463c6662f82b5b",
+        "role": "corrected-frozen-educational-files-and-evidence"
+      },
+      {
+        "url": "https://github.com/samanta-nz/Books-Data",
+        "source_commit": "c9ad9dd3485238c07ba672f924097d538c8530f9",
+        "role": "exact-manifest"
+      },
+      {
+        "url": "https://github.com/samanta-nz/com.hamyareman.final",
+        "branch": "codex/g9-math-whole-book",
+        "source_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+        "role": "matching-assets-with-unchanged-native-source",
+        "visibility": "private"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "corrected-manifest",
+        "kind": "MANIFEST",
+        "owner_role": "exam-content-builder",
+        "bytes": 324161,
+        "sha256": "96282a60db3d5640628bc4736b2fa6619c84fe0b8124b71a19cf2ee04fa8f495",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/c9ad9dd3485238c07ba672f924097d538c8530f9/reports/math-book/qa-fix-20261019/all-files.manifest.json"
+        }
+      },
+      {
+        "artifact_id": "current-author-audit",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 8757,
+        "sha256": "4e8e69f5e318eb0ba28940e9343bcd5453f951323dfefa35866e14847e8e969a",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/c9ad9dd3485238c07ba672f924097d538c8530f9/reports/math-book/qa-fix-20261019/author-completion-audit.json"
+        }
+      },
+      {
+        "artifact_id": "finding-resolutions",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 3975,
+        "sha256": "467a2ec9f65e848c354e26344f3f3a0d2760bf6e6fc87d7e0ab6dc4b392c08d9",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/2a19ac65bbc79f4ce21647c9bf463c6662f82b5b/reports/math-book/qa-fix-20261019/remediation-summary.json"
+        }
+      },
+      {
+        "artifact_id": "targeted-browser-regression",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 119610,
+        "sha256": "2ab815de278a826904aec35f6a1dec01456518f84d70e8c682c2fb85227ca4b1",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/2a19ac65bbc79f4ce21647c9bf463c6662f82b5b/reports/math-book/qa-fix-20261019/remediation-tests.json"
+        }
+      },
+      {
+        "artifact_id": "current-narrow-mobile",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 238,
+        "sha256": "4768f8297296a934e97f930b5fc08d0258546113b5cb2a2e699c4c353f101e83",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/2a19ac65bbc79f4ce21647c9bf463c6662f82b5b/reports/math-book/qa-fix-20261019/mobile-tests.json"
+        }
+      },
+      {
+        "artifact_id": "verified-prior-qa-receipt",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 627,
+        "sha256": "ad86c52b8a95d0aa66f0915fafc4dc4a6a8e61b1ece05fc2a375cae34345d5f8",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/2a19ac65bbc79f4ce21647c9bf463c6662f82b5b/reports/math-book/qa-fix-20261019/qa-input-receipt.json"
+        }
+      },
+      {
+        "artifact_id": "native-storage-code-request",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 7822,
+        "sha256": "07cf01b2773136c105c4dac4686233ac54a101f88e0f4104d5132acf086b38dd",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/e2de5770f997535716ea97e332400bb3d82b11cb/reports/math-book/qa-fix-20261019/CODE_REQUEST.json"
+        }
+      },
+      {
+        "artifact_id": "prior-qa-report",
+        "kind": "REPORT",
+        "owner_role": "qa-analyzer",
+        "bytes": 16094,
+        "sha256": "7dee76904ab820c64145316ccb56ad1639014ed8bcbf2c6b43704798ee087250",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/367979b00c7e192615e1c141069952d20eaef670/codex-reports/Hamyar%7Ccode%20analyses/2026-10-19/001-MATH9-ALL-COMPLETION-20261018/QA_REPORT.json"
+        }
+      }
+    ],
+    "mapping": {
+      "manifest_sha256": "96282a60db3d5640628bc4736b2fa6619c84fe0b8124b71a19cf2ee04fa8f495",
+      "manifest_commit": "c9ad9dd3485238c07ba672f924097d538c8530f9",
+      "source_to_asset": "All 252 bucketKey/assetPath pairs and themes are in corrected-manifest.",
+      "new_routes": 0,
+      "new_menu_entries": 0
+    },
+    "dependencies": [
+      {
+        "id": "prior-qa-input",
+        "requirement": "REQUIRED",
+        "status": "VERIFIED_FAIL",
+        "reference": {
+          "handoff_id": "QA-REPORT-MATH9-ALL-20261019",
+          "revision": 1,
+          "packet_sha256": "80662e13947ff8ef7312ab61210e4f0ea6b652ecf126a54aa48345aaa71422c8"
+        }
+      },
+      {
+        "id": "author-regression",
+        "requirement": "REQUIRED",
+        "status": "PASS",
+        "manifest_sha256": "96282a60db3d5640628bc4736b2fa6619c84fe0b8124b71a19cf2ee04fa8f495"
+      },
+      {
+        "id": "native-guest-legacy-isolation",
+        "requirement": "REQUIRED_FOR_FULL_ACCEPTANCE",
+        "status": "OPEN",
+        "finding": "M9-QA-003",
+        "owner": {
+          "role_id": "app-development",
+          "thread_id": "01a14fd8-c537-7154-b31b-4d057bf4a07b",
+          "host_id": "durable"
+        },
+        "request": {
+          "handoff_id": "CODE-MATH9-ACCOUNT-20261019",
+          "revision": 2,
+          "packet_sha256": "5dd09178afe120d7edf86c2a8ed398d4e60296f00bed15ecca7f0b0a160b852e"
+        }
+      },
+      {
+        "id": "real-device-test",
+        "requirement": "REQUIRED_FOR_RUNTIME_ACCEPTANCE",
+        "status": "NOT_RUN",
+        "owner": "app-development"
+      },
+      {
+        "id": "audio",
+        "requirement": "N/A",
+        "status": "NOT_REQUESTED"
+      }
+    ],
+    "validation": [
+      {
+        "kind": "AUTHOR_REMEDIATION",
+        "verdict": "PASS",
+        "manifest_sha256": "96282a60db3d5640628bc4736b2fa6619c84fe0b8124b71a19cf2ee04fa8f495",
+        "content_commit": "2a19ac65bbc79f4ce21647c9bf463c6662f82b5b",
+        "application_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+        "evidence": [
+          "current-author-audit",
+          "targeted-browser-regression",
+          "current-narrow-mobile"
+        ]
+      },
+      {
+        "kind": "INDEPENDENT_RETEST",
+        "verdict": "PENDING_RETEST"
+      },
+      {
+        "kind": "NATIVE_ISOLATION",
+        "finding": "M9-QA-003",
+        "verdict": "OPEN_NOT_FIXED_BY_EXAM_ROLE"
+      }
+    ],
+    "payload": {
+      "accepted_scope": [
+        "content findings M9-QA-001/002/004/005",
+        "verified published QA input",
+        "exact new frozen-pair manifest and handoffs"
+      ],
+      "completed_scope": [
+        "author content and grading checks",
+        "GitHub content/Application branch delivery",
+        "fresh full-scope frozen-byte audit",
+        "handoff preparation"
+      ],
+      "blocked_scope": [
+        "M9-QA-003 native guest/legacy isolation",
+        "independent retest on corrected bytes",
+        "actual Android device",
+        "outbound thread transmission",
+        "live activation and release"
+      ],
+      "author_work_status": "COMPLETED_FOR_CONTENT_FINDINGS",
+      "end_to_end_status": "PARTIAL_PENDING_NATIVE_FIX_AND_INDEPENDENT_RETEST",
+      "publication": "GITHUB_ONLY",
+      "counts": {
+        "chapters": 8,
+        "wholeBookScopes": 1,
+        "htmlFiles": 252,
+        "themeFiles": 252,
+        "independentExams": 216,
+        "chapterExams": 192,
+        "wholeBookFinalExams": 24,
+        "uniqueCanonicalQuestions": 411,
+        "uniqueCanonicalCards": 190
+      },
+      "difficulty_counts": {
+        "آسان": 96,
+        "متوسط": 111,
+        "دشوار": 126,
+        "درخشان": 78
+      },
+      "question_types": {
+        "mcq": 66,
+        "tf": 12,
+        "short_or_calculation": 277,
+        "set": 21,
+        "essay": 35
+      },
+      "research": {
+        "distinct_sources": 17,
+        "new_stage_sources": 11,
+        "previous_chapter1_sources": 7,
+        "shared_sources": 1,
+        "years": [
+          1401,
+          1402,
+          1403,
+          1404,
+          1405
+        ],
+        "confirmed_new_regions": [
+          "خوزستان",
+          "اصفهان",
+          "تهران",
+          "کشوری"
+        ],
+        "previous_region": "تبریز",
+        "unverified_attribution": "کرمانشاه",
+        "raw_ledgers": [
+          {
+            "stage": "chapter1",
+            "raw": 110,
+            "duplicates": 67,
+            "rejected": 5,
+            "source_patterns": 38,
+            "authored_questions": 60
+          },
+          {
+            "stage": "chapters2to8-and-final-blueprint",
+            "raw": 310,
+            "duplicates": 184,
+            "rejected": 9,
+            "source_patterns": 117,
+            "authored_candidates": 353,
+            "authored_semantic_merges": 2,
+            "authored_questions": 351
+          }
+        ],
+        "ledger_warning": "Two source ledgers are distinct stages, not a newly deduplicated union."
+      },
+      "storage": {
+        "interface": [
+          "Hamyar.loadState",
+          "Hamyar.saveState",
+          "Hamyar.recordItem",
+          "Hamyar.recordExam"
+        ],
+        "existingStore": "hamyar_math_html",
+        "accountScoped": true,
+        "newBackend": false
+      },
+      "outbound_requests": [
+        {
+          "handoff_id": "QA-MATH9-ALL-20261018",
+          "revision": 2,
+          "packet_sha256": "10904e15016055bad27a19b868770a2293d4b02c25ee130fbf7a3bd6fee8b842"
+        },
+        {
+          "handoff_id": "CODE-MATH9-ACCOUNT-20261019",
+          "revision": 2,
+          "packet_sha256": "5dd09178afe120d7edf86c2a8ed398d4e60296f00bed15ecca7f0b0a160b852e"
+        }
+      ],
+      "transport": "BLOCKED_NO_TRANSPORT",
+      "pending_owners": [
+        {
+          "role_id": "qa-analyzer",
+          "thread_id": "01a144f7-5dfc-72e2-b905-b961a4bb4075",
+          "host_id": "durable"
+        },
+        {
+          "role_id": "app-development",
+          "thread_id": "01a14fd8-c537-7154-b31b-4d057bf4a07b",
+          "host_id": "durable"
+        },
+        {
+          "role_id": "content-sync",
+          "thread_id": "01a14505-1829-728f-8deb-6c6ab6cb6071",
+          "host_id": "durable"
+        },
+        {
+          "role_id": "cycle-manager",
+          "thread_id": "01a14fa0-f223-74f9-9ad3-efee0cf1206a",
+          "host_id": "durable"
+        }
+      ],
+      "no_content_rebuild": false,
+      "no_menu_duplication": true,
+      "no_new_backend": true,
+      "no_runtime_upload_or_release": true,
+      "needs_confirmation": [
+        "Native fix CODE_DELIVERY and runtime tests",
+        "Independent QA_REPORT revision 2",
+        "Installed-device behavior"
+      ],
+      "author_corrected_findings": [
+        "M9-QA-001",
+        "M9-QA-002",
+        "M9-QA-004",
+        "M9-QA-005"
+      ],
+      "verified_prior_qa": {
+        "handoff_id": "QA-REPORT-MATH9-ALL-20261019",
+        "revision": 1,
+        "packet_sha256": "80662e13947ff8ef7312ab61210e4f0ea6b652ecf126a54aa48345aaa71422c8"
+      },
+      "remaining_native_finding": "M9-QA-003",
+      "qa_retest_request": {
+        "handoff_id": "QA-MATH9-ALL-20261018",
+        "revision": 2,
+        "packet_sha256": "10904e15016055bad27a19b868770a2293d4b02c25ee130fbf7a3bd6fee8b842"
+      },
+      "code_request": {
+        "handoff_id": "CODE-MATH9-ACCOUNT-20261019",
+        "revision": 2,
+        "packet_sha256": "5dd09178afe120d7edf86c2a8ed398d4e60296f00bed15ecca7f0b0a160b852e"
+      },
+      "manifest_sha256": "96282a60db3d5640628bc4736b2fa6619c84fe0b8124b71a19cf2ee04fa8f495",
+      "manifest_commit": "c9ad9dd3485238c07ba672f924097d538c8530f9",
+      "content_commit": "2a19ac65bbc79f4ce21647c9bf463c6662f82b5b",
+      "application_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+      "new_content_variant_generation": true,
+      "canonical_question_count": 411,
+      "canonical_keys_unchanged": 411,
+      "canonical_prompts_corrected": 2,
+      "changed_html_files": 219,
+      "unchanged_themes": 252,
+      "no_canonical_question_count_inflation": true
+    }
+  },
+  "packet_sha256": "0409351d96d7489124b2776aed18d34e4a1766ecb602262051f0bb22f418715c",
+  "state": {
+    "transport": "DRAFT",
+    "input_decision": "ACCEPTED",
+    "work_status": "PARTIAL",
+    "publication": "GITHUB_ONLY",
+    "delivery_receipt": null
+  }
+}

@@ -1,0 +1,364 @@
+{
+  "packet": {
+    "handoff_id": "QA-MATH9-ALL-20261018",
+    "revision": 2,
+    "task_id": "MATH9-ALL-COMPLETION-20261018",
+    "packet_type": "QA_REQUEST",
+    "from": {
+      "role_id": "exam-content-builder",
+      "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+      "host_id": "durable"
+    },
+    "to": {
+      "role_id": "qa-analyzer",
+      "thread_id": "01a144f7-5dfc-72e2-b905-b961a4bb4075",
+      "host_id": "durable"
+    },
+    "reply_to": {
+      "role_id": "exam-content-builder",
+      "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+      "host_id": "durable"
+    },
+    "in_reply_to": {
+      "handoff_id": "QA-REPORT-MATH9-ALL-20261019",
+      "revision": 1,
+      "packet_sha256": "80662e13947ff8ef7312ab61210e4f0ea6b652ecf126a54aa48345aaa71422c8"
+    },
+    "scope": {
+      "grade": 9,
+      "book": "ریاضی نهم",
+      "book_code": "C905",
+      "chapters": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "whole_book": true,
+      "levels": [
+        "آسان",
+        "متوسط",
+        "دشوار",
+        "درخشان"
+      ],
+      "versions_per_level": 6,
+      "author_corrected_findings": [
+        "M9-QA-001",
+        "M9-QA-002",
+        "M9-QA-004",
+        "M9-QA-005"
+      ],
+      "open_external_finding": "M9-QA-003"
+    },
+    "expected_action": "RETEST_CORRECTED_CONTENT_FINDINGS_ON_NEW_FROZEN_MANIFEST_AND_REPORT_NATIVE_BLOCKER_SEPARATELY",
+    "origin_instruction_ref": "The user forwarded the complete published QA_REPORT with five findings and asked to continue the grade-nine workflow. Incoming packet, package hashes, schema and prior-request binding were verified.",
+    "acceptance_criteria": [
+      "Bind QA_REPORT to the exact manifest SHA-256 and content/Application commits; retrieve actual artifact bytes.",
+      "Confirm eight chapter scopes plus whole book, 252 routes, 504 HTML/theme files, 216 independent exams and four levels with six versions per scope.",
+      "Review scientific correctness, sole valid MCQ answers, symbolic/numeric acceptance, difficulty and semantic dedup; numeric exam variants are not new canonical questions.",
+      "Compare source provenance and source-pattern deletion ledger; distinguish 411 authored objectives from source patterns and repeated whole-book pool.",
+      "Check template locked bytes, real per-file theme, preserved header/footer/tools, no top tabs or learner source section, Persian digits/Vazir, RTL/mobile and fixed system-independent palette.",
+      "Exercise wrong-answer feedback beneath the same sample question; inspect recorded question metadata, answer, correct key, timestamp and likely error category.",
+      "Verify no selftest correction, key, feedback, score or native result event before confirmed finish, including reload and saved drafts.",
+      "Verify each whole-book paper has 16 main questions, 38 parts, exact 20 marks and the verified morning-1404 blueprint; preserve weighted grading and partial marks.",
+      "Do not claim machine correctness for proof/drawing: inspect explicit self-assessment labels and rubrics, pending state, teacher-confirmation caveat.",
+      "Check actual Hamyar signatures, account/document state isolation, progress/exam ledger mapping and fallback honesty; API/backend must not be invented.",
+      "Review browser/native evidence as author evidence, with mocked bridge limitations; record actual device execution only if performed.",
+      "Return findings to exam-content-builder with affected artifact/question IDs and expected/actual; do not rebuild banks or apply duplicate menus.",
+      "Retest original M9-QA-001/002/004/005 IDs and affected variants; map findings to the verified original QA_REPORT.",
+      "All exact rendered question duplicates within each scope across its 24 exams must be absent, ignoring reordered choices; variants remain shared objectives and do not inflate 411 canonical questions.",
+      "Check differentiated probability, nested absolute-value and algebra tasks while preserving 16 main questions, 38 parts and exact 20 marks in each final paper.",
+      "Check that x=-a is allowed in (x²-a²)/(x-a), and all chapter-three/final polynomial signed terms are readable.",
+      "Review baseline/composite browser byte coverage: 252 pages covered, every one of 51 changed pages rerun, remaining 201 unchanged byte-for-byte.",
+      "Do not upgrade overall acceptance while M9-QA-003 is open or treat Chromium bridge mocks as installed-Application/device verification. A later native CODE_DELIVERY requires its exact new app commit to be frozen for QA."
+    ],
+    "rules": [
+      {
+        "path": "WORKFLOW_RULES.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "dd24ad2ba603c0e714cbfd5edbe0418fe54e95d696ec36a3e3fbb0b0367fd2c7"
+      },
+      {
+        "path": "HANDOFF.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ec0b47e279101b60f935150ef7167265f1dce1a7ea054eade94440667a95a834"
+      },
+      {
+        "path": "TEMPLATE_POLICY.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ec2401d3e833e0c78bb325f68e59ff262e618e0ce8cf8f0560405314fc946619"
+      },
+      {
+        "path": "AUDIO_POLICY.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ddec8d654f2f3b829e37fdba4e22ee1a54d263b5bffd5dc006ffc32209f4a1b8"
+      },
+      {
+        "path": "role-contracts/exam-content-builder.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "fb498a30431e26f3139fdb3207686dacbecbbe050e297628a92353ae0cdd92c5"
+      },
+      {
+        "path": "routes.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "bef925590465e3126a7deb818610d6889ed1f7334748a51717cb4ebe6e712e84"
+      },
+      {
+        "path": "registry.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "80b5a388a716c1547a3ffe2cd5cb4c265fde7d497dd55a30cd4dd8770f79237b"
+      },
+      {
+        "path": "TOKEN_POLICY.md",
+        "version": "2026-10-18.compact-1",
+        "sha256": "48849465a56131434a8810c36bedab3d3e8c0d0a54f17facf3f19ac398907fbf"
+      },
+      {
+        "path": "HANDOFF.schema.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "37588e25a94a8f97ea5d13295ec5c6dc0ef4f369784e0fb6163f7dc6e2640c20"
+      }
+    ],
+    "repositories": [
+      {
+        "url": "https://github.com/samanta-nz/Books-Data",
+        "branch": "codex/g9-math-whole-book",
+        "source_commit": "2a19ac65bbc79f4ce21647c9bf463c6662f82b5b",
+        "role": "corrected-frozen-educational-files-and-evidence"
+      },
+      {
+        "url": "https://github.com/samanta-nz/Books-Data",
+        "source_commit": "c9ad9dd3485238c07ba672f924097d538c8530f9",
+        "role": "exact-manifest"
+      },
+      {
+        "url": "https://github.com/samanta-nz/com.hamyareman.final",
+        "branch": "codex/g9-math-whole-book",
+        "source_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+        "role": "matching-assets-with-unchanged-native-source",
+        "visibility": "private"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "corrected-manifest",
+        "kind": "MANIFEST",
+        "owner_role": "exam-content-builder",
+        "bytes": 324161,
+        "sha256": "96282a60db3d5640628bc4736b2fa6619c84fe0b8124b71a19cf2ee04fa8f495",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/c9ad9dd3485238c07ba672f924097d538c8530f9/reports/math-book/qa-fix-20261019/all-files.manifest.json"
+        }
+      },
+      {
+        "artifact_id": "current-author-audit",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 8757,
+        "sha256": "4e8e69f5e318eb0ba28940e9343bcd5453f951323dfefa35866e14847e8e969a",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/c9ad9dd3485238c07ba672f924097d538c8530f9/reports/math-book/qa-fix-20261019/author-completion-audit.json"
+        }
+      },
+      {
+        "artifact_id": "finding-resolutions",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 3975,
+        "sha256": "467a2ec9f65e848c354e26344f3f3a0d2760bf6e6fc87d7e0ab6dc4b392c08d9",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/2a19ac65bbc79f4ce21647c9bf463c6662f82b5b/reports/math-book/qa-fix-20261019/remediation-summary.json"
+        }
+      },
+      {
+        "artifact_id": "targeted-browser-regression",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 119610,
+        "sha256": "2ab815de278a826904aec35f6a1dec01456518f84d70e8c682c2fb85227ca4b1",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/2a19ac65bbc79f4ce21647c9bf463c6662f82b5b/reports/math-book/qa-fix-20261019/remediation-tests.json"
+        }
+      },
+      {
+        "artifact_id": "current-narrow-mobile",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 238,
+        "sha256": "4768f8297296a934e97f930b5fc08d0258546113b5cb2a2e699c4c353f101e83",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/2a19ac65bbc79f4ce21647c9bf463c6662f82b5b/reports/math-book/qa-fix-20261019/mobile-tests.json"
+        }
+      },
+      {
+        "artifact_id": "verified-prior-qa-receipt",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 627,
+        "sha256": "ad86c52b8a95d0aa66f0915fafc4dc4a6a8e61b1ece05fc2a375cae34345d5f8",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/2a19ac65bbc79f4ce21647c9bf463c6662f82b5b/reports/math-book/qa-fix-20261019/qa-input-receipt.json"
+        }
+      },
+      {
+        "artifact_id": "native-storage-code-request",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 7822,
+        "sha256": "07cf01b2773136c105c4dac4686233ac54a101f88e0f4104d5132acf086b38dd",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/e2de5770f997535716ea97e332400bb3d82b11cb/reports/math-book/qa-fix-20261019/CODE_REQUEST.json"
+        }
+      },
+      {
+        "artifact_id": "prior-qa-report",
+        "kind": "REPORT",
+        "owner_role": "qa-analyzer",
+        "bytes": 16094,
+        "sha256": "7dee76904ab820c64145316ccb56ad1639014ed8bcbf2c6b43704798ee087250",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/367979b00c7e192615e1c141069952d20eaef670/codex-reports/Hamyar%7Ccode%20analyses/2026-10-19/001-MATH9-ALL-COMPLETION-20261018/QA_REPORT.json"
+        }
+      }
+    ],
+    "mapping": {
+      "manifest_sha256": "96282a60db3d5640628bc4736b2fa6619c84fe0b8124b71a19cf2ee04fa8f495",
+      "manifest_commit": "c9ad9dd3485238c07ba672f924097d538c8530f9",
+      "source_to_asset": "All 252 bucketKey/assetPath pairs and themes are in corrected-manifest.",
+      "new_routes": 0,
+      "new_menu_entries": 0
+    },
+    "dependencies": [
+      {
+        "id": "prior-qa-input",
+        "requirement": "REQUIRED",
+        "status": "VERIFIED_FAIL",
+        "reference": {
+          "handoff_id": "QA-REPORT-MATH9-ALL-20261019",
+          "revision": 1,
+          "packet_sha256": "80662e13947ff8ef7312ab61210e4f0ea6b652ecf126a54aa48345aaa71422c8"
+        }
+      },
+      {
+        "id": "author-regression",
+        "requirement": "REQUIRED",
+        "status": "PASS",
+        "manifest_sha256": "96282a60db3d5640628bc4736b2fa6619c84fe0b8124b71a19cf2ee04fa8f495"
+      },
+      {
+        "id": "native-guest-legacy-isolation",
+        "requirement": "REQUIRED_FOR_FULL_ACCEPTANCE",
+        "status": "OPEN",
+        "finding": "M9-QA-003",
+        "owner": {
+          "role_id": "app-development",
+          "thread_id": "01a14fd8-c537-7154-b31b-4d057bf4a07b",
+          "host_id": "durable"
+        },
+        "request": {
+          "handoff_id": "CODE-MATH9-ACCOUNT-20261019",
+          "revision": 2,
+          "packet_sha256": "5dd09178afe120d7edf86c2a8ed398d4e60296f00bed15ecca7f0b0a160b852e"
+        }
+      },
+      {
+        "id": "real-device-test",
+        "requirement": "REQUIRED_FOR_RUNTIME_ACCEPTANCE",
+        "status": "NOT_RUN",
+        "owner": "app-development"
+      },
+      {
+        "id": "audio",
+        "requirement": "N/A",
+        "status": "NOT_REQUESTED"
+      }
+    ],
+    "validation": [
+      {
+        "kind": "AUTHOR_REMEDIATION",
+        "verdict": "PASS",
+        "manifest_sha256": "96282a60db3d5640628bc4736b2fa6619c84fe0b8124b71a19cf2ee04fa8f495",
+        "content_commit": "2a19ac65bbc79f4ce21647c9bf463c6662f82b5b",
+        "application_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+        "evidence": [
+          "current-author-audit",
+          "targeted-browser-regression",
+          "current-narrow-mobile"
+        ]
+      },
+      {
+        "kind": "INDEPENDENT_RETEST",
+        "verdict": "PENDING_RETEST"
+      },
+      {
+        "kind": "NATIVE_ISOLATION",
+        "finding": "M9-QA-003",
+        "verdict": "OPEN_NOT_FIXED_BY_EXAM_ROLE"
+      }
+    ],
+    "payload": {
+      "manifest_sha256": "96282a60db3d5640628bc4736b2fa6619c84fe0b8124b71a19cf2ee04fa8f495",
+      "manifest_commit": "c9ad9dd3485238c07ba672f924097d538c8530f9",
+      "content_commit": "2a19ac65bbc79f4ce21647c9bf463c6662f82b5b",
+      "application_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+      "supersedes_request": {
+        "handoff_id": "QA-MATH9-ALL-20261018",
+        "revision": 1,
+        "packet_sha256": "6a045db5a0e0f2eb2a01980b4aaa3579cafdb4419880855e44385c31b0deab75"
+      },
+      "responds_to_qa": {
+        "handoff_id": "QA-REPORT-MATH9-ALL-20261019",
+        "revision": 1,
+        "packet_sha256": "80662e13947ff8ef7312ab61210e4f0ea6b652ecf126a54aa48345aaa71422c8"
+      },
+      "author_corrected_findings": [
+        "M9-QA-001",
+        "M9-QA-002",
+        "M9-QA-004",
+        "M9-QA-005"
+      ],
+      "remaining_native_finding": "M9-QA-003",
+      "code_request": {
+        "handoff_id": "CODE-MATH9-ACCOUNT-20261019",
+        "revision": 2,
+        "packet_sha256": "5dd09178afe120d7edf86c2a8ed398d4e60296f00bed15ecca7f0b0a160b852e"
+      },
+      "prior_overall_verdict": "FAIL",
+      "new_independent_verdict": "PENDING_RETEST",
+      "author_numeric_variants_are_not_new_canonical_questions": true,
+      "requester": {
+        "role_id": "exam-content-builder",
+        "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+        "host_id": "durable"
+      },
+      "return_packet_type": "QA_REPORT",
+      "not_authorized": [
+        "main merge",
+        "bucket sync",
+        "live activation",
+        "APK release"
+      ],
+      "transport": "BLOCKED_NO_TRANSPORT"
+    }
+  },
+  "packet_sha256": "10904e15016055bad27a19b868770a2293d4b02c25ee130fbf7a3bd6fee8b842",
+  "state": {
+    "transport": "BLOCKED_NO_TRANSPORT",
+    "input_decision": "PENDING",
+    "work_status": "NOT_STARTED",
+    "publication": "GITHUB_ONLY",
+    "delivery_receipt": null
+  }
+}

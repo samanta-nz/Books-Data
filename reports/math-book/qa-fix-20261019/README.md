@@ -2,7 +2,7 @@
 
 وضعیت مؤلف: اصلاح چهار یافتهٔ محتواییِ گزارش کامل و آزمون‌های مؤلف انجام شده است؛ **QA مستقل نسخهٔ اصلاحی هنوز PENDING_RETEST است**. نتیجهٔ FAIL نسخهٔ قبلی به‌صورت خودکار PASS نشده است.
 
-[manifest نسخهٔ اصلاحی](all-files.manifest.json) · [گزارش عددی اصلاح](remediation-summary.json) · [آزمون هدفمند](remediation-tests.json) · [درخواست QA مجدد](QA_REQUEST.r2.json) · [پرامپت مرحلهٔ بعد](QA_RETEST_PROMPT.md)
+[manifest نسخهٔ اصلاحی](all-files.manifest.json) · [گزارش عددی اصلاح](remediation-summary.json) · [آزمون هدفمند](remediation-tests.json) · [درخواست QA مجدد](QA_REQUEST.r2.json) · [پرامپت QA](QA_RETEST_PROMPT.md) · [پرامپت توسعهٔ اپ](APP_DEVELOPMENT_PROMPT.md)
 
 ## ورودی و دامنه
 
