@@ -1,0 +1,24 @@
+{
+  "kind": "NATIVE_DELIVERY_COMPATIBILITY_AND_QA_HANDOFF",
+  "role": "exam-content-builder",
+  "createdAt": "2026-10-19T06:25:01.025937+00:00",
+  "timezone": "UTC",
+  "reference": "MATH9-NATIVE-QA-20261019",
+  "parentTask": "MATH9-ALL-COMPLETION-20261018",
+  "reportRootUrl": "https://github.com/samanta-nz/Books-Data/tree/main/codex-reports/Exam-Content-Builder",
+  "packageUrl": "https://github.com/samanta-nz/Books-Data/tree/main/codex-reports/Exam-Content-Builder/2026-10-19/002-MATH9-NATIVE-QA-20261019",
+  "sourceCodeDeliveryCommit": "e733076ada32ff7385aad24d2a4da13f228dab5c",
+  "contentCommit": "2a19ac65bbc79f4ce21647c9bf463c6662f82b5b",
+  "applicationCommit": "7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04",
+  "manifestCommit": "21acf62d6e0edab2c64ac3954f81a55e612ce2f1",
+  "manifestSha256": "0cdab4dd22b2d4f2362c3b8960fc03f5e4c6ff5dd5f255adf16c781a03e908d8",
+  "qaRequestRef": {
+    "handoff_id": "QA-MATH9-ALL-20261018",
+    "revision": 3,
+    "packet_sha256": "ecaffd3a0f762af1d485260d97cbd908aecff495ccfbc2a4ef41b035dd2671e8"
+  },
+  "independentQa": "PENDING_RETEST",
+  "installedApp": "NOT_RUN",
+  "bucketSync": "NOT_RUN",
+  "apkRelease": "NOT_RUN"
+}

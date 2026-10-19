@@ -1,0 +1,2 @@
+PASS schemas/canonical hashes, all pinned packet/evidence bytes, unchanged 504 assets metadata, package checksums, local links, cross-request refs and report-only scope.
+QA r3 canonical SHA: ecaffd3a0f762af1d485260d97cbd908aecff495ccfbc2a4ef41b035dd2671e8

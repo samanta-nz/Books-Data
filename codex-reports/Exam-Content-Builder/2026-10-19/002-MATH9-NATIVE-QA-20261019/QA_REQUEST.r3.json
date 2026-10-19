@@ -1,0 +1,493 @@
+{
+  "packet": {
+    "handoff_id": "QA-MATH9-ALL-20261018",
+    "revision": 3,
+    "task_id": "MATH9-ALL-COMPLETION-20261018",
+    "packet_type": "QA_REQUEST",
+    "from": {
+      "role_id": "exam-content-builder",
+      "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+      "host_id": "durable"
+    },
+    "to": {
+      "role_id": "qa-analyzer",
+      "thread_id": "01a144f7-5dfc-72e2-b905-b961a4bb4075",
+      "host_id": "durable"
+    },
+    "reply_to": {
+      "role_id": "exam-content-builder",
+      "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+      "host_id": "durable"
+    },
+    "in_reply_to": {
+      "handoff_id": "QA-REPORT-MATH9-ALL-20261019",
+      "revision": 1,
+      "packet_sha256": "80662e13947ff8ef7312ab61210e4f0ea6b652ecf126a54aa48345aaa71422c8"
+    },
+    "scope": {
+      "grade": 9,
+      "book": "ریاضی نهم",
+      "book_code": "C905",
+      "chapters": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "whole_book": true,
+      "levels": [
+        "آسان",
+        "متوسط",
+        "دشوار",
+        "درخشان"
+      ],
+      "versions_per_level": 6,
+      "author_corrected_findings": [
+        "M9-QA-001",
+        "M9-QA-002",
+        "M9-QA-004",
+        "M9-QA-005"
+      ],
+      "native_corrected_finding": "M9-QA-003",
+      "native_status": "CODE_DELIVERED_HOST_TESTED_PENDING_INDEPENDENT_AND_DEVICE_QA"
+    },
+    "expected_action": "RETEST_ALL_FIVE_FINDINGS_USING_EXACT_CONTENT_AND_NATIVE_FIX_COMMITS_AND_REPORT_RUNTIME_EVIDENCE_SEPARATELY",
+    "origin_instruction_ref": "User manually returned the published CODE_DELIVERY and exact native-fix commit. Its request binding, canonical digest, evidence and unchanged content were verified by exam-content-builder; continue the existing user-authorized all-math-nine workflow.",
+    "acceptance_criteria": [
+      "Bind QA_REPORT to the exact manifest SHA-256 and content/Application commits; retrieve actual artifact bytes.",
+      "Confirm eight chapter scopes plus whole book, 252 routes, 504 HTML/theme files, 216 independent exams and four levels with six versions per scope.",
+      "Review scientific correctness, sole valid MCQ answers, symbolic/numeric acceptance, difficulty and semantic dedup; numeric exam variants are not new canonical questions.",
+      "Compare source provenance and source-pattern deletion ledger; distinguish 411 authored objectives from source patterns and repeated whole-book pool.",
+      "Check template locked bytes, real per-file theme, preserved header/footer/tools, no top tabs or learner source section, Persian digits/Vazir, RTL/mobile and fixed system-independent palette.",
+      "Exercise wrong-answer feedback beneath the same sample question; inspect recorded question metadata, answer, correct key, timestamp and likely error category.",
+      "Verify no selftest correction, key, feedback, score or native result event before confirmed finish, including reload and saved drafts.",
+      "Verify each whole-book paper has 16 main questions, 38 parts, exact 20 marks and the verified morning-1404 blueprint; preserve weighted grading and partial marks.",
+      "Do not claim machine correctness for proof/drawing: inspect explicit self-assessment labels and rubrics, pending state, teacher-confirmation caveat.",
+      "Check actual Hamyar signatures, account/document state isolation, progress/exam ledger mapping and fallback honesty; API/backend must not be invented.",
+      "Review browser/native evidence as author evidence, with mocked bridge limitations; record actual device execution only if performed.",
+      "Return findings to exam-content-builder with affected artifact/question IDs and expected/actual; do not rebuild banks or apply duplicate menus.",
+      "Retest original M9-QA-001/002/004/005 IDs and affected variants; map findings to the verified original QA_REPORT.",
+      "All exact rendered question duplicates within each scope across its 24 exams must be absent, ignoring reordered choices; variants remain shared objectives and do not inflate 411 canonical questions.",
+      "Check differentiated probability, nested absolute-value and algebra tasks while preserving 16 main questions, 38 parts and exact 20 marks in each final paper.",
+      "Check that x=-a is allowed in (x²-a²)/(x-a), and all chapter-three/final polynomial signed terms are readable.",
+      "Review baseline/composite browser byte coverage: 252 pages covered, every one of 51 changed pages rerun, remaining 201 unchanged byte-for-byte.",
+      "Retest M9-QA-003 on exact native fix commit with legacy upgrade A -> logout -> guest, A -> B, independent guest edits, store recreation and return to A. Inspect actual recorded document answers/errors and progress/ledger account mapping. Host Robolectric and Chromium mocks are not installed-Application/device proof; do not claim full runtime acceptance without device/emulator execution.",
+      "Check that the guest preference scope is dedicated, valid migrated account data and auth routing remain preserved, and unattributed legacy is not imported by guest/new account.",
+      "Review the supplied baseline 8/10 failures and fixed 44/44 host tests, plus the fresh author-side 44-test rerun and byte-exact Android asset merge; these remain author/developer evidence, not independent QA.",
+      "The shared-core release scope guard fails before/after the patch because a new core version is required for future release. Record this separately; do not bump release versions, merge app main, sync bucket or release APK under this QA request.",
+      "Publish QA_REPORT in your own dated/numbered report folder, with exact request revision/digest, manifest hash, source commits and per-finding expected/actual evidence. Return its real GitHub URL and commit/hash to exam-content-builder; no false interchat delivery receipt."
+    ],
+    "rules": [
+      {
+        "path": "WORKFLOW_RULES.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "dd24ad2ba603c0e714cbfd5edbe0418fe54e95d696ec36a3e3fbb0b0367fd2c7"
+      },
+      {
+        "path": "HANDOFF.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ec0b47e279101b60f935150ef7167265f1dce1a7ea054eade94440667a95a834"
+      },
+      {
+        "path": "TEMPLATE_POLICY.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ec2401d3e833e0c78bb325f68e59ff262e618e0ce8cf8f0560405314fc946619"
+      },
+      {
+        "path": "AUDIO_POLICY.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ddec8d654f2f3b829e37fdba4e22ee1a54d263b5bffd5dc006ffc32209f4a1b8"
+      },
+      {
+        "path": "role-contracts/exam-content-builder.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "fb498a30431e26f3139fdb3207686dacbecbbe050e297628a92353ae0cdd92c5"
+      },
+      {
+        "path": "routes.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "bef925590465e3126a7deb818610d6889ed1f7334748a51717cb4ebe6e712e84"
+      },
+      {
+        "path": "registry.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "80b5a388a716c1547a3ffe2cd5cb4c265fde7d497dd55a30cd4dd8770f79237b"
+      },
+      {
+        "path": "TOKEN_POLICY.md",
+        "version": "2026-10-18.compact-1",
+        "sha256": "48849465a56131434a8810c36bedab3d3e8c0d0a54f17facf3f19ac398907fbf"
+      },
+      {
+        "path": "HANDOFF.schema.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "37588e25a94a8f97ea5d13295ec5c6dc0ef4f369784e0fb6163f7dc6e2640c20"
+      }
+    ],
+    "repositories": [
+      {
+        "url": "https://github.com/samanta-nz/Books-Data",
+        "branch": "codex/g9-math-whole-book",
+        "source_commit": "2a19ac65bbc79f4ce21647c9bf463c6662f82b5b",
+        "role": "unchanged-frozen-educational-files-and-scientific-evidence"
+      },
+      {
+        "url": "https://github.com/samanta-nz/Books-Data",
+        "branch": "main",
+        "source_commit": "21acf62d6e0edab2c64ac3954f81a55e612ce2f1",
+        "role": "new-exact-manifest-and-native-compatibility-evidence"
+      },
+      {
+        "url": "https://github.com/samanta-nz/com.hamyareman.final",
+        "branch": "codex/fix-math-account-guest-isolation",
+        "source_commit": "7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04",
+        "role": "native-isolation-fix-with-identical-educational-assets",
+        "visibility": "private"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "all-files.manifest.json",
+        "kind": "MANIFEST",
+        "owner_role": "exam-content-builder",
+        "bytes": 329827,
+        "sha256": "0cdab4dd22b2d4f2362c3b8960fc03f5e4c6ff5dd5f255adf16c781a03e908d8",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/21acf62d6e0edab2c64ac3954f81a55e612ce2f1/codex-reports/Exam-Content-Builder/2026-10-19/002-MATH9-NATIVE-QA-20261019/all-files.manifest.json"
+        }
+      },
+      {
+        "artifact_id": "compatibility-verification.json",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 85387,
+        "sha256": "e8f6ebe280c4e667847f63a340118f664176845c628cf798f5891d7c1a2ebf69",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/21acf62d6e0edab2c64ac3954f81a55e612ce2f1/codex-reports/Exam-Content-Builder/2026-10-19/002-MATH9-NATIVE-QA-20261019/compatibility-verification.json"
+        }
+      },
+      {
+        "artifact_id": "code-input-receipt.json",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 1216,
+        "sha256": "fc794ea5e53ee8c668182e6d4520f311e5359179734e0000a2b6d7cecafb3f59",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/21acf62d6e0edab2c64ac3954f81a55e612ce2f1/codex-reports/Exam-Content-Builder/2026-10-19/002-MATH9-NATIVE-QA-20261019/code-input-receipt.json"
+        }
+      },
+      {
+        "artifact_id": "native-recheck.json",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 2817,
+        "sha256": "c3f34e3484fcbe21d8c5c247b2e6df525801dda5b48d94ee7f719907412fae32",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/21acf62d6e0edab2c64ac3954f81a55e612ce2f1/codex-reports/Exam-Content-Builder/2026-10-19/002-MATH9-NATIVE-QA-20261019/native-recheck.json"
+        }
+      },
+      {
+        "artifact_id": "native-recheck.log",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 4951,
+        "sha256": "fb606bd5a4ddf2dd3e4f7b9ff285c263547d4a56f0ce5be647dd7150edc6f863",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/21acf62d6e0edab2c64ac3954f81a55e612ce2f1/codex-reports/Exam-Content-Builder/2026-10-19/002-MATH9-NATIVE-QA-20261019/native-recheck.log"
+        }
+      },
+      {
+        "artifact_id": "locked-verification.txt",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 31,
+        "sha256": "c543961b282d3558e59f6e16a6b1fc2e2021a018582cceefd0856f66540f4a31",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/21acf62d6e0edab2c64ac3954f81a55e612ce2f1/codex-reports/Exam-Content-Builder/2026-10-19/002-MATH9-NATIVE-QA-20261019/locked-verification.txt"
+        }
+      },
+      {
+        "artifact_id": "finding-resolutions",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 3975,
+        "sha256": "467a2ec9f65e848c354e26344f3f3a0d2760bf6e6fc87d7e0ab6dc4b392c08d9",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/2a19ac65bbc79f4ce21647c9bf463c6662f82b5b/reports/math-book/qa-fix-20261019/remediation-summary.json"
+        }
+      },
+      {
+        "artifact_id": "targeted-browser-regression",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 119610,
+        "sha256": "2ab815de278a826904aec35f6a1dec01456518f84d70e8c682c2fb85227ca4b1",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/2a19ac65bbc79f4ce21647c9bf463c6662f82b5b/reports/math-book/qa-fix-20261019/remediation-tests.json"
+        }
+      },
+      {
+        "artifact_id": "current-narrow-mobile",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 238,
+        "sha256": "4768f8297296a934e97f930b5fc08d0258546113b5cb2a2e699c4c353f101e83",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/2a19ac65bbc79f4ce21647c9bf463c6662f82b5b/reports/math-book/qa-fix-20261019/mobile-tests.json"
+        }
+      },
+      {
+        "artifact_id": "verified-prior-qa-receipt",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 627,
+        "sha256": "ad86c52b8a95d0aa66f0915fafc4dc4a6a8e61b1ece05fc2a375cae34345d5f8",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/2a19ac65bbc79f4ce21647c9bf463c6662f82b5b/reports/math-book/qa-fix-20261019/qa-input-receipt.json"
+        }
+      },
+      {
+        "artifact_id": "native-storage-code-request",
+        "kind": "REPORT",
+        "owner_role": "exam-content-builder",
+        "bytes": 7822,
+        "sha256": "07cf01b2773136c105c4dac4686233ac54a101f88e0f4104d5132acf086b38dd",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/e2de5770f997535716ea97e332400bb3d82b11cb/reports/math-book/qa-fix-20261019/CODE_REQUEST.json"
+        }
+      },
+      {
+        "artifact_id": "prior-qa-report",
+        "kind": "REPORT",
+        "owner_role": "qa-analyzer",
+        "bytes": 16094,
+        "sha256": "7dee76904ab820c64145316ccb56ad1639014ed8bcbf2c6b43704798ee087250",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/367979b00c7e192615e1c141069952d20eaef670/codex-reports/Hamyar%7Ccode%20analyses/2026-10-19/001-MATH9-ALL-COMPLETION-20261018/QA_REPORT.json"
+        }
+      },
+      {
+        "artifact_id": "native-CODE_DELIVERY.json",
+        "kind": "REPORT",
+        "owner_role": "app-development",
+        "bytes": 17686,
+        "sha256": "303cc2dfb994328cd5542af3cab5c9a4b09f3763d6d581335aa338c0d8c8c5a6",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/e733076ada32ff7385aad24d2a4da13f228dab5c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/CODE_DELIVERY.json"
+        }
+      },
+      {
+        "artifact_id": "native-STORAGE_CONTRACT.md",
+        "kind": "REPORT",
+        "owner_role": "app-development",
+        "bytes": 2810,
+        "sha256": "517b4d2ae4be03f8a632b85e09863a0f195086e61c1484bf650756a454853e72",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/STORAGE_CONTRACT.md"
+        }
+      },
+      {
+        "artifact_id": "native-test-results.json",
+        "kind": "REPORT",
+        "owner_role": "app-development",
+        "bytes": 10829,
+        "sha256": "81e3379d951523f798ac40877e8aa08a73e751fc3d0f6962e58ed78a7199295c",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://raw.githubusercontent.com/samanta-nz/Books-Data/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/test-results.json"
+        }
+      }
+    ],
+    "mapping": {
+      "manifest_sha256": "0cdab4dd22b2d4f2362c3b8960fc03f5e4c6ff5dd5f255adf16c781a03e908d8",
+      "manifest_commit": "21acf62d6e0edab2c64ac3954f81a55e612ce2f1",
+      "source_to_asset": "All 252 bucketKey/assetPath pairs and same-name themes are in all-files.manifest.json; unchanged from content commit 2a19ac65bbc79f4ce21647c9bf463c6662f82b5b.",
+      "new_routes": 0,
+      "new_menu_entries": 0
+    },
+    "dependencies": [
+      {
+        "id": "prior-qa-input",
+        "requirement": "REQUIRED",
+        "status": "VERIFIED_FAIL",
+        "reference": {
+          "handoff_id": "QA-REPORT-MATH9-ALL-20261019",
+          "revision": 1,
+          "packet_sha256": "80662e13947ff8ef7312ab61210e4f0ea6b652ecf126a54aa48345aaa71422c8"
+        }
+      },
+      {
+        "id": "author-regression",
+        "requirement": "REQUIRED",
+        "status": "PASS",
+        "manifest_sha256": "0cdab4dd22b2d4f2362c3b8960fc03f5e4c6ff5dd5f255adf16c781a03e908d8"
+      },
+      {
+        "id": "native-guest-legacy-isolation",
+        "requirement": "REQUIRED_FOR_FULL_ACCEPTANCE",
+        "status": "CODE_DELIVERY_VERIFIED_HOST_TESTED_PENDING_RUNTIME_QA",
+        "finding": "M9-QA-003",
+        "owner": {
+          "role_id": "app-development",
+          "thread_id": "01a14fd8-c537-7154-b31b-4d057bf4a07b",
+          "host_id": "durable"
+        },
+        "request": {
+          "handoff_id": "CODE-MATH9-ACCOUNT-20261019",
+          "revision": 2,
+          "packet_sha256": "5dd09178afe120d7edf86c2a8ed398d4e60296f00bed15ecca7f0b0a160b852e"
+        },
+        "delivery": {
+          "handoff_id": "CODE-DELIVERY-MATH9-ACCOUNT-20261019",
+          "revision": 1,
+          "packet_sha256": "09bccbb7741bc7d9039aecbe1bf677b58c066fb9da5faaed96de5ceb1da91258"
+        },
+        "application_commit": "7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04"
+      },
+      {
+        "id": "real-device-test",
+        "requirement": "REQUIRED_FOR_RUNTIME_ACCEPTANCE",
+        "status": "NOT_RUN",
+        "owner": "app-development/qa-analyzer"
+      },
+      {
+        "id": "audio",
+        "requirement": "N/A",
+        "status": "NOT_REQUESTED"
+      },
+      {
+        "id": "future-shared-core-release",
+        "requirement": "REQUIRED_ONLY_FOR_FUTURE_RELEASE",
+        "status": "VERSION_UPGRADE_PENDING",
+        "owner": "cycle-manager/release",
+        "reason": "release scope guard fails on base and fixed code; no release authorized"
+      }
+    ],
+    "validation": [
+      {
+        "kind": "UNCHANGED_EDUCATIONAL_ASSET_COMPATIBILITY",
+        "verdict": "PASS",
+        "manifest_sha256": "0cdab4dd22b2d4f2362c3b8960fc03f5e4c6ff5dd5f255adf16c781a03e908d8",
+        "content_commit": "2a19ac65bbc79f4ce21647c9bf463c6662f82b5b",
+        "application_commit": "7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04",
+        "evidence": [
+          "compatibility-verification.json",
+          "locked-verification.txt"
+        ]
+      },
+      {
+        "kind": "AUTHOR_HOST_RECHECK",
+        "verdict": "PASS",
+        "tests": 44,
+        "failures": 0,
+        "evidence": [
+          "native-recheck.json",
+          "native-recheck.log"
+        ]
+      },
+      {
+        "kind": "INDEPENDENT_RETEST",
+        "verdict": "PENDING_RETEST"
+      },
+      {
+        "kind": "INSTALLED_APPLICATION_DEVICE",
+        "verdict": "NOT_RUN"
+      },
+      {
+        "kind": "NATIVE_ISOLATION",
+        "finding": "M9-QA-003",
+        "verdict": "CODE_DELIVERED_HOST_TESTED_PENDING_RUNTIME_QA"
+      }
+    ],
+    "payload": {
+      "manifest_sha256": "0cdab4dd22b2d4f2362c3b8960fc03f5e4c6ff5dd5f255adf16c781a03e908d8",
+      "manifest_commit": "21acf62d6e0edab2c64ac3954f81a55e612ce2f1",
+      "content_commit": "2a19ac65bbc79f4ce21647c9bf463c6662f82b5b",
+      "application_commit": "7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04",
+      "supersedes_request": {
+        "handoff_id": "QA-MATH9-ALL-20261018",
+        "revision": 2,
+        "packet_sha256": "10904e15016055bad27a19b868770a2293d4b02c25ee130fbf7a3bd6fee8b842"
+      },
+      "responds_to_qa": {
+        "handoff_id": "QA-REPORT-MATH9-ALL-20261019",
+        "revision": 1,
+        "packet_sha256": "80662e13947ff8ef7312ab61210e4f0ea6b652ecf126a54aa48345aaa71422c8"
+      },
+      "author_corrected_findings": [
+        "M9-QA-001",
+        "M9-QA-002",
+        "M9-QA-004",
+        "M9-QA-005"
+      ],
+      "code_request": {
+        "handoff_id": "CODE-MATH9-ACCOUNT-20261019",
+        "revision": 2,
+        "packet_sha256": "5dd09178afe120d7edf86c2a8ed398d4e60296f00bed15ecca7f0b0a160b852e"
+      },
+      "prior_overall_verdict": "FAIL",
+      "new_independent_verdict": "PENDING_RETEST",
+      "author_numeric_variants_are_not_new_canonical_questions": true,
+      "requester": {
+        "role_id": "exam-content-builder",
+        "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+        "host_id": "durable"
+      },
+      "return_packet_type": "QA_REPORT",
+      "not_authorized": [
+        "main merge",
+        "bucket sync",
+        "live activation",
+        "APK release"
+      ],
+      "transport": "BLOCKED_NO_TRANSPORT",
+      "native_code_delivery": {
+        "handoff_id": "CODE-DELIVERY-MATH9-ACCOUNT-20261019",
+        "revision": 1,
+        "packet_sha256": "09bccbb7741bc7d9039aecbe1bf677b58c066fb9da5faaed96de5ceb1da91258"
+      },
+      "native_finding_status": "M9-QA-003_CODE_DELIVERED_HOST_TESTED_PENDING_QA_AND_DEVICE",
+      "report_root_url": "https://github.com/samanta-nz/Books-Data/tree/main/codex-reports/Exam-Content-Builder",
+      "request_report_folder_url": "https://github.com/samanta-nz/Books-Data/tree/main/codex-reports/Exam-Content-Builder/2026-10-19/002-MATH9-NATIVE-QA-20261019",
+      "native_finding": "M9-QA-003",
+      "return_report_requirements": {
+        "exact_request_ref": true,
+        "per_finding_verdicts": [
+          "M9-QA-001",
+          "M9-QA-002",
+          "M9-QA-003",
+          "M9-QA-004",
+          "M9-QA-005"
+        ],
+        "device_or_emulator_status_required": true,
+        "report_url_and_commit_required": true,
+        "report_in_receiving_roles_own_folder": true
+      }
+    }
+  },
+  "packet_sha256": "ecaffd3a0f762af1d485260d97cbd908aecff495ccfbc2a4ef41b035dd2671e8",
+  "state": {
+    "transport": "BLOCKED_NO_TRANSPORT",
+    "input_decision": "PENDING",
+    "work_status": "NOT_STARTED",
+    "publication": "GITHUB_ONLY"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "task_id": "MATH9-ALL-COMPLETION-20261018",
+  "publication": "GITHUB_ONLY",
+  "manifest_sha256": "0cdab4dd22b2d4f2362c3b8960fc03f5e4c6ff5dd5f255adf16c781a03e908d8",
+  "manifest_commit": "21acf62d6e0edab2c64ac3954f81a55e612ce2f1",
+  "content_commit": "2a19ac65bbc79f4ce21647c9bf463c6662f82b5b",
+  "application_commit": "7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04",
+  "application_branch": "codex/fix-math-account-guest-isolation",
+  "verified_native_delivery": {
+    "handoff_id": "CODE-DELIVERY-MATH9-ACCOUNT-20261019",
+    "revision": 1,
+    "packet_sha256": "09bccbb7741bc7d9039aecbe1bf677b58c066fb9da5faaed96de5ceb1da91258"
+  },
+  "prior_qa": "FAIL_VERIFIED",
+  "author_content_fixes": "M9-QA-001/002/004/005_AUTHOR_PASS_PENDING_QA",
+  "native_finding": "M9-QA-003_CODE_DELIVERED_HOST_TESTED_PENDING_QA_AND_DEVICE",
+  "fresh_author_host_tests": 44,
+  "qa_retest": "PENDING_RETEST",
+  "device": "NOT_RUN",
+  "emulator": "NOT_RUN",
+  "full_apk_build": "NOT_RUN",
+  "bucket_sync": "NOT_RUN",
+  "apk_release": "NOT_RUN",
+  "shared_core_release_version": "PENDING_FUTURE_RELEASE_ORDER",
+  "outbound_transport": "BLOCKED_NO_TRANSPORT",
+  "messages_sent": 0,
+  "remote_ack_received": false,
+  "qa_request_ref": {
+    "handoff_id": "QA-MATH9-ALL-20261018",
+    "revision": 3,
+    "packet_sha256": "ecaffd3a0f762af1d485260d97cbd908aecff495ccfbc2a4ef41b035dd2671e8"
+  },
+  "work_result_ref": {
+    "handoff_id": "RESULT-USER-MATH9-ALL-20261018",
+    "revision": 3,
+    "packet_sha256": "d8bd9b33359b94bc40508cc799dd305e70e0c4cfc60d1ef17b896d0f0fa5838e"
+  },
+  "report_root_url": "https://github.com/samanta-nz/Books-Data/tree/main/codex-reports/Exam-Content-Builder",
+  "report_folder_url": "https://github.com/samanta-nz/Books-Data/tree/main/codex-reports/Exam-Content-Builder/2026-10-19/002-MATH9-NATIVE-QA-20261019"
+}
