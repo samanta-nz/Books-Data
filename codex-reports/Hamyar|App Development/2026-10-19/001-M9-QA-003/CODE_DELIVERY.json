@@ -1,0 +1,366 @@
+{
+  "packet": {
+    "handoff_id": "CODE-DELIVERY-MATH9-ACCOUNT-20261019",
+    "revision": 1,
+    "task_id": "MATH9-ALL-COMPLETION-20261018",
+    "packet_type": "CODE_DELIVERY",
+    "from": {
+      "role_id": "app-development",
+      "thread_id": "01a14fd8-c537-7154-b31b-4d057bf4a07b",
+      "host_id": "durable"
+    },
+    "to": {
+      "role_id": "exam-content-builder",
+      "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+      "host_id": "durable"
+    },
+    "reply_to": {
+      "role_id": "app-development",
+      "thread_id": "01a14fd8-c537-7154-b31b-4d057bf4a07b",
+      "host_id": "durable"
+    },
+    "in_reply_to": {
+      "handoff_id": "CODE-MATH9-ACCOUNT-20261019",
+      "revision": 2,
+      "packet_sha256": "5dd09178afe120d7edf86c2a8ed398d4e60296f00bed15ecca7f0b0a160b852e"
+    },
+    "scope": {
+      "finding_id": "M9-QA-003",
+      "grade": 9,
+      "book": "ریاضی نهم",
+      "component": "Shared LocalStore account/guest/legacy isolation",
+      "accepted_scope": [
+        "Native preference-routing fix and host regression tests",
+        "Immutable code/patch/evidence delivery"
+      ],
+      "blocked_scope": [
+        "Physical-device/emulator and installed-APK WebView/account verification"
+      ],
+      "content_generation": false
+    },
+    "expected_action": "RECEIVE_CODE_FIX_AND_REFRESH_MATCHING_CONTENT_MANIFEST_FOR_QA",
+    "origin_instruction_ref": "User manually forwarded CODE-MATH9-ACCOUNT-20261019/r2, explicitly limited the task to previous-account/guest isolation and authorized code commit/push plus reports in Books-Data main/codex-reports/Hamyar|App Development.",
+    "acceptance_criteria": [
+      "Inspect actual LocalStore.prefsFor and enableAccountIsolation: a blank owner must not expose basePrefs left by account A legacy migration.",
+      "Preserve valid account A data and existing auth-key behavior; use the current storage architecture without inventing backend or API.",
+      "Add meaningful regression coverage for A -> logout -> guest, A -> B, guest edits not changing A, and returning to A after legacy migration.",
+      "Exercise actual hamyar_math_html keys and data-model documents; do not change or regenerate math banks, menus, themes or assessment assets.",
+      "Record exact resulting code commit, tests and device/emulator evidence; NOT_RUN for unexecuted device work, no substituted Chromium proof of native isolation.",
+      "Return CODE_DELIVERY in reply to this exact packet and requester, with commit/hash/artifacts and remaining dependencies; no main merge, bucket activation or APK release."
+    ],
+    "rules": [
+      {
+        "path": "/workspace/hamyar-workflow/WORKFLOW_RULES.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "dd24ad2ba603c0e714cbfd5edbe0418fe54e95d696ec36a3e3fbb0b0367fd2c7"
+      },
+      {
+        "path": "/workspace/hamyar-workflow/HANDOFF.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ec0b47e279101b60f935150ef7167265f1dce1a7ea054eade94440667a95a834"
+      },
+      {
+        "path": "/workspace/hamyar-workflow/TEMPLATE_POLICY.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ec2401d3e833e0c78bb325f68e59ff262e618e0ce8cf8f0560405314fc946619"
+      },
+      {
+        "path": "/workspace/hamyar-workflow/AUDIO_POLICY.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "ddec8d654f2f3b829e37fdba4e22ee1a54d263b5bffd5dc006ffc32209f4a1b8"
+      },
+      {
+        "path": "/workspace/hamyar-workflow/role-contracts/app-development.md",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "1c7269c5cb6b4d86a9c9449119dbbd2341feeb87bcc189624fecd443bede3c94"
+      },
+      {
+        "path": "/workspace/hamyar-workflow/routes.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "bef925590465e3126a7deb818610d6889ed1f7334748a51717cb4ebe6e712e84"
+      },
+      {
+        "path": "/workspace/hamyar-workflow/registry.json",
+        "version": "2026-10-18.contracts-2",
+        "sha256": "80b5a388a716c1547a3ffe2cd5cb4c265fde7d497dd55a30cd4dd8770f79237b"
+      },
+      {
+        "path": "/workspace/hamyar-workflow/TOKEN_POLICY.md",
+        "version": "2026-10-18.compact-1",
+        "sha256": "48849465a56131434a8810c36bedab3d3e8c0d0a54f17facf3f19ac398907fbf"
+      }
+    ],
+    "repositories": [
+      {
+        "url": "https://github.com/samanta-nz/com.hamyareman.final",
+        "branch": "codex/fix-math-account-guest-isolation",
+        "source_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+        "target_commit": "7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04",
+        "role": "runtime-source",
+        "push_verified": true
+      },
+      {
+        "url": "https://github.com/samanta-nz/Books-Data",
+        "branch": "main",
+        "source_commit": "f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c",
+        "role": "immutable-report-evidence"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "README.md",
+        "kind": "CODE_DELIVERY_EVIDENCE",
+        "owner_role": "app-development",
+        "bytes": 5747,
+        "sha256": "9c2b1cc815ee7b7baa3009c84c134adce33d0042260d5d2534d47edc09fe8381",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/README.md"
+        }
+      },
+      {
+        "artifact_id": "app-fix.patch",
+        "kind": "CODE_PATCH",
+        "owner_role": "app-development",
+        "bytes": 12019,
+        "sha256": "9a0c7be6126e666c4ddd8547293ed3050eee2a3fa263cea91231770fd21d99b7",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/app-fix.patch"
+        }
+      },
+      {
+        "artifact_id": "source-manifest.json",
+        "kind": "CODE_DELIVERY_EVIDENCE",
+        "owner_role": "app-development",
+        "bytes": 1457,
+        "sha256": "5408aa8c56c7b60556a1f1b22169daa5d89b8f090c1c12ba6b768fd3cd357f11",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/source-manifest.json"
+        }
+      },
+      {
+        "artifact_id": "STORAGE_CONTRACT.md",
+        "kind": "CODE_DELIVERY_EVIDENCE",
+        "owner_role": "app-development",
+        "bytes": 2810,
+        "sha256": "517b4d2ae4be03f8a632b85e09863a0f195086e61c1484bf650756a454853e72",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/STORAGE_CONTRACT.md"
+        }
+      },
+      {
+        "artifact_id": "contract-evidence.json",
+        "kind": "CODE_DELIVERY_EVIDENCE",
+        "owner_role": "app-development",
+        "bytes": 1991,
+        "sha256": "169e211da2feb6a7dfe64e6ed061c560404e34c46ea50777e6dace7144063aeb",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/contract-evidence.json"
+        }
+      },
+      {
+        "artifact_id": "content-integrity.json",
+        "kind": "CODE_DELIVERY_EVIDENCE",
+        "owner_role": "app-development",
+        "bytes": 678,
+        "sha256": "c4199f9d001c19b9c6aeddc09062fa348ef3cea1d048c4ad8117ce2fab727f64",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/content-integrity.json"
+        }
+      },
+      {
+        "artifact_id": "test-results.json",
+        "kind": "CODE_DELIVERY_EVIDENCE",
+        "owner_role": "app-development",
+        "bytes": 10829,
+        "sha256": "81e3379d951523f798ac40877e8aa08a73e751fc3d0f6962e58ed78a7199295c",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/test-results.json"
+        }
+      },
+      {
+        "artifact_id": "tests-baseline.log",
+        "kind": "CODE_DELIVERY_EVIDENCE",
+        "owner_role": "app-development",
+        "bytes": 4078,
+        "sha256": "acab601c591b58d73e4e520467c573606d325e82062b1fc7c4685df925e5bda2",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/tests-baseline.log"
+        }
+      },
+      {
+        "artifact_id": "tests-fixed.log",
+        "kind": "CODE_DELIVERY_EVIDENCE",
+        "owner_role": "app-development",
+        "bytes": 2547,
+        "sha256": "9ec7ce023c4f8da0f53a0f2d8ab1ba6d719b4afcee17827e39c06a52802a9142",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/tests-fixed.log"
+        }
+      },
+      {
+        "artifact_id": "devices.log",
+        "kind": "CODE_DELIVERY_EVIDENCE",
+        "owner_role": "app-development",
+        "bytes": 26,
+        "sha256": "36f15c2fe32964a6fbe902e914a47739d4e6304b0d3e812bf08096ff0419b7ae",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/devices.log"
+        }
+      },
+      {
+        "artifact_id": "release-guard-before.log",
+        "kind": "CODE_DELIVERY_EVIDENCE",
+        "owner_role": "app-development",
+        "bytes": 298,
+        "sha256": "eb8ad5e4edead40dd3790645ded14124bdba19c808eced908e220ab69b971d87",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/release-guard-before.log"
+        }
+      },
+      {
+        "artifact_id": "release-guard-after.log",
+        "kind": "CODE_DELIVERY_EVIDENCE",
+        "owner_role": "app-development",
+        "bytes": 298,
+        "sha256": "eb8ad5e4edead40dd3790645ded14124bdba19c808eced908e220ab69b971d87",
+        "locator": {
+          "kind": "git_blob",
+          "value": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/release-guard-after.log"
+        }
+      }
+    ],
+    "mapping": {
+      "content_route_changes": false,
+      "store": "hamyar_math_html",
+      "key_contract": "html:$kind:$packId",
+      "tested_key": "html:exam:C905_E00-SUM",
+      "schema": "hamyar-math-practice-1",
+      "tested_document": "f00-tab05-easy-01",
+      "guest_scope": "<storeName>__guest",
+      "account_scope_unchanged": "<storeName>__<StableIds.of(\"user\",owner)>",
+      "auth_behavior": "auth_* keys in default roozhayeman_local still use basePrefs",
+      "content_integrity_evidence": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/content-integrity.json"
+    },
+    "dependencies": [
+      {
+        "id": "matching-content-manifest",
+        "requirement": "REQUIRED_FOR_RETEST",
+        "status": "PENDING",
+        "owner": {
+          "role_id": "exam-content-builder",
+          "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+          "host_id": "durable"
+        },
+        "next_action": "Update application commit to the fixed exact commit after checking HTML/JS/IDs/routes/storage compatibility, then request matching QA."
+      },
+      {
+        "id": "native-device-verification",
+        "requirement": "REQUIRED_FOR_FULL_ACCEPTANCE",
+        "status": "NOT_RUN",
+        "owner": "app-development with QA retest",
+        "evidence": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/devices.log",
+        "next_action": "Exercise upgrade/legacy A -> logout -> guest, A -> B, guest edits and returning to A on a device/emulator build from the exact code commit."
+      }
+    ],
+    "validation": [
+      {
+        "criterion_index": 1,
+        "verdict": "PASS",
+        "expected": "Blank owner cannot read migrated A legacy state",
+        "actual": "Original LocalStore fails 8 of 10 new tests; fixed LocalStore passes all 10",
+        "evidence": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/test-results.json"
+      },
+      {
+        "criterion_index": 2,
+        "verdict": "PASS",
+        "expected": "Preserve known-owner data and auth routing",
+        "actual": "Migration, initialized account, typed values and auth tests pass; base data retained",
+        "evidence": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/test-results.json"
+      },
+      {
+        "criterion_index": 3,
+        "verdict": "PASS",
+        "expected": "Cover requested account/guest transitions",
+        "actual": "10 regression tests included in 44 passing core-common tests",
+        "evidence": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/tests-fixed.log"
+      },
+      {
+        "criterion_index": 4,
+        "verdict": "PASS",
+        "expected": "Exercise actual math key/schema and preserve assets",
+        "actual": "Real key/document schema fixture; all grade-nine and shared student asset tree IDs identical",
+        "evidence": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/content-integrity.json"
+      },
+      {
+        "criterion_index": 5,
+        "verdict": "PARTIAL",
+        "expected": "Exact commit, real test results and honest device status",
+        "actual": "Host tests complete; device/emulator/installed APK NOT_RUN",
+        "evidence": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/test-results.json"
+      },
+      {
+        "criterion_index": 6,
+        "verdict": "PARTIAL",
+        "expected": "Return exact requester delivery without unauthorized publication",
+        "actual": "Code branch and reports pushed; structured CODE_DELIVERY prepared for manual relay, no interchat transport available",
+        "evidence": "https://github.com/samanta-nz/Books-Data/blob/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003/README.md"
+      }
+    ],
+    "payload": {
+      "finding_id": "M9-QA-003",
+      "expected": "Guest cannot read or modify prior account answers/errors",
+      "actual": "Blank owner selects dedicated guest preferences; legacy copies only to matching nonblank owner",
+      "code_commit": "7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04",
+      "code_commit_url": "https://github.com/samanta-nz/com.hamyareman.final/commit/7e2a49abb94a0fb1db15e0dfa3ffa8a7177b4b04",
+      "code_branch": "codex/fix-math-account-guest-isolation",
+      "source_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+      "evidence_commit": "f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c",
+      "evidence_folder_url": "https://github.com/samanta-nz/Books-Data/tree/f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003",
+      "published_folder_url": "https://github.com/samanta-nz/Books-Data/tree/main/codex-reports/Hamyar%7CApp%20Development/2026-10-19/001-M9-QA-003",
+      "baseline_regression": {
+        "tests": 10,
+        "failures": 8
+      },
+      "fixed_core_common": {
+        "tests": 44,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "content_preserved": true,
+      "device_status": "NOT_RUN",
+      "full_application_build": "NOT_RUN",
+      "independent_qa": "PENDING",
+      "publication_scope_guard": "FAIL before and after this patch: shared changes require a new core version; release version/build validation belongs to a future release order",
+      "return_to": {
+        "role_id": "exam-content-builder",
+        "thread_id": "01a14554-1abb-75b6-82f8-184639ed4067",
+        "host_id": "durable"
+      },
+      "transport": "BLOCKED_NO_TRANSPORT",
+      "next_action": "Manually transfer CODE_DELIVERY and RETEST_PROMPT links to exam-content-builder; synchronize manifest with the fixed code commit and prepare same-version QA.",
+      "no_app_main_merge": true,
+      "no_bucket_sync": true,
+      "no_apk_release": true
+    }
+  },
+  "packet_sha256": "09bccbb7741bc7d9039aecbe1bf677b58c066fb9da5faaed96de5ceb1da91258",
+  "state": {
+    "transport": "BLOCKED_NO_TRANSPORT",
+    "input_decision": "ACCEPTED",
+    "work_status": "PARTIAL",
+    "publication": "GITHUB_ONLY",
+    "delivery_receipt": null
+  }
+}

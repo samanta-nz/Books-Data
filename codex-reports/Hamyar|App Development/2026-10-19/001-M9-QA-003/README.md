@@ -32,3 +32,9 @@
 اسکریپت واقعی `scripts/check-release-scope.py --baseline release/published.json --grades 4 5 6 7 8 9 10 11 12` در مبنا و پس از اصلاح با `Shared changes require a new core version` متوقف شد: [قبل](./release-guard-before.log)، [بعد](./release-guard-after.log). نسخهٔ انتشار عمداً در این اصلاح تعیین نشده است؛ تغییر LocalStore مشترک است و انتشار آتی به نسخهٔ هستهٔ تازه و اعتبارسنجی همهٔ پایه‌های مصرف‌کننده توسط مدیر/Release نیاز دارد. این بسته آمادهٔ انتشار APK اعلام نمی‌شود.
 
 هیچ merge در main اپ، bucket sync، فعال‌سازی زنده، APK یا backend منتشر نشده است. گزارش در GitHub ثبت می‌شود؛ transport بین چت‌ها `BLOCKED_NO_TRANSPORT` است و پذیرش گیرنده یا QA PASS ادعا نمی‌شود. لینک همین خروجی باید دستی به چت درخواست‌کننده منتقل شود؛ دستور بازگشت و بازآزمایی در `RETEST_PROMPT.md` ثبت خواهد شد.
+
+## تحویل و دستور ادامه
+
+[بستهٔ CODE_DELIVERY](./CODE_DELIVERY.json) — `CODE-DELIVERY-MATH9-ACCOUNT-20261019/r1`، packet SHA-256: `09bccbb7741bc7d9039aecbe1bf677b58c066fb9da5faaed96de5ceb1da91258`.
+
+[دستور آمادهٔ بازگشت به درخواست‌کننده و بازآزمایی](./RETEST_PROMPT.md) لینک واقعی خروجی، commit اپ و hash بسته را در خود دارد. شواهد این بسته در کامیت immutable `f9fd1d01fb197ab1b2be61ac01fdd4240a973c2c` مخزن Books-Data ثابت شده‌اند.
