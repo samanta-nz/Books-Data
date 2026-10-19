@@ -1,7 +1,7 @@
 {
   "packet": {
     "handoff_id": "CODE-MATH9-ACCOUNT-20261019",
-    "revision": 1,
+    "revision": 2,
     "task_id": "MATH9-ALL-COMPLETION-20261018",
     "packet_type": "CODE_REQUEST",
     "from": {
@@ -92,8 +92,9 @@
       {
         "url": "https://github.com/samanta-nz/com.hamyareman.final",
         "branch": "codex/g9-math-whole-book",
-        "source_commit": "253e50cfe9487bead94ed97242ab08b0f8fed7b2",
-        "note": "Native LocalStore is unchanged in the assessment-asset remediation; inspect current delivered branch and preserve its new HTML assets."
+        "source_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7",
+        "note": "Native LocalStore is unchanged in the assessment-asset remediation; inspect current delivered branch and preserve its new HTML assets.",
+        "qa_checked_native_commit": "253e50cfe9487bead94ed97242ab08b0f8fed7b2"
       }
     ],
     "artifacts": [
@@ -165,10 +166,16 @@
       },
       "preserve_content": true,
       "native_source_changed_by_requester": false,
-      "transport": "BLOCKED_NO_TRANSPORT"
+      "transport": "BLOCKED_NO_TRANSPORT",
+      "supersedes_draft": {
+        "handoff_id": "CODE-MATH9-ACCOUNT-20261019",
+        "revision": 1,
+        "packet_sha256": "702715d265f30b67c816312fa35014d0284c97b124879ec9b30c38836915a0e5"
+      },
+      "baseline_application_commit": "3e6e91dea23e2b373ec3c68d4b2cfc995569efd7"
     }
   },
-  "packet_sha256": "702715d265f30b67c816312fa35014d0284c97b124879ec9b30c38836915a0e5",
+  "packet_sha256": "5dd09178afe120d7edf86c2a8ed398d4e60296f00bed15ecca7f0b0a160b852e",
   "state": {
     "transport": "BLOCKED_NO_TRANSPORT",
     "input_decision": "PENDING",
