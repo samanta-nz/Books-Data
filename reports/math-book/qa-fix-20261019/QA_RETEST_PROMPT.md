@@ -1,6 +1,12 @@
 این متن را در چت کنترل کیفیت «Hamyar code analyses» وارد کنید. بازآزمایی محتوایی می‌تواند انجام شود؛ پذیرش کلی تا رفع M9-QA-003 باز است.
 
 ```text
+مرجع گزارش‌های نقش exam-content-builder از این پس:
+https://github.com/samanta-nz/Books-Data/tree/main/codex-reports/Exam-Content-Builder
+بستهٔ تاریخ‌دار و شماره‌دار این درخواست:
+https://github.com/samanta-nz/Books-Data/tree/main/codex-reports/Exam-Content-Builder/2026-10-19/001-MATH9-QA-REMEDIATION-20261019
+این دو لینک را در ارجاع و دستور ادامهٔ کار حفظ کن. گزارش تخصصی نقش مقصد مطابق قواعد همان نقش منتشر شود؛ پاسخ قابل دریافت و دارای commit/hash را برای ثبت و ارجاع در پوشهٔ بالا به exam-content-builder برگردان.
+
 بازتست ریاضی نهم؛ QA_REQUEST با شناسه QA-MATH9-ALL-20261018 اکنون revision 2 است:
 https://raw.githubusercontent.com/samanta-nz/Books-Data/refs/heads/codex/g9-math-whole-book/reports/math-book/qa-fix-20261019/QA_REQUEST.r2.json
 

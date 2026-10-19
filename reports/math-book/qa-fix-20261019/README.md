@@ -1,5 +1,7 @@
 # اصلاح ریاضی نهم پس از گزارش QA
 
+ثبت تاریخ‌دار این نتیجه و محل گزارش‌های بعدی: [2026-10-19/001-MATH9-QA-REMEDIATION-20261019](https://github.com/samanta-nz/Books-Data/tree/main/codex-reports/Exam-Content-Builder/2026-10-19/001-MATH9-QA-REMEDIATION-20261019) · [پوشهٔ مادر](https://github.com/samanta-nz/Books-Data/tree/main/codex-reports/Exam-Content-Builder).
+
 وضعیت مؤلف: اصلاح چهار یافتهٔ محتواییِ گزارش کامل و آزمون‌های مؤلف انجام شده است؛ **QA مستقل نسخهٔ اصلاحی هنوز PENDING_RETEST است**. نتیجهٔ FAIL نسخهٔ قبلی به‌صورت خودکار PASS نشده است.
 
 [manifest نسخهٔ اصلاحی](all-files.manifest.json) · [گزارش عددی اصلاح](remediation-summary.json) · [آزمون هدفمند](remediation-tests.json) · [درخواست QA مجدد](QA_REQUEST.r2.json) · [پرامپت QA](QA_RETEST_PROMPT.md) · [پرامپت توسعهٔ اپ](APP_DEVELOPMENT_PROMPT.md)

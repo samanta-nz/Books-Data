@@ -1,6 +1,12 @@
 این متن را در چت «Hamyar|App Development» وارد کنید.
 
 ```text
+مرجع گزارش‌های نقش exam-content-builder از این پس:
+https://github.com/samanta-nz/Books-Data/tree/main/codex-reports/Exam-Content-Builder
+بستهٔ تاریخ‌دار و شماره‌دار این درخواست:
+https://github.com/samanta-nz/Books-Data/tree/main/codex-reports/Exam-Content-Builder/2026-10-19/001-MATH9-QA-REMEDIATION-20261019
+این دو لینک را در ارجاع و دستور ادامهٔ کار حفظ کن. گزارش تخصصی نقش مقصد مطابق قواعد همان نقش منتشر شود؛ پاسخ قابل دریافت و دارای commit/hash را برای ثبت و ارجاع در پوشهٔ بالا به exam-content-builder برگردان.
+
 ادامهٔ گردش ریاضی نهم؛ نقش مقصد app-development است.
 اگر نقش هنوز راه‌اندازی نشده، START_HERE.md داخل بستهٔ واقعی زیر را بخوان و راه‌اندازی کن:
 https://github.com/samanta-nz/com.hamyareman.final/blob/main/Rules/app-development.rules.zip
