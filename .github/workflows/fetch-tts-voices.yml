@@ -23,27 +23,29 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install ffmpeg
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
-
-      - name: Install python deps
+      - name: Prepare and fetch voices
+        continue-on-error: true
+        env:
+          LOG: Bucket/Content/G09/g9-math/tools/voices/job.log
         run: |
+          mkdir -p Bucket/Content/G09/g9-math/tools/voices
+          exec > >(tee -a "$LOG") 2>&1
+          set -x
           python -m pip install --upgrade pip
           pip install torch --index-url https://download.pytorch.org/whl/cpu
-          pip install "transformers>=4.40" onnx onnxruntime onnxscript onnxconverter-common huggingface_hub "piper-tts>=1.8" numpy
+          pip install "transformers>=4.40" onnx onnxruntime onnxscript onnxconverter-common \
+                      huggingface_hub "piper-tts>=1.8" numpy scipy num2words
+          which ffmpeg || sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          cd Bucket/Content/G09/g9-math/tools
+          python fetch_voices.py
+          echo "[job] exit code: $?"
 
-      - name: Fetch and convert voices
-        working-directory: Bucket/Content/G09/g9-math/tools
-        run: |
-          set -o pipefail
-          python fetch_voices.py 2>&1 | tee /tmp/fetch.log || true
-          cp /tmp/fetch.log voices/fetch.log || true
-          tail -40 /tmp/fetch.log
-
-      - name: Commit voices
+      - name: Commit voices and log
+        if: always()
         run: |
           git config user.name "arena-agent"
           git config user.email "agent@arena.ai"
           git add -A Bucket/Content/G09/g9-math/tools/voices
           git commit -m "chore(voices): prepare Persian TTS voices [skip ci]" || echo "nothing to commit"
-          git push
+          git pull --rebase --autostash origin "$GITHUB_REF_NAME" || true
+          git push origin "HEAD:$GITHUB_REF_NAME"
