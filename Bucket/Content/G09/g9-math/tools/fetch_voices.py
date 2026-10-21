@@ -83,6 +83,8 @@ def fetch_piper() -> list[dict]:
 
         for entry in list(out):
             src = VOICES / entry["model"]
+            if src.stem.endswith("-int8"):
+                continue
             dst = src.with_name(src.stem + "-int8.onnx")
             quantize_dynamic(str(src), str(dst), weight_type=QuantType.QInt8)
             entry["model_int8"] = dst.name
@@ -122,7 +124,11 @@ def export_mms() -> dict | None:
             return self.inner(input_ids=input_ids, attention_mask=attention_mask).waveform
 
     wrapper = Wrapper(model)
-    dummy_ids = torch.randint(0, 50, (1, 24), dtype=torch.long)
+    vocab_size = int(getattr(model.config, "vocab_size", 0) or 0)
+    if vocab_size <= 0:
+        vocab_size = len(tokenizer)
+    log(f"[mms] vocab_size={vocab_size} sr={model.config.sampling_rate}")
+    dummy_ids = torch.randint(1, max(2, vocab_size - 1), (1, 24), dtype=torch.long)
     dummy_mask = torch.ones_like(dummy_ids)
     fp32_path = VOICES / "mms-fas.onnx"
     torch.onnx.export(
