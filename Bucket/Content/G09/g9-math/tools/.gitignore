@@ -1,2 +1,4 @@
+__pycache__/
+*.pyc
 .cache/
-voices/*.wav
+build-state.json
