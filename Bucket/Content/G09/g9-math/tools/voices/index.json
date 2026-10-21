@@ -1,0 +1,25 @@
+{
+  "voices": [
+    {
+      "engine": "piper",
+      "name": "ganji_adabi",
+      "model": "fa_IR-ganji_adabi-medium-int8.onnx",
+      "config": "fa_IR-ganji_adabi-medium.onnx.json",
+      "bytes": 19328932
+    },
+    {
+      "engine": "piper",
+      "name": "amir",
+      "model": "fa_IR-amir-medium-int8.onnx",
+      "config": "fa_IR-amir-medium.onnx.json",
+      "bytes": 19349586
+    },
+    {
+      "engine": "piper",
+      "name": "gyro",
+      "model": "fa_IR-gyro-medium-int8.onnx",
+      "config": "fa_IR-gyro-medium.onnx.json",
+      "bytes": 18708426
+    }
+  ]
+}
