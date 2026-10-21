@@ -5,21 +5,27 @@
       "name": "ganji_adabi",
       "model": "fa_IR-ganji_adabi-medium-int8.onnx",
       "config": "fa_IR-ganji_adabi-medium.onnx.json",
-      "bytes": 19328932
+      "bytes": 19328932,
+      "model_int8": "fa_IR-ganji_adabi-medium-int8-int8.onnx",
+      "bytes_int8": 19410177
     },
     {
       "engine": "piper",
       "name": "amir",
       "model": "fa_IR-amir-medium-int8.onnx",
       "config": "fa_IR-amir-medium.onnx.json",
-      "bytes": 19349586
+      "bytes": 19349586,
+      "model_int8": "fa_IR-amir-medium-int8-int8.onnx",
+      "bytes_int8": 19430831
     },
     {
       "engine": "piper",
       "name": "gyro",
       "model": "fa_IR-gyro-medium-int8.onnx",
       "config": "fa_IR-gyro-medium.onnx.json",
-      "bytes": 18708426
+      "bytes": 18708426,
+      "model_int8": "fa_IR-gyro-medium-int8-int8.onnx",
+      "bytes_int8": 18757682
     }
   ]
 }
