@@ -1,0 +1,19 @@
+name: probe-commit
+on:
+  push:
+    paths:
+      - ".github/workflows/probe-commit.yml"
+permissions:
+  contents: write
+jobs:
+  c:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          echo "probe $(date -u +%H:%M:%S)" >> Bucket/Content/G09/g9-math/tools/voices/probe.txt
+          git config user.name "arena-agent"
+          git config user.email "agent@arena.ai"
+          git add -A Bucket/Content/G09/g9-math/tools/voices
+          git commit -m "probe commit [skip ci]" || echo "nothing"
+          git push
