@@ -193,11 +193,39 @@ def list_lessons() -> list[Path]:
     return files
 
 
+def _save_state(results: list[dict]) -> None:
+    merged: dict[str, dict] = {}
+    if STATE.exists():
+        try:
+            for row in json.loads(STATE.read_text(encoding="utf-8")).get("results", []):
+                merged[row["file"]] = row
+        except Exception:  # noqa: BLE001
+            pass
+    for row in results:
+        merged[row["file"]] = row
+    STATE.write_text(
+        json.dumps({"updated": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                    "results": sorted(merged.values(), key=lambda x: x["file"])},
+                   ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+
 def write_report(results: list[dict]) -> None:
+    merged: dict[str, dict] = {}
+    if STATE.exists():
+        try:
+            old = json.loads(STATE.read_text(encoding="utf-8")).get("results", [])
+            for row in old:
+                merged[row["file"]] = row
+        except Exception:  # noqa: BLE001
+            pass
+    for row in results:
+        merged[row["file"]] = row
     lines = ["# گزارش ساخت روایت صوتی — ریاضی نهم", ""]
     lines.append("| فایل | خروجی | مدت | حجم | وضعیت |")
     lines.append("|---|---|---|---|---|")
-    for r in results:
+    for r in sorted(merged.values(), key=lambda x: x["file"]):
         dur = r.get("seconds")
         dur_s = f"{int(dur // 60)}:{int(dur % 60):02d}" if dur else "—"
         lines.append(
@@ -248,11 +276,7 @@ def main(argv: list[str] | None = None) -> int:
         dur_s = f"{int(dur // 60)}:{int(dur % 60):02d}" if dur else "—"
         print(f"    → {res['status']} {dur_s} {res.get('size_mb', '')} MB", flush=True)
 
-    STATE.write_text(
-        json.dumps({"updated": time.strftime("%Y-%m-%dT%H:%M:%S"), "results": results},
-                   ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
+    _save_state(results)
     write_report(results)
     print(f"پایان در {time.time() - t0:.0f} ثانیه")
     return 0

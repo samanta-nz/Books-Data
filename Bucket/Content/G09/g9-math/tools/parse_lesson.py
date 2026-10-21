@@ -30,7 +30,14 @@ _BOLD_TURN = re.compile(r"^\*\*(?P<speaker>فرسام|سروناز)\*\*\s*:?\s*(
 _PLAIN_TURN = re.compile(r"^(?P<speaker>فرسام|سروناز)\s*:\s*(?P<rest>.*)$")
 _PAUSE = re.compile(r"\[مکث(?:\s*(?P<kind>کوتاه|متوسط|بلند))?\]")
 
+# جملهٔ تکراری و بی‌معنای قالب در فایل‌های فصل ۱ (بیش از ۸۰۰ بار تکرار شده)
+_BOILERPLATE = {
+    "بذارید دلیلش رو روشن کنیم و این مرحله رو با دقت کامل بررسی کنیم",
+    "بذارید دلیلش رو روشن کنیم و این مرحله را با دقت کامل بررسی کنیم",
+}
+
 _SKIP_LINE_PATTERNS = [
+    re.compile(r"^ریاضی نهم[؛،]?\s*(فصل|درس)"),
     re.compile(r"^گویندگان\s*:"),
     re.compile(r"^فایل صوتی"),
     re.compile(r"^روایت کامل"),
@@ -59,7 +66,10 @@ def _clean_line(line: str) -> str:
 
 
 def _is_skippable(line: str) -> bool:
-    return any(p.search(line) for p in _SKIP_LINE_PATTERNS)
+    if any(p.search(line) for p in _SKIP_LINE_PATTERNS):
+        return True
+    normalized = line.strip().strip(":؛.").strip()
+    return normalized in _BOILERPLATE
 
 
 def _split_sentences(text: str) -> list[str]:
@@ -127,7 +137,7 @@ def parse_markdown(path: Path) -> list[Item]:
         if m:
             pending_speaker = m.group("speaker")
             rest = _clean_line(m.group("rest"))
-            if rest:
+            if rest and not _is_skippable(rest):
                 _append_speech(items, pending_speaker, rest)
             speaker = pending_speaker
             continue
@@ -137,7 +147,7 @@ def parse_markdown(path: Path) -> list[Item]:
         if m:
             pending_speaker = m.group("speaker")
             rest = _clean_line(m.group("rest"))
-            if rest:
+            if rest and not _is_skippable(rest):
                 _append_speech(items, pending_speaker, rest)
             speaker = pending_speaker
             continue
