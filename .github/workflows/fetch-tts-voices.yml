@@ -28,17 +28,31 @@ jobs:
         env:
           LOG: Bucket/Content/G09/g9-math/tools/voices/job.log
         run: |
+          set +e
           mkdir -p Bucket/Content/G09/g9-math/tools/voices
           exec > >(tee -a "$LOG") 2>&1
           set -x
+          export PIP_PROGRESS_BAR=off
+          export PIP_DISABLE_PIP_VERSION_CHECK=1
           python -m pip install --upgrade pip
-          pip install torch --index-url https://download.pytorch.org/whl/cpu
-          pip install "transformers>=4.40" onnx onnxruntime onnxscript onnxconverter-common \
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q "transformers>=4.40" onnx onnxruntime onnxscript onnxconverter-common \
                       huggingface_hub "piper-tts>=1.8" numpy scipy num2words
-          which ffmpeg || sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          fi
           cd Bucket/Content/G09/g9-math/tools
           python fetch_voices.py
-          echo "[job] exit code: $?"
+          echo "[job] fetch_voices exit: $?"
+
+      - name: Trim log
+        if: always()
+        run: |
+          LOG=Bucket/Content/G09/g9-math/tools/voices/job.log
+          if [ -f "$LOG" ]; then
+            tail -c 200000 "$LOG" > "$LOG.tmp" && mv "$LOG.tmp" "$LOG"
+            echo "log size: $(wc -c < "$LOG") bytes"
+          fi
 
       - name: Commit voices and log
         if: always()
@@ -47,5 +61,4 @@ jobs:
           git config user.email "agent@arena.ai"
           git add -A Bucket/Content/G09/g9-math/tools/voices
           git commit -m "chore(voices): prepare Persian TTS voices [skip ci]" || echo "nothing to commit"
-          git pull --rebase --autostash origin "$GITHUB_REF_NAME" || true
-          git push origin "HEAD:$GITHUB_REF_NAME"
+          git push
