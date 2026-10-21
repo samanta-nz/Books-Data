@@ -1,0 +1,49 @@
+name: Fetch Persian TTS voices
+
+on:
+  push:
+    paths:
+      - "Bucket/Content/G09/g9-math/tools/fetch_voices.py"
+      - ".github/workflows/fetch-tts-voices.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Install python deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install "transformers>=4.40" onnx onnxruntime huggingface_hub piper-tts numpy
+
+      - name: Fetch and convert voices
+        working-directory: Bucket/Content/G09/g9-math/tools
+        run: |
+          set -o pipefail
+          python fetch_voices.py 2>&1 | tee /tmp/fetch.log || true
+          cp /tmp/fetch.log voices/fetch.log || true
+          tail -40 /tmp/fetch.log
+
+      - name: Commit voices
+        run: |
+          git config user.name "arena-agent"
+          git config user.email "agent@arena.ai"
+          git add -A Bucket/Content/G09/g9-math/tools/voices
+          git commit -m "chore(voices): prepare Persian TTS voices [skip ci]" || echo "nothing to commit"
+          git push

@@ -1,0 +1,6 @@
+numpy>=1.26
+scipy>=1.11
+piper-tts>=1.8
+onnxruntime>=1.17
+num2words>=0.5.13
+imageio-ffmpeg>=0.5
