@@ -1,11 +1,11 @@
 """موتورهای گفتار برای ساخت روایت درس‌ها.
 
-هر بک‌اند یک متد ``synth(text) -> (numpy int16, sample_rate)`` دارد.
+هر بک‌اند یک متد ``synth(text) -> (numpy int16, sample_rate)`` دارد و یک
+``signature`` که در کلید کش گفتار استفاده می‌شود.
 """
 from __future__ import annotations
 
 import json
-import re
 from pathlib import Path
 
 import numpy as np
@@ -13,9 +13,10 @@ import numpy as np
 TOOLS_DIR = Path(__file__).resolve().parent
 VOICES_DIR = TOOLS_DIR / "voices"
 
-# تنظیم آهنگ صدا
+# --- تنظیم صداها -----------------------------------------------------------
 PIPER_LENGTH_SCALE = 1.06   # کمی آهسته‌تر از پیش‌فرض، مناسب آموزش
-MMS_NOISE = 0.60
+SARNAZ_PITCH = 1.2225       # +۳٫۵ نیم‌پرده برای تنِ دانش‌آموز
+SARNAZ_FORMANT = "shifted"
 
 
 def _index() -> dict:
@@ -26,17 +27,14 @@ def _index() -> dict:
 
 
 def available() -> dict[str, dict]:
-    """نگاشت نام بک‌اند → اطلاعات مدل."""
-    out: dict[str, dict] = {}
-    for entry in _index().get("voices", []):
-        out[f"{entry['engine']}:{entry['name']}"] = entry
-    return out
+    return {f"{e['engine']}:{e['name']}": e for e in _index().get("voices", [])}
 
 
 class Backend:
     sample_rate: int = 24000
+    signature: str = "base"
 
-    def synth(self, text: str) -> tuple[np.ndarray, int]:  # pragma: no cover - abstract
+    def synth(self, text: str) -> tuple[np.ndarray, int]:  # pragma: no cover
         raise NotImplementedError
 
     def close(self) -> None:
@@ -46,18 +44,26 @@ class Backend:
 class StubBackend(Backend):
     """برای آزمون خط لوله؛ سکوت با طول تقریبی تولید می‌کند."""
 
+    signature = "stub"
+
     def synth(self, text: str) -> tuple[np.ndarray, int]:
         seconds = max(0.6, len(text.split()) / 2.4)
         return np.zeros(int(seconds * self.sample_rate), dtype=np.int16), self.sample_rate
 
 
 class PiperBackend(Backend):
-    def __init__(self, model: Path, config: Path, length_scale: float = PIPER_LENGTH_SCALE):
+    """صدای Piper؛ با pitch>1 و formant می‌توان تن صدا را تغییر داد."""
+
+    def __init__(self, model: Path, config: Path, length_scale: float = PIPER_LENGTH_SCALE,
+                 pitch: float = 1.0, formant: str = SARNAZ_FORMANT):
         from piper import PiperVoice
 
         self.voice = PiperVoice.load(str(model), config_path=str(config))
         self.length_scale = length_scale
         self.sample_rate = 22050
+        self.pitch = pitch
+        self.formant = formant
+        self.signature = f"piper:{model.name}:ls{length_scale}:p{pitch}:{formant}"
 
     def synth(self, text: str) -> tuple[np.ndarray, int]:
         from piper import SynthesisConfig
@@ -70,7 +76,10 @@ class PiperBackend(Backend):
             chunks.append(np.frombuffer(chunk.audio_int16_bytes, dtype=np.int16))
         if not chunks:
             return np.zeros(0, dtype=np.int16), sr
-        return np.concatenate(chunks), sr
+        audio = np.concatenate(chunks)
+        if self.pitch == 1.0:
+            return audio, sr
+        return _rubberband(audio, sr, self.pitch, self.formant), sr
 
 
 class MmsBackend(Backend):
@@ -83,9 +92,8 @@ class MmsBackend(Backend):
         self.vocab = json.loads(vocab.read_text(encoding="utf-8"))
         self.meta = json.loads(meta.read_text(encoding="utf-8"))
         self.sample_rate = int(self.meta["sampling_rate"])
-        self.session = ort.InferenceSession(
-            str(model), providers=["CPUExecutionProvider"]
-        )
+        self.signature = f"mms:{model.name}"
+        self.session = ort.InferenceSession(str(model), providers=["CPUExecutionProvider"])
 
     def synth(self, text: str) -> tuple[np.ndarray, int]:
         cleaned = self._clean(text)
@@ -101,6 +109,33 @@ class MmsBackend(Backend):
         return (audio * 32767).astype(np.int16), self.sample_rate
 
 
+def _rubberband(audio: np.ndarray, sr: int, pitch: float, formant: str) -> np.ndarray:
+    """تغییر گام صدا با ffmpeg/rubberband (طول زمانی حفظ می‌شود)."""
+    import subprocess
+    import tempfile
+    import wave
+
+    from build import ffmpeg_exe
+
+    with tempfile.TemporaryDirectory() as tmp:
+        src = Path(tmp) / "in.wav"
+        dst = Path(tmp) / "out.wav"
+        with wave.open(str(src), "wb") as wf:
+            wf.setnchannels(1)
+            wf.setsampwidth(2)
+            wf.setframerate(sr)
+            wf.writeframes(audio.astype(np.int16).tobytes())
+        subprocess.run(
+            [ffmpeg_exe(), "-y", "-loglevel", "error", "-i", str(src),
+             "-af", f"rubberband=pitch={pitch:.4f}:formant={formant}",
+             "-ar", str(sr), "-ac", "1", str(dst)],
+            check=True,
+        )
+        with wave.open(str(dst), "rb") as wf:
+            data = wf.readframes(wf.getnframes())
+    return np.frombuffer(data, dtype=np.int16)
+
+
 def _pick(entries: dict[str, dict], preferred: list[str]) -> dict | None:
     for key in preferred:
         if key in entries:
@@ -109,24 +144,16 @@ def _pick(entries: dict[str, dict], preferred: list[str]) -> dict | None:
 
 
 def make_backends(engine: str = "auto") -> dict[str, Backend]:
-    """بک‌اند فرسام (مرد) و سروناز (زن) را می‌سازد."""
+    """بک‌اند فرسام (معلم) و سروناز (دانش‌آموز) را می‌سازد."""
     entries = available()
     if engine == "stub" or not entries:
         return {"farsam": StubBackend(), "sarnaz": StubBackend()}
 
-    farsam_entry = _pick(
-        entries,
-        [
-            "piper:ganji_adabi",
-            "piper:amir",
-            "piper:gyro",
-        ],
-    )
+    farsam_entry = _pick(entries, ["piper:amir", "piper:ganji_adabi", "piper:gyro"])
     sarnaz_entry = _pick(entries, ["mms:mms-fas"])
 
-    farsam: Backend
     if farsam_entry:
-        farsam = PiperBackend(
+        farsam: Backend = PiperBackend(
             VOICES_DIR / farsam_entry["model"],
             VOICES_DIR / farsam_entry["config"],
         )
@@ -134,10 +161,17 @@ def make_backends(engine: str = "auto") -> dict[str, Backend]:
         farsam = StubBackend()
 
     if sarnaz_entry:
-        sarnaz = MmsBackend(
+        sarnaz: Backend = MmsBackend(
             VOICES_DIR / sarnaz_entry["model"],
             VOICES_DIR / sarnaz_entry["vocab"],
             VOICES_DIR / sarnaz_entry["meta"],
+        )
+    elif farsam_entry:
+        sarnaz = PiperBackend(
+            VOICES_DIR / farsam_entry["model"],
+            VOICES_DIR / farsam_entry["config"],
+            pitch=SARNAZ_PITCH,
+            formant=SARNAZ_FORMANT,
         )
     else:
         sarnaz = farsam

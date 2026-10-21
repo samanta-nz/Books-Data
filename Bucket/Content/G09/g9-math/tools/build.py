@@ -14,6 +14,7 @@ import argparse
 import hashlib
 import json
 import math
+import os
 import re
 import subprocess
 import sys
@@ -34,6 +35,8 @@ BITRATE = "32k"
 CACHE_DIR = TOOLS_DIR / ".cache"
 REPORT = BASE_DIR / "audio-report.md"
 STATE = TOOLS_DIR / "build-state.json"
+
+SPEAKER_KEY = {"فرسام": "farsam", "سروناز": "sarnaz"}
 
 
 # --------------------------------------------------------------------------- #
@@ -83,8 +86,64 @@ def synth_to_cache(backend, text: str, key: str) -> Path:
 
 
 def load_cached(path: Path) -> tuple[np.ndarray, int]:
-    sr = int((path.with_suffix(".sr")).read_text(encoding="utf-8").strip())
+    sr = int(path.with_suffix(".sr").read_text(encoding="utf-8").strip())
     return np.load(path), sr
+
+
+# --------------------------------------------------------------------------- #
+# پردازش موازی گفتار
+# --------------------------------------------------------------------------- #
+_WORKER_BACKENDS = None
+
+
+def _worker_init(engine: str) -> None:
+    global _WORKER_BACKENDS
+    import voices
+
+    _WORKER_BACKENDS = voices.make_backends(engine)
+
+
+def _worker_task(task: tuple[str, str, str]) -> str:
+    key, speaker, text = task
+    if not (CACHE_DIR / f"{key}.npy").exists():
+        synth_to_cache(_WORKER_BACKENDS[speaker], text, key)
+    return key
+
+
+def collect_tasks(md_path: Path, engine_sig: str) -> list[tuple[str, str, str]]:
+    plan = parse_lesson.plan(md_path)
+    tasks = []
+    for item in plan["items"]:
+        if item["kind"] != "speech":
+            continue
+        speaker = SPEAKER_KEY.get(item["speaker"] or "", "farsam")
+        text = normalize(item["text"])
+        if not text:
+            continue
+        tasks.append((cache_key(text, speaker, engine_sig), speaker, text))
+    return tasks
+
+
+def prefill_cache(tasks: list[tuple[str, str, str]], engine: str, workers: int) -> None:
+    pending = [t for t in tasks if not (CACHE_DIR / f"{t[0]}.npy").exists()]
+    if not pending:
+        return
+    if workers <= 1:
+        import voices
+
+        backends = voices.make_backends(engine)
+        for key, speaker, text in pending:
+            synth_to_cache(backends[speaker], text, key)
+        return
+    from concurrent.futures import ProcessPoolExecutor
+
+    with ProcessPoolExecutor(max_workers=workers, initializer=_worker_init,
+                             initargs=(engine,)) as pool:
+        done = 0
+        for _ in pool.map(_worker_task, pending, chunksize=2):
+            done += 1
+            if done % 50 == 0:
+                print(f"    گفتار: {done}/{len(pending)}", flush=True)
 
 
 # --------------------------------------------------------------------------- #
@@ -118,6 +177,7 @@ def build_lesson(md_path: Path, backends: dict, engine_sig: str, force: bool = F
             "status": "skipped",
             "output": str(out_path.relative_to(BASE_DIR)),
             "seconds": probe_duration(out_path),
+            "size_mb": round(out_path.stat().st_size / 1e6, 2),
         }
 
     pieces: list[np.ndarray] = []
@@ -126,7 +186,7 @@ def build_lesson(md_path: Path, backends: dict, engine_sig: str, force: bool = F
         if item["kind"] == "pause":
             pieces.append(silence(float(item["seconds"])))
             continue
-        speaker = item["speaker"] or "farsam"
+        speaker = SPEAKER_KEY.get(item["speaker"] or "", "farsam")
         backend = backends.get(speaker, backends["farsam"])
         text = normalize(item["text"])
         if not text:
@@ -138,7 +198,7 @@ def build_lesson(md_path: Path, backends: dict, engine_sig: str, force: bool = F
         audio, sr = load_cached(path)
         pieces.append(resample(audio, sr))
         done += 1
-        if verbose and done % 25 == 0:
+        if verbose and done % 100 == 0:
             print(f"    {md_path.name}: {done}/{len(speech_items)} قطعه", flush=True)
 
     if not pieces:
@@ -183,17 +243,9 @@ def probe_duration(path: Path) -> float | None:
 
 
 # --------------------------------------------------------------------------- #
-# CLI
+# گزارش‌ها
 # --------------------------------------------------------------------------- #
-def list_lessons() -> list[Path]:
-    files = sorted(
-        p for p in BASE_DIR.glob("F*/*.md")
-        if p.parent.name.startswith("F")
-    )
-    return files
-
-
-def _save_state(results: list[dict]) -> None:
+def _merge_state(results: list[dict]) -> dict[str, dict]:
     merged: dict[str, dict] = {}
     if STATE.exists():
         try:
@@ -203,28 +255,23 @@ def _save_state(results: list[dict]) -> None:
             pass
     for row in results:
         merged[row["file"]] = row
+    return merged
+
+
+def write_outputs(results: list[dict]) -> None:
+    merged = _merge_state(results)
     STATE.write_text(
         json.dumps({"updated": time.strftime("%Y-%m-%dT%H:%M:%S"),
                     "results": sorted(merged.values(), key=lambda x: x["file"])},
                    ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-
-
-def write_report(results: list[dict]) -> None:
-    merged: dict[str, dict] = {}
-    if STATE.exists():
-        try:
-            old = json.loads(STATE.read_text(encoding="utf-8")).get("results", [])
-            for row in old:
-                merged[row["file"]] = row
-        except Exception:  # noqa: BLE001
-            pass
-    for row in results:
-        merged[row["file"]] = row
-    lines = ["# گزارش ساخت روایت صوتی — ریاضی نهم", ""]
-    lines.append("| فایل | خروجی | مدت | حجم | وضعیت |")
-    lines.append("|---|---|---|---|---|")
+    lines = [
+        "# گزارش ساخت روایت صوتی — ریاضی نهم",
+        "",
+        "| فایل درس | خروجی | مدت | حجم | وضعیت |",
+        "|---|---|---|---|---|",
+    ]
     for r in sorted(merged.values(), key=lambda x: x["file"]):
         dur = r.get("seconds")
         dur_s = f"{int(dur // 60)}:{int(dur % 60):02d}" if dur else "—"
@@ -232,10 +279,20 @@ def write_report(results: list[dict]) -> None:
             f"| `{r['file']}` | `{r.get('output', '—')}` | {dur_s} | "
             f"{r.get('size_mb', '—')} MB | {r['status']} |"
         )
-    report = "\n".join(lines) + "\n"
-    existing = REPORT.read_text(encoding="utf-8") if REPORT.exists() else ""
-    if not existing:
-        REPORT.write_text(report, encoding="utf-8")
+    REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+# --------------------------------------------------------------------------- #
+# CLI
+# --------------------------------------------------------------------------- #
+def list_lessons() -> list[Path]:
+    return sorted(p for p in BASE_DIR.glob("F*/*.md") if p.parent.name.startswith("F"))
+
+
+def voices_make(engine: str):
+    import voices
+
+    return voices.make_backends(engine)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -244,14 +301,14 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--limit", type=int, default=0, help="حداکثر تعداد فایل")
     ap.add_argument("--engine", default="auto", choices=["auto", "stub"])
     ap.add_argument("--force", action="store_true", help="بازسازی فایل‌های موجود")
+    ap.add_argument("--workers", type=int, default=max(1, (os.cpu_count() or 2)))
     args = ap.parse_args(argv)
 
     if args.files:
         targets = [BASE_DIR / f for f in args.files]
     else:
-        targets = list_lessons()
-        # فقط فایل‌هایی که خروجی ندارند
-        targets = [t for t in targets if args.force or not t.with_suffix(".weba").exists()]
+        targets = [t for t in list_lessons()
+                   if args.force or not t.with_suffix(".weba").exists()]
     if args.limit:
         targets = targets[: args.limit]
     if not targets:
@@ -259,7 +316,17 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     backends = voices_make(args.engine)
-    engine_sig = "|".join(f"{k}:{type(v).__name__}" for k, v in backends.items())
+    engine_sig = "|".join(f"{k}:{getattr(v, 'signature', type(v).__name__)}"
+                          for k, v in backends.items())
+
+    if args.engine != "stub" and args.workers > 1:
+        all_tasks: list[tuple[str, str, str]] = []
+        for md in targets:
+            all_tasks.extend(collect_tasks(md, engine_sig))
+        seen: set[str] = set()
+        unique = [t for t in all_tasks if not (t[0] in seen or seen.add(t[0]))]
+        print(f"گفتار موردنیاز: {len(unique)} قطعهٔ یکتا (workers={args.workers})", flush=True)
+        prefill_cache(unique, args.engine, args.workers)
 
     results = []
     t0 = time.time()
@@ -269,23 +336,17 @@ def main(argv: list[str] | None = None) -> int:
             res = build_lesson(md, backends, engine_sig, force=args.force)
         except Exception as exc:  # noqa: BLE001
             print(f"    ✗ {exc}", flush=True)
-            results.append({"file": str(md.relative_to(BASE_DIR)), "status": f"error: {exc}"})
+            results.append({"file": str(md.relative_to(BASE_DIR)),
+                            "status": f"error: {exc}"})
             continue
         results.append(res)
         dur = res.get("seconds")
         dur_s = f"{int(dur // 60)}:{int(dur % 60):02d}" if dur else "—"
         print(f"    → {res['status']} {dur_s} {res.get('size_mb', '')} MB", flush=True)
 
-    _save_state(results)
-    write_report(results)
-    print(f"پایان در {time.time() - t0:.0f} ثانیه")
+    write_outputs(results)
+    print(f"پایان در {time.time() - t0:.0f} ثانیه", flush=True)
     return 0
-
-
-def voices_make(engine: str):
-    import voices
-
-    return voices.make_backends(engine)
 
 
 if __name__ == "__main__":
