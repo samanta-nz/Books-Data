@@ -46,6 +46,17 @@ def fetch_piper() -> list[dict]:
     for name in PIPER_VOICES:
         stem = f"fa_IR-{name}-medium"
         rel = f"fa/fa_IR/{name}/medium/{stem}"
+        existing = VOICES / f"{stem}-int8.onnx"
+        if existing.exists() and (VOICES / f"{stem}.onnx.json").exists():
+            log(f"[piper] {name}: already present ({existing.stat().st_size / 1e6:.1f} MB)")
+            out.append({
+                "engine": "piper",
+                "name": name,
+                "model": existing.name,
+                "config": f"{stem}.onnx.json",
+                "bytes": existing.stat().st_size,
+            })
+            continue
         try:
             onnx_path = hf_hub_download(PIPER_REPO, f"{rel}.onnx")
             json_path = hf_hub_download(PIPER_REPO, f"{rel}.onnx.json")
@@ -127,6 +138,7 @@ def export_mms() -> dict | None:
         },
         opset_version=17,
         do_constant_folding=True,
+        dynamo=False,
     )
     log(f"[mms] fp32 onnx {fp32_path.stat().st_size / 1e6:.1f} MB")
 
@@ -144,16 +156,35 @@ def export_mms() -> dict | None:
     (VOICES / "mms-fas.meta.json").write_text(json.dumps(meta), encoding="utf-8")
 
     best = fp32_path
+    candidates = [fp32_path]
     try:
         from onnxruntime.quantization import QuantType, quantize_dynamic
 
         int8_path = VOICES / "mms-fas-int8.onnx"
         quantize_dynamic(str(fp32_path), str(int8_path), weight_type=QuantType.QInt8)
         log(f"[mms] int8 onnx {int8_path.stat().st_size / 1e6:.1f} MB")
-        if int8_path.stat().st_size < fp32_path.stat().st_size:
-            best = int8_path
+        candidates.append(int8_path)
     except Exception as exc:  # noqa: BLE001
         log(f"[mms-int8] failed: {exc}")
+
+    try:
+        from onnxconverter_common import float16
+
+        fp16_path = VOICES / "mms-fas-fp16.onnx"
+        model_fp16 = float16.convert_float_to_float16(
+            __import__("onnx").load(str(fp32_path)), keep_io_types=True
+        )
+        __import__("onnx").save(model_fp16, str(fp16_path))
+        log(f"[mms] fp16 onnx {fp16_path.stat().st_size / 1e6:.1f} MB")
+        candidates.append(fp16_path)
+    except Exception as exc:  # noqa: BLE001
+        log(f"[mms-fp16] failed: {exc}")
+
+    best = min(candidates, key=lambda p: p.stat().st_size)
+    for path in candidates:
+        if path != best:
+            path.unlink(missing_ok=True)
+    log(f"[mms] selected {best.name} ({best.stat().st_size / 1e6:.1f} MB)")
 
     return {
         "engine": "mms",

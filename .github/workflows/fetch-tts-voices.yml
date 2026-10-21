@@ -30,7 +30,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install torch --index-url https://download.pytorch.org/whl/cpu
-          pip install "transformers>=4.40" onnx onnxruntime huggingface_hub piper-tts numpy
+          pip install "transformers>=4.40" onnx onnxruntime onnxscript onnxconverter-common huggingface_hub "piper-tts>=1.8" numpy
 
       - name: Fetch and convert voices
         working-directory: Bucket/Content/G09/g9-math/tools
