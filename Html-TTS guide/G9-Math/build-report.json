@@ -529,6 +529,123 @@
      "chars": 987
     }
    ]
+  },
+  {
+   "lesson": "ryazif01d01",
+   "section": "lab",
+   "tts_input": "arena-input/ryazif01d01/ryazif01d01--lab.tts.txt",
+   "audio_filename": "ryazif01d01--lab.weba",
+   "audio_path": "audio/ryazif01d01--lab.weba",
+   "duration_seconds": 459.36,
+   "bytes": 1940815,
+   "container_ok": true,
+   "parts": 13,
+   "segments": [
+    {
+     "part": 0,
+     "speaker": "فرسام",
+     "source": "p00.mp3",
+     "silence_before_s": 0.0,
+     "seconds": 49.2,
+     "chars": 543
+    },
+    {
+     "part": 1,
+     "speaker": "سروناز",
+     "source": "p01.mp3",
+     "silence_before_s": 1.2,
+     "seconds": 11.4,
+     "chars": 122
+    },
+    {
+     "part": 2,
+     "speaker": "فرسام",
+     "source": "p02.mp3",
+     "silence_before_s": 1.2,
+     "seconds": 54.44,
+     "chars": 559
+    },
+    {
+     "part": 3,
+     "speaker": "فرسام",
+     "source": "p03.mp3",
+     "silence_before_s": 1.2,
+     "seconds": 38.24,
+     "chars": 368
+    },
+    {
+     "part": 4,
+     "speaker": "فرسام",
+     "source": "p04.mp3",
+     "silence_before_s": 0.35,
+     "seconds": 26.36,
+     "chars": 287
+    },
+    {
+     "part": 5,
+     "speaker": "فرسام",
+     "source": "p05.mp3",
+     "silence_before_s": 1.2,
+     "seconds": 41.88,
+     "chars": 350
+    },
+    {
+     "part": 6,
+     "speaker": "فرسام",
+     "source": "p06.mp3",
+     "silence_before_s": 0.35,
+     "seconds": 36.12,
+     "chars": 319
+    },
+    {
+     "part": 7,
+     "speaker": "فرسام",
+     "source": "p07.mp3",
+     "silence_before_s": 1.2,
+     "seconds": 32.8,
+     "chars": 365
+    },
+    {
+     "part": 8,
+     "speaker": "فرسام",
+     "source": "p08.mp3",
+     "silence_before_s": 0.35,
+     "seconds": 29.16,
+     "chars": 305
+    },
+    {
+     "part": 9,
+     "speaker": "فرسام",
+     "source": "p09.mp3",
+     "silence_before_s": 1.2,
+     "seconds": 40.08,
+     "chars": 422
+    },
+    {
+     "part": 10,
+     "speaker": "فرسام",
+     "source": "p10.mp3",
+     "silence_before_s": 0.35,
+     "seconds": 30.8,
+     "chars": 312
+    },
+    {
+     "part": 11,
+     "speaker": "فرسام",
+     "source": "p11.mp3",
+     "silence_before_s": 1.2,
+     "seconds": 44.36,
+     "chars": 475
+    },
+    {
+     "part": 12,
+     "speaker": "فرسام",
+     "source": "p12.mp3",
+     "silence_before_s": 1.2,
+     "seconds": 13.52,
+     "chars": 146
+    }
+   ]
   }
  ]
 }

@@ -56,15 +56,16 @@
   {
    "section": "lab",
    "parts_required": 13,
-   "parts_done": 12,
-   "complete": false,
-   "audio_file": null,
-   "audio_seconds": null
+   "parts_done": 13,
+   "complete": true,
+   "audio_file": "ryazif01d01--lab.weba",
+   "audio_seconds": 459.36,
+   "audio_bytes": 1940815
   },
   {
    "section": "mistakes",
    "parts_required": 12,
-   "parts_done": 1,
+   "parts_done": 10,
    "complete": false,
    "audio_file": null,
    "audio_seconds": null
@@ -126,8 +127,8 @@
  ],
  "lesson": "ryazif01d01",
  "sections_total": 14,
- "sections_with_audio": 11,
+ "sections_with_audio": 12,
  "parts_total": 91,
- "parts_done": 52,
- "audio_seconds_total": 1713.6
+ "parts_done": 62,
+ "audio_seconds_total": 2173.0
 }
