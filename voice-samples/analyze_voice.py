@@ -148,6 +148,8 @@ def analyze(path: str) -> dict:
         "f0_median": round(float(np.median(voiced)), 1) if len(voiced) else 0.0,
         "f0_mean": round(float(np.mean(voiced)), 1) if len(voiced) else 0.0,
         "f0_p05": round(float(np.percentile(voiced, 5)), 1) if len(voiced) else 0.0,
+        "f0_p25": round(float(np.percentile(voiced, 25)), 1) if len(voiced) else 0.0,
+        "f0_p75": round(float(np.percentile(voiced, 75)), 1) if len(voiced) else 0.0,
         "f0_p95": round(float(np.percentile(voiced, 95)), 1) if len(voiced) else 0.0,
         "f0_std": round(float(np.std(voiced)), 1) if len(voiced) else 0.0,
         "spectral_centroid_hz": round(spectral_centroid(audio), 1),
@@ -164,7 +166,8 @@ def similarity(a: dict, b: dict) -> dict:
 
     parts = {
         "pitch": rel(a["f0_median"], b["f0_median"]),
-        "pitch_range": rel(a["f0_p95"] - a["f0_p05"], b["f0_p95"] - b["f0_p05"]),
+        # دامنهٔ زیر و بمی با چارک‌ها سنجیده می‌شود (IQR) تا خطای اکتاو روی صدک ۹۵ آن را خراب نکند
+        "pitch_range": rel(a["f0_p75"] - a["f0_p25"], b["f0_p75"] - b["f0_p25"]),
         "brightness": rel(a["spectral_centroid_hz"], b["spectral_centroid_hz"]),
         "rate": rel(a["syllables_per_sec"], b["syllables_per_sec"]),
     }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>کاندیدهای صدا در برابر مرجع</title>
+<style>
+  :root{--bg:#0d1412;--card:#151f1b;--line:#26362e;--ink:#eef5f0;--muted:#9db3a8;
+        --a:#4ec9a0;--b:#7aa2ff;--c:#f0b34a;--d:#e06c8b}
+  *{box-sizing:border-box}
+  body{margin:0;padding:30px 18px 60px;font-family:"Vazirmatn","Segoe UI",Tahoma,sans-serif;
+       background:radial-gradient(1100px 520px at 15% -10%,#1a3329 0%,var(--bg) 60%);color:var(--ink)}
+  .wrap{max-width:900px;margin:0 auto}
+  h1{font-size:1.5rem;margin:0 0 8px}
+  .sub{color:var(--muted);font-size:.92rem;line-height:1.9;margin:0 0 24px}
+  h2.sec{font-size:1.1rem;margin:26px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+  @media(max-width:680px){.row{grid-template-columns:1fr}}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01)),var(--card);
+        border:1px solid var(--line);border-radius:16px;padding:15px 15px 13px}
+  .card.best{border-color:rgba(78,201,160,.6);box-shadow:0 0 0 1px rgba(78,201,160,.25) inset}
+  .tag{display:inline-block;font-size:.72rem;padding:3px 9px;border-radius:999px;margin-bottom:8px}
+  .tag.ref{color:var(--a);border:1px solid rgba(78,201,160,.45);background:rgba(78,201,160,.08)}
+  .tag.cand{color:var(--b);border:1px solid rgba(122,162,255,.45);background:rgba(122,162,255,.08)}
+  .tag.pick{color:var(--c);border:1px solid rgba(240,179,74,.5);background:rgba(240,179,74,.1)}
+  h3{font-size:.98rem;margin:0 0 4px}
+  .meta{color:var(--muted);font-size:.77rem;line-height:1.9;margin:4px 0 10px}
+  audio{width:100%}
+  table{width:100%;border-collapse:collapse;font-size:.84rem;margin-top:10px;background:rgba(255,255,255,.02);
+        border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th,td{border-bottom:1px solid var(--line);padding:9px 8px;text-align:right}
+  th{color:var(--muted);font-weight:500;font-size:.76rem;background:rgba(255,255,255,.03)}
+  td.num{direction:ltr;text-align:left;font-variant-numeric:tabular-nums}
+  tr:last-child td{border-bottom:none}
+  .win{color:var(--a);font-weight:700}
+  .note{margin-top:14px;background:rgba(255,255,255,.03);border:1px solid var(--line);
+        border-radius:12px;padding:12px 14px;font-size:.85rem;line-height:2}
+  footer{color:var(--muted);font-size:.77rem;line-height:2;margin-top:24px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>چهار کاندید صدا در برابر دو مرجع تأییدشده</h1>
+  <p class="sub">همهٔ نمونه‌ها با متن یکسان ساخته شده‌اند تا مقایسه منصفانه باشد. اول مرجع‌ها را بشنوید، بعد کاندیدها.</p>
+
+  <h2 class="sec">مرجع تأییدشده</h2>
+  <div class="row">
+    <section class="card">
+      <span class="tag ref">مرجع</span>
+      <h3>زن — ۱۸۸٫۲ هرتز</h3>
+      <p class="meta">۲۱٫۴۸ ثانیه · مرکز طیفی ۱۷۷۲ · ۱۱٫۲ هجا/ث</p>
+      <audio controls preload="metadata" src="voice-00-female.mp3"></audio>
+    </section>
+    <section class="card">
+      <span class="tag ref">مرجع</span>
+      <h3>مرد — ۱۰۳٫۹ هرتز</h3>
+      <p class="meta">۲۱٫۸۴ ثانیه · مرکز طیفی ۱۹۰۷ · ۱۲٫۵ هجا/ث</p>
+      <audio controls preload="metadata" src="voice-02-male.mp3"></audio>
+    </section>
+  </div>
+
+  <h2 class="sec">کاندیدهای زن</h2>
+  <div class="row">
+    <section class="card best">
+      <span class="tag pick">نزدیک‌ترین — ۰٫۹۳۷</span>
+      <h3>کاندید B (زن)</h3>
+      <p class="meta">۲۰٫۶۰ ثانیه · F0 میانه ۱۹۰٫۵ · IQR ۹۸٫۱ · مرکز طیفی ۱۵۹۴</p>
+      <audio controls preload="metadata" src="candidates/cand-b-female.mp3"></audio>
+    </section>
+    <section class="card">
+      <span class="tag cand">کاندید</span>
+      <h3>کاندید A (زن)</h3>
+      <p class="meta">۲۱٫۱۲ ثانیه · F0 میانه ۲۱۹٫۲ · IQR ۱۲۸٫۸ · مرکز طیفی ۱۴۲۲</p>
+      <audio controls preload="metadata" src="candidates/cand-a-female.mp3"></audio>
+    </section>
+  </div>
+
+  <h2 class="sec">کاندیدهای مرد</h2>
+  <div class="row">
+    <section class="card">
+      <span class="tag cand">کاندید</span>
+      <h3>کاندید A (مرد)</h3>
+      <p class="meta">۱۷٫۳۶ ثانیه · F0 میانه ۱۰۷٫۴ · IQR ۳۶٫۵ · مرکز طیفی ۱۴۷۰</p>
+      <audio controls preload="metadata" src="candidates/cand-a-male.mp3"></audio>
+    </section>
+    <section class="card">
+      <span class="tag cand">کاندید</span>
+      <h3>کاندید B (مرد)</h3>
+      <p class="meta">۱۶٫۵۴ ثانیه · F0 میانه ۱۵۲٫۴ · IQR ۸۱٫۵ · مرکز طیفی ۱۲۳۶</p>
+      <audio controls preload="metadata" src="candidates/cand-b-male.mp3"></audio>
+    </section>
+  </div>
+
+  <h2 class="sec">جدول مقایسه</h2>
+  <table>
+    <thead>
+      <tr><th>نمونه</th><th>F0 میانه</th><th>IQR (دامنه)</th><th>مرکز طیفی</th><th>هجا/ث</th><th>شباهت</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>مرجع زن</td><td class="num">188.2</td><td class="num">102.8</td><td class="num">1772</td><td class="num">11.17</td><td>—</td></tr>
+      <tr><td>کاندید B زن</td><td class="num win">190.5</td><td class="num win">98.1</td><td class="num">1594</td><td class="num">10.10</td><td class="num win">0.937</td></tr>
+      <tr><td>کاندید A زن</td><td class="num">219.2</td><td class="num">128.8</td><td class="num">1422</td><td class="num">9.83</td><td class="num">0.835</td></tr>
+      <tr><td>نمونهٔ نوبت قبل (زن)</td><td class="num">246.2</td><td class="num">158.4</td><td class="num">1318</td><td class="num">9.51</td><td class="num">0.752</td></tr>
+      <tr><td>مرجع مرد</td><td class="num">103.9</td><td class="num">94.7</td><td class="num">1907</td><td class="num">12.48</td><td>—</td></tr>
+      <tr><td>کاندید A مرد</td><td class="num win">107.4</td><td class="num">36.5</td><td class="num">1470</td><td class="num">10.52</td><td class="num">0.742</td></tr>
+      <tr><td>کاندید B مرد</td><td class="num">152.4</td><td class="num">81.5</td><td class="num">1236</td><td class="num">10.03</td><td class="num">0.749</td></tr>
+      <tr><td>نمونهٔ نوبت قبل (مرد)</td><td class="num">129.0</td><td class="num">89.6</td><td class="num">1215</td><td class="num">9.44</td><td class="num">0.786</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <b>نتیجه:</b> برای صدای زن، کاندید B تقریباً روی مرجع است (۱۹۰٫۵ در برابر ۱۸۸٫۲ هرتز و دامنهٔ زیر و بمی
+    تقریباً برابر) — با احتمال زیاد همان گوینده است. برای صدای مرد هیچ کاندیدی به مرجع نرسید:
+    کاندید A زیر و بمی درست دارد (۱۰۷ در برابر ۱۰۴) ولی یکنواخت و کم‌احساس است (IQR فقط ۳۶٫۵)،
+    کاندید B زیادی بالا و روشن است، و نمونهٔ نوبت قبل از نظر دامنهٔ زیر و بمی نزدیک‌ترین بود.
+  </div>
+
+  <footer>
+    IQR = فاصلهٔ چارک اول تا سوم فرکانس پایه؛ برای سنجش دامنهٔ زیر و بمی از صدک ۹۵ استفاده نشد،
+    چون در نمونه‌های کم‌بیت‌ریت به سقف ۴۰۰ هرتز می‌خورد (خطای اکتاو).<br>
+    «شباهت» میانگین چهار مؤلفه است: زیر و بمی، دامنهٔ زیر و بمی، روشنی صدا، سرعت گفتار.
+  </footer>
+</div>
+</body>
+</html>
