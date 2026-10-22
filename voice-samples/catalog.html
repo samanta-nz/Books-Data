@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>کاتالوگ شماره‌دار نمونه‌های صدا</title>
+<style>
+  :root{--bg:#0d1412;--card:#151f1b;--line:#26362e;--ink:#eef5f0;--muted:#9db3a8;
+        --ok:#4ec9a0;--cl:#f0b34a;--al:#8fa7c7;--rj:#e06c8b}
+  *{box-sizing:border-box}
+  body{margin:0;padding:28px 16px 64px;font-family:"Vazirmatn","Segoe UI",Tahoma,sans-serif;
+       background:radial-gradient(1200px 560px at 12% -10%,#19342a 0%,var(--bg) 62%);color:var(--ink)}
+  .wrap{max-width:980px;margin:0 auto}
+  h1{font-size:1.55rem;margin:0 0 8px}
+  .sub{color:var(--muted);font-size:.92rem;line-height:1.95;margin:0 0 20px}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.78rem;color:var(--muted);margin-bottom:22px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+  h2.sec{font-size:1.05rem;margin:26px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line);color:#cfe3d8}
+  table{width:100%;border-collapse:collapse;font-size:.83rem;background:rgba(255,255,255,.02);
+        border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:8px}
+  th,td{border-bottom:1px solid var(--line);padding:8px 8px;text-align:right}
+  th{color:var(--muted);font-weight:500;font-size:.75rem;background:rgba(255,255,255,.03)}
+  td.num{direction:ltr;text-align:left;font-variant-numeric:tabular-nums}
+  td.n{font-weight:700;color:#fff;direction:ltr;text-align:center;width:44px}
+  tr:last-child td{border-bottom:none}
+  tr.ok td{background:rgba(78,201,160,.07)}
+  tr.cl td{background:rgba(240,179,74,.05)}
+  td.s{font-size:.76rem}
+  td.ok{color:var(--ok)} td.cl{color:var(--cl)} td.al{color:var(--al)} td.rj{color:var(--rj)}
+  .card{display:flex;gap:14px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01)),var(--card);
+        border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:12px}
+  .card.ok{border-color:rgba(78,201,160,.55)}
+  .card.cl{border-color:rgba(240,179,74,.4)}
+  .num{font-size:1.5rem;font-weight:800;color:#fff;min-width:62px;text-align:center;
+        background:rgba(255,255,255,.05);border-radius:12px;padding:8px 4px;height:fit-content;
+        direction:ltr;border:1px solid var(--line)}
+  .body{flex:1;min-width:0}
+  .top{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:6px}
+  .st{font-size:.72rem;padding:2px 9px;border-radius:999px;border:1px solid}
+  .st.ok{color:var(--ok);border-color:rgba(78,201,160,.5);background:rgba(78,201,160,.1)}
+  .st.cl{color:var(--cl);border-color:rgba(240,179,74,.5);background:rgba(240,179,74,.09)}
+  .st.al{color:var(--al);border-color:rgba(143,167,199,.45);background:rgba(143,167,199,.08)}
+  .st.rj{color:var(--rj);border-color:rgba(224,108,139,.42);background:rgba(224,108,139,.07)}
+  .role{font-size:.78rem;color:#dfeee7}
+  .stage{font-size:.74rem;color:var(--muted)}
+  .metrics{color:var(--muted);font-size:.78rem;line-height:1.95;margin:0 0 8px}
+  .metrics b{color:#eaf6f0}
+  audio{width:100%}
+  .note{font-size:.78rem;color:#b9cbc1;line-height:1.9;margin:8px 0 0}
+  .path{font-size:.7rem;color:#7f948a;margin:6px 0 0;line-height:1.8;word-break:break-all}
+  code{background:rgba(255,255,255,.06);padding:1px 5px;border-radius:5px;direction:ltr;display:inline-block;font-size:.72rem}
+  .refs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:700px){.refs{grid-template-columns:1fr}}
+  .ref{background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:14px;padding:14px}
+  .ref h3{font-size:.9rem;margin:0 0 6px}
+  footer{color:var(--muted);font-size:.77rem;line-height:2;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>کاتالوگ شماره‌دار نمونه‌های صدا</h1>
+  <p class="sub">
+    هر نمونه‌ای که تا اینجا ساخته شده، با یک شمارهٔ ثابت. کافی است شماره را بگویید.
+    شماره‌ها بر اساس ترتیب ساخت مرتب شده‌اند و دیگر تغییر نمی‌کنند.
+  </p>
+  <div class="legend">
+    <span><i class="dot" style="background:var(--ok)"></i> تأییدشده</span>
+    <span><i class="dot" style="background:var(--cl)"></i> نزدیک‌ترین به مرجع</span>
+    <span><i class="dot" style="background:var(--al)"></i> جایگزین</span>
+    <span><i class="dot" style="background:var(--rj)"></i> رد شده</span>
+    <span>· «شباهت» نسبت به مرجع هم‌جنس سنجیده شده</span>
+  </div>
+
+  <h2 class="sec">جدول سریع</h2>
+  <table>
+    <thead>
+      <tr><th>شماره</th><th>صدا</th><th>مرحله</th><th>مدت (ث)</th><th>F0 میانه</th><th>IQR</th><th>شباهت</th><th>وضعیت</th></tr>
+    </thead>
+    <tbody>
+      <tr class="rj">
+        <td class="n">#۱</td>
+        <td>زن</td><td>دور ۱ — کوتاه</td>
+        <td class="num">۲۸.۶</td>
+        <td class="num">۲۴۶.۲</td>
+        <td class="num">۱۵۸.۴</td>
+        <td class="num">۰.۷۵۲</td>
+        <td class="s rj">✕ رد شده</td>
+      </tr>
+      <tr class="rj">
+        <td class="n">#۲</td>
+        <td>مرد</td><td>دور ۱ — کوتاه</td>
+        <td class="num">۲۳.۸</td>
+        <td class="num">۱۲۹.۰</td>
+        <td class="num">۸۹.۶</td>
+        <td class="num">۰.۷۸۶</td>
+        <td class="s rj">✕ رد شده</td>
+      </tr>
+      <tr class="rj">
+        <td class="n">#۳</td>
+        <td>زن</td><td>دور ۲ — کوتاه</td>
+        <td class="num">۲۱.۱</td>
+        <td class="num">۲۱۹.۲</td>
+        <td class="num">۱۲۸.۸</td>
+        <td class="num">۰.۸۳۵</td>
+        <td class="s rj">✕ رد شده</td>
+      </tr>
+      <tr class="cl">
+        <td class="n">#۴</td>
+        <td>زن</td><td>دور ۲ — کوتاه</td>
+        <td class="num">۲۰.۶</td>
+        <td class="num">۱۹۰.۵</td>
+        <td class="num">۹۸.۱</td>
+        <td class="num">۰.۹۳۷</td>
+        <td class="s cl">🔶 نزدیک‌ترین</td>
+      </tr>
+      <tr class="rj">
+        <td class="n">#۵</td>
+        <td>مرد</td><td>دور ۲ — کوتاه</td>
+        <td class="num">۱۷.۴</td>
+        <td class="num">۱۰۷.۴</td>
+        <td class="num">۳۶.۵</td>
+        <td class="num">۰.۷۴۲</td>
+        <td class="s rj">✕ رد شده</td>
+      </tr>
+      <tr class="rj">
+        <td class="n">#۶</td>
+        <td>مرد</td><td>دور ۲ — کوتاه</td>
+        <td class="num">۱۶.۵</td>
+        <td class="num">۱۵۲.۴</td>
+        <td class="num">۸۱.۵</td>
+        <td class="num">۰.۷۴۹</td>
+        <td class="s rj">✕ رد شده</td>
+      </tr>
+      <tr class="rj">
+        <td class="n">#۷</td>
+        <td>مرد</td><td>دور ۳ — کوتاه</td>
+        <td class="num">۱۵.۶</td>
+        <td class="num">۱۱۸.۵</td>
+        <td class="num">۲۰.۸</td>
+        <td class="num">۰.۶۲۷</td>
+        <td class="s rj">✕ رد شده</td>
+      </tr>
+      <tr class="rj">
+        <td class="n">#۸</td>
+        <td>مرد</td><td>دور ۳ — کوتاه</td>
+        <td class="num">۱۸.۷</td>
+        <td class="num">۱۱۸.۵</td>
+        <td class="num">۴۷.۳</td>
+        <td class="num">۰.۷۴۱</td>
+        <td class="s rj">✕ رد شده</td>
+      </tr>
+      <tr class="al">
+        <td class="n">#۹</td>
+        <td>مرد</td><td>دور ۳ — کوتاه</td>
+        <td class="num">۱۹.۹</td>
+        <td class="num">۱۴۴.۱</td>
+        <td class="num">۸۷.۳</td>
+        <td class="num">۰.۸۵۷</td>
+        <td class="s al">◻ جایگزین</td>
+      </tr>
+      <tr class="ok">
+        <td class="n">#۱۰</td>
+        <td>مرد</td><td>دور ۳ — کوتاه</td>
+        <td class="num">۱۹.۱</td>
+        <td class="num">۱۶۳.۳</td>
+        <td class="num">۹۰.۲</td>
+        <td class="num">۰.۸۳۰</td>
+        <td class="s ok">✅ تأییدشده</td>
+      </tr>
+      <tr class="cl">
+        <td class="n">#۱۱</td>
+        <td>زن</td><td>طولانی — ۱۰۴۷ نویسه</td>
+        <td class="num">۷۸.۲</td>
+        <td class="num">۱۸۳.۹</td>
+        <td class="num">۸۷.۱</td>
+        <td class="num">۰.۹۱۵</td>
+        <td class="s cl">🔶 نزدیک‌ترین</td>
+      </tr>
+      <tr class="al">
+        <td class="n">#۱۲</td>
+        <td>مرد</td><td>طولانی — ۱۰۴۷ نویسه</td>
+        <td class="num">۷۶.۲</td>
+        <td class="num">۱۵۸.۴</td>
+        <td class="num">۱۳۷.۲</td>
+        <td class="num">۰.۷۹۲</td>
+        <td class="s al">◻ جایگزین</td>
+      </tr>
+      <tr class="ok">
+        <td class="n">#۱۳</td>
+        <td>مرد</td><td>طولانی — ۱۰۴۷ نویسه</td>
+        <td class="num">۷۵.۰</td>
+        <td class="num">۱۵۲.۴</td>
+        <td class="num">۱۰۳.۸</td>
+        <td class="num">۰.۸۸۰</td>
+        <td class="s ok">✅ تأییدشده</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">همهٔ نمونه‌ها با پخش‌کننده</h2>
+  <article class="card rj">
+    <div class="num">#۱</div>
+    <div class="body">
+      <div class="top">
+        <span class="st rj">✕ رد شده</span>
+        <span class="role">زن</span>
+        <span class="stage">دور ۱ — کوتاه</span>
+      </div>
+      <p class="metrics">مدت ۲۸.۶۵ ثانیه · F0 میانه <b>۲۴۶.۲</b> هرتز · IQR ۱۵۸.۴ · مرکز طیفی ۱۳۱۸ · هجا/ث ۹.۵۱ · شباهت <b>۰.۷۵۲</b></p>
+      <audio controls preload="none" src="samples/sample-fa-female.mp3"></audio>
+      <p class="note">اولین نمونهٔ ساخته‌شده؛ زیر و بمی ۲۴۶ هرتز، دور از مرجع ۱۸۸ هرتز.</p>
+      <p class="path"><code>voice-samples/samples/sample-fa-female.mp3</code> · ۲۲۴ کیلوبایت · MD5 b9b22ace…fe90ed</p>
+    </div>
+  </article>
+  <article class="card rj">
+    <div class="num">#۲</div>
+    <div class="body">
+      <div class="top">
+        <span class="st rj">✕ رد شده</span>
+        <span class="role">مرد</span>
+        <span class="stage">دور ۱ — کوتاه</span>
+      </div>
+      <p class="metrics">مدت ۲۳.۷۹ ثانیه · F0 میانه <b>۱۲۹.۰</b> هرتز · IQR ۸۹.۶ · مرکز طیفی ۱۲۱۵ · هجا/ث ۹.۴۴ · شباهت <b>۰.۷۸۶</b></p>
+      <audio controls preload="none" src="samples/sample-fa-male.mp3"></audio>
+      <p class="note">اولین نمونهٔ مرد؛ ۱۲۹ هرتز با سرعت گفتار کند.</p>
+      <p class="path"><code>voice-samples/samples/sample-fa-male.mp3</code> · ۱۸۶ کیلوبایت · MD5 86f8c6b5…7a2066</p>
+    </div>
+  </article>
+  <article class="card rj">
+    <div class="num">#۳</div>
+    <div class="body">
+      <div class="top">
+        <span class="st rj">✕ رد شده</span>
+        <span class="role">زن</span>
+        <span class="stage">دور ۲ — کوتاه</span>
+      </div>
+      <p class="metrics">مدت ۲۱.۱۲ ثانیه · F0 میانه <b>۲۱۹.۲</b> هرتز · IQR ۱۲۸.۸ · مرکز طیفی ۱۴۲۲ · هجا/ث ۹.۸۳ · شباهت <b>۰.۸۳۵</b></p>
+      <audio controls preload="none" src="candidates/cand-a-female.mp3"></audio>
+      <p class="note">کاندید A؛ ۲۱۹ هرتز، دامنهٔ زیر و بمی پهن‌تر از مرجع.</p>
+      <p class="path"><code>voice-samples/candidates/cand-a-female.mp3</code> · ۸۳ کیلوبایت · MD5 a69423ed…847539</p>
+    </div>
+  </article>
+  <article class="card cl">
+    <div class="num">#۴</div>
+    <div class="body">
+      <div class="top">
+        <span class="st cl">🔶 نزدیک‌ترین</span>
+        <span class="role">زن</span>
+        <span class="stage">دور ۲ — کوتاه</span>
+      </div>
+      <p class="metrics">مدت ۲۰.۶۰ ثانیه · F0 میانه <b>۱۹۰.۵</b> هرتز · IQR ۹۸.۱ · مرکز طیفی ۱۵۹۴ · هجا/ث ۱۰.۱۰ · شباهت <b>۰.۹۳۷</b></p>
+      <audio controls preload="none" src="candidates/cand-b-female.mp3"></audio>
+      <p class="note">کاندید B؛ نزدیک‌ترین صدای تولیدشدنی به مرجع زن (شباهت ۰٫۹۳۷). صدای زن در این نشست با آن قابل تولید است.</p>
+      <p class="path"><code>voice-samples/candidates/cand-b-female.mp3</code> · ۸۱ کیلوبایت · MD5 49ce2372…699ee7</p>
+    </div>
+  </article>
+  <article class="card rj">
+    <div class="num">#۵</div>
+    <div class="body">
+      <div class="top">
+        <span class="st rj">✕ رد شده</span>
+        <span class="role">مرد</span>
+        <span class="stage">دور ۲ — کوتاه</span>
+      </div>
+      <p class="metrics">مدت ۱۷.۳۶ ثانیه · F0 میانه <b>۱۰۷.۴</b> هرتز · IQR ۳۶.۵ · مرکز طیفی ۱۴۷۰ · هجا/ث ۱۰.۵۲ · شباهت <b>۰.۷۴۲</b></p>
+      <audio controls preload="none" src="candidates/cand-a-male.mp3"></audio>
+      <p class="note">کاندید A مرد؛ ۱۰۷ هرتز ولی بسیار یکنواخت (IQR ۳۶٫۵).</p>
+      <p class="path"><code>voice-samples/candidates/cand-a-male.mp3</code> · ۱۳۶ کیلوبایت · MD5 88396d8a…f67b55</p>
+    </div>
+  </article>
+  <article class="card rj">
+    <div class="num">#۶</div>
+    <div class="body">
+      <div class="top">
+        <span class="st rj">✕ رد شده</span>
+        <span class="role">مرد</span>
+        <span class="stage">دور ۲ — کوتاه</span>
+      </div>
+      <p class="metrics">مدت ۱۶.۵۴ ثانیه · F0 میانه <b>۱۵۲.۴</b> هرتز · IQR ۸۱.۵ · مرکز طیفی ۱۲۳۶ · هجا/ث ۱۰.۰۳ · شباهت <b>۰.۷۴۹</b></p>
+      <audio controls preload="none" src="candidates/cand-b-male.mp3"></audio>
+      <p class="note">کاندید B مرد؛ ۱۵۲ هرتز، روشن و بالاتر از مرجع.</p>
+      <p class="path"><code>voice-samples/candidates/cand-b-male.mp3</code> · ۱۳۰ کیلوبایت · MD5 83df15c7…9d23b7</p>
+    </div>
+  </article>
+  <article class="card rj">
+    <div class="num">#۷</div>
+    <div class="body">
+      <div class="top">
+        <span class="st rj">✕ رد شده</span>
+        <span class="role">مرد</span>
+        <span class="stage">دور ۳ — کوتاه</span>
+      </div>
+      <p class="metrics">مدت ۱۵.۶۲ ثانیه · F0 میانه <b>۱۱۸.۵</b> هرتز · IQR ۲۰.۸ · مرکز طیفی ۱۱۶۷ · هجا/ث ۹.۹۹ · شباهت <b>۰.۶۲۷</b></p>
+      <audio controls preload="none" src="candidates/r3-cand-c-male.mp3"></audio>
+      <p class="note">کاندید C؛ ۱۱۸ هرتز با IQR فقط ۲۰٫۸ — خیلی یکنواخت.</p>
+      <p class="path"><code>voice-samples/candidates/r3-cand-c-male.mp3</code> · ۱۲۲ کیلوبایت · MD5 02e2a84c…5ef534</p>
+    </div>
+  </article>
+  <article class="card rj">
+    <div class="num">#۸</div>
+    <div class="body">
+      <div class="top">
+        <span class="st rj">✕ رد شده</span>
+        <span class="role">مرد</span>
+        <span class="stage">دور ۳ — کوتاه</span>
+      </div>
+      <p class="metrics">مدت ۱۸.۷۳ ثانیه · F0 میانه <b>۱۱۸.۵</b> هرتز · IQR ۴۷.۳ · مرکز طیفی ۱۵۱۱ · هجا/ث ۹.۹۲ · شباهت <b>۰.۷۴۱</b></p>
+      <audio controls preload="none" src="candidates/r3-cand-d-male.mp3"></audio>
+      <p class="note">کاندید D؛ ۱۱۸ هرتز با IQR ۴۷٫۳.</p>
+      <p class="path"><code>voice-samples/candidates/r3-cand-d-male.mp3</code> · ۱۴۷ کیلوبایت · MD5 9904c983…62c0b2</p>
+    </div>
+  </article>
+  <article class="card al">
+    <div class="num">#۹</div>
+    <div class="body">
+      <div class="top">
+        <span class="st al">◻ جایگزین</span>
+        <span class="role">مرد</span>
+        <span class="stage">دور ۳ — کوتاه</span>
+      </div>
+      <p class="metrics">مدت ۱۹.۸۸ ثانیه · F0 میانه <b>۱۴۴.۱</b> هرتز · IQR ۸۷.۳ · مرکز طیفی ۱۷۰۷ · هجا/ث ۱۱.۱۲ · شباهت <b>۰.۸۵۷</b></p>
+      <audio controls preload="none" src="candidates/r3-cand-e-male.mp3"></audio>
+      <p class="note">کاندید E؛ بالاترین امتیاز مرد در دور سوم (۰٫۸۵۷) ولی تأیید نشد؛ جایگزین نمونهٔ طولانی.</p>
+      <p class="path"><code>voice-samples/candidates/r3-cand-e-male.mp3</code> · ۷۸ کیلوبایت · MD5 13e3a477…b63527</p>
+    </div>
+  </article>
+  <article class="card ok">
+    <div class="num">#۱۰</div>
+    <div class="body">
+      <div class="top">
+        <span class="st ok">✅ تأییدشده</span>
+        <span class="role">مرد</span>
+        <span class="stage">دور ۳ — کوتاه</span>
+      </div>
+      <p class="metrics">مدت ۱۹.۰۸ ثانیه · F0 میانه <b>۱۶۳.۳</b> هرتز · IQR ۹۰.۲ · مرکز طیفی ۱۶۹۱ · هجا/ث ۱۰.۵۲ · شباهت <b>۰.۸۳۰</b></p>
+      <audio controls preload="none" src="candidates/r3-cand-f-male.mp3"></audio>
+      <p class="note">✅ «صوت ۴» — صدای مرد تأییدشده. همین فایل در approved/male-approved.mp3 بایگانی شده است.</p>
+      <p class="path"><code>voice-samples/candidates/r3-cand-f-male.mp3</code> · ۷۵ کیلوبایت · MD5 71e1182a…8ce7b0</p>
+    </div>
+  </article>
+  <article class="card cl">
+    <div class="num">#۱۱</div>
+    <div class="body">
+      <div class="top">
+        <span class="st cl">🔶 نزدیک‌ترین</span>
+        <span class="role">زن</span>
+        <span class="stage">طولانی — ۱۰۴۷ نویسه</span>
+      </div>
+      <p class="metrics">مدت ۷۸.۱۷ ثانیه · F0 میانه <b>۱۸۳.۹</b> هرتز · IQR ۸۷.۱ · مرکز طیفی ۱۵۸۷ · هجا/ث ۱۰.۴۹ · شباهت <b>۰.۹۱۵</b></p>
+      <audio controls preload="none" src="long/long-female-closest.mp3"></audio>
+      <p class="note">نمونهٔ طولانی زن، ساخته‌شده با کاندید B (نه با فایل مرجع؛ شناسهٔ صدای مرجع در این نشست در دسترس نیست).</p>
+      <p class="path"><code>voice-samples/long/long-female-closest.mp3</code> · ۳۰۶ کیلوبایت · MD5 05b91f74…1ec97a</p>
+    </div>
+  </article>
+  <article class="card al">
+    <div class="num">#۱۲</div>
+    <div class="body">
+      <div class="top">
+        <span class="st al">◻ جایگزین</span>
+        <span class="role">مرد</span>
+        <span class="stage">طولانی — ۱۰۴۷ نویسه</span>
+      </div>
+      <p class="metrics">مدت ۷۶.۲۰ ثانیه · F0 میانه <b>۱۵۸.۴</b> هرتز · IQR ۱۳۷.۲ · مرکز طیفی ۱۷۱۶ · هجا/ث ۱۱.۵۰ · شباهت <b>۰.۷۹۲</b></p>
+      <audio controls preload="none" src="long/long-male-e.mp3"></audio>
+      <p class="note">نمونهٔ طولانی با کاندید E؛ جایگزین تأییدنشده.</p>
+      <p class="path"><code>voice-samples/long/long-male-e.mp3</code> · ۲۹۸ کیلوبایت · MD5 5df67185…17df11</p>
+    </div>
+  </article>
+  <article class="card ok">
+    <div class="num">#۱۳</div>
+    <div class="body">
+      <div class="top">
+        <span class="st ok">✅ تأییدشده</span>
+        <span class="role">مرد</span>
+        <span class="stage">طولانی — ۱۰۴۷ نویسه</span>
+      </div>
+      <p class="metrics">مدت ۷۵.۰۴ ثانیه · F0 میانه <b>۱۵۲.۴</b> هرتز · IQR ۱۰۳.۸ · مرکز طیفی ۱۸۶۲ · هجا/ث ۱۱.۸۷ · شباهت <b>۰.۸۸۰</b></p>
+      <audio controls preload="none" src="long/long-male-f.mp3"></audio>
+      <p class="note">✅ نمونهٔ طولانی رسمی صدای مرد تأییدشده (همان «صوت ۴»).</p>
+      <p class="path"><code>voice-samples/long/long-male-f.mp3</code> · ۲۹۴ کیلوبایت · MD5 a15e0ea2…0be905</p>
+    </div>
+  </article>
+
+  <h2 class="sec">مرجع‌ها (ساختهٔ من نیستند — منتقل‌شده از گفتگوی قبلی)</h2>
+  <div class="refs">
+    <div class="ref">
+      <h3>مرجع زن</h3>
+      <p class="note">۲۱٫۴۸ ثانیه · F0 ۱۸۸٫۲ · IQR ۱۰۲٫۸ · MD5 6478f350…a8d624</p>
+      <audio controls preload="none" src="voice-00-female.mp3"></audio>
+    </div>
+    <div class="ref">
+      <h3>مرجع مرد</h3>
+      <p class="note">۲۱٫۸۴ ثانیه · F0 ۱۰۳٫۹ · IQR ۹۴٫۷ · MD5 f43e99d9…dcc723</p>
+      <audio controls preload="none" src="voice-02-male.mp3"></audio>
+    </div>
+  </div>
+
+  <footer>
+    مجموع: ۱۳ نمونهٔ ساخته‌شده + ۲ مرجع منتقل‌شده. فایل‌های تأییدشده در <code>approved/</code> بایگانی شده‌اند؛
+    ثبت رسمی در <code>approved/approved.json</code>.
+    <br>نکته: نمونهٔ #۱۰ و <code>approved/male-approved.mp3</code> یک فایل یکسان‌اند (MD5 برابر).
+  </footer>
+</div>
+</body>
+</html>
