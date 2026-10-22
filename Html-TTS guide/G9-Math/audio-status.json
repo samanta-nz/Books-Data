@@ -55,8 +55,8 @@
   },
   {
    "section": "lab",
-   "parts_required": 5,
-   "parts_done": 0,
+   "parts_required": 13,
+   "parts_done": 12,
    "complete": false,
    "audio_file": null,
    "audio_seconds": null
@@ -64,7 +64,7 @@
   {
    "section": "mistakes",
    "parts_required": 12,
-   "parts_done": 0,
+   "parts_done": 1,
    "complete": false,
    "audio_file": null,
    "audio_seconds": null
@@ -127,7 +127,7 @@
  "lesson": "ryazif01d01",
  "sections_total": 14,
  "sections_with_audio": 11,
- "parts_total": 83,
- "parts_done": 39,
+ "parts_total": 91,
+ "parts_done": 52,
  "audio_seconds_total": 1713.6
 }
