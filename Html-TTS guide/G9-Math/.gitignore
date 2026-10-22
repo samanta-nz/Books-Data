@@ -1,0 +1,4 @@
+# نسخهٔ امبدشده هر بار از audio/ بازسازی می‌شود (~۵ مگابایت برای هر درس)
+# برای تحویل نهایی: python3 tools/embed_section_audio.py --audio-dir audio --output-dir html-with-audio
+html-with-audio/
+__pycache__/
