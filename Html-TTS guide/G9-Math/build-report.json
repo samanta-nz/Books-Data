@@ -1,0 +1,131 @@
+{
+  "sections": [
+    {
+      "lesson": "ryazif01d01",
+      "section": "ryazif01d01--goals",
+      "tts_input": "arena-input/ryazif01d01/ryazif01d01--goals.tts.txt",
+      "audio_filename": "ryazif01d01--goals.weba",
+      "audio_path": "audio/ryazif01d01--goals.weba",
+      "duration_seconds": 65.64,
+      "bytes": 638369,
+      "container_ok": true,
+      "segments": [
+        {
+          "type": "speech",
+          "speaker": "فرسام",
+          "file": "01.mp3",
+          "seconds": 14.52,
+          "chars": 91
+        },
+        {
+          "type": "pause",
+          "kind": "کوتاه",
+          "seconds": 0.6
+        },
+        {
+          "type": "speech",
+          "speaker": "فرسام",
+          "file": "02.mp3",
+          "seconds": 41.4,
+          "chars": 400
+        },
+        {
+          "type": "pause",
+          "kind": "کوتاه",
+          "seconds": 0.6
+        },
+        {
+          "type": "speech",
+          "speaker": "سروناز",
+          "file": "03.mp3",
+          "seconds": 7.92,
+          "chars": 86
+        },
+        {
+          "type": "pause",
+          "kind": "کوتاه",
+          "seconds": 0.6
+        }
+      ]
+    },
+    {
+      "lesson": "ryazif01d01",
+      "section": "ryazif01d01--entry",
+      "tts_input": "arena-input/ryazif01d01/ryazif01d01--entry.tts.txt",
+      "audio_filename": "ryazif01d01--entry.weba",
+      "audio_path": "audio/ryazif01d01--entry.weba",
+      "duration_seconds": 15.7,
+      "bytes": 130024,
+      "container_ok": true,
+      "segments": [
+        {
+          "type": "speech",
+          "speaker": "فرسام",
+          "file": "01.mp3",
+          "seconds": 13.2,
+          "chars": 136
+        },
+        {
+          "type": "pause",
+          "kind": "بلند",
+          "seconds": 2.5
+        }
+      ]
+    },
+    {
+      "lesson": "ryazif01d01",
+      "section": "ryazif01d01--practice",
+      "tts_input": "arena-input/ryazif01d01/ryazif01d01--practice.tts.txt",
+      "audio_filename": "ryazif01d01--practice.weba",
+      "audio_path": "audio/ryazif01d01--practice.weba",
+      "duration_seconds": 15.7,
+      "bytes": 130024,
+      "container_ok": true,
+      "segments": [
+        {
+          "type": "speech",
+          "speaker": "فرسام",
+          "file": "01.mp3",
+          "seconds": 13.2,
+          "chars": 136
+        },
+        {
+          "type": "pause",
+          "kind": "بلند",
+          "seconds": 2.5
+        }
+      ]
+    },
+    {
+      "lesson": "ryazif01d01",
+      "section": "ryazif01d01--exit",
+      "tts_input": "arena-input/ryazif01d01/ryazif01d01--exit.tts.txt",
+      "audio_filename": "ryazif01d01--exit.weba",
+      "audio_path": "audio/ryazif01d01--exit.weba",
+      "duration_seconds": 15.26,
+      "bytes": 127025,
+      "container_ok": true,
+      "segments": [
+        {
+          "type": "speech",
+          "speaker": "فرسام",
+          "file": "01.mp3",
+          "seconds": 4.08,
+          "chars": 30
+        },
+        {
+          "type": "speech",
+          "speaker": "فرسام",
+          "file": "02.mp3",
+          "seconds": 8.68,
+          "chars": 101
+        },
+        {
+          "type": "pause",
+          "kind": "بلند",
+          "seconds": 2.5
+        }
+      ]
+    }
+  ]
+}

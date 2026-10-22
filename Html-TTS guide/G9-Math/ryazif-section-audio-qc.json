@@ -1,0 +1,32 @@
+{
+  "revision": "section-audio-ready-2026-10-22",
+  "html_files": 37,
+  "sections_and_players": 489,
+  "spoken_sections": 457,
+  "non_spoken_sections": 32,
+  "exercise_batch_only_sections": 52,
+  "special_question_only_blocks": 28,
+  "static_qc": "PASS",
+  "javascript_scripts_syntax_checked": 227,
+  "images_and_dialogue_preservation": "PASS",
+  "all_original_svg_markup_preserved": true,
+  "browser_cases": 74,
+  "section_open_cases": 978,
+  "media_play_pause_stop_restart_seek_resume_after_reload": "PASS — actual browser decoding of an isolated silent QA fixture, never distributed as teaching audio",
+  "keyboard_and_floating_toc": "PASS",
+  "only_one_open_section": "PASS",
+  "normal_motion_representative_cases": 37,
+  "normal_motion_and_replay_after_accordion_open": "PASS",
+  "assembly_validation_edge_cases": 5,
+  "locked_verifier": "OK — all locked files intact",
+  "actual_audio_generation": "DEFERRED_BY_USER",
+  "actual_teaching_audio_listening_qc": "NOT_RUN — no teaching recordings exist yet by user design",
+  "browser_method": "Chromium, offline, intercepted local test origin to enable localStorage. No external resource requests. Direct file:// navigation blocked by the host administrator; no file:// test claimed.",
+  "evidence": [
+    "verification/static-qc.json",
+    "verification/browser-qc.json",
+    "verification/normal-motion-qc.json",
+    "verification/embed-edge-qc.json",
+    "verification/svg-preservation.json"
+  ]
+}

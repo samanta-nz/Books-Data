@@ -1,0 +1,23 @@
+/* Additive lesson functionality; locked template assets remain unchanged. */
+section[data-section-audio]{scroll-margin-top:1rem;min-width:0}
+section[data-section-audio] > details.lesson-accordion{padding:0;margin:0;background:transparent;border:0;min-width:0}
+.lesson-accordion > summary.section-heading{display:flex;align-items:center;gap:.7rem;padding:.7rem .3rem;cursor:pointer;list-style:none;line-height:1.8;border-radius:12px}
+.lesson-accordion > summary.section-heading::-webkit-details-marker{display:none}
+.lesson-accordion > summary.section-heading::after{content:"⌄";font-size:1.5rem;flex:none;margin-inline-start:auto;transition:transform .15s}
+.lesson-accordion[open] > summary.section-heading::after{transform:rotate(180deg)}
+.lesson-accordion > summary.section-heading h2{font:inherit;font-weight:800;font-size:clamp(1.1rem,2.5vw,1.5rem);margin:0;min-width:0;line-height:1.8;overflow-wrap:anywhere}
+.lesson-accordion > summary.section-heading:focus-visible{outline:3px solid var(--accent,#38655f);outline-offset:4px}
+.section-panel{min-width:0;max-width:100%;padding-top:.5rem}
+.section-audio-player{margin:0 0 1.2rem;padding:.9rem;border:1px solid var(--card-edge,#b8b7bd);border-radius:14px;background:var(--paper,#fff8ed);color:var(--ink,#24343b);line-height:1.8;min-width:0}
+.section-audio-player .section-audio-title{font-weight:700;margin:0 0 .5rem}
+.section-audio-controls{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;min-width:0}
+.section-audio-controls button{font:inherit;font-weight:700;min-height:44px;min-width:90px;padding:.4rem .8rem;border:1px solid var(--accent,#38655f);border-radius:10px;background:var(--card,#fff);color:var(--ink,#24343b);cursor:pointer;line-height:1.5}
+.section-audio-controls button:disabled{opacity:.55;cursor:default}
+.section-audio-controls button:focus-visible,.section-audio-seek:focus-visible{outline:3px solid var(--accent,#38655f);outline-offset:3px}
+.section-audio-position{font-family:VazirDigits,Vazirmatn,Tahoma,sans-serif;font-weight:700;direction:ltr;unicode-bidi:isolate;white-space:nowrap;margin-inline-start:auto}
+.section-audio-seek{display:block;width:100%;min-width:0;max-width:100%;direction:ltr;accent-color:var(--accent,#38655f);margin:.6rem 0;min-height:24px}
+.section-audio-status{margin:0;font-size:.9rem;line-height:1.8;overflow-wrap:anywhere}
+.section-audio-player audio{display:none}
+@media(max-width:440px){.section-audio-player{padding:.7rem}.section-audio-controls{gap:.4rem}.section-audio-controls button{min-width:80px}.section-audio-position{font-size:.9rem}}
+@media(prefers-reduced-motion:reduce){.lesson-accordion > summary.section-heading::after{transition:none}}
+@media print{.lesson-accordion > .section-panel{display:block!important}.section-audio-player{display:none}}
