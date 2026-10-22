@@ -57,7 +57,7 @@
   {
    "section": "examples",
    "parts_required": 30,
-   "parts_done": 0,
+   "parts_done": 1,
    "complete": false,
    "audio_file": null,
    "audio_seconds": null
@@ -92,10 +92,11 @@
   {
    "section": "mistakes",
    "parts_required": 16,
-   "parts_done": 7,
-   "complete": false,
-   "audio_file": null,
-   "audio_seconds": null
+   "parts_done": 16,
+   "complete": true,
+   "audio_file": "ryazif01d02--mistakes.weba",
+   "audio_seconds": 179.8,
+   "audio_bytes": 720378
   },
   {
    "section": "practice",
@@ -127,8 +128,8 @@
  ],
  "lesson": "ryazif01d02",
  "sections_total": 14,
- "sections_with_audio": 12,
+ "sections_with_audio": 13,
  "parts_total": 108,
- "parts_done": 69,
- "audio_seconds_total": 2520.3
+ "parts_done": 79,
+ "audio_seconds_total": 2700.1
 }
