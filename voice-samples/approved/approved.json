@@ -33,7 +33,14 @@
       "spectral_centroid_hz": 1691,
       "syllables_per_sec": 10.52,
       "approved_on": "2026-10-22",
-      "note": "کاربر به‌عنوان «صوت ۴» تأیید کرد؛ در نمونهٔ طولانی ۱۰۴۷ نویسه‌ای امتیاز ۰٫۸۸۰ گرفت."
+      "note": "کاربر به‌عنوان «صوت ۴» تأیید کرد؛ در نمونهٔ طولانی ۱۰۴۷ نویسه‌ای امتیاز ۰٫۸۸۰ گرفت.",
+      "long_file": "voice-samples/long/long-male-f.mp3",
+      "long_md5": "a15e0ea24c66db4ae697ca92400be905",
+      "long_duration_s": 75.04,
+      "long_f0_median_hz": 152.4,
+      "long_f0_iqr_hz": 103.8,
+      "long_spectral_centroid_hz": 1862,
+      "short_long_similarity": 0.899
     }
   ],
   "closest_reproduction_candidates": [
@@ -55,24 +62,87 @@
     }
   ],
   "rejected": [
-    {"role": "male", "file": "voice-samples/candidates/cand-a-male.mp3", "reason": "رد کاربر — یکنواخت، IQR فقط ۳۶٫۵"},
-    {"role": "male", "file": "voice-samples/candidates/cand-b-male.mp3", "reason": "رد کاربر — زیر و بمی بالا (۱۵۲ هرتز)"},
-    {"role": "male", "file": "voice-samples/candidates/r3-cand-c-male.mp3", "reason": "رد — IQR ۲۰٫۸، بیش از حد یکنواخت"},
-    {"role": "male", "file": "voice-samples/candidates/r3-cand-d-male.mp3", "reason": "رد — IQR ۴۷٫۳"}
+    {
+      "role": "male",
+      "file": "voice-samples/candidates/cand-a-male.mp3",
+      "reason": "رد کاربر — یکنواخت، IQR فقط ۳۶٫۵"
+    },
+    {
+      "role": "male",
+      "file": "voice-samples/candidates/cand-b-male.mp3",
+      "reason": "رد کاربر — زیر و بمی بالا (۱۵۲ هرتز)"
+    },
+    {
+      "role": "male",
+      "file": "voice-samples/candidates/r3-cand-c-male.mp3",
+      "reason": "رد — IQR ۲۰٫۸، بیش از حد یکنواخت"
+    },
+    {
+      "role": "male",
+      "file": "voice-samples/candidates/r3-cand-d-male.mp3",
+      "reason": "رد — IQR ۴۷٫۳"
+    }
   ],
   "rounds": {
     "round3_male": [
-      {"file": "voice-samples/candidates/r3-cand-c-male.mp3", "f0_median_hz": 118.5, "iqr_hz": 20.8, "centroid_hz": 1167, "score": 0.627},
-      {"file": "voice-samples/candidates/r3-cand-d-male.mp3", "f0_median_hz": 118.5, "iqr_hz": 47.3, "centroid_hz": 1511, "score": 0.741},
-      {"file": "voice-samples/candidates/r3-cand-e-male.mp3", "f0_median_hz": 144.1, "iqr_hz": 87.3, "centroid_hz": 1707, "score": 0.857, "note": "بالاترین امتیاز دور سوم؛ تأیید نشد"},
-      {"file": "voice-samples/candidates/r3-cand-f-male.mp3", "f0_median_hz": 163.3, "iqr_hz": 90.2, "centroid_hz": 1691, "score": 0.83, "status": "approved"}
+      {
+        "file": "voice-samples/candidates/r3-cand-c-male.mp3",
+        "f0_median_hz": 118.5,
+        "iqr_hz": 20.8,
+        "centroid_hz": 1167,
+        "score": 0.627
+      },
+      {
+        "file": "voice-samples/candidates/r3-cand-d-male.mp3",
+        "f0_median_hz": 118.5,
+        "iqr_hz": 47.3,
+        "centroid_hz": 1511,
+        "score": 0.741
+      },
+      {
+        "file": "voice-samples/candidates/r3-cand-e-male.mp3",
+        "f0_median_hz": 144.1,
+        "iqr_hz": 87.3,
+        "centroid_hz": 1707,
+        "score": 0.857,
+        "note": "بالاترین امتیاز دور سوم؛ تأیید نشد"
+      },
+      {
+        "file": "voice-samples/candidates/r3-cand-f-male.mp3",
+        "f0_median_hz": 163.3,
+        "iqr_hz": 90.2,
+        "centroid_hz": 1691,
+        "score": 0.83,
+        "status": "approved"
+      }
     ],
     "long_samples": {
       "text_chars": 1047,
       "files": [
-        {"file": "voice-samples/long/long-female-closest.mp3", "role": "female-closest", "duration_s": 78.17, "f0_median_hz": 183.9, "iqr_hz": 87.1, "score": 0.789},
-        {"file": "voice-samples/long/long-male-e.mp3", "role": "male-e", "duration_s": 76.2, "f0_median_hz": 158.4, "iqr_hz": 137.2, "score": 0.792},
-        {"file": "voice-samples/long/long-male-f.mp3", "role": "male-approved", "duration_s": 75.04, "f0_median_hz": 152.4, "iqr_hz": 103.8, "score": 0.88}
+        {
+          "file": "voice-samples/long/long-female-closest.mp3",
+          "role": "female-closest",
+          "duration_s": 78.17,
+          "f0_median_hz": 183.9,
+          "iqr_hz": 87.1,
+          "score": 0.789
+        },
+        {
+          "file": "voice-samples/long/long-male-e.mp3",
+          "role": "male-e",
+          "duration_s": 76.2,
+          "f0_median_hz": 158.4,
+          "iqr_hz": 137.2,
+          "score": 0.792
+        },
+        {
+          "file": "voice-samples/long/long-male-f.mp3",
+          "role": "male-approved",
+          "duration_s": 75.04,
+          "f0_median_hz": 152.4,
+          "iqr_hz": 103.8,
+          "score": 0.88
+        }
       ]
     }
   }
