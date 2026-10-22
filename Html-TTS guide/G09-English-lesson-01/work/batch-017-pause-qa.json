@@ -1,0 +1,12 @@
+{
+  "file": "audio/prospect3-lesson-01--listening--89af402920.weba",
+  "expected_long_pauses": 5,
+  "detected_durations": [
+    8.821021,
+    8.653,
+    8.000021,
+    8.290167,
+    8.257938
+  ],
+  "passed": true
+}

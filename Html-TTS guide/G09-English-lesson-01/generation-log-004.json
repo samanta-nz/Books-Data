@@ -1,0 +1,157 @@
+{
+  "date": "2026-10-22",
+  "generator": "Arena.ai generate_speech",
+  "batch": "004",
+  "sections": [
+    "prerequisites",
+    "meaning"
+  ],
+  "clips": [
+    {
+      "clip": "work/clips/prerequisites-turn-039.mp3",
+      "source_turn": "prospect3-lesson-01-turn-039",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "فاعل کسی یا چیزی هست که درباره‌اش خبر می‌دیم. در My brother is quiet.، عبارت my brother فاعل هست؛ در Our classmates are helpful.، عبارت our classmates فاعل هست. طول عبارت تعیین‌کننده نیست؛ به یک نفر یا چند نفر اشاره‌کردن مهم هست.",
+      "bytes": 82701,
+      "sha256": "dd94c268f827795ec4f0698db628b316b1c3d27193a55e2029c9576ba4d8e01b"
+    },
+    {
+      "clip": "work/clips/prerequisites-turn-040.mp3",
+      "source_turn": "prospect3-lesson-01-turn-040",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "اگر my brother رو با he عوض کنم، هنوز دربارهٔ یک نفر حرف می‌زنم: He is quiet. اگر همکلاسی‌ها رو با they جایگزین کنم، فعل جمع حفظ می‌شه: They are helpful.",
+      "bytes": 55821,
+      "sha256": "c5cff27df5b44f6cee34180fd1393de2308a923857f7d9ae85f0b4fc35fbbff3"
+    },
+    {
+      "clip": "work/clips/prerequisites-turns-041-042-043.mp3",
+      "source_turn": "prospect3-lesson-01-turn-041 + turn-042 + turn-043",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "نام و ضمیر به یک نفر اشاره می‌کنند — Sara و she در این مثال به یک نفر اشاره می‌کنند؛ ضمیر، شخص تازه‌ای اضافه نمی‌کند. شکل تألیفیِ مکمل\n\nضمیرهای فاعلیِ مورد نیاز I, you, he, she, it, we, they هستن. I برای خودم، you برای مخاطب، he و she برای یک شخص، it برای یک چیز یا حیوان در کاربرد مناسب، we برای ما و they برای آن‌ها به کار می‌روند.\n\nصفت، ویژگی رو می‌گوید. در She is patient.، واژهٔ patient صفت هست و is فعل هست. در فارسی ممکن هست «او صبور» بگوییم و «هست» رو در گفتار حذف کنیم؛ جملهٔ کامل انگلیسیِ این ساخت همچنان به فعل نیاز دارد.",
+      "bytes": 221613,
+      "sha256": "b10712618ce2f24ed19ecae737acba972fb80590250257bccc99d7650aceaeed"
+    },
+    {
+      "clip": "work/clips/prerequisites-turn-044.mp3",
+      "source_turn": "prospect3-lesson-01-turn-044",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "در My two friends are kind.، کلمهٔ two و اسمِ جمع friends نشان می‌دهند فاعل جمع هست. پس نمی‌گویم My two friends is kind.؛ فاعل رو اول پیدا می‌کنم و بعد فعل رو انتخاب می‌کنم.",
+      "bytes": 68493,
+      "sha256": "00d5be37b244805d28f86f95c18198d8fb4fb35995a01e35d25521546a7f8d9c"
+    },
+    {
+      "clip": "work/clips/meaning-turn-048-full.mp3",
+      "source_turn": "prospect3-lesson-01-turn-048",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در گفت‌وگوی کتاب، ویژگی دوست مطرح می‌شه. سؤال What is your friend like? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nیعنی دوستت چه‌جور شخصی هست؟ اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nپاسخ باید ویژگی بدهد: She is friendly and helpful. این سؤال رو با What does your friend like? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nیعنی دوستت چه چیزی رو دوست دارد؟ اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nیکی ندانید.",
+      "bytes": 213549,
+      "sha256": "de59318f3f744db50b68f974aafd8ab92b99e0999747443e5d10d5e3806afa20"
+    },
+    {
+      "clip": "work/clips/meaning-turn-049-full.mp3",
+      "source_turn": "prospect3-lesson-01-turn-049",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "اگر بپرسند What is he like? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nجواب He likes football. مستقیماً شخصیت او رو توضیح نمی‌ده. پاسخ مناسب‌تر می‌تواند He is funny and kind. باشه؛ موضوع سؤال، ویژگی هست.",
+      "bytes": 100749,
+      "sha256": "a5eb2eb3997538234d0f42bd17ee84269cf4c0f09b01f0c2152b1eb82c505885"
+    },
+    {
+      "clip": "work/clips/meaning-turn-050.mp3",
+      "source_turn": "prospect3-lesson-01-turn-050",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "ویژگی، عمل جاری نیست — قابِ patient ویژگی فرد رو توضیح می‌ده؛ این جمله، انجام‌دادن یک عمل رو گزارش نمی‌کند. شکل تألیفیِ مکمل",
+      "bytes": 55821,
+      "sha256": "61d178b3b5da147f10eb74633c07ae307b4b0fe92146450d149c1e83633306e4"
+    },
+    {
+      "clip": "work/clips/meaning-turn-051.mp3",
+      "source_turn": "prospect3-lesson-01-turn-051",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "صفت‌ها رو در رفتار بشناسید: patient هنگام انتظار و دشواری با آرامش مرتبط هست؛ kind مهربانی رو می‌رساند؛ helpful کمک‌کردن رو برجسته می‌کند. ممکن هست یک نفر هر سه ویژگی رو داشته باشه، اما این واژه‌ها مترادف کامل نیستن.",
+      "bytes": 91821,
+      "sha256": "11a225cdaae4cf5d42a10f635ff2b8dee7648c2083601c4460ef4ab5a2ac300e"
+    },
+    {
+      "clip": "work/clips/meaning-turn-052.mp3",
+      "source_turn": "prospect3-lesson-01-turn-052",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "کم‌حرف‌بودن با نامهربانی یکی نیست. جملهٔ My cousin is quiet and friendly. می‌تواند کاملاً سازگار باشه؛ او زیاد حرف نمی‌زند، اما برخورد دوستانه‌ای دارد. از یک ویژگی، ویژگیِ دیگر رو بی‌دلیل نتیجه نمی‌گیرم.",
+      "bytes": 76749,
+      "sha256": "673201ca8ba10017ae39a9430c4b2b31f988b8ad603101b4baa07ca2a37ea228"
+    },
+    {
+      "clip": "work/clips/meaning-turn-053.mp3",
+      "source_turn": "prospect3-lesson-01-turn-053",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "برای نرم‌تر و دقیق‌ترکردن توصیف، از very به معنی «خیلی» و a bit به معنی «کمی» استفاده می‌کنیم: He is very careful. و I am a bit serious. شدتِ ویژگی تغییر می‌کند، اما شکلِ فعل همچنان با فاعل هماهنگ هست.",
+      "bytes": 88749,
+      "sha256": "5c4ec11444847924b37d81e0a057e43bf5476c4544aef51a5b8cf8e9fabeecce"
+    }
+  ],
+  "assembly_edits": [
+    {
+      "source_turn": "prospect3-lesson-01-turn-041 + turn-042 + turn-043",
+      "boundaries": [
+        {
+          "first_trim_end": 12.421792,
+          "second_trim_start": 13.46575
+        },
+        {
+          "second_trim_end": 35.568583,
+          "third_trim_start": 36.928625
+        }
+      ]
+    },
+    {
+      "source_turn": "prospect3-lesson-01-turn-048",
+      "segments": [
+        {
+          "trim_end": 13.918833,
+          "pause_after_ms": 8000
+        },
+        {
+          "trim_start": 14.964667,
+          "trim_end": 24.147958,
+          "pause_after_ms": 8000
+        },
+        {
+          "trim_start": 24.952583,
+          "trim_end": 40.837167,
+          "pause_after_ms": 8000
+        },
+        {
+          "trim_start": 41.546458,
+          "trim_end": 50.871,
+          "pause_after_ms": 8000
+        },
+        {
+          "trim_start": 51.71075,
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "source_turn": "prospect3-lesson-01-turn-049",
+      "segments": [
+        {
+          "trim_end": 10.201375,
+          "pause_after_ms": 8000
+        },
+        {
+          "trim_start": 11.217333,
+          "pause_after_ms": 700
+        }
+      ]
+    }
+  ]
+}

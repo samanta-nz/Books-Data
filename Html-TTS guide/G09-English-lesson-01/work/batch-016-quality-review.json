@@ -1,0 +1,25 @@
+{
+  "batch": "016",
+  "status": "nine_clips_accepted_one_rejected",
+  "accepted_clips": [
+    "source-grammar-a-034-036-038.mp3",
+    "source-grammar-r-035-037-039.mp3",
+    "source-reading-a-040-042-044.mp3",
+    "source-reading-a-046-048.mp3",
+    "source-reading-r-041-043-045.mp3",
+    "source-reading-r-047-049.mp3",
+    "listening-a-249-251-253.mp3",
+    "listening-r-248-250.mp3",
+    "listening-r-252-254.mp3"
+  ],
+  "rejected": [
+    {
+      "file": "work/clips/listening-a-243-instruction-247.mp3",
+      "sha256": "41b5d82524291ce584824891a0afb7db737c551dbd01d00ca294323f35a3d9f7",
+      "duration_seconds": 29.86,
+      "reason": "Combined clip is too fast for the complete source. Turn 243 and turn 247 have estimated rates of 14.78 and 17.18 non-whitespace characters per speech second; comparable listening prompts are 9.97-11.61. Regenerate all three source turns separately.",
+      "status": "rejected_not_embedded"
+    }
+  ],
+  "raw_analysis": "work/batch-016-audio-analysis.json"
+}

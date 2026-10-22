@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-22",
+  "generator": "Arena.ai generate_speech",
+  "batch": "002",
+  "sections": [
+    "bridge-word-roles",
+    "bridge-subject-pronouns"
+  ],
+  "clips": [
+    {
+      "clip": "work/clips/bridge-word-roles-turn-006.mp3",
+      "source_turn": "prospect3-lesson-01-turn-006",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در My sister is patient. عبارت my sister نامِ شخص مورد بحث، is فعل و patient صفتِ ویژگی هست. صفت توضیح می‌ده آن شخص چگونه هست؛ اسم شخص یا چیز رو مشخص می‌کند. پس «صبور» نام یک وسیله یا کار نیست.",
+      "bytes": 77613,
+      "sha256": "ff689b8a98f035490c93b90a07af7afde2f3428c21c8c3ab2e64556c7faba041"
+    },
+    {
+      "clip": "work/clips/bridge-word-roles-turn-007.mp3",
+      "source_turn": "prospect3-lesson-01-turn-007",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "در جملهٔ My sister reads a book، واژهٔ reads عمل رو می‌گوید و a book چیزی هست که خوانده می‌شه. وجود نام یک شخص در هر دو جمله، به معنی یکسان‌بودن ساخت ادامهٔ آن‌ها نیست.",
+      "bytes": 66189,
+      "sha256": "dda122d738cb07cfcdcf5a18ccf3128835971d308ffac2e50cdbb0119dc0ba59"
+    },
+    {
+      "clip": "work/clips/bridge-word-roles-turn-008.mp3",
+      "source_turn": "prospect3-lesson-01-turn-008",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "نقش رو از روی معنی و جایگاهِ همان جمله پیدا کنین. book در This is my book. اسمِ کتاب هست؛ اما در We book a room. فعلِ رزروکردن هست. یک صورت نوشتاری می‌تواند در دو جمله نقش متفاوت داشته باشه.",
+      "bytes": 77133,
+      "sha256": "83cef47a4d3b7e2cb890d73d603538dc3b54563681f9a1428d0d9eee7ae51126"
+    },
+    {
+      "clip": "work/clips/bridge-word-roles-turn-009.mp3",
+      "source_turn": "prospect3-lesson-01-turn-009",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "اگر بگویم My friend kind، معنی رو شاید حدس بزنید ولی جملهٔ معیارِ این معرفی کامل نیست. در این ساخت، فعل is لازم هست و جمله به My friend is kind. تبدیل می‌شه.",
+      "bytes": 68493,
+      "sha256": "a1202505247bb677dabf80829aa808aa74adec67bb023fe608dc2f8dcc5ecc6f"
+    },
+    {
+      "clip": "work/clips/bridge-word-roles-turn-010.mp3",
+      "source_turn": "prospect3-lesson-01-turn-010",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "محک کوچک: در The students are quiet. کدام بخش، گروهِ مورد توصیف هست؟ اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 64653,
+      "sha256": "74ac104b10f9b7fdbde3fde12a012f9e78144d50a3b11241b4169f08f4bf67e3"
+    },
+    {
+      "clip": "work/clips/bridge-subject-pronouns-turn-011-full.mp3",
+      "source_turn": "prospect3-lesson-01-turn-011",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "فاعل رو با این پرسش پیدا کنین: چه کسی یا چه چیزی در این جمله معرفی می‌شه یا کاری انجام می‌ده؟ اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nدر Ali is careful، فاعل Ali هست؛ در My classmates study English، فاعل همهٔ عبارت my classmates هست، نه فقط آخرین حرف آن.",
+      "bytes": 114381,
+      "sha256": "c2646c18b3dfe00b57588c32f197739512dd7b8311d8530b1d6d5940c518be09"
+    },
+    {
+      "clip": "work/clips/bridge-subject-pronouns-turn-012.mp3",
+      "source_turn": "prospect3-lesson-01-turn-012",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "می‌تونم برای جلوگیری از تکرار نام، در ادامه به جای Ali از he استفاده کنم؛ اما باید معلوم بماند ضمیر به چه کسی اشاره می‌کند. جابه‌جایی نام و ضمیر، معنی و تعداد افراد رو تغییر نمی‌ده.",
+      "bytes": 63021,
+      "sha256": "75965b29d0fc1530d98a161c704e1fe56c94f21ac155947114aed80e37d1c8bd"
+    },
+    {
+      "clip": "work/clips/bridge-subject-pronouns-turn-013.mp3",
+      "source_turn": "prospect3-lesson-01-turn-013",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "ضمیرهای فاعلیِ پایه عبارت‌اند از I, you, he, she, it, we, they. I به گوینده، you به مخاطب و we به گوینده همراه دیگران اشاره می‌کند. it برای چیز، حیوان یا موقعیتِ متناسب با بافت به کار می‌رود؛ انتخاب ضمیر رو از متن جدا نکنین.",
+      "bytes": 115341,
+      "sha256": "19cd0831d6a0db68c7c2d6a887f0bc6633bf5f5a3ae2710e0e4f85c71c8c55ac"
+    },
+    {
+      "clip": "work/clips/bridge-subject-pronouns-turn-014.mp3",
+      "source_turn": "prospect3-lesson-01-turn-014",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "در Zahra and Nadia are generous. دو نام با and داریم، پس فاعل جمع هست و می‌تونم در ادامه بگویم They are generous. طول اسم‌ها مهم نیست؛ تعداد افرادِ مورد اشاره مهم هست.",
+      "bytes": 62733,
+      "sha256": "59c57f3636790181cdce6cff24bda4701357184f6611c1b70504aeb99d966051"
+    },
+    {
+      "clip": "work/clips/bridge-subject-pronouns-turn-015.mp3",
+      "source_turn": "prospect3-lesson-01-turn-015",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "you می‌تواند خطاب به یک نفر یا چند نفر باشه، اما در الگوی حالِ فعل be با are میاد. جملهٔ You is kind. رو به این دلیل که مخاطب یک نفر هست درست حساب نمی‌کنیم. شکل درست در هر دو حالت You are kind. هست.",
+      "bytes": 79821,
+      "sha256": "3f8e798310e7e39e1f9bd25f293352c93b25589acbe54642515859ed2e4c6747"
+    }
+  ],
+  "assembly_edits": [
+    {
+      "source_turn": "prospect3-lesson-01-turn-011",
+      "first_part_trim_end_seconds": 14.969833,
+      "second_part_trim_start_seconds": 15.795083,
+      "inserted_silence_ms": 8000,
+      "reason": "Execute the internal long-pause marker without dropping any speech."
+    }
+  ]
+}

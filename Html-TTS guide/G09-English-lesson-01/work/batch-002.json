@@ -1,0 +1,28 @@
+{
+  "batch": "002-bridge-word-roles-and-subject-pronouns",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-01--bridge-word-roles--9a8940e02f.weba",
+      "inputs": [
+        {"path": "work/clips/bridge-word-roles-turn-006.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/bridge-word-roles-turn-007.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/bridge-word-roles-turn-008.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/bridge-word-roles-turn-009.mp3", "pause_after_ms": 8000},
+        {"path": "work/clips/bridge-word-roles-turn-010.mp3", "pause_after_ms": 8000}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--bridge-subject-pronouns--2bc3806e4b.weba",
+      "inputs": [
+        {"path": "work/clips/bridge-subject-pronouns-turn-011-full.mp3", "trim_end_seconds": 14.969833, "pause_after_ms": 8000},
+        {"path": "work/clips/bridge-subject-pronouns-turn-011-full.mp3", "trim_start_seconds": 15.795083, "pause_after_ms": 700},
+        {"path": "work/clips/bridge-subject-pronouns-turn-012.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/bridge-subject-pronouns-turn-013.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/bridge-subject-pronouns-turn-014.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/bridge-subject-pronouns-turn-015.mp3", "pause_after_ms": 700}
+      ]
+    }
+  ],
+  "copies": []
+}

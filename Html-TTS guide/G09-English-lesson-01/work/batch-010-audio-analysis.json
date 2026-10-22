@@ -1,0 +1,221 @@
+{
+  "speak-turn-082-full.mp3": {
+    "duration": 37.97,
+    "mean_volume_db": -19.8,
+    "max_volume_db": -2.0,
+    "silences": [
+      {
+        "start": 2.502958,
+        "end": 3.059333,
+        "duration": 0.556375
+      },
+      {
+        "start": 4.151417,
+        "end": 4.671458,
+        "duration": 0.520042
+      },
+      {
+        "start": 7.836125,
+        "end": 8.395917,
+        "duration": 0.559792
+      },
+      {
+        "start": 9.731208,
+        "end": 10.209542,
+        "duration": 0.478333
+      },
+      {
+        "start": 11.262042,
+        "end": 11.883333,
+        "duration": 0.621292
+      },
+      {
+        "start": 17.949708,
+        "end": 18.520625,
+        "duration": 0.570917
+      },
+      {
+        "start": 18.864542,
+        "end": 19.378792,
+        "duration": 0.51425
+      },
+      {
+        "start": 20.934125,
+        "end": 21.58925,
+        "duration": 0.655125
+      },
+      {
+        "start": 27.584167,
+        "end": 28.055375,
+        "duration": 0.471208
+      }
+    ]
+  },
+  "speak-turn-083.mp3": {
+    "duration": 15.5,
+    "mean_volume_db": -19.7,
+    "max_volume_db": -1.6,
+    "silences": []
+  },
+  "speak-turn-084.mp3": {
+    "duration": 13.37,
+    "mean_volume_db": -20.0,
+    "max_volume_db": -5.5,
+    "silences": [
+      {
+        "start": 2.625208,
+        "end": 3.297667,
+        "duration": 0.672458
+      },
+      {
+        "start": 10.642708,
+        "end": 11.236708,
+        "duration": 0.594
+      }
+    ]
+  },
+  "speak-turn-085.mp3": {
+    "duration": 22.42,
+    "mean_volume_db": -19.4,
+    "max_volume_db": -3.3,
+    "silences": [
+      {
+        "start": 0.0,
+        "end": 0.652333,
+        "duration": 0.652333
+      },
+      {
+        "start": 13.037625,
+        "end": 13.49375,
+        "duration": 0.456125
+      }
+    ]
+  },
+  "speak-turn-086-full.mp3": {
+    "duration": 15.02,
+    "mean_volume_db": -20.1,
+    "max_volume_db": -1.5,
+    "silences": [
+      {
+        "start": 1.803417,
+        "end": 2.64175,
+        "duration": 0.838333
+      },
+      {
+        "start": 3.707667,
+        "end": 4.476208,
+        "duration": 0.768542
+      },
+      {
+        "start": 5.63975,
+        "end": 6.415583,
+        "duration": 0.775833
+      },
+      {
+        "start": 9.114625,
+        "end": 9.782625,
+        "duration": 0.668
+      }
+    ]
+  },
+  "errors-summary-turn-087.mp3": {
+    "duration": 19.97,
+    "mean_volume_db": -19.3,
+    "max_volume_db": -4.1,
+    "silences": [
+      {
+        "start": 3.939875,
+        "end": 4.468042,
+        "duration": 0.528167
+      },
+      {
+        "start": 8.254292,
+        "end": 8.7425,
+        "duration": 0.488208
+      },
+      {
+        "start": 13.901458,
+        "end": 14.434417,
+        "duration": 0.532958
+      },
+      {
+        "start": 19.414542,
+        "end": 19.92,
+        "duration": 0.505458
+      }
+    ]
+  },
+  "errors-summary-turn-088.mp3": {
+    "duration": 19.06,
+    "mean_volume_db": -19.1,
+    "max_volume_db": -1.7,
+    "silences": [
+      {
+        "start": 0.0,
+        "end": 0.574625,
+        "duration": 0.574625
+      }
+    ]
+  },
+  "errors-summary-turn-089.mp3": {
+    "duration": 14.66,
+    "mean_volume_db": -19.4,
+    "max_volume_db": -3.0,
+    "silences": [
+      {
+        "start": 2.948833,
+        "end": 3.432708,
+        "duration": 0.483875
+      },
+      {
+        "start": 11.489417,
+        "end": 12.295333,
+        "duration": 0.805917
+      }
+    ]
+  },
+  "errors-summary-turn-090.mp3": {
+    "duration": 24.41,
+    "mean_volume_db": -19.8,
+    "max_volume_db": -3.5,
+    "silences": [
+      {
+        "start": 1.608792,
+        "end": 2.092792,
+        "duration": 0.484
+      },
+      {
+        "start": 6.825375,
+        "end": 7.453958,
+        "duration": 0.628583
+      },
+      {
+        "start": 12.968417,
+        "end": 13.6895,
+        "duration": 0.721083
+      },
+      {
+        "start": 20.44475,
+        "end": 21.105917,
+        "duration": 0.661167
+      }
+    ]
+  },
+  "errors-summary-turn-091.mp3": {
+    "duration": 21.62,
+    "mean_volume_db": -19.6,
+    "max_volume_db": -1.6,
+    "silences": [
+      {
+        "start": 8.04525,
+        "end": 8.866958,
+        "duration": 0.821708
+      },
+      {
+        "start": 16.898292,
+        "end": 17.6185,
+        "duration": 0.720208
+      }
+    ]
+  }
+}

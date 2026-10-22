@@ -1,0 +1,69 @@
+{
+  "html": {
+    "bytes": 41565931,
+    "sha256": "3413982a57ebed2c94e907691ae9f1566ab6aea512e74675862ac4a935bfd0c4",
+    "audio_elements": 41,
+    "embedded_base64_audio": 41,
+    "base64_payloads_verified": 41,
+    "autoplay_attributes": 0,
+    "preload_none": 41,
+    "enabled_play_buttons": 41,
+    "disabled_play_buttons": 0
+  },
+  "correction": {
+    "new_spoken_in_section_tts": true,
+    "old_spoken_absent_from_active_sources": true,
+    "user_visible_sentence_updated": true
+  },
+  "javascript": {
+    "node_available": true,
+    "checked_inline_scripts": 5,
+    "all_syntax_valid": true,
+    "results": [
+      {
+        "script": 13,
+        "ok": true,
+        "error": ""
+      },
+      {
+        "script": 14,
+        "ok": true,
+        "error": ""
+      },
+      {
+        "script": 15,
+        "ok": true,
+        "error": ""
+      },
+      {
+        "script": 16,
+        "ok": true,
+        "error": ""
+      },
+      {
+        "script": 17,
+        "ok": true,
+        "error": ""
+      }
+    ]
+  },
+  "progress": {
+    "lesson": "prospect3-lesson-01",
+    "status": "complete",
+    "total_sections": 41,
+    "total_source_turns": 242,
+    "embedded_sections": 41,
+    "pending_sections_count": 0,
+    "pending_sections": [],
+    "voices": {
+      "آرتین": "voice-02",
+      "رها": "voice-05"
+    },
+    "audio_format": "WebM Opus mono 48 kbps, Base64 embedded",
+    "non_intrusive": {
+      "autoplay": false,
+      "preload": "none",
+      "user_initiated_playback": true
+    }
+  }
+}

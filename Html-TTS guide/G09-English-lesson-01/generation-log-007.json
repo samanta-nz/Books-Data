@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-22",
+  "generator": "Arena.ai generate_speech",
+  "batch": "007",
+  "sections": [
+    "contractions"
+  ],
+  "clips": [
+    {
+      "clip": "work/clips/contractions-turn-072.mp3",
+      "source_turn": "turn-072",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در گفتار و نوشتارِ معمول، I am به I’m، he is به he’s، she is به she’s، it is به it’s، we are به we’re، you are به you’re و they are به they’re کوتاه می‌شه. آپاستروف، حذفِ حرف رو نشان می‌ده؛ تزئینی نیست.",
+      "bytes": 101901,
+      "sha256": "e22418aa2a84cd7530b7e3d0b1879e29947288560dfecf0997a28920d542d1c1"
+    },
+    {
+      "clip": "work/clips/contractions-turn-073.mp3",
+      "source_turn": "turn-073",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "نوشتنِ Im به جای I’m همان خطایی هست که باید در ویرایش پیدا کنم. من هم بزرگ‌بودنِ I رو حفظ می‌کنم و هم آپاستروف رو در جای درست می‌گذارم: I’m kind.",
+      "bytes": 56109,
+      "sha256": "fc8972fa5ecafa97cce2dd49f00ab6d9220b176b6a71fca924b625b1e77113b1"
+    },
+    {
+      "clip": "work/clips/contractions-turn-074.mp3",
+      "source_turn": "turn-074",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "صورت کامل و کوتاه‌شده — در she’s، آپاستروف بخش حذف‌شده رو نشان می‌ده؛ در این مثال she’s برابر she is هست. شکل تألیفیِ مکمل",
+      "bytes": 44013,
+      "sha256": "0ebb027f138a7d1c9c2b9446447f8e14cabe6d245e3a8a45f8ea8f0514cd5c9f"
+    },
+    {
+      "clip": "work/clips/contractions-turn-075.mp3",
+      "source_turn": "turn-075",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در منفی، He is not shy. دو کوتاه‌سازیِ رایج دارد: He’s not shy. و He isn’t shy. برای جمع نیز They’re not rude. و They aren’t rude. ممکن‌اند. در این الگوی پایه برای I am not از I’m not استفاده می‌کنیم.",
+      "bytes": 86061,
+      "sha256": "7d8e761332d8095c3132d305f74e5770a6f5ac4473a574d73bb0e0841be583ad"
+    },
+    {
+      "clip": "work/clips/contractions-turn-076.mp3",
+      "source_turn": "turn-076",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "در پایانِ پاسخ کوتاه مثبت، همان الگوی Yes, he is. رو نگه می‌دارم؛ Yes, he’s. رو جای آن نمی‌نویسم. کوتاه‌کردنِ He is kind. به He’s kind. به این معنا نیست که هر is رو در هر جای جمله بتوانم همان‌طور کوتاه کنم.",
+      "bytes": 82509,
+      "sha256": "a9cc0628a16721830560bed765e0683e4b6470d95b6fd7760f2744e40e8eca27"
+    }
+  ],
+  "quality_review": "work/questions-quality-review.json",
+  "deferred_valid_question_clips": [
+    "work/clips/questions-turn-065-full.mp3",
+    "work/clips/questions-turn-066-full.mp3",
+    "work/clips/questions-turn-070-full.mp3",
+    "work/clips/questions-turn-071-full.mp3"
+  ],
+  "rejected_question_clip": "questions-turns-067-068-069-full.mp3; turns 067, 068 and 069 will be generated separately in the next batch."
+}

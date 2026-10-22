@@ -1,0 +1,18 @@
+{
+  "file": "audio/prospect3-lesson-01--questions--213f8d64e5.weba",
+  "required_long_pauses": 10,
+  "detected_long_pauses": 10,
+  "silence_durations_seconds": [
+    8.000438,
+    8.001792,
+    8.408146,
+    8.000396,
+    8.007021,
+    8.000021,
+    8.014604,
+    8.000042,
+    8.002229,
+    8.000042
+  ],
+  "passed": true
+}

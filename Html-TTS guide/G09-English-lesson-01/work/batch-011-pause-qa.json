@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "file": "audio/prospect3-lesson-01--speak--c70d53ab65.weba",
+      "expected_long_pauses": 4,
+      "detected_long_pauses": 4,
+      "starts": [
+        17.954479,
+        35.015729,
+        118.983458,
+        137.490062
+      ],
+      "ends": [
+        25.956708,
+        43.02025,
+        127.703333,
+        146.088521
+      ],
+      "duration_seconds": 155.31,
+      "trailing_required": false,
+      "passed": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--reading--165474c2fd.weba",
+      "expected_long_pauses": 1,
+      "detected_long_pauses": 1,
+      "starts": [
+        70.908604
+      ],
+      "ends": [
+        79.422708
+      ],
+      "duration_seconds": 79.42,
+      "trailing_required": true,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

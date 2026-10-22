@@ -1,0 +1,29 @@
+{
+  "batch": "012-pron-sound-symbols-and-voice-air",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-01--pron-sound-symbols--452db6d158.weba",
+      "inputs": [
+        {"path": "work/clips/pron-sound-symbols-turn-097.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/pron-sound-symbols-turn-098.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/pron-sound-symbols-turns-099-100.mp3", "trim_end_seconds": 19.93725, "pause_after_ms": 700},
+        {"path": "work/clips/pron-sound-symbols-turns-099-100.mp3", "trim_start_seconds": 20.686292, "pause_after_ms": 700},
+        {"path": "work/clips/pron-sound-symbols-turn-101.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/pron-sound-symbols-turns-102-103.mp3", "trim_end_seconds": 20.815333, "pause_after_ms": 700},
+        {"path": "work/clips/pron-sound-symbols-turns-102-103.mp3", "trim_start_seconds": 21.428417, "pause_after_ms": 700}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--pron-voice-air--84898121b8.weba",
+      "inputs": [
+        {"path": "work/clips/pron-voice-air-turn-104.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/pron-voice-air-turn-105.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/pron-voice-air-turn-106.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/pron-voice-air-turn-107.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/pron-voice-air-turn-108.mp3", "pause_after_ms": 700}
+      ]
+    }
+  ],
+  "copies": []
+}

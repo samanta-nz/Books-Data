@@ -1,0 +1,14 @@
+{
+  "audio_data_elements": 41,
+  "resource_attributes": 78,
+  "non_embedded_resource_attributes": [],
+  "missing_audio_files": [],
+  "sections_not_marked_embedded": [],
+  "corrected_spoken_sentence_in_audio_bindings": true,
+  "corrected_spoken_sentence_in_tts_markdown": true,
+  "corrected_visible_equivalent_in_html": true,
+  "html_bytes": 41565931,
+  "html_sha256": "3413982a57ebed2c94e907691ae9f1566ab6aea512e74675862ac4a935bfd0c4",
+  "non_embedded_css_urls": [],
+  "css_imports": []
+}

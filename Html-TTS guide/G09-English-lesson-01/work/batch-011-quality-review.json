@@ -1,0 +1,68 @@
+{
+  "batch": "011",
+  "metrics": {
+    "speak-turn-086-a.mp3": {
+      "characters": 97,
+      "speech_seconds": 9.674,
+      "characters_per_speech_second": 10.03,
+      "status": "accepted"
+    },
+    "speak-turn-086-b.mp3": {
+      "characters": 88,
+      "speech_seconds": 8.873,
+      "characters_per_speech_second": 9.92,
+      "status": "accepted"
+    },
+    "speak-turn-086-c.mp3": {
+      "characters": 81,
+      "speech_seconds": 7.999,
+      "characters_per_speech_second": 10.13,
+      "status": "accepted"
+    },
+    "pron-card-guide-turn-092.mp3": {
+      "characters": 169,
+      "speech_seconds": 21.645,
+      "characters_per_speech_second": 7.81,
+      "status": "accepted"
+    },
+    "pron-card-guide-turn-093.mp3": {
+      "characters": 114,
+      "speech_seconds": 14.209,
+      "characters_per_speech_second": 8.02,
+      "status": "accepted"
+    },
+    "pron-card-guide-turn-094.mp3": {
+      "characters": 152,
+      "speech_seconds": 17.847,
+      "characters_per_speech_second": 8.52,
+      "status": "accepted"
+    },
+    "pron-card-guide-turn-095.mp3": {
+      "characters": 130,
+      "speech_seconds": 15.266,
+      "characters_per_speech_second": 8.52,
+      "status": "accepted"
+    },
+    "pron-card-guide-turn-096.mp3": {
+      "characters": 176,
+      "speech_seconds": 19.578,
+      "characters_per_speech_second": 8.99,
+      "status": "accepted"
+    },
+    "reading-a-212-213.mp3": {
+      "characters": 442,
+      "speech_seconds": 24.644,
+      "characters_per_speech_second": 17.94,
+      "status": "accepted"
+    },
+    "reading-a-214-instruction.mp3": {
+      "characters": 413,
+      "speech_seconds": 36.49,
+      "characters_per_speech_second": 11.32,
+      "status": "accepted"
+    }
+  },
+  "raw_analysis": "work/batch-011-audio-analysis.json",
+  "status": "all_ten_new_clips_accepted",
+  "speak_turn_086": "Three separately generated segments total 31.97 seconds; rejected combined attempt was 15.02 seconds and was not used."
+}

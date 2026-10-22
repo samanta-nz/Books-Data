@@ -1,0 +1,1910 @@
+{
+  "batch": "017-listening-complete-10-turns",
+  "batches": [
+    "001-corrected-start-goals-shared-practice-and-examples-01-02",
+    "002-bridge-word-roles-and-subject-pronouns",
+    "003-bridge-be-present-and-number-articles",
+    "004-prerequisites-and-meaning",
+    "005-source-conversation-complete-18-turns",
+    "006-be-positive-and-negative",
+    "007-contractions-questions-deferred-for-quality-recheck",
+    "008-questions-melody-and-examples-04",
+    "009-source-melody-practice-and-source-sections",
+    "010-errors-summary",
+    "011-speak-pron-card-guide-and-reading",
+    "012-pron-sound-symbols-and-voice-air",
+    "013-pron-persian-consonants-and-syllables-stress",
+    "015-vocabulary-cards-complete-54-turns",
+    "016-source-grammar-and-source-reading",
+    "017-listening-complete-10-turns"
+  ],
+  "codec_settings": {
+    "codec": "libopus",
+    "bitrate": "48k",
+    "channels": 1
+  },
+  "outputs": [
+    {
+      "file": "audio/prospect3-lesson-01--start--8e15072791.weba",
+      "bytes": 493995,
+      "sha256": "08f31a4bbc3d9e82ecae9c690347fead69a5847ec802c4ed9a854ebfef8acb3d",
+      "inputs": [
+        {
+          "path": "work/clips/start-turn-035.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "../G09-English-sample/prospect3-lesson-01--start--8e15072791.weba",
+          "trim_start_seconds": 22.300667,
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 79.41,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -19.6,
+      "max_volume_db": -1.9,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--goals--dd1564f58c.weba",
+      "bytes": 323612,
+      "sha256": "c513e000bb96ebe46efb41abc083bab866fbc97636dd0568f8919ef81cde101e",
+      "inputs": [
+        {
+          "path": "work/clips/goals-turn-001.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/goals-turn-002.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/goals-turn-003a.mp3",
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/goals-turn-003b.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/goals-turn-004.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/goals-turn-005.mp3",
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 57.55,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -20.5,
+      "max_volume_db": -2.1,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--local-prerequisite-check--8720de7b05.weba",
+      "bytes": 99347,
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0",
+      "inputs": [
+        {
+          "path": "work/clips/shared-practice-prompt.mp3",
+          "pause_after_ms": 8000
+        }
+      ],
+      "duration_seconds": 19.97,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.7,
+      "max_volume_db": -2.5,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--examples--e9ad08c159.weba",
+      "bytes": 125620,
+      "sha256": "4586fcc8c8fb5472cda19ec5e981ecb1768bec2f81af7f0ba7ef277abab33a56",
+      "inputs": [
+        {
+          "path": "work/clips/examples-turn-178.mp3",
+          "pause_after_ms": 8000
+        }
+      ],
+      "duration_seconds": 24.21,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.5,
+      "max_volume_db": -2.0,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--examples-02--13e9a978ff.weba",
+      "bytes": 122149,
+      "sha256": "74f223c89093514422c86ebb5e9f128399d762e22a63f79bd6ac177c84375576",
+      "inputs": [
+        {
+          "path": "work/clips/examples-02-turn-182.mp3",
+          "pause_after_ms": 8000
+        }
+      ],
+      "duration_seconds": 23.05,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.3,
+      "max_volume_db": -3.9,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--entry--8720de7b05.weba",
+      "bytes": 99347,
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0",
+      "reused_from": "audio/prospect3-lesson-01--local-prerequisite-check--8720de7b05.weba",
+      "duration_seconds": 19.97,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.7,
+      "max_volume_db": -2.5,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--official-pictures--8720de7b05.weba",
+      "bytes": 99347,
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0",
+      "reused_from": "audio/prospect3-lesson-01--local-prerequisite-check--8720de7b05.weba",
+      "duration_seconds": 19.97,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.7,
+      "max_volume_db": -2.5,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--lab--8720de7b05.weba",
+      "bytes": 99347,
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0",
+      "reused_from": "audio/prospect3-lesson-01--local-prerequisite-check--8720de7b05.weba",
+      "duration_seconds": 19.97,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.7,
+      "max_volume_db": -2.5,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--writing--8720de7b05.weba",
+      "bytes": 99347,
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0",
+      "reused_from": "audio/prospect3-lesson-01--local-prerequisite-check--8720de7b05.weba",
+      "duration_seconds": 19.97,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.7,
+      "max_volume_db": -2.5,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--quiz--8720de7b05.weba",
+      "bytes": 99347,
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0",
+      "reused_from": "audio/prospect3-lesson-01--local-prerequisite-check--8720de7b05.weba",
+      "duration_seconds": 19.97,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.7,
+      "max_volume_db": -2.5,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--bridge-word-roles--9a8940e02f.weba",
+      "bytes": 609142,
+      "sha256": "86362b23043b2b44b5a071d862ffc5df652cffdb2f975ccbe27135f53c03ab8a",
+      "inputs": [
+        {
+          "path": "work/clips/bridge-word-roles-turn-006.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/bridge-word-roles-turn-007.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/bridge-word-roles-turn-008.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/bridge-word-roles-turn-009.mp3",
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/bridge-word-roles-turn-010.mp3",
+          "pause_after_ms": 8000
+        }
+      ],
+      "duration_seconds": 106.03,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -20.5,
+      "max_volume_db": -1.9,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--bridge-subject-pronouns--2bc3806e4b.weba",
+      "bytes": 707082,
+      "sha256": "3dab5a5fcc0acfdac6100076641b0523556f7d17a3c7d9e330b4aba493d0c4fd",
+      "inputs": [
+        {
+          "path": "work/clips/bridge-subject-pronouns-turn-011-full.mp3",
+          "trim_end_seconds": 14.969833,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/bridge-subject-pronouns-turn-011-full.mp3",
+          "trim_start_seconds": 15.795083,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/bridge-subject-pronouns-turn-012.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/bridge-subject-pronouns-turn-013.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/bridge-subject-pronouns-turn-014.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/bridge-subject-pronouns-turn-015.mp3",
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 118.92,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -20.0,
+      "max_volume_db": -1.1,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--bridge-be-present--3359cd3edd.weba",
+      "bytes": 925677,
+      "sha256": "52d8143e5e441cb4ae9b6549601f67382bec6ea4ba9e7d4c431fa8b2f4564005",
+      "inputs": [
+        {
+          "path": "work/clips/bridge-be-present-turn-016.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/bridge-be-present-turn-017.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/bridge-be-present-turn-018.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/bridge-be-present-turn-019-full.mp3",
+          "trim_end_seconds": 15.338292,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/bridge-be-present-turn-019-full.mp3",
+          "trim_start_seconds": 18.364917,
+          "trim_end_seconds": 28.073917,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/bridge-be-present-turn-019-full.mp3",
+          "trim_start_seconds": 30.511542,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/bridge-be-present-turn-020.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/bridge-be-present-turn-021-full.mp3",
+          "trim_end_seconds": 17.274625,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/bridge-be-present-turn-021-full.mp3",
+          "trim_start_seconds": 18.0475,
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 172.43,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.1,
+      "max_volume_db": -1.8,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--bridge-number-articles--c153ac6131.weba",
+      "bytes": 723981,
+      "sha256": "30cd61e35b98507efca62e95aae3b83532317f9e9baac69ce07fada18110bf9d",
+      "inputs": [
+        {
+          "path": "work/clips/bridge-number-articles-turn-022.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/bridge-number-articles-turns-023-025.mp3",
+          "trim_end_seconds": 16.038583,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/bridge-number-articles-turn-024.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/bridge-number-articles-turns-023-025.mp3",
+          "trim_start_seconds": 16.732125,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/bridge-number-articles-turn-026-full.mp3",
+          "trim_end_seconds": 12.001833,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/bridge-number-articles-turn-026-full.mp3",
+          "trim_start_seconds": 12.845292,
+          "pause_after_ms": 8000
+        }
+      ],
+      "duration_seconds": 124.71,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -20.6,
+      "max_volume_db": -2.1,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--prerequisites--945a31c464.weba",
+      "bytes": 671251,
+      "sha256": "3f0eac653eaa5e8dfe30d9f4ac402e6ce1bd75577709935cec536660f173d1bb",
+      "inputs": [
+        {
+          "path": "work/clips/prerequisites-turn-039.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/prerequisites-turn-040.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/prerequisites-turns-041-042-043.mp3",
+          "trim_end_seconds": 12.421792,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/prerequisites-turns-041-042-043.mp3",
+          "trim_start_seconds": 13.46575,
+          "trim_end_seconds": 35.568583,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/prerequisites-turns-041-042-043.mp3",
+          "trim_start_seconds": 36.928625,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/prerequisites-turn-044.mp3",
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 108.48,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -20.1,
+      "max_volume_db": -1.9,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--meaning--4024d22453.weba",
+      "bytes": 1090086,
+      "sha256": "202621c7f061655a948a14f522c04172c6e455345a2be2b063a8c9a33364de1e",
+      "inputs": [
+        {
+          "path": "work/clips/meaning-turn-048-full.mp3",
+          "trim_end_seconds": 13.918833,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/meaning-turn-048-full.mp3",
+          "trim_start_seconds": 14.964667,
+          "trim_end_seconds": 24.147958,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/meaning-turn-048-full.mp3",
+          "trim_start_seconds": 24.952583,
+          "trim_end_seconds": 40.837167,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/meaning-turn-048-full.mp3",
+          "trim_start_seconds": 41.546458,
+          "trim_end_seconds": 50.871,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/meaning-turn-048-full.mp3",
+          "trim_start_seconds": 51.71075,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/meaning-turn-049-full.mp3",
+          "trim_end_seconds": 10.201375,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/meaning-turn-049-full.mp3",
+          "trim_start_seconds": 11.217333,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/meaning-turn-050.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/meaning-turn-051.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/meaning-turn-052.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/meaning-turn-053.mp3",
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 195.99,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.1,
+      "max_volume_db": -1.4,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--source-conversation--8feb99fb44.weba",
+      "bytes": 1596639,
+      "sha256": "6d5538d2b6178426cc8da9a9a80a0e75e070dfade66cdcd36490a0c2a8fe022c",
+      "inputs": [
+        {
+          "path": "work/clips/source-conversation-a-001-002.mp3",
+          "trim_end_seconds": 19.642667,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-conversation-a-001-002.mp3",
+          "trim_start_seconds": 20.256875,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/source-conversation-r-003-005.mp3",
+          "trim_end_seconds": 12.497542,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/source-conversation-r-003-005.mp3",
+          "trim_start_seconds": 13.378708,
+          "trim_end_seconds": 20.414083,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-conversation-a-004-006.mp3",
+          "trim_end_seconds": 2.068792,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-conversation-r-003-005.mp3",
+          "trim_start_seconds": 21.005583,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-conversation-a-004-006.mp3",
+          "trim_start_seconds": 2.701125,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/source-conversation-r-007-009.mp3",
+          "trim_end_seconds": 12.632875,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/source-conversation-r-007-009.mp3",
+          "trim_start_seconds": 13.876792,
+          "trim_end_seconds": 20.311,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-conversation-a-008-010.mp3",
+          "trim_end_seconds": 4.929667,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-conversation-r-007-009.mp3",
+          "trim_start_seconds": 21.512292,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-conversation-a-008-010.mp3",
+          "trim_start_seconds": 5.5525,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/source-conversation-r-011-013.mp3",
+          "trim_end_seconds": 12.399167,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/source-conversation-r-011-013.mp3",
+          "trim_start_seconds": 13.489083,
+          "trim_end_seconds": 20.079167,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/source-conversation-a-012-014.mp3",
+          "trim_end_seconds": 4.62675,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-conversation-r-011-013.mp3",
+          "trim_start_seconds": 21.244792,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-conversation-a-012-014.mp3",
+          "trim_start_seconds": 5.386542,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/source-conversation-r-015-017.mp3",
+          "trim_end_seconds": 10.296875,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/source-conversation-r-015-017.mp3",
+          "trim_start_seconds": 11.091083,
+          "trim_end_seconds": 18.902458,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-conversation-a-016.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-conversation-r-015-017.mp3",
+          "trim_start_seconds": 19.689958,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-conversation-r-018.mp3",
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 299.24,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.3,
+      "max_volume_db": -1.4,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--be-positive--b9d68d2bac.weba",
+      "bytes": 786218,
+      "sha256": "3a4593dbca619b62e39c53886ff363b49c692dfa02a96acedb326e357d79609e",
+      "inputs": [
+        {
+          "path": "work/clips/be-positive-turn-054.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/be-positive-turn-055.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/be-positive-turns-056-057.mp3",
+          "trim_end_seconds": 12.359875,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/be-positive-turns-056-057.mp3",
+          "trim_start_seconds": 13.378417,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/be-positive-turn-058.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/be-positive-turn-059.mp3",
+          "pause_after_ms": 8000
+        }
+      ],
+      "duration_seconds": 132.45,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -20.2,
+      "max_volume_db": -1.7,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--negative--77984cab24.weba",
+      "bytes": 604091,
+      "sha256": "a813b0aca28a8c11f8fb8475e746eaba28f40b563e7363537ff6bd0954b9afc6",
+      "inputs": [
+        {
+          "path": "work/clips/negative-turn-060.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/negative-turn-061.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/negative-turn-062.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/negative-turn-063.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/negative-turn-064.mp3",
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 97.07,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -19.7,
+      "max_volume_db": -2.4,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--contractions--76f103d600.weba",
+      "bytes": 597570,
+      "sha256": "2095143db5230b16439af075f98fb27e6b0a42e76b8527b74f949a8de2737ce5",
+      "inputs": [
+        {
+          "path": "work/clips/contractions-turn-072.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/contractions-turn-073.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/contractions-turn-074.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/contractions-turn-075.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/contractions-turn-076.mp3",
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 95.59,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -19.9,
+      "max_volume_db": -1.1,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--questions--213f8d64e5.weba",
+      "bytes": 1323990,
+      "sha256": "4e194a3cee0cf24aea9c8cb1d2332a916234b1a93d037177822ff6f4695fc397",
+      "inputs": [
+        {
+          "path": "work/clips/questions-turn-065-full.mp3",
+          "trim_end_seconds": 13.546792,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/questions-turn-065-full.mp3",
+          "trim_start_seconds": 14.248917,
+          "trim_end_seconds": 24.437125,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/questions-turn-065-full.mp3",
+          "trim_start_seconds": 25.245833,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/questions-turn-066-full.mp3",
+          "trim_end_seconds": 14.150333,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/questions-turn-066-full.mp3",
+          "trim_start_seconds": 28.6275,
+          "trim_end_seconds": 33.994625,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/questions-turn-066-full.mp3",
+          "trim_start_seconds": 41.204333,
+          "trim_end_seconds": 51.074417,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/questions-turn-067.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/questions-turn-068-full.mp3",
+          "trim_end_seconds": 9.153,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/questions-turn-068-full.mp3",
+          "trim_start_seconds": 10.183958,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/questions-turn-069.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/questions-turn-070-full.mp3",
+          "trim_end_seconds": 13.739708,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/questions-turn-070-full.mp3",
+          "trim_start_seconds": 16.557375,
+          "trim_end_seconds": 29.356042,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/questions-turn-070-full.mp3",
+          "trim_start_seconds": 32.462292,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/questions-turn-071-full.mp3",
+          "trim_end_seconds": 8.539333,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/questions-turn-071-full.mp3",
+          "trim_start_seconds": 10.692375,
+          "trim_end_seconds": 32.636167,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/questions-turn-071-full.mp3",
+          "trim_start_seconds": 35.056708,
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 262.28,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.6,
+      "max_volume_db": -1.4,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--melody--700a4b392f.weba",
+      "bytes": 643823,
+      "sha256": "6e67b8699f2c91b3ffb1f16e6e51f59afec9db84c61a81d8a94e02cb457437b5",
+      "inputs": [
+        {
+          "path": "work/clips/melody-turn-077.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/melody-turn-078.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/melody-turn-079.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/melody-turn-080.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/melody-turn-081.mp3",
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 104.87,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -19.7,
+      "max_volume_db": -2.0,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--examples-04--b28a359bd9.weba",
+      "bytes": 110332,
+      "sha256": "0151887838027c0cc429692856d7a1458ddcaeff035c7ee5620b0380fd58aaa3",
+      "inputs": [
+        {
+          "path": "work/clips/examples-04-turn-190.mp3",
+          "pause_after_ms": 8000
+        }
+      ],
+      "duration_seconds": 22.17,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.8,
+      "max_volume_db": -3.6,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--source-melody--5fd9277bb3.weba",
+      "bytes": 570601,
+      "sha256": "137682fcc6f5f6c04bf7730a4ec5eae574770510b8b097da65f908f88f4af5c2",
+      "inputs": [
+        {
+          "path": "work/clips/source-melody-a-019-021.mp3",
+          "trim_end_seconds": 3.917292,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-melody-r-020-022.mp3",
+          "trim_end_seconds": 14.651708,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-melody-a-019-021.mp3",
+          "trim_start_seconds": 4.534125,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-melody-r-020-022.mp3",
+          "trim_start_seconds": 15.577,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-melody-a-023-025.mp3",
+          "trim_end_seconds": 3.462333,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-melody-r-024-026.mp3",
+          "trim_end_seconds": 10.465083,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-melody-a-023-025.mp3",
+          "trim_start_seconds": 4.120708,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-melody-r-024-026.mp3",
+          "trim_start_seconds": 11.675583,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/source-melody-a-027.mp3",
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 95.14,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -20.5,
+      "max_volume_db": -1.6,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--examples-03--9d034f969c.weba",
+      "bytes": 110915,
+      "sha256": "3ce3a4b84c84015f08ef2792e833be2411e9018f1194f9fc79219c394c247426",
+      "inputs": [
+        {
+          "path": "work/clips/examples-03-turn-186-retry.mp3",
+          "pause_after_ms": 8000
+        }
+      ],
+      "duration_seconds": 22.21,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -22.2,
+      "max_volume_db": -4.2,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--examples-05--8ad70c275d.weba",
+      "bytes": 98685,
+      "sha256": "31dfb659803a432e4e9f5d333bf386e47d0542aed57b38600e23eb9fe563ccb4",
+      "inputs": [
+        {
+          "path": "work/clips/examples-05-turn-194.mp3",
+          "pause_after_ms": 8000
+        }
+      ],
+      "duration_seconds": 19.85,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -22.4,
+      "max_volume_db": -1.6,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--examples-06--b2fd689de1.weba",
+      "bytes": 97771,
+      "sha256": "2ac0517c8b62995bfd92521387bc0273d3e316ca4e5e933227563f08d261c074",
+      "inputs": [
+        {
+          "path": "work/clips/examples-06-turn-198.mp3",
+          "pause_after_ms": 8000
+        }
+      ],
+      "duration_seconds": 19.85,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -22.0,
+      "max_volume_db": -4.5,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--book-source-pages--31a9a3cd3d.weba",
+      "bytes": 140934,
+      "sha256": "a9f36503d8ca5a73d712a86b8a8acaaa405c437d73949edfd6a904a774c74558",
+      "inputs": [
+        {
+          "path": "work/clips/book-source-pages-turn-050.mp3",
+          "pause_after_ms": 8000
+        }
+      ],
+      "duration_seconds": 26.37,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.2,
+      "max_volume_db": -1.8,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--sources--b563bc3cca.weba",
+      "bytes": 121779,
+      "sha256": "cf87598a34bb30d51bb4f497918ce3fe19449221d636a591db3f327bd847154f",
+      "inputs": [
+        {
+          "path": "work/clips/sources-instruction-1.mp3",
+          "pause_after_ms": 8000
+        }
+      ],
+      "duration_seconds": 22.09,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.3,
+      "max_volume_db": -2.8,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--errors-summary--a7de6da265.weba",
+      "bytes": 635460,
+      "sha256": "ca89c7cfc0666b7bc8a7f9887d3facbe3073aa4b00ca0704ec5599bb645caf6c",
+      "inputs": [
+        {
+          "path": "work/clips/errors-summary-turn-087.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/errors-summary-turn-088.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/errors-summary-turn-089.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/errors-summary-turn-090.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/errors-summary-turn-091.mp3",
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 102.95,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -19.7,
+      "max_volume_db": -1.8,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--speak--c70d53ab65.weba",
+      "bytes": 853472,
+      "sha256": "8e4904507e565cb2b09ba7193daddbbc3744284857fb9439c6a4ac5bab7a1967",
+      "inputs": [
+        {
+          "path": "work/clips/speak-turn-082-full.mp3",
+          "trim_end_seconds": 17.949708,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/speak-turn-082-full.mp3",
+          "trim_start_seconds": 18.520625,
+          "trim_end_seconds": 27.584167,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/speak-turn-082-full.mp3",
+          "trim_start_seconds": 28.055375,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/speak-turn-083.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/speak-turn-084.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/speak-turn-085.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/speak-turn-086-a.mp3",
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/speak-turn-086-b.mp3",
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/speak-turn-086-c.mp3",
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 155.31,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.0,
+      "max_volume_db": -1.0,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--pron-card-guide--97fa3cea0d.weba",
+      "bytes": 624523,
+      "sha256": "a3225b6c5cc39d3110126872b7a26ffc9e5a8480de05395ce19d541bb401744b",
+      "inputs": [
+        {
+          "path": "work/clips/pron-card-guide-turn-092.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-card-guide-turn-093.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-card-guide-turn-094.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-card-guide-turn-095.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-card-guide-turn-096.mp3",
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 100.99,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -19.9,
+      "max_volume_db": -1.6,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--reading--165474c2fd.weba",
+      "bytes": 469568,
+      "sha256": "55cf2e12c8f98e83e458501592afcd9b900ec6e5a16984cfa9616c1a818ccbbb",
+      "inputs": [
+        {
+          "path": "work/clips/reading-a-212-213.mp3",
+          "trim_end_seconds": 11.217958,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/reading-a-212-213.mp3",
+          "trim_start_seconds": 11.692333,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/reading-a-214-instruction.mp3",
+          "trim_end_seconds": 31.588,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/reading-a-214-instruction.mp3",
+          "trim_start_seconds": 32.557917,
+          "pause_after_ms": 8000
+        }
+      ],
+      "duration_seconds": 79.42,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -20.3,
+      "max_volume_db": -1.7,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--pron-sound-symbols--452db6d158.weba",
+      "bytes": 938762,
+      "sha256": "7fdfdc07281459d52bc1050ca78421fc1d5257156dd2149f55a3116996374c05",
+      "inputs": [
+        {
+          "path": "work/clips/pron-sound-symbols-turn-097.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-sound-symbols-turn-098.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-sound-symbols-turns-099-100.mp3",
+          "trim_end_seconds": 19.93725,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-sound-symbols-turns-099-100.mp3",
+          "trim_start_seconds": 20.686292,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-sound-symbols-turn-101.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-sound-symbols-turns-102-103.mp3",
+          "trim_end_seconds": 20.815333,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-sound-symbols-turns-102-103.mp3",
+          "trim_start_seconds": 21.428417,
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 149.95,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -19.9,
+      "max_volume_db": -1.5,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--pron-voice-air--84898121b8.weba",
+      "bytes": 740819,
+      "sha256": "376cefee6ac8048df5a451a66d876c71137361eb1988c03f59199049cfc856dd",
+      "inputs": [
+        {
+          "path": "work/clips/pron-voice-air-turn-104.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-voice-air-turn-105.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-voice-air-turn-106.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-voice-air-turn-107.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-voice-air-turn-108.mp3",
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 114.75,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -20.0,
+      "max_volume_db": -1.6,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--pron-persian-consonants--4bac00143c.weba",
+      "bytes": 1235302,
+      "sha256": "dde81457ed41e8c8ece3069988e28f18450497c35ac30cb1562dd0139ca85307",
+      "inputs": [
+        {
+          "path": "work/clips/pron-persian-consonants-turns-109-110.mp3",
+          "trim_end_seconds": 23.242833,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-persian-consonants-turns-109-110.mp3",
+          "trim_start_seconds": 23.922958,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-persian-consonants-turn-111.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-persian-consonants-turns-112-113.mp3",
+          "trim_end_seconds": 25.8735,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-persian-consonants-turns-112-113.mp3",
+          "trim_start_seconds": 27.184792,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-persian-consonants-turn-114.mp3",
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/pron-persian-consonants-turn-115.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-persian-consonants-turn-116.mp3",
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 198.56,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -20.0,
+      "max_volume_db": -1.0,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--pron-syllables-stress--b82ddc841f.weba",
+      "bytes": 906229,
+      "sha256": "1eb4b9deec728ed8a143941a691ce4ce29d34e779095effce3e124681618b53b",
+      "inputs": [
+        {
+          "path": "work/clips/pron-syllables-stress-turns-117-118.mp3",
+          "trim_end_seconds": 24.199417,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-syllables-stress-turns-117-118.mp3",
+          "trim_start_seconds": 25.040792,
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/pron-syllables-stress-turn-119.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-syllables-stress-turns-120-121.mp3",
+          "trim_end_seconds": 24.666542,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-syllables-stress-turns-120-121.mp3",
+          "trim_start_seconds": 25.18225,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/pron-syllables-stress-turn-122.mp3",
+          "pause_after_ms": 700
+        }
+      ],
+      "duration_seconds": 148.83,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -20.0,
+      "max_volume_db": -1.5,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--vocabulary-cards--d0a9ed4913.weba",
+      "bytes": 4857551,
+      "sha256": "d4b9fe8b04243ad27921561bc4be5d32c75bb09cb76147a5e2203ebcaaec4c27",
+      "inputs": [
+        {
+          "path": "work/clips/vocabulary-cards-turns-123-125.mp3",
+          "trim_end_seconds": 14.300792,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-123-125.mp3",
+          "trim_start_seconds": 15.096625,
+          "trim_end_seconds": 24.287167,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-123-125.mp3",
+          "trim_start_seconds": 24.979,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-126-128.mp3",
+          "trim_end_seconds": 10.07625,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-126-128.mp3",
+          "trim_start_seconds": 10.79175,
+          "trim_end_seconds": 27.678583,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-126-128.mp3",
+          "trim_start_seconds": 28.558875,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-129-131.mp3",
+          "trim_end_seconds": 16.593,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-129-131.mp3",
+          "trim_start_seconds": 17.26775,
+          "trim_end_seconds": 28.068417,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-129-131.mp3",
+          "trim_start_seconds": 29.13725,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-132-134.mp3",
+          "trim_end_seconds": 11.776833,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-132-134.mp3",
+          "trim_start_seconds": 12.429167,
+          "trim_end_seconds": 28.993,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-132-134.mp3",
+          "trim_start_seconds": 29.799917,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-135-137.mp3",
+          "trim_end_seconds": 14.912833,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-135-137.mp3",
+          "trim_start_seconds": 15.478458,
+          "trim_end_seconds": 27.473417,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-135-137.mp3",
+          "trim_start_seconds": 28.426208,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-138-140.mp3",
+          "trim_end_seconds": 11.994,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-138-140.mp3",
+          "trim_start_seconds": 13.009125,
+          "trim_end_seconds": 34.782542,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-138-140.mp3",
+          "trim_start_seconds": 35.898208,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-141-143.mp3",
+          "trim_end_seconds": 17.917875,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-141-143.mp3",
+          "trim_start_seconds": 18.405125,
+          "trim_end_seconds": 29.259042,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-141-143.mp3",
+          "trim_start_seconds": 29.836958,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-144-146.mp3",
+          "trim_end_seconds": 10.392167,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-144-146.mp3",
+          "trim_start_seconds": 11.0135,
+          "trim_end_seconds": 25.844208,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-144-146.mp3",
+          "trim_start_seconds": 26.79875,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-147-149.mp3",
+          "trim_end_seconds": 15.918208,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-147-149.mp3",
+          "trim_start_seconds": 16.879917,
+          "trim_end_seconds": 31.05875,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-147-149.mp3",
+          "trim_start_seconds": 32.004917,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-150-152.mp3",
+          "trim_end_seconds": 10.400875,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-150-152.mp3",
+          "trim_start_seconds": 11.015458,
+          "trim_end_seconds": 27.961333,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-150-152.mp3",
+          "trim_start_seconds": 28.799917,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-153-155.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 16.447458
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-153-155.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 17.211583,
+          "trim_end_seconds": 26.828917
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-153-155.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 27.592708
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-156-158.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 12.283042
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-156-158.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 12.89775,
+          "trim_end_seconds": 27.40075
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-156-158.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 28.304708
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-159-161.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 18.121
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-159-161.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 18.768833,
+          "trim_end_seconds": 29.99075
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-159-161.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 30.716708
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-162-164.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 10.879333
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-162-164.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 11.943417,
+          "trim_end_seconds": 27.209667
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-162-164.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 28.408458
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-165-167.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 18.2735
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-165-167.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 19.500125,
+          "trim_end_seconds": 31.296042
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-165-167.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 32.484333
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-168-170.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 10.963833
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-168-170.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 11.679083,
+          "trim_end_seconds": 27.03625
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-168-170.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 28.000167
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-171-173.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 16.592375
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-171-173.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 17.513833,
+          "trim_end_seconds": 29.009042
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-171-173.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 30.026792
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-174-175-instruction.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 14.605333
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-174-175-instruction.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 15.487542,
+          "trim_end_seconds": 35.402958
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-174-175-instruction.mp3",
+          "pause_after_ms": 8000,
+          "trim_start_seconds": 36.698167
+        }
+      ],
+      "duration_seconds": 801.72,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -20.1,
+      "max_volume_db": -1.7,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--source-grammar--ea324716c7.weba",
+      "bytes": 869078,
+      "sha256": "ef08354a8b73081f7fccbfa50298807bd26fb7df8da5e476431b43581d7e931d",
+      "inputs": [
+        {
+          "path": "work/clips/source-grammar-a-028-030-032.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 4.820625
+        },
+        {
+          "path": "work/clips/source-grammar-r-029-031-033.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 13.285958
+        },
+        {
+          "path": "work/clips/source-grammar-a-028-030-032.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 5.831417,
+          "trim_end_seconds": 11.505292
+        },
+        {
+          "path": "work/clips/source-grammar-r-029-031-033.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 14.319125,
+          "trim_end_seconds": 24.801042
+        },
+        {
+          "path": "work/clips/source-grammar-a-028-030-032.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 12.409125
+        },
+        {
+          "path": "work/clips/source-grammar-r-029-031-033.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 25.77375
+        },
+        {
+          "path": "work/clips/source-grammar-a-034-036-038.mp3",
+          "pause_after_ms": 8000,
+          "trim_end_seconds": 11.203958
+        },
+        {
+          "path": "work/clips/source-grammar-a-034-036-038.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 11.99175,
+          "trim_end_seconds": 13.3
+        },
+        {
+          "path": "work/clips/source-grammar-r-035-037-039.mp3",
+          "pause_after_ms": 8000,
+          "trim_end_seconds": 12.344542
+        },
+        {
+          "path": "work/clips/source-grammar-r-035-037-039.mp3",
+          "pause_after_ms": 8000,
+          "trim_start_seconds": 14.393875,
+          "trim_end_seconds": 24.212042
+        },
+        {
+          "path": "work/clips/source-grammar-a-034-036-038.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 14.087083,
+          "trim_end_seconds": 20.560167
+        },
+        {
+          "path": "work/clips/source-grammar-r-035-037-039.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 25.624292,
+          "trim_end_seconds": 38.939625
+        },
+        {
+          "path": "work/clips/source-grammar-a-034-036-038.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 21.353333
+        },
+        {
+          "path": "work/clips/source-grammar-r-035-037-039.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 40.723875
+        }
+      ],
+      "duration_seconds": 157.33,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -20.8,
+      "max_volume_db": -1.1,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--source-reading--10bfa82e24.weba",
+      "bytes": 784672,
+      "sha256": "4d6a639acdaa292bac9f4149f205536a6baf2c1df028975cfda5e49db623897d",
+      "inputs": [
+        {
+          "path": "work/clips/source-reading-a-040-042-044.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 6.108917
+        },
+        {
+          "path": "work/clips/source-reading-r-041-043-045.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 16.252833
+        },
+        {
+          "path": "work/clips/source-reading-a-040-042-044.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 7.013,
+          "trim_end_seconds": 12.398583
+        },
+        {
+          "path": "work/clips/source-reading-r-041-043-045.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 17.945292,
+          "trim_end_seconds": 33.843375
+        },
+        {
+          "path": "work/clips/source-reading-a-040-042-044.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 13.353167
+        },
+        {
+          "path": "work/clips/source-reading-r-041-043-045.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 35.486208
+        },
+        {
+          "path": "work/clips/source-reading-a-046-048.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 9.550333
+        },
+        {
+          "path": "work/clips/source-reading-r-047-049.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 20.077833
+        },
+        {
+          "path": "work/clips/source-reading-a-046-048.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 10.698042
+        },
+        {
+          "path": "work/clips/source-reading-r-047-049.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 21.657375
+        }
+      ],
+      "duration_seconds": 132.81,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -20.2,
+      "max_volume_db": -1.5,
+      "decodes_successfully": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--listening--89af402920.weba",
+      "bytes": 694026,
+      "sha256": "291e8886f06827622f4e49bbca2bf67148d879d60bb3121f1639655e86f554e5",
+      "inputs": [
+        {
+          "path": "work/clips/listening-turn-243.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/listening-instruction-1.mp3",
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/listening-turn-247.mp3",
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/listening-r-248-250.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 2.231125
+        },
+        {
+          "path": "work/clips/listening-a-249-251-253.mp3",
+          "pause_after_ms": 8000,
+          "trim_end_seconds": 12.307292
+        },
+        {
+          "path": "work/clips/listening-r-248-250.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 2.789625
+        },
+        {
+          "path": "work/clips/listening-a-249-251-253.mp3",
+          "pause_after_ms": 8000,
+          "trim_start_seconds": 13.649458,
+          "trim_end_seconds": 25.956167
+        },
+        {
+          "path": "work/clips/listening-r-252-254.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 3.411
+        },
+        {
+          "path": "work/clips/listening-a-249-251-253.mp3",
+          "pause_after_ms": 8000,
+          "trim_start_seconds": 27.364833
+        },
+        {
+          "path": "work/clips/listening-r-252-254.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 4.254958
+        }
+      ],
+      "duration_seconds": 134.15,
+      "codec": "opus",
+      "container": "WebM",
+      "channels": 1,
+      "video": false,
+      "mean_volume_db": -21.8,
+      "max_volume_db": -2.3,
+      "decodes_successfully": true
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "batch": "014",
+  "section": "vocabulary-cards",
+  "status": "all_ten_clips_and_thirty_turns_accepted",
+  "embedded": false,
+  "completed_source_turns": 30,
+  "remaining_source_turns": 24,
+  "per_turn_rate_range": [
+    7.31,
+    10.77
+  ],
+  "raw_analysis": "work/batch-014-audio-analysis.json"
+}

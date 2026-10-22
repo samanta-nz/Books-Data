@@ -1,0 +1,303 @@
+{
+  "section": "listening",
+  "status": "embedded",
+  "source_turn_ids": [
+    "prospect3-lesson-01-turn-243",
+    "prospect3-lesson-01--listening--instruction-1",
+    "prospect3-lesson-01-turn-247",
+    "prospect3-lesson-01-turn-248",
+    "prospect3-lesson-01-turn-249",
+    "prospect3-lesson-01-turn-250",
+    "prospect3-lesson-01-turn-251",
+    "prospect3-lesson-01-turn-252",
+    "prospect3-lesson-01-turn-253",
+    "prospect3-lesson-01-turn-254"
+  ],
+  "retained_turn_ids": [
+    "prospect3-lesson-01-turn-248",
+    "prospect3-lesson-01-turn-249",
+    "prospect3-lesson-01-turn-250",
+    "prospect3-lesson-01-turn-251",
+    "prospect3-lesson-01-turn-252",
+    "prospect3-lesson-01-turn-253",
+    "prospect3-lesson-01-turn-254"
+  ],
+  "pending_turn_ids": [
+    "prospect3-lesson-01-turn-243",
+    "prospect3-lesson-01--listening--instruction-1",
+    "prospect3-lesson-01-turn-247"
+  ],
+  "retained_by_turn": {
+    "prospect3-lesson-01-turn-248": [
+      {
+        "path": "work/clips/listening-r-248-250.mp3",
+        "source_turn": "prospect3-lesson-01-turn-248",
+        "part_index": 1,
+        "pause_after_ms": 700,
+        "trim_end_seconds": 2.231125
+      }
+    ],
+    "prospect3-lesson-01-turn-249": [
+      {
+        "path": "work/clips/listening-a-249-251-253.mp3",
+        "source_turn": "prospect3-lesson-01-turn-249",
+        "part_index": 1,
+        "pause_after_ms": 8000,
+        "trim_end_seconds": 12.307292
+      }
+    ],
+    "prospect3-lesson-01-turn-250": [
+      {
+        "path": "work/clips/listening-r-248-250.mp3",
+        "source_turn": "prospect3-lesson-01-turn-250",
+        "part_index": 1,
+        "pause_after_ms": 700,
+        "trim_start_seconds": 2.789625
+      }
+    ],
+    "prospect3-lesson-01-turn-251": [
+      {
+        "path": "work/clips/listening-a-249-251-253.mp3",
+        "source_turn": "prospect3-lesson-01-turn-251",
+        "part_index": 1,
+        "pause_after_ms": 8000,
+        "trim_start_seconds": 13.649458,
+        "trim_end_seconds": 25.956167
+      }
+    ],
+    "prospect3-lesson-01-turn-252": [
+      {
+        "path": "work/clips/listening-r-252-254.mp3",
+        "source_turn": "prospect3-lesson-01-turn-252",
+        "part_index": 1,
+        "pause_after_ms": 700,
+        "trim_end_seconds": 3.411
+      }
+    ],
+    "prospect3-lesson-01-turn-253": [
+      {
+        "path": "work/clips/listening-a-249-251-253.mp3",
+        "source_turn": "prospect3-lesson-01-turn-253",
+        "part_index": 1,
+        "pause_after_ms": 8000,
+        "trim_start_seconds": 27.364833
+      }
+    ],
+    "prospect3-lesson-01-turn-254": [
+      {
+        "path": "work/clips/listening-r-252-254.mp3",
+        "source_turn": "prospect3-lesson-01-turn-254",
+        "part_index": 1,
+        "pause_after_ms": 700,
+        "trim_start_seconds": 4.254958
+      }
+    ]
+  },
+  "clips": [
+    {
+      "clip": "work/clips/listening-a-249-251-253.mp3",
+      "section": "listening",
+      "source_turns": [
+        "prospect3-lesson-01-turn-249",
+        "prospect3-lesson-01-turn-251",
+        "prospect3-lesson-01-turn-253"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در نقش اول، پاسخ کوتاه: What is he like? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nدر نقش اول، پاسخ کوتاه: Is he talkative? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nAre your other friends helpful too? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "segments": [
+        {
+          "path": "work/clips/listening-a-249-251-253.mp3",
+          "source_turn": "prospect3-lesson-01-turn-249",
+          "part_index": 1,
+          "pause_after_ms": 8000,
+          "trim_end_seconds": 12.307292
+        },
+        {
+          "path": "work/clips/listening-a-249-251-253.mp3",
+          "source_turn": "prospect3-lesson-01-turn-251",
+          "part_index": 1,
+          "pause_after_ms": 8000,
+          "trim_start_seconds": 13.649458,
+          "trim_end_seconds": 25.956167
+        },
+        {
+          "path": "work/clips/listening-a-249-251-253.mp3",
+          "source_turn": "prospect3-lesson-01-turn-253",
+          "part_index": 1,
+          "pause_after_ms": 8000,
+          "trim_start_seconds": 27.364833
+        }
+      ],
+      "bytes": 148173,
+      "sha256": "a7b8dfbf6b209a496ead287f43110fd6be9a0e202f7af38245335a25fea5844b",
+      "quality_status": "accepted"
+    },
+    {
+      "clip": "work/clips/listening-r-248-250.mp3",
+      "section": "listening",
+      "source_turns": [
+        "prospect3-lesson-01-turn-248",
+        "prospect3-lesson-01-turn-250"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "My best friend is Amir.\n\nHe is brave and helpful.",
+      "segments": [
+        {
+          "path": "work/clips/listening-r-248-250.mp3",
+          "source_turn": "prospect3-lesson-01-turn-248",
+          "part_index": 1,
+          "pause_after_ms": 700,
+          "trim_end_seconds": 2.231125
+        },
+        {
+          "path": "work/clips/listening-r-248-250.mp3",
+          "source_turn": "prospect3-lesson-01-turn-250",
+          "part_index": 1,
+          "pause_after_ms": 700,
+          "trim_start_seconds": 2.789625
+        }
+      ],
+      "bytes": 20589,
+      "sha256": "1d977dba7676ca4125b66ba5bc283217d4e2fd72411c65fe72e0f29fb2c2bcd1",
+      "quality_status": "accepted"
+    },
+    {
+      "clip": "work/clips/listening-r-252-254.mp3",
+      "section": "listening",
+      "source_turns": [
+        "prospect3-lesson-01-turn-252",
+        "prospect3-lesson-01-turn-254"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "No, he is not. He is a bit quiet.\n\nYes, they are. Our class is a friendly group.",
+      "segments": [
+        {
+          "path": "work/clips/listening-r-252-254.mp3",
+          "source_turn": "prospect3-lesson-01-turn-252",
+          "part_index": 1,
+          "pause_after_ms": 700,
+          "trim_end_seconds": 3.411
+        },
+        {
+          "path": "work/clips/listening-r-252-254.mp3",
+          "source_turn": "prospect3-lesson-01-turn-254",
+          "part_index": 1,
+          "pause_after_ms": 700,
+          "trim_start_seconds": 4.254958
+        }
+      ],
+      "bytes": 29901,
+      "sha256": "ab0119ef12cdf50b8f314f4a2dfce96c69629679b05c00050ffbc50f840286e2",
+      "quality_status": "accepted"
+    }
+  ],
+  "rejected_clip": "work/clips/listening-a-243-instruction-247.mp3",
+  "assembly_inputs": [
+    {
+      "path": "work/clips/listening-turn-243.mp3",
+      "source_turn": "prospect3-lesson-01-turn-243",
+      "part_index": 1,
+      "pause_after_ms": 700
+    },
+    {
+      "path": "work/clips/listening-instruction-1.mp3",
+      "source_turn": "prospect3-lesson-01--listening--instruction-1",
+      "part_index": 1,
+      "pause_after_ms": 8000
+    },
+    {
+      "path": "work/clips/listening-turn-247.mp3",
+      "source_turn": "prospect3-lesson-01-turn-247",
+      "part_index": 1,
+      "pause_after_ms": 8000
+    },
+    {
+      "path": "work/clips/listening-r-248-250.mp3",
+      "source_turn": "prospect3-lesson-01-turn-248",
+      "part_index": 1,
+      "pause_after_ms": 700,
+      "trim_end_seconds": 2.231125
+    },
+    {
+      "path": "work/clips/listening-a-249-251-253.mp3",
+      "source_turn": "prospect3-lesson-01-turn-249",
+      "part_index": 1,
+      "pause_after_ms": 8000,
+      "trim_end_seconds": 12.307292
+    },
+    {
+      "path": "work/clips/listening-r-248-250.mp3",
+      "source_turn": "prospect3-lesson-01-turn-250",
+      "part_index": 1,
+      "pause_after_ms": 700,
+      "trim_start_seconds": 2.789625
+    },
+    {
+      "path": "work/clips/listening-a-249-251-253.mp3",
+      "source_turn": "prospect3-lesson-01-turn-251",
+      "part_index": 1,
+      "pause_after_ms": 8000,
+      "trim_start_seconds": 13.649458,
+      "trim_end_seconds": 25.956167
+    },
+    {
+      "path": "work/clips/listening-r-252-254.mp3",
+      "source_turn": "prospect3-lesson-01-turn-252",
+      "part_index": 1,
+      "pause_after_ms": 700,
+      "trim_end_seconds": 3.411
+    },
+    {
+      "path": "work/clips/listening-a-249-251-253.mp3",
+      "source_turn": "prospect3-lesson-01-turn-253",
+      "part_index": 1,
+      "pause_after_ms": 8000,
+      "trim_start_seconds": 27.364833
+    },
+    {
+      "path": "work/clips/listening-r-252-254.mp3",
+      "source_turn": "prospect3-lesson-01-turn-254",
+      "part_index": 1,
+      "pause_after_ms": 700,
+      "trim_start_seconds": 4.254958
+    }
+  ],
+  "regenerated_clips": [
+    {
+      "clip": "work/clips/listening-turn-243.mp3",
+      "source_turn": "prospect3-lesson-01-turn-243",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "این گفت‌وگوی تألیفی رو با دو نقش تمرین کنین. ابتدا پرسش‌ها رو بخونین، سپس در اجرای دوصدایی به پیام کلی و جزئیات توجه کنین. برای هر پاسخ، جملهٔ شاهد رو پیدا کنین؛ در تکرار دوم نقش‌ها رو عوض کنین و یک جزئیات رو آگاهانه تغییر دهید.",
+      "bytes": 95469,
+      "sha256": "28d94d5488b48bf24c361eca63f62321dc72ee6460d98be904fedffa02d9e5b1"
+    },
+    {
+      "clip": "work/clips/listening-instruction-1.mp3",
+      "source_turn": "prospect3-lesson-01--listening--instruction-1",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "اکنون پخش صدا رو متوقف کنین و تمرین‌های این بخش رو در صفحه حل کنین. پس از پاسخ‌دادن، راهنماها و پاسخ‌های صفحه رو برای بازبینی ببینین.",
+      "bytes": 51021,
+      "sha256": "85e07debeed1a21b171883ca8f77a94f9e019577b0886012e6fd1cf7c0859a58"
+    },
+    {
+      "clip": "work/clips/listening-turn-247.mp3",
+      "source_turn": "prospect3-lesson-01-turn-247",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "Who is your best friend? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 36813,
+      "sha256": "4dabf312347d6be59d53f2a134bdfd76679547bac44fb0c236ce9060d41abf93"
+    }
+  ],
+  "generation_batches": [
+    "016",
+    "017"
+  ],
+  "audio_file": "audio/prospect3-lesson-01--listening--89af402920.weba",
+  "pause_qa": "work/batch-017-pause-qa.json"
+}

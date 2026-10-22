@@ -1,0 +1,170 @@
+{
+  "date": "2026-10-22",
+  "generator": "Arena.ai generate_speech",
+  "batch": "011",
+  "sections": [
+    "speak",
+    "pron-card-guide",
+    "reading"
+  ],
+  "source_turn_count": 14,
+  "new_temporary_clips": 10,
+  "clips": [
+    {
+      "clip": "work/clips/speak-turn-086-a.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-086"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "نمونهٔ من این هست: What is your classmate like? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 50829,
+      "sha256": "bc8dbda55bf7477e49dd852cc90f23007a06f2cef7d6d98dd22a47a77d9064ed",
+      "segment": 1
+    },
+    {
+      "clip": "work/clips/speak-turn-086-b.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-086"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "She is friendly. Is she helpful too? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 42093,
+      "sha256": "fc4d1878176cdbb5405203ce04b91937e6cf14e90834d6063b157d92822c59b4",
+      "segment": 2
+    },
+    {
+      "clip": "work/clips/speak-turn-086-c.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-086"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "Yes, she is. She helps our group. سپس نقش‌ها رو عوض می‌کنیم تا فقط یک طرفِ گفت‌وگو رو حفظ نکرده باشم.",
+      "bytes": 35661,
+      "sha256": "fc3446769eb4a8027a81ffdfe4656576d4e5718b83335c6c2966d943f85e93fe",
+      "segment": 3
+    },
+    {
+      "clip": "work/clips/pron-card-guide-turn-092.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-092"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "کارتِ هر واژه، معنی و نقش و مثال و املا رو به خوانش متصل می‌کند. الگوهای آوانگاریِ مکمل از فرهنگ تلفظِ آمریکاییِ CMUdict کنترل شده‌اند؛ این الگوها آوانگاریِ چاپ‌شدهٔ کتاب یا صدای ضبط‌شدهٔ آن معرفی نمی‌شن.",
+      "bytes": 91053,
+      "sha256": "8ab0a1d610899440ac2a4151932f1a750d087072bbdce70373a4e6049636b02a"
+    },
+    {
+      "clip": "work/clips/pron-card-guide-turn-093.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-093"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "صفتِ ویژگی رو از نامِ چیز جدا کنین — ستون چپ ویژگی‌های شخص و ستون راست نام چیزهاست؛ جایگاه واژه رو فقط از ترجمه حدس نمی‌زنیم. شکل تألیفیِ مکمل",
+      "bytes": 64269,
+      "sha256": "2c2761f97b9b01be3194fbc92d400be681f3c99a73c51ee4b2559363a8c19946"
+    },
+    {
+      "clip": "work/clips/pron-card-guide-turn-094.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-094"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "در کارت‌ها، دو خط مورب توالیِ صداهای واژهٔ جدا رو نشان می‌دهند و شمارهٔ تکیه جداگانه نوشته شده هست. برای مثال، در واژهٔ hotel تکیه روی هجای دوم هست؛ شماره رو بخشی از املای واژه نمی‌خوانم.",
+      "bytes": 78381,
+      "sha256": "849b0d9dc1476e634f744ab7c0ffaf35eb2fe5c570031e871699fd754889cb7b"
+    },
+    {
+      "clip": "work/clips/pron-card-guide-turn-095.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-095"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "هجا رو با صدا بشمارید — در الگوی مرجع، kind یک هجا، patient دو هجا و generous سه هجا دارد. شمارِ حرف‌های نوشته‌شده جای شمارِ هجاها رو نمی‌گیرد. شکل تألیفیِ مکمل",
+      "bytes": 74253,
+      "sha256": "89edf4ae602ec8418305ae384e2b50ac001dcdbd71e6d2156e32a8068ea9d131"
+    },
+    {
+      "clip": "work/clips/pron-card-guide-turn-096.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-096"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در عبارتِ چندکلمه‌ای، کارت خوانشِ واژه‌های اصلی رو کمک می‌کند؛ تکیه و پیوندِ کلِ جمله رو با هدفِ گوینده هماهنگ کنین. شکلِ مرجع تنها لهجهٔ معتبر نیست و پاسخِ تایپی، کیفیتِ شنیدن یا تولیدِ صدای واقعی رو ثابت نمی‌کند.",
+      "bytes": 84333,
+      "sha256": "c28c7f7a771c0a3201d03fccee56fecd4c0b3e7d4acabf3384d64949b319499f"
+    },
+    {
+      "clip": "work/clips/reading-a-212-213.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-212",
+        "prospect3-lesson-01-turn-213"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "متن تألیفی زیر رو ابتدا برای پیام کلی بخونین. سپس برای هر پاسخ، واژه یا جملهٔ شاهد رو در خود متن پیدا کنین؛ از موضوع کلی، اطلاعاتِ گفته‌نشده رو نتیجه نگیرید.\n\nMy name is Nika. I am a student. My best friend is Sara. She is quiet, but she is friendly and helpful. Our English teacher is patient. There are twenty students in our classroom. There is a small dictionary on my desk. My brother is a bit serious. He is not rude. After school, Sara and I help our classmates with their English lessons. We are happy when our group learns something new.",
+      "bytes": 116301,
+      "sha256": "061be1800de23971d5158f9e34fa2968aaa6a0df832f3501d6aa0389bd6d3471"
+    },
+    {
+      "clip": "work/clips/reading-a-214-instruction.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-214",
+        "prospect3-lesson-01--reading--instruction-1"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "نام من نیکا هست. من دانش‌آموز هستم. بهترین دوستم سارا هست. او کم‌حرف هست، اما برخورد دوستانه‌ای دارد و کمک‌کننده هست. معلم انگلیسیِ ما صبور هست. در کلاس ما بیست دانش‌آموز حضور دارند. یک فرهنگ لغتِ کوچک روی میز من هست. برادرم کمی جدی هست. او بی‌ادب نیست. بعد از مدرسه، من و سارا به همکلاسی‌هایمان در درس انگلیسی کمک می‌کنیم. وقتی گروه ما چیز تازه‌ای یاد می‌گیرد خوشحال هستیم.\n\nاکنون پخش صدا رو متوقف کنین و تمرین‌های این بخش رو در صفحه حل کنین. پس از پاسخ‌دادن، راهنماها و پاسخ‌های صفحه رو برای بازبینی ببینین.",
+      "bytes": 167661,
+      "sha256": "7fdc388d2a31c2932ffd195ef25a71a1f07b9fbc8004a73df1888cddfd7dd48a"
+    }
+  ],
+  "reused_speak_clips": [
+    {
+      "clip": "work/clips/speak-turn-082-full.mp3",
+      "source_turn": "prospect3-lesson-01-turn-082",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "برای گفت‌وگو، سه نقش دارین: سؤال‌کننده، پاسخ‌دهنده و ثبت‌کنندهٔ پاسخ. سؤال‌هایی مانند Are you brave? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید. و What is your father like? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید. رو با مخاطب واقعی مطرح کنین و پاسخ رو مطابق گفتهٔ او بنویسین؛ پاسخِ نمونه رو به جای اطلاعاتِ او قرار ندهید.",
+      "bytes": 152109,
+      "sha256": "08e46de45563b7791c26ed4d8cedc9dca7f2bceaee094bbf73b95df5dc1db6e8"
+    },
+    {
+      "clip": "work/clips/speak-turn-083.mp3",
+      "source_turn": "prospect3-lesson-01-turn-083",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "اگر دوستم بگوید I am a bit shy. ، در گزارشِ خودم می‌نویسم She is a bit shy. ؛ چون از گفتنِ «من» به توصیفِ او رفته‌ام، ضمیر و فعل هم تغییر می‌کنند. معنی و میزانِ ویژگی رو حفظ می‌کنم.",
+      "bytes": 62253,
+      "sha256": "270acc4a2d68884a866de7483fd2679ab6def51907a9e344fa138ec3f7b80965"
+    },
+    {
+      "clip": "work/clips/speak-turn-084.mp3",
+      "source_turn": "prospect3-lesson-01-turn-084",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "وجود یک کتاب یا دو کتاب — کتاب‌ها رو بشمارید و آن‌ها رو با a book و two books و سپس is و are تطبیق دهید. شکل تألیفیِ مکمل",
+      "bytes": 53709,
+      "sha256": "8a75ed8c23ff8347ad0f6a4fc4db6265249dccb7c3f675ae9586e102740cf249"
+    },
+    {
+      "clip": "work/clips/speak-turn-085.mp3",
+      "source_turn": "prospect3-lesson-01-turn-085",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "یک گفت‌وگوی تازه بسازید: از نامِ دوست آغاز کنین، دربارهٔ ویژگی بپرسید، یک سؤالِ بله/خیر اضافه کنین و برای پاسخ یک رفتارِ مثال‌زدنی بیاورید. مثلاً کمک‌کردن در کارِ گروهی، توضیحِ معناداری برای helpful هست؛ تأییدِ خالی، گفت‌وگو رو جلو نمی‌برد.",
+      "bytes": 89901,
+      "sha256": "9fe8b0e8818682f6a5cd51606915a87113e60ecd960ce4b6f768ef03a2f7805a"
+    }
+  ],
+  "assembly_manifest": "work/batch-011.json",
+  "quality_review": "work/batch-011-quality-review.json",
+  "assembly_note": "Turn 086 was regenerated as three separate segments. Together with the retained turn 082 segments, speak contains four prescribed 8000-ms pauses. Reading pairs were split and restored to source order; its final instruction retains a trailing 8000-ms pause."
+}

@@ -1,0 +1,60 @@
+{
+  "batch": "017-listening-complete-10-turns",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-01--listening--89af402920.weba",
+      "inputs": [
+        {
+          "path": "work/clips/listening-turn-243.mp3",
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/listening-instruction-1.mp3",
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/listening-turn-247.mp3",
+          "pause_after_ms": 8000
+        },
+        {
+          "path": "work/clips/listening-r-248-250.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 2.231125
+        },
+        {
+          "path": "work/clips/listening-a-249-251-253.mp3",
+          "pause_after_ms": 8000,
+          "trim_end_seconds": 12.307292
+        },
+        {
+          "path": "work/clips/listening-r-248-250.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 2.789625
+        },
+        {
+          "path": "work/clips/listening-a-249-251-253.mp3",
+          "pause_after_ms": 8000,
+          "trim_start_seconds": 13.649458,
+          "trim_end_seconds": 25.956167
+        },
+        {
+          "path": "work/clips/listening-r-252-254.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 3.411
+        },
+        {
+          "path": "work/clips/listening-a-249-251-253.mp3",
+          "pause_after_ms": 8000,
+          "trim_start_seconds": 27.364833
+        },
+        {
+          "path": "work/clips/listening-r-252-254.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 4.254958
+        }
+      ]
+    }
+  ],
+  "copies": []
+}

@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-22",
+  "generator": "Arena.ai generate_speech",
+  "batch": "017",
+  "sections": [
+    "listening"
+  ],
+  "status": "embedded",
+  "new_temporary_clips": 3,
+  "clips": [
+    {
+      "clip": "work/clips/listening-turn-243.mp3",
+      "source_turn": "prospect3-lesson-01-turn-243",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "این گفت‌وگوی تألیفی رو با دو نقش تمرین کنین. ابتدا پرسش‌ها رو بخونین، سپس در اجرای دوصدایی به پیام کلی و جزئیات توجه کنین. برای هر پاسخ، جملهٔ شاهد رو پیدا کنین؛ در تکرار دوم نقش‌ها رو عوض کنین و یک جزئیات رو آگاهانه تغییر دهید.",
+      "bytes": 95469,
+      "sha256": "28d94d5488b48bf24c361eca63f62321dc72ee6460d98be904fedffa02d9e5b1"
+    },
+    {
+      "clip": "work/clips/listening-instruction-1.mp3",
+      "source_turn": "prospect3-lesson-01--listening--instruction-1",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "اکنون پخش صدا رو متوقف کنین و تمرین‌های این بخش رو در صفحه حل کنین. پس از پاسخ‌دادن، راهنماها و پاسخ‌های صفحه رو برای بازبینی ببینین.",
+      "bytes": 51021,
+      "sha256": "85e07debeed1a21b171883ca8f77a94f9e019577b0886012e6fd1cf7c0859a58"
+    },
+    {
+      "clip": "work/clips/listening-turn-247.mp3",
+      "source_turn": "prospect3-lesson-01-turn-247",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "Who is your best friend? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 36813,
+      "sha256": "4dabf312347d6be59d53f2a134bdfd76679547bac44fb0c236ce9060d41abf93"
+    }
+  ],
+  "reused_valid_turns": [
+    "prospect3-lesson-01-turn-248",
+    "prospect3-lesson-01-turn-249",
+    "prospect3-lesson-01-turn-250",
+    "prospect3-lesson-01-turn-251",
+    "prospect3-lesson-01-turn-252",
+    "prospect3-lesson-01-turn-253",
+    "prospect3-lesson-01-turn-254"
+  ],
+  "assembly_manifest": "work/batch-017.json",
+  "quality_review": "work/batch-017-quality-review.json"
+}

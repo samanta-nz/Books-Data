@@ -1,0 +1,267 @@
+{
+  "speak-turn-086-a.mp3": {
+    "duration": 12.65,
+    "mean_volume_db": -20.3,
+    "max_volume_db": -1.1,
+    "silences": [
+      {
+        "start": 0.0,
+        "end": 0.465542,
+        "duration": 0.465542
+      },
+      {
+        "start": 1.983833,
+        "end": 2.829042,
+        "duration": 0.845208
+      },
+      {
+        "start": 4.361917,
+        "end": 5.51775,
+        "duration": 1.155833
+      },
+      {
+        "start": 7.88825,
+        "end": 8.398042,
+        "duration": 0.509792
+      }
+    ]
+  },
+  "speak-turn-086-b.mp3": {
+    "duration": 10.46,
+    "mean_volume_db": -20.2,
+    "max_volume_db": -1.6,
+    "silences": [
+      {
+        "start": 1.497042,
+        "end": 2.044083,
+        "duration": 0.547042
+      },
+      {
+        "start": 3.10875,
+        "end": 4.149208,
+        "duration": 1.040458
+      }
+    ]
+  },
+  "speak-turn-086-c.mp3": {
+    "duration": 8.86,
+    "mean_volume_db": -20.2,
+    "max_volume_db": -1.8,
+    "silences": [
+      {
+        "start": 2.892458,
+        "end": 3.753042,
+        "duration": 0.860583
+      }
+    ]
+  },
+  "pron-card-guide-turn-092.mp3": {
+    "duration": 22.7,
+    "mean_volume_db": -19.4,
+    "max_volume_db": -2.2,
+    "silences": [
+      {
+        "start": 6.674958,
+        "end": 7.258042,
+        "duration": 0.583083
+      },
+      {
+        "start": 14.875542,
+        "end": 15.347958,
+        "duration": 0.472417
+      }
+    ]
+  },
+  "pron-card-guide-turn-093.mp3": {
+    "duration": 16.01,
+    "mean_volume_db": -19.6,
+    "max_volume_db": -4.6,
+    "silences": [
+      {
+        "start": 3.425958,
+        "end": 3.981583,
+        "duration": 0.555625
+      },
+      {
+        "start": 8.972458,
+        "end": 9.58,
+        "duration": 0.607542
+      },
+      {
+        "start": 13.070958,
+        "end": 13.70875,
+        "duration": 0.637792
+      }
+    ]
+  },
+  "pron-card-guide-turn-094.mp3": {
+    "duration": 19.54,
+    "mean_volume_db": -19.5,
+    "max_volume_db": -1.8,
+    "silences": [
+      {
+        "start": 0.0,
+        "end": 0.4555,
+        "duration": 0.4555
+      },
+      {
+        "start": 10.047083,
+        "end": 10.754042,
+        "duration": 0.706958
+      },
+      {
+        "start": 15.7975,
+        "end": 16.328083,
+        "duration": 0.530583
+      }
+    ]
+  },
+  "pron-card-guide-turn-095.mp3": {
+    "duration": 18.5,
+    "mean_volume_db": -20.0,
+    "max_volume_db": -2.8,
+    "silences": [
+      {
+        "start": 2.40025,
+        "end": 3.189667,
+        "duration": 0.789417
+      },
+      {
+        "start": 4.301792,
+        "end": 4.874833,
+        "duration": 0.573042
+      },
+      {
+        "start": 6.41975,
+        "end": 7.117083,
+        "duration": 0.697333
+      },
+      {
+        "start": 11.070833,
+        "end": 11.629625,
+        "duration": 0.558792
+      },
+      {
+        "start": 15.789458,
+        "end": 16.40525,
+        "duration": 0.615792
+      }
+    ]
+  },
+  "pron-card-guide-turn-096.mp3": {
+    "duration": 21.02,
+    "mean_volume_db": -19.5,
+    "max_volume_db": -3.4,
+    "silences": [
+      {
+        "start": 5.532583,
+        "end": 6.166375,
+        "duration": 0.633792
+      },
+      {
+        "start": 10.796667,
+        "end": 11.605,
+        "duration": 0.808333
+      }
+    ]
+  },
+  "reading-a-212-213.mp3": {
+    "duration": 29.02,
+    "mean_volume_db": -19.8,
+    "max_volume_db": -3.7,
+    "silences": [
+      {
+        "start": 5.047875,
+        "end": 5.652083,
+        "duration": 0.604208
+      },
+      {
+        "start": 8.572208,
+        "end": 9.07,
+        "duration": 0.497792
+      },
+      {
+        "start": 11.217958,
+        "end": 11.692333,
+        "duration": 0.474375
+      },
+      {
+        "start": 13.972458,
+        "end": 14.674125,
+        "duration": 0.701667
+      },
+      {
+        "start": 16.669167,
+        "end": 17.184708,
+        "duration": 0.515542
+      },
+      {
+        "start": 19.390792,
+        "end": 19.9275,
+        "duration": 0.536708
+      },
+      {
+        "start": 20.791292,
+        "end": 21.358208,
+        "duration": 0.566917
+      },
+      {
+        "start": 28.481208,
+        "end": 28.96,
+        "duration": 0.478792
+      }
+    ]
+  },
+  "reading-a-214-instruction.mp3": {
+    "duration": 41.86,
+    "mean_volume_db": -19.6,
+    "max_volume_db": -1.8,
+    "silences": [
+      {
+        "start": 3.249333,
+        "end": 3.719083,
+        "duration": 0.46975
+      },
+      {
+        "start": 5.473042,
+        "end": 5.978792,
+        "duration": 0.50575
+      },
+      {
+        "start": 10.165542,
+        "end": 10.627833,
+        "duration": 0.462292
+      },
+      {
+        "start": 15.82825,
+        "end": 16.333125,
+        "duration": 0.504875
+      },
+      {
+        "start": 18.9835,
+        "end": 19.656667,
+        "duration": 0.673167
+      },
+      {
+        "start": 22.547708,
+        "end": 23.150833,
+        "duration": 0.603125
+      },
+      {
+        "start": 27.610625,
+        "end": 28.315625,
+        "duration": 0.705
+      },
+      {
+        "start": 31.588,
+        "end": 32.557917,
+        "duration": 0.969917
+      },
+      {
+        "start": 41.324292,
+        "end": 41.8,
+        "duration": 0.475708
+      }
+    ]
+  }
+}

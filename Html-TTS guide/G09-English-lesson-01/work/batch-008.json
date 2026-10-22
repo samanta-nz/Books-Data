@@ -1,0 +1,44 @@
+{
+  "batch": "008-questions-melody-and-examples-04",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-01--questions--213f8d64e5.weba",
+      "inputs": [
+        {"path": "work/clips/questions-turn-065-full.mp3", "trim_end_seconds": 13.546792, "pause_after_ms": 8000},
+        {"path": "work/clips/questions-turn-065-full.mp3", "trim_start_seconds": 14.248917, "trim_end_seconds": 24.437125, "pause_after_ms": 8000},
+        {"path": "work/clips/questions-turn-065-full.mp3", "trim_start_seconds": 25.245833, "pause_after_ms": 8000},
+        {"path": "work/clips/questions-turn-066-full.mp3", "trim_end_seconds": 14.150333, "pause_after_ms": 8000},
+        {"path": "work/clips/questions-turn-066-full.mp3", "trim_start_seconds": 28.6275, "trim_end_seconds": 33.994625, "pause_after_ms": 8000},
+        {"path": "work/clips/questions-turn-066-full.mp3", "trim_start_seconds": 41.204333, "trim_end_seconds": 51.074417, "pause_after_ms": 700},
+        {"path": "work/clips/questions-turn-067.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/questions-turn-068-full.mp3", "trim_end_seconds": 9.153, "pause_after_ms": 8000},
+        {"path": "work/clips/questions-turn-068-full.mp3", "trim_start_seconds": 10.183958, "pause_after_ms": 700},
+        {"path": "work/clips/questions-turn-069.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/questions-turn-070-full.mp3", "trim_end_seconds": 13.739708, "pause_after_ms": 8000},
+        {"path": "work/clips/questions-turn-070-full.mp3", "trim_start_seconds": 16.557375, "trim_end_seconds": 29.356042, "pause_after_ms": 8000},
+        {"path": "work/clips/questions-turn-070-full.mp3", "trim_start_seconds": 32.462292, "pause_after_ms": 700},
+        {"path": "work/clips/questions-turn-071-full.mp3", "trim_end_seconds": 8.539333, "pause_after_ms": 8000},
+        {"path": "work/clips/questions-turn-071-full.mp3", "trim_start_seconds": 10.692375, "trim_end_seconds": 32.636167, "pause_after_ms": 8000},
+        {"path": "work/clips/questions-turn-071-full.mp3", "trim_start_seconds": 35.056708, "pause_after_ms": 700}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--melody--700a4b392f.weba",
+      "inputs": [
+        {"path": "work/clips/melody-turn-077.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/melody-turn-078.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/melody-turn-079.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/melody-turn-080.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/melody-turn-081.mp3", "pause_after_ms": 700}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--examples-04--b28a359bd9.weba",
+      "inputs": [
+        {"path": "work/clips/examples-04-turn-190.mp3", "pause_after_ms": 8000}
+      ]
+    }
+  ],
+  "copies": []
+}

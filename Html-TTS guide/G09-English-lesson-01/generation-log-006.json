@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-22",
+  "generator": "Arena.ai generate_speech",
+  "batch": "006",
+  "sections": [
+    "be-positive",
+    "negative"
+  ],
+  "clips": [
+    {
+      "clip": "work/clips/be-positive-turn-054.mp3",
+      "source_turn": "turn-054",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در زمان حال، I am، he is or she is or it is و you are or we are or they are رو به کار می‌بریم. پس از آن، صفت یا اطلاعات معرفی میاد: I am happy.، She is clever. و They are students. این جدول، الگوی فعل be هست و به همهٔ فعل‌های انگلیسی تعمیم داده نمی‌شه.",
+      "bytes": 125421,
+      "sha256": "923875476b7aec48a88a717c30fe55be85ef4a33cf66d7ccef29ea18c6229b0e"
+    },
+    {
+      "clip": "work/clips/be-positive-turn-055.mp3",
+      "source_turn": "turn-055",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "وقتی به یک نفر می‌گویم You are brave.، با وجود یک‌نفره‌بودنِ مخاطب، are میاد. نباید از تعدادِ واقعیِ مخاطب به شکلِ you is برسم؛ همراهِ you در این ساخت همیشه are هست.",
+      "bytes": 61581,
+      "sha256": "f7923b279571d94562b75916070bbe492226621c71cad9191600a04d67c8747f"
+    },
+    {
+      "clip": "work/clips/be-positive-turns-056-057.mp3",
+      "source_turn": "turns 056+057",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "سه مسیرِ بدون تقاطع — سطرها مستقل‌اند: I به am، she به is و they به are وصل می‌شه. شکل تألیفیِ مکمل\n\nفاعلِ اسم‌دار رو با ضمیر مقایسه کنین. Ali is clever. با He is clever. هم‌ساخت هست. Zahra and Nadia are generous. رو می‌توان با They are generous. مقایسه کرد. دو نام که با and به هم وصل شده‌اند، در این مثال فاعل جمع می‌سازند.",
+      "bytes": 130893,
+      "sha256": "2adde70de37ad2552e260444348a151384dcaf6f8745053e09d6cb6a8912b9a6"
+    },
+    {
+      "clip": "work/clips/be-positive-turn-058.mp3",
+      "source_turn": "turn-058",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "برای جملهٔ Our teacher blank patient. ابتدا به our نگاه نمی‌کنم و فعل رو جمع نمی‌کنم. اسمِ اصلی teacher یک نفر هست؛ بنابراین Our teacher is patient. درست هست. مالکِ جمع، لزوماً خودِ فاعل رو جمع نمی‌کند.",
+      "bytes": 80301,
+      "sha256": "e6e635363367a6862d10a02ca9d5a7e09693427065dbe5f238ccd256ca21a215"
+    },
+    {
+      "clip": "work/clips/be-positive-turn-059.mp3",
+      "source_turn": "turn-059",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "خودتان سه جمله بسازید: یکی با I، یکی با نامِ یک شخص و یکی با دو نفر. نمونهٔ ممکن I am careful. Sara is neat. Sara and Mina are helpful. هست. در کنترل، شکل فاعل و فعل رو جفت‌جفت پیدا کنین.",
+      "bytes": 92013,
+      "sha256": "f1d99998439becaeeb4cc53833b65646eaecdddaaec96123f1df543579646e99"
+    },
+    {
+      "clip": "work/clips/negative-turn-060.mp3",
+      "source_turn": "turn-060",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "برای منفیِ این ساخت، not بعد از am or is or are میاد: I am not talkative.، He is not shy. و They are not rude. منفی‌کردن، جای فاعل رو عوض نمی‌کند و خودِ فعل رو هم حذف نمی‌کند.",
+      "bytes": 79053,
+      "sha256": "7dbd884ff1f2ac41970e192db0dcd14920b53a645c45dc1b5f56d05b2f8dd51a"
+    },
+    {
+      "clip": "work/clips/negative-turn-061.mp3",
+      "source_turn": "turn-061",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "اگر بنویسم She not selfish.، جملهٔ کاملِ این ساخت رو نساخته‌ام؛ is کم هست. شکل درست She is not selfish. هست. اگر هم They is not lazy. بنویسم، جای not درست هست اما تطابقِ فعل غلط هست.",
+      "bytes": 73869,
+      "sha256": "b686e7c7698a6fadcab798c7ec0d8d7489c98fb7e37f7e9a7d38af30d678c3f3"
+    },
+    {
+      "clip": "work/clips/negative-turn-062.mp3",
+      "source_turn": "turn-062",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "not پس از be میاد — در جملهٔ دوم not اضافه شده و is باقی مانده هست؛ جملهٔ انگلیسی بدون فعل نشده هست. شکل تألیفیِ مکمل",
+      "bytes": 52461,
+      "sha256": "3a3a1ce6d1f5677fc0e9e10cc7eab656bcaf4e839daa5e4d29a7c6f03bb29c64"
+    },
+    {
+      "clip": "work/clips/negative-turn-063.mp3",
+      "source_turn": "turn-063",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "منفیِ یک صفت، همیشه صفتِ مخالف رو قطعی نمی‌کند. He is not talkative. فقط پرحرف‌نبودن رو می‌گوید؛ ممکن هست کم‌حرف یا دارای میزان معمولیِ گفت‌وگو باشه. در تمرین واژگان، سرنخِ جمله کمک می‌کند واژهٔ دقیق‌تری مانند quiet رو انتخاب کنیم.",
+      "bytes": 87789,
+      "sha256": "6b411bdfe4a26b271e550b52fd995dcb67d43bc77b56bdfb36a20b354c8a7e00"
+    },
+    {
+      "clip": "work/clips/negative-turn-064.mp3",
+      "source_turn": "turn-064",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "برای توصیف منصفانه، به جای برچسب‌زدنِ بی‌دلیل می‌تونم دربارهٔ رفتارِ مشاهده‌شده حرف بزنم. اگر صرفاً تمرینِ جمله‌سازی انجام می‌دهم، صفت باید با موقعیتِ مثال سازگار باشه؛ درست‌بودنِ فعل، هر ادعایی دربارهٔ یک شخص رو واقعی نمی‌کند.",
+      "bytes": 83373,
+      "sha256": "7c3fe85fe988753bd7b52b7a27bf9c41eeb497f7431bff30c1fd784674ad16cb"
+    }
+  ],
+  "assembly_manifest": "work/batch-006.json",
+  "assembly_edits": [
+    {
+      "source_turns": "turns 056+057",
+      "first_trim_end": 12.359875,
+      "second_trim_start": 13.378417,
+      "pause_between_turns_ms": 700
+    }
+  ]
+}

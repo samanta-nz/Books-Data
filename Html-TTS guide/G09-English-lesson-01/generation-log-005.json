@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-22",
+  "generator": "Arena.ai generate_speech",
+  "batch": "005",
+  "sections": [
+    "source-conversation"
+  ],
+  "source_turn_count": 18,
+  "temporary_clips": 10,
+  "clips": [
+    {
+      "clip": "work/clips/source-conversation-a-001-002.mp3",
+      "source_turns": "turns 001+002",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "آرتین متن انگلیسیِ کتاب رو می‌خواند و رها معنی و نکته رو توضیح می‌ده. نام‌های اشخاصِ داخل مکالمه، نامِ شخصیت‌های همان کتاب‌اند. ابتدا موقعیت و هدفِ گفت‌وگو رو بشناسید؛ سپس تغییرِ گوینده، فعل و مرجعِ ضمیر رو دنبال کنین.\n\nدر نوبتِ Ehsan، متنِ کتاب این هست: Who is your best friend at school? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 133293,
+      "sha256": "d6939b799fd7ce784eac32bfbaa3cf26fd54add06c55237e999b973dbce70a31"
+    },
+    {
+      "clip": "work/clips/source-conversation-r-003-005.mp3",
+      "source_turns": "turns 003+005",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "معنی و نکتهٔ این قسمت: بهترین دوستت در مدرسه چه کسی هست؟ اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nWho هویتِ شخص رو می‌پرسد؛ best friend یعنی بهترین دوست، نه صرفاً یک دوست خوب.\n\nمعنی و نکتهٔ این قسمت: رضا. این پاسخ در مکالمه کوتاه هست، چون best friend از سؤال معلوم هست؛ در نوشتارِ مستقل می‌توان جملهٔ کامل ساخت.",
+      "bytes": 134829,
+      "sha256": "d58a12280229074db1e510d47d342e2200b75d8df91c8fdb58a016a6b281abf5"
+    },
+    {
+      "clip": "work/clips/source-conversation-a-004-006.mp3",
+      "source_turns": "turns 004+006",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در نوبتِ Parham، متنِ کتاب این هست: Reza.\n\nدر نوبتِ Ehsan، متنِ کتاب این هست: What’s he like? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 38349,
+      "sha256": "6269827fa53aca1d9554d5f6d7c8f1cc3984d796bc5c34dc6a1dd736bd064b95"
+    },
+    {
+      "clip": "work/clips/source-conversation-r-007-009.mp3",
+      "source_turns": "turns 007+009",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "معنی و نکتهٔ این قسمت: او چه جور شخصیتی دارد؟ اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nاین ساخت دربارهٔ ویژگیِ شخص هست؛ like در این جمله فعلِ دوست‌داشتن نیست.\n\nمعنی و نکتهٔ این قسمت: اوه، او واقعاً عالی هست! او باهوش و مهربان هست. He’s همان He is هست؛ clever و kind دو صفت‌اند که با and به هم وصل شده‌اند.",
+      "bytes": 149901,
+      "sha256": "79eabdcb0998ebfbbef8aed64aa87393e5b2f5824d40b8303907ffecdb081721"
+    },
+    {
+      "clip": "work/clips/source-conversation-a-008-010.mp3",
+      "source_turns": "turns 008+010",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در نوبتِ Parham، متنِ کتاب این هست: Oh, he is really great! He’s clever and kind.\n\nدر نوبتِ Ehsan، متنِ کتاب این هست: Is he hard-working too? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 59181,
+      "sha256": "cfa85f8660c719ec91d9af4e491a95a3ec020dc68b90dded1652f9a0ba35c54e"
+    },
+    {
+      "clip": "work/clips/source-conversation-r-011-013.mp3",
+      "source_turns": "turns 011+013",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "معنی و نکتهٔ این قسمت: آیا او سخت‌کوش هم هست؟ اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nچون جملهٔ توصیفی با is ساخته می‌شه، در پرسش همان is پیش از he آمده هست.\n\nمعنی و نکتهٔ این قسمت: بله! و او همیشه بسیار کمک‌کننده هست. helpful ویژگیِ کمک‌کردن رو می‌رساند؛ always نشان می‌ده این رفتار تکرار می‌شه.",
+      "bytes": 142221,
+      "sha256": "9f9134ece43247e926ecf44bcba6fe6de7eee42f974a00c58f052a7cfb32c8bb"
+    },
+    {
+      "clip": "work/clips/source-conversation-a-012-014.mp3",
+      "source_turns": "turns 012+014",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در نوبتِ Parham، متنِ کتاب این هست: Yes! And he’s always very helpful.\n\nدر نوبتِ Ehsan، متنِ کتاب این هست: How? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 48333,
+      "sha256": "3315aae398193d1462556391839c70b3333307e11c1840e2846d8e34f9cc6130"
+    },
+    {
+      "clip": "work/clips/source-conversation-r-015-017.mp3",
+      "source_turns": "turns 015+017",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "معنی و نکتهٔ این قسمت: چطور؟ اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nاحسان شاهدِ رفتاری می‌خواهد؛ گفتنِ یک صفت بدون نمونه با توضیحِ رفتار یکسان نیست.\n\nمعنی و نکتهٔ این قسمت: او همیشه در درس‌هایم به من کمک می‌کند. helps فعلِ حال ساده با فاعل he هست؛ me دریافت‌کنندهٔ کمک و my صاحبِ درس‌ها رو نشان می‌ده.",
+      "bytes": 139533,
+      "sha256": "e24fb8496aacf838c21ae26a1a322877bf0469b24d8e455314016c4c5b62655a"
+    },
+    {
+      "clip": "work/clips/source-conversation-a-016.mp3",
+      "source_turns": "turn 016",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در نوبتِ Parham، متنِ کتاب این هست: He always helps me with my lessons.",
+      "bytes": 12141,
+      "sha256": "3355b9bdb78d631c9b87d4f85e82329ff19f04e51c309b2cec3e4c7b0449943f"
+    },
+    {
+      "clip": "work/clips/source-conversation-r-018.mp3",
+      "source_turns": "turn 018",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "در این درس، معرفیِ شخص رو از گزارشِ رفتار جدا کنین: be با صفت و فعلِ اصلی با عمل. واژهٔ like در پرسشِ شخصیت با likes در دوست‌داشتن یک نقش ندارد.",
+      "bytes": 60909,
+      "sha256": "ea20e9c28c5ed00f5eadb744b6b9cba188e2b3965527bf6a3307e009f5c44d7e"
+    }
+  ],
+  "assembly_manifest": "work/batch-005.json",
+  "assembly_note": "Same-voice temporary recordings are split at measured silence boundaries and restored to source-turn order 001 through 018. Internal and trailing long pauses are rendered as 8000 ms."
+}

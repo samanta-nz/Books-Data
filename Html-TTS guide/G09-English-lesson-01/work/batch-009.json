@@ -1,0 +1,51 @@
+{
+  "batch": "009-source-melody-practice-and-source-sections",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-01--source-melody--5fd9277bb3.weba",
+      "inputs": [
+        {"path": "work/clips/source-melody-a-019-021.mp3", "trim_end_seconds": 3.917292, "pause_after_ms": 700},
+        {"path": "work/clips/source-melody-r-020-022.mp3", "trim_end_seconds": 14.651708, "pause_after_ms": 700},
+        {"path": "work/clips/source-melody-a-019-021.mp3", "trim_start_seconds": 4.534125, "pause_after_ms": 700},
+        {"path": "work/clips/source-melody-r-020-022.mp3", "trim_start_seconds": 15.577, "pause_after_ms": 700},
+        {"path": "work/clips/source-melody-a-023-025.mp3", "trim_end_seconds": 3.462333, "pause_after_ms": 700},
+        {"path": "work/clips/source-melody-r-024-026.mp3", "trim_end_seconds": 10.465083, "pause_after_ms": 700},
+        {"path": "work/clips/source-melody-a-023-025.mp3", "trim_start_seconds": 4.120708, "pause_after_ms": 700},
+        {"path": "work/clips/source-melody-r-024-026.mp3", "trim_start_seconds": 11.675583, "pause_after_ms": 700},
+        {"path": "work/clips/source-melody-a-027.mp3", "pause_after_ms": 700}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--examples-03--9d034f969c.weba",
+      "inputs": [
+        {"path": "work/clips/examples-03-turn-186-retry.mp3", "pause_after_ms": 8000}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--examples-05--8ad70c275d.weba",
+      "inputs": [
+        {"path": "work/clips/examples-05-turn-194.mp3", "pause_after_ms": 8000}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--examples-06--b2fd689de1.weba",
+      "inputs": [
+        {"path": "work/clips/examples-06-turn-198.mp3", "pause_after_ms": 8000}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--book-source-pages--31a9a3cd3d.weba",
+      "inputs": [
+        {"path": "work/clips/book-source-pages-turn-050.mp3", "pause_after_ms": 8000}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--sources--b563bc3cca.weba",
+      "inputs": [
+        {"path": "work/clips/sources-instruction-1.mp3", "pause_after_ms": 8000}
+      ]
+    }
+  ],
+  "copies": []
+}

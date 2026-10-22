@@ -1,0 +1,67 @@
+{
+  "batch": "013",
+  "metrics": {
+    "pron-persian-consonants-turns-109-110.mp3": {
+      "characters": 335,
+      "speech_seconds": 42.415,
+      "characters_per_speech_second": 7.9,
+      "status": "accepted"
+    },
+    "pron-persian-consonants-turn-111.mp3": {
+      "characters": 142,
+      "speech_seconds": 17.905,
+      "characters_per_speech_second": 7.93,
+      "status": "accepted"
+    },
+    "pron-persian-consonants-turns-112-113.mp3": {
+      "characters": 387,
+      "speech_seconds": 46.662,
+      "characters_per_speech_second": 8.29,
+      "status": "accepted"
+    },
+    "pron-persian-consonants-turn-114.mp3": {
+      "characters": 171,
+      "speech_seconds": 20.639,
+      "characters_per_speech_second": 8.29,
+      "status": "accepted"
+    },
+    "pron-persian-consonants-turn-115.mp3": {
+      "characters": 146,
+      "speech_seconds": 18.614,
+      "characters_per_speech_second": 7.84,
+      "status": "accepted"
+    },
+    "pron-persian-consonants-turn-116.mp3": {
+      "characters": 192,
+      "speech_seconds": 22.738,
+      "characters_per_speech_second": 8.44,
+      "status": "accepted"
+    },
+    "pron-syllables-stress-turns-117-118.mp3": {
+      "characters": 374,
+      "speech_seconds": 48.068,
+      "characters_per_speech_second": 7.78,
+      "status": "accepted"
+    },
+    "pron-syllables-stress-turn-119.mp3": {
+      "characters": 165,
+      "speech_seconds": 21.181,
+      "characters_per_speech_second": 7.79,
+      "status": "accepted"
+    },
+    "pron-syllables-stress-turns-120-121.mp3": {
+      "characters": 394,
+      "speech_seconds": 41.885,
+      "characters_per_speech_second": 9.41,
+      "status": "accepted"
+    },
+    "pron-syllables-stress-turn-122.mp3": {
+      "characters": 184,
+      "speech_seconds": 21.059,
+      "characters_per_speech_second": 8.74,
+      "status": "accepted"
+    }
+  },
+  "raw_analysis": "work/batch-013-audio-analysis.json",
+  "status": "all_ten_clips_accepted"
+}

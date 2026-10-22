@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-22",
+  "generator": "Arena.ai generate_speech",
+  "batch": "013",
+  "sections": [
+    "pron-persian-consonants",
+    "pron-syllables-stress"
+  ],
+  "source_turn_count": 14,
+  "temporary_clips": 10,
+  "clips": [
+    {
+      "clip": "work/clips/pron-persian-consonants-turns-109-110.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-109",
+        "prospect3-lesson-01-turn-110"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "برای /θ/ در thin ، نوک زبان رو خیلی آرام میان دندان‌ها یا نزدیک لبهٔ دندان‌های بالایی قرار دهید و هوا رو پیوسته عبور دهید؛ گلو لرزش ندارد. آن رو خودکار به /s/ یا /t/ تبدیل نکنین. گازگرفتن یا فشارِ زبان لازم نیست.\n\nدر /ð/ مانند آغازِ this و they ، جای زبان شبیه صدای پیشین هست، اما تارهای صوتی می‌لرزند. این صدا رو با /d/ یا /z/ یکی نگیرید. دو حرفِ th می‌تونن هر یک از این دو صدا رو بسازند؛ انتخاب رو از خودِ واژه یاد بگیرید.",
+      "bytes": 187053,
+      "sha256": "bbb60b3ee7da56de69ce7dc53747989f45bb669c0f9a3c9a63c08af3ac1e2060"
+    },
+    {
+      "clip": "work/clips/pron-persian-consonants-turn-111.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-111"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "پس در thin و this به نوشتنِ یکسانِ th اکتفا نمی‌کنم؛ یکی بی‌واک و دیگری واک‌دار هست. ابتدا صدا رو بدون واژه می‌سازم، سپس در واژه و در عبارتی کوتاه مانند this book تمرین می‌کنم.",
+      "bytes": 74349,
+      "sha256": "b233fc033e1d4fe12809a9a77c0c775ec6d90acb61a298d4fc95454fd1c452fe"
+    },
+    {
+      "clip": "work/clips/pron-persian-consonants-turns-112-113.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-112",
+        "prospect3-lesson-01-turn-113"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "برای /w/ در win و we ، لب‌ها رو گرد کنین و بی‌آنکه دندانِ بالا به لبِ پایین بچسبد، سریع به واکهٔ بعدی حرکت کنین. برای /v/ در vest ، لبهٔ دندان‌های بالا به لبِ پایین نزدیک می‌شه و هوا اصطکاک می‌سازد. این تفاوت، فقط تفاوتِ نوشتن نیست.\n\n/ŋ/ در پایانِ sing صدای خیشومی هست: عقب زبان به سقف نرم می‌چسبد و راهِ عبورِ هوا از دهان رو می‌بندد؛ هوا از بینی می‌گذرد. در تلفظِ معیارِ این واژه، پس از آن /ɡ/ جدا اضافه نمی‌کنیم. اما در finger ، فرهنگِ نمونه /ŋ/ و سپس /ɡ/ دارد؛ هر ng رو یکسان فرض نکنین.",
+      "bytes": 221901,
+      "sha256": "0b333fbd82385550dcae1f0defea0b26cb410e6cc596855df50e89b2f757c420"
+    },
+    {
+      "clip": "work/clips/pron-persian-consonants-turn-114.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-114"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در spring ، آغازِ واژه چند همخوانِ پشت‌سرهم دارد؛ قبل از s یا میان آن‌ها یک واکهٔ اضافی نگذارید. از بخشِ کوتاه ring به pring به‌عنوان تمرینِ ساختاری و سپس spring برسید؛ مرحلهٔ میانی، واژهٔ مستقلِ آموزشی نیست.",
+      "bytes": 86541,
+      "sha256": "e4a72370e9694eb8ec780baaaf705acf95813d7d7d9b820d4c9790156e65e7b3"
+    },
+    {
+      "clip": "work/clips/pron-persian-consonants-turn-115.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-115"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "در پایانِ next نیز خوشهٔ همخوانی داریم. آهسته صداها رو مرتب می‌کنم و بعد به سرعتِ طبیعی برمی‌گردم؛ نه صدای پایانی رو حذف می‌کنم و نه برای آسان‌شدن، یک هجای تازه به واژه می‌چسبانم.",
+      "bytes": 85101,
+      "sha256": "2d5580fce268a8fca518baf766d02127b15d7cf6aed1b0c62eabc3c2735fbee0"
+    },
+    {
+      "clip": "work/clips/pron-persian-consonants-turn-116.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-116"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در گفتارِ واقعی، بعضی همخوان‌های پایانی ممکن هست بدون رهاییِ پرصدای هوا ساخته شوند؛ شنیده‌نشدنِ انفجارِ بلند، همیشه به معنیِ حذفِ همخوان نیست. برای شروع، جایگاه و ترتیب صداها رو روشن نگه دارین و برای ساختنِ پایان، یک e اضافی نسازید.",
+      "bytes": 98349,
+      "sha256": "7822600eb64791c834b245cc8116fa2efbe880b2e667d148a147d870c19a2304"
+    },
+    {
+      "clip": "work/clips/pron-syllables-stress-turns-117-118.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-117",
+        "prospect3-lesson-01-turn-118"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "هجا یک ضربِ آوایی هست که معمولاً حول یک واکه شکل می‌گیرد؛ تعدادِ حروف یا فاصله‌های نوشتاری شمارِ هجاها نیست. book یک هجا، table دو هجا و receptionist در الگویِ فرهنگِ نمونه چهار هجا دارد. با هر بخش یک ضربِ آرام بزنید.\n\nعلامتِ ˈ در آوانویسی، پیش از هجای دارای تکیهٔ اصلی قرار می‌گیرد. برای خواندنِ ساده، در TA-ble بخشِ نخست، در ho-TEL بخشِ دوم و در re-CEP-tion-ist بخشِ دوم رو برجسته می‌کنیم؛ حروفِ بزرگ در این نمایش، راهنمای تکیه‌اند و املای عادیِ واژه نیستن.",
+      "bytes": 203181,
+      "sha256": "ce1ba256477b21362dd33b58aac8d6cc50998afe3d6ebca24b0f2e16c685fd64"
+    },
+    {
+      "clip": "work/clips/pron-syllables-stress-turn-119.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-119"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "بنابراین روی همهٔ هجاها فشارِ مساوی نمی‌گذارم. تکیه با ترکیبی از برجستگی، طول و تغییرِ زیر و بمی شنیده می‌شه؛ فریادزدنِ یک هجا تعریفِ تکیه نیست. واژه رو یک‌بار آهسته و سپس در عبارتِ طبیعی تمرین می‌کنم.",
+      "bytes": 87693,
+      "sha256": "834d290c78d8384ad8a3eb5e2040574be0c1fb5fb86c321d97223adeada293b1"
+    },
+    {
+      "clip": "work/clips/pron-syllables-stress-turns-120-121.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-120",
+        "prospect3-lesson-01-turn-121"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در خانوادهٔ واژه‌ها، تکیه ممکن هست جابه‌جا شود: person تکیهٔ اصلیِ آغازین دارد، اما در personality تکیهٔ اصلی روی هجای سومِ دارای /næl/ هست. نمایشِ personALity فقط راهنمای برجستگی هست و مرزبندیِ هجا نیست. پس تکیهٔ اسمِ کوتاه رو بدون بررسی به واژهٔ بلندتر منتقل نکنین.\n\nنشانهٔ ˌ می‌تواند تکیهٔ فرعی رو نشان دهد؛ در واژه‌های بلند، تکیهٔ فرعی از اصلی ضعیف‌تر هست. برای شروع، اصلی رو درست پیدا کنین و هجاهای دیگر رو حذف نکنین. تغییرِ کیفیتِ واکهٔ بی‌تکیه رو نیز همراه تکیه یاد بگیرید.",
+      "bytes": 176109,
+      "sha256": "fc58a1de061b0c48cc4323de749b01273a132987665e10106028e33f6afc716c"
+    },
+    {
+      "clip": "work/clips/pron-syllables-stress-turn-122.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-122"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "برای یادداشتِ واژهٔ تازه، املای معمولی رو می‌نویسم و کنارش فقط الگوی تکیه رو علامت می‌زنم. در hotel ، اگر بخشِ اول رو برجسته کنم، تمرینم رو با تکیهٔ دومِ الگوی مرجع مقایسه و اصلاح می‌کنم؛ معنیِ درست، جای این کنترل رو نمی‌گیرد.",
+      "bytes": 89613,
+      "sha256": "79e4f8f69f048dc6f7db05209e18dfe8ad875113390f418094d1e7dcf043bbb5"
+    }
+  ],
+  "assembly_manifest": "work/batch-013.json",
+  "quality_review": "work/batch-013-quality-review.json",
+  "assembly_note": "Four same-voice pairs are split and restored to source order. Turns 114 and 118 each receive their prescribed 8000-ms pause; all other turns use 700 ms."
+}

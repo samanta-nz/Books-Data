@@ -1,0 +1,21 @@
+{
+  "files": [
+    {
+      "file": "audio/prospect3-lesson-01--pron-persian-consonants--4bac00143c.weba",
+      "expected_long_pauses": 1,
+      "detected_durations": [
+        8.631167
+      ],
+      "passed": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--pron-syllables-stress--b82ddc841f.weba",
+      "expected_long_pauses": 1,
+      "detected_durations": [
+        8.7205
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,12 @@
+{
+  "batch": "015",
+  "status": "all_ten_clips_accepted",
+  "vocabulary_new_turns": 24,
+  "vocabulary_total_validated_turns": 54,
+  "deferred_source_grammar_turns": 6,
+  "per_turn_rate_range": [
+    7.53,
+    10.64
+  ],
+  "raw_analysis": "work/batch-015-audio-analysis.json"
+}

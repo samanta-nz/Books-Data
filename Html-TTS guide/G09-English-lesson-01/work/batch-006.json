@@ -1,0 +1,28 @@
+{
+  "batch": "006-be-positive-and-negative",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-01--be-positive--b9d68d2bac.weba",
+      "inputs": [
+        {"path": "work/clips/be-positive-turn-054.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/be-positive-turn-055.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/be-positive-turns-056-057.mp3", "trim_end_seconds": 12.359875, "pause_after_ms": 700},
+        {"path": "work/clips/be-positive-turns-056-057.mp3", "trim_start_seconds": 13.378417, "pause_after_ms": 700},
+        {"path": "work/clips/be-positive-turn-058.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/be-positive-turn-059.mp3", "pause_after_ms": 8000}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--negative--77984cab24.weba",
+      "inputs": [
+        {"path": "work/clips/negative-turn-060.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/negative-turn-061.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/negative-turn-062.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/negative-turn-063.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/negative-turn-064.mp3", "pause_after_ms": 700}
+      ]
+    }
+  ],
+  "copies": []
+}

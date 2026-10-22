@@ -1,0 +1,205 @@
+{
+  "source-melody-a-019-021.mp3": {
+    "duration": 8.45,
+    "mean_volume_db": -20.1,
+    "max_volume_db": -5.3,
+    "silences": [
+      {
+        "start": 3.917292,
+        "end": 4.534125,
+        "duration": 0.616833
+      }
+    ]
+  },
+  "source-melody-r-020-022.mp3": {
+    "duration": 26.06,
+    "mean_volume_db": -19.9,
+    "max_volume_db": -2.4,
+    "silences": [
+      {
+        "start": 2.134375,
+        "end": 2.68025,
+        "duration": 0.545875
+      },
+      {
+        "start": 6.664333,
+        "end": 7.357583,
+        "duration": 0.69325
+      },
+      {
+        "start": 11.8905,
+        "end": 12.545625,
+        "duration": 0.655125
+      },
+      {
+        "start": 14.651708,
+        "end": 15.577,
+        "duration": 0.925292
+      },
+      {
+        "start": 17.223083,
+        "end": 17.90975,
+        "duration": 0.686667
+      },
+      {
+        "start": 21.120375,
+        "end": 21.891833,
+        "duration": 0.771458
+      }
+    ]
+  },
+  "source-melody-a-023-025.mp3": {
+    "duration": 7.25,
+    "mean_volume_db": -19.9,
+    "max_volume_db": -3.7,
+    "silences": [
+      {
+        "start": 0.787125,
+        "end": 1.3125,
+        "duration": 0.525375
+      },
+      {
+        "start": 3.462333,
+        "end": 4.120708,
+        "duration": 0.658375
+      }
+    ]
+  },
+  "source-melody-r-024-026.mp3": {
+    "duration": 27.41,
+    "mean_volume_db": -20.6,
+    "max_volume_db": -2.4,
+    "silences": [
+      {
+        "start": 2.178125,
+        "end": 2.921167,
+        "duration": 0.743042
+      },
+      {
+        "start": 5.337958,
+        "end": 6.101917,
+        "duration": 0.763958
+      },
+      {
+        "start": 10.465083,
+        "end": 11.675583,
+        "duration": 1.2105
+      },
+      {
+        "start": 13.422458,
+        "end": 14.197542,
+        "duration": 0.775083
+      },
+      {
+        "start": 17.312958,
+        "end": 18.17425,
+        "duration": 0.861292
+      }
+    ]
+  },
+  "source-melody-a-027.mp3": {
+    "duration": 23.33,
+    "mean_volume_db": -20.6,
+    "max_volume_db": -1.7,
+    "silences": [
+      {
+        "start": 1.527667,
+        "end": 2.614167,
+        "duration": 1.0865
+      },
+      {
+        "start": 3.95125,
+        "end": 5.070458,
+        "duration": 1.119208
+      },
+      {
+        "start": 6.65725,
+        "end": 7.636875,
+        "duration": 0.979625
+      },
+      {
+        "start": 10.200625,
+        "end": 11.475792,
+        "duration": 1.275167
+      },
+      {
+        "start": 13.87575,
+        "end": 14.904583,
+        "duration": 1.028833
+      },
+      {
+        "start": 20.288875,
+        "end": 20.843417,
+        "duration": 0.554542
+      }
+    ]
+  },
+  "examples-03-turn-186-retry.mp3": {
+    "duration": 14.26,
+    "mean_volume_db": -20.1,
+    "max_volume_db": -2.7,
+    "silences": [
+      {
+        "start": 1.698958,
+        "end": 2.166583,
+        "duration": 0.467625
+      },
+      {
+        "start": 3.169625,
+        "end": 3.892333,
+        "duration": 0.722708
+      },
+      {
+        "start": 6.395875,
+        "end": 7.22775,
+        "duration": 0.831875
+      },
+      {
+        "start": 9.32375,
+        "end": 9.833417,
+        "duration": 0.509667
+      },
+      {
+        "start": 13.693958,
+        "end": 14.2,
+        "duration": 0.506042
+      }
+    ]
+  },
+  "examples-05-turn-194.mp3": {
+    "duration": 11.9,
+    "mean_volume_db": -20.0,
+    "max_volume_db": -1.5,
+    "silences": [
+      {
+        "start": 4.592125,
+        "end": 5.109333,
+        "duration": 0.517208
+      }
+    ]
+  },
+  "examples-06-turn-198.mp3": {
+    "duration": 11.9,
+    "mean_volume_db": -19.6,
+    "max_volume_db": -4.4,
+    "silences": [
+      {
+        "start": 4.265583,
+        "end": 5.268292,
+        "duration": 1.002708
+      }
+    ]
+  },
+  "book-source-pages-turn-050.mp3": {
+    "duration": 18.41,
+    "mean_volume_db": -19.5,
+    "max_volume_db": -1.7,
+    "silences": []
+  },
+  "sources-instruction-1.mp3": {
+    "duration": 14.14,
+    "mean_volume_db": -19.3,
+    "max_volume_db": -2.8,
+    "silences": []
+  }
+}

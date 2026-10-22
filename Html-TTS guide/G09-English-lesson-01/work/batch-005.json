@@ -1,0 +1,34 @@
+{
+  "batch": "005-source-conversation-complete-18-turns",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-01--source-conversation--8feb99fb44.weba",
+      "inputs": [
+        {"path": "work/clips/source-conversation-a-001-002.mp3", "trim_end_seconds": 19.642667, "pause_after_ms": 700},
+        {"path": "work/clips/source-conversation-a-001-002.mp3", "trim_start_seconds": 20.256875, "pause_after_ms": 8000},
+        {"path": "work/clips/source-conversation-r-003-005.mp3", "trim_end_seconds": 12.497542, "pause_after_ms": 8000},
+        {"path": "work/clips/source-conversation-r-003-005.mp3", "trim_start_seconds": 13.378708, "trim_end_seconds": 20.414083, "pause_after_ms": 700},
+        {"path": "work/clips/source-conversation-a-004-006.mp3", "trim_end_seconds": 2.068792, "pause_after_ms": 700},
+        {"path": "work/clips/source-conversation-r-003-005.mp3", "trim_start_seconds": 21.005583, "pause_after_ms": 700},
+        {"path": "work/clips/source-conversation-a-004-006.mp3", "trim_start_seconds": 2.701125, "pause_after_ms": 8000},
+        {"path": "work/clips/source-conversation-r-007-009.mp3", "trim_end_seconds": 12.632875, "pause_after_ms": 8000},
+        {"path": "work/clips/source-conversation-r-007-009.mp3", "trim_start_seconds": 13.876792, "trim_end_seconds": 20.311, "pause_after_ms": 700},
+        {"path": "work/clips/source-conversation-a-008-010.mp3", "trim_end_seconds": 4.929667, "pause_after_ms": 700},
+        {"path": "work/clips/source-conversation-r-007-009.mp3", "trim_start_seconds": 21.512292, "pause_after_ms": 700},
+        {"path": "work/clips/source-conversation-a-008-010.mp3", "trim_start_seconds": 5.5525, "pause_after_ms": 8000},
+        {"path": "work/clips/source-conversation-r-011-013.mp3", "trim_end_seconds": 12.399167, "pause_after_ms": 8000},
+        {"path": "work/clips/source-conversation-r-011-013.mp3", "trim_start_seconds": 13.489083, "trim_end_seconds": 20.079167, "pause_after_ms": 8000},
+        {"path": "work/clips/source-conversation-a-012-014.mp3", "trim_end_seconds": 4.62675, "pause_after_ms": 700},
+        {"path": "work/clips/source-conversation-r-011-013.mp3", "trim_start_seconds": 21.244792, "pause_after_ms": 700},
+        {"path": "work/clips/source-conversation-a-012-014.mp3", "trim_start_seconds": 5.386542, "pause_after_ms": 8000},
+        {"path": "work/clips/source-conversation-r-015-017.mp3", "trim_end_seconds": 10.296875, "pause_after_ms": 8000},
+        {"path": "work/clips/source-conversation-r-015-017.mp3", "trim_start_seconds": 11.091083, "trim_end_seconds": 18.902458, "pause_after_ms": 700},
+        {"path": "work/clips/source-conversation-a-016.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/source-conversation-r-015-017.mp3", "trim_start_seconds": 19.689958, "pause_after_ms": 700},
+        {"path": "work/clips/source-conversation-r-018.mp3", "pause_after_ms": 700}
+      ]
+    }
+  ],
+  "copies": []
+}

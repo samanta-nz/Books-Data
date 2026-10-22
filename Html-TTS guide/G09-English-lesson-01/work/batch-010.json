@@ -1,0 +1,17 @@
+{
+  "batch": "010-errors-summary",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-01--errors-summary--a7de6da265.weba",
+      "inputs": [
+        {"path": "work/clips/errors-summary-turn-087.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/errors-summary-turn-088.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/errors-summary-turn-089.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/errors-summary-turn-090.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/errors-summary-turn-091.mp3", "pause_after_ms": 700}
+      ]
+    }
+  ],
+  "copies": []
+}

@@ -1,0 +1,12 @@
+{
+  "file": "work/clips/questions-turns-067-068-069-full.mp3",
+  "sha256": "2ac51efa851add15e2bf793a4cc60a098633ea2f523992731071500d9cfc19d6",
+  "status": "rejected_not_embedded",
+  "reason": "Estimated 27.4 characters per speech second versus 12.0-12.8 for comparable question clips; possible omitted source text. Turns 067, 068 and 069 must be generated separately.",
+  "valid_deferred_clips": [
+    "work/clips/questions-turn-065-full.mp3",
+    "work/clips/questions-turn-066-full.mp3",
+    "work/clips/questions-turn-070-full.mp3",
+    "work/clips/questions-turn-071-full.mp3"
+  ]
+}

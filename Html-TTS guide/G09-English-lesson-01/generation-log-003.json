@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-22",
+  "generator": "Arena.ai generate_speech",
+  "batch": "003",
+  "sections": [
+    "bridge-be-present",
+    "bridge-number-articles"
+  ],
+  "clips": [
+    {
+      "clip": "work/clips/bridge-be-present-turn-016.mp3",
+      "source_turn": "prospect3-lesson-01-turn-016",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در جملهٔ معرفی یا توصیفِ حال، شکل فعل رو با فاعل هماهنگ می‌کنیم: I am؛ he, she, it با is؛ و you, we, they با are. اسم یا گروه اسمی نیز مانند ضمیرِ متناظر رفتار می‌کند: Sara is و the students are.",
+      "bytes": 99213,
+      "sha256": "a8312d1f0476e2b14ec0106a51a1b39191935e1442e381ea82710757fc06dda9"
+    },
+    {
+      "clip": "work/clips/bridge-be-present-turn-017.mp3",
+      "source_turn": "prospect3-lesson-01-turn-017",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "برای My father blank a teacher، ابتدا فاعل رو با he مقایسه می‌کنم. چون مفرد هست، is انتخاب می‌شه و جمله می‌شه My father is a teacher. جواب رو از روی نزدیک‌ترین واژهٔ فارسی حدس نمی‌زنم.",
+      "bytes": 77421,
+      "sha256": "f5b6d68d8220242729cc4d3ee756e8e6bac9ff57d836d4bc50a7296b2adc6d14"
+    },
+    {
+      "clip": "work/clips/bridge-be-present-turn-018.mp3",
+      "source_turn": "prospect3-lesson-01-turn-018",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "برای منفی‌کردن همین ساخت، not پس از فعل میاد: I am not tired. She is not tired. They are not tired. فعل رو حذف نمی‌کنیم؛ فقط منفی‌بودن پیام رو به کمک not مشخص می‌کنیم.",
+      "bytes": 69261,
+      "sha256": "711b0163d4316a6332adc5c7c842138072b7ef3f68340d9164a926172cab56c5"
+    },
+    {
+      "clip": "work/clips/bridge-be-present-turn-019-full.mp3",
+      "source_turn": "prospect3-lesson-01-turn-019",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "برای سؤال بله یا خیر، همان فعل رو پیش از فاعل می‌برم: Is she tired? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nو Are they tired? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nدر این تبدیل، فعل تازه‌ای مثل does اضافه نمی‌کنم؛ جمله از قبل فعل be دارد.",
+      "bytes": 148173,
+      "sha256": "ef62e66779c6cf4965a566dcc8a78905ec46609fc4a7a9257ba14cadaca011c6"
+    },
+    {
+      "clip": "work/clips/bridge-be-present-turn-020.mp3",
+      "source_turn": "prospect3-lesson-01-turn-020",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "پاسخ کوتاه، فاعل و فعلِ مناسب رو نگه می‌دارد: Yes, she is. No, they are not. پاسخ مثبتِ کوتاه رو به Yes, she’s. ختم نمی‌کنیم. صورت کوتاه‌شده می‌تواند در جملهٔ کامل بیاید: She’s tired.",
+      "bytes": 79053,
+      "sha256": "cc1eb53c49960acfb9f8b6f0e70933c5a31fff641a1fd6362c9c2b9e387b66b3"
+    },
+    {
+      "clip": "work/clips/bridge-be-present-turn-021-full.mp3",
+      "source_turn": "prospect3-lesson-01-turn-021",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "برای کنترل سه شکل، از یک پیام استفاده می‌کنم: He is careful. He is not careful. Is he careful? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nفاعل و صفت ثابت‌اند؛ جای is و وجود not نشان می‌ده چه نوع جمله‌ای ساخته‌ام.",
+      "bytes": 102381,
+      "sha256": "2de7a49105e6dd7d8ccdbeae0170afff7d0c29d824584983a1dc267adf8b52d1"
+    },
+    {
+      "clip": "work/clips/bridge-number-articles-turn-022.mp3",
+      "source_turn": "prospect3-lesson-01-turn-022",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "وقتی یک اسم قابل شمارشِ مفرد رو به شکل ناآشنا معرفی می‌کنیم، اغلب به a یا an نیاز داریم: a book و an apple. انتخاب میان آن دو به صدای آغازینِ واژهٔ بعد وابسته هست، نه فقط نام حرف اول. برای واژهٔ تازه، نمونهٔ معتبر رو کنترل کنین.",
+      "bytes": 97869,
+      "sha256": "c16520e0bee5b38ae2aa8106e543e925843295af558b67df427410b574aaf08e"
+    },
+    {
+      "clip": "work/clips/bridge-number-articles-turns-023-025.mp3",
+      "source_turn": "prospect3-lesson-01-turn-023 + prospect3-lesson-01-turn-025",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "در This is a book. یک کتاب رو معرفی می‌کنم. در These are books. هم واژهٔ اشاره و هم فعل و شکل اسم جمع شده‌اند؛ افزودن s به تنهایی همیشه تمام تغییر لازم در جمله نیست.\n\nبرای بیان وجود یک چیز، There is a book on the desk. می‌گویم؛ برای چند چیز There are two books on the desk. تعدادِ اسم پس از این ساخت رو می‌بینم. there در اینجا نامِ صاحب کتاب یا جایگزینِ they نیست.",
+      "bytes": 134733,
+      "sha256": "2177ed0ae0819bec6a3390ccaa024458cb949bc6382cc944544b6132aabe2c10"
+    },
+    {
+      "clip": "work/clips/bridge-number-articles-turn-024.mp3",
+      "source_turn": "prospect3-lesson-01-turn-024",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "بسیاری از اسم‌ها با s یا es جمع می‌شن، اما همه چنین نیستن؛ child becomes children نمونهٔ مهمی هست. در The children are in the classroom. فاعل جمع هست، هرچند واژه به s ختم نشده هست.",
+      "bytes": 72813,
+      "sha256": "27394effda776515f935b53303396f36e034159a65b7c241ecc6afab50bc27a0"
+    },
+    {
+      "clip": "work/clips/bridge-number-articles-turn-026-full.mp3",
+      "source_turn": "prospect3-lesson-01-turn-026",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "سؤالِ وجود رو هم از همین ساخت می‌سازیم: Is there a book on the desk? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nپاسخ می‌تواند Yes, there is. باشه. اگر جملهٔ مثبتِ جمع There are two books. هست، در سؤال می‌گوییم Are there two books? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 126189,
+      "sha256": "0912c96fac37a7af036d8976659e764444392cce387db68e9f4ea30743831478"
+    }
+  ],
+  "assembly_edits": [
+    {
+      "source_turn": "prospect3-lesson-01-turn-019",
+      "segments": [
+        {
+          "trim_end": 15.338292,
+          "pause_after_ms": 8000
+        },
+        {
+          "trim_start": 18.364917,
+          "trim_end": 28.073917,
+          "pause_after_ms": 8000
+        },
+        {
+          "trim_start": 30.511542,
+          "pause_after_ms": 8000
+        }
+      ]
+    },
+    {
+      "source_turn": "prospect3-lesson-01-turn-021",
+      "segments": [
+        {
+          "trim_end": 17.274625,
+          "pause_after_ms": 8000
+        },
+        {
+          "trim_start": 18.0475,
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "source_turn": "prospect3-lesson-01-turn-023 + prospect3-lesson-01-turn-025",
+      "boundary": {
+        "first_trim_end": 16.038583,
+        "second_trim_start": 16.732125
+      },
+      "reason": "Separate two same-voice source turns and restore their original order around turn 024."
+    },
+    {
+      "source_turn": "prospect3-lesson-01-turn-026",
+      "segments": [
+        {
+          "trim_end": 12.001833,
+          "pause_after_ms": 8000
+        },
+        {
+          "trim_start": 12.845292,
+          "pause_after_ms": 8000
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "batch": "007-contractions-questions-deferred-for-quality-recheck",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-01--contractions--76f103d600.weba",
+      "inputs": [
+        {"path": "work/clips/contractions-turn-072.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/contractions-turn-073.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/contractions-turn-074.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/contractions-turn-075.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/contractions-turn-076.mp3", "pause_after_ms": 700}
+      ]
+    }
+  ],
+  "copies": []
+}

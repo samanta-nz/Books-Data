@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-22",
+  "generator": "Arena.ai generate_speech",
+  "batch": "001",
+  "clips": [
+    {
+      "clip": "work/clips/start-turn-035.mp3",
+      "source_turn": "prospect3-lesson-01-turn-035",
+      "section": "start",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "دوستی رو تصور کنین که وقتی درس رو نمی‌فهمم کمک می‌کنه و هنگام انتظار عصبانی نمی‌شه. برای معرفی او فقط نام و سن کافی نیست؛ باید ویژگی‌های رفتارش رو هم بیان کنیم. در این درس، با جملهٔ کامل و دلیل روشن دربارهٔ شخصیت حرف می‌زنیم.",
+      "bytes": 88173,
+      "sha256": "f6de4a174567d5adf4bc08d9e8ce05530aa1270263510d16ad865db0103f04c5"
+    },
+    {
+      "clip": "work/clips/goals-turn-001.mp3",
+      "source_turn": "prospect3-lesson-01-turn-001",
+      "section": "goals",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "یک نفر رو با دست‌کم سه صفت متناسب و جمله‌های کامل معرفی کنین.",
+      "bytes": 25773,
+      "sha256": "a56e786ac83ee1241f327831429f1aeebc01bdfdf40270e07d66d935f957a690"
+    },
+    {
+      "clip": "work/clips/goals-turn-002.mp3",
+      "source_turn": "prospect3-lesson-01-turn-002",
+      "section": "goals",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "با am، is، are جملهٔ مثبت، منفی و پرسش بله/خیر بسازید و پاسخ کوتاه بدهید.",
+      "bytes": 38829,
+      "sha256": "e2bb4cde98c6b8f4e0d502c9056477b7bc8069fda14594eaafe9209f25fec8ec"
+    },
+    {
+      "clip": "work/clips/goals-turn-003a.mp3",
+      "source_turn": "prospect3-lesson-01-turn-003",
+      "section": "goals",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "تفاوت What is ... like؟ اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 40173,
+      "sha256": "116f254fd25f1a752adb65042a7cb2ee5b29010e24d88f9719953109e2720a1e"
+    },
+    {
+      "clip": "work/clips/goals-turn-003b.mp3",
+      "source_turn": "prospect3-lesson-01-turn-003",
+      "section": "goals",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "با سؤال دربارهٔ علاقه رو تشخیص دهید.",
+      "bytes": 14733,
+      "sha256": "9d8e551f841c6a67733cb218eb6fc6808aaa226aa7f80e03caa8a4fe0b4ffc91"
+    },
+    {
+      "clip": "work/clips/goals-turn-004.mp3",
+      "source_turn": "prospect3-lesson-01-turn-004",
+      "section": "goals",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "وجود یک یا چند چیز رو با there is و there are بیان کنین.",
+      "bytes": 25773,
+      "sha256": "60842bbea3d5348af50a6d7105a75dbda7db2ab09237cf37917cab5bdc318c56"
+    },
+    {
+      "clip": "work/clips/goals-turn-005.mp3",
+      "source_turn": "prospect3-lesson-01-turn-005",
+      "section": "goals",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "شکل کامل و کوتاه‌شده، حروف بزرگ، آپاستروف و تطابق فاعل و فعل رو در نوشتهٔ خود کنترل کنین.",
+      "bytes": 41709,
+      "sha256": "5c9aaff1e782f69e6b83a133d983771b9cc6289ff33093634ecb80a530c8d124"
+    },
+    {
+      "clip": "work/clips/shared-practice-prompt.mp3",
+      "source_turn": "shared-script-8720de7b05",
+      "section": "six practice sections",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "اکنون پخش صدا رو متوقف کنین و تمرین‌های این بخش رو در صفحه حل کنین. پس از پاسخ‌دادن، راهنماها و پاسخ‌های صفحه رو برای بازبینی ببینین.",
+      "bytes": 48333,
+      "sha256": "bc57cd473879e0979d7d7d766e9cbfa1ba204346d4725ad184dfc9f5ffac7a91"
+    },
+    {
+      "clip": "work/clips/examples-turn-178.mp3",
+      "source_turn": "prospect3-lesson-01-turn-178",
+      "section": "examples",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "صورت مثال: به Are you patient? پاسخ کوتاهِ مثبت بدهید و سپس دربارهٔ دوستتان همان ویژگی رو گزارش کنین. اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 65229,
+      "sha256": "ab3952156d93fbd9d58afd0f16b9c537e3c7f1a3ffc2723b8fbd47cf0b274585"
+    },
+    {
+      "clip": "work/clips/examples-02-turn-182.mp3",
+      "source_turn": "prospect3-lesson-01-turn-182",
+      "section": "examples-02",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "صورت مثال: برای تصویری با دو کتاب روی میز، یک جملهٔ وجودی بسازید و بعد وجودِ یک سیب رو بپرسید. اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 60621,
+      "sha256": "3eeb012bf7073a43413513c0bfc7232664218661a79ea3a15e4505920290e054"
+    }
+  ],
+  "reused_audio": {
+    "source": "G09-English-sample/prospect3-lesson-01--start--8e15072791.weba",
+    "trim_start_seconds": 22.300667,
+    "contains_turns": [
+      "prospect3-lesson-01-turn-036",
+      "prospect3-lesson-01-turn-037",
+      "prospect3-lesson-01-turn-038"
+    ],
+    "voices": {
+      "آرتین": "voice-02",
+      "رها": "voice-05"
+    }
+  },
+  "shared_practice_sections": [
+    "local-prerequisite-check",
+    "entry",
+    "official-pictures",
+    "lab",
+    "writing",
+    "quiz"
+  ],
+  "shared_script_sha256": "8720de7b05221543f84220c3c62dc3c8546674b77194d443db239afeb85591a6"
+}

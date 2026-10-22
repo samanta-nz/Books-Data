@@ -1,0 +1,31 @@
+{
+  "batch": "010",
+  "accepted_for_embedding": [
+    "errors-summary-turn-087.mp3",
+    "errors-summary-turn-088.mp3",
+    "errors-summary-turn-089.mp3",
+    "errors-summary-turn-090.mp3",
+    "errors-summary-turn-091.mp3"
+  ],
+  "deferred_valid_speak_clips": [
+    "speak-turn-082-full.mp3",
+    "speak-turn-083.mp3",
+    "speak-turn-084.mp3",
+    "speak-turn-085.mp3"
+  ],
+  "rejected": [
+    {
+      "file": "work/clips/speak-turn-086-full.mp3",
+      "sha256": "f1e422d7316e8a30ba726494be6b70e0436433621598d74ac32865830373f63d",
+      "duration_seconds": 15.02,
+      "estimated_non_whitespace_characters_per_speech_second": 22.22,
+      "comparable_valid_clips_range": [
+        7.63,
+        9.54
+      ],
+      "status": "rejected_not_embedded",
+      "reason": "Speech duration is incompatible with the complete source turn; regenerate turn 086 as three separate pause-delimited segments in the next generation batch."
+    }
+  ],
+  "raw_analysis": "work/batch-010-audio-analysis.json"
+}

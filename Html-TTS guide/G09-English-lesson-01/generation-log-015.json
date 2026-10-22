@@ -1,0 +1,377 @@
+{
+  "date": "2026-10-22",
+  "generator": "Arena.ai generate_speech",
+  "batch": "015",
+  "sections": [
+    "vocabulary-cards",
+    "source-grammar"
+  ],
+  "status": "vocabulary_embedded_source_grammar_partial",
+  "source_turn_count": 30,
+  "temporary_clips": 10,
+  "clips": [
+    {
+      "clip": "work/clips/vocabulary-cards-turns-153-155.mp3",
+      "section": "vocabulary-cards",
+      "source_turns": [
+        "prospect3-lesson-01-turn-153",
+        "prospect3-lesson-01-turn-154",
+        "prospect3-lesson-01-turn-155"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در املا به این نکته توجه کنین: ترتیبِ u و e رو جابه‌جا نکنین. نکتهٔ خوانش: cruel : الگوی واژهٔ جدا /kɹuəl/ ؛ 2 هجا، تکیهٔ اصلی روی هجای 1.\n\nواژه یا عبارت rude در اینجا یعنی بی‌ادب. نقش یا نوع آن: adjective . مثال: He is not rude.\n\nدر املا به این نکته توجه کنین: حرف e پایانی در املا وجود دارد. نکتهٔ خوانش: rude : الگوی واژهٔ جدا /ɹud/ ؛ 1 هجا.",
+      "bytes": 164301,
+      "sha256": "b1d26eeceb730b676362645230f73193258e7b9d47920abd3d47b1f1b7067cf7",
+      "quality_status": "accepted",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-turn-153",
+          "path": "work/clips/vocabulary-cards-turns-153-155.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 16.447458
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-154",
+          "path": "work/clips/vocabulary-cards-turns-153-155.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 17.211583,
+          "trim_end_seconds": 26.828917
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-155",
+          "path": "work/clips/vocabulary-cards-turns-153-155.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 27.592708
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/vocabulary-cards-turns-156-158.mp3",
+      "section": "vocabulary-cards",
+      "source_turns": [
+        "prospect3-lesson-01-turn-156",
+        "prospect3-lesson-01-turn-157",
+        "prospect3-lesson-01-turn-158"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "واژه یا عبارت nervous در اینجا یعنی مضطرب؛ عصبی در بافت مناسب. نقش یا نوع آن: adjective . مثال: I am nervous before the test.\n\nدر املا به این نکته توجه کنین: پایانِ واژه o-u-s هست. نکتهٔ خوانش: nervous : الگوی واژهٔ جدا /nɝvəs/ ؛ 2 هجا، تکیهٔ اصلی روی هجای 1.\n\nواژه یا عبارت selfish در اینجا یعنی خودخواه. نقش یا نوع آن: adjective . مثال: The character is selfish.",
+      "bytes": 154413,
+      "sha256": "8495ea90ffd1d36ca1e3bd186791164c9ae2ec8b204adb5e8403daac48170916",
+      "quality_status": "accepted",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-turn-156",
+          "path": "work/clips/vocabulary-cards-turns-156-158.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 12.283042
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-157",
+          "path": "work/clips/vocabulary-cards-turns-156-158.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 12.89775,
+          "trim_end_seconds": 27.40075
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-158",
+          "path": "work/clips/vocabulary-cards-turns-156-158.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 28.304708
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/vocabulary-cards-turns-159-161.mp3",
+      "section": "vocabulary-cards",
+      "source_turns": [
+        "prospect3-lesson-01-turn-159",
+        "prospect3-lesson-01-turn-160",
+        "prospect3-lesson-01-turn-161"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در املا به این نکته توجه کنین: واژه با sh تمام می‌شه؛ دو حرف، الزاماً دو صدای جدا نیستن. نکتهٔ خوانش: selfish : الگوی واژهٔ جدا /sɛlfɪʃ/ ؛ 2 هجا، تکیهٔ اصلی روی هجای 1.\n\nواژه یا عبارت shy در اینجا یعنی خجالتی؛ کم‌رو. نقش یا نوع آن: adjective . مثال: My cousin is shy.\n\nدر املا به این نکته توجه کنین: سه حرف s-h-y نوشته می‌شن؛ sh رو در تشخیصِ صدا جداجدا فرض نکنین. نکتهٔ خوانش: shy : الگوی واژهٔ جدا /ʃaɪ/ ؛ 1 هجا.",
+      "bytes": 189261,
+      "sha256": "b822fad7982733e19b3d17ad61ed7ef5a1c83e6683271b7288c3c0ffc8abe341",
+      "quality_status": "accepted",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-turn-159",
+          "path": "work/clips/vocabulary-cards-turns-159-161.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 18.121
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-160",
+          "path": "work/clips/vocabulary-cards-turns-159-161.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 18.768833,
+          "trim_end_seconds": 29.99075
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-161",
+          "path": "work/clips/vocabulary-cards-turns-159-161.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 30.716708
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/vocabulary-cards-turns-162-164.mp3",
+      "section": "vocabulary-cards",
+      "source_turns": [
+        "prospect3-lesson-01-turn-162",
+        "prospect3-lesson-01-turn-163",
+        "prospect3-lesson-01-turn-164"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "واژه یا عبارت lazy در اینجا یعنی تنبل. نقش یا نوع آن: adjective . مثال: The character is lazy.\n\nدر املا به این نکته توجه کنین: حرف z رو با s جایگزین نکنین. نکتهٔ خوانش: lazy : الگوی واژهٔ جدا /leɪzi/ ؛ 2 هجا، تکیهٔ اصلی روی هجای 1.\n\nواژه یا عبارت generous در اینجا یعنی بخشنده. نقش یا نوع آن: adjective . مثال: My grandmother is generous.",
+      "bytes": 158541,
+      "sha256": "1f2fcfd59c24b8fcc24828271b1edbe51c18e83d43c3d9f3f1c1364442ae143f",
+      "quality_status": "accepted",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-turn-162",
+          "path": "work/clips/vocabulary-cards-turns-162-164.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 10.879333
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-163",
+          "path": "work/clips/vocabulary-cards-turns-162-164.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 11.943417,
+          "trim_end_seconds": 27.209667
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-164",
+          "path": "work/clips/vocabulary-cards-turns-162-164.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 28.408458
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/vocabulary-cards-turns-165-167.mp3",
+      "section": "vocabulary-cards",
+      "source_turns": [
+        "prospect3-lesson-01-turn-165",
+        "prospect3-lesson-01-turn-166",
+        "prospect3-lesson-01-turn-167"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در املا به این نکته توجه کنین: در پایانِ واژه r-o-u-s آمده هست. نکتهٔ خوانش: generous : الگوی واژهٔ جدا /dʒɛnɚəs/ ؛ 3 هجا، تکیهٔ اصلی روی هجای 1.\n\nواژه یا عبارت friendly در اینجا یعنی دارای برخورد دوستانه. نقش یا نوع آن: adjective . مثال: Our neighbors are friendly.\n\nدر املا به این نکته توجه کنین: املای friend در ابتدای friendly حفظ می‌شه. نکتهٔ خوانش: friendly : الگوی واژهٔ جدا /fɹɛndli/ ؛ 2 هجا، تکیهٔ اصلی روی هجای 1.",
+      "bytes": 201549,
+      "sha256": "7a8486d8bcc4e68f92f1a16471b4d74e0da60a42e7fbffbcc9778644c5ced78f",
+      "quality_status": "accepted",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-turn-165",
+          "path": "work/clips/vocabulary-cards-turns-165-167.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 18.2735
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-166",
+          "path": "work/clips/vocabulary-cards-turns-165-167.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 19.500125,
+          "trim_end_seconds": 31.296042
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-167",
+          "path": "work/clips/vocabulary-cards-turns-165-167.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 32.484333
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/vocabulary-cards-turns-168-170.mp3",
+      "section": "vocabulary-cards",
+      "source_turns": [
+        "prospect3-lesson-01-turn-168",
+        "prospect3-lesson-01-turn-169",
+        "prospect3-lesson-01-turn-170"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "واژه یا عبارت polite در اینجا یعنی مؤدب. نقش یا نوع آن: adjective . مثال: The receptionist is polite.\n\nدر املا به این نکته توجه کنین: حرف e پایانی رو در صورتِ نوشتاری حفظ کنین. نکتهٔ خوانش: polite : الگوی واژهٔ جدا /pəlaɪt/ ؛ 2 هجا، تکیهٔ اصلی روی هجای 2.\n\nواژه یا عبارت upset در اینجا یعنی ناراحت؛ آشفته. نقش یا نوع آن: adjective . مثال: They are not upset.",
+      "bytes": 159213,
+      "sha256": "afcfdb63e52fe773952778312691cf0ba4ad430c95f168d20ca9db5d690f1164",
+      "quality_status": "accepted",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-turn-168",
+          "path": "work/clips/vocabulary-cards-turns-168-170.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 10.963833
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-169",
+          "path": "work/clips/vocabulary-cards-turns-168-170.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 11.679083,
+          "trim_end_seconds": 27.03625
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-170",
+          "path": "work/clips/vocabulary-cards-turns-168-170.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 28.000167
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/vocabulary-cards-turns-171-173.mp3",
+      "section": "vocabulary-cards",
+      "source_turns": [
+        "prospect3-lesson-01-turn-171",
+        "prospect3-lesson-01-turn-172",
+        "prospect3-lesson-01-turn-173"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در املا به این نکته توجه کنین: دو بخش up و set به هم چسبیده‌اند. نکتهٔ خوانش: upset : الگوی واژهٔ جدا /əpsɛt/ ؛ 2 هجا، تکیهٔ اصلی روی هجای 2.\n\nواژه یا عبارت dictionary در اینجا یعنی فرهنگ لغت. نقش یا نوع آن: noun . مثال: There is a dictionary on my desk.\n\nدر املا به این نکته توجه کنین: پایان واژه a-r-y هست؛ هر مدخل رو از روی املایِ معتبر کنترل کنین. نکتهٔ خوانش: dictionary : الگوی واژهٔ جدا /dɪkʃənɛɹi/ ؛ 4 هجا، تکیهٔ اصلی روی هجای 1.",
+      "bytes": 201261,
+      "sha256": "bf48267675c219e4d2b47ed66175de012917208eb380c234b6c2605c925cb1f4",
+      "quality_status": "accepted",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-turn-171",
+          "path": "work/clips/vocabulary-cards-turns-171-173.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 16.592375
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-172",
+          "path": "work/clips/vocabulary-cards-turns-171-173.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 17.513833,
+          "trim_end_seconds": 29.009042
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-173",
+          "path": "work/clips/vocabulary-cards-turns-171-173.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 30.026792
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/vocabulary-cards-turns-174-175-instruction.mp3",
+      "section": "vocabulary-cards",
+      "source_turns": [
+        "prospect3-lesson-01-turn-174",
+        "prospect3-lesson-01-turn-175",
+        "prospect3-lesson-01--vocabulary-cards--instruction-1"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "واژه یا عبارت personality در اینجا یعنی شخصیت؛ ویژگی‌های شخصیتی. نقش یا نوع آن: noun . مثال: We are talking about personality.\n\nدر املا به این نکته توجه کنین: پایان واژه i-t-y هست. نکتهٔ خوانش: personality : الگوی واژهٔ جدا /pɝsənælɪti/ ؛ 5 هجا، تکیهٔ اصلی روی هجای 3.\n\nاکنون پخش صدا رو متوقف کنین و تمرین‌های این بخش رو در صفحه حل کنین. پس از پاسخ‌دادن، راهنماها و پاسخ‌های صفحه رو برای بازبینی ببینین.",
+      "bytes": 190893,
+      "sha256": "cb1c19bea7d21b5bd97c4ce88481edb9de327d25a07fcdff093dc8e33e58e976",
+      "quality_status": "accepted",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-turn-174",
+          "path": "work/clips/vocabulary-cards-turns-174-175-instruction.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 14.605333
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-175",
+          "path": "work/clips/vocabulary-cards-turns-174-175-instruction.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 15.487542,
+          "trim_end_seconds": 35.402958
+        },
+        {
+          "source_turn": "prospect3-lesson-01--vocabulary-cards--instruction-1",
+          "path": "work/clips/vocabulary-cards-turns-174-175-instruction.mp3",
+          "pause_after_ms": 8000,
+          "trim_start_seconds": 36.698167
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/source-grammar-a-028-030-032.mp3",
+      "section": "source-grammar",
+      "source_turns": [
+        "prospect3-lesson-01-uploaded-source-turn-028",
+        "prospect3-lesson-01-uploaded-source-turn-030",
+        "prospect3-lesson-01-uploaded-source-turn-032"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در متنِ همین صفحه می‌خوانیم: Ali is clever.\n\nدر متنِ همین صفحه می‌خوانیم: Zahra and Nadia are generous.\n\nدر متنِ همین صفحه می‌خوانیم: I am not talkative.",
+      "bytes": 69933,
+      "sha256": "52bc507f250cf52379b224eff0e8035baac644bed16a51b5d9389a6dcd2b5ec7",
+      "quality_status": "accepted",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-028",
+          "path": "work/clips/source-grammar-a-028-030-032.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 4.820625
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-030",
+          "path": "work/clips/source-grammar-a-028-030-032.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 5.831417,
+          "trim_end_seconds": 11.505292
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-032",
+          "path": "work/clips/source-grammar-a-028-030-032.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 12.409125
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/source-grammar-r-029-031-033.mp3",
+      "section": "source-grammar",
+      "source_turns": [
+        "prospect3-lesson-01-uploaded-source-turn-029",
+        "prospect3-lesson-01-uploaded-source-turn-031",
+        "prospect3-lesson-01-uploaded-source-turn-033"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "معنی و نکتهٔ این قسمت: علی باهوش هست. فاعل مفرد هست و is صفت رو به او نسبت می‌ده؛ جمله با وجودِ نامِ شخص همچنان به فعل نیاز دارد.\n\nمعنی و نکتهٔ این قسمت: زهرا و نادیا بخشنده‌اند. دو نام با and یک فاعل جمع می‌سازند و are لازم هست.\n\nمعنی و نکتهٔ این قسمت: من پرحرف نیستم. not پس از am میاد؛ صورت معیارِ کوتاه I ’ m not هست.",
+      "bytes": 143181,
+      "sha256": "76347b49f7c6c1c27e4cd08d4eaf700fae801daf900aeb61d1fd2b6e59aa88d7",
+      "quality_status": "accepted",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-029",
+          "path": "work/clips/source-grammar-r-029-031-033.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 13.285958
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-031",
+          "path": "work/clips/source-grammar-r-029-031-033.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 14.319125,
+          "trim_end_seconds": 24.801042
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-033",
+          "path": "work/clips/source-grammar-r-029-031-033.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 25.77375
+        }
+      ]
+    }
+  ],
+  "assembly_manifest": "work/batch-015.json",
+  "quality_review": "work/batch-015-quality-review.json",
+  "deferred_source_grammar_state": "work/source-grammar-production.json"
+}

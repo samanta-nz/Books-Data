@@ -1,0 +1,300 @@
+{
+  "batch": "015-vocabulary-cards-complete-54-turns",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-01--vocabulary-cards--d0a9ed4913.weba",
+      "inputs": [
+        {
+          "path": "work/clips/vocabulary-cards-turns-123-125.mp3",
+          "trim_end_seconds": 14.300792,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-123-125.mp3",
+          "trim_start_seconds": 15.096625,
+          "trim_end_seconds": 24.287167,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-123-125.mp3",
+          "trim_start_seconds": 24.979,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-126-128.mp3",
+          "trim_end_seconds": 10.07625,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-126-128.mp3",
+          "trim_start_seconds": 10.79175,
+          "trim_end_seconds": 27.678583,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-126-128.mp3",
+          "trim_start_seconds": 28.558875,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-129-131.mp3",
+          "trim_end_seconds": 16.593,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-129-131.mp3",
+          "trim_start_seconds": 17.26775,
+          "trim_end_seconds": 28.068417,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-129-131.mp3",
+          "trim_start_seconds": 29.13725,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-132-134.mp3",
+          "trim_end_seconds": 11.776833,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-132-134.mp3",
+          "trim_start_seconds": 12.429167,
+          "trim_end_seconds": 28.993,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-132-134.mp3",
+          "trim_start_seconds": 29.799917,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-135-137.mp3",
+          "trim_end_seconds": 14.912833,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-135-137.mp3",
+          "trim_start_seconds": 15.478458,
+          "trim_end_seconds": 27.473417,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-135-137.mp3",
+          "trim_start_seconds": 28.426208,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-138-140.mp3",
+          "trim_end_seconds": 11.994,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-138-140.mp3",
+          "trim_start_seconds": 13.009125,
+          "trim_end_seconds": 34.782542,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-138-140.mp3",
+          "trim_start_seconds": 35.898208,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-141-143.mp3",
+          "trim_end_seconds": 17.917875,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-141-143.mp3",
+          "trim_start_seconds": 18.405125,
+          "trim_end_seconds": 29.259042,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-141-143.mp3",
+          "trim_start_seconds": 29.836958,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-144-146.mp3",
+          "trim_end_seconds": 10.392167,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-144-146.mp3",
+          "trim_start_seconds": 11.0135,
+          "trim_end_seconds": 25.844208,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-144-146.mp3",
+          "trim_start_seconds": 26.79875,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-147-149.mp3",
+          "trim_end_seconds": 15.918208,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-147-149.mp3",
+          "trim_start_seconds": 16.879917,
+          "trim_end_seconds": 31.05875,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-147-149.mp3",
+          "trim_start_seconds": 32.004917,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-150-152.mp3",
+          "trim_end_seconds": 10.400875,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-150-152.mp3",
+          "trim_start_seconds": 11.015458,
+          "trim_end_seconds": 27.961333,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-150-152.mp3",
+          "trim_start_seconds": 28.799917,
+          "pause_after_ms": 700
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-153-155.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 16.447458
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-153-155.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 17.211583,
+          "trim_end_seconds": 26.828917
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-153-155.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 27.592708
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-156-158.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 12.283042
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-156-158.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 12.89775,
+          "trim_end_seconds": 27.40075
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-156-158.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 28.304708
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-159-161.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 18.121
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-159-161.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 18.768833,
+          "trim_end_seconds": 29.99075
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-159-161.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 30.716708
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-162-164.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 10.879333
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-162-164.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 11.943417,
+          "trim_end_seconds": 27.209667
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-162-164.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 28.408458
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-165-167.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 18.2735
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-165-167.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 19.500125,
+          "trim_end_seconds": 31.296042
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-165-167.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 32.484333
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-168-170.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 10.963833
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-168-170.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 11.679083,
+          "trim_end_seconds": 27.03625
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-168-170.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 28.000167
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-171-173.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 16.592375
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-171-173.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 17.513833,
+          "trim_end_seconds": 29.009042
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-171-173.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 30.026792
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-174-175-instruction.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 14.605333
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-174-175-instruction.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 15.487542,
+          "trim_end_seconds": 35.402958
+        },
+        {
+          "path": "work/clips/vocabulary-cards-turns-174-175-instruction.mp3",
+          "pause_after_ms": 8000,
+          "trim_start_seconds": 36.698167
+        }
+      ]
+    }
+  ],
+  "copies": []
+}

@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-22",
+  "generator": "Arena.ai generate_speech",
+  "batch": "012",
+  "sections": [
+    "pron-sound-symbols",
+    "pron-voice-air"
+  ],
+  "source_turn_count": 12,
+  "temporary_clips": 10,
+  "clips": [
+    {
+      "clip": "work/clips/pron-sound-symbols-turn-097.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-097"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "این بخش، آموزش تکمیلیِ تلفظ هست و به آوانویسیِ چاپ‌شدهٔ کتاب نسبت داده نمی‌شه. نمونه‌ها با یک فرهنگ تلفظِ آمریکایی کنترل شده‌اند؛ لهجه‌های معتبر ممکن هست تفاوت داشته باشن. هدف، فهم‌پذیری و تمایزِ معنی هست، نه حذف هویت گوینده.",
+      "bytes": 83661,
+      "sha256": "fd3236c9640f24b49bfecfd1528b8a17242d737bdf49f1b5fb4832899ba9ec7c"
+    },
+    {
+      "clip": "work/clips/pron-sound-symbols-turn-098.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-098"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "برای یادگرفتن یک واژه، چهار چیز رو به هم وصل می‌کنم: معنی در جمله، شکل نوشتاری، ترتیب صداها و تکیه. اگر book رو حرف‌به‌حرف درست بنویسم، هنوز نشان نداده‌ام که آن رو در گفتار هم درست می‌سازم.",
+      "bytes": 80109,
+      "sha256": "df1fd395f4854e57746e88786316467eefba23a948c130490f11b0c467b9bebf"
+    },
+    {
+      "clip": "work/clips/pron-sound-symbols-turns-099-100.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-099",
+        "prospect3-lesson-01-turn-100"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "حرف، نشانهٔ نوشتاری هست؛ واج، صدایی هست که می‌تواند معنی رو عوض کند. در ship چهار حرف داریم، اما sh یک صدای /ʃ/ می‌ده و واژه سه واج دارد. نامِ حرف s و صدای آغازِ ship یک چیز نیستن.\n\nدر آوانگاری، دو خطِ مورب مانند /ɪ/ مرزِ نمادِ صدا رو نشان می‌دهند. برای شروع، هر نماد رو با یک واژهٔ لنگر بشناسید: /ɪ/ در sit ، /iː/ در seat و /ə/ در هجای آغازِ about . نماد رو نامِ حرف انگلیسی نخوانید.",
+      "bytes": 170061,
+      "sha256": "2ea527391cd7d6a3547c3446de739bbf3e56cb3236e79bd3121a724325f43011"
+    },
+    {
+      "clip": "work/clips/pron-sound-symbols-turn-101.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-101"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "پس لازم نیست در اولین روز همهٔ نمادها رو حفظ کنم. وقتی sit و seat رو مقایسه می‌کنم، به تفاوتِ صدای میانی توجه می‌کنم و با عوض‌کردن آن، دو واژهٔ متفاوت می‌سازم؛ کشیدنِ بی‌هدفِ هر صدایی روش مناسبی نیست.",
+      "bytes": 75693,
+      "sha256": "4a2fce19552b18b5f3eca6daa3dd499c57ae5bd34caf865ca2f3f0e8a61b105b"
+    },
+    {
+      "clip": "work/clips/pron-sound-symbols-turns-102-103.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-102",
+        "prospect3-lesson-01-turn-103"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "همهٔ نسبت‌های املا و صدا، یک‌به‌یک نیستن. ph در phone صدای /f/ دارد، ch در chair صدای /tʃ/ می‌ده، اما در school همان دو حرف با /k/ خوانده می‌شن. الگوی پرتکرار کمک می‌کند؛ قانونِ بی‌استثنا نمی‌سازد.\n\nدر make ، حرف پایانیِ e صدای جدا ندارد و به الگوی واژه کمک می‌کند؛ از این مثال نتیجه نگیرید هر e پایانی همیشه ساکت هست یا هر واژه همین الگو رو دارد. واژه رو همراه خانواده و تلفظِ خودش یاد بگیرید. در write نیز w آغازین خوانده نمی‌شه.",
+      "bytes": 178413,
+      "sha256": "c83213569218018018305a682b350ca893a4548ae1a0692dc922f288fcb64281"
+    },
+    {
+      "clip": "work/clips/pron-voice-air-turn-104.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-104"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "برای تشخیصِ واک‌داری، دو انگشت رو آرام روی جلوی گلو بذارین و /s/ و سپس /z/ رو بسازید و هر صدا رو کمی ادامه دهید. در صدای /z/ لرزشِ تارهای صوتی رو حس می‌کنین؛ در /s/ جریانِ هوا بدون همان لرزش ادامه دارد. فشار ندهید و صدا رو فریاد نزنید.",
+      "bytes": 111021,
+      "sha256": "f0e66d3e7054058f9de60744a60411fcc314eda8690671ad048d4d6bbcdbd1ad"
+    },
+    {
+      "clip": "work/clips/pron-voice-air-turn-105.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-105"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "جای زبان در این دو صدا نزدیک هست، اما وضعیتِ لرزش فرق دارد. پس «بی‌واک» به معنیِ آهسته و «واک‌دار» به معنیِ بلند نیست؛ می‌تونم یک صدا رو آرام بگویم و همچنان واک‌دار باشه.",
+      "bytes": 62733,
+      "sha256": "a331aa3772af415d93893a55ddc1ecb50d52f7a043b993c859944ab3881c24f6"
+    },
+    {
+      "clip": "work/clips/pron-voice-air-turn-106.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-106"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "جفت‌های مهمِ بی‌واک و واک‌دار شامل /p, b/ ، /t, d/ ، /k, ɡ/ ، /f, v/ و /s, z/ هستن. در جفتِ اول لب‌ها بسته و باز می‌شن؛ در جفتِ چهارم، لبِ پایین نزدیک دندان‌های بالاست و هوا با اصطکاک عبور می‌کند.",
+      "bytes": 110733,
+      "sha256": "ee3c40640fe7a6165fc5cfbd4096124a048d25d411f11d80b6da7b4cdceb34b2"
+    },
+    {
+      "clip": "work/clips/pron-voice-air-turn-107.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-107"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "برای /ʃ/ مانند آغازِ ship ، مسیرِ هوا رو پشتِ ناحیهٔ لثه باریک می‌کنیم؛ /ʒ/ در میانهٔ usually هم‌خانوادهٔ واک‌دار آن هست. /tʃ/ در chair و /dʒ/ در آغازِ generous با یک بستِ کوتاه آغاز و با اصطکاک رها می‌شن؛ آن‌ها رو با /ʃ/ یکی نگیرید.",
+      "bytes": 95181,
+      "sha256": "d969e0522998f9b7c4fea9cedcc0e489b115a13effe9742dc60c27e700a415dd"
+    },
+    {
+      "clip": "work/clips/pron-voice-air-turn-108.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-108"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "می‌تونم اول فقط یک جفت رو تمرین کنم: جای لب و زبان رو نگه دارم و لرزش رو تغییر بدهم. بعد آن رو به واژه و جمله منتقل کنم؛ از خواندنِ فهرستِ نمادها به تنهایی مهارتِ گفتن به دست نمیاد.",
+      "bytes": 67629,
+      "sha256": "b17ee62dd9a7cc0863b3a444d4b9fbda55f9b1ad4736a1f777cb345a74add023"
+    }
+  ],
+  "assembly_manifest": "work/batch-012.json",
+  "quality_review": "work/batch-012-quality-review.json",
+  "assembly_note": "The 099+100 and 102+103 same-voice pairs are split at measured silence boundaries and restored to source order. All turn pauses are 700 ms."
+}

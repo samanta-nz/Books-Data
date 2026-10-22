@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-22",
+  "requested_by": "user",
+  "source_turn": "prospect3-lesson-01-turn-035",
+  "old_spoken": "دوستی رو تصور کنین که وقتی درس رو نمی‌فهمید کمک می‌کند و هنگام انتظار عصبانی نمی‌شه.",
+  "new_spoken": "دوستی رو تصور کنین که وقتی درس رو نمی‌فهمم کمک می‌کنه و هنگام انتظار عصبانی نمی‌شه.",
+  "old_visible": "دوستی را تصور کنید که وقتی درس را نمی‌فهمید کمک می‌کند و هنگام انتظار عصبانی نمی‌شود.",
+  "new_visible": "دوستی را تصور کنید که وقتی درس را نمی‌فهمم کمک می‌کند و هنگام انتظار عصبانی نمی‌شود.",
+  "changed_files": {
+    "prospect3-lesson-01.html": {
+      "spoken_replacements": 0,
+      "visible_replacements": 1
+    },
+    "prospect3-lesson-01-tts.md": {
+      "spoken_replacements": 1,
+      "visible_replacements": 0
+    },
+    "prospect3-lesson-01-section-plan.json": {
+      "spoken_replacements": 1,
+      "visible_replacements": 1
+    },
+    "audio-bindings.json": {
+      "spoken_replacements": 1,
+      "visible_replacements": 1
+    },
+    "tts/prospect3-lesson-01/prospect3-lesson-01--start--8e15072791.md": {
+      "spoken_replacements": 1,
+      "visible_replacements": 0
+    }
+  },
+  "compatibility_note": "Existing section IDs and audio filenames are retained so the prepared HTML mappings remain valid."
+}

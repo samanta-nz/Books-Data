@@ -1,0 +1,34 @@
+{
+  "batch": "004-prerequisites-and-meaning",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-01--prerequisites--945a31c464.weba",
+      "inputs": [
+        {"path": "work/clips/prerequisites-turn-039.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/prerequisites-turn-040.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/prerequisites-turns-041-042-043.mp3", "trim_end_seconds": 12.421792, "pause_after_ms": 700},
+        {"path": "work/clips/prerequisites-turns-041-042-043.mp3", "trim_start_seconds": 13.46575, "trim_end_seconds": 35.568583, "pause_after_ms": 700},
+        {"path": "work/clips/prerequisites-turns-041-042-043.mp3", "trim_start_seconds": 36.928625, "pause_after_ms": 700},
+        {"path": "work/clips/prerequisites-turn-044.mp3", "pause_after_ms": 700}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--meaning--4024d22453.weba",
+      "inputs": [
+        {"path": "work/clips/meaning-turn-048-full.mp3", "trim_end_seconds": 13.918833, "pause_after_ms": 8000},
+        {"path": "work/clips/meaning-turn-048-full.mp3", "trim_start_seconds": 14.964667, "trim_end_seconds": 24.147958, "pause_after_ms": 8000},
+        {"path": "work/clips/meaning-turn-048-full.mp3", "trim_start_seconds": 24.952583, "trim_end_seconds": 40.837167, "pause_after_ms": 8000},
+        {"path": "work/clips/meaning-turn-048-full.mp3", "trim_start_seconds": 41.546458, "trim_end_seconds": 50.871, "pause_after_ms": 8000},
+        {"path": "work/clips/meaning-turn-048-full.mp3", "trim_start_seconds": 51.71075, "pause_after_ms": 700},
+        {"path": "work/clips/meaning-turn-049-full.mp3", "trim_end_seconds": 10.201375, "pause_after_ms": 8000},
+        {"path": "work/clips/meaning-turn-049-full.mp3", "trim_start_seconds": 11.217333, "pause_after_ms": 700},
+        {"path": "work/clips/meaning-turn-050.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/meaning-turn-051.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/meaning-turn-052.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/meaning-turn-053.mp3", "pause_after_ms": 700}
+      ]
+    }
+  ],
+  "copies": []
+}

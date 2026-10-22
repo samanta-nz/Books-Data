@@ -1,0 +1,23 @@
+{
+  "batch": "017",
+  "status": "all_three_regenerated_clips_accepted",
+  "metrics": {
+    "listening-turn-243.mp3": {
+      "speech_seconds": 22.22,
+      "characters_per_speech_second": 8.24,
+      "status": "accepted"
+    },
+    "listening-instruction-1.mp3": {
+      "speech_seconds": 11.579,
+      "characters_per_speech_second": 9.33,
+      "status": "accepted"
+    },
+    "listening-turn-247.mp3": {
+      "speech_seconds": 7.934,
+      "characters_per_speech_second": 9.83,
+      "status": "accepted"
+    }
+  },
+  "raw_analysis": "work/batch-017-audio-analysis.json",
+  "comparison": "The three separate clips total 45.65 seconds; the rejected combined clip was 29.86 seconds and was not used."
+}

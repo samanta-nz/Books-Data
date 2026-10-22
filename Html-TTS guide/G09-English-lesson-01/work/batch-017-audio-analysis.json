@@ -1,0 +1,53 @@
+{
+  "listening-turn-243.mp3": {
+    "duration": 23.81,
+    "mean_volume_db": -19.8,
+    "max_volume_db": -2.0,
+    "silences": [
+      {
+        "start": 3.963458,
+        "end": 4.3825,
+        "duration": 0.419042
+      },
+      {
+        "start": 11.881833,
+        "end": 12.556042,
+        "duration": 0.674208
+      },
+      {
+        "start": 16.410125,
+        "end": 16.907,
+        "duration": 0.496875
+      }
+    ]
+  },
+  "listening-instruction-1.mp3": {
+    "duration": 12.7,
+    "mean_volume_db": -19.1,
+    "max_volume_db": -3.4,
+    "silences": [
+      {
+        "start": 5.994375,
+        "end": 6.652125,
+        "duration": 0.65775
+      },
+      {
+        "start": 12.176833,
+        "end": 12.64,
+        "duration": 0.463167
+      }
+    ]
+  },
+  "listening-turn-247.mp3": {
+    "duration": 9.14,
+    "mean_volume_db": -20.2,
+    "max_volume_db": -3.7,
+    "silences": [
+      {
+        "start": 1.554292,
+        "end": 2.760167,
+        "duration": 1.205875
+      }
+    ]
+  }
+}

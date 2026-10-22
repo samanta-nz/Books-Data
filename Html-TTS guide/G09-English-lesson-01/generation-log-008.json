@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-22",
+  "generator": "Arena.ai generate_speech",
+  "batch": "008",
+  "sections": [
+    "questions",
+    "melody",
+    "examples-04"
+  ],
+  "clips": [
+    {
+      "clip": "work/clips/questions-turn-067.mp3",
+      "source_turn": "prospect3-lesson-01-turn-067",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "be به ابتدای سؤال می‌رود — پیکان، جایگاه is رو از میانهٔ جملهٔ خبری به آغاز سؤال نشان می‌ده. شکل تألیفیِ مکمل",
+      "bytes": 38733,
+      "sha256": "63934dab56edbe59b105ba883a0798ecf472e37745d1b9de5f127059b326450d"
+    },
+    {
+      "clip": "work/clips/questions-turn-068-full.mp3",
+      "source_turn": "prospect3-lesson-01-turn-068",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در پاسخ به Are you hard-working? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید. ، از دیدِ پاسخ‌دهنده ضمیر تغییر می‌کند: Yes, I am. سؤال دربارهٔ «تو» هست، اما خودم از «من» حرف می‌زنم. اگر دو نفر پاسخ بدهند، می‌تونن بگویند Yes, we are.",
+      "bytes": 98541,
+      "sha256": "dec9d82cf16d6ac0b7def634f401beca59f71af7d0add30a685db1f7563ef1a5"
+    },
+    {
+      "clip": "work/clips/questions-turn-069.mp3",
+      "source_turn": "prospect3-lesson-01-turn-069",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "پاسخ کوتاه، فعل رو نگه می‌دارد — دو شاخهٔ مثبت و منفی به یک پرسش پاسخ می‌دهند؛ she و is در پاسخ کوتاه حفظ شده‌اند. شکل تألیفیِ مکمل",
+      "bytes": 61389,
+      "sha256": "6f77d2070a44661823cd1e324892c04e6d31824a1d6b936f2e2b36d8baae7de1"
+    },
+    {
+      "clip": "work/clips/melody-turn-077.mp3",
+      "source_turn": "prospect3-lesson-01-turn-077",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در الگوی خنثیِ جمله‌های خبریِ این درس، آهنگِ انتهای جمله معمولاً افتان هست؛ مانند He is very kind. این افت به تمام‌شدنِ خبر کمک می‌کند. بلندیِ صدا و زیر و بمی رو با هم یکی ندانید؛ افتان یعنی مسیرِ زیر و بمی پایین میاد.",
+      "bytes": 82893,
+      "sha256": "d590bef99e5042fe6644463ea6647c52e41875ce4e549cc6f5bb8dbffd772773"
+    },
+    {
+      "clip": "work/clips/melody-turn-078.mp3",
+      "source_turn": "prospect3-lesson-01-turn-078",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "ابتدا جمله رو با معنی می‌خوانم و سپس مدلِ معتبر رو می‌شنوم. اگر هر واژه رو جدا و با مکثِ بی‌دلیل بگویم، پیوستگی جمله کم می‌شه. عبارتِ very kind رو در بافتِ جمله تمرین می‌کنم، نه فقط با نام‌بردنِ حروف.",
+      "bytes": 84909,
+      "sha256": "cab5ddca6e9a2ad2230bc8bdfc12ff8ff7f490ffac99fe92842d8a704dc08e36"
+    },
+    {
+      "clip": "work/clips/melody-turn-079.mp3",
+      "source_turn": "prospect3-lesson-01-turn-079",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "افتِ آهنگ در جملهٔ خبریِ خنثی — خط از چپ به راست پایین میاد؛ این نمونه آهنگِ جملهٔ خبریِ خنثی هست، نه قانون تمام بافت‌های گفتار. شکل تألیفیِ مکمل",
+      "bytes": 70701,
+      "sha256": "ae4c21a07df07bb4f7b547ae7538250badd68f715ca9f62567ddaa190d1cbaff"
+    },
+    {
+      "clip": "work/clips/melody-turn-080.mp3",
+      "source_turn": "prospect3-lesson-01-turn-080",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "این راهنما برای جمله‌های خنثیِ تمرین هست؛ آهنگ واقعی به قصد، تأکید و موقعیت هم بستگی دارد. بعد از شنیدن، یک بار تقلید کنین، واژهٔ مهم رو تشخیص دهید و با عوض‌کردنِ صفت، جملهٔ تازه‌ای با همان الگو بسازید.",
+      "bytes": 86829,
+      "sha256": "1c2092482198476f90d66d977dd18db9f321aa25c83401501c6ef78ab0a67c2d"
+    },
+    {
+      "clip": "work/clips/melody-turn-081.mp3",
+      "source_turn": "prospect3-lesson-01-turn-081",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "برای خودکنترلی، یک بار جمله رو می‌گویم و سپس با الگو مقایسه می‌کنم؛ تکیه، پایانِ واژه‌ها و افتِ پایانِ جمله رو جداگانه بررسی می‌کنم. درست‌بودنِ متنِ نوشته‌شده به‌تنهایی نشان نمی‌ده که آهنگِ آن رو هم درست اجرا کرده‌ام.",
+      "bytes": 82413,
+      "sha256": "62925b0a27c333ecbadee989ea2dc2881daa9543e9ed89a8efb849c05328cfe9"
+    },
+    {
+      "clip": "work/clips/examples-04-turn-190.mp3",
+      "source_turn": "prospect3-lesson-01-turn-190",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "صورت مثال: در My brother’s friends blank patient. فعل مناسب رو پیدا کنین. اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 57069,
+      "sha256": "be7a9fb3092be1a848d793fd8b759712e26cbe776f60b33ba936f709823dac85"
+    }
+  ],
+  "reused_question_clips": [
+    {
+      "clip": "work/clips/questions-turn-065-full.mp3",
+      "source_turn": "prospect3-lesson-01-turn-065",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در جملهٔ She is patient. ، برای پرسشِ بله/خیر، is رو پیش از فاعل می‌آوریم: Is she patient? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید. برای They are neat. می‌پرسیم Are they neat? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید. ؛ ساخت، فعلِ be و سپس فاعل و ادامهٔ جمله هست.",
+      "bytes": 119949,
+      "sha256": "42ed772099af407b5a59cd2b971077b8ac45945e42de4226e24b82e9ee42ad0e"
+    },
+    {
+      "clip": "work/clips/questions-turn-066-full.mp3",
+      "source_turn": "prospect3-lesson-01-turn-066",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "پاسخِ کوتاه باید به همان فاعل و فعل برگردد. برای Is Reza helpful? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید. می‌تونم بگویم Yes, he is. یا No, he is not. ؛ و برای Are your friends brave? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید. ، پاسخ Yes, they are. مناسب هست.",
+      "bytes": 238509,
+      "sha256": "b55c8da489c61e1d41f4a4a2c1b677dd072cdf76dc90f93d8738dd6844841fa2"
+    },
+    {
+      "clip": "work/clips/questions-turn-070-full.mp3",
+      "source_turn": "prospect3-lesson-01-turn-070",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "برای سؤالِ دارای be ، do رو اضافه نمی‌کنم. Do you are neat? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید. الگوی این درس رو نقض می‌کند؛ شکل مناسب Are you neat? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید. هست. اگر فعلِ دیگری داشته باشیم، ساختِ آن رو جداگانه در درس مربوط یاد می‌گیریم.",
+      "bytes": 159693,
+      "sha256": "1a8c197beae7d4e398f0ba5267acac0e1c634cf035bf97eb0e32a691a0fb8f23"
+    },
+    {
+      "clip": "work/clips/questions-turn-071-full.mp3",
+      "source_turn": "prospect3-lesson-01-turn-071",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "از Who is brave? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید. برای شناسایی شخص استفاده می‌کنیم؛ پاسخ می‌تواند نام باشه: Mina is. یا جملهٔ کامل Mina is brave. . این رو با Is Mina brave? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید. مقایسه کنین: در اولی نام رو می‌خوایم، در دومی درستیِ یک ویژگی رو می‌پرسیم.",
+      "bytes": 171309,
+      "sha256": "d4dcf20df98b3e3e3787a551ea28b5da688604ceca229ce3562c6300b2a89fb6"
+    }
+  ],
+  "assembly_manifest": "work/batch-008.json",
+  "quality_review": "work/batch-008-quality-review.json",
+  "questions_long_pause_count": 10,
+  "questions_pause_note": "Two internal pauses and the trailing pause of turn 065; two internal pauses each in turns 066, 070 and 071; one internal pause in turn 068. Unusually long generated silences in turn 066 were removed before the prescribed pauses were added.",
+  "rejected_not_embedded": [
+    "work/clips/examples-03-turn-186.mp3 — regenerate turn 186 in the next generation batch."
+  ]
+}

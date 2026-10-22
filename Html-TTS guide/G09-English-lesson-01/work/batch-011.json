@@ -1,0 +1,40 @@
+{
+  "batch": "011-speak-pron-card-guide-and-reading",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-01--speak--c70d53ab65.weba",
+      "inputs": [
+        {"path": "work/clips/speak-turn-082-full.mp3", "trim_end_seconds": 17.949708, "pause_after_ms": 8000},
+        {"path": "work/clips/speak-turn-082-full.mp3", "trim_start_seconds": 18.520625, "trim_end_seconds": 27.584167, "pause_after_ms": 8000},
+        {"path": "work/clips/speak-turn-082-full.mp3", "trim_start_seconds": 28.055375, "pause_after_ms": 700},
+        {"path": "work/clips/speak-turn-083.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/speak-turn-084.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/speak-turn-085.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/speak-turn-086-a.mp3", "pause_after_ms": 8000},
+        {"path": "work/clips/speak-turn-086-b.mp3", "pause_after_ms": 8000},
+        {"path": "work/clips/speak-turn-086-c.mp3", "pause_after_ms": 700}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--pron-card-guide--97fa3cea0d.weba",
+      "inputs": [
+        {"path": "work/clips/pron-card-guide-turn-092.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/pron-card-guide-turn-093.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/pron-card-guide-turn-094.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/pron-card-guide-turn-095.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/pron-card-guide-turn-096.mp3", "pause_after_ms": 700}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--reading--165474c2fd.weba",
+      "inputs": [
+        {"path": "work/clips/reading-a-212-213.mp3", "trim_end_seconds": 11.217958, "pause_after_ms": 700},
+        {"path": "work/clips/reading-a-212-213.mp3", "trim_start_seconds": 11.692333, "pause_after_ms": 700},
+        {"path": "work/clips/reading-a-214-instruction.mp3", "trim_end_seconds": 31.588, "pause_after_ms": 700},
+        {"path": "work/clips/reading-a-214-instruction.mp3", "trim_start_seconds": 32.557917, "pause_after_ms": 8000}
+      ]
+    }
+  ],
+  "copies": []
+}

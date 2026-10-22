@@ -1,0 +1,435 @@
+{
+  "questions-turn-065-full.mp3": {
+    "duration": 29.93,
+    "mean_volume_db": -19.7,
+    "max_volume_db": -1.7,
+    "silences": [
+      {
+        "start": 5.485125,
+        "end": 6.281625,
+        "duration": 0.7965
+      },
+      {
+        "start": 7.283792,
+        "end": 8.099042,
+        "duration": 0.81525
+      },
+      {
+        "start": 13.546792,
+        "end": 14.248917,
+        "duration": 0.702125
+      },
+      {
+        "start": 16.788375,
+        "end": 17.524375,
+        "duration": 0.736
+      },
+      {
+        "start": 18.346917,
+        "end": 19.0315,
+        "duration": 0.684583
+      },
+      {
+        "start": 24.437125,
+        "end": 25.245833,
+        "duration": 0.808708
+      }
+    ]
+  },
+  "questions-turn-066-full.mp3": {
+    "duration": 59.57,
+    "mean_volume_db": -22.8,
+    "max_volume_db": -1.6,
+    "silences": [
+      {
+        "start": 5.383458,
+        "end": 5.954958,
+        "duration": 0.5715
+      },
+      {
+        "start": 7.314208,
+        "end": 7.964583,
+        "duration": 0.650375
+      },
+      {
+        "start": 14.150333,
+        "end": 28.6275,
+        "duration": 14.477167
+      },
+      {
+        "start": 29.6275,
+        "end": 30.1345,
+        "duration": 0.507
+      },
+      {
+        "start": 32.082208,
+        "end": 32.606833,
+        "duration": 0.524625
+      },
+      {
+        "start": 33.994625,
+        "end": 41.204333,
+        "duration": 7.209708
+      },
+      {
+        "start": 41.911208,
+        "end": 42.6785,
+        "duration": 0.767292
+      },
+      {
+        "start": 44.144208,
+        "end": 45.044667,
+        "duration": 0.900458
+      },
+      {
+        "start": 51.074417,
+        "end": 59.52,
+        "duration": 8.445583
+      }
+    ]
+  },
+  "questions-turn-068-full.mp3": {
+    "duration": 24.58,
+    "mean_volume_db": -20.2,
+    "max_volume_db": -1.8,
+    "silences": [
+      {
+        "start": 1.160583,
+        "end": 1.619125,
+        "duration": 0.458542
+      },
+      {
+        "start": 2.753542,
+        "end": 3.437375,
+        "duration": 0.683833
+      },
+      {
+        "start": 9.153,
+        "end": 10.183958,
+        "duration": 1.030958
+      },
+      {
+        "start": 13.081375,
+        "end": 13.711292,
+        "duration": 0.629917
+      },
+      {
+        "start": 14.837917,
+        "end": 15.7165,
+        "duration": 0.878583
+      },
+      {
+        "start": 19.229042,
+        "end": 20.012625,
+        "duration": 0.783583
+      }
+    ]
+  },
+  "questions-turn-070-full.mp3": {
+    "duration": 39.86,
+    "mean_volume_db": -20.6,
+    "max_volume_db": -1.8,
+    "silences": [
+      {
+        "start": 4.369875,
+        "end": 5.166792,
+        "duration": 0.796917
+      },
+      {
+        "start": 6.180083,
+        "end": 7.19375,
+        "duration": 1.013667
+      },
+      {
+        "start": 9.342208,
+        "end": 9.848708,
+        "duration": 0.5065
+      },
+      {
+        "start": 13.739708,
+        "end": 16.557375,
+        "duration": 2.817667
+      },
+      {
+        "start": 18.788208,
+        "end": 19.278375,
+        "duration": 0.490167
+      },
+      {
+        "start": 20.163125,
+        "end": 21.003458,
+        "duration": 0.840333
+      },
+      {
+        "start": 21.808417,
+        "end": 22.82375,
+        "duration": 1.015333
+      },
+      {
+        "start": 24.977667,
+        "end": 25.508,
+        "duration": 0.530333
+      },
+      {
+        "start": 29.356042,
+        "end": 32.462292,
+        "duration": 3.10625
+      },
+      {
+        "start": 32.812417,
+        "end": 33.590583,
+        "duration": 0.778167
+      }
+    ]
+  },
+  "questions-turn-071-full.mp3": {
+    "duration": 42.77,
+    "mean_volume_db": -20.5,
+    "max_volume_db": -1.9,
+    "silences": [
+      {
+        "start": 1.28175,
+        "end": 2.448833,
+        "duration": 1.167083
+      },
+      {
+        "start": 4.681,
+        "end": 5.133875,
+        "duration": 0.452875
+      },
+      {
+        "start": 8.539333,
+        "end": 10.692375,
+        "duration": 2.153042
+      },
+      {
+        "start": 13.075125,
+        "end": 13.803458,
+        "duration": 0.728333
+      },
+      {
+        "start": 15.399083,
+        "end": 16.144375,
+        "duration": 0.745292
+      },
+      {
+        "start": 16.963458,
+        "end": 17.627542,
+        "duration": 0.664083
+      },
+      {
+        "start": 18.814208,
+        "end": 19.532625,
+        "duration": 0.718417
+      },
+      {
+        "start": 20.705625,
+        "end": 22.700125,
+        "duration": 1.9945
+      },
+      {
+        "start": 23.390625,
+        "end": 24.104917,
+        "duration": 0.714292
+      },
+      {
+        "start": 25.248958,
+        "end": 26.628792,
+        "duration": 1.379833
+      },
+      {
+        "start": 28.830167,
+        "end": 29.291708,
+        "duration": 0.461542
+      },
+      {
+        "start": 32.636167,
+        "end": 35.056708,
+        "duration": 2.420542
+      },
+      {
+        "start": 35.973292,
+        "end": 36.7525,
+        "duration": 0.779208
+      },
+      {
+        "start": 38.713,
+        "end": 39.386583,
+        "duration": 0.673583
+      }
+    ]
+  },
+  "questions-turn-067.mp3": {
+    "duration": 9.62,
+    "mean_volume_db": -19.5,
+    "max_volume_db": -4.0,
+    "silences": [
+      {
+        "start": 6.636708,
+        "end": 7.136333,
+        "duration": 0.499625
+      }
+    ]
+  },
+  "questions-turn-069.mp3": {
+    "duration": 15.29,
+    "mean_volume_db": -19.9,
+    "max_volume_db": -2.3,
+    "silences": [
+      {
+        "start": 0.0,
+        "end": 0.492417,
+        "duration": 0.492417
+      },
+      {
+        "start": 3.537958,
+        "end": 4.011083,
+        "duration": 0.473125
+      },
+      {
+        "start": 12.290208,
+        "end": 12.752333,
+        "duration": 0.462125
+      }
+    ]
+  },
+  "melody-turn-077.mp3": {
+    "duration": 20.66,
+    "mean_volume_db": -19.4,
+    "max_volume_db": -3.6,
+    "silences": [
+      {
+        "start": 9.418458,
+        "end": 10.138083,
+        "duration": 0.719625
+      }
+    ]
+  },
+  "melody-turn-078.mp3": {
+    "duration": 21.17,
+    "mean_volume_db": -19.4,
+    "max_volume_db": -2.2,
+    "silences": [
+      {
+        "start": 5.361083,
+        "end": 6.431458,
+        "duration": 1.070375
+      },
+      {
+        "start": 12.665375,
+        "end": 13.766708,
+        "duration": 1.101333
+      }
+    ]
+  },
+  "melody-turn-079.mp3": {
+    "duration": 17.62,
+    "mean_volume_db": -19.8,
+    "max_volume_db": -2.2,
+    "silences": [
+      {
+        "start": 3.554083,
+        "end": 4.613833,
+        "duration": 1.05975
+      },
+      {
+        "start": 7.270833,
+        "end": 8.087375,
+        "duration": 0.816542
+      },
+      {
+        "start": 14.254542,
+        "end": 15.120958,
+        "duration": 0.866417
+      },
+      {
+        "start": 17.045667,
+        "end": 17.56,
+        "duration": 0.514333
+      }
+    ]
+  },
+  "melody-turn-080.mp3": {
+    "duration": 21.65,
+    "mean_volume_db": -19.8,
+    "max_volume_db": -2.6,
+    "silences": [
+      {
+        "start": 3.909167,
+        "end": 4.549917,
+        "duration": 0.64075
+      },
+      {
+        "start": 9.866625,
+        "end": 10.954792,
+        "duration": 1.088167
+      },
+      {
+        "start": 13.440875,
+        "end": 14.220458,
+        "duration": 0.779583
+      }
+    ]
+  },
+  "melody-turn-081.mp3": {
+    "duration": 20.54,
+    "mean_volume_db": -19.2,
+    "max_volume_db": -2.1,
+    "silences": [
+      {
+        "start": 6.643583,
+        "end": 7.327625,
+        "duration": 0.684042
+      },
+      {
+        "start": 13.054542,
+        "end": 13.745208,
+        "duration": 0.690667
+      }
+    ]
+  },
+  "examples-03-turn-186.mp3": {
+    "duration": 10.78,
+    "mean_volume_db": -19.7,
+    "max_volume_db": -4.0,
+    "silences": [
+      {
+        "start": 3.239625,
+        "end": 4.21625,
+        "duration": 0.976625
+      },
+      {
+        "start": 5.736333,
+        "end": 6.226292,
+        "duration": 0.489958
+      },
+      {
+        "start": 6.8825,
+        "end": 7.334792,
+        "duration": 0.452292
+      }
+    ]
+  },
+  "examples-04-turn-190.mp3": {
+    "duration": 14.21,
+    "mean_volume_db": -19.7,
+    "max_volume_db": -3.7,
+    "silences": [
+      {
+        "start": 1.110792,
+        "end": 1.948833,
+        "duration": 0.838042
+      },
+      {
+        "start": 5.270542,
+        "end": 5.79025,
+        "duration": 0.519708
+      },
+      {
+        "start": 7.205458,
+        "end": 8.033458,
+        "duration": 0.828
+      }
+    ]
+  }
+}

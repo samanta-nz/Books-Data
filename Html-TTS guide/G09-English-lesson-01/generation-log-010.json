@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-22",
+  "generator": "Arena.ai generate_speech",
+  "batch": "010",
+  "sections": [
+    "errors-summary"
+  ],
+  "clips": [
+    {
+      "clip": "work/clips/errors-summary-turn-087.mp3",
+      "source_turn": "prospect3-lesson-01-turn-087",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "سه خطای کلیدی رو با راهِ تشخیص به خاطر بسپارید: حذفِ be رو با پیدا کردنِ فعلِ جمله بررسی کنین؛ ناهماهنگیِ is or are رو با ضمیرِ جایگزینِ فاعل پیدا کنین؛ و جاافتادنِ آپاستروف رو با بازکردنِ شکلِ کوتاه کنترل کنین.",
+      "bytes": 80109,
+      "sha256": "4a5cf45eaebbe8a58a137e1aaefdf729547269ddf71f9766cea9877276830b9a"
+    },
+    {
+      "clip": "work/clips/errors-summary-turn-088.mp3",
+      "source_turn": "prospect3-lesson-01-turn-088",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "اکنون می‌تونم برای یک شخص جملهٔ مثبت و منفی بسازم، دربارهٔ ویژگی او سؤال کنم و شکلِ کوتاه رو تشخیص دهم. اگر بخواهم وجود چیزها رو بگویم، به there is or there are می‌روم و تعداد رو جداگانه بررسی می‌کنم.",
+      "bytes": 76461,
+      "sha256": "f3f35d4d377793abfe242bfaa088116120997ccffb1349d1cf3efe38cf5618cf"
+    },
+    {
+      "clip": "work/clips/errors-summary-turn-089.mp3",
+      "source_turn": "prospect3-lesson-01-turn-089",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "از فاعل تازه به جملهٔ تازه — فاعلِ جمع رو به جای مفرد می‌گذاریم؛ تغییر معنا و تغییر is به are با هم کنترل می‌شن. شکل تألیفیِ مکمل",
+      "bytes": 58893,
+      "sha256": "81519fa72b8cd418bbd2ef20d93ac46ef023dc33695ba7e72ab417c9e381f931"
+    },
+    {
+      "clip": "work/clips/errors-summary-turn-090.mp3",
+      "source_turn": "prospect3-lesson-01-turn-090",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "چالشِ انتقال: یک دوستِ فرضی و کلاسِ او رو در چهار جمله معرفی کنین؛ یک صفت، یک منفی، یک جملهٔ وجودی و یک سؤال داشته باشید. پاسخِ متفاوت مجاز هست، اما هر جمله باید پیامِ روشن و ساختِ مناسب داشته باشه. دلیلِ انتخابِ فعل رو نیز توضیح دهید.",
+      "bytes": 97869,
+      "sha256": "f13fc5705cc3ec3d9d9e9020172eddc5083346ee742b6e78f5668b5d7abde24e"
+    },
+    {
+      "clip": "work/clips/errors-summary-turn-091.mp3",
+      "source_turn": "prospect3-lesson-01-turn-091",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "در مرورِ فردا، بدون نگاه سه جملهٔ تازه می‌سازم و یک خطای قبلی رو اصلاح می‌کنم. در درسِ سفر، همین am or is or are رو دوباره می‌بینم، اما همراهِ فعلِ دارای ing ؛ پس تشخیصِ صفت از فعل برایم مهم خواهد بود.",
+      "bytes": 86733,
+      "sha256": "f27a1dafb9f9a000fd065abce7c3014ba0f5001a055536feacd20cc574800bd8"
+    }
+  ],
+  "deferred_valid_speak_clips": [
+    {
+      "clip": "work/clips/speak-turn-082-full.mp3",
+      "source_turn": "prospect3-lesson-01-turn-082",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "برای گفت‌وگو، سه نقش دارین: سؤال‌کننده، پاسخ‌دهنده و ثبت‌کنندهٔ پاسخ. سؤال‌هایی مانند Are you brave? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید. و What is your father like? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید. رو با مخاطب واقعی مطرح کنین و پاسخ رو مطابق گفتهٔ او بنویسین؛ پاسخِ نمونه رو به جای اطلاعاتِ او قرار ندهید.",
+      "bytes": 152109,
+      "sha256": "08e46de45563b7791c26ed4d8cedc9dca7f2bceaee094bbf73b95df5dc1db6e8"
+    },
+    {
+      "clip": "work/clips/speak-turn-083.mp3",
+      "source_turn": "prospect3-lesson-01-turn-083",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "اگر دوستم بگوید I am a bit shy. ، در گزارشِ خودم می‌نویسم She is a bit shy. ؛ چون از گفتنِ «من» به توصیفِ او رفته‌ام، ضمیر و فعل هم تغییر می‌کنند. معنی و میزانِ ویژگی رو حفظ می‌کنم.",
+      "bytes": 62253,
+      "sha256": "270acc4a2d68884a866de7483fd2679ab6def51907a9e344fa138ec3f7b80965"
+    },
+    {
+      "clip": "work/clips/speak-turn-084.mp3",
+      "source_turn": "prospect3-lesson-01-turn-084",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "وجود یک کتاب یا دو کتاب — کتاب‌ها رو بشمارید و آن‌ها رو با a book و two books و سپس is و are تطبیق دهید. شکل تألیفیِ مکمل",
+      "bytes": 53709,
+      "sha256": "8a75ed8c23ff8347ad0f6a4fc4db6265249dccb7c3f675ae9586e102740cf249"
+    },
+    {
+      "clip": "work/clips/speak-turn-085.mp3",
+      "source_turn": "prospect3-lesson-01-turn-085",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "یک گفت‌وگوی تازه بسازید: از نامِ دوست آغاز کنین، دربارهٔ ویژگی بپرسید، یک سؤالِ بله/خیر اضافه کنین و برای پاسخ یک رفتارِ مثال‌زدنی بیاورید. مثلاً کمک‌کردن در کارِ گروهی، توضیحِ معناداری برای helpful هست؛ تأییدِ خالی، گفت‌وگو رو جلو نمی‌برد.",
+      "bytes": 89901,
+      "sha256": "9fe8b0e8818682f6a5cd51606915a87113e60ecd960ce4b6f768ef03a2f7805a"
+    }
+  ],
+  "deferred_speak_assembly_plan": {
+    "turn_082_segments": [
+      {
+        "trim_end_seconds": 17.949708,
+        "pause_after_ms": 8000
+      },
+      {
+        "trim_start_seconds": 18.520625,
+        "trim_end_seconds": 27.584167,
+        "pause_after_ms": 8000
+      },
+      {
+        "trim_start_seconds": 28.055375,
+        "pause_after_ms": 700
+      }
+    ],
+    "turns_083_084_085_pause_after_ms": 700,
+    "turn_086_next_generation": "Generate three separate segments; place 8000 ms after segments one and two and 700 ms after segment three."
+  },
+  "assembly_manifest": "work/batch-010.json",
+  "quality_review": "work/batch-010-quality-review.json",
+  "rejected_not_embedded": [
+    "work/clips/speak-turn-086-full.mp3 — regenerate as three separate segments in batch 011."
+  ]
+}

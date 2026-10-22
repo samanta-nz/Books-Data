@@ -1,0 +1,30 @@
+{
+  "batch": "008",
+  "accepted_new_clips": [
+    "questions-turn-067.mp3",
+    "questions-turn-068-full.mp3",
+    "questions-turn-069.mp3",
+    "melody-turn-077.mp3",
+    "melody-turn-078.mp3",
+    "melody-turn-079.mp3",
+    "melody-turn-080.mp3",
+    "melody-turn-081.mp3",
+    "examples-04-turn-190.mp3"
+  ],
+  "rejected": [
+    {
+      "file": "work/clips/examples-03-turn-186.mp3",
+      "sha256": "9a1db56732ae81b3c277ac909b60e49202f29d15efb1639ed328b08348640c02",
+      "duration_seconds": 10.78,
+      "estimated_non_whitespace_characters_per_speech_second": 15.8,
+      "comparable_practice_clips": {
+        "turn-178": 9.15,
+        "turn-182": 9.26,
+        "turn-190": 9.9
+      },
+      "status": "rejected_not_embedded",
+      "reason": "Speech duration is incompatible with comparable complete practice turns; regenerate turn 186 separately in the next generation batch."
+    }
+  ],
+  "raw_analysis": "work/batch-008-audio-analysis.json"
+}

@@ -1,0 +1,10 @@
+{
+  "file": "audio/prospect3-lesson-01--source-grammar--ea324716c7.weba",
+  "expected_long_pauses": 3,
+  "detected_durations": [
+    8.005896,
+    8.006521,
+    8.011396
+  ],
+  "passed": true
+}

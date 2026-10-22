@@ -1,0 +1,342 @@
+{
+  "html": "prospect3-lesson-01.html",
+  "html_bytes": 41565931,
+  "html_sha256": "3413982a57ebed2c94e907691ae9f1566ab6aea512e74675862ac4a935bfd0c4",
+  "mime": "audio/webm",
+  "base64_verified": true,
+  "autoplay": false,
+  "preload": "none",
+  "embedded_count": 41,
+  "pending_count": 0,
+  "embedded": [
+    {
+      "section_id": "goals",
+      "audio_file": "prospect3-lesson-01--goals--dd1564f58c.weba",
+      "bytes": 323612,
+      "sha256": "c513e000bb96ebe46efb41abc083bab866fbc97636dd0568f8919ef81cde101e",
+      "base64_verified": true,
+      "duration_seconds": 57.55
+    },
+    {
+      "section_id": "bridge-word-roles",
+      "audio_file": "prospect3-lesson-01--bridge-word-roles--9a8940e02f.weba",
+      "bytes": 609142,
+      "sha256": "86362b23043b2b44b5a071d862ffc5df652cffdb2f975ccbe27135f53c03ab8a",
+      "base64_verified": true,
+      "duration_seconds": 106.03
+    },
+    {
+      "section_id": "bridge-subject-pronouns",
+      "audio_file": "prospect3-lesson-01--bridge-subject-pronouns--2bc3806e4b.weba",
+      "bytes": 707082,
+      "sha256": "3dab5a5fcc0acfdac6100076641b0523556f7d17a3c7d9e330b4aba493d0c4fd",
+      "base64_verified": true,
+      "duration_seconds": 118.92
+    },
+    {
+      "section_id": "bridge-be-present",
+      "audio_file": "prospect3-lesson-01--bridge-be-present--3359cd3edd.weba",
+      "bytes": 925677,
+      "sha256": "52d8143e5e441cb4ae9b6549601f67382bec6ea4ba9e7d4c431fa8b2f4564005",
+      "base64_verified": true,
+      "duration_seconds": 172.43
+    },
+    {
+      "section_id": "bridge-number-articles",
+      "audio_file": "prospect3-lesson-01--bridge-number-articles--c153ac6131.weba",
+      "bytes": 723981,
+      "sha256": "30cd61e35b98507efca62e95aae3b83532317f9e9baac69ce07fada18110bf9d",
+      "base64_verified": true,
+      "duration_seconds": 124.71
+    },
+    {
+      "section_id": "local-prerequisite-check",
+      "audio_file": "prospect3-lesson-01--local-prerequisite-check--8720de7b05.weba",
+      "bytes": 99347,
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0",
+      "base64_verified": true,
+      "duration_seconds": 19.97
+    },
+    {
+      "section_id": "start",
+      "audio_file": "prospect3-lesson-01--start--8e15072791.weba",
+      "bytes": 493995,
+      "sha256": "08f31a4bbc3d9e82ecae9c690347fead69a5847ec802c4ed9a854ebfef8acb3d",
+      "base64_verified": true,
+      "duration_seconds": 79.41
+    },
+    {
+      "section_id": "prerequisites",
+      "audio_file": "prospect3-lesson-01--prerequisites--945a31c464.weba",
+      "bytes": 671251,
+      "sha256": "3f0eac653eaa5e8dfe30d9f4ac402e6ce1bd75577709935cec536660f173d1bb",
+      "base64_verified": true,
+      "duration_seconds": 108.48
+    },
+    {
+      "section_id": "entry",
+      "audio_file": "prospect3-lesson-01--entry--8720de7b05.weba",
+      "bytes": 99347,
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0",
+      "base64_verified": true,
+      "duration_seconds": 19.97
+    },
+    {
+      "section_id": "source-conversation",
+      "audio_file": "prospect3-lesson-01--source-conversation--8feb99fb44.weba",
+      "bytes": 1596639,
+      "sha256": "6d5538d2b6178426cc8da9a9a80a0e75e070dfade66cdcd36490a0c2a8fe022c",
+      "base64_verified": true,
+      "duration_seconds": 299.24
+    },
+    {
+      "section_id": "meaning",
+      "audio_file": "prospect3-lesson-01--meaning--4024d22453.weba",
+      "bytes": 1090086,
+      "sha256": "202621c7f061655a948a14f522c04172c6e455345a2be2b063a8c9a33364de1e",
+      "base64_verified": true,
+      "duration_seconds": 195.99
+    },
+    {
+      "section_id": "be-positive",
+      "audio_file": "prospect3-lesson-01--be-positive--b9d68d2bac.weba",
+      "bytes": 786218,
+      "sha256": "3a4593dbca619b62e39c53886ff363b49c692dfa02a96acedb326e357d79609e",
+      "base64_verified": true,
+      "duration_seconds": 132.45
+    },
+    {
+      "section_id": "negative",
+      "audio_file": "prospect3-lesson-01--negative--77984cab24.weba",
+      "bytes": 604091,
+      "sha256": "a813b0aca28a8c11f8fb8475e746eaba28f40b563e7363537ff6bd0954b9afc6",
+      "base64_verified": true,
+      "duration_seconds": 97.07
+    },
+    {
+      "section_id": "questions",
+      "audio_file": "prospect3-lesson-01--questions--213f8d64e5.weba",
+      "bytes": 1323990,
+      "sha256": "4e194a3cee0cf24aea9c8cb1d2332a916234b1a93d037177822ff6f4695fc397",
+      "base64_verified": true,
+      "duration_seconds": 262.28
+    },
+    {
+      "section_id": "contractions",
+      "audio_file": "prospect3-lesson-01--contractions--76f103d600.weba",
+      "bytes": 597570,
+      "sha256": "2095143db5230b16439af075f98fb27e6b0a42e76b8527b74f949a8de2737ce5",
+      "base64_verified": true,
+      "duration_seconds": 95.59
+    },
+    {
+      "section_id": "melody",
+      "audio_file": "prospect3-lesson-01--melody--700a4b392f.weba",
+      "bytes": 643823,
+      "sha256": "6e67b8699f2c91b3ffb1f16e6e51f59afec9db84c61a81d8a94e02cb457437b5",
+      "base64_verified": true,
+      "duration_seconds": 104.87
+    },
+    {
+      "section_id": "source-melody",
+      "audio_file": "prospect3-lesson-01--source-melody--5fd9277bb3.weba",
+      "bytes": 570601,
+      "sha256": "137682fcc6f5f6c04bf7730a4ec5eae574770510b8b097da65f908f88f4af5c2",
+      "base64_verified": true,
+      "duration_seconds": 95.14
+    },
+    {
+      "section_id": "speak",
+      "audio_file": "prospect3-lesson-01--speak--c70d53ab65.weba",
+      "bytes": 853472,
+      "sha256": "8e4904507e565cb2b09ba7193daddbbc3744284857fb9439c6a4ac5bab7a1967",
+      "base64_verified": true,
+      "duration_seconds": 155.31
+    },
+    {
+      "section_id": "errors-summary",
+      "audio_file": "prospect3-lesson-01--errors-summary--a7de6da265.weba",
+      "bytes": 635460,
+      "sha256": "ca89c7cfc0666b7bc8a7f9887d3facbe3073aa4b00ca0704ec5599bb645caf6c",
+      "base64_verified": true,
+      "duration_seconds": 102.95
+    },
+    {
+      "section_id": "pron-card-guide",
+      "audio_file": "prospect3-lesson-01--pron-card-guide--97fa3cea0d.weba",
+      "bytes": 624523,
+      "sha256": "a3225b6c5cc39d3110126872b7a26ffc9e5a8480de05395ce19d541bb401744b",
+      "base64_verified": true,
+      "duration_seconds": 100.99
+    },
+    {
+      "section_id": "pron-sound-symbols",
+      "audio_file": "prospect3-lesson-01--pron-sound-symbols--452db6d158.weba",
+      "bytes": 938762,
+      "sha256": "7fdfdc07281459d52bc1050ca78421fc1d5257156dd2149f55a3116996374c05",
+      "base64_verified": true,
+      "duration_seconds": 149.95
+    },
+    {
+      "section_id": "pron-voice-air",
+      "audio_file": "prospect3-lesson-01--pron-voice-air--84898121b8.weba",
+      "bytes": 740819,
+      "sha256": "376cefee6ac8048df5a451a66d876c71137361eb1988c03f59199049cfc856dd",
+      "base64_verified": true,
+      "duration_seconds": 114.75
+    },
+    {
+      "section_id": "pron-persian-consonants",
+      "audio_file": "prospect3-lesson-01--pron-persian-consonants--4bac00143c.weba",
+      "bytes": 1235302,
+      "sha256": "dde81457ed41e8c8ece3069988e28f18450497c35ac30cb1562dd0139ca85307",
+      "base64_verified": true,
+      "duration_seconds": 198.56
+    },
+    {
+      "section_id": "pron-syllables-stress",
+      "audio_file": "prospect3-lesson-01--pron-syllables-stress--b82ddc841f.weba",
+      "bytes": 906229,
+      "sha256": "1eb4b9deec728ed8a143941a691ce4ce29d34e779095effce3e124681618b53b",
+      "base64_verified": true,
+      "duration_seconds": 148.83
+    },
+    {
+      "section_id": "vocabulary-cards",
+      "audio_file": "prospect3-lesson-01--vocabulary-cards--d0a9ed4913.weba",
+      "bytes": 4857551,
+      "sha256": "d4b9fe8b04243ad27921561bc4be5d32c75bb09cb76147a5e2203ebcaaec4c27",
+      "base64_verified": true,
+      "duration_seconds": 801.72
+    },
+    {
+      "section_id": "official-pictures",
+      "audio_file": "prospect3-lesson-01--official-pictures--8720de7b05.weba",
+      "bytes": 99347,
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0",
+      "base64_verified": true,
+      "duration_seconds": 19.97
+    },
+    {
+      "section_id": "source-grammar",
+      "audio_file": "prospect3-lesson-01--source-grammar--ea324716c7.weba",
+      "bytes": 869078,
+      "sha256": "ef08354a8b73081f7fccbfa50298807bd26fb7df8da5e476431b43581d7e931d",
+      "base64_verified": true,
+      "duration_seconds": 157.33
+    },
+    {
+      "section_id": "examples",
+      "audio_file": "prospect3-lesson-01--examples--e9ad08c159.weba",
+      "bytes": 125620,
+      "sha256": "4586fcc8c8fb5472cda19ec5e981ecb1768bec2f81af7f0ba7ef277abab33a56",
+      "base64_verified": true,
+      "duration_seconds": 24.21
+    },
+    {
+      "section_id": "examples-02",
+      "audio_file": "prospect3-lesson-01--examples-02--13e9a978ff.weba",
+      "bytes": 122149,
+      "sha256": "74f223c89093514422c86ebb5e9f128399d762e22a63f79bd6ac177c84375576",
+      "base64_verified": true,
+      "duration_seconds": 23.05
+    },
+    {
+      "section_id": "examples-03",
+      "audio_file": "prospect3-lesson-01--examples-03--9d034f969c.weba",
+      "bytes": 110915,
+      "sha256": "3ce3a4b84c84015f08ef2792e833be2411e9018f1194f9fc79219c394c247426",
+      "base64_verified": true,
+      "duration_seconds": 22.21
+    },
+    {
+      "section_id": "examples-04",
+      "audio_file": "prospect3-lesson-01--examples-04--b28a359bd9.weba",
+      "bytes": 110332,
+      "sha256": "0151887838027c0cc429692856d7a1458ddcaeff035c7ee5620b0380fd58aaa3",
+      "base64_verified": true,
+      "duration_seconds": 22.17
+    },
+    {
+      "section_id": "examples-05",
+      "audio_file": "prospect3-lesson-01--examples-05--8ad70c275d.weba",
+      "bytes": 98685,
+      "sha256": "31dfb659803a432e4e9f5d333bf386e47d0542aed57b38600e23eb9fe563ccb4",
+      "base64_verified": true,
+      "duration_seconds": 19.85
+    },
+    {
+      "section_id": "examples-06",
+      "audio_file": "prospect3-lesson-01--examples-06--b2fd689de1.weba",
+      "bytes": 97771,
+      "sha256": "2ac0517c8b62995bfd92521387bc0273d3e316ca4e5e933227563f08d261c074",
+      "base64_verified": true,
+      "duration_seconds": 19.85
+    },
+    {
+      "section_id": "lab",
+      "audio_file": "prospect3-lesson-01--lab--8720de7b05.weba",
+      "bytes": 99347,
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0",
+      "base64_verified": true,
+      "duration_seconds": 19.97
+    },
+    {
+      "section_id": "source-reading",
+      "audio_file": "prospect3-lesson-01--source-reading--10bfa82e24.weba",
+      "bytes": 784672,
+      "sha256": "4d6a639acdaa292bac9f4149f205536a6baf2c1df028975cfda5e49db623897d",
+      "base64_verified": true,
+      "duration_seconds": 132.81
+    },
+    {
+      "section_id": "reading",
+      "audio_file": "prospect3-lesson-01--reading--165474c2fd.weba",
+      "bytes": 469568,
+      "sha256": "55cf2e12c8f98e83e458501592afcd9b900ec6e5a16984cfa9616c1a818ccbbb",
+      "base64_verified": true,
+      "duration_seconds": 79.42
+    },
+    {
+      "section_id": "writing",
+      "audio_file": "prospect3-lesson-01--writing--8720de7b05.weba",
+      "bytes": 99347,
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0",
+      "base64_verified": true,
+      "duration_seconds": 19.97
+    },
+    {
+      "section_id": "quiz",
+      "audio_file": "prospect3-lesson-01--quiz--8720de7b05.weba",
+      "bytes": 99347,
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0",
+      "base64_verified": true,
+      "duration_seconds": 19.97
+    },
+    {
+      "section_id": "listening",
+      "audio_file": "prospect3-lesson-01--listening--89af402920.weba",
+      "bytes": 694026,
+      "sha256": "291e8886f06827622f4e49bbca2bf67148d879d60bb3121f1639655e86f554e5",
+      "base64_verified": true,
+      "duration_seconds": 134.15
+    },
+    {
+      "section_id": "book-source-pages",
+      "audio_file": "prospect3-lesson-01--book-source-pages--31a9a3cd3d.weba",
+      "bytes": 140934,
+      "sha256": "a9f36503d8ca5a73d712a86b8a8acaaa405c437d73949edfd6a904a774c74558",
+      "base64_verified": true,
+      "duration_seconds": 26.37
+    },
+    {
+      "section_id": "sources",
+      "audio_file": "prospect3-lesson-01--sources--b563bc3cca.weba",
+      "bytes": 121779,
+      "sha256": "cf87598a34bb30d51bb4f497918ce3fe19449221d636a591db3f327bd847154f",
+      "base64_verified": true,
+      "duration_seconds": 22.09
+    }
+  ],
+  "pending_sections": []
+}

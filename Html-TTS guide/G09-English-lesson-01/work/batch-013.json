@@ -1,0 +1,31 @@
+{
+  "batch": "013-pron-persian-consonants-and-syllables-stress",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-01--pron-persian-consonants--4bac00143c.weba",
+      "inputs": [
+        {"path": "work/clips/pron-persian-consonants-turns-109-110.mp3", "trim_end_seconds": 23.242833, "pause_after_ms": 700},
+        {"path": "work/clips/pron-persian-consonants-turns-109-110.mp3", "trim_start_seconds": 23.922958, "pause_after_ms": 700},
+        {"path": "work/clips/pron-persian-consonants-turn-111.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/pron-persian-consonants-turns-112-113.mp3", "trim_end_seconds": 25.8735, "pause_after_ms": 700},
+        {"path": "work/clips/pron-persian-consonants-turns-112-113.mp3", "trim_start_seconds": 27.184792, "pause_after_ms": 700},
+        {"path": "work/clips/pron-persian-consonants-turn-114.mp3", "pause_after_ms": 8000},
+        {"path": "work/clips/pron-persian-consonants-turn-115.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/pron-persian-consonants-turn-116.mp3", "pause_after_ms": 700}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--pron-syllables-stress--b82ddc841f.weba",
+      "inputs": [
+        {"path": "work/clips/pron-syllables-stress-turns-117-118.mp3", "trim_end_seconds": 24.199417, "pause_after_ms": 700},
+        {"path": "work/clips/pron-syllables-stress-turns-117-118.mp3", "trim_start_seconds": 25.040792, "pause_after_ms": 8000},
+        {"path": "work/clips/pron-syllables-stress-turn-119.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/pron-syllables-stress-turns-120-121.mp3", "trim_end_seconds": 24.666542, "pause_after_ms": 700},
+        {"path": "work/clips/pron-syllables-stress-turns-120-121.mp3", "trim_start_seconds": 25.18225, "pause_after_ms": 700},
+        {"path": "work/clips/pron-syllables-stress-turn-122.mp3", "pause_after_ms": 700}
+      ]
+    }
+  ],
+  "copies": []
+}

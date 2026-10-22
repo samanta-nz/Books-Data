@@ -1,0 +1,60 @@
+{
+  "files": [
+    {
+      "file": "audio/prospect3-lesson-01--examples-03--9d034f969c.weba",
+      "duration_seconds": 22.21,
+      "long_silence_starts": [
+        13.696208
+      ],
+      "long_silence_ends": [
+        22.207
+      ],
+      "trailing_8_second_pause_verified": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--examples-05--8ad70c275d.weba",
+      "duration_seconds": 19.85,
+      "long_silence_starts": [
+        11.624542
+      ],
+      "long_silence_ends": [
+        19.847
+      ],
+      "trailing_8_second_pause_verified": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--examples-06--b2fd689de1.weba",
+      "duration_seconds": 19.85,
+      "long_silence_starts": [
+        11.490625
+      ],
+      "long_silence_ends": [
+        19.847
+      ],
+      "trailing_8_second_pause_verified": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--book-source-pages--31a9a3cd3d.weba",
+      "duration_seconds": 26.37,
+      "long_silence_starts": [
+        18.017312
+      ],
+      "long_silence_ends": [
+        26.367
+      ],
+      "trailing_8_second_pause_verified": true
+    },
+    {
+      "file": "audio/prospect3-lesson-01--sources--b563bc3cca.weba",
+      "duration_seconds": 22.09,
+      "long_silence_starts": [
+        13.818042
+      ],
+      "long_silence_ends": [
+        22.087
+      ],
+      "trailing_8_second_pause_verified": true
+    }
+  ],
+  "passed": true
+}

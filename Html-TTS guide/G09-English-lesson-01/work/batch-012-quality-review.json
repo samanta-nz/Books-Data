@@ -1,0 +1,67 @@
+{
+  "batch": "012",
+  "metrics": {
+    "pron-sound-symbols-turn-097.mp3": {
+      "characters": 187,
+      "speech_seconds": 20.86,
+      "characters_per_speech_second": 8.96,
+      "status": "accepted"
+    },
+    "pron-sound-symbols-turn-098.mp3": {
+      "characters": 153,
+      "speech_seconds": 18.991,
+      "characters_per_speech_second": 8.06,
+      "status": "accepted"
+    },
+    "pron-sound-symbols-turns-099-100.mp3": {
+      "characters": 302,
+      "speech_seconds": 38.395,
+      "characters_per_speech_second": 7.87,
+      "status": "accepted"
+    },
+    "pron-sound-symbols-turn-101.mp3": {
+      "characters": 162,
+      "speech_seconds": 18.372,
+      "characters_per_speech_second": 8.82,
+      "status": "accepted"
+    },
+    "pron-sound-symbols-turns-102-103.mp3": {
+      "characters": 346,
+      "speech_seconds": 41.304,
+      "characters_per_speech_second": 8.38,
+      "status": "accepted"
+    },
+    "pron-voice-air-turn-104.mp3": {
+      "characters": 186,
+      "speech_seconds": 27.7,
+      "characters_per_speech_second": 6.71,
+      "status": "accepted"
+    },
+    "pron-voice-air-turn-105.mp3": {
+      "characters": 137,
+      "speech_seconds": 15.62,
+      "characters_per_speech_second": 8.77,
+      "status": "accepted"
+    },
+    "pron-voice-air-turn-106.mp3": {
+      "characters": 154,
+      "speech_seconds": 23.845,
+      "characters_per_speech_second": 6.46,
+      "status": "accepted"
+    },
+    "pron-voice-air-turn-107.mp3": {
+      "characters": 188,
+      "speech_seconds": 21.541,
+      "characters_per_speech_second": 8.73,
+      "status": "accepted"
+    },
+    "pron-voice-air-turn-108.mp3": {
+      "characters": 142,
+      "speech_seconds": 16.85,
+      "characters_per_speech_second": 8.43,
+      "status": "accepted"
+    }
+  },
+  "raw_analysis": "work/batch-012-audio-analysis.json",
+  "status": "all_ten_clips_accepted"
+}

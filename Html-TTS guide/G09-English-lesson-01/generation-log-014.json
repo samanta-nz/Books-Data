@@ -1,0 +1,345 @@
+{
+  "date": "2026-10-22",
+  "generator": "Arena.ai generate_speech",
+  "batch": "014",
+  "sections": [
+    "vocabulary-cards"
+  ],
+  "status": "partial_30_of_54_turns_validated_not_embedded",
+  "source_turn_count": 30,
+  "temporary_clips": 10,
+  "clips": [
+    {
+      "clip": "work/clips/vocabulary-cards-turns-123-125.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-123",
+        "prospect3-lesson-01-turn-124",
+        "prospect3-lesson-01-turn-125"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "ابتدا واژه رو در موقعیت و جمله بخونین، سپس معنی و یک مثال رو بدون نگاه بازگو کنین. واژه رو فقط با ترجمهٔ تنها حفظ نکنین؛ نقش و همراه‌های آن رو هم بررسی کنین.\n\nواژه یا عبارت kind در اینجا یعنی مهربان. نقش یا نوع آن: adjective . مثال: My teacher is kind.\n\nدر املا به این نکته توجه کنین: حرف d پایانی رو در املا جا نیندازید. نکتهٔ خوانش: kind : الگوی واژهٔ جدا /kaɪnd/ ؛ 1 هجا.",
+      "characters": 374,
+      "bytes": 149133,
+      "sha256": "b73dae2ea8a47670b8dcc6195652046d26ba5eaa001a7117017121dfafe4cc5a",
+      "segments": [
+        {
+          "trim_end_seconds": 14.300792,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-123"
+        },
+        {
+          "trim_start_seconds": 15.096625,
+          "trim_end_seconds": 24.287167,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-124"
+        },
+        {
+          "trim_start_seconds": 24.979,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-125"
+        }
+      ],
+      "quality_status": "accepted"
+    },
+    {
+      "clip": "work/clips/vocabulary-cards-turns-126-128.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-126",
+        "prospect3-lesson-01-turn-127",
+        "prospect3-lesson-01-turn-128"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "واژه یا عبارت patient در اینجا یعنی صبور. نقش یا نوع آن: adjective . مثال: My friend is patient.\n\nدر املا به این نکته توجه کنین: ترتیبِ بخش پایانی i-e-n-t رو کنترل کنین. نکتهٔ خوانش: patient : الگوی واژهٔ جدا /peɪʃənt/ ؛ 2 هجا، تکیهٔ اصلی روی هجای 1.\n\nواژه یا عبارت clever در اینجا یعنی باهوش؛ در حل و فهم مسئله توانمند. نقش یا نوع آن: adjective . مثال: Sara is clever.",
+      "characters": 369,
+      "bytes": 165549,
+      "sha256": "120b223d4cc96484cefc7fe9aa519fc6e11c7a0ae950626bb4c7d9dcf4b6bfe6",
+      "segments": [
+        {
+          "trim_end_seconds": 10.07625,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-126"
+        },
+        {
+          "trim_start_seconds": 10.79175,
+          "trim_end_seconds": 27.678583,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-127"
+        },
+        {
+          "trim_start_seconds": 28.558875,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-128"
+        }
+      ],
+      "quality_status": "accepted"
+    },
+    {
+      "clip": "work/clips/vocabulary-cards-turns-129-131.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-129",
+        "prospect3-lesson-01-turn-130",
+        "prospect3-lesson-01-turn-131"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در املا به این نکته توجه کنین: پس از v ، حروف e و r قرار دارند. نکتهٔ خوانش: clever : الگوی واژهٔ جدا /klɛvɚ/ ؛ 2 هجا، تکیهٔ اصلی روی هجای 1.\n\nواژه یا عبارت helpful در اینجا یعنی کمک‌کننده. نقش یا نوع آن: adjective . مثال: Our classmates are helpful.\n\nدر املا به این نکته توجه کنین: ترکیب help و ful نوشته می‌شه؛ در این واژه ful فقط یک l دارد. نکتهٔ خوانش: helpful : الگوی واژهٔ جدا /hɛlpfəl/ ؛ 2 هجا، تکیهٔ اصلی روی هجای 1.",
+      "characters": 424,
+      "bytes": 191469,
+      "sha256": "3c537ea3499335d5302ddf3ef2a51264397d7687fcd37606bb555b1da6310fe1",
+      "segments": [
+        {
+          "trim_end_seconds": 16.593,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-129"
+        },
+        {
+          "trim_start_seconds": 17.26775,
+          "trim_end_seconds": 28.068417,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-130"
+        },
+        {
+          "trim_start_seconds": 29.13725,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-131"
+        }
+      ],
+      "quality_status": "accepted"
+    },
+    {
+      "clip": "work/clips/vocabulary-cards-turns-132-134.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-132",
+        "prospect3-lesson-01-turn-133",
+        "prospect3-lesson-01-turn-134"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "واژه یا عبارت hard-working در اینجا یعنی سخت‌کوش. نقش یا نوع آن: adjective . مثال: My brother is hard-working.\n\nدر املا به این نکته توجه کنین: در شکلِ کتاب، دو بخش با خط پیوند آمده‌اند. نکتهٔ خوانش: hard-working : الگوی واژهٔ جدا /hɑɹdhwɝkɪŋ/ ؛ 3 هجا، تکیهٔ اصلی روی هجای 2.\n\nواژه یا عبارت funny در اینجا یعنی خنده‌دار؛ در توصیف شخص، شوخ. نقش یا نوع آن: adjective . مثال: Our cousin is funny.",
+      "characters": 392,
+      "bytes": 171501,
+      "sha256": "92b19832560d42a0efad0c231468df77b42902a47fcd119c4ac51713b9795ca3",
+      "segments": [
+        {
+          "trim_end_seconds": 11.776833,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-132"
+        },
+        {
+          "trim_start_seconds": 12.429167,
+          "trim_end_seconds": 28.993,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-133"
+        },
+        {
+          "trim_start_seconds": 29.799917,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-134"
+        }
+      ],
+      "quality_status": "accepted"
+    },
+    {
+      "clip": "work/clips/vocabulary-cards-turns-135-137.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-135",
+        "prospect3-lesson-01-turn-136",
+        "prospect3-lesson-01-turn-137"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در املا به این نکته توجه کنین: دو حرف n کنار هم نوشته می‌شن. نکتهٔ خوانش: funny : الگوی واژهٔ جدا /fʌni/ ؛ 2 هجا، تکیهٔ اصلی روی هجای 1.\n\nواژه یا عبارت quiet در اینجا یعنی ساکت؛ در مورد شخص کم‌حرف. نقش یا نوع آن: adjective . مثال: My friend is quiet.\n\nدر املا به این نکته توجه کنین: ترتیبِ پایانی i-e-t هست؛ با quite اشتباه نشود. نکتهٔ خوانش: quiet : الگوی واژهٔ جدا /kwaɪət/ ؛ 2 هجا، تکیهٔ اصلی روی هجای 1.",
+      "characters": 407,
+      "bytes": 186669,
+      "sha256": "1d70f74de6d2faf86adce4b65c3071b8fe2639a507ecd678d22cf1cdc0f6ec4b",
+      "segments": [
+        {
+          "trim_end_seconds": 14.912833,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-135"
+        },
+        {
+          "trim_start_seconds": 15.478458,
+          "trim_end_seconds": 27.473417,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-136"
+        },
+        {
+          "trim_start_seconds": 28.426208,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-137"
+        }
+      ],
+      "quality_status": "accepted"
+    },
+    {
+      "clip": "work/clips/vocabulary-cards-turns-138-140.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-138",
+        "prospect3-lesson-01-turn-139",
+        "prospect3-lesson-01-turn-140"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "واژه یا عبارت talkative در اینجا یعنی پرحرف. نقش یا نوع آن: adjective . مثال: My little sister is talkative.\n\nدر املا به این نکته توجه کنین: بخش talk رو در ابتدای واژه حفظ کنین؛ تعداد حرف‌ها رو با تعداد صداها یکی ندانید. نکتهٔ خوانش: talkative : الگوی واژهٔ جدا /tɔkətɪv/ ؛ 3 هجا، تکیهٔ اصلی روی هجای 1.\n\nواژه یا عبارت serious در اینجا یعنی جدی. نقش یا نوع آن: adjective . مثال: I am a bit serious.",
+      "characters": 398,
+      "bytes": 189069,
+      "sha256": "86b3a7f83009c782e1449c0cf857cf31881e3c9db3fd456816114a5e4142252b",
+      "segments": [
+        {
+          "trim_end_seconds": 11.994,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-138"
+        },
+        {
+          "trim_start_seconds": 13.009125,
+          "trim_end_seconds": 34.782542,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-139"
+        },
+        {
+          "trim_start_seconds": 35.898208,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-140"
+        }
+      ],
+      "quality_status": "accepted"
+    },
+    {
+      "clip": "work/clips/vocabulary-cards-turns-141-143.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-141",
+        "prospect3-lesson-01-turn-142",
+        "prospect3-lesson-01-turn-143"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در املا به این نکته توجه کنین: پایان واژه i-o-u-s نوشته می‌شه. نکتهٔ خوانش: serious : الگوی واژهٔ جدا /sɪɹiəs/ ؛ 3 هجا، تکیهٔ اصلی روی هجای 1.\n\nواژه یا عبارت neat در اینجا یعنی مرتب و آراسته. نقش یا نوع آن: adjective . مثال: The students are neat.\n\nدر املا به این نکته توجه کنین: ترکیب ea در املا کنار هم هست. نکتهٔ خوانش: neat : الگوی واژهٔ جدا /nit/ ؛ 1 هجا.",
+      "characters": 360,
+      "bytes": 172173,
+      "sha256": "f4ecd454f490ce30e7740bd8820f11a6ac2dbd51bd1ffdb5a5a0ab9976438269",
+      "segments": [
+        {
+          "trim_end_seconds": 17.917875,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-141"
+        },
+        {
+          "trim_start_seconds": 18.405125,
+          "trim_end_seconds": 29.259042,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-142"
+        },
+        {
+          "trim_start_seconds": 29.836958,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-143"
+        }
+      ],
+      "quality_status": "accepted"
+    },
+    {
+      "clip": "work/clips/vocabulary-cards-turns-144-146.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-144",
+        "prospect3-lesson-01-turn-145",
+        "prospect3-lesson-01-turn-146"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "واژه یا عبارت angry در اینجا یعنی عصبانی. نقش یا نوع آن: adjective . مثال: The child is angry.\n\nدر املا به این نکته توجه کنین: واژه با y پایان می‌یابد، نه i . نکتهٔ خوانش: angry : الگوی واژهٔ جدا /æŋɡɹi/ ؛ 2 هجا، تکیهٔ اصلی روی هجای 1.\n\nواژه یا عبارت brave در اینجا یعنی شجاع. نقش یا نوع آن: adjective . مثال: The firefighter is brave.",
+      "characters": 335,
+      "bytes": 148173,
+      "sha256": "de3055235c55cf2f82d7ebf019217ed4b6cf0a39e56e19642f2b8164f16793ee",
+      "segments": [
+        {
+          "trim_end_seconds": 10.392167,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-144"
+        },
+        {
+          "trim_start_seconds": 11.0135,
+          "trim_end_seconds": 25.844208,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-145"
+        },
+        {
+          "trim_start_seconds": 26.79875,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-146"
+        }
+      ],
+      "quality_status": "accepted"
+    },
+    {
+      "clip": "work/clips/vocabulary-cards-turns-147-149.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-147",
+        "prospect3-lesson-01-turn-148",
+        "prospect3-lesson-01-turn-149"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در املا به این نکته توجه کنین: حرف e در پایانِ شکلِ نوشتاری حفظ می‌شه. نکتهٔ خوانش: brave : الگوی واژهٔ جدا /bɹeɪv/ ؛ 1 هجا.\n\nواژه یا عبارت careless در اینجا یعنی بی‌احتیاط؛ بی‌دقت. نقش یا نوع آن: adjective . مثال: That driver is careless.\n\nدر املا به این نکته توجه کنین: از care و less ساخته شده هست؛ دو s پایانی رو حفظ کنین. نکتهٔ خوانش: careless : الگوی واژهٔ جدا /kɛɹləs/ ؛ 2 هجا، تکیهٔ اصلی روی هجای 1.",
+      "characters": 407,
+      "bytes": 208941,
+      "sha256": "5d8b045adf76dfbe1f9973a20ee229c7338d16fd6932818e507f20894a8ba667",
+      "segments": [
+        {
+          "trim_end_seconds": 15.918208,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-147"
+        },
+        {
+          "trim_start_seconds": 16.879917,
+          "trim_end_seconds": 31.05875,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-148"
+        },
+        {
+          "trim_start_seconds": 32.004917,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-149"
+        }
+      ],
+      "quality_status": "accepted"
+    },
+    {
+      "clip": "work/clips/vocabulary-cards-turns-150-152.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-150",
+        "prospect3-lesson-01-turn-151",
+        "prospect3-lesson-01-turn-152"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "واژه یا عبارت careful در اینجا یعنی مراقب؛ دقیق. نقش یا نوع آن: adjective . مثال: My friend is careful.\n\nدر املا به این نکته توجه کنین: careful یک l پایانی دارد؛ با careless در معنی مقایسه شود. نکتهٔ خوانش: careful : الگوی واژهٔ جدا /kɛɹfəl/ ؛ 2 هجا، تکیهٔ اصلی روی هجای 1.\n\nواژه یا عبارت cruel در اینجا یعنی بی‌رحم. نقش یا نوع آن: adjective . مثال: The story has a cruel character.",
+      "characters": 382,
+      "bytes": 155949,
+      "sha256": "ba55bbd1c13400f83fff6c6740ab7bc419cee214e029e2ff38666a6fedeb4518",
+      "segments": [
+        {
+          "trim_end_seconds": 10.400875,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-150"
+        },
+        {
+          "trim_start_seconds": 11.015458,
+          "trim_end_seconds": 27.961333,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-151"
+        },
+        {
+          "trim_start_seconds": 28.799917,
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-01-turn-152"
+        }
+      ],
+      "quality_status": "accepted"
+    }
+  ],
+  "quality_review": "work/batch-014-quality-review.json",
+  "production_state": "work/vocabulary-cards-production.json"
+}

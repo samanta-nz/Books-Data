@@ -1,0 +1,200 @@
+{
+  "section": "source-grammar",
+  "status": "embedded",
+  "completed_turn_ids": [
+    "prospect3-lesson-01-uploaded-source-turn-028",
+    "prospect3-lesson-01-uploaded-source-turn-029",
+    "prospect3-lesson-01-uploaded-source-turn-030",
+    "prospect3-lesson-01-uploaded-source-turn-031",
+    "prospect3-lesson-01-uploaded-source-turn-032",
+    "prospect3-lesson-01-uploaded-source-turn-033"
+  ],
+  "clips": [
+    {
+      "clip": "work/clips/source-grammar-a-028-030-032.mp3",
+      "section": "source-grammar",
+      "source_turns": [
+        "prospect3-lesson-01-uploaded-source-turn-028",
+        "prospect3-lesson-01-uploaded-source-turn-030",
+        "prospect3-lesson-01-uploaded-source-turn-032"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در متنِ همین صفحه می‌خوانیم: Ali is clever.\n\nدر متنِ همین صفحه می‌خوانیم: Zahra and Nadia are generous.\n\nدر متنِ همین صفحه می‌خوانیم: I am not talkative.",
+      "bytes": 69933,
+      "sha256": "52bc507f250cf52379b224eff0e8035baac644bed16a51b5d9389a6dcd2b5ec7",
+      "quality_status": "accepted",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-028",
+          "path": "work/clips/source-grammar-a-028-030-032.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 4.820625
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-030",
+          "path": "work/clips/source-grammar-a-028-030-032.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 5.831417,
+          "trim_end_seconds": 11.505292
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-032",
+          "path": "work/clips/source-grammar-a-028-030-032.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 12.409125
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/source-grammar-r-029-031-033.mp3",
+      "section": "source-grammar",
+      "source_turns": [
+        "prospect3-lesson-01-uploaded-source-turn-029",
+        "prospect3-lesson-01-uploaded-source-turn-031",
+        "prospect3-lesson-01-uploaded-source-turn-033"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "معنی و نکتهٔ این قسمت: علی باهوش هست. فاعل مفرد هست و is صفت رو به او نسبت می‌ده؛ جمله با وجودِ نامِ شخص همچنان به فعل نیاز دارد.\n\nمعنی و نکتهٔ این قسمت: زهرا و نادیا بخشنده‌اند. دو نام با and یک فاعل جمع می‌سازند و are لازم هست.\n\nمعنی و نکتهٔ این قسمت: من پرحرف نیستم. not پس از am میاد؛ صورت معیارِ کوتاه I ’ m not هست.",
+      "bytes": 143181,
+      "sha256": "76347b49f7c6c1c27e4cd08d4eaf700fae801daf900aeb61d1fd2b6e59aa88d7",
+      "quality_status": "accepted",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-029",
+          "path": "work/clips/source-grammar-r-029-031-033.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 13.285958
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-031",
+          "path": "work/clips/source-grammar-r-029-031-033.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 14.319125,
+          "trim_end_seconds": 24.801042
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-033",
+          "path": "work/clips/source-grammar-r-029-031-033.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 25.77375
+        }
+      ]
+    }
+  ],
+  "assembly_inputs": [
+    {
+      "source_turn": "prospect3-lesson-01-uploaded-source-turn-028",
+      "path": "work/clips/source-grammar-a-028-030-032.mp3",
+      "pause_after_ms": 700,
+      "trim_end_seconds": 4.820625
+    },
+    {
+      "source_turn": "prospect3-lesson-01-uploaded-source-turn-029",
+      "path": "work/clips/source-grammar-r-029-031-033.mp3",
+      "pause_after_ms": 700,
+      "trim_end_seconds": 13.285958
+    },
+    {
+      "source_turn": "prospect3-lesson-01-uploaded-source-turn-030",
+      "path": "work/clips/source-grammar-a-028-030-032.mp3",
+      "pause_after_ms": 700,
+      "trim_start_seconds": 5.831417,
+      "trim_end_seconds": 11.505292
+    },
+    {
+      "source_turn": "prospect3-lesson-01-uploaded-source-turn-031",
+      "path": "work/clips/source-grammar-r-029-031-033.mp3",
+      "pause_after_ms": 700,
+      "trim_start_seconds": 14.319125,
+      "trim_end_seconds": 24.801042
+    },
+    {
+      "source_turn": "prospect3-lesson-01-uploaded-source-turn-032",
+      "path": "work/clips/source-grammar-a-028-030-032.mp3",
+      "pause_after_ms": 700,
+      "trim_start_seconds": 12.409125
+    },
+    {
+      "source_turn": "prospect3-lesson-01-uploaded-source-turn-033",
+      "path": "work/clips/source-grammar-r-029-031-033.mp3",
+      "pause_after_ms": 700,
+      "trim_start_seconds": 25.77375
+    },
+    {
+      "path": "work/clips/source-grammar-a-034-036-038.mp3",
+      "source_turn": "prospect3-lesson-01-uploaded-source-turn-034",
+      "part_index": 1,
+      "pause_after_ms": 8000,
+      "trim_end_seconds": 11.203958
+    },
+    {
+      "path": "work/clips/source-grammar-a-034-036-038.mp3",
+      "source_turn": "prospect3-lesson-01-uploaded-source-turn-034",
+      "part_index": 2,
+      "pause_after_ms": 700,
+      "trim_start_seconds": 11.99175,
+      "trim_end_seconds": 13.3
+    },
+    {
+      "path": "work/clips/source-grammar-r-035-037-039.mp3",
+      "source_turn": "prospect3-lesson-01-uploaded-source-turn-035",
+      "part_index": 1,
+      "pause_after_ms": 8000,
+      "trim_end_seconds": 12.344542
+    },
+    {
+      "path": "work/clips/source-grammar-r-035-037-039.mp3",
+      "source_turn": "prospect3-lesson-01-uploaded-source-turn-035",
+      "part_index": 2,
+      "pause_after_ms": 8000,
+      "trim_start_seconds": 14.393875,
+      "trim_end_seconds": 24.212042
+    },
+    {
+      "path": "work/clips/source-grammar-a-034-036-038.mp3",
+      "source_turn": "prospect3-lesson-01-uploaded-source-turn-036",
+      "part_index": 1,
+      "pause_after_ms": 700,
+      "trim_start_seconds": 14.087083,
+      "trim_end_seconds": 20.560167
+    },
+    {
+      "path": "work/clips/source-grammar-r-035-037-039.mp3",
+      "source_turn": "prospect3-lesson-01-uploaded-source-turn-037",
+      "part_index": 1,
+      "pause_after_ms": 700,
+      "trim_start_seconds": 25.624292,
+      "trim_end_seconds": 38.939625
+    },
+    {
+      "path": "work/clips/source-grammar-a-034-036-038.mp3",
+      "source_turn": "prospect3-lesson-01-uploaded-source-turn-038",
+      "part_index": 1,
+      "pause_after_ms": 700,
+      "trim_start_seconds": 21.353333
+    },
+    {
+      "path": "work/clips/source-grammar-r-035-037-039.mp3",
+      "source_turn": "prospect3-lesson-01-uploaded-source-turn-039",
+      "part_index": 1,
+      "pause_after_ms": 700,
+      "trim_start_seconds": 40.723875
+    }
+  ],
+  "remaining_turn_ids": [
+    "prospect3-lesson-01-uploaded-source-turn-034",
+    "prospect3-lesson-01-uploaded-source-turn-035",
+    "prospect3-lesson-01-uploaded-source-turn-036",
+    "prospect3-lesson-01-uploaded-source-turn-037",
+    "prospect3-lesson-01-uploaded-source-turn-038",
+    "prospect3-lesson-01-uploaded-source-turn-039"
+  ],
+  "generation_batches": [
+    "015",
+    "016"
+  ],
+  "audio_file": "audio/prospect3-lesson-01--source-grammar--ea324716c7.weba",
+  "pause_qa": "work/batch-016-pause-qa.json"
+}

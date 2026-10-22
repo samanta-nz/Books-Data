@@ -1,0 +1,58 @@
+{
+  "batch": "009",
+  "status": "all_ten_clips_accepted",
+  "metrics": {
+    "source-melody-a-019-021.mp3": {
+      "characters_per_speech_second": 16.98,
+      "speech_seconds": 7.833,
+      "status": "accepted"
+    },
+    "source-melody-r-020-022.mp3": {
+      "characters_per_speech_second": 10.24,
+      "speech_seconds": 21.782,
+      "status": "accepted"
+    },
+    "source-melody-a-023-025.mp3": {
+      "characters_per_speech_second": 19.62,
+      "speech_seconds": 6.066,
+      "status": "accepted"
+    },
+    "source-melody-r-024-026.mp3": {
+      "characters_per_speech_second": 10.02,
+      "speech_seconds": 23.056,
+      "status": "accepted"
+    },
+    "source-melody-a-027.mp3": {
+      "characters_per_speech_second": 10.53,
+      "speech_seconds": 17.286,
+      "status": "accepted"
+    },
+    "examples-03-turn-186-retry.mp3": {
+      "characters_per_speech_second": 12.48,
+      "speech_seconds": 11.222,
+      "status": "accepted"
+    },
+    "examples-05-turn-194.mp3": {
+      "characters_per_speech_second": 9.66,
+      "speech_seconds": 11.383,
+      "status": "accepted"
+    },
+    "examples-06-turn-198.mp3": {
+      "characters_per_speech_second": 9.27,
+      "speech_seconds": 10.897,
+      "status": "accepted"
+    },
+    "book-source-pages-turn-050.mp3": {
+      "characters_per_speech_second": 9.94,
+      "speech_seconds": 18.41,
+      "status": "accepted"
+    },
+    "sources-instruction-1.mp3": {
+      "characters_per_speech_second": 8.49,
+      "speech_seconds": 14.14,
+      "status": "accepted"
+    }
+  },
+  "raw_analysis": "work/batch-009-audio-analysis.json",
+  "examples_03_retry": "Accepted after paragraph-separated regeneration; duration 14.26 seconds versus rejected 10.78-second attempt. It was the only version assembled."
+}

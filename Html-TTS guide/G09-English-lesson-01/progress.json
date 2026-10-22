@@ -1,0 +1,19 @@
+{
+  "lesson": "prospect3-lesson-01",
+  "status": "complete",
+  "total_sections": 41,
+  "total_source_turns": 242,
+  "embedded_sections": 41,
+  "pending_sections_count": 0,
+  "pending_sections": [],
+  "voices": {
+    "آرتین": "voice-02",
+    "رها": "voice-05"
+  },
+  "audio_format": "WebM Opus mono 48 kbps, Base64 embedded",
+  "non_intrusive": {
+    "autoplay": false,
+    "preload": "none",
+    "user_initiated_playback": true
+  }
+}

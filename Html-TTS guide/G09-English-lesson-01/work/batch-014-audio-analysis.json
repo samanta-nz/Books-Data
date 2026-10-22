@@ -1,0 +1,697 @@
+{
+  "vocabulary-cards-turns-123-125.mp3": {
+    "duration": 37.22,
+    "mean_volume_db": -19.6,
+    "max_volume_db": -3.1,
+    "silences": [
+      {
+        "start": 7.638792,
+        "end": 8.314708,
+        "duration": 0.675917
+      },
+      {
+        "start": 14.300792,
+        "end": 15.096625,
+        "duration": 0.795833
+      },
+      {
+        "start": 18.607833,
+        "end": 19.182958,
+        "duration": 0.575125
+      },
+      {
+        "start": 21.416792,
+        "end": 21.88875,
+        "duration": 0.471958
+      },
+      {
+        "start": 22.34575,
+        "end": 22.80775,
+        "duration": 0.462
+      },
+      {
+        "start": 24.287167,
+        "end": 24.979,
+        "duration": 0.691833
+      },
+      {
+        "start": 26.940125,
+        "end": 27.442083,
+        "duration": 0.501958
+      },
+      {
+        "start": 30.380417,
+        "end": 30.953167,
+        "duration": 0.57275
+      },
+      {
+        "start": 31.927583,
+        "end": 32.422208,
+        "duration": 0.494625
+      },
+      {
+        "start": 32.911833,
+        "end": 33.503375,
+        "duration": 0.591542
+      }
+    ]
+  },
+  "vocabulary-cards-turns-126-128.mp3": {
+    "duration": 41.33,
+    "mean_volume_db": -19.8,
+    "max_volume_db": -3.9,
+    "silences": [
+      {
+        "start": 6.825958,
+        "end": 7.360958,
+        "duration": 0.535
+      },
+      {
+        "start": 10.07625,
+        "end": 10.79175,
+        "duration": 0.7155
+      },
+      {
+        "start": 12.878625,
+        "end": 13.330542,
+        "duration": 0.451917
+      },
+      {
+        "start": 17.434708,
+        "end": 18.166417,
+        "duration": 0.731708
+      },
+      {
+        "start": 19.179708,
+        "end": 19.742583,
+        "duration": 0.562875
+      },
+      {
+        "start": 20.359667,
+        "end": 21.073458,
+        "duration": 0.713792
+      },
+      {
+        "start": 22.594417,
+        "end": 23.109917,
+        "duration": 0.5155
+      },
+      {
+        "start": 23.794875,
+        "end": 24.360333,
+        "duration": 0.565458
+      },
+      {
+        "start": 27.678583,
+        "end": 28.558875,
+        "duration": 0.880292
+      },
+      {
+        "start": 35.059583,
+        "end": 35.704958,
+        "duration": 0.645375
+      },
+      {
+        "start": 37.987167,
+        "end": 38.742583,
+        "duration": 0.755417
+      }
+    ]
+  },
+  "vocabulary-cards-turns-129-131.mp3": {
+    "duration": 47.81,
+    "mean_volume_db": -19.9,
+    "max_volume_db": -2.1,
+    "silences": [
+      {
+        "start": 2.434792,
+        "end": 3.066,
+        "duration": 0.631208
+      },
+      {
+        "start": 6.550583,
+        "end": 7.3645,
+        "duration": 0.813917
+      },
+      {
+        "start": 8.294542,
+        "end": 8.874083,
+        "duration": 0.579542
+      },
+      {
+        "start": 9.253792,
+        "end": 9.99075,
+        "duration": 0.736958
+      },
+      {
+        "start": 11.392458,
+        "end": 12.223292,
+        "duration": 0.830833
+      },
+      {
+        "start": 12.694042,
+        "end": 13.488875,
+        "duration": 0.794833
+      },
+      {
+        "start": 16.593,
+        "end": 17.26775,
+        "duration": 0.67475
+      },
+      {
+        "start": 19.852167,
+        "end": 20.350708,
+        "duration": 0.498542
+      },
+      {
+        "start": 21.899667,
+        "end": 22.5435,
+        "duration": 0.643833
+      },
+      {
+        "start": 24.667042,
+        "end": 25.393708,
+        "duration": 0.726667
+      },
+      {
+        "start": 25.844292,
+        "end": 26.511417,
+        "duration": 0.667125
+      },
+      {
+        "start": 28.068417,
+        "end": 29.13725,
+        "duration": 1.068833
+      },
+      {
+        "start": 31.027292,
+        "end": 31.603167,
+        "duration": 0.575875
+      },
+      {
+        "start": 37.250875,
+        "end": 38.123,
+        "duration": 0.872125
+      },
+      {
+        "start": 39.067375,
+        "end": 39.684458,
+        "duration": 0.617083
+      },
+      {
+        "start": 40.146167,
+        "end": 40.698792,
+        "duration": 0.552625
+      },
+      {
+        "start": 42.366042,
+        "end": 43.131167,
+        "duration": 0.765125
+      },
+      {
+        "start": 43.609125,
+        "end": 44.388292,
+        "duration": 0.779167
+      }
+    ]
+  },
+  "vocabulary-cards-turns-132-134.mp3": {
+    "duration": 42.82,
+    "mean_volume_db": -20.2,
+    "max_volume_db": -2.9,
+    "silences": [
+      {
+        "start": 5.665917,
+        "end": 6.198833,
+        "duration": 0.532917
+      },
+      {
+        "start": 8.404125,
+        "end": 8.93075,
+        "duration": 0.526625
+      },
+      {
+        "start": 9.3515,
+        "end": 9.894875,
+        "duration": 0.543375
+      },
+      {
+        "start": 11.776833,
+        "end": 12.429167,
+        "duration": 0.652333
+      },
+      {
+        "start": 18.819,
+        "end": 19.491167,
+        "duration": 0.672167
+      },
+      {
+        "start": 20.355333,
+        "end": 20.821,
+        "duration": 0.465667
+      },
+      {
+        "start": 21.833083,
+        "end": 22.4125,
+        "duration": 0.579417
+      },
+      {
+        "start": 23.739125,
+        "end": 24.238292,
+        "duration": 0.499167
+      },
+      {
+        "start": 25.353125,
+        "end": 26.026625,
+        "duration": 0.6735
+      },
+      {
+        "start": 28.993,
+        "end": 29.799917,
+        "duration": 0.806917
+      },
+      {
+        "start": 32.336,
+        "end": 32.84625,
+        "duration": 0.51025
+      },
+      {
+        "start": 36.638167,
+        "end": 37.270792,
+        "duration": 0.632625
+      },
+      {
+        "start": 39.450458,
+        "end": 40.085208,
+        "duration": 0.63475
+      },
+      {
+        "start": 40.489667,
+        "end": 41.056708,
+        "duration": 0.567042
+      }
+    ]
+  },
+  "vocabulary-cards-turns-135-137.mp3": {
+    "duration": 46.61,
+    "mean_volume_db": -19.8,
+    "max_volume_db": -3.6,
+    "silences": [
+      {
+        "start": 5.551,
+        "end": 6.239583,
+        "duration": 0.688583
+      },
+      {
+        "start": 7.149167,
+        "end": 7.672792,
+        "duration": 0.523625
+      },
+      {
+        "start": 9.999375,
+        "end": 10.587792,
+        "duration": 0.588417
+      },
+      {
+        "start": 10.986625,
+        "end": 11.69875,
+        "duration": 0.712125
+      },
+      {
+        "start": 14.912833,
+        "end": 15.478458,
+        "duration": 0.565625
+      },
+      {
+        "start": 24.296208,
+        "end": 24.96575,
+        "duration": 0.669542
+      },
+      {
+        "start": 25.415333,
+        "end": 26.01325,
+        "duration": 0.597917
+      },
+      {
+        "start": 27.473417,
+        "end": 28.426208,
+        "duration": 0.952792
+      },
+      {
+        "start": 36.417875,
+        "end": 36.910083,
+        "duration": 0.492208
+      },
+      {
+        "start": 38.064667,
+        "end": 38.542792,
+        "duration": 0.478125
+      },
+      {
+        "start": 39.137833,
+        "end": 39.788417,
+        "duration": 0.650583
+      },
+      {
+        "start": 41.07675,
+        "end": 41.709833,
+        "duration": 0.633083
+      },
+      {
+        "start": 42.324042,
+        "end": 43.028292,
+        "duration": 0.70425
+      }
+    ]
+  },
+  "vocabulary-cards-turns-138-140.mp3": {
+    "duration": 47.21,
+    "mean_volume_db": -20.2,
+    "max_volume_db": -2.9,
+    "silences": [
+      {
+        "start": 0.0,
+        "end": 0.46375,
+        "duration": 0.46375
+      },
+      {
+        "start": 5.207,
+        "end": 5.795583,
+        "duration": 0.588583
+      },
+      {
+        "start": 8.152917,
+        "end": 8.748708,
+        "duration": 0.595792
+      },
+      {
+        "start": 9.238667,
+        "end": 9.830667,
+        "duration": 0.592
+      },
+      {
+        "start": 11.994,
+        "end": 13.009125,
+        "duration": 1.015125
+      },
+      {
+        "start": 15.271,
+        "end": 15.763625,
+        "duration": 0.492625
+      },
+      {
+        "start": 23.188917,
+        "end": 24.071292,
+        "duration": 0.882375
+      },
+      {
+        "start": 25.397458,
+        "end": 26.001042,
+        "duration": 0.603583
+      },
+      {
+        "start": 26.929542,
+        "end": 27.4885,
+        "duration": 0.558958
+      },
+      {
+        "start": 29.079292,
+        "end": 29.831083,
+        "duration": 0.751792
+      },
+      {
+        "start": 30.972917,
+        "end": 31.584875,
+        "duration": 0.611958
+      },
+      {
+        "start": 34.782542,
+        "end": 35.898208,
+        "duration": 1.115667
+      },
+      {
+        "start": 40.586667,
+        "end": 41.340958,
+        "duration": 0.754292
+      },
+      {
+        "start": 43.600167,
+        "end": 44.267667,
+        "duration": 0.6675
+      },
+      {
+        "start": 44.723708,
+        "end": 45.299125,
+        "duration": 0.575417
+      }
+    ]
+  },
+  "vocabulary-cards-turns-141-143.mp3": {
+    "duration": 42.98,
+    "mean_volume_db": -19.9,
+    "max_volume_db": -3.5,
+    "silences": [
+      {
+        "start": 2.566542,
+        "end": 3.110417,
+        "duration": 0.543875
+      },
+      {
+        "start": 7.466583,
+        "end": 7.99175,
+        "duration": 0.525167
+      },
+      {
+        "start": 9.143792,
+        "end": 9.767958,
+        "duration": 0.624167
+      },
+      {
+        "start": 12.525125,
+        "end": 13.044792,
+        "duration": 0.519667
+      },
+      {
+        "start": 13.92575,
+        "end": 14.403167,
+        "duration": 0.477417
+      },
+      {
+        "start": 17.917875,
+        "end": 18.405125,
+        "duration": 0.48725
+      },
+      {
+        "start": 25.123375,
+        "end": 25.590833,
+        "duration": 0.467458
+      },
+      {
+        "start": 27.180542,
+        "end": 27.738208,
+        "duration": 0.557667
+      },
+      {
+        "start": 29.259042,
+        "end": 29.836958,
+        "duration": 0.577917
+      },
+      {
+        "start": 37.395375,
+        "end": 38.016083,
+        "duration": 0.620708
+      },
+      {
+        "start": 38.497042,
+        "end": 39.00925,
+        "duration": 0.512208
+      },
+      {
+        "start": 40.449,
+        "end": 41.036667,
+        "duration": 0.587667
+      },
+      {
+        "start": 41.552125,
+        "end": 42.059708,
+        "duration": 0.507583
+      }
+    ]
+  },
+  "vocabulary-cards-turns-144-146.mp3": {
+    "duration": 36.98,
+    "mean_volume_db": -19.9,
+    "max_volume_db": -1.5,
+    "silences": [
+      {
+        "start": 10.392167,
+        "end": 11.0135,
+        "duration": 0.621333
+      },
+      {
+        "start": 16.178833,
+        "end": 16.685333,
+        "duration": 0.5065
+      },
+      {
+        "start": 17.856167,
+        "end": 18.352042,
+        "duration": 0.495875
+      },
+      {
+        "start": 18.767708,
+        "end": 19.23525,
+        "duration": 0.467542
+      },
+      {
+        "start": 20.72925,
+        "end": 21.277125,
+        "duration": 0.547875
+      },
+      {
+        "start": 22.251542,
+        "end": 22.882417,
+        "duration": 0.630875
+      },
+      {
+        "start": 25.844208,
+        "end": 26.79875,
+        "duration": 0.954542
+      }
+    ]
+  },
+  "vocabulary-cards-turns-147-149.mp3": {
+    "duration": 52.18,
+    "mean_volume_db": -20.4,
+    "max_volume_db": -2.9,
+    "silences": [
+      {
+        "start": 2.558625,
+        "end": 3.154208,
+        "duration": 0.595583
+      },
+      {
+        "start": 7.370542,
+        "end": 8.133125,
+        "duration": 0.762583
+      },
+      {
+        "start": 10.832875,
+        "end": 11.590333,
+        "duration": 0.757458
+      },
+      {
+        "start": 13.01125,
+        "end": 13.589,
+        "duration": 0.57775
+      },
+      {
+        "start": 14.608667,
+        "end": 15.301458,
+        "duration": 0.692792
+      },
+      {
+        "start": 15.918208,
+        "end": 16.879917,
+        "duration": 0.961708
+      },
+      {
+        "start": 22.123708,
+        "end": 22.595583,
+        "duration": 0.471875
+      },
+      {
+        "start": 23.496958,
+        "end": 24.07125,
+        "duration": 0.574292
+      },
+      {
+        "start": 25.761125,
+        "end": 26.27925,
+        "duration": 0.518125
+      },
+      {
+        "start": 26.76925,
+        "end": 27.70175,
+        "duration": 0.9325
+      },
+      {
+        "start": 28.179333,
+        "end": 28.711083,
+        "duration": 0.53175
+      },
+      {
+        "start": 31.05875,
+        "end": 32.004917,
+        "duration": 0.946167
+      },
+      {
+        "start": 34.352083,
+        "end": 34.989667,
+        "duration": 0.637583
+      },
+      {
+        "start": 37.9335,
+        "end": 38.419,
+        "duration": 0.4855
+      },
+      {
+        "start": 40.249208,
+        "end": 41.240208,
+        "duration": 0.991
+      },
+      {
+        "start": 42.279417,
+        "end": 42.818583,
+        "duration": 0.539167
+      },
+      {
+        "start": 44.004958,
+        "end": 44.726875,
+        "duration": 0.721917
+      },
+      {
+        "start": 46.10125,
+        "end": 46.792083,
+        "duration": 0.690833
+      },
+      {
+        "start": 47.630958,
+        "end": 48.418667,
+        "duration": 0.787708
+      }
+    ]
+  },
+  "vocabulary-cards-turns-150-152.mp3": {
+    "duration": 38.93,
+    "mean_volume_db": -19.6,
+    "max_volume_db": -2.3,
+    "silences": [
+      {
+        "start": 7.551458,
+        "end": 8.144542,
+        "duration": 0.593083
+      },
+      {
+        "start": 10.400875,
+        "end": 11.015458,
+        "duration": 0.614583
+      },
+      {
+        "start": 18.623125,
+        "end": 19.1225,
+        "duration": 0.499375
+      },
+      {
+        "start": 27.961333,
+        "end": 28.799917,
+        "duration": 0.838583
+      },
+      {
+        "start": 35.155458,
+        "end": 35.633417,
+        "duration": 0.477958
+      }
+    ]
+  }
+}

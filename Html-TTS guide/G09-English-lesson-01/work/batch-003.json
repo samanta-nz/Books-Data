@@ -1,0 +1,32 @@
+{
+  "batch": "003-bridge-be-present-and-number-articles",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-01--bridge-be-present--3359cd3edd.weba",
+      "inputs": [
+        {"path": "work/clips/bridge-be-present-turn-016.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/bridge-be-present-turn-017.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/bridge-be-present-turn-018.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/bridge-be-present-turn-019-full.mp3", "trim_end_seconds": 15.338292, "pause_after_ms": 8000},
+        {"path": "work/clips/bridge-be-present-turn-019-full.mp3", "trim_start_seconds": 18.364917, "trim_end_seconds": 28.073917, "pause_after_ms": 8000},
+        {"path": "work/clips/bridge-be-present-turn-019-full.mp3", "trim_start_seconds": 30.511542, "pause_after_ms": 8000},
+        {"path": "work/clips/bridge-be-present-turn-020.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/bridge-be-present-turn-021-full.mp3", "trim_end_seconds": 17.274625, "pause_after_ms": 8000},
+        {"path": "work/clips/bridge-be-present-turn-021-full.mp3", "trim_start_seconds": 18.0475, "pause_after_ms": 700}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--bridge-number-articles--c153ac6131.weba",
+      "inputs": [
+        {"path": "work/clips/bridge-number-articles-turn-022.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/bridge-number-articles-turns-023-025.mp3", "trim_end_seconds": 16.038583, "pause_after_ms": 700},
+        {"path": "work/clips/bridge-number-articles-turn-024.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/bridge-number-articles-turns-023-025.mp3", "trim_start_seconds": 16.732125, "pause_after_ms": 700},
+        {"path": "work/clips/bridge-number-articles-turn-026-full.mp3", "trim_end_seconds": 12.001833, "pause_after_ms": 8000},
+        {"path": "work/clips/bridge-number-articles-turn-026-full.mp3", "trim_start_seconds": 12.845292, "pause_after_ms": 8000}
+      ]
+    }
+  ],
+  "copies": []
+}

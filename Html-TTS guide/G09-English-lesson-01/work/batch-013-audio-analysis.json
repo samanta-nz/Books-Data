@@ -1,0 +1,282 @@
+{
+  "pron-persian-consonants-turns-109-110.mp3": {
+    "duration": 46.7,
+    "mean_volume_db": -19.9,
+    "max_volume_db": -1.2,
+    "silences": [
+      {
+        "start": 3.1905,
+        "end": 3.702542,
+        "duration": 0.512042
+      },
+      {
+        "start": 13.045958,
+        "end": 13.510542,
+        "duration": 0.464583
+      },
+      {
+        "start": 15.0295,
+        "end": 15.483458,
+        "duration": 0.453958
+      },
+      {
+        "start": 19.691292,
+        "end": 20.279458,
+        "duration": 0.588167
+      },
+      {
+        "start": 23.242833,
+        "end": 23.922958,
+        "duration": 0.680125
+      },
+      {
+        "start": 33.98825,
+        "end": 34.476042,
+        "duration": 0.487792
+      },
+      {
+        "start": 38.412833,
+        "end": 38.986083,
+        "duration": 0.57325
+      },
+      {
+        "start": 43.410833,
+        "end": 43.936083,
+        "duration": 0.52525
+      }
+    ]
+  },
+  "pron-persian-consonants-turn-111.mp3": {
+    "duration": 18.53,
+    "mean_volume_db": -19.3,
+    "max_volume_db": -1.9,
+    "silences": [
+      {
+        "start": 9.202708,
+        "end": 9.827625,
+        "duration": 0.624917
+      }
+    ]
+  },
+  "pron-persian-consonants-turns-112-113.mp3": {
+    "duration": 55.42,
+    "mean_volume_db": -19.5,
+    "max_volume_db": -1.1,
+    "silences": [
+      {
+        "start": 4.220375,
+        "end": 4.77775,
+        "duration": 0.557375
+      },
+      {
+        "start": 12.562333,
+        "end": 13.454417,
+        "duration": 0.892083
+      },
+      {
+        "start": 22.238708,
+        "end": 22.870583,
+        "duration": 0.631875
+      },
+      {
+        "start": 25.8735,
+        "end": 27.184792,
+        "duration": 1.311292
+      },
+      {
+        "start": 29.554875,
+        "end": 30.052375,
+        "duration": 0.4975
+      },
+      {
+        "start": 31.522542,
+        "end": 32.113042,
+        "duration": 0.5905
+      },
+      {
+        "start": 37.248333,
+        "end": 37.833917,
+        "duration": 0.585583
+      },
+      {
+        "start": 39.501542,
+        "end": 40.197333,
+        "duration": 0.695792
+      },
+      {
+        "start": 45.238958,
+        "end": 46.045833,
+        "duration": 0.806875
+      },
+      {
+        "start": 46.459417,
+        "end": 46.984958,
+        "duration": 0.525542
+      },
+      {
+        "start": 47.35275,
+        "end": 48.002167,
+        "duration": 0.649417
+      },
+      {
+        "start": 51.91775,
+        "end": 52.454167,
+        "duration": 0.536417
+      },
+      {
+        "start": 54.882167,
+        "end": 55.36,
+        "duration": 0.477833
+      }
+    ]
+  },
+  "pron-persian-consonants-turn-114.mp3": {
+    "duration": 21.58,
+    "mean_volume_db": -19.7,
+    "max_volume_db": -2.7,
+    "silences": [
+      {
+        "start": 1.538583,
+        "end": 2.00275,
+        "duration": 0.464167
+      },
+      {
+        "start": 9.270917,
+        "end": 9.747917,
+        "duration": 0.477
+      }
+    ]
+  },
+  "pron-persian-consonants-turn-115.mp3": {
+    "duration": 21.22,
+    "mean_volume_db": -19.8,
+    "max_volume_db": -1.5,
+    "silences": [
+      {
+        "start": 4.751125,
+        "end": 5.527667,
+        "duration": 0.776542
+      },
+      {
+        "start": 8.357917,
+        "end": 8.833042,
+        "duration": 0.475125
+      },
+      {
+        "start": 11.776208,
+        "end": 12.664708,
+        "duration": 0.8885
+      },
+      {
+        "start": 15.416042,
+        "end": 15.881375,
+        "duration": 0.465333
+      }
+    ]
+  },
+  "pron-persian-consonants-turn-116.mp3": {
+    "duration": 24.53,
+    "mean_volume_db": -19.6,
+    "max_volume_db": -2.8,
+    "silences": [
+      {
+        "start": 8.494708,
+        "end": 9.087917,
+        "duration": 0.593208
+      },
+      {
+        "start": 14.232042,
+        "end": 14.926792,
+        "duration": 0.69475
+      },
+      {
+        "start": 23.976208,
+        "end": 24.48,
+        "duration": 0.503792
+      }
+    ]
+  },
+  "pron-syllables-stress-turns-117-118.mp3": {
+    "duration": 50.74,
+    "mean_volume_db": -19.7,
+    "max_volume_db": -2.2,
+    "silences": [
+      {
+        "start": 11.125708,
+        "end": 11.754417,
+        "duration": 0.628708
+      },
+      {
+        "start": 13.178875,
+        "end": 13.844417,
+        "duration": 0.665542
+      },
+      {
+        "start": 24.199417,
+        "end": 25.040792,
+        "duration": 0.841375
+      },
+      {
+        "start": 43.887083,
+        "end": 44.423417,
+        "duration": 0.536333
+      }
+    ]
+  },
+  "pron-syllables-stress-turn-119.mp3": {
+    "duration": 21.86,
+    "mean_volume_db": -19.4,
+    "max_volume_db": -2.2,
+    "silences": [
+      {
+        "start": 15.840333,
+        "end": 16.519333,
+        "duration": 0.679
+      }
+    ]
+  },
+  "pron-syllables-stress-turns-120-121.mp3": {
+    "duration": 43.97,
+    "mean_volume_db": -19.6,
+    "max_volume_db": -1.4,
+    "silences": [
+      {
+        "start": 4.067083,
+        "end": 4.66775,
+        "duration": 0.600667
+      },
+      {
+        "start": 12.913458,
+        "end": 13.378833,
+        "duration": 0.465375
+      },
+      {
+        "start": 24.666542,
+        "end": 25.18225,
+        "duration": 0.515708
+      },
+      {
+        "start": 38.613125,
+        "end": 39.116375,
+        "duration": 0.50325
+      }
+    ]
+  },
+  "pron-syllables-stress-turn-122.mp3": {
+    "duration": 22.34,
+    "mean_volume_db": -19.5,
+    "max_volume_db": -1.7,
+    "silences": [
+      {
+        "start": 8.332667,
+        "end": 9.03175,
+        "duration": 0.699083
+      },
+      {
+        "start": 18.17075,
+        "end": 18.753125,
+        "duration": 0.582375
+      }
+    ]
+  }
+}

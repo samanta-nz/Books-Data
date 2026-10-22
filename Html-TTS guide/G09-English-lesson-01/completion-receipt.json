@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-22",
+  "lesson": "prospect3-lesson-01",
+  "status": "complete",
+  "html": {
+    "file": "prospect3-lesson-01.html",
+    "bytes": 41565931,
+    "sha256": "3413982a57ebed2c94e907691ae9f1566ab6aea512e74675862ac4a935bfd0c4",
+    "self_contained": true
+  },
+  "sections": {
+    "total": 41,
+    "embedded": 41,
+    "pending": 0,
+    "source_turns": 242
+  },
+  "audio": {
+    "section_files": 41,
+    "unique_payloads": 36,
+    "format": "WebM Opus mono 48 kbps with .weba extension",
+    "all_decode_successfully": true,
+    "all_mono_opus_without_video": true,
+    "base64_payloads_verified": 41,
+    "total_section_playback_seconds": 4626.55,
+    "total_audio_file_bytes": 26801487
+  },
+  "playback": {
+    "audio_elements": 41,
+    "enabled_play_buttons": 41,
+    "disabled_play_buttons": 0,
+    "autoplay_attributes": 0,
+    "preload_none": 41,
+    "user_initiated": true,
+    "closed_section_stop_preserved": true,
+    "javascript_valid": true
+  },
+  "voices": {
+    "آرتین": "voice-02",
+    "رها": "voice-05"
+  },
+  "requested_sentence_correction": {
+    "spoken_source_verified": true,
+    "visible_equivalent_verified": true,
+    "details": "source-overrides.json"
+  },
+  "final_listening_pause_check": {
+    "file": "audio/prospect3-lesson-01--listening--89af402920.weba",
+    "expected_long_pauses": 5,
+    "detected_durations": [
+      8.821021,
+      8.653,
+      8.000021,
+      8.290167,
+      8.257938
+    ],
+    "passed": true
+  },
+  "reports": {
+    "qa": "qa-report.json",
+    "resource_audit": "work/final-resource-audit.json",
+    "progress": "progress.json",
+    "audio_receipt": "audio-receipt.json",
+    "embedding_receipt": "embedding-receipt.json",
+    "generation_logs": "generation-log.json and generation-log-002.json through generation-log-017.json"
+  }
+}

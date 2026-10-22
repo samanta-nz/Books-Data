@@ -1,0 +1,309 @@
+{
+  "batch": "016",
+  "groups": [
+    {
+      "clip": "work/clips/source-grammar-a-034-036-038.mp3",
+      "section": "source-grammar",
+      "source_turns": [
+        "prospect3-lesson-01-uploaded-source-turn-034",
+        "prospect3-lesson-01-uploaded-source-turn-036",
+        "prospect3-lesson-01-uploaded-source-turn-038"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در متنِ همین صفحه می‌خوانیم: Is there an apple on the table? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nYes there is.\n\nدر متنِ همین صفحه می‌خوانیم: There aren’t/are not many tourists in this city.\n\nدر متنِ همین صفحه می‌خوانیم: He’s not shy. = He isn’t shy.",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-034",
+          "part_index": 1,
+          "text": "در متنِ همین صفحه می‌خوانیم: Is there an apple on the table? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+          "pause_after_ms": 8000
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-034",
+          "part_index": 2,
+          "text": "Yes there is.",
+          "pause_after_ms": 700
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-036",
+          "part_index": 1,
+          "text": "در متنِ همین صفحه می‌خوانیم: There aren’t/are not many tourists in this city.",
+          "pause_after_ms": 700
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-038",
+          "part_index": 1,
+          "text": "در متنِ همین صفحه می‌خوانیم: He’s not shy. = He isn’t shy.",
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/source-grammar-r-035-037-039.mp3",
+      "section": "source-grammar",
+      "source_turns": [
+        "prospect3-lesson-01-uploaded-source-turn-035",
+        "prospect3-lesson-01-uploaded-source-turn-037",
+        "prospect3-lesson-01-uploaded-source-turn-039"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "معنی و نکتهٔ این قسمت: آیا سیبی روی میز هست؟ اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nبله، هست. an پیش از اسمِ مفرد با صدای آغازینِ واکه آمده هست؛ apple مفرد و فعل is هست.\n\nمعنی و نکتهٔ این قسمت: گردشگران زیادی در این شهر نیستن. many با اسمِ جمع آمده؛ aren ’ t همان are not هست و دو ساخت به یک معنی‌اند.\n\nمعنی و نکتهٔ این قسمت: او خجالتی نیست. کوتاه‌کردنِ he is یا is not دو راهِ معتبرِ بیانِ همین منفی هست؛ دو آپوستروف رو بی‌قاعده در یک شکل ادغام نکنین.",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-035",
+          "part_index": 1,
+          "text": "معنی و نکتهٔ این قسمت: آیا سیبی روی میز هست؟ اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+          "pause_after_ms": 8000
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-035",
+          "part_index": 2,
+          "text": "بله، هست. an پیش از اسمِ مفرد با صدای آغازینِ واکه آمده هست؛ apple مفرد و فعل is هست.",
+          "pause_after_ms": 8000
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-037",
+          "part_index": 1,
+          "text": "معنی و نکتهٔ این قسمت: گردشگران زیادی در این شهر نیستن. many با اسمِ جمع آمده؛ aren ’ t همان are not هست و دو ساخت به یک معنی‌اند.",
+          "pause_after_ms": 700
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-039",
+          "part_index": 1,
+          "text": "معنی و نکتهٔ این قسمت: او خجالتی نیست. کوتاه‌کردنِ he is یا is not دو راهِ معتبرِ بیانِ همین منفی هست؛ دو آپوستروف رو بی‌قاعده در یک شکل ادغام نکنین.",
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/source-reading-a-040-042-044.mp3",
+      "section": "source-reading",
+      "source_turns": [
+        "prospect3-lesson-01-uploaded-source-turn-040",
+        "prospect3-lesson-01-uploaded-source-turn-042",
+        "prospect3-lesson-01-uploaded-source-turn-044"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در متنِ همین صفحه می‌خوانیم: I’m Mohsen. This is my classroom.\n\nدر متنِ همین صفحه می‌خوانیم: There are 25 students in my class.\n\nدر متنِ همین صفحه می‌خوانیم: I have a lot of friends. My best friend is Vahid.",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-040",
+          "part_index": 1,
+          "text": "در متنِ همین صفحه می‌خوانیم: I’m Mohsen. This is my classroom.",
+          "pause_after_ms": 700
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-042",
+          "part_index": 1,
+          "text": "در متنِ همین صفحه می‌خوانیم: There are 25 students in my class.",
+          "pause_after_ms": 700
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-044",
+          "part_index": 1,
+          "text": "در متنِ همین صفحه می‌خوانیم: I have a lot of friends. My best friend is Vahid.",
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/source-reading-a-046-048.mp3",
+      "section": "source-reading",
+      "source_turns": [
+        "prospect3-lesson-01-uploaded-source-turn-046",
+        "prospect3-lesson-01-uploaded-source-turn-048"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در متنِ همین صفحه می‌خوانیم: He’s a good student. He is helpful and hard-working, but he is not very careful.\n\nدر متنِ همین صفحه می‌خوانیم: He usually forgets important things. It’s a big problem.",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-046",
+          "part_index": 1,
+          "text": "در متنِ همین صفحه می‌خوانیم: He’s a good student. He is helpful and hard-working, but he is not very careful.",
+          "pause_after_ms": 700
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-048",
+          "part_index": 1,
+          "text": "در متنِ همین صفحه می‌خوانیم: He usually forgets important things. It’s a big problem.",
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/source-reading-r-041-043-045.mp3",
+      "section": "source-reading",
+      "source_turns": [
+        "prospect3-lesson-01-uploaded-source-turn-041",
+        "prospect3-lesson-01-uploaded-source-turn-043",
+        "prospect3-lesson-01-uploaded-source-turn-045"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "معنی و نکتهٔ این قسمت: من محسن هستم. این کلاس من هست. I ’ m به I am باز می‌شه؛ this برای معرفیِ چیزی نزدیک و my برای مالکیت به کار رفته هست.\n\nمعنی و نکتهٔ این قسمت: در کلاس من ۲۵ دانش‌آموز وجود دارد. students جمع هست؛ there are وجودِ چند نفر رو بیان می‌کند و there در این ساخت نامِ یک مکان نیست.\n\nمعنی و نکتهٔ این قسمت: من دوستان زیادی دارم. بهترین دوستم وحید هست. have در جملهٔ اول فعل اصلی هست، اما is در جملهٔ دوم دوست رو معرفی می‌کند؛ هر فعلِ زمان حال، be نیست.",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-041",
+          "part_index": 1,
+          "text": "معنی و نکتهٔ این قسمت: من محسن هستم. این کلاس من هست. I ’ m به I am باز می‌شه؛ this برای معرفیِ چیزی نزدیک و my برای مالکیت به کار رفته هست.",
+          "pause_after_ms": 700
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-043",
+          "part_index": 1,
+          "text": "معنی و نکتهٔ این قسمت: در کلاس من ۲۵ دانش‌آموز وجود دارد. students جمع هست؛ there are وجودِ چند نفر رو بیان می‌کند و there در این ساخت نامِ یک مکان نیست.",
+          "pause_after_ms": 700
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-045",
+          "part_index": 1,
+          "text": "معنی و نکتهٔ این قسمت: من دوستان زیادی دارم. بهترین دوستم وحید هست. have در جملهٔ اول فعل اصلی هست، اما is در جملهٔ دوم دوست رو معرفی می‌کند؛ هر فعلِ زمان حال، be نیست.",
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/source-reading-r-047-049.mp3",
+      "section": "source-reading",
+      "source_turns": [
+        "prospect3-lesson-01-uploaded-source-turn-047",
+        "prospect3-lesson-01-uploaded-source-turn-049"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "معنی و نکتهٔ این قسمت: او دانش‌آموز خوبی هست. او کمک‌کننده و سخت‌کوش هست، ولی چندان بادقت نیست. but میان دو توصیف تفاوت ایجاد می‌کند؛ منفیِ not very careful رو به بی‌دقتیِ همیشگی یا ناتوانی تعمیم ندهید.\n\nمعنی و نکتهٔ این قسمت: او معمولاً چیزهای مهم رو فراموش می‌کند. این مشکل بزرگی هست. forgets فعلِ اصلی و usually قید تکرار هست؛ It ’ s به این مشکل برمی‌گردد. در تشخیصِ be ، have و forgets رو زیرخط نزنید.",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-047",
+          "part_index": 1,
+          "text": "معنی و نکتهٔ این قسمت: او دانش‌آموز خوبی هست. او کمک‌کننده و سخت‌کوش هست، ولی چندان بادقت نیست. but میان دو توصیف تفاوت ایجاد می‌کند؛ منفیِ not very careful رو به بی‌دقتیِ همیشگی یا ناتوانی تعمیم ندهید.",
+          "pause_after_ms": 700
+        },
+        {
+          "source_turn": "prospect3-lesson-01-uploaded-source-turn-049",
+          "part_index": 1,
+          "text": "معنی و نکتهٔ این قسمت: او معمولاً چیزهای مهم رو فراموش می‌کند. این مشکل بزرگی هست. forgets فعلِ اصلی و usually قید تکرار هست؛ It ’ s به این مشکل برمی‌گردد. در تشخیصِ be ، have و forgets رو زیرخط نزنید.",
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/listening-a-243-instruction-247.mp3",
+      "section": "listening",
+      "source_turns": [
+        "prospect3-lesson-01-turn-243",
+        "prospect3-lesson-01--listening--instruction-1",
+        "prospect3-lesson-01-turn-247"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "این گفت‌وگوی تألیفی رو با دو نقش تمرین کنین. ابتدا پرسش‌ها رو بخونین، سپس در اجرای دوصدایی به پیام کلی و جزئیات توجه کنین. برای هر پاسخ، جملهٔ شاهد رو پیدا کنین؛ در تکرار دوم نقش‌ها رو عوض کنین و یک جزئیات رو آگاهانه تغییر دهید.\n\nاکنون پخش صدا رو متوقف کنین و تمرین‌های این بخش رو در صفحه حل کنین. پس از پاسخ‌دادن، راهنماها و پاسخ‌های صفحه رو برای بازبینی ببینین.\n\nWho is your best friend? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-turn-243",
+          "part_index": 1,
+          "text": "این گفت‌وگوی تألیفی رو با دو نقش تمرین کنین. ابتدا پرسش‌ها رو بخونین، سپس در اجرای دوصدایی به پیام کلی و جزئیات توجه کنین. برای هر پاسخ، جملهٔ شاهد رو پیدا کنین؛ در تکرار دوم نقش‌ها رو عوض کنین و یک جزئیات رو آگاهانه تغییر دهید.",
+          "pause_after_ms": 700
+        },
+        {
+          "source_turn": "prospect3-lesson-01--listening--instruction-1",
+          "part_index": 1,
+          "text": "اکنون پخش صدا رو متوقف کنین و تمرین‌های این بخش رو در صفحه حل کنین. پس از پاسخ‌دادن، راهنماها و پاسخ‌های صفحه رو برای بازبینی ببینین.",
+          "pause_after_ms": 8000
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-247",
+          "part_index": 1,
+          "text": "Who is your best friend? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+          "pause_after_ms": 8000
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/listening-a-249-251-253.mp3",
+      "section": "listening",
+      "source_turns": [
+        "prospect3-lesson-01-turn-249",
+        "prospect3-lesson-01-turn-251",
+        "prospect3-lesson-01-turn-253"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در نقش اول، پاسخ کوتاه: What is he like? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nدر نقش اول، پاسخ کوتاه: Is he talkative? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nAre your other friends helpful too? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-turn-249",
+          "part_index": 1,
+          "text": "در نقش اول، پاسخ کوتاه: What is he like? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+          "pause_after_ms": 8000
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-251",
+          "part_index": 1,
+          "text": "در نقش اول، پاسخ کوتاه: Is he talkative? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+          "pause_after_ms": 8000
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-253",
+          "part_index": 1,
+          "text": "Are your other friends helpful too? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+          "pause_after_ms": 8000
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/listening-r-248-250.mp3",
+      "section": "listening",
+      "source_turns": [
+        "prospect3-lesson-01-turn-248",
+        "prospect3-lesson-01-turn-250"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "My best friend is Amir.\n\nHe is brave and helpful.",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-turn-248",
+          "part_index": 1,
+          "text": "My best friend is Amir.",
+          "pause_after_ms": 700
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-250",
+          "part_index": 1,
+          "text": "He is brave and helpful.",
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/listening-r-252-254.mp3",
+      "section": "listening",
+      "source_turns": [
+        "prospect3-lesson-01-turn-252",
+        "prospect3-lesson-01-turn-254"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "No, he is not. He is a bit quiet.\n\nYes, they are. Our class is a friendly group.",
+      "segments": [
+        {
+          "source_turn": "prospect3-lesson-01-turn-252",
+          "part_index": 1,
+          "text": "No, he is not. He is a bit quiet.",
+          "pause_after_ms": 700
+        },
+        {
+          "source_turn": "prospect3-lesson-01-turn-254",
+          "part_index": 1,
+          "text": "Yes, they are. Our class is a friendly group.",
+          "pause_after_ms": 700
+        }
+      ]
+    }
+  ]
+}

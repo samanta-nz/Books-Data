@@ -1,0 +1,49 @@
+{
+  "batch": "001-corrected-start-goals-shared-practice-and-examples-01-02",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-01--start--8e15072791.weba",
+      "inputs": [
+        {"path": "work/clips/start-turn-035.mp3", "pause_after_ms": 700},
+        {"path": "../G09-English-sample/prospect3-lesson-01--start--8e15072791.weba", "trim_start_seconds": 22.300667, "pause_after_ms": 700}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--goals--dd1564f58c.weba",
+      "inputs": [
+        {"path": "work/clips/goals-turn-001.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/goals-turn-002.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/goals-turn-003a.mp3", "pause_after_ms": 8000},
+        {"path": "work/clips/goals-turn-003b.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/goals-turn-004.mp3", "pause_after_ms": 700},
+        {"path": "work/clips/goals-turn-005.mp3", "pause_after_ms": 700}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--local-prerequisite-check--8720de7b05.weba",
+      "inputs": [
+        {"path": "work/clips/shared-practice-prompt.mp3", "pause_after_ms": 8000}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--examples--e9ad08c159.weba",
+      "inputs": [
+        {"path": "work/clips/examples-turn-178.mp3", "pause_after_ms": 8000}
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--examples-02--13e9a978ff.weba",
+      "inputs": [
+        {"path": "work/clips/examples-02-turn-182.mp3", "pause_after_ms": 8000}
+      ]
+    }
+  ],
+  "copies": [
+    {"source": "audio/prospect3-lesson-01--local-prerequisite-check--8720de7b05.weba", "target": "audio/prospect3-lesson-01--entry--8720de7b05.weba"},
+    {"source": "audio/prospect3-lesson-01--local-prerequisite-check--8720de7b05.weba", "target": "audio/prospect3-lesson-01--official-pictures--8720de7b05.weba"},
+    {"source": "audio/prospect3-lesson-01--local-prerequisite-check--8720de7b05.weba", "target": "audio/prospect3-lesson-01--lab--8720de7b05.weba"},
+    {"source": "audio/prospect3-lesson-01--local-prerequisite-check--8720de7b05.weba", "target": "audio/prospect3-lesson-01--writing--8720de7b05.weba"},
+    {"source": "audio/prospect3-lesson-01--local-prerequisite-check--8720de7b05.weba", "target": "audio/prospect3-lesson-01--quiz--8720de7b05.weba"}
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "batch": "016-source-grammar-and-source-reading",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-01--source-grammar--ea324716c7.weba",
+      "inputs": [
+        {
+          "path": "work/clips/source-grammar-a-028-030-032.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 4.820625
+        },
+        {
+          "path": "work/clips/source-grammar-r-029-031-033.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 13.285958
+        },
+        {
+          "path": "work/clips/source-grammar-a-028-030-032.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 5.831417,
+          "trim_end_seconds": 11.505292
+        },
+        {
+          "path": "work/clips/source-grammar-r-029-031-033.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 14.319125,
+          "trim_end_seconds": 24.801042
+        },
+        {
+          "path": "work/clips/source-grammar-a-028-030-032.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 12.409125
+        },
+        {
+          "path": "work/clips/source-grammar-r-029-031-033.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 25.77375
+        },
+        {
+          "path": "work/clips/source-grammar-a-034-036-038.mp3",
+          "pause_after_ms": 8000,
+          "trim_end_seconds": 11.203958
+        },
+        {
+          "path": "work/clips/source-grammar-a-034-036-038.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 11.99175,
+          "trim_end_seconds": 13.3
+        },
+        {
+          "path": "work/clips/source-grammar-r-035-037-039.mp3",
+          "pause_after_ms": 8000,
+          "trim_end_seconds": 12.344542
+        },
+        {
+          "path": "work/clips/source-grammar-r-035-037-039.mp3",
+          "pause_after_ms": 8000,
+          "trim_start_seconds": 14.393875,
+          "trim_end_seconds": 24.212042
+        },
+        {
+          "path": "work/clips/source-grammar-a-034-036-038.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 14.087083,
+          "trim_end_seconds": 20.560167
+        },
+        {
+          "path": "work/clips/source-grammar-r-035-037-039.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 25.624292,
+          "trim_end_seconds": 38.939625
+        },
+        {
+          "path": "work/clips/source-grammar-a-034-036-038.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 21.353333
+        },
+        {
+          "path": "work/clips/source-grammar-r-035-037-039.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 40.723875
+        }
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-01--source-reading--10bfa82e24.weba",
+      "inputs": [
+        {
+          "path": "work/clips/source-reading-a-040-042-044.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 6.108917
+        },
+        {
+          "path": "work/clips/source-reading-r-041-043-045.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 16.252833
+        },
+        {
+          "path": "work/clips/source-reading-a-040-042-044.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 7.013,
+          "trim_end_seconds": 12.398583
+        },
+        {
+          "path": "work/clips/source-reading-r-041-043-045.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 17.945292,
+          "trim_end_seconds": 33.843375
+        },
+        {
+          "path": "work/clips/source-reading-a-040-042-044.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 13.353167
+        },
+        {
+          "path": "work/clips/source-reading-r-041-043-045.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 35.486208
+        },
+        {
+          "path": "work/clips/source-reading-a-046-048.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 9.550333
+        },
+        {
+          "path": "work/clips/source-reading-r-047-049.mp3",
+          "pause_after_ms": 700,
+          "trim_end_seconds": 20.077833
+        },
+        {
+          "path": "work/clips/source-reading-a-046-048.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 10.698042
+        },
+        {
+          "path": "work/clips/source-reading-r-047-049.mp3",
+          "pause_after_ms": 700,
+          "trim_start_seconds": 21.657375
+        }
+      ]
+    }
+  ],
+  "copies": []
+}

@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-22",
+  "generator": "Arena.ai generate_speech",
+  "batch": "009",
+  "sections": [
+    "source-melody",
+    "examples-03",
+    "examples-05",
+    "examples-06",
+    "book-source-pages",
+    "sources"
+  ],
+  "source_turn_count": 14,
+  "temporary_clips": 10,
+  "clips": [
+    {
+      "clip": "work/clips/source-melody-a-019-021.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-uploaded-source-turn-019",
+        "prospect3-lesson-01-uploaded-source-turn-021"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در نوبتِ Teacher، متنِ کتاب این هست: Farzaneh is a clever student. Everybody likes her.\n\nدر نوبتِ Samira، متنِ کتاب این هست: Yes. I know. She is also very helpful.",
+      "bytes": 34029,
+      "sha256": "7cc2d8d0f1c16337986defb500a759d8f3d3a3aa7a118edc1c055134a29d0c98"
+    },
+    {
+      "clip": "work/clips/source-melody-r-020-022.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-uploaded-source-turn-020",
+        "prospect3-lesson-01-uploaded-source-turn-022"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "معنی و نکتهٔ این قسمت: فرزانه دانش‌آموز باهوشی هست. همه او رو دوست دارند. خبرِ معمولی در الگوی این صفحه با افتِ آهنگ پایان می‌یابد؛ likes فعلِ دوست‌داشتن هست.\n\nمعنی و نکتهٔ این قسمت: بله، می‌دانم. او بسیار کمک‌کننده هم هست. also اطلاعات تازه‌ای به توصیف قبلی اضافه می‌کند.",
+      "bytes": 104493,
+      "sha256": "607bfbeb37dc0a7aa7cbd4b089ade7900e3301500d1fcda53f48009bfae390fe"
+    },
+    {
+      "clip": "work/clips/source-melody-a-023-025.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-uploaded-source-turn-023",
+        "prospect3-lesson-01-uploaded-source-turn-025"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در نوبتِ Teacher، متنِ کتاب این هست: Well, you can ask her for help.\n\nدر نوبتِ Samira، متنِ کتاب این هست: Ok, I’ll ask her to help me with my English.",
+      "bytes": 29229,
+      "sha256": "bf488a280549195d75dac43e365a24b91e2e0a78357850276474c3400aee20af"
+    },
+    {
+      "clip": "work/clips/source-melody-r-024-026.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-uploaded-source-turn-024",
+        "prospect3-lesson-01-uploaded-source-turn-026"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "معنی و نکتهٔ این قسمت: خب، می‌توانی از او کمک بخواهی. her پس از ask مفعول هست؛ اینجا نامِ یک صفت نیست.\n\nمعنی و نکتهٔ این قسمت: باشه، از او می‌خوام در انگلیسی‌ام کمکم کند. I ’ ll کوتاه‌شدهٔ I will هست؛ در این مرحله عبارتِ کاربردی رو یکجا یاد بگیرید، بی‌آنکه آن رو به زمان حال ساده تبدیل کنین.",
+      "bytes": 109869,
+      "sha256": "a9822936a99c3f38c57cc1ef374a43c452ee3ee8bc2cbc26115287bd980c9a0b"
+    },
+    {
+      "clip": "work/clips/source-melody-a-027.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-uploaded-source-turn-027"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "جهتِ آهنگ رو با هدفِ گوینده بخونین: خبرِ معمولی، سؤالِ بله/خیر، سؤالِ اطلاعاتی و تعجب یک پیام ندارند. متن، مسیر تمرین رو نشان می‌ده؛ درستیِ اجرای شنیداریِ شما با شنیدن و مقایسهٔ واقعی روشن می‌شه، نه فقط دیدنِ علامتِ سؤال.",
+      "bytes": 93549,
+      "sha256": "4f415269e0ba446344d697fc2cae0a733c4645b48d71bf5c7f3bd5a28f85dec7"
+    },
+    {
+      "clip": "work/clips/examples-03-turn-186-retry.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-186"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "صورت مثال: گفتهٔ فرضیِ همکلاسی\n\nI am a bit serious, but I am not rude.\n\nرو از دیدِ شخصِ دیگری گزارش کنین.\n\nاکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 57261,
+      "sha256": "30a937fcf571210bea40c3b021b8c8deee1e0e841b3fdd6c8336ed34baa8ff11"
+    },
+    {
+      "clip": "work/clips/examples-05-turn-194.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-194"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "صورت مثال: جملهٔ The new student is quiet. رو منفی و پرسشی کنین. اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 47853,
+      "sha256": "98aef35d788842afba283bafc04104aaf9b3ef47e3ff863de279859854e4847d"
+    },
+    {
+      "clip": "work/clips/examples-06-turn-198.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-turn-198"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "صورت مثال: برای سه کتاب روی یک میز جمله و سؤال بسازید. اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "bytes": 47853,
+      "sha256": "68e5240372b5294e1e715a840a8b8465cf55a7e28e734d59952a075b5a13a78f"
+    },
+    {
+      "clip": "work/clips/book-source-pages-turn-050.mp3",
+      "source_turns": [
+        "prospect3-lesson-01-uploaded-source-turn-050"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در این بخش، صفحه‌های کتابِ مربوط به همین درس رو می‌بینید. پس از تدریس، جمله یا فعالیتِ مورد نظر رو در صفحهٔ خودش پیدا کنین. برای خواندنِ نوشته‌های ریز، بزرگ‌نمایی رو بزنید؛ پاسخِ تمرین رو پیش از دیدنِ راهنما خودتان بنویسین.",
+      "bytes": 73869,
+      "sha256": "52d8e7ac9a71d0288ef557a1dda48ee7d64a605adb9b274d6c366f7b74a2cc5b"
+    },
+    {
+      "clip": "work/clips/sources-instruction-1.mp3",
+      "source_turns": [
+        "prospect3-lesson-01--sources--instruction-1"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "منابع و شمارهٔ صفحه‌های مبنای این درس در همین بخش آمده‌اند. برای پیدا‌کردن شاهد، نام فایل و شمارهٔ صفحهٔ منبع رو با ارجاعِ کنار توضیح مقایسه کنین.",
+      "bytes": 56781,
+      "sha256": "1570c58c03b5253e0044472e0ad79369ab0c361a4db81ae0aab1b7c0a7c9d041"
+    }
+  ],
+  "assembly_manifest": "work/batch-009.json",
+  "quality_review": "work/batch-009-quality-review.json",
+  "assembly_note": "Four same-voice temporary pairs are split at measured silence boundaries and restored to source-melody turn order 019 through 027. Practice and source-information sections retain their trailing 8000-ms pauses."
+}
