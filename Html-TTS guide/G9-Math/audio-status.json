@@ -30,18 +30,20 @@
   {
    "section": "concept-4",
    "parts_required": 8,
-   "parts_done": 6,
-   "complete": false,
-   "audio_file": null,
-   "audio_seconds": null
+   "parts_done": 8,
+   "complete": true,
+   "audio_file": "ryazif01d01--concept-4.weba",
+   "audio_seconds": 274.21,
+   "audio_bytes": 1159499
   },
   {
    "section": "concept-5",
-   "parts_required": 7,
-   "parts_done": 3,
-   "complete": false,
-   "audio_file": null,
-   "audio_seconds": null
+   "parts_required": 8,
+   "parts_done": 8,
+   "complete": true,
+   "audio_file": "ryazif01d01--concept-5.weba",
+   "audio_seconds": 309.89,
+   "audio_bytes": 1314464
   },
   {
    "section": "examples",
@@ -124,8 +126,8 @@
  ],
  "lesson": "ryazif01d01",
  "sections_total": 14,
- "sections_with_audio": 9,
- "parts_total": 82,
- "parts_done": 32,
- "audio_seconds_total": 1129.5
+ "sections_with_audio": 11,
+ "parts_total": 83,
+ "parts_done": 39,
+ "audio_seconds_total": 1713.6
 }
