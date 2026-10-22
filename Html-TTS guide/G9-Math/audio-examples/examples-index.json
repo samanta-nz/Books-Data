@@ -1,0 +1,47 @@
+{
+ "lesson": "ryazif01d01",
+ "section": "examples",
+ "combined": {
+  "file": "ryazif01d01--examples.weba",
+  "duration_seconds": 607.84,
+  "bytes": 2515222
+ },
+ "examples": [
+  {
+   "index": 1,
+   "title": "آیا «دو عدد اوّلِ کوچک‌تر از ۱۲» یک مجموعهٔ مشخص رو تعیین می‌کنه؟",
+   "file": "ryazif01d01--example-01.weba",
+   "seconds": 89.62
+  },
+  {
+   "index": 2,
+   "title": "شمارنده‌های مرکب ۶۰ رو بنویس و بگو چند عضو داره",
+   "file": "ryazif01d01--example-02.weba",
+   "seconds": 111.02
+  },
+  {
+   "index": 3,
+   "title": "اگه مجموعهٔ اِی به شکل دو، دو، چهار، شش، چهار نوشته شده باشه، عضوهای متمایز و درستی چهار عضو اِی هست و پنج عضو…",
+   "file": "ryazif01d01--example-03.weba",
+   "seconds": 91.9
+  },
+  {
+   "index": 4,
+   "title": "در نمودار وِن صفحهٔ ۳، عضوهای هر دو مجموعه و جای حرف کِی کوچک رو مشخص کن",
+   "file": "ryazif01d01--example-04.weba",
+   "seconds": 116.12
+  },
+  {
+   "index": 5,
+   "title": "مجموعهٔ عددهای اوّلِ زوج و دورقمی رو با مجموعهٔ عددهای اوّلِ زوج مقایسه کن",
+   "file": "ryazif01d01--example-05.weba",
+   "seconds": 74.42
+  },
+  {
+   "index": 6,
+   "title": "عبارت «۵ عدد طبیعی بین ۱ و ۲۰» رو با افزودن یک شرط به مجموعه‌ای یکتا تبدیل کن",
+   "file": "ryazif01d01--example-06.weba",
+   "seconds": 114.16
+  }
+ ]
+}

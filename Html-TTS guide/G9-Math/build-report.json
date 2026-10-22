@@ -755,6 +755,203 @@
      "chars": 198
     }
    ]
+  },
+  {
+   "lesson": "ryazif01d01",
+   "section": "examples",
+   "tts_input": "arena-input/ryazif01d01/ryazif01d01--examples.tts.txt",
+   "audio_filename": "ryazif01d01--examples.weba",
+   "audio_path": "/home/user/Books-Data/Html-TTS guide/G9-Math/audio/ryazif01d01--examples.weba",
+   "duration_seconds": 607.84,
+   "bytes": 2515222,
+   "parts": 27,
+   "examples": 6,
+   "per_example": [
+    {
+     "index": 1,
+     "title": "آیا «دو عدد اوّلِ کوچک‌تر از ۱۲» یک مجموعهٔ مشخص رو تعیین می‌کنه؟",
+     "file": "ryazif01d01--example-01.weba",
+     "duration_seconds": 89.62,
+     "bytes": 373462,
+     "segments": [
+      {
+       "part": 1,
+       "speaker": "فرسام",
+       "seconds": 26.68
+      },
+      {
+       "part": 2,
+       "speaker": "سروناز",
+       "seconds": 12.0
+      },
+      {
+       "part": 3,
+       "speaker": "فرسام",
+       "seconds": 35.24
+      },
+      {
+       "part": 4,
+       "speaker": "سروناز",
+       "seconds": 13.0
+      }
+     ]
+    },
+    {
+     "index": 2,
+     "title": "شمارنده‌های مرکب ۶۰ رو بنویس و بگو چند عضو داره",
+     "file": "ryazif01d01--example-02.weba",
+     "duration_seconds": 111.02,
+     "bytes": 461393,
+     "segments": [
+      {
+       "part": 5,
+       "speaker": "فرسام",
+       "seconds": 26.72
+      },
+      {
+       "part": 6,
+       "speaker": "سروناز",
+       "seconds": 12.88
+      },
+      {
+       "part": 7,
+       "speaker": "فرسام",
+       "seconds": 52.44
+      },
+      {
+       "part": 8,
+       "speaker": "سروناز",
+       "seconds": 16.28
+      }
+     ]
+    },
+    {
+     "index": 3,
+     "title": "اگه مجموعهٔ اِی به شکل دو، دو، چهار، شش، چهار نوشته شده باشه، عضوهای متمایز و درستی چهار عضو اِی هست و پنج عضو…",
+     "file": "ryazif01d01--example-03.weba",
+     "duration_seconds": 91.9,
+     "bytes": 384630,
+     "segments": [
+      {
+       "part": 9,
+       "speaker": "فرسام",
+       "seconds": 33.92
+      },
+      {
+       "part": 10,
+       "speaker": "سروناز",
+       "seconds": 12.24
+      },
+      {
+       "part": 11,
+       "speaker": "فرسام",
+       "seconds": 29.4
+      },
+      {
+       "part": 12,
+       "speaker": "سروناز",
+       "seconds": 13.64
+      }
+     ]
+    },
+    {
+     "index": 4,
+     "title": "در نمودار وِن صفحهٔ ۳، عضوهای هر دو مجموعه و جای حرف کِی کوچک رو مشخص کن",
+     "file": "ryazif01d01--example-04.weba",
+     "duration_seconds": 116.12,
+     "bytes": 487434,
+     "segments": [
+      {
+       "part": 13,
+       "speaker": "فرسام",
+       "seconds": 25.0
+      },
+      {
+       "part": 14,
+       "speaker": "سروناز",
+       "seconds": 12.24
+      },
+      {
+       "part": 15,
+       "speaker": "فرسام",
+       "seconds": 38.92
+      },
+      {
+       "part": 16,
+       "speaker": "سروناز",
+       "seconds": 13.44
+      },
+      {
+       "part": 17,
+       "speaker": "فرسام",
+       "seconds": 22.92
+      }
+     ]
+    },
+    {
+     "index": 5,
+     "title": "مجموعهٔ عددهای اوّلِ زوج و دورقمی رو با مجموعهٔ عددهای اوّلِ زوج مقایسه کن",
+     "file": "ryazif01d01--example-05.weba",
+     "duration_seconds": 74.42,
+     "bytes": 310566,
+     "segments": [
+      {
+       "part": 18,
+       "speaker": "فرسام",
+       "seconds": 16.76
+      },
+      {
+       "part": 19,
+       "speaker": "سروناز",
+       "seconds": 12.8
+      },
+      {
+       "part": 20,
+       "speaker": "فرسام",
+       "seconds": 28.96
+      },
+      {
+       "part": 21,
+       "speaker": "سروناز",
+       "seconds": 13.2
+      }
+     ]
+    },
+    {
+     "index": 6,
+     "title": "عبارت «۵ عدد طبیعی بین ۱ و ۲۰» رو با افزودن یک شرط به مجموعه‌ای یکتا تبدیل کن",
+     "file": "ryazif01d01--example-06.weba",
+     "duration_seconds": 114.16,
+     "bytes": 479231,
+     "segments": [
+      {
+       "part": 22,
+       "speaker": "فرسام",
+       "seconds": 27.12
+      },
+      {
+       "part": 23,
+       "speaker": "سروناز",
+       "seconds": 12.6
+      },
+      {
+       "part": 24,
+       "speaker": "فرسام",
+       "seconds": 44.68
+      },
+      {
+       "part": 25,
+       "speaker": "سروناز",
+       "seconds": 16.76
+      },
+      {
+       "part": 26,
+       "speaker": "فرسام",
+       "seconds": 9.4
+      }
+     ]
+    }
+   ]
   }
  ]
 }

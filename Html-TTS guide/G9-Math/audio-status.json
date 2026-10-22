@@ -48,10 +48,11 @@
   {
    "section": "examples",
    "parts_required": 27,
-   "parts_done": 8,
-   "complete": false,
-   "audio_file": null,
-   "audio_seconds": null
+   "parts_done": 27,
+   "complete": true,
+   "audio_file": "ryazif01d01--examples.weba",
+   "audio_seconds": 607.84,
+   "audio_bytes": 2515222
   },
   {
    "section": "lab",
@@ -128,8 +129,8 @@
  ],
  "lesson": "ryazif01d01",
  "sections_total": 14,
- "sections_with_audio": 13,
+ "sections_with_audio": 14,
  "parts_total": 91,
- "parts_done": 72,
- "audio_seconds_total": 2304.3
+ "parts_done": 91,
+ "audio_seconds_total": 2912.1
 }
