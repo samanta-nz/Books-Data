@@ -103,4 +103,4 @@ python3 analyze_voice.py voice-00-female.mp3 voice-02-male.mp3
 | مرد | ✅ تأیید شد («صوت ۴») | `approved/male-approved.mp3` | `candidates/r3-cand-f-male.mp3` |
 
 ثبت رسمی در `approved/approved.json` است (شامل سنجه‌ها، MD5 منبع و تاریخ تأیید).
-صفحهٔ شنیدن نمونه‌های طولانی: `long-samples.html`.
+صفحهٔ شنیدن نمونه‌های طولانی: `long-samples.html`. صفحهٔ مرجع نهایی دو صدای تأییدشده: `approved.html`.

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>صداهای تأییدشده — نهایی</title>
+<style>
+  :root{--bg:#0d1412;--card:#151f1b;--line:#26362e;--ink:#eef5f0;--muted:#9db3a8;
+        --f:#4ec9a0;--m:#7aa2ff}
+  *{box-sizing:border-box}
+  body{margin:0;padding:30px 18px 60px;font-family:"Vazirmatn","Segoe UI",Tahoma,sans-serif;
+       background:radial-gradient(1100px 520px at 12% -10%,#1a3329 0%,var(--bg) 60%);color:var(--ink)}
+  .wrap{max-width:900px;margin:0 auto}
+  h1{font-size:1.55rem;margin:0 0 8px}
+  .sub{color:var(--muted);font-size:.92rem;line-height:1.9;margin:0 0 24px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:700px){.row{grid-template-columns:1fr}}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01)),var(--card);
+        border:1px solid var(--line);border-radius:18px;padding:18px}
+  .card.f{border-color:rgba(78,201,160,.6);box-shadow:0 0 0 1px rgba(78,201,160,.18) inset}
+  .card.m{border-color:rgba(122,162,255,.6);box-shadow:0 0 0 1px rgba(122,162,255,.18) inset}
+  .tag{display:inline-block;font-size:.73rem;padding:3px 10px;border-radius:999px;margin-bottom:10px}
+  .tf{color:var(--f);border:1px solid rgba(78,201,160,.5);background:rgba(78,201,160,.1)}
+  .tm{color:var(--m);border:1px solid rgba(122,162,255,.5);background:rgba(122,162,255,.1)}
+  h2{font-size:1.1rem;margin:0 0 6px}
+  .lbl{font-size:.78rem;color:var(--muted);margin:14px 0 6px}
+  .meta{color:var(--muted);font-size:.78rem;line-height:1.9;margin:6px 0 8px}
+  audio{width:100%}
+  code{font-size:.78rem;background:rgba(255,255,255,.06);padding:1px 6px;border-radius:6px;direction:ltr;display:inline-block}
+  .hash{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:.72rem;color:var(--muted);line-height:2.1;word-break:break-all}
+  .ok{color:var(--f)}
+  footer{color:var(--muted);font-size:.78rem;line-height:2;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>صداهای تأییدشده — نسخهٔ نهایی</h1>
+  <p class="sub">
+    این صفحه فقط دو صدای تأییدشده را نگه می‌دارد؛ هر صدا با دو نمونه: کوتاه (هم‌متن با مرجع، برای مقایسه) و
+    طولانی (متن ۱۰۴۷ نویسه‌ای با جملهٔ بلند، برای آزمون متن واقعی). همهٔ فایل‌ها در <code>approved/</code> و <code>long/</code>.
+  </p>
+
+  <div class="row">
+    <section class="card f">
+      <span class="tag tf">✅ تأییدشده</span>
+      <h2>صدای زن</h2>
+      <p class="meta">منبع: کاندید B دور دوم · شباهت به مرجع ۰٫۹۳۷ · F0 میانه ۱۹۰٫۵ (مرجع ۱۸۸٫۲)<br>
+      بایگانی: <code>approved/female-approved.mp3</code></p>
+
+      <p class="lbl">نمونهٔ کوتاه — ۲۰٫۶ ثانیه</p>
+      <audio controls preload="metadata" src="approved/female-approved.mp3"></audio>
+
+      <p class="lbl">نمونهٔ طولانی — ۷۸٫۱۷ ثانیه</p>
+      <audio controls preload="metadata" src="long/long-female-approved.mp3"></audio>
+
+      <p class="meta" style="margin-top:10px">F0 میانه ۱۸۳٫۹ · IQR ۸۷٫۱ · مرکز طیفی ۱۵۸۷ · ۱۰٫۵ هجا/ث</p>
+
+      <div class="hash">
+        <span class="ok">✔ کوتاه و طولانی یک صدا هستند</span> — شباهت سنجیده‌شده ۰٫۹۵۳<br>
+        MD5 کوتاه: 49ce237253431f061fb6b53753699ee7<br>
+        MD5 طولانی: 05b91f748f1fc130f87d5276431ec97a
+      </div>
+    </section>
+
+    <section class="card m">
+      <span class="tag tm">✅ تأییدشده</span>
+      <h2>صدای مرد</h2>
+      <p class="meta">منبع: «صوت ۴» = کاندید F دور سوم · شباهت به مرجع ۰٫۸۳۰ (در متن بلند ۰٫۸۸۰)<br>
+      بایگانی: <code>approved/male-approved.mp3</code></p>
+
+      <p class="lbl">نمونهٔ کوتاه — ۱۹٫۰۸ ثانیه</p>
+      <audio controls preload="metadata" src="approved/male-approved.mp3"></audio>
+
+      <p class="lbl">نمونهٔ طولانی — ۷۵٫۰۴ ثانیه</p>
+      <audio controls preload="metadata" src="long/long-male-f.mp3"></audio>
+
+      <p class="meta" style="margin-top:10px">F0 میانه ۱۵۲٫۴ · IQR ۱۰۳٫۸ · مرکز طیفی ۱۸۶۲ · ۱۱٫۹ هجا/ث</p>
+
+      <div class="hash">
+        MD5 کوتاه: 71e1182ad44f413216ca7fe6688ce7b0<br>
+        MD5 طولانی: a15e0ea24c66db4ae697ca92400be905<br>
+        جایگزین تأییدنشده: <code>long/long-male-e.mp3</code> (کاندید E)
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    سابقهٔ کامل انتخاب‌ها با سنجه‌ها در <code>approved/approved.json</code> است.
+    صفحات آرشیوی: <code>round3.html</code> (دور سوم)، <code>candidates.html</code> (دور دوم)،
+    <code>long-samples.html</code> (نمونه‌های طولانی).
+  </footer>
+</div>
+</body>
+</html>
