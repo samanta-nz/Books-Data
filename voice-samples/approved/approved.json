@@ -16,6 +16,23 @@
       "syllables_per_sec": 10.1,
       "approved_on": "2026-10-22",
       "note": "کاربر در دور دوم تأیید کرد؛ نزدیک‌ترین کاندید به مرجع تأییدشدهٔ زن."
+    },
+    {
+      "role": "male",
+      "file": "voice-samples/approved/male-approved.mp3",
+      "source": "voice-samples/candidates/r3-cand-f-male.mp3",
+      "label": "صوت ۴ دور سوم",
+      "status": "approved",
+      "similarity_to_reference": 0.83,
+      "reference": "voice-samples/voice-02-male.mp3",
+      "f0_median_hz": 163.3,
+      "reference_f0_median_hz": 103.9,
+      "f0_iqr_hz": 90.2,
+      "reference_f0_iqr_hz": 94.7,
+      "spectral_centroid_hz": 1691,
+      "syllables_per_sec": 10.52,
+      "approved_on": "2026-10-22",
+      "note": "کاربر به‌عنوان «صوت ۴» تأیید کرد؛ در نمونهٔ طولانی ۱۰۴۷ نویسه‌ای امتیاز ۰٫۸۸۰ گرفت."
     }
   ],
   "rejected": [
@@ -65,6 +82,35 @@
         "score": 0.83,
         "status": "pending"
       }
-    ]
+    ],
+    "long_samples": {
+      "text_chars": 1047,
+      "files": [
+        {
+          "file": "voice-samples/long/long-female-approved.mp3",
+          "role": "female",
+          "duration_s": 78.17,
+          "f0_median_hz": 183.9,
+          "iqr_hz": 87.1,
+          "score": 0.789
+        },
+        {
+          "file": "voice-samples/long/long-male-e.mp3",
+          "role": "male-e",
+          "duration_s": 76.2,
+          "f0_median_hz": 158.4,
+          "iqr_hz": 137.2,
+          "score": 0.792
+        },
+        {
+          "file": "voice-samples/long/long-male-f.mp3",
+          "role": "male-f",
+          "duration_s": 75.04,
+          "f0_median_hz": 152.4,
+          "iqr_hz": 103.8,
+          "score": 0.88
+        }
+      ]
+    }
   }
 }
