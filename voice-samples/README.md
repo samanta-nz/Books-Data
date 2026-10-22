@@ -97,10 +97,18 @@ python3 analyze_voice.py voice-00-female.mp3 voice-02-male.mp3
 
 ## وضعیت تأیید — نهایی
 
-| نقش | وضعیت | فایل بایگانی‌شده | منبع |
-|---|---|---|---|
-| زن | ✅ تأیید شد | `approved/female-approved.mp3` | `candidates/cand-b-female.mp3` |
-| مرد | ✅ تأیید شد («صوت ۴») | `approved/male-approved.mp3` | `candidates/r3-cand-f-male.mp3` |
+| نقش | وضعیت | فایل بایگانی‌شده | منبع | MD5 |
+|---|---|---|---|---|
+| زن | ✅ تأیید شد | `approved/female-approved.mp3` | همان نمونهٔ زن منتقل‌شده از گفتگوی قبلی (`voice-00-female.mp3`) | `6478f350…a8d624` |
+| مرد | ✅ تأیید شد («صوت ۴») | `approved/male-approved.mp3` | `candidates/r3-cand-f-male.mp3` | `71e1182a…8ce7b0` |
 
-ثبت رسمی در `approved/approved.json` است (شامل سنجه‌ها، MD5 منبع و تاریخ تأیید).
-صفحهٔ شنیدن نمونه‌های طولانی: `long-samples.html`. صفحهٔ مرجع نهایی دو صدای تأییدشده: `approved.html`.
+ثبت رسمی در `approved/approved.json` است (سنجه‌ها، MD5، منشأ و تاریخ تأیید).
+صفحهٔ مرجع نهایی: `approved.html` · نمونه‌های طولانی: `long-samples.html`.
+
+### نکتهٔ مهم دربارهٔ صدای زن
+
+فایل تأییدشدهٔ زن، خودِ نمونهٔ منتقل‌شده از گفتگوی قبلی است و بایت‌به‌بایت با `voice-00-female.mp3`
+یکسان است (MD5 یکسان). اما **شناسهٔ آن صدا (`voice_id`) در نشست جاری در دسترس نیست**، پس تولید
+صدای تازه با آن در این نشست ممکن نیست. نزدیک‌ترین صدای قابل تولید، کاندید B است با شباهت ۰٫۹۳۷
+(`candidates/cand-b-female.mp3`, F0 ۱۹۰٫۵ در برابر ۱۸۸٫۲ · IQR ۹۸٫۱ در برابر ۱۰۲٫۸).
+نمونهٔ طولانی زن (`long/long-female-closest.mp3`) با همین کاندید B ساخته شده، نه با فایل مرجع.

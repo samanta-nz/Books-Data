@@ -4,18 +4,17 @@
     {
       "role": "female",
       "file": "voice-samples/approved/female-approved.mp3",
-      "source": "voice-samples/candidates/cand-b-female.mp3",
+      "source": "voice-samples/voice-00-female.mp3",
       "status": "approved",
-      "similarity_to_reference": 0.937,
-      "reference": "voice-samples/voice-00-female.mp3",
-      "f0_median_hz": 190.5,
-      "reference_f0_median_hz": 188.2,
-      "f0_iqr_hz": 98.1,
-      "reference_f0_iqr_hz": 102.8,
-      "spectral_centroid_hz": 1594.5,
-      "syllables_per_sec": 10.1,
+      "md5": "6478f350ad8b760cab08a26225a8d624",
+      "duration_s": 21.48,
+      "format": "mp3, 24000 Hz, mono, 32 kb/s",
+      "f0_median_hz": 188.2,
+      "f0_iqr_hz": 102.8,
+      "spectral_centroid_hz": 1771.6,
+      "syllables_per_sec": 11.17,
       "approved_on": "2026-10-22",
-      "note": "کاربر در دور دوم تأیید کرد؛ نزدیک‌ترین کاندید به مرجع تأییدشدهٔ زن."
+      "note": "کاربر مشخص کرد که نمونهٔ زن منتقل‌شده از گفتگوی قبلی (voice-00) همان صدای تأییدشده است. این فایل بایت‌به‌بایت همان مرجع است."
     },
     {
       "role": "male",
@@ -23,6 +22,8 @@
       "source": "voice-samples/candidates/r3-cand-f-male.mp3",
       "label": "صوت ۴ دور سوم",
       "status": "approved",
+      "md5": "71e1182ad44f413216ca7fe6688ce7b0",
+      "duration_s": 19.08,
       "similarity_to_reference": 0.83,
       "reference": "voice-samples/voice-02-male.mp3",
       "f0_median_hz": 163.3,
@@ -35,81 +36,43 @@
       "note": "کاربر به‌عنوان «صوت ۴» تأیید کرد؛ در نمونهٔ طولانی ۱۰۴۷ نویسه‌ای امتیاز ۰٫۸۸۰ گرفت."
     }
   ],
-  "rejected": [
+  "closest_reproduction_candidates": [
     {
-      "role": "male",
-      "file": "voice-samples/candidates/cand-a-male.mp3",
-      "reason": "رد کاربر — یکنواخت، IQR فقط ۳۶٫۵"
+      "role": "female",
+      "file": "voice-samples/candidates/cand-b-female.mp3",
+      "md5": "49ce237253431f061fb6b53753699ee7",
+      "similarity_to_approved": 0.937,
+      "f0_median_hz": 190.5,
+      "status": "closest",
+      "note": "نزدیک‌ترین صدای قابل تولید در نشست جاری به صدای زن تأییدشده. صدای تأییدشده از نشست قبلی است و شناسهٔ آن (voice_id) در این نشست در دسترس نیست، بنابراین بازتولید عیناً ممکن نیست."
     },
     {
-      "role": "male",
-      "file": "voice-samples/candidates/cand-b-male.mp3",
-      "reason": "رد کاربر — زیر و بمی بالا (۱۵۲ هرتز)"
+      "role": "female",
+      "file": "voice-samples/long/long-female-closest.mp3",
+      "status": "closest",
+      "duration_s": 78.17,
+      "note": "نمونهٔ طولانی ساخته‌شده با کاندید B (نزدیک‌ترین بازتولید)، نه با فایل مرجع."
     }
+  ],
+  "rejected": [
+    {"role": "male", "file": "voice-samples/candidates/cand-a-male.mp3", "reason": "رد کاربر — یکنواخت، IQR فقط ۳۶٫۵"},
+    {"role": "male", "file": "voice-samples/candidates/cand-b-male.mp3", "reason": "رد کاربر — زیر و بمی بالا (۱۵۲ هرتز)"},
+    {"role": "male", "file": "voice-samples/candidates/r3-cand-c-male.mp3", "reason": "رد — IQR ۲۰٫۸، بیش از حد یکنواخت"},
+    {"role": "male", "file": "voice-samples/candidates/r3-cand-d-male.mp3", "reason": "رد — IQR ۴۷٫۳"}
   ],
   "rounds": {
     "round3_male": [
-      {
-        "file": "voice-samples/candidates/r3-cand-c-male.mp3",
-        "f0_median_hz": 118.5,
-        "iqr_hz": 20.8,
-        "centroid_hz": 1167,
-        "score": 0.627,
-        "status": "pending"
-      },
-      {
-        "file": "voice-samples/candidates/r3-cand-d-male.mp3",
-        "f0_median_hz": 118.5,
-        "iqr_hz": 47.3,
-        "centroid_hz": 1511,
-        "score": 0.741,
-        "status": "pending"
-      },
-      {
-        "file": "voice-samples/candidates/r3-cand-e-male.mp3",
-        "f0_median_hz": 144.1,
-        "iqr_hz": 87.3,
-        "centroid_hz": 1707,
-        "score": 0.857,
-        "status": "pending",
-        "note": "بهترین امتیاز دور سوم"
-      },
-      {
-        "file": "voice-samples/candidates/r3-cand-f-male.mp3",
-        "f0_median_hz": 163.3,
-        "iqr_hz": 90.2,
-        "centroid_hz": 1691,
-        "score": 0.83,
-        "status": "pending"
-      }
+      {"file": "voice-samples/candidates/r3-cand-c-male.mp3", "f0_median_hz": 118.5, "iqr_hz": 20.8, "centroid_hz": 1167, "score": 0.627},
+      {"file": "voice-samples/candidates/r3-cand-d-male.mp3", "f0_median_hz": 118.5, "iqr_hz": 47.3, "centroid_hz": 1511, "score": 0.741},
+      {"file": "voice-samples/candidates/r3-cand-e-male.mp3", "f0_median_hz": 144.1, "iqr_hz": 87.3, "centroid_hz": 1707, "score": 0.857, "note": "بالاترین امتیاز دور سوم؛ تأیید نشد"},
+      {"file": "voice-samples/candidates/r3-cand-f-male.mp3", "f0_median_hz": 163.3, "iqr_hz": 90.2, "centroid_hz": 1691, "score": 0.83, "status": "approved"}
     ],
     "long_samples": {
       "text_chars": 1047,
       "files": [
-        {
-          "file": "voice-samples/long/long-female-approved.mp3",
-          "role": "female",
-          "duration_s": 78.17,
-          "f0_median_hz": 183.9,
-          "iqr_hz": 87.1,
-          "score": 0.789
-        },
-        {
-          "file": "voice-samples/long/long-male-e.mp3",
-          "role": "male-e",
-          "duration_s": 76.2,
-          "f0_median_hz": 158.4,
-          "iqr_hz": 137.2,
-          "score": 0.792
-        },
-        {
-          "file": "voice-samples/long/long-male-f.mp3",
-          "role": "male-f",
-          "duration_s": 75.04,
-          "f0_median_hz": 152.4,
-          "iqr_hz": 103.8,
-          "score": 0.88
-        }
+        {"file": "voice-samples/long/long-female-closest.mp3", "role": "female-closest", "duration_s": 78.17, "f0_median_hz": 183.9, "iqr_hz": 87.1, "score": 0.789},
+        {"file": "voice-samples/long/long-male-e.mp3", "role": "male-e", "duration_s": 76.2, "f0_median_hz": 158.4, "iqr_hz": 137.2, "score": 0.792},
+        {"file": "voice-samples/long/long-male-f.mp3", "role": "male-approved", "duration_s": 75.04, "f0_median_hz": 152.4, "iqr_hz": 103.8, "score": 0.88}
       ]
     }
   }
