@@ -1,0 +1,11 @@
+{
+  "section": "bridge-possession",
+  "expected_long_pauses": 2,
+  "configured_pause_ms": 8000,
+  "codec_and_boundary_tolerance_seconds": 0.25,
+  "detected_long_pause_durations": [
+    8.200146,
+    8.156958
+  ],
+  "passed": true
+}

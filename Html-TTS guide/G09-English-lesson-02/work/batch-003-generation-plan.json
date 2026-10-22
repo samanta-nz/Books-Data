@@ -1,0 +1,349 @@
+{
+  "batch": "003",
+  "status": "planned",
+  "sections": [
+    "start",
+    "context",
+    "pron-card-guide",
+    "reading",
+    "travel-words",
+    "examples"
+  ],
+  "clips": [
+    {
+      "clip": "work/clips/start-a-032-034.mp3",
+      "section_id": "start",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-032",
+        "prospect3-lesson-02-turn-034"
+      ],
+      "text": "خودتان رو در فرودگاه تصور کنین: کسی بلیت می‌خرد، فردی گذرنامه رو بررسی می‌کند و خانواده‌ای منتظر پرواز هست. برای توصیفِ صحنه، فقط نامِ وسایل کافی نیست؛ باید بگوییم چه کسی چه کاری انجام می‌ده و سؤالِ لازم رو بپرسیم.\n\nدر این درس، از صحنهٔ جاری به جملهٔ مثبت، منفی و سؤال می‌رسیم؛ سپس پرسش‌های who, what, where, how و عبارت‌های مالکیت رو تمرین می‌کنیم. کارِ پایانی شما یک گفت‌وگوی هتل و یک گزارشِ کوتاه از سفرِ فرضی خواهد بود.",
+      "characters": 423,
+      "expected_segments": 2,
+      "segments": [
+        {
+          "turn_id": "prospect3-lesson-02-turn-032",
+          "segment_index": 1,
+          "speaker": "آرتین",
+          "text": "خودتان رو در فرودگاه تصور کنین: کسی بلیت می‌خرد، فردی گذرنامه رو بررسی می‌کند و خانواده‌ای منتظر پرواز هست. برای توصیفِ صحنه، فقط نامِ وسایل کافی نیست؛ باید بگوییم چه کسی چه کاری انجام می‌ده و سؤالِ لازم رو بپرسیم.",
+          "pause_after_ms": 8000
+        },
+        {
+          "turn_id": "prospect3-lesson-02-turn-034",
+          "segment_index": 1,
+          "speaker": "آرتین",
+          "text": "در این درس، از صحنهٔ جاری به جملهٔ مثبت، منفی و سؤال می‌رسیم؛ سپس پرسش‌های who, what, where, how و عبارت‌های مالکیت رو تمرین می‌کنیم. کارِ پایانی شما یک گفت‌وگوی هتل و یک گزارشِ کوتاه از سفرِ فرضی خواهد بود.",
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/start-r-033-035.mp3",
+      "section_id": "start",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-033",
+        "prospect3-lesson-02-turn-035"
+      ],
+      "text": "برای فردی که اکنون بلیت می‌خرد می‌گویم He is buying a ticket. ؛ می‌خوام بدانم is و buying چه نقشی دارند و چرا نمی‌تونم یکی از آن‌ها رو حذف کنم.\n\nدر پرسیدنِ علاقه، می‌تونم بگویم I am interested in travel. How about you? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\n؛ یعنی به سفر علاقه‌مندم، شما چطور؟ اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\nاین یک عبارتِ کاربردی هست و هر سؤالِ درس قرار نیست فقط دربارهٔ عملی در همین ثانیه باشه.",
+      "characters": 492,
+      "expected_segments": 4,
+      "segments": [
+        {
+          "turn_id": "prospect3-lesson-02-turn-033",
+          "segment_index": 1,
+          "speaker": "رها",
+          "text": "برای فردی که اکنون بلیت می‌خرد می‌گویم He is buying a ticket. ؛ می‌خوام بدانم is و buying چه نقشی دارند و چرا نمی‌تونم یکی از آن‌ها رو حذف کنم.",
+          "pause_after_ms": 700
+        },
+        {
+          "turn_id": "prospect3-lesson-02-turn-035",
+          "segment_index": 1,
+          "speaker": "رها",
+          "text": "در پرسیدنِ علاقه، می‌تونم بگویم I am interested in travel. How about you? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+          "pause_after_ms": 8000
+        },
+        {
+          "turn_id": "prospect3-lesson-02-turn-035",
+          "segment_index": 2,
+          "speaker": "رها",
+          "text": "؛ یعنی به سفر علاقه‌مندم، شما چطور؟ اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+          "pause_after_ms": 8000
+        },
+        {
+          "turn_id": "prospect3-lesson-02-turn-035",
+          "segment_index": 3,
+          "speaker": "رها",
+          "text": "این یک عبارتِ کاربردی هست و هر سؤالِ درس قرار نیست فقط دربارهٔ عملی در همین ثانیه باشه.",
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/context-a-036-038-040.mp3",
+      "section_id": "context",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-036",
+        "prospect3-lesson-02-turn-038",
+        "prospect3-lesson-02-turn-040"
+      ],
+      "text": "در گفت‌وگوی کتاب، یک مسافر با مسئولِ پذیرش صحبت می‌کند. او نام و کشورش رو می‌گوید، داشتنِ رزرو رو اعلام می‌کند و گذرنامهٔ همسرش رو ارائه می‌ده. هنگام فهمیدنِ چنین گفت‌وگویی، نامِ شخص، مدتِ اقامت، مکان و شیءِ مربوط رو در ستون‌های جدا یادداشت کنین.\n\nدر نمونهٔ هتل، دو شبِ اقامت و سه روزِ دیدار از شهر می‌تونن با هم سازگار باشن؛ تعدادِ شب و روز رو یکی نکنین. به همین ترتیب، شمارهٔ اتاق یک شناسه هست و با مدتِ اقامت فرق دارد.\n\nگفت‌وگو رو به چند کارِ ارتباطی تقسیم کنین: خوشامد، معرفی، بررسیِ رزرو، گرفتنِ مدرک، دادنِ کلید و آرزوی اقامتِ خوش. سپس با نام، مقصد و مدتِ متفاوت، همان هدف‌های ارتباطی رو اجرا کنین؛ حفظِ تک‌تکِ جمله‌ها تنها راهِ گفت‌وگو نیست.",
+      "characters": 648,
+      "expected_segments": 3,
+      "segments": [
+        {
+          "turn_id": "prospect3-lesson-02-turn-036",
+          "segment_index": 1,
+          "speaker": "آرتین",
+          "text": "در گفت‌وگوی کتاب، یک مسافر با مسئولِ پذیرش صحبت می‌کند. او نام و کشورش رو می‌گوید، داشتنِ رزرو رو اعلام می‌کند و گذرنامهٔ همسرش رو ارائه می‌ده. هنگام فهمیدنِ چنین گفت‌وگویی، نامِ شخص، مدتِ اقامت، مکان و شیءِ مربوط رو در ستون‌های جدا یادداشت کنین.",
+          "pause_after_ms": 700
+        },
+        {
+          "turn_id": "prospect3-lesson-02-turn-038",
+          "segment_index": 1,
+          "speaker": "آرتین",
+          "text": "در نمونهٔ هتل، دو شبِ اقامت و سه روزِ دیدار از شهر می‌تونن با هم سازگار باشن؛ تعدادِ شب و روز رو یکی نکنین. به همین ترتیب، شمارهٔ اتاق یک شناسه هست و با مدتِ اقامت فرق دارد.",
+          "pause_after_ms": 700
+        },
+        {
+          "turn_id": "prospect3-lesson-02-turn-040",
+          "segment_index": 1,
+          "speaker": "آرتین",
+          "text": "گفت‌وگو رو به چند کارِ ارتباطی تقسیم کنین: خوشامد، معرفی، بررسیِ رزرو، گرفتنِ مدرک، دادنِ کلید و آرزوی اقامتِ خوش. سپس با نام، مقصد و مدتِ متفاوت، همان هدف‌های ارتباطی رو اجرا کنین؛ حفظِ تک‌تکِ جمله‌ها تنها راهِ گفت‌وگو نیست.",
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/context-r-037-039.mp3",
+      "section_id": "context",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-037",
+        "prospect3-lesson-02-turn-039"
+      ],
+      "text": "عبارتِ I have a reservation. یعنی رزرو دارم. از شنیدنِ reservation نتیجه نمی‌گیرم که همین حالا در حال رزروکردن هست؛ ممکن هست کارِ رزرو از قبل انجام شده باشه. معنیِ کاملِ جمله رو می‌فهمم، نه فقط یک واژهٔ آشنا رو.\n\nاگر مسئولِ پذیرش بپرسد Where is your wife now? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.\n\n، باید جای او رو بگویم، نه ملیت یا تعدادِ شب‌ها رو. در پاسخِ فرضی می‌تونم بگویم She is standing by the gift shop. ؛ پیام، مکان و وضعیتِ جاریِ اوست.",
+      "characters": 482,
+      "expected_segments": 3,
+      "segments": [
+        {
+          "turn_id": "prospect3-lesson-02-turn-037",
+          "segment_index": 1,
+          "speaker": "رها",
+          "text": "عبارتِ I have a reservation. یعنی رزرو دارم. از شنیدنِ reservation نتیجه نمی‌گیرم که همین حالا در حال رزروکردن هست؛ ممکن هست کارِ رزرو از قبل انجام شده باشه. معنیِ کاملِ جمله رو می‌فهمم، نه فقط یک واژهٔ آشنا رو.",
+          "pause_after_ms": 700
+        },
+        {
+          "turn_id": "prospect3-lesson-02-turn-039",
+          "segment_index": 1,
+          "speaker": "رها",
+          "text": "اگر مسئولِ پذیرش بپرسد Where is your wife now? اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+          "pause_after_ms": 8000
+        },
+        {
+          "turn_id": "prospect3-lesson-02-turn-039",
+          "segment_index": 2,
+          "speaker": "رها",
+          "text": "، باید جای او رو بگویم، نه ملیت یا تعدادِ شب‌ها رو. در پاسخِ فرضی می‌تونم بگویم She is standing by the gift shop. ؛ پیام، مکان و وضعیتِ جاریِ اوست.",
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/pron-card-guide-a-090-092-093.mp3",
+      "section_id": "pron-card-guide",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-090",
+        "prospect3-lesson-02-turn-092",
+        "prospect3-lesson-02-turn-093"
+      ],
+      "text": "کارتِ هر واژه، معنی و نقش و مثال و املا رو به خوانش متصل می‌کند. الگوهای آوانگاریِ مکمل از فرهنگ تلفظِ آمریکاییِ CMUdict کنترل شده‌اند؛ این الگوها آوانگاریِ چاپ‌شدهٔ کتاب یا صدای ضبط‌شدهٔ آن معرفی نمی‌شن.\n\nتکیهٔ واژه‌های سفر — در passport تکیهٔ اصلی روی هجای اول، در receptionist روی هجای دوم و در reservation روی هجای سوم هست؛ برجستگی رو روی همهٔ بخش‌ها یکسان پخش نکنین. شکل تألیفیِ مکمل\n\nدر عبارتِ چندکلمه‌ای، کارت خوانشِ واژه‌های اصلی رو کمک می‌کند؛ تکیه و پیوندِ کلِ جمله رو با هدفِ گوینده هماهنگ کنین. شکلِ مرجع تنها لهجهٔ معتبر نیست و پاسخِ تایپی، کیفیتِ شنیدن یا تولیدِ صدای واقعی رو ثابت نمی‌کند.",
+      "characters": 604,
+      "expected_segments": 3,
+      "segments": [
+        {
+          "turn_id": "prospect3-lesson-02-turn-090",
+          "segment_index": 1,
+          "speaker": "آرتین",
+          "text": "کارتِ هر واژه، معنی و نقش و مثال و املا رو به خوانش متصل می‌کند. الگوهای آوانگاریِ مکمل از فرهنگ تلفظِ آمریکاییِ CMUdict کنترل شده‌اند؛ این الگوها آوانگاریِ چاپ‌شدهٔ کتاب یا صدای ضبط‌شدهٔ آن معرفی نمی‌شن.",
+          "pause_after_ms": 700
+        },
+        {
+          "turn_id": "prospect3-lesson-02-turn-092",
+          "segment_index": 1,
+          "speaker": "آرتین",
+          "text": "تکیهٔ واژه‌های سفر — در passport تکیهٔ اصلی روی هجای اول، در receptionist روی هجای دوم و در reservation روی هجای سوم هست؛ برجستگی رو روی همهٔ بخش‌ها یکسان پخش نکنین. شکل تألیفیِ مکمل",
+          "pause_after_ms": 700
+        },
+        {
+          "turn_id": "prospect3-lesson-02-turn-093",
+          "segment_index": 1,
+          "speaker": "آرتین",
+          "text": "در عبارتِ چندکلمه‌ای، کارت خوانشِ واژه‌های اصلی رو کمک می‌کند؛ تکیه و پیوندِ کلِ جمله رو با هدفِ گوینده هماهنگ کنین. شکلِ مرجع تنها لهجهٔ معتبر نیست و پاسخِ تایپی، کیفیتِ شنیدن یا تولیدِ صدای واقعی رو ثابت نمی‌کند.",
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/pron-card-guide-r-091.mp3",
+      "section_id": "pron-card-guide",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-091"
+      ],
+      "text": "در کارت‌ها، دو خط مورب توالیِ صداهای واژهٔ جدا رو نشان می‌دهند و شمارهٔ تکیه جداگانه نوشته شده هست. برای مثال، در واژهٔ hotel تکیه روی هجای دوم هست؛ شماره رو بخشی از املای واژه نمی‌خوانم.",
+      "characters": 187,
+      "expected_segments": 1,
+      "segments": [
+        {
+          "turn_id": "prospect3-lesson-02-turn-091",
+          "segment_index": 1,
+          "speaker": "رها",
+          "text": "در کارت‌ها، دو خط مورب توالیِ صداهای واژهٔ جدا رو نشان می‌دهند و شمارهٔ تکیه جداگانه نوشته شده هست. برای مثال، در واژهٔ hotel تکیه روی هجای دوم هست؛ شماره رو بخشی از املای واژه نمی‌خوانم.",
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/reading-a-221-222-223-instruction.mp3",
+      "section_id": "reading",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-221",
+        "prospect3-lesson-02-turn-222",
+        "prospect3-lesson-02-turn-223",
+        "prospect3-lesson-02--reading--instruction-1"
+      ],
+      "text": "متن تألیفی زیر رو ابتدا برای پیام کلی بخونین. سپس برای هر پاسخ، واژه یا جملهٔ شاهد رو در خود متن پیدا کنین؛ از موضوع کلی، اطلاعاتِ گفته‌نشده رو نتیجه نگیرید.\n\nSara and her family are at a train station. Her father is checking the timetable. Her mother is looking at the tickets. Sara is talking to her little brother. He is not carrying a heavy bag. Their bags are near the door. They are traveling to Yazd by train. Sara has a small guidebook. She is not reading it now because she is helping her brother. The family is staying in Yazd for three days.\n\nسارا و خانواده‌اش در ایستگاه قطار هستن. پدرش جدول زمان‌بندی رو بررسی می‌کند. مادرش به بلیت‌ها نگاه می‌کند. سارا با برادر کوچکش صحبت می‌کند. او کیفِ سنگینی حمل نمی‌کند. کیف‌هایشان نزدیکِ در هستن. آن‌ها با قطار به یزد سفر می‌کنند. سارا یک کتاب راهنمای کوچک دارد. اکنون آن رو نمی‌خواند، چون به برادرش کمک می‌کند. خانواده سه روز در یزد می‌مانند.\n\nاکنون پخش صدا رو متوقف کنین و تمرین‌های این بخش رو در صفحه حل کنین. پس از پاسخ‌دادن، راهنماها و پاسخ‌های صفحه رو برای بازبینی ببینین.",
+      "characters": 1030,
+      "expected_segments": 4,
+      "segments": [
+        {
+          "turn_id": "prospect3-lesson-02-turn-221",
+          "segment_index": 1,
+          "speaker": "آرتین",
+          "text": "متن تألیفی زیر رو ابتدا برای پیام کلی بخونین. سپس برای هر پاسخ، واژه یا جملهٔ شاهد رو در خود متن پیدا کنین؛ از موضوع کلی، اطلاعاتِ گفته‌نشده رو نتیجه نگیرید.",
+          "pause_after_ms": 700
+        },
+        {
+          "turn_id": "prospect3-lesson-02-turn-222",
+          "segment_index": 1,
+          "speaker": "آرتین",
+          "text": "Sara and her family are at a train station. Her father is checking the timetable. Her mother is looking at the tickets. Sara is talking to her little brother. He is not carrying a heavy bag. Their bags are near the door. They are traveling to Yazd by train. Sara has a small guidebook. She is not reading it now because she is helping her brother. The family is staying in Yazd for three days.",
+          "pause_after_ms": 700
+        },
+        {
+          "turn_id": "prospect3-lesson-02-turn-223",
+          "segment_index": 1,
+          "speaker": "آرتین",
+          "text": "سارا و خانواده‌اش در ایستگاه قطار هستن. پدرش جدول زمان‌بندی رو بررسی می‌کند. مادرش به بلیت‌ها نگاه می‌کند. سارا با برادر کوچکش صحبت می‌کند. او کیفِ سنگینی حمل نمی‌کند. کیف‌هایشان نزدیکِ در هستن. آن‌ها با قطار به یزد سفر می‌کنند. سارا یک کتاب راهنمای کوچک دارد. اکنون آن رو نمی‌خواند، چون به برادرش کمک می‌کند. خانواده سه روز در یزد می‌مانند.",
+          "pause_after_ms": 700
+        },
+        {
+          "turn_id": "prospect3-lesson-02--reading--instruction-1",
+          "segment_index": 1,
+          "speaker": "آرتین",
+          "text": "اکنون پخش صدا رو متوقف کنین و تمرین‌های این بخش رو در صفحه حل کنین. پس از پاسخ‌دادن، راهنماها و پاسخ‌های صفحه رو برای بازبینی ببینین.",
+          "pause_after_ms": 8000
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/travel-words-a-071-073-074.mp3",
+      "section_id": "travel-words",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-071",
+        "prospect3-lesson-02-turn-073",
+        "prospect3-lesson-02-turn-074"
+      ],
+      "text": "واژگانِ سفر رو در یک زنجیره به کار ببرید: بلیت می‌خرید، وسایل رو جمع می‌کنین، به محلِ حرکت می‌روید و اطلاعاتِ زمان رو بررسی می‌کنین. buy a ticket ، pack for a trip و check the timetable هر کدام هدفی جدا دارند؛ آن‌ها رو فقط با ترجمهٔ تک‌واژه‌ای یاد نمی‌گیریم.\n\nکارهای سفر یک ترتیب دارند — نمونهٔ تألیفی چهار کار سفر رو مرتب می‌کند؛ ترتیبِ تصویرها با شماره‌ها و پیکان‌ها مشخص هست. شکل تألیفیِ مکمل\n\ntake off برخاستنِ هواپیما و land فرودآمدن هست. board the plane سوارِ هواپیماشدن رو می‌گوید، نه لزوماً لحظهٔ برخاستن. برای ترتیبِ تصویرها، قبل و بعدِ منطقی رو از خودِ صحنه پیدا کنین؛ چسباندنِ برچسب‌های آشنا بدون بررسیِ رابطهٔ زمانی کافی نیست.",
+      "characters": 638,
+      "expected_segments": 3,
+      "segments": [
+        {
+          "turn_id": "prospect3-lesson-02-turn-071",
+          "segment_index": 1,
+          "speaker": "آرتین",
+          "text": "واژگانِ سفر رو در یک زنجیره به کار ببرید: بلیت می‌خرید، وسایل رو جمع می‌کنین، به محلِ حرکت می‌روید و اطلاعاتِ زمان رو بررسی می‌کنین. buy a ticket ، pack for a trip و check the timetable هر کدام هدفی جدا دارند؛ آن‌ها رو فقط با ترجمهٔ تک‌واژه‌ای یاد نمی‌گیریم.",
+          "pause_after_ms": 700
+        },
+        {
+          "turn_id": "prospect3-lesson-02-turn-073",
+          "segment_index": 1,
+          "speaker": "آرتین",
+          "text": "کارهای سفر یک ترتیب دارند — نمونهٔ تألیفی چهار کار سفر رو مرتب می‌کند؛ ترتیبِ تصویرها با شماره‌ها و پیکان‌ها مشخص هست. شکل تألیفیِ مکمل",
+          "pause_after_ms": 700
+        },
+        {
+          "turn_id": "prospect3-lesson-02-turn-074",
+          "segment_index": 1,
+          "speaker": "آرتین",
+          "text": "take off برخاستنِ هواپیما و land فرودآمدن هست. board the plane سوارِ هواپیماشدن رو می‌گوید، نه لزوماً لحظهٔ برخاستن. برای ترتیبِ تصویرها، قبل و بعدِ منطقی رو از خودِ صحنه پیدا کنین؛ چسباندنِ برچسب‌های آشنا بدون بررسیِ رابطهٔ زمانی کافی نیست.",
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/travel-words-r-072-075.mp3",
+      "section_id": "travel-words",
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-072",
+        "prospect3-lesson-02-turn-075"
+      ],
+      "text": "check in با check the passport یک عبارتِ یکسان نیست. اولی در بافتِ فرودگاه یا هتل به انجامِ پذیرش یا ثبتِ ورود مربوط هست؛ دومی بررسیِ گذرنامه هست. برای فهمِ check به جزءِ بعدی و موقعیت توجه می‌کنم.\n\nدر هتل، receptionist شخص هست، reservation موضوعِ رزرو و room اتاق هست. در She is talking to the receptionist. ، شخصِ بعد از to طرفِ گفت‌وگوست؛ او رو با فاعلِ جمله یا مالکِ گذرنامه اشتباه نمی‌گیرم.",
+      "characters": 395,
+      "expected_segments": 2,
+      "segments": [
+        {
+          "turn_id": "prospect3-lesson-02-turn-072",
+          "segment_index": 1,
+          "speaker": "رها",
+          "text": "check in با check the passport یک عبارتِ یکسان نیست. اولی در بافتِ فرودگاه یا هتل به انجامِ پذیرش یا ثبتِ ورود مربوط هست؛ دومی بررسیِ گذرنامه هست. برای فهمِ check به جزءِ بعدی و موقعیت توجه می‌کنم.",
+          "pause_after_ms": 700
+        },
+        {
+          "turn_id": "prospect3-lesson-02-turn-075",
+          "segment_index": 1,
+          "speaker": "رها",
+          "text": "در هتل، receptionist شخص هست، reservation موضوعِ رزرو و room اتاق هست. در She is talking to the receptionist. ، شخصِ بعد از to طرفِ گفت‌وگوست؛ او رو با فاعلِ جمله یا مالکِ گذرنامه اشتباه نمی‌گیرم.",
+          "pause_after_ms": 700
+        }
+      ]
+    },
+    {
+      "clip": "work/clips/examples-a-184.mp3",
+      "section_id": "examples",
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-184"
+      ],
+      "text": "صورت مثال: از Sara is going to the airport by taxi. سؤالِ شخص، مقصد و روش بسازید. اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+      "characters": 155,
+      "expected_segments": 1,
+      "segments": [
+        {
+          "turn_id": "prospect3-lesson-02-turn-184",
+          "segment_index": 1,
+          "speaker": "آرتین",
+          "text": "صورت مثال: از Sara is going to the airport by taxi. سؤالِ شخص، مقصد و روش بسازید. اکنون پخش صدا رو متوقف کنین، خودتان پاسخ دهید و پس از حل سؤال ادامه دهید.",
+          "pause_after_ms": 8000
+        }
+      ]
+    }
+  ]
+}

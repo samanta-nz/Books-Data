@@ -1,0 +1,137 @@
+{
+  "batch": "002-goals-possession-continuous-negative",
+  "receipt": "audio-receipt.json",
+  "outputs": [
+    {
+      "output": "audio/prospect3-lesson-02--goals--f299c61e3e.weba",
+      "inputs": [
+        {
+          "path": "work/clips/goals-a-001-005.mp3",
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-02-turn-001",
+          "trim_start_seconds": 0.325042,
+          "trim_end_seconds": 6.715625
+        },
+        {
+          "path": "work/clips/goals-a-001-005.mp3",
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-02-turn-002",
+          "trim_start_seconds": 7.457208,
+          "trim_end_seconds": 13.648625
+        },
+        {
+          "path": "work/clips/goals-a-001-005.mp3",
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-02-turn-003",
+          "trim_start_seconds": 14.4205,
+          "trim_end_seconds": 20.702042
+        },
+        {
+          "path": "work/clips/goals-a-001-005.mp3",
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-02-turn-004",
+          "trim_start_seconds": 21.4625,
+          "trim_end_seconds": 30.086208
+        },
+        {
+          "path": "work/clips/goals-a-001-005.mp3",
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-02-turn-005",
+          "trim_start_seconds": 30.799458,
+          "trim_end_seconds": 37.008875
+        }
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-02--bridge-possession--aa85317fa6.weba",
+      "inputs": [
+        {
+          "path": "work/clips/possession-a-017.mp3",
+          "pause_after_ms": 8000,
+          "source_turn": "prospect3-lesson-02-turn-017",
+          "trim_start_seconds": 0.2795,
+          "trim_end_seconds": 24.816875
+        },
+        {
+          "path": "work/clips/possession-r-018.mp3",
+          "pause_after_ms": 8000,
+          "source_turn": "prospect3-lesson-02-turn-018",
+          "trim_end_seconds": 18.265542
+        },
+        {
+          "path": "work/clips/possession-a-019-021.mp3",
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-02-turn-019",
+          "trim_end_seconds": 13.747542
+        },
+        {
+          "path": "work/clips/possession-a-019-021.mp3",
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-02-turn-020",
+          "trim_start_seconds": 14.439292,
+          "trim_end_seconds": 33.439417
+        },
+        {
+          "path": "work/clips/possession-a-019-021.mp3",
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-02-turn-021",
+          "trim_start_seconds": 34.367833
+        },
+        {
+          "path": "work/clips/possession-r-022.mp3",
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-02-turn-022",
+          "trim_start_seconds": 0.258917,
+          "trim_end_seconds": 14.330958
+        },
+        {
+          "path": "work/clips/possession-a-023.mp3",
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-02-turn-023",
+          "trim_start_seconds": 0.2635,
+          "trim_end_seconds": 21.431375
+        }
+      ]
+    },
+    {
+      "output": "audio/prospect3-lesson-02--continuous-negative--bb9e529d0e.weba",
+      "inputs": [
+        {
+          "path": "work/clips/continuous-negative-a-056.mp3",
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-02-turn-056",
+          "trim_start_seconds": 0.268292
+        },
+        {
+          "path": "work/clips/continuous-negative-r-057.mp3",
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-02-turn-057",
+          "trim_start_seconds": 0.282,
+          "trim_end_seconds": 13.553625
+        },
+        {
+          "path": "work/clips/continuous-negative-a-058-059.mp3",
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-02-turn-058",
+          "trim_start_seconds": 0.285958,
+          "trim_end_seconds": 12.540375
+        },
+        {
+          "path": "work/clips/continuous-negative-a-058-059.mp3",
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-02-turn-059",
+          "trim_start_seconds": 13.491917,
+          "trim_end_seconds": 27.721292
+        },
+        {
+          "path": "work/clips/continuous-negative-r-060.mp3",
+          "pause_after_ms": 700,
+          "source_turn": "prospect3-lesson-02-turn-060",
+          "trim_start_seconds": 0.284667,
+          "trim_end_seconds": 16.626083
+        }
+      ]
+    }
+  ],
+  "copies": []
+}

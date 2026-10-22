@@ -1,0 +1,90 @@
+{
+  "sections_reused": 12,
+  "unique_audio_files": 8,
+  "items": [
+    {
+      "section_id": "bridge-subject-pronouns",
+      "script_sha256": "2bc3806e4bc41d3d900d7d68fcd12d02228afb903d40f120ad601c4e9c11ec5c",
+      "source": "audio/prospect3-lesson-01--bridge-subject-pronouns--2bc3806e4b.weba",
+      "target": "audio/prospect3-lesson-02--bridge-subject-pronouns--2bc3806e4b.weba",
+      "sha256": "3dab5a5fcc0acfdac6100076641b0523556f7d17a3c7d9e330b4aba493d0c4fd"
+    },
+    {
+      "section_id": "bridge-be-present",
+      "script_sha256": "3359cd3eddcf908b5bbcf158581b74db7397c519f07832d7108c99183b273bfd",
+      "source": "audio/prospect3-lesson-01--bridge-be-present--3359cd3edd.weba",
+      "target": "audio/prospect3-lesson-02--bridge-be-present--3359cd3edd.weba",
+      "sha256": "52d8143e5e441cb4ae9b6549601f67382bec6ea4ba9e7d4c431fa8b2f4564005"
+    },
+    {
+      "section_id": "local-prerequisite-check",
+      "script_sha256": "8720de7b05221543f84220c3c62dc3c8546674b77194d443db239afeb85591a6",
+      "source": "audio/prospect3-lesson-01--quiz--8720de7b05.weba",
+      "target": "audio/prospect3-lesson-02--local-prerequisite-check--8720de7b05.weba",
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0"
+    },
+    {
+      "section_id": "pron-sound-symbols",
+      "script_sha256": "452db6d158a5471670a1aa0549c4c3ca01ce8eb6b7d679ad1650abf9aa35b179",
+      "source": "audio/prospect3-lesson-01--pron-sound-symbols--452db6d158.weba",
+      "target": "audio/prospect3-lesson-02--pron-sound-symbols--452db6d158.weba",
+      "sha256": "7fdfdc07281459d52bc1050ca78421fc1d5257156dd2149f55a3116996374c05"
+    },
+    {
+      "section_id": "pron-persian-consonants",
+      "script_sha256": "4bac00143c8ecc262570351ca7d599a80aaae07701f94191dbc7b79b3b9c3f9b",
+      "source": "audio/prospect3-lesson-01--pron-persian-consonants--4bac00143c.weba",
+      "target": "audio/prospect3-lesson-02--pron-persian-consonants--4bac00143c.weba",
+      "sha256": "dde81457ed41e8c8ece3069988e28f18450497c35ac30cb1562dd0139ca85307"
+    },
+    {
+      "section_id": "pron-syllables-stress",
+      "script_sha256": "b82ddc841f5d62d255f9941573f573839b102d424ae78e4edbc089ba978f88dd",
+      "source": "audio/prospect3-lesson-01--pron-syllables-stress--b82ddc841f.weba",
+      "target": "audio/prospect3-lesson-02--pron-syllables-stress--b82ddc841f.weba",
+      "sha256": "1eb4b9deec728ed8a143941a691ce4ce29d34e779095effce3e124681618b53b"
+    },
+    {
+      "section_id": "official-pictures",
+      "script_sha256": "8720de7b05221543f84220c3c62dc3c8546674b77194d443db239afeb85591a6",
+      "source": "audio/prospect3-lesson-01--quiz--8720de7b05.weba",
+      "target": "audio/prospect3-lesson-02--official-pictures--8720de7b05.weba",
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0"
+    },
+    {
+      "section_id": "lab",
+      "script_sha256": "8720de7b05221543f84220c3c62dc3c8546674b77194d443db239afeb85591a6",
+      "source": "audio/prospect3-lesson-01--quiz--8720de7b05.weba",
+      "target": "audio/prospect3-lesson-02--lab--8720de7b05.weba",
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0"
+    },
+    {
+      "section_id": "writing",
+      "script_sha256": "8720de7b05221543f84220c3c62dc3c8546674b77194d443db239afeb85591a6",
+      "source": "audio/prospect3-lesson-01--quiz--8720de7b05.weba",
+      "target": "audio/prospect3-lesson-02--writing--8720de7b05.weba",
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0"
+    },
+    {
+      "section_id": "quiz",
+      "script_sha256": "8720de7b05221543f84220c3c62dc3c8546674b77194d443db239afeb85591a6",
+      "source": "audio/prospect3-lesson-01--quiz--8720de7b05.weba",
+      "target": "audio/prospect3-lesson-02--quiz--8720de7b05.weba",
+      "sha256": "ec3bc42fdc656275382e3b5764b4940e322684174c6c741e10c82c146c8915b0"
+    },
+    {
+      "section_id": "book-source-pages",
+      "script_sha256": "31a9a3cd3d884df822e92e4414c3d84dcfbec60be744122b8af59512b2d982ed",
+      "source": "audio/prospect3-lesson-01--book-source-pages--31a9a3cd3d.weba",
+      "target": "audio/prospect3-lesson-02--book-source-pages--31a9a3cd3d.weba",
+      "sha256": "a9f36503d8ca5a73d712a86b8a8acaaa405c437d73949edfd6a904a774c74558"
+    },
+    {
+      "section_id": "sources",
+      "script_sha256": "b563bc3cca72c1659ff1c60d949673bd929f4173c9ef594925d90aedf38b2588",
+      "source": "audio/prospect3-lesson-01--sources--b563bc3cca.weba",
+      "target": "audio/prospect3-lesson-02--sources--b563bc3cca.weba",
+      "sha256": "cf87598a34bb30d51bb4f497918ce3fe19449221d636a591db3f327bd847154f"
+    }
+  ]
+}

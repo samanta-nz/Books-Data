@@ -1,0 +1,133 @@
+{
+  "batch": "002",
+  "status": "planned_regenerated_checkpoint",
+  "clips": [
+    {
+      "clip": "work/clips/goals-a-001-005.mp3",
+      "section_id": "goals",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-001",
+        "prospect3-lesson-02-turn-002",
+        "prospect3-lesson-02-turn-003",
+        "prospect3-lesson-02-turn-004",
+        "prospect3-lesson-02-turn-005"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "کارِ در جریان رو با شکلِ درست be و فعلِ دارای ing بیان و منفی کنین.\n\nدربارهٔ شخص، کار، مقصد و شیوهٔ سفر سؤالِ مناسب بسازید.\n\nسؤال‌های بله/خیرِ be رو با پاسخ کوتاه و آهنگِ خنثیِ مناسب تمرین کنین.\n\nمالکیتِ شخصی، جمعِ دارای s و رابطهٔ بخش‌های اشیا رو با apostrophe و of تشخیص دهید.\n\nدر موقعیتِ هتل یا سفر، اطلاعاتِ لازم رو بپرسید و یک گفت‌وگوی تازه بسازید.",
+      "characters": 353,
+      "expected_segments": 5
+    },
+    {
+      "clip": "work/clips/possession-a-017.mp3",
+      "section_id": "bridge-possession",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-017"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "در my book ، واژهٔ my پیش از اسم میاد و صاحب رو نشان می‌ده. این گروه باید با جمله کامل شود، مثلاً My book is on the desk. صورت‌های پایه my, your, his, her, its, our, their هستن؛ آن‌ها رو با ضمیر فاعلی یکی نگیرید.",
+      "characters": 212,
+      "expected_segments": 1
+    },
+    {
+      "clip": "work/clips/possession-r-018.mp3",
+      "section_id": "bridge-possession",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-018"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "She is kind. با Her book is new. فرق دارد. در جملهٔ اول she فاعل هست؛ در جملهٔ دوم her پیش از اسم آمده و فاعلِ کامل her book هست. بنابراین نمی‌نویسم Her is kind.",
+      "characters": 161,
+      "expected_segments": 1
+    },
+    {
+      "clip": "work/clips/possession-a-019-021.mp3",
+      "section_id": "bridge-possession",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-019",
+        "prospect3-lesson-02-turn-020",
+        "prospect3-lesson-02-turn-021"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "رابطهٔ مالک و وسیله — سارا صاحب کیف هست؛ Sara’s bag رابطهٔ مالکیت رو نشان می‌ده، نه جمعِ واژهٔ Sara. شکل تألیفیِ مکمل\n\nبرای نامِ صاحب، در نمونهٔ مفرد از نشانهٔ ’s استفاده می‌کنیم: Sara’s bag. ترتیب معنی رو چنین بخونین: کیفِ سارا. این نشانه رو با is کوتاه‌شده اشتباه نگیرید؛ ادامهٔ جمله نقش آن رو روشن می‌کند.\n\nرابطهٔ of در نام نقشه — در the map of Iran ، عبارت of Iran می‌گوید نقشه مربوط به کجاست؛ مثال، مالک انسانی معرفی نمی‌کند. شکل تألیفیِ مکمل",
+      "characters": 447,
+      "expected_segments": 3
+    },
+    {
+      "clip": "work/clips/possession-r-022.mp3",
+      "section_id": "bridge-possession",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-022"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "در Sara’s reading. ، نشانهٔ ’s می‌تواند کوتاه‌شدهٔ is باشه؛ اما در Sara’s book مالکیت رو نشان می‌ده. فقط دیدن شکل نشانه برای تعیین معنی کافی نیست.",
+      "characters": 146,
+      "expected_segments": 1
+    },
+    {
+      "clip": "work/clips/possession-a-023.mp3",
+      "section_id": "bridge-possession",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-023"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "ساخت of نیز برای رابطهٔ جزء و کل و کاربردهای مناسب دیگر میاد؛ در الگوی کتاب the legs of the chair ، اول جزء و سپس کل آمده هست. این نمونه رو با Sara’s bag مقایسه کنین، اما نتیجه نگیرید تمام رابطه‌ها فقط یکی از این دو شکل رو می‌پذیرند.",
+      "characters": 233,
+      "expected_segments": 1
+    },
+    {
+      "clip": "work/clips/continuous-negative-a-056.mp3",
+      "section_id": "continuous-negative",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-056"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "برای منفی، not پس از be قرار می‌گیرد و فعلِ دارای ing حفظ می‌شه: She is not writing a letter. پیام این هست که آن کار در موقعیتِ مورد نظر در جریان نیست، نه اینکه شخص هیچ‌گاه نوشتن رو انجام نمی‌ده.",
+      "characters": 195,
+      "expected_segments": 1
+    },
+    {
+      "clip": "work/clips/continuous-negative-r-057.mp3",
+      "section_id": "continuous-negative",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-057"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "دو شکلِ کوتاهِ معتبر می‌سازم: She's not writing a letter. و She isn't writing a letter. در هر دو، writing همان هست و جزءِ منفی هم باقی مانده هست.",
+      "characters": 145,
+      "expected_segments": 1
+    },
+    {
+      "clip": "work/clips/continuous-negative-a-058-059.mp3",
+      "section_id": "continuous-negative",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-058",
+        "prospect3-lesson-02-turn-059"
+      ],
+      "speaker": "آرتین",
+      "voice_id": "voice-02",
+      "text": "منفیِ ساخت استمراری — not پس از is قرار می‌گیرد و reading باقی می‌ماند؛ فقط یک جزء رو حذف نمی‌کنیم. شکل تألیفیِ مکمل\n\nبا you می‌گوییم You are not reading. و شکل‌های You're not reading. یا You aren't reading. ممکن‌اند. برای خودم، I am not reading. به I'm not reading. کوتاه می‌شه.",
+      "characters": 279,
+      "expected_segments": 2
+    },
+    {
+      "clip": "work/clips/continuous-negative-r-060.mp3",
+      "section_id": "continuous-negative",
+      "turn_ids": [
+        "prospect3-lesson-02-turn-060"
+      ],
+      "speaker": "رها",
+      "voice_id": "voice-05",
+      "text": "جملهٔ They not traveling. فاقدِ be هست. اگر بنویسم They are not travel. ، شکلِ ing رو از دست داده‌ام. برای ساختِ خواسته‌شده، هر سه جزء رو بررسی می‌کنم: They are not traveling.",
+      "characters": 175,
+      "expected_segments": 1
+    }
+  ]
+}

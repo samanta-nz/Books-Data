@@ -1,0 +1,577 @@
+{
+  "work/clips/goals-a-001-005.mp3": {
+    "bytes": 149709,
+    "sha256": "321a1573876c63fc2a44f54073d8dd48e4e956f8cd5c88138e8591be3959392c",
+    "duration": 37.37,
+    "mean_volume_db": -20.1,
+    "max_volume_db": -1.8,
+    "silences": [
+      {
+        "start": 0.0,
+        "end": 0.325042,
+        "duration": 0.325042
+      },
+      {
+        "start": 6.715625,
+        "end": 7.457208,
+        "duration": 0.741583
+      },
+      {
+        "start": 8.927125,
+        "end": 9.199958,
+        "duration": 0.272833
+      },
+      {
+        "start": 9.677542,
+        "end": 9.964333,
+        "duration": 0.286792
+      },
+      {
+        "start": 13.648625,
+        "end": 14.4205,
+        "duration": 0.771875
+      },
+      {
+        "start": 20.702042,
+        "end": 21.4625,
+        "duration": 0.760458
+      },
+      {
+        "start": 23.0385,
+        "end": 23.480667,
+        "duration": 0.442167
+      },
+      {
+        "start": 30.086208,
+        "end": 30.799458,
+        "duration": 0.71325
+      },
+      {
+        "start": 37.008875,
+        "end": 37.32,
+        "duration": 0.311125
+      }
+    ],
+    "speech_seconds": 32.745,
+    "nonwhitespace_characters": 281,
+    "characters_per_speech_second": 8.58,
+    "expected_segments": 5
+  },
+  "work/clips/possession-a-017.mp3": {
+    "bytes": 100941,
+    "sha256": "4418277da7f2bf6376010c7c68e9204997b9309336cf02da476f2cafa9f31e70",
+    "duration": 25.18,
+    "mean_volume_db": -20.2,
+    "max_volume_db": -1.5,
+    "silences": [
+      {
+        "start": 0.0,
+        "end": 0.2795,
+        "duration": 0.2795
+      },
+      {
+        "start": 1.685792,
+        "end": 2.01675,
+        "duration": 0.330958
+      },
+      {
+        "start": 5.933458,
+        "end": 6.44225,
+        "duration": 0.508792
+      },
+      {
+        "start": 9.766833,
+        "end": 10.054917,
+        "duration": 0.288083
+      },
+      {
+        "start": 11.739375,
+        "end": 12.233708,
+        "duration": 0.494333
+      },
+      {
+        "start": 13.630458,
+        "end": 14.136208,
+        "duration": 0.50575
+      },
+      {
+        "start": 14.659708,
+        "end": 15.104542,
+        "duration": 0.444833
+      },
+      {
+        "start": 15.634542,
+        "end": 16.132375,
+        "duration": 0.497833
+      },
+      {
+        "start": 16.61475,
+        "end": 17.155583,
+        "duration": 0.540833
+      },
+      {
+        "start": 17.592,
+        "end": 18.25775,
+        "duration": 0.66575
+      },
+      {
+        "start": 18.676458,
+        "end": 19.303417,
+        "duration": 0.626958
+      },
+      {
+        "start": 19.827417,
+        "end": 20.315083,
+        "duration": 0.487667
+      },
+      {
+        "start": 21.37875,
+        "end": 22.002833,
+        "duration": 0.624083
+      },
+      {
+        "start": 24.816875,
+        "end": 25.12,
+        "duration": 0.303125
+      }
+    ],
+    "speech_seconds": 18.582,
+    "nonwhitespace_characters": 167,
+    "characters_per_speech_second": 8.99,
+    "expected_segments": 1
+  },
+  "work/clips/possession-r-018.mp3": {
+    "bytes": 74829,
+    "sha256": "427acd44111b92183f76567810a7d7c1500df8bf4d1520b6b5ce37d68349cebb",
+    "duration": 18.65,
+    "mean_volume_db": -19.9,
+    "max_volume_db": -1.4,
+    "silences": [
+      {
+        "start": 1.466958,
+        "end": 1.968583,
+        "duration": 0.501625
+      },
+      {
+        "start": 3.728375,
+        "end": 3.9815,
+        "duration": 0.253125
+      },
+      {
+        "start": 4.778083,
+        "end": 5.245083,
+        "duration": 0.467
+      },
+      {
+        "start": 8.19775,
+        "end": 8.671875,
+        "duration": 0.474125
+      },
+      {
+        "start": 13.776167,
+        "end": 14.042375,
+        "duration": 0.266208
+      },
+      {
+        "start": 14.943917,
+        "end": 15.399292,
+        "duration": 0.455375
+      },
+      {
+        "start": 18.265542,
+        "end": 18.6,
+        "duration": 0.334458
+      }
+    ],
+    "speech_seconds": 15.898,
+    "nonwhitespace_characters": 127,
+    "characters_per_speech_second": 7.99,
+    "expected_segments": 1
+  },
+  "work/clips/possession-a-019-021.mp3": {
+    "bytes": 200301,
+    "sha256": "2e247f87cb543b72ebe6ba7f2346e6adec8fbe039570680f76367483cdb26be9",
+    "duration": 50.02,
+    "mean_volume_db": -19.9,
+    "max_volume_db": -3.9,
+    "silences": [
+      {
+        "start": 2.365583,
+        "end": 3.114667,
+        "duration": 0.749083
+      },
+      {
+        "start": 5.083125,
+        "end": 5.553542,
+        "duration": 0.470417
+      },
+      {
+        "start": 11.033542,
+        "end": 11.684333,
+        "duration": 0.650792
+      },
+      {
+        "start": 13.747542,
+        "end": 14.439292,
+        "duration": 0.69175
+      },
+      {
+        "start": 20.66925,
+        "end": 20.974333,
+        "duration": 0.305083
+      },
+      {
+        "start": 22.2705,
+        "end": 22.851,
+        "duration": 0.5805
+      },
+      {
+        "start": 24.902167,
+        "end": 25.379208,
+        "duration": 0.477042
+      },
+      {
+        "start": 26.645708,
+        "end": 27.379167,
+        "duration": 0.733458
+      },
+      {
+        "start": 30.613,
+        "end": 30.957292,
+        "duration": 0.344292
+      },
+      {
+        "start": 33.439417,
+        "end": 34.367833,
+        "duration": 0.928417
+      },
+      {
+        "start": 37.055708,
+        "end": 37.750333,
+        "duration": 0.694625
+      },
+      {
+        "start": 38.228417,
+        "end": 38.505042,
+        "duration": 0.276625
+      },
+      {
+        "start": 39.71175,
+        "end": 40.073875,
+        "duration": 0.362125
+      },
+      {
+        "start": 43.882458,
+        "end": 44.39675,
+        "duration": 0.514292
+      },
+      {
+        "start": 47.350458,
+        "end": 47.884917,
+        "duration": 0.534458
+      }
+    ],
+    "speech_seconds": 41.707,
+    "nonwhitespace_characters": 360,
+    "characters_per_speech_second": 8.63,
+    "expected_segments": 3
+  },
+  "work/clips/possession-r-022.mp3": {
+    "bytes": 58893,
+    "sha256": "f8d9e6239435f079fe55758d31ef20710bc3e1cb9c2e95bfc64dfc4cbc0cfbaf",
+    "duration": 14.66,
+    "mean_volume_db": -19.7,
+    "max_volume_db": -1.7,
+    "silences": [
+      {
+        "start": 0.0,
+        "end": 0.258917,
+        "duration": 0.258917
+      },
+      {
+        "start": 2.066875,
+        "end": 2.4365,
+        "duration": 0.369625
+      },
+      {
+        "start": 6.08375,
+        "end": 6.353417,
+        "duration": 0.269667
+      },
+      {
+        "start": 8.044917,
+        "end": 8.322792,
+        "duration": 0.277875
+      },
+      {
+        "start": 9.830167,
+        "end": 10.431875,
+        "duration": 0.601708
+      },
+      {
+        "start": 14.330958,
+        "end": 14.6,
+        "duration": 0.269042
+      }
+    ],
+    "speech_seconds": 12.613,
+    "nonwhitespace_characters": 120,
+    "characters_per_speech_second": 9.51,
+    "expected_segments": 1
+  },
+  "work/clips/possession-a-023.mp3": {
+    "bytes": 87309,
+    "sha256": "ffd4a93c9e2988936843772ff76776d443c6be9c3e924c911960fc864d4b125d",
+    "duration": 21.77,
+    "mean_volume_db": -19.2,
+    "max_volume_db": -4.1,
+    "silences": [
+      {
+        "start": 0.0,
+        "end": 0.2635,
+        "duration": 0.2635
+      },
+      {
+        "start": 6.4615,
+        "end": 7.010167,
+        "duration": 0.548667
+      },
+      {
+        "start": 9.950833,
+        "end": 10.216583,
+        "duration": 0.26575
+      },
+      {
+        "start": 13.072333,
+        "end": 13.637292,
+        "duration": 0.564958
+      },
+      {
+        "start": 21.431375,
+        "end": 21.72,
+        "duration": 0.288625
+      }
+    ],
+    "speech_seconds": 19.838,
+    "nonwhitespace_characters": 184,
+    "characters_per_speech_second": 9.27,
+    "expected_segments": 1
+  },
+  "work/clips/continuous-negative-a-056.mp3": {
+    "bytes": 75501,
+    "sha256": "71009e5cfcd9266637f33c98231929fdef19a2abae4636191f82099a8679c411",
+    "duration": 18.82,
+    "mean_volume_db": -19.4,
+    "max_volume_db": -3.5,
+    "silences": [
+      {
+        "start": 0.0,
+        "end": 0.268292,
+        "duration": 0.268292
+      },
+      {
+        "start": 6.882208,
+        "end": 7.29025,
+        "duration": 0.408042
+      },
+      {
+        "start": 9.825167,
+        "end": 10.356042,
+        "duration": 0.530875
+      }
+    ],
+    "speech_seconds": 17.613,
+    "nonwhitespace_characters": 155,
+    "characters_per_speech_second": 8.8,
+    "expected_segments": 1
+  },
+  "work/clips/continuous-negative-r-057.mp3": {
+    "bytes": 56013,
+    "sha256": "5adca0b363ec8708e056ac0b27fc600d49268899858af90b123351f533b05b01",
+    "duration": 13.94,
+    "mean_volume_db": -19.8,
+    "max_volume_db": -2.6,
+    "silences": [
+      {
+        "start": 0.0,
+        "end": 0.282,
+        "duration": 0.282
+      },
+      {
+        "start": 2.731458,
+        "end": 3.331667,
+        "duration": 0.600208
+      },
+      {
+        "start": 4.919292,
+        "end": 5.267458,
+        "duration": 0.348167
+      },
+      {
+        "start": 5.561833,
+        "end": 5.841417,
+        "duration": 0.279583
+      },
+      {
+        "start": 7.466208,
+        "end": 7.808375,
+        "duration": 0.342167
+      },
+      {
+        "start": 13.553625,
+        "end": 13.88,
+        "duration": 0.326375
+      }
+    ],
+    "speech_seconds": 11.761,
+    "nonwhitespace_characters": 117,
+    "characters_per_speech_second": 9.95,
+    "expected_segments": 1
+  },
+  "work/clips/continuous-negative-a-058-059.mp3": {
+    "bytes": 112941,
+    "sha256": "6647031353db6008228f66b49f7f49ea2a031f2994282ad683272bd377762ef2",
+    "duration": 28.18,
+    "mean_volume_db": -19.6,
+    "max_volume_db": -2.9,
+    "silences": [
+      {
+        "start": 0.0,
+        "end": 0.285958,
+        "duration": 0.285958
+      },
+      {
+        "start": 2.143667,
+        "end": 2.736583,
+        "duration": 0.592917
+      },
+      {
+        "start": 5.164042,
+        "end": 5.60075,
+        "duration": 0.436708
+      },
+      {
+        "start": 7.634708,
+        "end": 8.110375,
+        "duration": 0.475667
+      },
+      {
+        "start": 10.078792,
+        "end": 10.851583,
+        "duration": 0.772792
+      },
+      {
+        "start": 12.540375,
+        "end": 13.491917,
+        "duration": 0.951542
+      },
+      {
+        "start": 14.5525,
+        "end": 14.886375,
+        "duration": 0.333875
+      },
+      {
+        "start": 16.33425,
+        "end": 16.836042,
+        "duration": 0.501792
+      },
+      {
+        "start": 17.652333,
+        "end": 17.93325,
+        "duration": 0.280917
+      },
+      {
+        "start": 19.128292,
+        "end": 19.3915,
+        "duration": 0.263208
+      },
+      {
+        "start": 19.71875,
+        "end": 19.977333,
+        "duration": 0.258583
+      },
+      {
+        "start": 21.756583,
+        "end": 22.774125,
+        "duration": 1.017542
+      },
+      {
+        "start": 23.49775,
+        "end": 23.851833,
+        "duration": 0.354083
+      },
+      {
+        "start": 25.052333,
+        "end": 25.423542,
+        "duration": 0.371208
+      },
+      {
+        "start": 25.625333,
+        "end": 25.92,
+        "duration": 0.294667
+      },
+      {
+        "start": 27.721292,
+        "end": 28.12,
+        "duration": 0.398708
+      }
+    ],
+    "speech_seconds": 20.59,
+    "nonwhitespace_characters": 227,
+    "characters_per_speech_second": 11.02,
+    "expected_segments": 2
+  },
+  "work/clips/continuous-negative-r-060.mp3": {
+    "bytes": 68301,
+    "sha256": "46fb0e285bdfd12cdacfe6c3cb7d21405e48e62621010d90f4208b02c7016a97",
+    "duration": 17.02,
+    "mean_volume_db": -19.8,
+    "max_volume_db": -2.5,
+    "silences": [
+      {
+        "start": 0.0,
+        "end": 0.284667,
+        "duration": 0.284667
+      },
+      {
+        "start": 1.033333,
+        "end": 1.427125,
+        "duration": 0.393792
+      },
+      {
+        "start": 4.500417,
+        "end": 4.868458,
+        "duration": 0.368042
+      },
+      {
+        "start": 5.752042,
+        "end": 6.274792,
+        "duration": 0.52275
+      },
+      {
+        "start": 7.612083,
+        "end": 8.095833,
+        "duration": 0.48375
+      },
+      {
+        "start": 10.104042,
+        "end": 10.674542,
+        "duration": 0.5705
+      },
+      {
+        "start": 14.493583,
+        "end": 15.147667,
+        "duration": 0.654083
+      },
+      {
+        "start": 16.626083,
+        "end": 16.96,
+        "duration": 0.333917
+      }
+    ],
+    "speech_seconds": 13.408,
+    "nonwhitespace_characters": 143,
+    "characters_per_speech_second": 10.66,
+    "expected_segments": 1
+  }
+}

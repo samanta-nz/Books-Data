@@ -1,0 +1,57 @@
+{
+  "batch": "002",
+  "status": "all_ten_clips_accepted",
+  "accepted_clips": [
+    "goals-a-001-005.mp3",
+    "possession-a-017.mp3",
+    "possession-r-018.mp3",
+    "possession-a-019-021.mp3",
+    "possession-r-022.mp3",
+    "possession-a-023.mp3",
+    "continuous-negative-a-056.mp3",
+    "continuous-negative-r-057.mp3",
+    "continuous-negative-a-058-059.mp3",
+    "continuous-negative-r-060.mp3"
+  ],
+  "rate_range": [
+    7.99,
+    11.02
+  ],
+  "combined_clip_boundaries": {
+    "work/clips/goals-a-001-005.mp3": [
+      [
+        6.715625,
+        7.457208
+      ],
+      [
+        13.648625,
+        14.4205
+      ],
+      [
+        20.702042,
+        21.4625
+      ],
+      [
+        30.086208,
+        30.799458
+      ]
+    ],
+    "work/clips/possession-a-019-021.mp3": [
+      [
+        13.747542,
+        14.439292
+      ],
+      [
+        33.439417,
+        34.367833
+      ]
+    ],
+    "work/clips/continuous-negative-a-058-059.mp3": [
+      [
+        12.540375,
+        13.491917
+      ]
+    ]
+  },
+  "raw_analysis": "work/batch-002-audio-analysis.json"
+}
