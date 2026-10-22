@@ -104,7 +104,7 @@ def main() -> int:
     master.unlink(missing_ok=True)
 
     info = {
-        "lesson": args.lesson, "section": sec,
+        "lesson": args.lesson, "section": f"{args.lesson}--{sec}",
         "tts_input": node.get("tts_input"),
         "audio_filename": out.name, "audio_path": str(out),
         "duration_seconds": round(len(audio) / SR, 2),
@@ -120,7 +120,8 @@ def main() -> int:
             data = json.loads(rep.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
             pass
-    data["sections"] = [s for s in data.get("sections", []) if s["section"] != sec]
+    data["sections"] = [s for s in data.get("sections", [])
+                        if s["section"] not in (sec, f"{args.lesson}--{sec}")]
     data["sections"].append(info)
     rep.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
 

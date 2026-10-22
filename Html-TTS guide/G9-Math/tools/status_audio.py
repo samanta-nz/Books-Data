@@ -35,6 +35,8 @@ def main() -> int:
     rep_path = course / "build-report.json"
     if rep_path.exists():
         for s in json.loads(rep_path.read_text(encoding="utf-8")).get("sections", []):
+            if not s["section"].startswith(args.lesson + "--"):
+                continue  # رکورد درس دیگر
             legacy[s["section"].replace(args.lesson + "--", "")] = s
     total_parts = done_parts = total_seconds = 0
     done_sections = 0
@@ -69,7 +71,9 @@ def main() -> int:
     rep = course / "build-report.json"
     if rep.exists():
         data = json.loads(rep.read_text(encoding="utf-8"))
-        by = {s["section"].replace(args.lesson + "--", ""): s for s in data.get("sections", [])}
+        by = {s["section"].replace(args.lesson + "--", ""): s
+              for s in data.get("sections", [])
+              if s["section"].startswith(args.lesson + "--")}
         for e in report["sections"]:
             s = by.get(e["section"])
             if s:
