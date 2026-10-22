@@ -232,6 +232,43 @@
      "chars": 1073
     }
    ]
+  },
+  {
+   "lesson": "ryazif01d01",
+   "section": "summary",
+   "tts_input": "arena-input/ryazif01d01/ryazif01d01--summary.tts.txt",
+   "audio_filename": "ryazif01d01--summary.weba",
+   "audio_path": "audio/ryazif01d01--summary.weba",
+   "duration_seconds": 78.92,
+   "bytes": 333783,
+   "container_ok": true,
+   "parts": 3,
+   "segments": [
+    {
+     "part": 0,
+     "speaker": "فرسام",
+     "source": "p00.mp3",
+     "silence_before_s": 0.0,
+     "seconds": 22.76,
+     "chars": 245
+    },
+    {
+     "part": 1,
+     "speaker": "سروناز",
+     "source": "p01.mp3",
+     "silence_before_s": 1.2,
+     "seconds": 13.88,
+     "chars": 152
+    },
+    {
+     "part": 2,
+     "speaker": "فرسام",
+     "source": "p02.mp3",
+     "silence_before_s": 1.2,
+     "seconds": 39.88,
+     "chars": 395
+    }
+   ]
   }
  ]
 }
