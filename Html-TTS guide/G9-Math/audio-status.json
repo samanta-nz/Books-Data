@@ -1,0 +1,131 @@
+{
+ "sections": [
+  {
+   "section": "concept-1",
+   "parts_required": 7,
+   "parts_done": 7,
+   "complete": true,
+   "audio_file": "ryazif01d01--concept-1.weba",
+   "audio_seconds": 317.92,
+   "audio_bytes": 1347147
+  },
+  {
+   "section": "concept-2",
+   "parts_required": 3,
+   "parts_done": 3,
+   "complete": true,
+   "audio_file": "ryazif01d01--concept-2.weba",
+   "audio_seconds": 157.6,
+   "audio_bytes": 670371
+  },
+  {
+   "section": "concept-3",
+   "parts_required": 7,
+   "parts_done": 7,
+   "complete": true,
+   "audio_file": "ryazif01d01--concept-3.weba",
+   "audio_seconds": 294.52,
+   "audio_bytes": 1251286
+  },
+  {
+   "section": "concept-4",
+   "parts_required": 8,
+   "parts_done": 6,
+   "complete": false,
+   "audio_file": null,
+   "audio_seconds": null
+  },
+  {
+   "section": "concept-5",
+   "parts_required": 7,
+   "parts_done": 3,
+   "complete": false,
+   "audio_file": null,
+   "audio_seconds": null
+  },
+  {
+   "section": "examples",
+   "parts_required": 27,
+   "parts_done": 0,
+   "complete": false,
+   "audio_file": null,
+   "audio_seconds": null
+  },
+  {
+   "section": "lab",
+   "parts_required": 5,
+   "parts_done": 0,
+   "complete": false,
+   "audio_file": null,
+   "audio_seconds": null
+  },
+  {
+   "section": "mistakes",
+   "parts_required": 12,
+   "parts_done": 0,
+   "complete": false,
+   "audio_file": null,
+   "audio_seconds": null
+  },
+  {
+   "section": "prerequisites",
+   "parts_required": 3,
+   "parts_done": 3,
+   "complete": true,
+   "audio_file": "ryazif01d01--prerequisites.weba",
+   "audio_seconds": 168.28,
+   "audio_bytes": 722271
+  },
+  {
+   "section": "summary",
+   "parts_required": 3,
+   "parts_done": 3,
+   "complete": true,
+   "audio_file": "ryazif01d01--summary.weba",
+   "audio_seconds": 78.92,
+   "audio_bytes": 333783
+  },
+  {
+   "section": "goals",
+   "parts_required": 0,
+   "parts_done": 0,
+   "complete": true,
+   "audio_file": "ryazif01d01--goals.weba",
+   "audio_seconds": 65.64,
+   "audio_bytes": 638369
+  },
+  {
+   "section": "entry",
+   "parts_required": 0,
+   "parts_done": 0,
+   "complete": true,
+   "audio_file": "ryazif01d01--entry.weba",
+   "audio_seconds": 15.7,
+   "audio_bytes": 130024
+  },
+  {
+   "section": "practice",
+   "parts_required": 0,
+   "parts_done": 0,
+   "complete": true,
+   "audio_file": "ryazif01d01--practice.weba",
+   "audio_seconds": 15.7,
+   "audio_bytes": 130024
+  },
+  {
+   "section": "exit",
+   "parts_required": 0,
+   "parts_done": 0,
+   "complete": true,
+   "audio_file": "ryazif01d01--exit.weba",
+   "audio_seconds": 15.26,
+   "audio_bytes": 127025
+  }
+ ],
+ "lesson": "ryazif01d01",
+ "sections_total": 14,
+ "sections_with_audio": 9,
+ "parts_total": 82,
+ "parts_done": 32,
+ "audio_seconds_total": 1129.5
+}
