@@ -39,10 +39,11 @@
   {
    "section": "concept-5",
    "parts_required": 7,
-   "parts_done": 2,
-   "complete": false,
-   "audio_file": null,
-   "audio_seconds": null
+   "parts_done": 7,
+   "complete": true,
+   "audio_file": "ryazif01d02--concept-5.weba",
+   "audio_seconds": 330.04,
+   "audio_bytes": 1401270
   },
   {
    "section": "entry",
@@ -82,7 +83,7 @@
   {
    "section": "lab",
    "parts_required": 7,
-   "parts_done": 0,
+   "parts_done": 4,
    "complete": false,
    "audio_file": null,
    "audio_seconds": null
@@ -125,8 +126,8 @@
  ],
  "lesson": "ryazif01d02",
  "sections_total": 14,
- "sections_with_audio": 10,
+ "sections_with_audio": 11,
  "parts_total": 108,
- "parts_done": 50,
- "audio_seconds_total": 1781.6
+ "parts_done": 59,
+ "audio_seconds_total": 2111.6
 }
