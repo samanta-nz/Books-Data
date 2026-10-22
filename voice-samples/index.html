@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>نمونه‌های صدای تأییدشده</title>
+<style>
+  :root{
+    --bg:#0e1512; --card:#16211c; --line:#26362e; --ink:#eef5f0;
+    --muted:#9db3a8; --accent:#4ec9a0; --accent2:#7aa2ff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; min-height:100vh; padding:32px 18px 56px;
+    font-family:"Vazirmatn","Segoe UI",Tahoma,sans-serif;
+    background:radial-gradient(1200px 600px at 80% -10%, #1b3a2e 0%, var(--bg) 55%);
+    color:var(--ink);
+  }
+  .wrap{max-width:820px;margin:0 auto}
+  h1{font-size:1.6rem;margin:0 0 6px}
+  .sub{color:var(--muted);font-size:.95rem;margin:0 0 26px;line-height:1.9}
+  .card{
+    background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.01)), var(--card);
+    border:1px solid var(--line); border-radius:18px; padding:20px 20px 16px;
+    margin-bottom:18px; box-shadow:0 18px 40px -28px #000;
+  }
+  .head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+  .badge{
+    font-size:.78rem;padding:4px 10px;border-radius:999px;
+    border:1px solid rgba(78,201,160,.45); color:var(--accent);
+    background:rgba(78,201,160,.08);
+  }
+  .badge.male{border-color:rgba(122,162,255,.45);color:var(--accent2);background:rgba(122,162,255,.08)}
+  h2{font-size:1.2rem;margin:0}
+  .meta{color:var(--muted);font-size:.85rem;line-height:2;margin:6px 0 14px}
+  audio{width:100%;margin-top:6px;filter:saturate(.9)}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:14px}
+  .stat{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+  .stat b{display:block;font-size:1rem;color:#fff;font-weight:600;direction:ltr;text-align:right}
+  .stat span{font-size:.75rem;color:var(--muted)}
+  footer{color:var(--muted);font-size:.8rem;line-height:2;margin-top:26px;border-top:1px solid var(--line);padding-top:16px;word-break:break-all}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>نمونه‌های صدای تأییدشدهٔ فارسی</h1>
+  <p class="sub">همان دو فایل شاخهٔ <code>arena/cff944f2-books-data</code>، بدون هیچ تغییر (بایت‌به‌بایت).</p>
+
+  <section class="card">
+    <div class="head">
+      <h2>voice-00 — زن</h2>
+      <span class="badge">تأییدشده</span>
+    </div>
+    <p class="meta">
+      فایل: <code>voice-00-female.mp3</code> · مدت ۲۱٫۴۸ ثانیه · MP3 مونو ۲۴ کیلوهرتز ۳۲ kb/s · ۸۶٬۳۴۹ بایت
+    </p>
+    <audio controls preload="metadata" src="voice-00-female.mp3"></audio>
+    <div class="stats">
+      <div class="stat"><b>188.2 Hz</b><span>میانهٔ فرکانس پایه</span></div>
+      <div class="stat"><b>130–340 Hz</b><span>بازهٔ زیر و بمی</span></div>
+      <div class="stat"><b>1772 Hz</b><span>مرکز طیفی</span></div>
+      <div class="stat"><b>11.2</b><span>هجا در ثانیه</span></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="head">
+      <h2>voice-02 — مرد</h2>
+      <span class="badge male">تأییدشده</span>
+    </div>
+    <p class="meta">
+      فایل: <code>voice-02-male.mp3</code> · مدت ۲۱٫۸۴ ثانیه · MP3 مونو ۲۴ کیلوهرتز ۳۲ kb/s · ۸۷٬۷۸۹ بایت
+    </p>
+    <audio controls preload="metadata" src="voice-02-male.mp3"></audio>
+    <div class="stats">
+      <div class="stat"><b>103.9 Hz</b><span>میانهٔ فرکانس پایه</span></div>
+      <div class="stat"><b>69–400 Hz*</b><span>بازهٔ زیر و بمی</span></div>
+      <div class="stat"><b>1907 Hz</b><span>مرکز طیفی</span></div>
+      <div class="stat"><b>12.5</b><span>هجا در ثانیه</span></div>
+    </div>
+  </section>
+
+  <footer>
+    MD5 — voice-00: 6478f350ad8b760cab08a26225a8d624<br>
+    MD5 — voice-02: f43e99d90b0caf9213514ba53dcac723<br>
+    * سقف جست‌وجوی F0 در تحلیل ۴۰۰ هرتز است؛ صدک ۹۵ در این نمونه به سقف برخورد می‌کند
+    و بخشی از آن خطای اکتاو است. جزئیات در <code>README.md</code>.
+  </footer>
+</div>
+</body>
+</html>
