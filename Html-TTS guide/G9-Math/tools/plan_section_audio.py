@@ -25,7 +25,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_section_audio import parse_tts  # noqa: E402
 
-MAX_CHARS = 1400
+MAX_CHARS = 900
 PAUSE_MS = {"کوتاه": 600, "متوسط": 1200, "بلند": 2500}
 SENT_SPLIT = re.compile(r"(?<=[.!?؟؛:])\s+")
 

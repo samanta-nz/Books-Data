@@ -1,0 +1,353 @@
+{
+  "schema_version": 1,
+  "lesson": "ryazif01d02",
+  "audio_platform": "arena.ai",
+  "audio_asset_status": "PENDING ASSET",
+  "sections": [
+    {
+      "section_id": "goals",
+      "title": "بیایید مسیر یادگیری خود را بشناسیم",
+      "audio_filename": "ryazif01d02--goals.weba",
+      "audio_mime": "audio/webm",
+      "status": "PENDING ASSET",
+      "embedded": false,
+      "tts_file": "tts/ryazif01d02/ryazif01d02--goals.tts.md",
+      "tts_text_sha256": "167a3e8cd5b4b20070e331a7145b41269f54ec366c87500f8922af4489d50640",
+      "policy": {
+        "mode": "teaching",
+        "excluded_question_blocks": 0,
+        "special_question_only": 0,
+        "source_turns": [
+          "turn-1",
+          "turn-2"
+        ]
+      }
+    },
+    {
+      "section_id": "prerequisites",
+      "title": "پیش از شروع، دانسته‌های لازم را با هم مرور کنیم",
+      "audio_filename": "ryazif01d02--prerequisites.weba",
+      "audio_mime": "audio/webm",
+      "status": "PENDING ASSET",
+      "embedded": false,
+      "tts_file": "tts/ryazif01d02/ryazif01d02--prerequisites.tts.md",
+      "tts_text_sha256": "ea7a954c73f17b6d9b26196a752e345376a8dadedc232eb046409edef31c0224",
+      "policy": {
+        "mode": "teaching-with-practice-pause",
+        "excluded_question_blocks": 3,
+        "special_question_only": 0,
+        "source_turns": [
+          "turn-3",
+          "turn-4",
+          "turn-5",
+          "turn-6"
+        ]
+      }
+    },
+    {
+      "section_id": "entry",
+      "title": "با چند پرسش کوتاه، نقطهٔ شروع خود را پیدا کنید",
+      "audio_filename": "ryazif01d02--entry.weba",
+      "audio_mime": "audio/webm",
+      "status": "PENDING ASSET",
+      "embedded": false,
+      "tts_file": "tts/ryazif01d02/ryazif01d02--entry.tts.md",
+      "tts_text_sha256": "4b039477a1b1e0a7ac95c1869c99ec11fc6d3b3b3e20d7d15958e10f7480f78f",
+      "policy": {
+        "mode": "exercise-batch",
+        "excluded_question_blocks": 2,
+        "special_question_only": 0,
+        "source_turns": []
+      }
+    },
+    {
+      "section_id": "concept-1",
+      "title": "با هم بررسی کنیم: برابری؛ همهٔ عضوها، نه فقط تعداد",
+      "audio_filename": "ryazif01d02--concept-1.weba",
+      "audio_mime": "audio/webm",
+      "status": "PENDING ASSET",
+      "embedded": false,
+      "tts_file": "tts/ryazif01d02/ryazif01d02--concept-1.tts.md",
+      "tts_text_sha256": "3c2f4a831e54d9acf004ad46894623424274102a03427812cb3e73641893037e",
+      "policy": {
+        "mode": "teaching",
+        "excluded_question_blocks": 0,
+        "special_question_only": 3,
+        "source_turns": [
+          "turn-22",
+          "turn-23",
+          "turn-24",
+          "turn-25",
+          "turn-26",
+          "turn-27"
+        ]
+      }
+    },
+    {
+      "section_id": "concept-2",
+      "title": "با هم بررسی کنیم: زیرمجموعه و عضو نقض",
+      "audio_filename": "ryazif01d02--concept-2.weba",
+      "audio_mime": "audio/webm",
+      "status": "PENDING ASSET",
+      "embedded": false,
+      "tts_file": "tts/ryazif01d02/ryazif01d02--concept-2.tts.md",
+      "tts_text_sha256": "864fd2fcf7c54090ccaf1f44c2a7655c503ce3b435c43585035b13b6e323078c",
+      "policy": {
+        "mode": "teaching",
+        "excluded_question_blocks": 0,
+        "special_question_only": 2,
+        "source_turns": [
+          "turn-28",
+          "turn-29",
+          "turn-30",
+          "turn-31",
+          "turn-32",
+          "turn-33",
+          "turn-34",
+          "turn-35"
+        ]
+      }
+    },
+    {
+      "section_id": "concept-3",
+      "title": "با هم بررسی کنیم: نوشتن منظم تمام زیرمجموعه‌ها",
+      "audio_filename": "ryazif01d02--concept-3.weba",
+      "audio_mime": "audio/webm",
+      "status": "PENDING ASSET",
+      "embedded": false,
+      "tts_file": "tts/ryazif01d02/ryazif01d02--concept-3.tts.md",
+      "tts_text_sha256": "7c5ba3c489581e0b91618bcae9ec63c50022a8c534cb4b436e2c09a77ad8b9d2",
+      "policy": {
+        "mode": "teaching",
+        "excluded_question_blocks": 0,
+        "special_question_only": 2,
+        "source_turns": [
+          "turn-36",
+          "turn-37",
+          "turn-38",
+          "turn-39",
+          "turn-40",
+          "turn-41"
+        ]
+      }
+    },
+    {
+      "section_id": "concept-4",
+      "title": "با هم بررسی کنیم: نمایش با شرط و نمایش با الگو",
+      "audio_filename": "ryazif01d02--concept-4.weba",
+      "audio_mime": "audio/webm",
+      "status": "PENDING ASSET",
+      "embedded": false,
+      "tts_file": "tts/ryazif01d02/ryazif01d02--concept-4.tts.md",
+      "tts_text_sha256": "c1c008fa9c98ccbef6a2d129bc80167e9a9af9bae1fc93981742042916317e92",
+      "policy": {
+        "mode": "teaching",
+        "excluded_question_blocks": 0,
+        "special_question_only": 2,
+        "source_turns": [
+          "turn-42",
+          "turn-43",
+          "turn-44",
+          "turn-45",
+          "turn-46",
+          "turn-47",
+          "turn-48"
+        ]
+      }
+    },
+    {
+      "section_id": "concept-5",
+      "title": "با هم بررسی کنیم: خانوادهٔ مجموعه‌های اعداد",
+      "audio_filename": "ryazif01d02--concept-5.weba",
+      "audio_mime": "audio/webm",
+      "status": "PENDING ASSET",
+      "embedded": false,
+      "tts_file": "tts/ryazif01d02/ryazif01d02--concept-5.tts.md",
+      "tts_text_sha256": "93aeaedf6deab51ccaff692fbeb00e4806f86a6d6e6abb79e3a5cfc64e2dc89c",
+      "policy": {
+        "mode": "teaching",
+        "excluded_question_blocks": 0,
+        "special_question_only": 1,
+        "source_turns": [
+          "turn-49",
+          "turn-50",
+          "turn-51",
+          "turn-52",
+          "turn-53",
+          "turn-54",
+          "turn-55"
+        ]
+      }
+    },
+    {
+      "section_id": "lab",
+      "title": "پیش‌بینی کنید و سپس با نمودارهای مرحله‌ای بررسی کنید",
+      "audio_filename": "ryazif01d02--lab.weba",
+      "audio_mime": "audio/webm",
+      "status": "PENDING ASSET",
+      "embedded": false,
+      "tts_file": "tts/ryazif01d02/ryazif01d02--lab.tts.md",
+      "tts_text_sha256": "aed3c27c071adb51f3a8d0a69f6b8f88904ffb6b47cdf7174677f3d615c2df64",
+      "policy": {
+        "mode": "teaching",
+        "excluded_question_blocks": 0,
+        "special_question_only": 0,
+        "source_turns": [
+          "turn-56",
+          "turn-57",
+          "turn-58",
+          "turn-59",
+          "turn-60",
+          "turn-61",
+          "turn-62",
+          "turn-63"
+        ]
+      }
+    },
+    {
+      "section_id": "examples",
+      "title": "با مثال‌های کتاب و مثال‌های تازه، روش را کامل یاد بگیریم",
+      "audio_filename": "ryazif01d02--examples.weba",
+      "audio_mime": "audio/webm",
+      "status": "PENDING ASSET",
+      "embedded": false,
+      "tts_file": "tts/ryazif01d02/ryazif01d02--examples.tts.md",
+      "tts_text_sha256": "a4bf6e26637ff756cb0864cfe6361a22d6cc904163a913cbb0eb839821ee8f36",
+      "policy": {
+        "mode": "teaching",
+        "excluded_question_blocks": 0,
+        "special_question_only": 0,
+        "source_turns": [
+          "turn-64",
+          "turn-65",
+          "turn-66",
+          "turn-67",
+          "turn-68",
+          "turn-69",
+          "turn-70",
+          "turn-71",
+          "turn-72",
+          "turn-73",
+          "turn-74",
+          "turn-75",
+          "turn-76",
+          "turn-77",
+          "turn-78",
+          "turn-79",
+          "turn-80",
+          "turn-81",
+          "turn-82",
+          "turn-83",
+          "turn-84",
+          "turn-85",
+          "turn-86",
+          "turn-87",
+          "turn-88",
+          "turn-89",
+          "turn-90",
+          "turn-91",
+          "turn-92",
+          "turn-93",
+          "turn-94",
+          "turn-95",
+          "turn-96",
+          "turn-97",
+          "turn-98",
+          "turn-99",
+          "turn-100",
+          "turn-101",
+          "turn-102",
+          "turn-103",
+          "turn-104",
+          "turn-105",
+          "turn-106",
+          "turn-107",
+          "turn-108",
+          "turn-109",
+          "turn-110",
+          "turn-111",
+          "turn-112",
+          "turn-113"
+        ]
+      }
+    },
+    {
+      "section_id": "mistakes",
+      "title": "خطاها را با دلیل تشخیص دهیم و اصلاح کنیم",
+      "audio_filename": "ryazif01d02--mistakes.weba",
+      "audio_mime": "audio/webm",
+      "status": "PENDING ASSET",
+      "embedded": false,
+      "tts_file": "tts/ryazif01d02/ryazif01d02--mistakes.tts.md",
+      "tts_text_sha256": "4d12c9874ba582f38a39e80229894c4ee278cd06d06aaa4a2fbcd877076970ed",
+      "policy": {
+        "mode": "teaching",
+        "excluded_question_blocks": 0,
+        "special_question_only": 0,
+        "source_turns": [
+          "turn-114",
+          "turn-115",
+          "turn-116",
+          "turn-117",
+          "turn-118",
+          "turn-119",
+          "turn-120",
+          "turn-121"
+        ]
+      }
+    },
+    {
+      "section_id": "practice",
+      "title": "خودتان حل کنید؛ سپس پاسخ و دلیل را بررسی کنیم",
+      "audio_filename": "ryazif01d02--practice.weba",
+      "audio_mime": "audio/webm",
+      "status": "PENDING ASSET",
+      "embedded": false,
+      "tts_file": "tts/ryazif01d02/ryazif01d02--practice.tts.md",
+      "tts_text_sha256": "4b039477a1b1e0a7ac95c1869c99ec11fc6d3b3b3e20d7d15958e10f7480f78f",
+      "policy": {
+        "mode": "exercise-batch",
+        "excluded_question_blocks": 20,
+        "special_question_only": 0,
+        "source_turns": []
+      }
+    },
+    {
+      "section_id": "exit",
+      "title": "پیش از پایان، یادگیری خود را با دلیل بسنجید",
+      "audio_filename": "ryazif01d02--exit.weba",
+      "audio_mime": "audio/webm",
+      "status": "PENDING ASSET",
+      "embedded": false,
+      "tts_file": "tts/ryazif01d02/ryazif01d02--exit.tts.md",
+      "tts_text_sha256": "e4ec5c083152c21808c51b1ed2bc3bc38e588e4e63d34667dc25bf0518e0b378",
+      "policy": {
+        "mode": "teaching",
+        "excluded_question_blocks": 0,
+        "special_question_only": 0,
+        "source_turns": []
+      }
+    },
+    {
+      "section_id": "summary",
+      "title": "آنچه آموختید، با زبان خودتان توضیح دهید",
+      "audio_filename": "ryazif01d02--summary.weba",
+      "audio_mime": "audio/webm",
+      "status": "PENDING ASSET",
+      "embedded": false,
+      "tts_file": "tts/ryazif01d02/ryazif01d02--summary.tts.md",
+      "tts_text_sha256": "9b8964be63eaa694fc8a5cfe644af0e0ed67ed040328b21682ea32bddd908bde",
+      "policy": {
+        "mode": "teaching",
+        "excluded_question_blocks": 0,
+        "special_question_only": 0,
+        "source_turns": [
+          "turn-166",
+          "turn-167"
+        ]
+      }
+    }
+  ],
+  "html_sha256": "6f5dd3e24c19282d3c2a49307dd870472461f796a7a96001024f37bcd5ff07a7",
+  "tts_markdown_sha256": "816b120333e83861075cd386c118498ba05e9b7c84d0cfabf76e19ad01859be8"
+}
