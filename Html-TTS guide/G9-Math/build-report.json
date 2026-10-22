@@ -1745,6 +1745,232 @@
      "chars": 131
     }
    ]
+  },
+  {
+   "lesson": "ryazif01d02",
+   "section": "examples",
+   "tts_input": "arena-input/ryazif01d02/ryazif01d02--examples.tts.txt",
+   "audio_filename": "ryazif01d02--examples.weba",
+   "audio_path": "/home/user/Books-Data/Html-TTS guide/G9-Math/audio/ryazif01d02--examples.weba",
+   "duration_seconds": 736.7,
+   "bytes": 3061370,
+   "parts": 30,
+   "examples": 7,
+   "per_example": [
+    {
+     "index": 1,
+     "title": "آیا اِی برابر با دو، چهار و شش با بی برابر با شش، دو، چهار، چهار برابر هست؟",
+     "file": "ryazif01d02--example-01.weba",
+     "duration_seconds": 95.14,
+     "bytes": 398855,
+     "segments": [
+      {
+       "part": 0,
+       "speaker": "فرسام",
+       "seconds": 46.12
+      },
+      {
+       "part": 1,
+       "speaker": "سروناز",
+       "seconds": 11.28
+      },
+      {
+       "part": 2,
+       "speaker": "فرسام",
+       "seconds": 25.12
+      },
+      {
+       "part": 3,
+       "speaker": "سروناز",
+       "seconds": 9.92
+      }
+     ]
+    },
+    {
+     "index": 2,
+     "title": "اگه اِی برابر با اِی کوچک و بی کوچک و بی برابر با یک، دو، اِی کوچک و بی کوچک، رابطهٔ دو مجموعه رو تعیین کن",
+     "file": "ryazif01d02--example-02.weba",
+     "duration_seconds": 89.14,
+     "bytes": 376780,
+     "segments": [
+      {
+       "part": 4,
+       "speaker": "فرسام",
+       "seconds": 29.08
+      },
+      {
+       "part": 5,
+       "speaker": "سروناز",
+       "seconds": 14.4
+      },
+      {
+       "part": 6,
+       "speaker": "فرسام",
+       "seconds": 31.88
+      },
+      {
+       "part": 7,
+       "speaker": "سروناز",
+       "seconds": 11.08
+      }
+     ]
+    },
+    {
+     "index": 3,
+     "title": "تمام زیرمجموعه‌های مجموعهٔ طبیعی‌های بین ۹ و ۱۲ رو بنویس",
+     "file": "ryazif01d02--example-03.weba",
+     "duration_seconds": 96.94,
+     "bytes": 404331,
+     "segments": [
+      {
+       "part": 8,
+       "speaker": "فرسام",
+       "seconds": 29.48
+      },
+      {
+       "part": 9,
+       "speaker": "سروناز",
+       "seconds": 13.88
+      },
+      {
+       "part": 10,
+       "speaker": "فرسام",
+       "seconds": 39.52
+      },
+      {
+       "part": 11,
+       "speaker": "سروناز",
+       "seconds": 11.36
+      }
+     ]
+    },
+    {
+     "index": 4,
+     "title": "مجموعهٔ اِی شامل ایکس‌های صحیح هست که بزرگ‌تر یا مساوی منفی پنج و کوچک‌تر از پنج هستن» رو با عضوها بنویس",
+     "file": "ryazif01d02--example-04.weba",
+     "duration_seconds": 96.02,
+     "bytes": 402080,
+     "segments": [
+      {
+       "part": 12,
+       "speaker": "فرسام",
+       "seconds": 27.0
+      },
+      {
+       "part": 13,
+       "speaker": "سروناز",
+       "seconds": 15.08
+      },
+      {
+       "part": 14,
+       "speaker": "فرسام",
+       "seconds": 35.64
+      },
+      {
+       "part": 15,
+       "speaker": "سروناز",
+       "seconds": 15.6
+      }
+     ]
+    },
+    {
+     "index": 5,
+     "title": "در اِی شامل پنج اِن به‌علاوهٔ سه، به‌طوری که اِن طبیعی باشه، هفت عضو نخست رو پیدا کن",
+     "file": "ryazif01d02--example-05.weba",
+     "duration_seconds": 97.46,
+     "bytes": 408623,
+     "segments": [
+      {
+       "part": 16,
+       "speaker": "فرسام",
+       "seconds": 28.08
+      },
+      {
+       "part": 17,
+       "speaker": "سروناز",
+       "seconds": 12.04
+      },
+      {
+       "part": 18,
+       "speaker": "فرسام",
+       "seconds": 40.84
+      },
+      {
+       "part": 19,
+       "speaker": "سروناز",
+       "seconds": 13.8
+      }
+     ]
+    },
+    {
+     "index": 6,
+     "title": "برای اِی برابر با منفی دو، منفی یک، صفر، یک و دو، عضوهای بی شامل ایکس‌های عضو اِی هست که مربعشان حداکثر دو هست…",
+     "file": "ryazif01d02--example-06.weba",
+     "duration_seconds": 116.04,
+     "bytes": 491452,
+     "segments": [
+      {
+       "part": 20,
+       "speaker": "فرسام",
+       "seconds": 43.6
+      },
+      {
+       "part": 21,
+       "speaker": "سروناز",
+       "seconds": 10.84
+      },
+      {
+       "part": 22,
+       "speaker": "فرسام",
+       "seconds": 34.8
+      },
+      {
+       "part": 23,
+       "speaker": "سروناز",
+       "seconds": 13.4
+      },
+      {
+       "part": 24,
+       "speaker": "فرسام",
+       "seconds": 9.8
+      }
+     ]
+    },
+    {
+     "index": 7,
+     "title": "تمام زیرمجموعه‌های مجموعهٔ شامل اِی کوچک، بی کوچک رو بنویس؛ سپس توضیح بده با افزودن سی کوچک، چرا ۸ زیرمجموعه د…",
+     "file": "ryazif01d02--example-07.weba",
+     "duration_seconds": 133.76,
+     "bytes": 558154,
+     "segments": [
+      {
+       "part": 25,
+       "speaker": "فرسام",
+       "seconds": 40.44
+      },
+      {
+       "part": 26,
+       "speaker": "سروناز",
+       "seconds": 14.64
+      },
+      {
+       "part": 27,
+       "speaker": "فرسام",
+       "seconds": 49.64
+      },
+      {
+       "part": 28,
+       "speaker": "سروناز",
+       "seconds": 13.16
+      },
+      {
+       "part": 29,
+       "speaker": "فرسام",
+       "seconds": 12.28
+      }
+     ]
+    }
+   ]
   }
  ]
 }
