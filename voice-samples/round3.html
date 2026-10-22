@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>دور سوم — کاندیدهای صدای مرد</title>
+<style>
+  :root{--bg:#0d1412;--card:#151f1b;--line:#26362e;--ink:#eef5f0;--muted:#9db3a8;
+        --a:#4ec9a0;--b:#7aa2ff;--c:#f0b34a;--r:#e06c8b}
+  *{box-sizing:border-box}
+  body{margin:0;padding:30px 18px 60px;font-family:"Vazirmatn","Segoe UI",Tahoma,sans-serif;
+       background:radial-gradient(1100px 520px at 15% -10%,#1a3329 0%,var(--bg) 60%);color:var(--ink)}
+  .wrap{max-width:940px;margin:0 auto}
+  h1{font-size:1.5rem;margin:0 0 8px}
+  .sub{color:var(--muted);font-size:.92rem;line-height:1.9;margin:0 0 22px}
+  h2.sec{font-size:1.08rem;margin:26px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:700px){.grid{grid-template-columns:1fr}}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01)),var(--card);
+        border:1px solid var(--line);border-radius:16px;padding:15px}
+  .card.best{border-color:rgba(78,201,160,.65);box-shadow:0 0 0 1px rgba(78,201,160,.25) inset}
+  .card.ref{border-color:rgba(224,108,139,.45)}
+  .card.keep{border-color:rgba(240,179,74,.5);background:linear-gradient(180deg,rgba(240,179,74,.07),rgba(255,255,255,.01)),var(--card)}
+  .tag{display:inline-block;font-size:.72rem;padding:3px 9px;border-radius:999px;margin-bottom:8px}
+  .t-ref{color:var(--r);border:1px solid rgba(224,108,139,.5);background:rgba(224,108,139,.08)}
+  .t-cand{color:var(--b);border:1px solid rgba(122,162,255,.45);background:rgba(122,162,255,.08)}
+  .t-best{color:var(--a);border:1px solid rgba(78,201,160,.5);background:rgba(78,201,160,.1)}
+  .t-keep{color:var(--c);border:1px solid rgba(240,179,74,.5);background:rgba(240,179,74,.1)}
+  h3{font-size:.97rem;margin:0 0 4px}
+  .meta{color:var(--muted);font-size:.77rem;line-height:1.9;margin:4px 0 10px}
+  audio{width:100%}
+  table{width:100%;border-collapse:collapse;font-size:.84rem;margin-top:10px;background:rgba(255,255,255,.02);
+        border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th,td{border-bottom:1px solid var(--line);padding:9px 8px;text-align:right}
+  th{color:var(--muted);font-weight:500;font-size:.76rem;background:rgba(255,255,255,.03)}
+  td.num{direction:ltr;text-align:left;font-variant-numeric:tabular-nums}
+  tr:last-child td{border-bottom:none}
+  .win{color:var(--a);font-weight:700}
+  .note{margin-top:16px;background:rgba(255,255,255,.03);border:1px solid var(--line);
+        border-radius:12px;padding:12px 14px;font-size:.85rem;line-height:2}
+  footer{color:var(--muted);font-size:.77rem;line-height:2;margin-top:24px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>دور سوم — چهار کاندید تازه برای صدای مرد</h1>
+  <p class="sub">هر چهار نمونه با همان متن مرجع ساخته شده‌اند تا مستقیم قابل مقایسه باشند. مردِ تأییدشده هنوز نداریم.</p>
+
+  <h2 class="sec">وضعیت فعلی</h2>
+  <div class="grid">
+    <section class="card keep">
+      <span class="tag t-keep">✅ ذخیره شد — تأییدشده</span>
+      <h3>زن — کاندید B دور دوم</h3>
+      <p class="meta">F0 میانه ۱۹۰٫۵ (مرجع ۱۸۸٫۲) · IQR ۹۸٫۱ (مرجع ۱۰۲٫۸) · شباهت ۰٫۹۳۷<br>
+      فایل بایگانی‌شده: <code>approved/female-approved.mp3</code></p>
+      <audio controls preload="metadata" src="approved/female-approved.mp3"></audio>
+    </section>
+    <section class="card ref">
+      <span class="tag t-ref">مرجع مرد</span>
+      <h3>voice-02 — هدف مقایسه</h3>
+      <p class="meta">F0 میانه ۱۰۳٫۹ · IQR ۹۴٫۷ · مرکز طیفی ۱۹۰۷ · ۱۲٫۵ هجا/ث</p>
+      <audio controls preload="metadata" src="voice-02-male.mp3"></audio>
+    </section>
+  </div>
+
+  <h2 class="sec">کاندیدهای دور سوم</h2>
+  <div class="grid">
+    <section class="card best">
+      <span class="tag t-best">بهترین امتیاز — ۰٫۸۵۷</span>
+      <h3>کاندید E</h3>
+      <p class="meta">۱۹٫۸۸ ثانیه · F0 میانه ۱۴۴٫۱ · IQR ۸۷٫۳ · مرکز طیفی ۱۷۰۷ · ۱۱٫۱ هجا/ث</p>
+      <audio controls preload="metadata" src="candidates/r3-cand-e-male.mp3"></audio>
+    </section>
+    <section class="card">
+      <span class="tag t-cand">کاندید — ۰٫۸۳۰</span>
+      <h3>کاندید F</h3>
+      <p class="meta">۱۹٫۰۸ ثانیه · F0 میانه ۱۶۳٫۳ · IQR ۹۰٫۲ · مرکز طیفی ۱۶۹۱ · ۱۰٫۵ هجا/ث</p>
+      <audio controls preload="metadata" src="candidates/r3-cand-f-male.mp3"></audio>
+    </section>
+    <section class="card">
+      <span class="tag t-cand">کاندید — ۰٫۷۴۱</span>
+      <h3>کاندید D</h3>
+      <p class="meta">۱۸٫۷۳ ثانیه · F0 میانه ۱۱۸٫۵ · IQR ۴۷٫۳ · مرکز طیفی ۱۵۱۱ · ۹٫۹ هجا/ث</p>
+      <audio controls preload="metadata" src="candidates/r3-cand-d-male.mp3"></audio>
+    </section>
+    <section class="card">
+      <span class="tag t-cand">کاندید — ۰٫۶۲۷</span>
+      <h3>کاندید C</h3>
+      <p class="meta">۱۵٫۶۲ ثانیه · F0 میانه ۱۱۸٫۵ · IQR ۲۰٫۸ · مرکز طیفی ۱۱۶۷ · ۱۰٫۰ هجا/ث</p>
+      <audio controls preload="metadata" src="candidates/r3-cand-c-male.mp3"></audio>
+    </section>
+  </div>
+
+  <h2 class="sec">جدول کامل (شامل دورهای قبل)</h2>
+  <table>
+    <thead>
+      <tr><th>نمونه</th><th>F0 میانه</th><th>IQR</th><th>مرکز طیفی</th><th>هجا/ث</th><th>شباهت</th><th>وضعیت</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>مرجع مرد</td><td class="num">103.9</td><td class="num">94.7</td><td class="num">1907</td><td class="num">12.48</td><td>—</td><td>هدف</td></tr>
+      <tr><td>کاندید E (دور ۳)</td><td class="num">144.1</td><td class="num win">87.3</td><td class="num">1707</td><td class="num">11.12</td><td class="num win">0.857</td><td>بهترین</td></tr>
+      <tr><td>کاندید F (دور ۳)</td><td class="num">163.3</td><td class="num">90.2</td><td class="num">1691</td><td class="num">10.52</td><td class="num">0.830</td><td>—</td></tr>
+      <tr><td>کاندید D (دور ۳)</td><td class="num">118.5</td><td class="num">47.3</td><td class="num">1511</td><td class="num">9.92</td><td class="num">0.741</td><td>—</td></tr>
+      <tr><td>کاندید C (دور ۳)</td><td class="num">118.5</td><td class="num">20.8</td><td class="num">1167</td><td class="num">9.99</td><td class="num">0.627</td><td>—</td></tr>
+      <tr><td>کاندید A (دور ۲)</td><td class="num">107.4</td><td class="num">36.5</td><td class="num">1470</td><td class="num">10.52</td><td class="num">0.742</td><td>رد شد</td></tr>
+      <tr><td>کاندید B (دور ۲)</td><td class="num">152.4</td><td class="num">81.5</td><td class="num">1236</td><td class="num">10.03</td><td class="num">0.749</td><td>رد شد</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <b>تحلیل:</b> هیچ‌کدام از این چهار صدا به زیر و بمی مرجع (۱۰۴ هرتز) نرسید؛ دو تای نزدیک (C و D) خیلی یکنواخت‌اند
+    (IQR ۲۱ و ۴۷ در برابر ۹۵) و دو تای زنده‌تر (E و F) حدود ۴۰ تا ۶۰ هرتز بالاترند. یعنی در این مجموعه،
+    «بم‌بودن» و «احساس داشتن» هم‌زمان در یک صدا جمع نشده است.
+  </div>
+
+  <footer>
+    همهٔ نمونه‌ها با متن یکسان و بدون تغییر سرعت ساخته شده‌اند. IQR = فاصلهٔ چارک اول تا سوم فرکانس پایه.
+    «شباهت» میانگین چهار مؤلفه: زیر و بمی، دامنهٔ زیر و بمی، روشنی صدا، سرعت گفتار.
+  </footer>
+</div>
+</body>
+</html>

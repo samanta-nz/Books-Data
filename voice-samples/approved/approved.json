@@ -1,0 +1,70 @@
+{
+  "updated": "2026-10-22",
+  "approved": [
+    {
+      "role": "female",
+      "file": "voice-samples/approved/female-approved.mp3",
+      "source": "voice-samples/candidates/cand-b-female.mp3",
+      "status": "approved",
+      "similarity_to_reference": 0.937,
+      "reference": "voice-samples/voice-00-female.mp3",
+      "f0_median_hz": 190.5,
+      "reference_f0_median_hz": 188.2,
+      "f0_iqr_hz": 98.1,
+      "reference_f0_iqr_hz": 102.8,
+      "spectral_centroid_hz": 1594.5,
+      "syllables_per_sec": 10.1,
+      "approved_on": "2026-10-22",
+      "note": "کاربر در دور دوم تأیید کرد؛ نزدیک‌ترین کاندید به مرجع تأییدشدهٔ زن."
+    }
+  ],
+  "rejected": [
+    {
+      "role": "male",
+      "file": "voice-samples/candidates/cand-a-male.mp3",
+      "reason": "رد کاربر — یکنواخت، IQR فقط ۳۶٫۵"
+    },
+    {
+      "role": "male",
+      "file": "voice-samples/candidates/cand-b-male.mp3",
+      "reason": "رد کاربر — زیر و بمی بالا (۱۵۲ هرتز)"
+    }
+  ],
+  "rounds": {
+    "round3_male": [
+      {
+        "file": "voice-samples/candidates/r3-cand-c-male.mp3",
+        "f0_median_hz": 118.5,
+        "iqr_hz": 20.8,
+        "centroid_hz": 1167,
+        "score": 0.627,
+        "status": "pending"
+      },
+      {
+        "file": "voice-samples/candidates/r3-cand-d-male.mp3",
+        "f0_median_hz": 118.5,
+        "iqr_hz": 47.3,
+        "centroid_hz": 1511,
+        "score": 0.741,
+        "status": "pending"
+      },
+      {
+        "file": "voice-samples/candidates/r3-cand-e-male.mp3",
+        "f0_median_hz": 144.1,
+        "iqr_hz": 87.3,
+        "centroid_hz": 1707,
+        "score": 0.857,
+        "status": "pending",
+        "note": "بهترین امتیاز دور سوم"
+      },
+      {
+        "file": "voice-samples/candidates/r3-cand-f-male.mp3",
+        "f0_median_hz": 163.3,
+        "iqr_hz": 90.2,
+        "centroid_hz": 1691,
+        "score": 0.83,
+        "status": "pending"
+      }
+    ]
+  }
+}
