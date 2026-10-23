@@ -1,0 +1,90 @@
+{
+  "reference": "MATH9-STANDALONE-20261023",
+  "reportDate": "2026-10-23",
+  "reportTimezone": "Asia/Tehran",
+  "userRequest": "Embed themes and delete separate CSS, include complete app integration guide with scripts and result-storage data, make floating popup cover the WebView, and deliver downloadable ZIP",
+  "status": "COMPLETED_FOR_HTML_GUIDE_ZIP_AND_GITHUB_PUBLICATION",
+  "applicationRepository": "https://github.com/samanta-nz/com.hamyareman.final",
+  "branch": "migration/modular-grades",
+  "applicationCommit": "cc60738f504c0890e90c52460203a6d0d70bfd07",
+  "baseCommit": "ae74d61bc540aa03a2683604d4d841645d04c3c1",
+  "htmlFiles": 252,
+  "deletedCssFiles": 252,
+  "embeddedThemes": 252,
+  "independentExams": 216,
+  "guide": "grades/g09/Bucket/G9-Math-APP-INTEGRATION.md",
+  "allLearningDataUnchanged": true,
+  "lockedTemplateBytesUnchanged": true,
+  "newVisualCssAndScript": "Fullscreen floater; focus trap, background inert, scroll containment",
+  "nativeSourceAndMenusUnchanged": true,
+  "browserTests": {
+    "verdict": "AUTHOR_PASS",
+    "pages": 252,
+    "embeddedThemes": 252,
+    "externalCssFiles": 0,
+    "fullscreenDialogChecks": 296,
+    "viewportSizes": [
+      [
+        320,
+        850
+      ],
+      [
+        844,
+        390
+      ],
+      [
+        1280,
+        800
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "focusTrapAndEscape": true,
+    "backgroundInertAndScrollLock": true,
+    "sameQuestionFeedbackScopes": 9,
+    "chapterGradingAndDraftScopes": 8,
+    "weightedFinalTests": 24,
+    "singleCardDecks": 9,
+    "indexes": 9,
+    "fontWeights": [
+      400,
+      500,
+      700
+    ],
+    "persianDigits": true,
+    "errors": [],
+    "externalRequests": [],
+    "bridge": "mock with actual signatures",
+    "device": "NOT_RUN"
+  },
+  "zip": {
+    "schema": "math9-standalone-package-1",
+    "archive": "grades/g09/Bucket/G9-Math.zip",
+    "archiveBytes": 66868738,
+    "archiveSha256": "34fe59d3204b0ecdafc27dba713bb32f228f5d5db2929437244a87fa7e93f72b",
+    "uncompressedBytes": 105581425,
+    "entries": 256,
+    "html": 252,
+    "separateCssFiles": 0,
+    "separateJsFiles": 0,
+    "embeddedThemes": 252,
+    "guides": [
+      "Bucket/G9-Math-APP-INTEGRATION.md",
+      "Bucket/G9-Math-README.md"
+    ],
+    "manifest": "Bucket/math9-layout-manifest.json",
+    "checksumFile": "Bucket/G9-Math-FILES.sha256",
+    "zipTest": "PASS",
+    "allArchiveBytesMatchRepositoryFiles": true,
+    "nativeSourceChanged": false,
+    "device": "NOT_RUN",
+    "objectStorageUpload": "NOT_RUN"
+  },
+  "reportFolderUrl": "https://github.com/samanta-nz/Books-Data/tree/main/codex-reports/Exam-Content-Builder/2026-10-23/002-MATH9-STANDALONE",
+  "nativeDevice": "NOT_RUN",
+  "independentQa": "NOT_RUN_FOR_THIS_PRESENTATION_REVISION",
+  "liveBucketUpload": "NOT_RUN",
+  "apkRelease": "NOT_RUN"
+}

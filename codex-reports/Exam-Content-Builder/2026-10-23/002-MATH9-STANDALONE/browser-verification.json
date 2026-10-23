@@ -1,0 +1,42 @@
+{
+  "verdict": "AUTHOR_PASS",
+  "pages": 252,
+  "embeddedThemes": 252,
+  "externalCssFiles": 0,
+  "fullscreenDialogChecks": 296,
+  "viewportSizes": [
+    [
+      320,
+      850
+    ],
+    [
+      844,
+      390
+    ],
+    [
+      1280,
+      800
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "focusTrapAndEscape": true,
+  "backgroundInertAndScrollLock": true,
+  "sameQuestionFeedbackScopes": 9,
+  "chapterGradingAndDraftScopes": 8,
+  "weightedFinalTests": 24,
+  "singleCardDecks": 9,
+  "indexes": 9,
+  "fontWeights": [
+    400,
+    500,
+    700
+  ],
+  "persianDigits": true,
+  "errors": [],
+  "externalRequests": [],
+  "bridge": "mock with actual signatures",
+  "device": "NOT_RUN"
+}

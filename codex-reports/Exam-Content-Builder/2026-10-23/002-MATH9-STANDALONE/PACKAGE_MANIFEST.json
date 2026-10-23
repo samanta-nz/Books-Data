@@ -1,0 +1,62 @@
+{
+  "schema": "exam-report-files-1",
+  "reference": "MATH9-STANDALONE-20261023",
+  "selfExcluded": true,
+  "files": [
+    {
+      "path": "G9-Math-APP-INTEGRATION.md",
+      "bytes": 102809,
+      "sha256": "4372fc8820b191870f73035109c3a0e42e3735f976ee7caaf34746b129696d90"
+    },
+    {
+      "path": "G9-Math-FILES.sha256",
+      "bytes": 32698,
+      "sha256": "361f77e0371b0d40c921dab17d7f467d830800ec47ff95e688a02b2e8da5f732"
+    },
+    {
+      "path": "G9-Math-package-receipt.json",
+      "bytes": 697,
+      "sha256": "85fd2a27068135198a5260776cd9df806729d163ea2119a3145136359fee1357"
+    },
+    {
+      "path": "G9-Math.zip",
+      "bytes": 66868738,
+      "sha256": "34fe59d3204b0ecdafc27dba713bb32f228f5d5db2929437244a87fa7e93f72b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6669,
+      "sha256": "189e75097ae752ee8e5c694f28fad36cbd98889d2506d049b309a2a63e98e30f"
+    },
+    {
+      "path": "RESULT.json",
+      "bytes": 2832,
+      "sha256": "e02e9a9cb427f3ac9a2230de9fd6be679e87dcd8dbe8ff26df2ed6959d366a71"
+    },
+    {
+      "path": "browser-verification.initial.log",
+      "bytes": 1144,
+      "sha256": "7197cd9bf3c5b4974c3b865256d7d713ffe950f961572f6fb7dc0acfe10e59cf"
+    },
+    {
+      "path": "browser-verification.json",
+      "bytes": 685,
+      "sha256": "e8ca985d5ec9c18ed8de7bf86a1c5057a90de79eba170c84b6fb837f1c2c5c00"
+    },
+    {
+      "path": "browser-verification.log",
+      "bytes": 348,
+      "sha256": "e9c658e9433024da59f5a37ec5add14edf50d80cd192887f467370bdd419d88c"
+    },
+    {
+      "path": "fullscreen-floater.png",
+      "bytes": 26989,
+      "sha256": "661229124a6e4f8c1e515884859c55798cc5274866ecff730515d2723c971ebf"
+    },
+    {
+      "path": "math9-layout-manifest.json",
+      "bytes": 372102,
+      "sha256": "ab9f723bc0a32071dca7466363d402d0d7e50bbfa9decb39b098825ff215cf86"
+    }
+  ]
+}

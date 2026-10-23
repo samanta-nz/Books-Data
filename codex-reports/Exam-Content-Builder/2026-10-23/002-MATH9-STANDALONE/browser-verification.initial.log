@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/workspace/math9-standalone-work/test.py", line 58, in <module>
+    asyncio.run(main())
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/math9-standalone-work/test.py", line 24, in main
+    await p.goto(t.url(row['bucketKey']));await fullscreen(p)
+                                          ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/math9-standalone-work/test.py", line 13, in fullscreen
+    assert await p.locator('main').get_attribute('inert') is not None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
