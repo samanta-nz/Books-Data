@@ -1,0 +1,42 @@
+{
+  "schema": "exam-report-files-1",
+  "reference": "MATH9-BUCKET-LAYOUT-20261023",
+  "selfExcluded": true,
+  "files": [
+    {
+      "path": "APP_INTEGRATION_PROMPT.md",
+      "bytes": 4678,
+      "sha256": "d46574eb9e620209cca285ddec10734659424777d0aa4d6cb31003eb5a1b2391"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8420,
+      "sha256": "3d081023f8bd8357a2f3b47b0c0a5fec3673aac9e9a8b6449850b29a4a6c149e"
+    },
+    {
+      "path": "RESULT.json",
+      "bytes": 1734,
+      "sha256": "4f0f72fb1d4deaefd3ab0e2eb9f4f680adc7c7ba233214f01f640dad3c6bfb3c"
+    },
+    {
+      "path": "browser-verification.json",
+      "bytes": 20046,
+      "sha256": "834b5404eae1afedd00e1f901a44902b7442e6bc8a786b14ce5ab4be20e868ab"
+    },
+    {
+      "path": "browser-verification.log",
+      "bytes": 292,
+      "sha256": "dbd1779207a0a58fc36f5d34be01026778a1b29723c42fbfc2dab2e529c7d851"
+    },
+    {
+      "path": "math9-layout-manifest.json",
+      "bytes": 383345,
+      "sha256": "280cedeb5eac33662f6acf5b647357e059d4611bc8306260f1014c78536dd0f8"
+    },
+    {
+      "path": "renamed-whole-book-menu.png",
+      "bytes": 155112,
+      "sha256": "19f78c191083961f6bb64ae8aedc051e3dd70832006f359d58a83451f43516f2"
+    }
+  ]
+}
