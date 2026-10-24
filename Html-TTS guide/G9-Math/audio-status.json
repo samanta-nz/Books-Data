@@ -21,15 +21,16 @@
   {
    "section": "concept-3",
    "parts_required": 11,
-   "parts_done": 2,
-   "complete": false,
-   "audio_file": null,
-   "audio_seconds": null
+   "parts_done": 11,
+   "complete": true,
+   "audio_file": "ryazif01d03--concept-3.weba",
+   "audio_seconds": 348.17,
+   "audio_bytes": 1459240
   },
   {
    "section": "concept-4",
    "parts_required": 8,
-   "parts_done": 0,
+   "parts_done": 1,
    "complete": false,
    "audio_file": null,
    "audio_seconds": null
@@ -119,8 +120,8 @@
  ],
  "lesson": "ryazif01d03",
  "sections_total": 14,
- "sections_with_audio": 4,
+ "sections_with_audio": 5,
  "parts_total": 109,
- "parts_done": 29,
- "audio_seconds_total": 621.7
+ "parts_done": 39,
+ "audio_seconds_total": 969.8
 }
