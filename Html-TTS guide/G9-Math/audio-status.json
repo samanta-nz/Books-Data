@@ -2,64 +2,60 @@
  "sections": [
   {
    "section": "concept-1",
-   "parts_required": 9,
-   "parts_done": 9,
-   "complete": true,
-   "audio_file": "ryazif01d02--concept-1.weba",
-   "audio_seconds": 352.29,
-   "audio_bytes": 1486286
-  },
-  {
-   "section": "concept-2",
-   "parts_required": 9,
-   "parts_done": 9,
-   "complete": true,
-   "audio_file": "ryazif01d02--concept-2.weba",
-   "audio_seconds": 378.02,
-   "audio_bytes": 1605669
-  },
-  {
-   "section": "concept-3",
-   "parts_required": 9,
-   "parts_done": 9,
-   "complete": true,
-   "audio_file": "ryazif01d02--concept-3.weba",
-   "audio_seconds": 318.82,
-   "audio_bytes": 1347789
-  },
-  {
-   "section": "concept-4",
-   "parts_required": 10,
-   "parts_done": 10,
-   "complete": true,
-   "audio_file": "ryazif01d02--concept-4.weba",
-   "audio_seconds": 385.52,
-   "audio_bytes": 1626544
-  },
-  {
-   "section": "concept-5",
    "parts_required": 7,
    "parts_done": 7,
    "complete": true,
-   "audio_file": "ryazif01d02--concept-5.weba",
-   "audio_seconds": 330.04,
-   "audio_bytes": 1401270
+   "audio_file": "ryazif01d03--concept-1.weba",
+   "audio_seconds": 255.5,
+   "audio_bytes": 1086962
+  },
+  {
+   "section": "concept-2",
+   "parts_required": 7,
+   "parts_done": 7,
+   "complete": true,
+   "audio_file": "ryazif01d03--concept-2.weba",
+   "audio_seconds": 264.73,
+   "audio_bytes": 1118701
+  },
+  {
+   "section": "concept-3",
+   "parts_required": 11,
+   "parts_done": 2,
+   "complete": false,
+   "audio_file": null,
+   "audio_seconds": null
+  },
+  {
+   "section": "concept-4",
+   "parts_required": 8,
+   "parts_done": 0,
+   "complete": false,
+   "audio_file": null,
+   "audio_seconds": null
+  },
+  {
+   "section": "concept-5",
+   "parts_required": 9,
+   "parts_done": 0,
+   "complete": false,
+   "audio_file": null,
+   "audio_seconds": null
   },
   {
    "section": "entry",
    "parts_required": 1,
    "parts_done": 1,
    "complete": true,
-   "audio_file": "ryazif01d02--entry.weba",
-   "audio_seconds": 12.12,
-   "audio_bytes": 52786
+   "audio_file": null,
+   "audio_seconds": null
   },
   {
    "section": "examples",
-   "parts_required": 30,
-   "parts_done": 30,
-   "complete": true,
-   "audio_file": "ryazif01d02--examples.weba",
+   "parts_required": 29,
+   "parts_done": 0,
+   "complete": false,
+   "audio_file": null,
    "audio_seconds": null
   },
   {
@@ -67,69 +63,64 @@
    "parts_required": 1,
    "parts_done": 1,
    "complete": true,
-   "audio_file": "ryazif01d02--exit.weba",
-   "audio_seconds": 13.44,
-   "audio_bytes": 56437
+   "audio_file": "ryazif01d03--exit.weba",
+   "audio_seconds": 13.52,
+   "audio_bytes": 57521
   },
   {
    "section": "goals",
    "parts_required": 2,
    "parts_done": 2,
    "complete": true,
-   "audio_file": "ryazif01d02--goals.weba",
-   "audio_seconds": 61.96,
-   "audio_bytes": 264852
+   "audio_file": null,
+   "audio_seconds": null
   },
   {
    "section": "lab",
-   "parts_required": 7,
-   "parts_done": 7,
-   "complete": true,
-   "audio_file": "ryazif01d02--lab.weba",
-   "audio_seconds": 408.69,
-   "audio_bytes": 1741506
+   "parts_required": 9,
+   "parts_done": 0,
+   "complete": false,
+   "audio_file": null,
+   "audio_seconds": null
   },
   {
    "section": "mistakes",
    "parts_required": 16,
-   "parts_done": 16,
-   "complete": true,
-   "audio_file": "ryazif01d02--mistakes.weba",
-   "audio_seconds": 179.8,
-   "audio_bytes": 720378
+   "parts_done": 0,
+   "complete": false,
+   "audio_file": null,
+   "audio_seconds": null
   },
   {
    "section": "practice",
    "parts_required": 1,
    "parts_done": 1,
    "complete": true,
-   "audio_file": "ryazif01d02--practice.weba",
-   "audio_seconds": 12.72,
-   "audio_bytes": 55157
+   "audio_file": null,
+   "audio_seconds": null
   },
   {
    "section": "prerequisites",
-   "parts_required": 3,
-   "parts_done": 3,
+   "parts_required": 5,
+   "parts_done": 5,
    "complete": true,
-   "audio_file": "ryazif01d02--prerequisites.weba",
-   "audio_seconds": 152.6,
-   "audio_bytes": 644237
+   "audio_file": null,
+   "audio_seconds": null
   },
   {
    "section": "summary",
    "parts_required": 3,
    "parts_done": 3,
    "complete": true,
-   "audio_file": "ryazif01d02--summary.weba",
-   "audio_seconds": 94.08,
-   "audio_bytes": 395086
+   "audio_file": "ryazif01d03--summary.weba",
+   "audio_seconds": 87.92,
+   "audio_bytes": 364110
   }
  ],
- "lesson": "ryazif01d02",
+ "lesson": "ryazif01d03",
  "sections_total": 14,
- "sections_with_audio": 14,
- "parts_total": 108,
- "parts_done": 108,
- "audio_seconds_total": 2700.1
+ "sections_with_audio": 4,
+ "parts_total": 109,
+ "parts_done": 29,
+ "audio_seconds_total": 621.7
 }
